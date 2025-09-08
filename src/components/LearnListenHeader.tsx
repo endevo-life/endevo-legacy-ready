@@ -15,9 +15,9 @@ const LearnListenHeader = () => {
         <div className="flex items-center space-x-2 animate-fade-in">
           <a href="/" className="hover-scale transition-transform duration-300">
             <img 
-              src="/lovable-uploads/7cfe182f-92e2-4cba-83af-773a3b175ea6.png" 
-              alt="ENDevo Logo" 
-              className="h-8 w-auto"
+              src="/lovable-uploads/e4b1e3d7-c5f4-4cde-b4ab-ff21c5e4cd89.png" 
+              alt="Death and Dying in the Digital Age" 
+              className="h-12 w-auto"
             />
           </a>
         </div>
