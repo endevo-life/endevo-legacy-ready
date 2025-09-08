@@ -2,70 +2,61 @@ import { ClipboardCheck, Smartphone, Headphones } from "lucide-react";
 
 const ProcessSection = () => {
   return (
-    <section className="py-20 bg-gray-200">
+    <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="heading-section mb-4 text-gray-700">Our Simple Process</h2>
-          <p className="text-lead text-gray-600">
+          <h2 className="heading-section mb-4 text-primary">Our Simple Process</h2>
+          <p className="text-lead text-muted-foreground">
             Three steps to complete care
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start justify-items-center">
           <div className="text-center">
-            <div className="w-20 h-20 mx-auto mb-8 bg-gray-200 rounded-full flex items-center justify-center relative"
-                 style={{
-                   boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
-                 }}>
-              <span className="text-2xl font-bold text-gray-600">1</span>
+            <div className="w-20 h-20 mx-auto mb-8 bg-primary rounded-full flex items-center justify-center relative shadow-lg">
+              <span className="text-2xl font-bold text-primary-foreground">1</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-6 relative h-80"
+            <div className="bg-card rounded-3xl p-6 relative h-80 border shadow-lg"
                  style={{
-                   boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
+                   background: 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%)'
                  }}>
               <div className="flex justify-center mb-4">
-                <ClipboardCheck className="w-12 h-12 text-gray-600" />
+                <ClipboardCheck className="w-12 h-12 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-700">Take the Peace of Mind Assessment</h3>
-              <p className="text-gray-600 leading-relaxed">Quickly assess your preparedness for life's transitions, spot gaps, and gain clarity with a short summary of your readiness.</p>
+              <h3 className="text-xl font-semibold mb-4 text-primary">Take the Peace of Mind Assessment</h3>
+              <p className="text-muted-foreground leading-relaxed">Quickly assess your preparedness for life's transitions, spot gaps, and gain clarity with a short summary of your readiness.</p>
             </div>
           </div>
           
           <div className="text-center">
-            <div className="w-20 h-20 mx-auto mb-8 bg-gray-200 rounded-full flex items-center justify-center relative"
-                 style={{
-                   boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
-                 }}>
-              <span className="text-2xl font-bold text-gray-600">2</span>
+            <div className="w-20 h-20 mx-auto mb-8 bg-accent rounded-full flex items-center justify-center relative shadow-lg">
+              <span className="text-2xl font-bold text-accent-foreground">2</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-6 relative h-80"
+            <div className="bg-card rounded-3xl p-6 relative h-80 border shadow-lg"
                  style={{
-                   boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
+                   background: 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--accent) / 0.1) 100%)'
                  }}>
               <div className="flex justify-center mb-4">
-                <Smartphone className="w-12 h-12 text-gray-600" />
+                <Smartphone className="w-12 h-12 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-700">Download My Final Playbook app</h3>
-              <p className="text-gray-600 leading-relaxed">My Final Playbook makes end-of-life planning simple with expert guidance, digital tools, and seamless in-app options to secure your legacy.</p>
+              <h3 className="text-xl font-semibold mb-4 text-primary">Download My Final Playbook app</h3>
+              <p className="text-muted-foreground leading-relaxed">My Final Playbook makes end-of-life planning simple with expert guidance, digital tools, and seamless in-app options to secure your legacy.</p>
             </div>
           </div>
           
           <div className="text-center">
-            <div className="w-20 h-20 mx-auto mb-8 bg-gray-200 rounded-full flex items-center justify-center relative"
-                 style={{
-                   boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
-                 }}>
-              <span className="text-2xl font-bold text-gray-600">3</span>
+            <div className="w-20 h-20 mx-auto mb-8 bg-secondary rounded-full flex items-center justify-center relative shadow-lg">
+              <span className="text-2xl font-bold text-secondary-foreground">3</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-6 relative h-80"
+            <div className="bg-card rounded-3xl p-6 relative h-80 border shadow-lg"
                  style={{
-                   boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
+                   background: 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--secondary) / 0.1) 100%)'
                  }}>
               <div className="flex justify-center mb-4">
-                <Headphones className="w-12 h-12 text-gray-600" />
+                <Headphones className="w-12 h-12 text-secondary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-700">Listen to the Digital Legacy Podcast</h3>
-              <p className="text-gray-600 leading-relaxed">The Digital Legacy Podcast shows you how to protect your online assets, avoid chaos, and give loved ones peace of mind.</p>
+              <h3 className="text-xl font-semibold mb-4 text-primary">Listen to the Digital Legacy Podcast</h3>
+              <p className="text-muted-foreground leading-relaxed">The Digital Legacy Podcast shows you how to protect your online assets, avoid chaos, and give loved ones peace of mind.</p>
             </div>
           </div>
         </div>
