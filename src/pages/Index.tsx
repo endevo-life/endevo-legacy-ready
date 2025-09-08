@@ -6,6 +6,7 @@ import LegacySection from "@/components/LegacySection";
 import VideoSection from "@/components/VideoSection";
 import ProcessSection from "@/components/ProcessSection";
 import MobileAppSection from "@/components/MobileAppSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         <VideoSection />
         <ProcessSection />
         <MobileAppSection />
+        <TestimonialsSection />
       </main>
     </div>
   );
