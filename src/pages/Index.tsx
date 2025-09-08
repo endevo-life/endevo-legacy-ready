@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import LegacySection from "@/components/LegacySection";
 import VideoSection from "@/components/VideoSection";
 import ProcessSection from "@/components/ProcessSection";
+import MobileAppSection from "@/components/MobileAppSection";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
         <LegacySection />
         <VideoSection />
         <ProcessSection />
+        <MobileAppSection />
       </main>
     </div>
   );
