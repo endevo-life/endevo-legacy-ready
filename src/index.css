@@ -2,39 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ENDevo Design System - Professional Legacy & Digital Preparedness Brand */
 
 @layer base {
   :root {
+    /* ENDevo Brand Colors - HSL Values */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 218 91% 13%;
+    
+    /* Brand Primary - Navy Blue #08123a */
+    --brand-navy: 218 91% 13%;
+    --brand-navy-light: 218 91% 20%;
+    --brand-navy-dark: 218 91% 8%;
+    
+    /* Brand Secondary - Orange #ff5d00 */
+    --brand-orange: 20 100% 50%;
+    --brand-orange-light: 20 100% 60%;
+    --brand-orange-dark: 20 100% 40%;
+    
+    /* Brand Accent - Teal #58bbb6 */
+    --brand-teal: 177 35% 54%;
+    --brand-teal-light: 177 35% 64%;
+    --brand-teal-dark: 177 35% 44%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 218 91% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 218 91% 13%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 218 91% 13%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 177 35% 54%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 20 100% 50%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 20 100% 50%;
 
     --radius: 0.5rem;
 
@@ -100,6 +114,32 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(8, 18, 58, 0.8) 0%, rgba(8, 18, 58, 0.6) 100%);
+  }
+  
+  /* Legacy Section Gradient */
+  .legacy-gradient {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
+  }
+  
+  /* Professional Typography */
+  .heading-hero {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    line-height: 1.1;
+  }
+  
+  .heading-section {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
+  }
+  
+  .text-lead {
+    @apply text-lg md:text-xl leading-relaxed;
   }
 }
