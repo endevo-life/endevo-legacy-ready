@@ -2,21 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const MobileAppSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden" 
-             style={{
-               background: `
-                 linear-gradient(135deg, 
-                   #08123a 0%,
-                   #08123a 25%,
-                   #ffffff 100%
-                 ),
-                 radial-gradient(ellipse at top left, rgba(255,255,255,0.1) 0%, transparent 50%),
-                 radial-gradient(ellipse at bottom right, rgba(255,255,255,0.05) 0%, transparent 50%)
-               `,
-               backgroundBlendMode: 'multiply, normal, normal',
-               backgroundSize: '100% 100%, 400px 400px, 300px 300px',
-               backgroundPosition: '0 0, 0 0, 100% 100%'
-             }}>
+    <section className="py-20 relative overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content on the left */}
