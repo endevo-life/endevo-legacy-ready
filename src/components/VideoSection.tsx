@@ -2,9 +2,9 @@ const VideoSection = () => {
   return (
     <section className="bg-brand-navy">
       <div className="container max-w-4xl mx-auto">
-        <div className="aspect-video bg-card rounded-lg">
+        <div className="aspect-video bg-card">
           <video 
-            className="w-full h-full rounded-lg shadow-lg bg-background"
+            className="w-full h-full shadow-lg bg-background"
             controls
             poster="/placeholder.svg"
           >
