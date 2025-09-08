@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-12 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="heading-section text-primary">What Our Families Say</h2>
