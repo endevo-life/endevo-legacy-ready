@@ -27,11 +27,13 @@ const MobileAppSection = () => {
           
           {/* Image on the right */}
           <div className="flex justify-center lg:justify-end">
-            <img 
-              src="/lovable-uploads/6e9c01b7-bde7-4580-8b72-ea8ca638291a.png" 
-              alt="My Final Playbook mobile app interface"
-              className="max-w-md w-full h-auto"
-            />
+            <div className="bg-white p-4 rounded-lg">
+              <img 
+                src="/lovable-uploads/0a3c965f-a6e5-43be-9888-8f3f7e071b58.png" 
+                alt="My Final Playbook mobile app interface"
+                className="max-w-md w-full h-auto"
+              />
+            </div>
           </div>
         </div>
         
