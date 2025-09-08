@@ -56,14 +56,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b animate-fade-in">
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 animate-fade-in">
           <img 
             src="/lovable-uploads/7cfe182f-92e2-4cba-83af-773a3b175ea6.png" 
             alt="ENDevo Logo" 
-            className="h-8 w-auto"
+            className="h-8 w-auto hover-scale transition-transform duration-300"
           />
         </div>
 
@@ -74,16 +74,17 @@ const Header = () => {
               <NavigationMenuItem key={item.name}>
                 {item.items ? (
                   <>
-                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-colors">
+                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300 hover-scale">
                       {item.name}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                        {item.items.map((subItem) => (
+                    <NavigationMenuContent className="animate-scale-in">
+                      <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] animate-fade-in">
+                        {item.items.map((subItem, index) => (
                           <a
                             key={subItem.name}
                             href={subItem.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="story-link block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover-scale"
+                            style={{ animationDelay: `${index * 50}ms` }}
                           >
                             <div className="text-sm font-medium leading-none">{subItem.name}</div>
                           </a>
@@ -94,7 +95,7 @@ const Header = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="text-sm font-medium text-foreground hover:text-brand-orange transition-colors px-4 py-2 block"
+                    className="story-link text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300 px-4 py-2 block hover-scale"
                   >
                     {item.name}
                   </a>
@@ -105,7 +106,7 @@ const Header = () => {
         </NavigationMenu>
 
         {/* CTA Button */}
-        <Button variant="cta" size="sm">
+        <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
           Book a Demo
         </Button>
       </div>
