@@ -1,6 +1,6 @@
 const VideoSection = () => {
   return (
-    <section className="bg-brand-navy">
+    <section className="p-16 bg-brand-navy">
       <div className="container max-w-6xl mx-auto">
         <div className="aspect-video bg-card">
           <video 
