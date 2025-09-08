@@ -53,7 +53,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-sm text-primary-foreground/80">
-            © 2024 Endevo. All rights reserved.
+            © 2025 Endevo. All rights reserved.
           </p>
         </div>
       </div>
