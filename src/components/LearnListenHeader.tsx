@@ -11,10 +11,10 @@ const LearnListenHeader = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b animate-fade-in">
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Podcast Logo */}
-        <div className="flex items-center space-x-4 animate-fade-in">
+        {/* Logo */}
+        <div className="flex items-center animate-fade-in">
           <img 
-            src="/lovable-uploads/e4b1e3d7-c5f4-4cde-b4ab-ff21c5e4cd89.png" 
+            src="/lovable-uploads/743e38e0-5495-4af4-b0c0-094c558aed1e.png" 
             alt="Death and Dying in the Digital Age" 
             className="h-10 w-auto"
           />
@@ -33,10 +33,10 @@ const LearnListenHeader = () => {
           ))}
         </nav>
 
-        {/* ENDevo link + Subscribe */}
-        <div className="flex items-center gap-4">
-          <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            by ENDevo
+        {/* ENDevo + Subscribe */}
+        <div className="flex items-center gap-6">
+          <a href="/" className="text-sm font-medium text-foreground hover:text-brand-orange transition-colors">
+            ENDevo
           </a>
           <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
             Subscribe Now
