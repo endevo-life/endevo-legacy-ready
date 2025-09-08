@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section 
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/9e254043-ae74-4e4d-b86f-694807a431d0.png')`
+        backgroundImage: `url('/lovable-uploads/e1962475-57a2-4dd5-ab64-3d261596e3cd.png')`
       }}
     >
       {/* Overlay */}
@@ -17,23 +17,19 @@ const HeroSection = () => {
       {/* Content */}
       <div ref={elementRef as any} className="relative z-10 container max-w-4xl mx-auto px-4 text-center text-white">
         <h1 className={`heading-hero mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
-          ARE YOU READY FOR<br />
-          WHAT COMES NEXT?
+          NEW EPISODE AVAILABLE<br />
+          LISTEN NOW
         </h1>
         
         <h2 className={`text-2xl md:text-3xl font-semibold mb-8 text-brand-orange transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.4s' : '0s' }}>
-          LIFE'S FINAL CHAPTER
+          How Funeral Director Explains the Future of Death Tech & AI | Matthew J. Grieco
         </h2>
         
-        <p className={`text-lead mb-12 max-w-3xl mx-auto opacity-90 transition-all duration-1000 ease-out ${isVisible ? 'opacity-90 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
-          Are you ready for what comes next? ENDevo helps you achieve Legacy Readiness & Digital Preparedness—so your life story, values, and digital footprint are protected, preserved, and passed on with intention.
-        </p>
-        
-        <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
-          <button className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-1000 ease-out hover-scale ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
-            Peace of Mind Assessment
+        <div className={`mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
+          <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 ease-out hover-scale">
+            Listen Now
           </button>
-        </a>
+        </div>
       </div>
     </section>
   );
