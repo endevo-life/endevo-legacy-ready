@@ -12,39 +12,46 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-foreground">
-              Our Mission
-            </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              We believe that legacy planning shouldn't be overwhelming or left until it's too late. 
-              ENDevo provides comprehensive guidance through the complex legal, emotional, and digital 
-              aspects of creating your lasting legacy.
-            </p>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Our approach empowers you to make informed decisions about your digital footprint, 
-              legal preparations, and emotional readiness, ensuring peace of mind for you and your loved ones.
-            </p>
-            <Button variant="outline" size="lg">
-              Start Your Legacy Journey
-            </Button>
+        
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="order-2 md:order-1">
+            <img 
+              src="/lovable-uploads/f2633088-bb71-4e8a-a4d6-8a9ccb6792a2.png" 
+              alt="Niki Weiss, Digital Legacy Thanatologist and Founder of ENDevo"
+              className="rounded-lg shadow-lg w-full"
+            />
           </div>
           
-          <div className="space-y-6">
-            <div className="bg-muted/50 p-6 rounded-lg">
-              <h4 className="font-semibold text-lg mb-2 text-foreground">15+ Years</h4>
-              <p className="text-muted-foreground">of legacy system transformation experience</p>
+          <div className="order-1 md:order-2">
+            <div className="mb-8">
+              <h3 className="text-3xl font-bold mb-4 text-foreground">
+                LIVE FULLY. DIE READY.
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Niki Weiss is transforming how we approach and navigate death, dying and end-of-life planning in the digital age.
+              </p>
             </div>
             
-            <div className="bg-muted/50 p-6 rounded-lg">
-              <h4 className="font-semibold text-lg mb-2 text-foreground">200+ Projects</h4>
-              <p className="text-muted-foreground">successfully modernized across industries</p>
+            <div className="mb-6">
+              <p className="text-brand-orange font-semibold mb-4">
+                Digital Legacy Thanatologist, Founder of ENDevo, Creator of My Final Playbook App, and host of the Digital Legacy Podcast
+              </p>
             </div>
             
-            <div className="bg-muted/50 p-6 rounded-lg">
-              <h4 className="font-semibold text-lg mb-2 text-foreground">Zero Downtime</h4>
-              <p className="text-muted-foreground">commitment to business continuity</p>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Niki normalizes and simplifies the often daunting end-of-life planning process by merging innovative digital tools with traditional methods. With a background in healthcare, project management, and risk analysis, Niki brings a unique skill set in coaching her clients through developing a well-thought-out, customized legacy plan.
+              </p>
+              
+              <p>
+                My Final Playbook App incorporates a holistic approach that guides users through a customizable journey of exploring end-of-life options by breaking down complex decision-making into actionable steps. By comprehensively planning and documenting various facets of your life—such as legal, financial, physical, and digital aspects—we gain peace of mind to live fully while providing a roadmap for preserving our digital imprint and protecting the people we leave behind.
+              </p>
+            </div>
+            
+            <div className="mt-8">
+              <Button variant="outline" size="lg">
+                Start Your Legacy Journey
+              </Button>
             </div>
           </div>
         </div>
