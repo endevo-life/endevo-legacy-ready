@@ -60,11 +60,13 @@ const Header = () => {
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2 animate-fade-in">
-          <img 
-            src="/lovable-uploads/7cfe182f-92e2-4cba-83af-773a3b175ea6.png" 
-            alt="ENDevo Logo" 
-            className="h-8 w-auto hover-scale transition-transform duration-300"
-          />
+          <a href="/" className="hover-scale transition-transform duration-300">
+            <img 
+              src="/lovable-uploads/7cfe182f-92e2-4cba-83af-773a3b175ea6.png" 
+              alt="ENDevo Logo" 
+              className="h-8 w-auto"
+            />
+          </a>
         </div>
 
         {/* Navigation */}
