@@ -29,7 +29,7 @@ const MobileAppSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="bg-white p-4 rounded-lg">
               <img 
-                src="/lovable-uploads/0a3c965f-a6e5-43be-9888-8f3f7e071b58.png" 
+                src="/lovable-uploads/a9dca6bc-4f27-4993-8698-9727808c42f2.png" 
                 alt="My Final Playbook mobile app interface"
                 className="max-w-md w-full h-auto"
               />
