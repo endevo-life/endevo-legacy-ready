@@ -17,12 +17,15 @@ const ProcessSection = () => {
                  style={{
                    boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
                  }}>
-              <ClipboardCheck className="w-8 h-8 text-gray-600" />
+              <span className="text-2xl font-bold text-gray-600">1</span>
             </div>
             <div className="bg-gray-200 rounded-3xl p-8 relative"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
+              <div className="flex justify-center mb-4">
+                <ClipboardCheck className="w-12 h-12 text-gray-600" />
+              </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-700">Take the Peace of Mind Assessment</h3>
               <p className="text-gray-600 leading-relaxed">Quickly assess your preparedness for life's transitions, spot gaps, and gain clarity with a short summary of your readiness.</p>
             </div>
@@ -33,12 +36,15 @@ const ProcessSection = () => {
                  style={{
                    boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
                  }}>
-              <Smartphone className="w-8 h-8 text-gray-600" />
+              <span className="text-2xl font-bold text-gray-600">2</span>
             </div>
             <div className="bg-gray-200 rounded-3xl p-8 relative"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
+              <div className="flex justify-center mb-4">
+                <Smartphone className="w-12 h-12 text-gray-600" />
+              </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-700">Download My Final Playbook app</h3>
               <p className="text-gray-600 leading-relaxed">My Final Playbook makes end-of-life planning simple with expert guidance, digital tools, and seamless in-app options to secure your legacy.</p>
             </div>
@@ -49,12 +55,15 @@ const ProcessSection = () => {
                  style={{
                    boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
                  }}>
-              <Headphones className="w-8 h-8 text-gray-600" />
+              <span className="text-2xl font-bold text-gray-600">3</span>
             </div>
             <div className="bg-gray-200 rounded-3xl p-8 relative"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
+              <div className="flex justify-center mb-4">
+                <Headphones className="w-12 h-12 text-gray-600" />
+              </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-700">Listen to the Digital Legacy Podcast</h3>
               <p className="text-gray-600 leading-relaxed">The Digital Legacy Podcast shows you how to protect your online assets, avoid chaos, and give loved ones peace of mind.</p>
             </div>
