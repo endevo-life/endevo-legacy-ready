@@ -6,8 +6,8 @@ const AboutSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         
         
-        <div className="grid md:grid-cols-3 gap-12 items-start">
-          <div className="order-2 md:order-1">
+        <div className="grid md:grid-cols-5 gap-12 items-start">
+          <div className="order-2 md:order-1 md:col-span-2">
             <img 
               src="/lovable-uploads/f2633088-bb71-4e8a-a4d6-8a9ccb6792a2.png" 
               alt="Niki Weiss, Digital Legacy Thanatologist and Founder of ENDevo"
@@ -15,7 +15,7 @@ const AboutSection = () => {
             />
           </div>
           
-          <div className="order-1 md:order-2 md:col-span-2">
+          <div className="order-1 md:order-2 md:col-span-3">
             <div className="mb-8">
               <h2 className="heading-section mb-6">About ENDevo</h2>
               <p className="text-lead text-xl leading-relaxed mb-8">
