@@ -1,3 +1,5 @@
+import { ClipboardCheck, Smartphone, Headphones } from "lucide-react";
+
 const ProcessSection = () => {
   return (
     <section className="py-20 bg-gray-200">
@@ -15,7 +17,7 @@ const ProcessSection = () => {
                  style={{
                    boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
                  }}>
-              <span className="text-2xl font-bold text-gray-600">1</span>
+              <ClipboardCheck className="w-8 h-8 text-gray-600" />
             </div>
             <div className="bg-gray-200 rounded-3xl p-8 relative"
                  style={{
@@ -31,7 +33,7 @@ const ProcessSection = () => {
                  style={{
                    boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
                  }}>
-              <span className="text-2xl font-bold text-gray-600">2</span>
+              <Smartphone className="w-8 h-8 text-gray-600" />
             </div>
             <div className="bg-gray-200 rounded-3xl p-8 relative"
                  style={{
@@ -47,7 +49,7 @@ const ProcessSection = () => {
                  style={{
                    boxShadow: '9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff'
                  }}>
-              <span className="text-2xl font-bold text-gray-600">3</span>
+              <Headphones className="w-8 h-8 text-gray-600" />
             </div>
             <div className="bg-gray-200 rounded-3xl p-8 relative"
                  style={{
