@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 
 const MobileAppSection = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 relative" 
+             style={{
+               background: 'linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--card)) 50%, hsl(var(--background)) 100%)',
+               boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.1), inset 0 -1px 3px rgba(255,255,255,0.5)'
+             }}>
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content on the left */}
