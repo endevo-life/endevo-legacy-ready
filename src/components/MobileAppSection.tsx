@@ -6,7 +6,7 @@ const MobileAppSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content on the left */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col justify-center">
             <div className="space-y-2">
               <h2 className="heading-section text-primary">Access Care Anywhere</h2>
               <p className="text-xl text-brand-orange font-medium">with our mobile app</p>
@@ -26,14 +26,12 @@ const MobileAppSection = () => {
           </div>
           
           {/* Image on the right */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="bg-white p-4 rounded-lg">
-              <img 
-                src="/lovable-uploads/a9dca6bc-4f27-4993-8698-9727808c42f2.png" 
-                alt="My Final Playbook mobile app interface"
-                className="max-w-md w-full h-auto"
-              />
-            </div>
+          <div className="flex justify-center lg:justify-end items-center">
+            <img 
+              src="/lovable-uploads/a9dca6bc-4f27-4993-8698-9727808c42f2.png" 
+              alt="My Final Playbook mobile app interface"
+              className="max-w-sm w-full h-auto"
+            />
           </div>
         </div>
         
