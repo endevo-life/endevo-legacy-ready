@@ -7,8 +7,8 @@ const AboutSection = () => {
         <div className="text-center mb-12">
           <h2 className="heading-section mb-4">About ENDevo</h2>
           <p className="text-lead max-w-3xl mx-auto">
-            We specialize in transforming legacy systems for forward-thinking organizations. 
-            Our proven methodology reduces risk while accelerating your modernization journey.
+            ENDevo is redefining end-of-life planning through the lens of Legacy Readiness & Digital Preparedness. 
+            We guide you through legal, emotional, and digital dimensions of legacy creation—empowering you to live with clarity and leave with confidence.
           </p>
         </div>
         
@@ -18,16 +18,16 @@ const AboutSection = () => {
               Our Mission
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              ENDevo bridges the gap between legacy systems and modern technology. We understand 
-              that your existing systems contain valuable business logic and data that need to be 
-              preserved while enabling innovation and growth.
+              We believe that legacy planning shouldn't be overwhelming or left until it's too late. 
+              ENDevo provides comprehensive guidance through the complex legal, emotional, and digital 
+              aspects of creating your lasting legacy.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Our team of experts has helped organizations across industries successfully modernize 
-              their technology stack without disrupting critical business operations.
+              Our approach empowers you to make informed decisions about your digital footprint, 
+              legal preparations, and emotional readiness, ensuring peace of mind for you and your loved ones.
             </p>
             <Button variant="outline" size="lg">
-              Learn More About Our Approach
+              Start Your Legacy Journey
             </Button>
           </div>
           
