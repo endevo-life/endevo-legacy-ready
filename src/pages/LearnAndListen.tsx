@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
+import LearnListenHeader from "@/components/LearnListenHeader";
 
 const LearnAndListen = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <LearnListenHeader />
     </div>
   );
 };
