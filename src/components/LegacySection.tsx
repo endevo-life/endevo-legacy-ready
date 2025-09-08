@@ -6,8 +6,7 @@ const LegacySection = () => {
   
   return (
     <section 
-      ref={elementRef}
-      className={`relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat transition-all duration-1000 ${isVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-10'}`}
+      className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url('/lovable-uploads/cfa2656b-ddf2-4eb5-92d3-b7929df247c6.png')`
       }}
@@ -16,32 +15,32 @@ const LegacySection = () => {
       <div className="absolute inset-0 legacy-gradient"></div>
       
       {/* Content */}
-      <div className="relative z-10 container max-w-7xl mx-auto px-4 py-20">
-        <div className="max-w-2xl text-white">
-          <h2 className="heading-section mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+      <div ref={elementRef as any} className="relative z-10 container max-w-7xl mx-auto px-4 py-20">
+        <div className={`max-w-2xl text-white transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <h2 className="heading-section mb-8">
             Legacy Readiness for Organizations
           </h2>
           
-          <p className="text-lead mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <p className="text-lead mb-8 leading-relaxed">
             Business continuity is more than financials—it's about ensuring your leadership legacy, digital footprint, and organizational values remain clear and actionable. ENDevo empowers enterprises to:
           </p>
           
           <ul className="text-lg space-y-4 mb-12">
-            <li className="flex items-start animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <li className="flex items-start">
               <span className="block w-2 h-2 bg-brand-orange rounded-full mt-3 mr-4 flex-shrink-0 pulse"></span>
               <span>Protect critical digital assets</span>
             </li>
-            <li className="flex items-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <li className="flex items-start">
               <span className="block w-2 h-2 bg-brand-orange rounded-full mt-3 mr-4 flex-shrink-0 pulse"></span>
               <span>Organize and preserve institutional knowledge</span>
             </li>
-            <li className="flex items-start animate-fade-in" style={{ animationDelay: '1.0s' }}>
+            <li className="flex items-start">
               <span className="block w-2 h-2 bg-brand-orange rounded-full mt-3 mr-4 flex-shrink-0 pulse"></span>
               <span>Provide employees and families with guidance when it matters most</span>
             </li>
           </ul>
           
-          <div className="space-y-6 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+          <div className="space-y-6">
             <Button variant="secondary" size="lg" className="mb-4 hover-scale">
               Learn and Listen
             </Button>
