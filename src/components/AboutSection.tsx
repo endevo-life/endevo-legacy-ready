@@ -11,7 +11,7 @@ const AboutSection = () => {
             <img 
               src="/lovable-uploads/f2633088-bb71-4e8a-a4d6-8a9ccb6792a2.png" 
               alt="Niki Weiss, Digital Legacy Thanatologist and Founder of ENDevo"
-              className="rounded-lg shadow-lg w-full h-full object-cover"
+              className="rounded-lg shadow-lg w-full h-full object-contain"
             />
           </div>
           
