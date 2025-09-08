@@ -11,7 +11,7 @@ const ProcessSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto items-start">
           <div className="text-center">
             <div className="w-20 h-20 mx-auto mb-8 bg-gray-200 rounded-full flex items-center justify-center relative"
                  style={{
