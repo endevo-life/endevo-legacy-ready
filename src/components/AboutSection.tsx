@@ -4,9 +4,9 @@ const AboutSection = () => {
   return (
     <section className="py-16 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="heading-section mb-4">About ENDevo</h2>
-          <p className="text-lead max-w-3xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="heading-section mb-6">About ENDevo</h2>
+          <p className="text-lead max-w-4xl mx-auto text-xl leading-relaxed">
             ENDevo is redefining end-of-life planning through the lens of Legacy Readiness & Digital Preparedness. 
             We guide you through legal, emotional, and digital dimensions of legacy creation—empowering you to live with clarity and leave with confidence.
           </p>
@@ -24,21 +24,21 @@ const AboutSection = () => {
           
           <div className="order-1 md:order-2">
             <div className="mb-8">
-              <h3 className="text-3xl font-bold mb-4 text-foreground">
+              <h3 className="text-2xl font-semibold mb-3 text-foreground">
                 LIVE FULLY. DIE READY.
               </h3>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                 Niki Weiss is transforming how we approach and navigate death, dying and end-of-life planning in the digital age.
               </p>
             </div>
             
             <div className="mb-6">
-              <p className="text-brand-orange font-semibold mb-4">
+              <p className="text-brand-orange font-medium text-sm mb-4">
                 Digital Legacy Thanatologist, Founder of ENDevo, Creator of My Final Playbook App, and host of the Digital Legacy Podcast
               </p>
             </div>
             
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-sm">
               <p>
                 Niki normalizes and simplifies the often daunting end-of-life planning process by merging innovative digital tools with traditional methods. With a background in healthcare, project management, and risk analysis, Niki brings a unique skill set in coaching her clients through developing a well-thought-out, customized legacy plan.
               </p>
