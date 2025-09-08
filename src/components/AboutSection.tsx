@@ -2,23 +2,23 @@ import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-background animate-fade-in">
       <div className="container max-w-6xl mx-auto px-4">
         
         
         <div className="grid md:grid-cols-2 gap-12 items-stretch">
-          <div className="order-2 md:order-1">
+          <div className="order-2 md:order-1 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <img 
               src="/lovable-uploads/f2633088-bb71-4e8a-a4d6-8a9ccb6792a2.png" 
               alt="Niki Weiss, Digital Legacy Thanatologist and Founder of ENDevo"
-              className="rounded-[50px] w-full h-full object-contain"
+              className="rounded-[50px] w-full h-full object-contain hover-scale transition-transform duration-500"
             />
           </div>
           
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="mb-8">
-              <h2 className="heading-section mb-6">About ENDevo</h2>
-              <p className="text-lead text-xl leading-relaxed mb-8">
+              <h2 className="heading-section mb-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>About ENDevo</h2>
+              <p className="text-lead text-xl leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
                 ENDevo is redefining end-of-life planning through the lens of Legacy Readiness & Digital Preparedness. 
                 We guide you through legal, emotional, and digital dimensions of legacy creation—empowering you to live with clarity and leave with confidence.
               </p>

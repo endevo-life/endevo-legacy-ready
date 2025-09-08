@@ -1,8 +1,8 @@
 const VideoSection = () => {
   return (
-    <section className="p-8 bg-brand-navy">
+    <section className="p-8 bg-brand-navy animate-fade-in">
       <div className="container max-w-6xl mx-auto">
-        <div className="aspect-video bg-card">
+        <div className="aspect-video bg-card animate-scale-in hover-scale transition-transform duration-500">
           <video 
             className="w-full h-full shadow-lg bg-background"
             controls
