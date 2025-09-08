@@ -4,6 +4,7 @@ import CriticalQuestion from "@/components/CriticalQuestion";
 import AboutSection from "@/components/AboutSection";
 import LegacySection from "@/components/LegacySection";
 import VideoSection from "@/components/VideoSection";
+import ProcessSection from "@/components/ProcessSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <AboutSection />
         <LegacySection />
         <VideoSection />
+        <ProcessSection />
       </main>
     </div>
   );
