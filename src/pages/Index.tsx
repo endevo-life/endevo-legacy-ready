@@ -8,6 +8,7 @@ import ProcessSection from "@/components/ProcessSection";
 import MobileAppSection from "@/components/MobileAppSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CallToActionSection from "@/components/CallToActionSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <TestimonialsSection />
         <CallToActionSection />
       </main>
+      <Footer />
     </div>
   );
 };
