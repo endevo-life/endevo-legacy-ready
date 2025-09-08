@@ -4,7 +4,7 @@ const MobileAppSection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-4 items-center">
           {/* Text content on the left */}
           <div className="space-y-6 flex flex-col justify-center">
             <div className="space-y-2">
