@@ -15,7 +15,7 @@ const ProcessSection = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start justify-items-center">
-          <div className={`text-center transition-all duration-1200 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`} style={{ transitionDelay: isVisible ? '0.3s' : '0s' }}>
+          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.3s' : '0s' }}>
             <div className="w-20 h-20 mx-auto mb-8 bg-primary rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
               <span className="text-2xl font-bold text-primary-foreground">1</span>
             </div>
@@ -31,7 +31,7 @@ const ProcessSection = () => {
             </div>
           </div>
           
-          <div className={`text-center transition-all duration-1200 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
+          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
             <div className="w-20 h-20 mx-auto mb-8 bg-accent rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
               <span className="text-2xl font-bold text-accent-foreground">2</span>
             </div>
@@ -47,7 +47,7 @@ const ProcessSection = () => {
             </div>
           </div>
           
-          <div className={`text-center transition-all duration-1200 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`} style={{ transitionDelay: isVisible ? '1.3s' : '0s' }}>
+          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '1.3s' : '0s' }}>
             <div className="w-20 h-20 mx-auto mb-8 bg-secondary rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
               <span className="text-2xl font-bold text-secondary-foreground">3</span>
             </div>
