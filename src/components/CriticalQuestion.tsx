@@ -1,6 +1,6 @@
 const CriticalQuestion = () => {
   return (
-    <section className="py-4 bg-background">
+    <section className="py-4 bg-muted/30">
       <div className="container max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-lead font-bold text-brand-navy mb-2">
           If your company lost a key leader or critical knowledge tomorrow...
