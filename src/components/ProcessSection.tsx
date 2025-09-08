@@ -19,7 +19,7 @@ const ProcessSection = () => {
                  }}>
               <span className="text-2xl font-bold text-gray-600">1</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-8 relative"
+            <div className="bg-gray-200 rounded-3xl p-8 relative h-80"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
@@ -38,7 +38,7 @@ const ProcessSection = () => {
                  }}>
               <span className="text-2xl font-bold text-gray-600">2</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-8 relative"
+            <div className="bg-gray-200 rounded-3xl p-8 relative h-80"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
@@ -57,7 +57,7 @@ const ProcessSection = () => {
                  }}>
               <span className="text-2xl font-bold text-gray-600">3</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-8 relative"
+            <div className="bg-gray-200 rounded-3xl p-8 relative h-80"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
