@@ -1,9 +1,6 @@
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
 const VideoSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
   return (
-    <section ref={elementRef} className={`p-8 bg-brand-navy transition-all duration-1000 ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`}>
+    <section className="p-8 bg-brand-navy animate-fade-in">
       <div className="container max-w-6xl mx-auto">
         <div className="aspect-video bg-card animate-scale-in hover-scale transition-transform duration-500">
           <video 
