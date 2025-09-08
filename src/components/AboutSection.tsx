@@ -4,13 +4,6 @@ const AboutSection = () => {
   return (
     <section className="py-16 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="heading-section mb-6">About ENDevo</h2>
-          <p className="text-lead max-w-4xl mx-auto text-xl leading-relaxed">
-            ENDevo is redefining end-of-life planning through the lens of Legacy Readiness & Digital Preparedness. 
-            We guide you through legal, emotional, and digital dimensions of legacy creation—empowering you to live with clarity and leave with confidence.
-          </p>
-        </div>
         
         
         <div className="grid md:grid-cols-3 gap-12 items-start">
@@ -23,6 +16,14 @@ const AboutSection = () => {
           </div>
           
           <div className="order-1 md:order-2 md:col-span-2">
+            <div className="mb-8">
+              <h2 className="heading-section mb-6">About ENDevo</h2>
+              <p className="text-lead text-xl leading-relaxed mb-8">
+                ENDevo is redefining end-of-life planning through the lens of Legacy Readiness & Digital Preparedness. 
+                We guide you through legal, emotional, and digital dimensions of legacy creation—empowering you to live with clarity and leave with confidence.
+              </p>
+            </div>
+            
             <div className="mb-8">
               <h3 className="text-2xl font-semibold mb-3 text-foreground">
                 LIVE FULLY. DIE READY.
