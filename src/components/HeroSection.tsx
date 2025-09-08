@@ -26,9 +26,11 @@ const HeroSection = () => {
           Are you ready for what comes next? ENDevo helps you achieve Legacy Readiness & Digital Preparedness—so your life story, values, and digital footprint are protected, preserved, and passed on with intention.
         </p>
         
-        <Button variant="cta" size="lg" className="text-lg px-8 py-4 animate-fade-in hover-scale" style={{ animationDelay: '0.8s' }}>
-          Peace of Mind Assessment
-        </Button>
+        <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
+          <Button variant="cta" size="lg" className="text-lg px-8 py-4 animate-fade-in hover-scale" style={{ animationDelay: '0.8s' }}>
+            Peace of Mind Assessment
+          </Button>
+        </a>
       </div>
     </section>
   );
