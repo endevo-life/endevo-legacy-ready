@@ -48,12 +48,6 @@ const AboutSection = () => {
                 My Final Playbook App incorporates a holistic approach that guides users through a customizable journey of exploring end-of-life options by breaking down complex decision-making into actionable steps. By comprehensively planning and documenting various facets of your life—such as legal, financial, physical, and digital aspects—we gain peace of mind to live fully while providing a roadmap for preserving our digital imprint and protecting the people we leave behind.
               </p>
             </div>
-            
-            <div className="mt-8">
-              <Button variant="outline" size="lg">
-                Start Your Legacy Journey
-              </Button>
-            </div>
           </div>
         </div>
       </div>
