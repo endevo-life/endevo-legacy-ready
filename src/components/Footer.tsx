@@ -8,12 +8,16 @@ const Footer = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Logo Section */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold">ENDEVO</span>
+            <img 
+              src="/lovable-uploads/af6b9811-d420-4217-81d1-4de28da0a7ec.png" 
+              alt="ENDevo Logo - Plan. Protect. Peace." 
+              className="h-12 w-auto"
+            />
           </div>
           
           {/* Navigation Links */}
-          <div className="flex flex-col space-y-4 lg:items-center">
-            <nav className="flex flex-col lg:flex-row lg:space-x-8 space-y-2 lg:space-y-0">
+          <div className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-3">
               <a href="#about" className="hover:text-brand-orange transition-colors">About</a>
               <a href="#services" className="hover:text-brand-orange transition-colors">Services</a>
               <a href="#process" className="hover:text-brand-orange transition-colors">Process</a>
