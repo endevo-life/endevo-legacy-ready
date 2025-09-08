@@ -6,12 +6,12 @@ const AboutSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         
         
-        <div className="grid md:grid-cols-5 gap-12 items-start">
-          <div className="order-2 md:order-1 md:col-span-2">
+        <div className="grid md:grid-cols-5 gap-12 items-stretch">
+          <div className="order-2 md:order-1 md:col-span-2 h-full">
             <img 
               src="/lovable-uploads/f2633088-bb71-4e8a-a4d6-8a9ccb6792a2.png" 
               alt="Niki Weiss, Digital Legacy Thanatologist and Founder of ENDevo"
-              className="rounded-lg shadow-lg w-full"
+              className="rounded-lg shadow-lg w-full h-full object-cover"
             />
           </div>
           
