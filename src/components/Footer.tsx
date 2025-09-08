@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Footer = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  
   return (
-    <footer className="bg-primary text-primary-foreground py-12 animate-fade-in">
+    <footer ref={elementRef} className={`bg-primary text-primary-foreground py-12 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Logo Section */}

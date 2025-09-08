@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const LegacySection = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  
   return (
     <section 
-      className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat animate-fade-in"
+      ref={elementRef}
+      className={`relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat transition-all duration-1000 ${isVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-10'}`}
       style={{
         backgroundImage: `url('/lovable-uploads/cfa2656b-ddf2-4eb5-92d3-b7929df247c6.png')`
       }}
