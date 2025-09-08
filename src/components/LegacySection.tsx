@@ -41,9 +41,11 @@ const LegacySection = () => {
           </ul>
           
           <div className="space-y-6">
-            <Button variant="secondary" size="lg" className="mb-4 hover-scale">
+            <a href="/learn-and-listen">
+              <Button variant="secondary" size="lg" className="mb-4 hover-scale">
               Learn and Listen
             </Button>
+            </a>
             
             <p className="text-base opacity-90 leading-relaxed">
               Explore our podcasts, blogs, and founder insights on how digital legacy and preparedness can strengthen your company culture, wellness programs, and long-term stability.
