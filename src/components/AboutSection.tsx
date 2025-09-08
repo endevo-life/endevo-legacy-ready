@@ -13,7 +13,7 @@ const AboutSection = () => {
         </div>
         
         
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-3 gap-12 items-start">
           <div className="order-2 md:order-1">
             <img 
               src="/lovable-uploads/f2633088-bb71-4e8a-a4d6-8a9ccb6792a2.png" 
@@ -22,7 +22,7 @@ const AboutSection = () => {
             />
           </div>
           
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2 md:col-span-2">
             <div className="mb-8">
               <h3 className="text-2xl font-semibold mb-3 text-foreground">
                 LIVE FULLY. DIE READY.
