@@ -11,16 +11,13 @@ const LearnListenHeader = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b animate-fade-in">
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo with ENDevo branding */}
+        {/* Podcast Logo */}
         <div className="flex items-center space-x-4 animate-fade-in">
-          <a href="/" className="hover-scale transition-transform duration-300 flex items-center space-x-3">
-            <div className="text-xs text-muted-foreground font-medium">ENDevo</div>
-            <img 
-              src="/lovable-uploads/e4b1e3d7-c5f4-4cde-b4ab-ff21c5e4cd89.png" 
-              alt="Death and Dying in the Digital Age" 
-              className="h-10 w-auto"
-            />
-          </a>
+          <img 
+            src="/lovable-uploads/e4b1e3d7-c5f4-4cde-b4ab-ff21c5e4cd89.png" 
+            alt="Death and Dying in the Digital Age" 
+            className="h-10 w-auto"
+          />
         </div>
 
         {/* Navigation */}
@@ -36,10 +33,16 @@ const LearnListenHeader = () => {
           ))}
         </nav>
 
-        {/* Subscribe Button */}
-        <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
-          Subscribe Now
-        </Button>
+        {/* ENDevo link + Subscribe */}
+        <div className="flex items-center gap-4">
+          <a href="/" className="hidden sm:inline-flex items-center text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors">
+            by ENDevo
+            <img src="/lovable-uploads/7cfe182f-92e2-4cba-83af-773a3b175ea6.png" alt="ENDevo" className="h-5 w-auto ml-2" />
+          </a>
+          <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
+            Subscribe Now
+          </Button>
+        </div>
       </div>
     </header>
   );
