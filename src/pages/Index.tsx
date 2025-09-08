@@ -15,8 +15,8 @@ const Index = () => {
         <CriticalQuestion />
         <AboutSection />
         <LegacySection />
-        <VideoSection />
         <ProcessSection />
+        <VideoSection />
       </main>
     </div>
   );
