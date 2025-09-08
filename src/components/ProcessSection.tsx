@@ -11,7 +11,7 @@ const ProcessSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start justify-items-center">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start justify-items-center">
           <div className="text-center">
             <div className="w-20 h-20 mx-auto mb-8 bg-gray-200 rounded-full flex items-center justify-center relative"
                  style={{
@@ -19,7 +19,7 @@ const ProcessSection = () => {
                  }}>
               <span className="text-2xl font-bold text-gray-600">1</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-8 relative h-80"
+            <div className="bg-gray-200 rounded-3xl p-6 relative h-80"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
@@ -38,7 +38,7 @@ const ProcessSection = () => {
                  }}>
               <span className="text-2xl font-bold text-gray-600">2</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-8 relative h-80"
+            <div className="bg-gray-200 rounded-3xl p-6 relative h-80"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
@@ -57,7 +57,7 @@ const ProcessSection = () => {
                  }}>
               <span className="text-2xl font-bold text-gray-600">3</span>
             </div>
-            <div className="bg-gray-200 rounded-3xl p-8 relative h-80"
+            <div className="bg-gray-200 rounded-3xl p-6 relative h-80"
                  style={{
                    boxShadow: 'inset 8px 8px 16px #a3a3a3, inset -8px -8px 16px #ffffff'
                  }}>
