@@ -16,7 +16,7 @@ const LearnListenHeader = () => {
           <img 
             src="/lovable-uploads/743e38e0-5495-4af4-b0c0-094c558aed1e.png" 
             alt="Death and Dying in the Digital Age" 
-            className="h-10 w-auto"
+            className="h-16 w-auto"
           />
         </div>
 
