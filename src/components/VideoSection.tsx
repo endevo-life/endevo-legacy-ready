@@ -1,8 +1,8 @@
 const VideoSection = () => {
   return (
-    <section className="py-16 bg-brand-navy">
-      <div className="container max-w-4xl mx-auto px-4">
-        <div className="aspect-video bg-card rounded-lg p-2">
+    <section className="p-16 bg-brand-navy">
+      <div className="container max-w-4xl mx-auto">
+        <div className="aspect-video bg-card rounded-lg p-16">
           <video 
             className="w-full h-full rounded-lg shadow-lg bg-background"
             controls
