@@ -19,11 +19,11 @@ const Footer = () => {
           {/* Navigation Links */}
           <div className="flex flex-col space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <nav className="flex flex-col space-y-3">
-              <a href="#about" className="story-link hover:text-brand-orange transition-colors hover-scale">About</a>
-              <a href="#services" className="story-link hover:text-brand-orange transition-colors hover-scale">Services</a>
-              <a href="#process" className="story-link hover:text-brand-orange transition-colors hover-scale">Process</a>
-              <a href="#testimonials" className="story-link hover:text-brand-orange transition-colors hover-scale">Testimonials</a>
-              <a href="#contact" className="story-link hover:text-brand-orange transition-colors hover-scale">Contact</a>
+              <a href="#solutions" className="story-link hover:text-brand-orange transition-colors hover-scale">Solutions</a>
+              <a href="#who-we-serve" className="story-link hover:text-brand-orange transition-colors hover-scale">Who We Serve</a>
+              <a href="#resources" className="story-link hover:text-brand-orange transition-colors hover-scale">Resources</a>
+              <a href="#plan" className="story-link hover:text-brand-orange transition-colors hover-scale">Plan</a>
+              <a href="#company" className="story-link hover:text-brand-orange transition-colors hover-scale">Company</a>
             </nav>
           </div>
           
