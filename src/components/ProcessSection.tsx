@@ -15,6 +15,7 @@ const ProcessSection = () => {
               <span className="text-2xl font-bold text-primary">1</span>
             </div>
             <h3 className="text-xl font-semibold mb-3">Take the Peace of Mind Assessment</h3>
+            <p className="text-muted-foreground">Quickly assess your preparedness for life's transitions, spot gaps, and gain clarity with a short summary of your readiness.</p>
           </div>
           
           <div className="text-center">
@@ -22,6 +23,7 @@ const ProcessSection = () => {
               <span className="text-2xl font-bold text-primary">2</span>
             </div>
             <h3 className="text-xl font-semibold mb-3">Download My Final Playbook app</h3>
+            <p className="text-muted-foreground">My Final Playbook makes end-of-life planning simple with expert guidance, digital tools, and seamless in-app options to secure your legacy.</p>
           </div>
           
           <div className="text-center">
@@ -29,6 +31,7 @@ const ProcessSection = () => {
               <span className="text-2xl font-bold text-primary">3</span>
             </div>
             <h3 className="text-xl font-semibold mb-3">Listen to the Digital Legacy Podcast</h3>
+            <p className="text-muted-foreground">The Digital Legacy Podcast shows you how to protect your online assets, avoid chaos, and give loved ones peace of mind.</p>
           </div>
         </div>
       </div>
