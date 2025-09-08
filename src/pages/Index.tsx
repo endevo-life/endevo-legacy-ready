@@ -14,9 +14,9 @@ const Index = () => {
         <HeroSection />
         <CriticalQuestion />
         <AboutSection />
-        <LegacySection />
         <ProcessSection />
         <VideoSection />
+        <LegacySection />
       </main>
     </div>
   );
