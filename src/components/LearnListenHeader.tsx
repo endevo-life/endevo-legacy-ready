@@ -35,9 +35,8 @@ const LearnListenHeader = () => {
 
         {/* ENDevo link + Subscribe */}
         <div className="flex items-center gap-4">
-          <a href="/" className="hidden sm:inline-flex items-center text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             by ENDevo
-            <img src="/lovable-uploads/7cfe182f-92e2-4cba-83af-773a3b175ea6.png" alt="ENDevo" className="h-5 w-auto ml-2" />
           </a>
           <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
             Subscribe Now
