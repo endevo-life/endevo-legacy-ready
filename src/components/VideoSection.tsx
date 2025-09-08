@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
 const VideoSection = () => {
-  return <section className="py-16 bg-muted/30">
+  return (
+    <section className="py-16 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
-        
+        <div className="text-center mb-12">
+          <h2 className="heading-section mb-4">See Legacy Readiness in Action</h2>
+          <p className="text-lead max-w-3xl mx-auto">
+            Watch how organizations transform their legacy systems with our proven framework. 
+            Discover the strategies that reduce risk while accelerating modernization.
+          </p>
+        </div>
         
         <div className="max-w-4xl mx-auto">
           <div className="relative aspect-video bg-muted rounded-lg overflow-hidden shadow-lg">
@@ -21,10 +28,13 @@ const VideoSection = () => {
           </div>
           
           <div className="text-center mt-8">
-            
+            <Button variant="cta" size="lg">
+              Schedule Your Legacy Assessment
+            </Button>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default VideoSection;
