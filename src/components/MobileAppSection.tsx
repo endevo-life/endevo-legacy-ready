@@ -5,16 +5,7 @@ const MobileAppSection = () => {
     <section className="py-20 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image on the left */}
-          <div className="flex justify-center lg:justify-start">
-            <img 
-              src="/lovable-uploads/b1dce9ec-1c3f-4f2f-9591-45df95955a21.png" 
-              alt="My Final Playbook mobile app interface"
-              className="max-w-md w-full h-auto"
-            />
-          </div>
-          
-          {/* Text content on the right */}
+          {/* Text content on the left */}
           <div className="space-y-6">
             <div className="space-y-2">
               <h2 className="heading-section text-primary">Access Care Anywhere</h2>
@@ -32,6 +23,15 @@ const MobileAppSection = () => {
               <p>• Family coordination tools and shared decision-making</p>
               <p>• Appointment reminders and care schedule management</p>
             </div>
+          </div>
+          
+          {/* Image on the right */}
+          <div className="flex justify-center lg:justify-end">
+            <img 
+              src="/lovable-uploads/6e9c01b7-bde7-4580-8b72-ea8ca638291a.png" 
+              alt="My Final Playbook mobile app interface"
+              className="max-w-md w-full h-auto"
+            />
           </div>
         </div>
         
