@@ -5,13 +5,22 @@ const MobileAppSection = () => {
     <section className="py-20 relative overflow-hidden" 
              style={{
                background: `
-                 radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                 radial-gradient(circle at 75% 75%, rgba(0,0,0,0.05) 0%, transparent 50%),
-                 linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--card)) 50%, hsl(var(--background)) 100%)
+                 linear-gradient(135deg, 
+                   hsl(300, 70%, 25%) 0%,
+                   hsl(240, 70%, 30%) 15%,
+                   hsl(200, 70%, 35%) 30%,
+                   hsl(180, 70%, 40%) 45%,
+                   hsl(120, 70%, 45%) 60%,
+                   hsl(60, 70%, 50%) 75%,
+                   hsl(30, 70%, 55%) 90%,
+                   hsl(0, 70%, 60%) 100%
+                 ),
+                 radial-gradient(ellipse at top left, rgba(255,255,255,0.1) 0%, transparent 50%),
+                 radial-gradient(ellipse at bottom right, rgba(255,255,255,0.05) 0%, transparent 50%)
                `,
-               boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.1), inset 0 -1px 3px rgba(255,255,255,0.5), inset 0 0 100px rgba(0,0,0,0.02)',
-               backgroundSize: '200px 200px, 150px 150px, 100% 100%',
-               backgroundPosition: '0 0, 100px 100px, 0 0'
+               backgroundBlendMode: 'multiply, normal, normal',
+               backgroundSize: '100% 100%, 400px 400px, 300px 300px',
+               backgroundPosition: '0 0, 0 0, 100% 100%'
              }}>
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
