@@ -6,14 +6,9 @@ const MobileAppSection = () => {
              style={{
                background: `
                  linear-gradient(135deg, 
-                   hsl(300, 70%, 25%) 0%,
-                   hsl(240, 70%, 30%) 15%,
-                   hsl(200, 70%, 35%) 30%,
-                   hsl(180, 70%, 40%) 45%,
-                   hsl(120, 70%, 45%) 60%,
-                   hsl(60, 70%, 50%) 75%,
-                   hsl(30, 70%, 55%) 90%,
-                   hsl(0, 70%, 60%) 100%
+                   #08123a 0%,
+                   #58bbb6 50%,
+                   #ff5d00 100%
                  ),
                  radial-gradient(ellipse at top left, rgba(255,255,255,0.1) 0%, transparent 50%),
                  radial-gradient(ellipse at bottom right, rgba(255,255,255,0.05) 0%, transparent 50%)
