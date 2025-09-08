@@ -2,10 +2,12 @@ import { ClipboardCheck, Smartphone, Headphones } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const ProcessSection = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/30 to-background animate-fade-in">
+    <section ref={elementRef} className="py-20 bg-gradient-to-b from-muted/30 to-background">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="heading-section mb-4 text-primary">Our Simple Process</h2>
           <p className="text-lead text-muted-foreground">
             Three steps to complete care
@@ -13,7 +15,7 @@ const ProcessSection = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start justify-items-center">
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className={`text-center transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: isVisible ? '0.3s' : '0s' }}>
             <div className="w-20 h-20 mx-auto mb-8 bg-primary rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
               <span className="text-2xl font-bold text-primary-foreground">1</span>
             </div>
@@ -29,7 +31,7 @@ const ProcessSection = () => {
             </div>
           </div>
           
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className={`text-center transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
             <div className="w-20 h-20 mx-auto mb-8 bg-accent rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
               <span className="text-2xl font-bold text-accent-foreground">2</span>
             </div>
@@ -45,7 +47,7 @@ const ProcessSection = () => {
             </div>
           </div>
           
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className={`text-center transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: isVisible ? '0.9s' : '0s' }}>
             <div className="w-20 h-20 mx-auto mb-8 bg-secondary rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
               <span className="text-2xl font-bold text-secondary-foreground">3</span>
             </div>
