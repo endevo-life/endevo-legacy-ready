@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const MobileAppSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content on the left */}
