@@ -30,7 +30,7 @@ const MobileAppSection = () => {
             <img 
               src="/lovable-uploads/a9dca6bc-4f27-4993-8698-9727808c42f2.png" 
               alt="My Final Playbook mobile app interface"
-              className="max-w-sm w-full h-auto"
+              className="max-w-xs w-full h-auto"
             />
           </div>
         </div>
