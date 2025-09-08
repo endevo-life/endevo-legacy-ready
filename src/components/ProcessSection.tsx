@@ -1,4 +1,5 @@
 import { ClipboardCheck, Smartphone, Headphones } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const ProcessSection = () => {
   return (
