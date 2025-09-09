@@ -257,12 +257,13 @@ const LearnAndListen = () => {
       {/* About the Digital Legacy Podcast Section */}
       <section className="py-16 bg-background">
         <div className="container max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
+            About the Digital Legacy Podcast
+          </h2>
+          
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Text Content */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                About the Digital Legacy Podcast
-              </h2>
               <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
                 Welcome to the Digital Legacy Podcast, where host Niki Weiss and expert guests explore the complexities of end-of-life and estate planning in the digital age. Each week, they share inspiring stories and practical advice on safeguarding your digital and physical assets, ensuring your loved ones avoid chaos, confusion, and costly legal battles if something happens to you.
               </p>
