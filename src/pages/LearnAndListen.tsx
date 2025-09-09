@@ -101,14 +101,15 @@ const LearnAndListen = () => {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
         
-        <div className="relative z-10 container max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white">
-            Why Tune In to the Digital Legacy Podcast
-          </h2>
-          
-          <div className="max-w-4xl mx-auto">
+        <div className="relative z-10 container max-w-6xl mx-auto px-4 flex items-center min-h-[600px]">
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-left text-white">
+              Why Tune In to the Digital Legacy Podcast
+            </h2>
+            
+            <div>
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
               In today's high-tech world, death isn't just about physical belongings. It's about safeguarding your digital legacy and online assets. Yet, most of us are totally unprepared. Then, the inevitable happens. And our loved ones are left in a mess of chaos, confusion, or costly legal battles. What if this could all be avoided by having a plan in place before something happens?
             </p>
@@ -142,9 +143,10 @@ const LearnAndListen = () => {
               </ul>
             </div>
             
-            <p className="text-lg md:text-xl text-white font-semibold text-center">
+            <p className="text-lg md:text-xl text-white font-semibold text-left">
               Life is full of surprises. What happens to your physical and digital assets when you die shouldn't be.
             </p>
+            </div>
           </div>
         </div>
       </section>
