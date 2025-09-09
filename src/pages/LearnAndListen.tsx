@@ -101,7 +101,7 @@ const LearnAndListen = () => {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
         
         <div className="relative z-10 container max-w-6xl mx-auto px-4 flex items-center min-h-[600px]">
           <div className="max-w-xl">
