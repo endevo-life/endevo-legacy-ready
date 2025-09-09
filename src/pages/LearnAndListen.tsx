@@ -150,6 +150,77 @@ const LearnAndListen = () => {
           </div>
         </div>
       </section>
+      
+      {/* Latest Episodes Section */}
+      <section className="py-16 bg-background">
+        <div className="container max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
+            Catch the Latest Episodes
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Podcast 1 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="/lovable-uploads/8898de3e-9543-4c9d-97de-071f00c6eee4.png" 
+                alt="How Funeral Director Explains the Future of Death Tech & AI"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <p className="text-sm text-muted-foreground mb-2">Sep 02, 2025</p>
+                <h3 className="text-lg font-semibold mb-4 text-foreground">
+                  How Funeral Director Explains the Future of Death Tech & AI | Matthew J. Grieco
+                </h3>
+                <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
+                  Listen
+                </button>
+              </div>
+            </div>
+            
+            {/* Podcast 2 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="/lovable-uploads/749c3f80-6702-4d32-bebf-909d9fe0c17e.png" 
+                alt="Can AI Preserve Our Consciousness After Death?"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <p className="text-sm text-muted-foreground mb-2">Aug 19, 2025</p>
+                <h3 className="text-lg font-semibold mb-4 text-foreground">
+                  Can AI Preserve Our Consciousness After Death? | Joshua Orsak
+                </h3>
+                <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
+                  Listen
+                </button>
+              </div>
+            </div>
+            
+            {/* Podcast 3 */}
+            <div className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="/lovable-uploads/a60ccfdb-e0ce-4aca-a82a-c5a915485e1f.png" 
+                alt="How to Avoid Digital Scams in an AI Era"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <p className="text-sm text-muted-foreground mb-2">Aug 05, 2025</p>
+                <h3 className="text-lg font-semibold mb-4 text-foreground">
+                  How to Avoid Digital Scams in an AI Era | Kurtis Baker
+                </h3>
+                <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
+                  Listen
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+              View All
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
