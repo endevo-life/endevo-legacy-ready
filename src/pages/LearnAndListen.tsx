@@ -231,7 +231,7 @@ const LearnAndListen = () => {
               <img 
                 src="/lovable-uploads/b9741420-16a0-47ce-919b-996cde302c8a.png" 
                 alt="Digital Asset Inventory Worksheet"
-                className="max-w-sm w-full h-full object-contain rounded-lg shadow-lg scale-90"
+                className="max-w-sm w-full h-full object-contain shadow-lg scale-90"
               />
             </div>
             
