@@ -223,8 +223,11 @@ const LearnAndListen = () => {
       </section>
       
       {/* Subscribe Section */}
-      <section className="py-16 bg-brand-navy">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section className="relative py-16 bg-brand-navy overflow-hidden">
+        {/* Texture Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-navy-light to-brand-navy opacity-90"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px] opacity-20"></div>
+        <div className="relative z-10 container max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Image */}
             <div className="flex justify-center items-center">
