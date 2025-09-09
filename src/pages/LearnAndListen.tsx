@@ -225,18 +225,18 @@ const LearnAndListen = () => {
       {/* Subscribe Section */}
       <section className="py-16 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Image */}
-            <div className="flex justify-center h-full">
+            <div className="flex justify-center items-center">
               <img 
                 src="/lovable-uploads/b9741420-16a0-47ce-919b-996cde302c8a.png" 
                 alt="Digital Asset Inventory Worksheet"
-                className="max-w-md w-full h-full object-cover rounded-lg shadow-lg"
+                className="max-w-md w-full h-full object-contain rounded-lg shadow-lg"
               />
             </div>
             
             {/* Text Content */}
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
                 Subscribe for Special Perks!
               </h2>
