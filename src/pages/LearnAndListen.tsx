@@ -54,35 +54,35 @@ const LearnAndListen = () => {
               <img 
                 src="/lovable-uploads/26e4b3c4-e17f-4a89-880a-4d2ac57c3269.png" 
                 alt="Listen on Spotify" 
-                className="h-20 w-auto"
+                className="h-20 w-40"
               />
             </a>
             <a href="#" className="hover-scale transition-transform duration-300">
               <img 
                 src="/lovable-uploads/f6babc84-f525-4844-86a2-dd58e7313d90.png" 
                 alt="Listen on Apple Podcasts" 
-                className="h-20 w-auto"
+                className="h-20 w-40"
               />
             </a>
             <a href="#" className="hover-scale transition-transform duration-300">
               <img 
                 src="/lovable-uploads/a4b7dcdc-52dd-431f-a44a-9bd6232bc7dd.png" 
                 alt="Listen on YouTube" 
-                className="h-20 w-auto"
+                className="h-20 w-40"
               />
             </a>
             <a href="#" className="hover-scale transition-transform duration-300">
               <img 
                 src="/lovable-uploads/9d063b21-239e-4b1d-aea8-4a4ccdc0c9ba.png" 
                 alt="Listen on Pandora" 
-                className="h-20 w-auto"
+                className="h-20 w-40"
               />
             </a>
             <a href="#" className="hover-scale transition-transform duration-300">
               <img 
                 src="/lovable-uploads/52a87b6b-8b2f-4bc0-9c73-b68f62df7b5d.png" 
                 alt="Listen on Amazon Music" 
-                className="h-20 w-auto"
+                className="h-20 w-40"
               />
             </a>
           </div>
