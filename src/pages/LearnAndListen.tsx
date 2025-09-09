@@ -253,6 +253,38 @@ const LearnAndListen = () => {
           </div>
         </div>
       </section>
+      
+      {/* About the Digital Legacy Podcast Section */}
+      <section className="py-16 bg-background">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
+            {/* Text Content */}
+            <div className="flex flex-col justify-center">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                About the Digital Legacy Podcast
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
+                Welcome to the Digital Legacy Podcast, where host Niki Weiss and expert guests explore the complexities of end-of-life and estate planning in the digital age. Each week, they share inspiring stories and practical advice on safeguarding your digital and physical assets, ensuring your loved ones avoid chaos, confusion, and costly legal battles if something happens to you.
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
+                We'll dive into the four pillars of end-of-life planning - Legal, Financial, Physical, and Digital - and break down each pillar into actionable steps, so you gain peace of mind knowing that every facet of your life and legacy is documented and secure.
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Subscribe today to safeguard your digital legacy and protect what matters most in this high-tech, digital age.
+              </p>
+            </div>
+            
+            {/* Image */}
+            <div className="flex justify-center items-center">
+              <img 
+                src="/lovable-uploads/0b1785cd-e006-48b9-bbca-31ba6ccc6f98.png" 
+                alt="Death and Dying in the Digital Age"
+                className="max-w-md w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
