@@ -49,7 +49,7 @@ const LearnAndListen = () => {
           </p>
           
           {/* Podcast Platform Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex justify-center items-center gap-4 overflow-x-auto pb-4">
             <a href="#" className="hover-scale transition-transform duration-300">
               <img 
                 src="/lovable-uploads/8d51ea5c-e37d-41df-84ed-00d68ce7f784.png" 
