@@ -81,6 +81,13 @@ const LearnListenFooter = () => {
                   className="h-10 w-auto"
                 />
               </a>
+              <div className="flex justify-center mt-4">
+                <img
+                  src="/lovable-uploads/31e64651-f2e6-4f56-8de8-543c6db20fd6.png"
+                  alt="My Final Playbook"
+                  className="h-8 w-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
