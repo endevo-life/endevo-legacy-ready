@@ -221,6 +221,35 @@ const LearnAndListen = () => {
           </div>
         </div>
       </section>
+      
+      {/* Subscribe Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="flex justify-center">
+              <img 
+                src="/lovable-uploads/b9741420-16a0-47ce-919b-996cde302c8a.png" 
+                alt="Digital Asset Inventory Worksheet"
+                className="max-w-md w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+            
+            {/* Text Content */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Subscribe for Special Perks!
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                Join today and receive the Digital Asset Inventory Worksheet. This downloadable PDF makes it quick and easy to document and store your online accounts, subscriptions and assets.
+              </p>
+              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover-scale">
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
