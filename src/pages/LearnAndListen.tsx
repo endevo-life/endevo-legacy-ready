@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const LearnAndListen = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
+  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { elementRef: whyTuneRef, isVisible: whyTuneVisible } = useScrollAnimation();
+  const { elementRef: episodesRef, isVisible: episodesVisible } = useScrollAnimation();
+  const { elementRef: subscribeRef, isVisible: subscribeVisible } = useScrollAnimation();
+  const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
   
   return (
     <div className="min-h-screen bg-background">
@@ -21,17 +26,17 @@ const LearnAndListen = () => {
         <div className="absolute inset-0 hero-gradient"></div>
         
         {/* Content */}
-        <div ref={elementRef as any} className="relative z-10 container max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className={`heading-hero mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
+        <div ref={heroRef as any} className="relative z-10 container max-w-4xl mx-auto px-4 text-center text-white">
+          <h1 className={`heading-hero mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: heroVisible ? '0.2s' : '0s' }}>
             NEW EPISODE AVAILABLE<br />
             LISTEN NOW
           </h1>
           
-          <h2 className={`text-2xl md:text-3xl font-semibold mb-8 text-brand-orange transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.4s' : '0s' }}>
+          <h2 className={`text-2xl md:text-3xl font-semibold mb-8 text-brand-orange transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: heroVisible ? '0.4s' : '0s' }}>
             How Funeral Director Explains the Future of Death Tech & AI | Matthew J. Grieco
           </h2>
           
-          <div className={`mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
+          <div className={`mb-12 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: heroVisible ? '0.6s' : '0s' }}>
             <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 ease-out hover-scale">
               Listen Now
             </button>
@@ -40,8 +45,8 @@ const LearnAndListen = () => {
       </section>
       
       {/* Content Section */}
-      <section className="py-8 bg-background">
-        <div className="container max-w-6xl mx-auto px-2 text-center">
+      <section ref={contentRef as any} className="py-8 bg-background">
+        <div className={`container max-w-6xl mx-auto px-2 text-center transition-all duration-1000 ease-out ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Life's Final Playbook, Planned for Today's Digital Age
           </h2>
@@ -54,7 +59,7 @@ const LearnAndListen = () => {
           </h3>
           
           {/* Podcast Platform Buttons */}
-          <div className="flex justify-center items-center gap-12">
+          <div className={`flex justify-center items-center gap-12 transition-all duration-1000 ease-out ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: contentVisible ? '0.4s' : '0s' }}>
             <a href="#" className="hover-scale transition-transform duration-300">
               <img 
                 src="/lovable-uploads/ff2f1422-2b37-4f11-b883-e24612bbb6af.png" 
@@ -96,6 +101,7 @@ const LearnAndListen = () => {
       
       {/* Why Tune In Section */}
       <section 
+        ref={whyTuneRef as any}
         className="relative py-16 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/lovable-uploads/c4e16bc3-599c-45d7-b44e-39d8c6f5ef91.png')`
@@ -105,7 +111,7 @@ const LearnAndListen = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
         
         <div className="relative z-10 container max-w-6xl mx-auto px-4 flex items-center min-h-[600px]">
-          <div className="max-w-xl">
+          <div className={`max-w-xl transition-all duration-1000 ease-out ${whyTuneVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-left text-white">
               Why Tune In to the Digital Legacy Podcast
             </h2>
@@ -153,13 +159,13 @@ const LearnAndListen = () => {
       </section>
       
       {/* Latest Episodes Section */}
-      <section className="py-16 bg-background">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section ref={episodesRef as any} className="py-16 bg-background">
+        <div className={`container max-w-6xl mx-auto px-4 transition-all duration-1000 ease-out ${episodesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
             Catch the Latest Episodes
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className={`grid md:grid-cols-3 gap-8 mb-12 transition-all duration-1000 ease-out ${episodesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: episodesVisible ? '0.2s' : '0s' }}>
             {/* Podcast 1 */}
             <div className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img 
@@ -215,7 +221,7 @@ const LearnAndListen = () => {
             </div>
           </div>
           
-          <div className="text-center">
+          <div className={`text-center transition-all duration-1000 ease-out ${episodesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: episodesVisible ? '0.4s' : '0s' }}>
             <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-300">
               View All
             </button>
@@ -224,11 +230,11 @@ const LearnAndListen = () => {
       </section>
       
       {/* Subscribe Section */}
-      <section className="relative py-16 bg-brand-navy overflow-hidden">
+      <section ref={subscribeRef as any} className="relative py-16 bg-brand-navy overflow-hidden">
         {/* Texture Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-navy-light to-brand-navy opacity-90"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px] opacity-20"></div>
-        <div className="relative z-10 container max-w-6xl mx-auto px-4">
+        <div className={`relative z-10 container max-w-6xl mx-auto px-4 transition-all duration-1000 ease-out ${subscribeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Image */}
             <div className="flex justify-center items-center">
@@ -256,13 +262,13 @@ const LearnAndListen = () => {
       </section>
       
       {/* About the Digital Legacy Podcast Section */}
-      <section className="py-16 bg-background">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section ref={aboutRef as any} className="py-16 bg-background">
+        <div className={`container max-w-6xl mx-auto px-4 transition-all duration-1000 ease-out ${aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
             About the Digital Legacy Podcast
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-12 items-stretch">
+          <div className={`grid md:grid-cols-2 gap-12 items-stretch transition-all duration-1000 ease-out ${aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: aboutVisible ? '0.2s' : '0s' }}>
             {/* Text Content */}
             <div className="flex flex-col justify-center">
               <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
