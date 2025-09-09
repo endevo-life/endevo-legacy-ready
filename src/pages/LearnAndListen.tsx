@@ -44,9 +44,13 @@ const LearnAndListen = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Life's Final Playbook, Planned for Today's Digital Age
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             Safeguard Your Assets. Preserve Your Digital Legacy. Protect What Matters Most.
           </p>
+          
+          <h3 className="text-2xl md:text-3xl font-semibold mb-12 text-foreground">
+            Subscribe on Your Favorite Platform
+          </h3>
           
           {/* Podcast Platform Buttons */}
           <div className="flex justify-center items-center gap-12">
