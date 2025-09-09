@@ -227,11 +227,11 @@ const LearnAndListen = () => {
         <div className="container max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="flex justify-center">
+            <div className="flex justify-center h-full">
               <img 
                 src="/lovable-uploads/b9741420-16a0-47ce-919b-996cde302c8a.png" 
                 alt="Digital Asset Inventory Worksheet"
-                className="max-w-md w-full h-auto rounded-lg shadow-lg"
+                className="max-w-md w-full h-full object-cover rounded-lg shadow-lg"
               />
             </div>
             
