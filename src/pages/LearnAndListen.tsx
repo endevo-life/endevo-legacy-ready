@@ -13,7 +13,7 @@ const LearnAndListen = () => {
       <section 
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/c4e16bc3-599c-45d7-b44e-39d8c6f5ef91.png')`
+          backgroundImage: `url('/lovable-uploads/e1962475-57a2-4dd5-ab64-3d261596e3cd.png')`
         }}
       >
         {/* Overlay */}
@@ -94,23 +94,31 @@ const LearnAndListen = () => {
       </section>
       
       {/* Why Tune In Section */}
-      <section className="py-16 bg-background">
-        <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-foreground">
+      <section 
+        className="relative py-16 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/c4e16bc3-599c-45d7-b44e-39d8c6f5ef91.png')`
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        
+        <div className="relative z-10 container max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white">
             Why Tune In to the Digital Legacy Podcast
           </h2>
           
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
               In today's high-tech world, death isn't just about physical belongings. It's about safeguarding your digital legacy and online assets. Yet, most of us are totally unprepared. Then, the inevitable happens. And our loved ones are left in a mess of chaos, confusion, or costly legal battles. What if this could all be avoided by having a plan in place before something happens?
             </p>
             
             <div className="mb-8">
-              <p className="text-lg md:text-xl text-foreground mb-6 font-semibold">
+              <p className="text-lg md:text-xl text-white mb-6 font-semibold">
                 Tune in to hear from Niki Weiss and leading experts as they explore how to:
               </p>
               
-              <ul className="space-y-4 text-lg text-muted-foreground">
+              <ul className="space-y-4 text-lg text-white/90">
                 <li className="flex items-start">
                   <span className="text-brand-orange mr-3 mt-1">•</span>
                   Confront the hard truths about death, illness, and incapacitation in the digital age
@@ -134,7 +142,7 @@ const LearnAndListen = () => {
               </ul>
             </div>
             
-            <p className="text-lg md:text-xl text-foreground font-semibold text-center">
+            <p className="text-lg md:text-xl text-white font-semibold text-center">
               Life is full of surprises. What happens to your physical and digital assets when you die shouldn't be.
             </p>
           </div>
