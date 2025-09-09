@@ -1,4 +1,5 @@
 import LearnListenHeader from "@/components/LearnListenHeader";
+import LearnListenFooter from "@/components/LearnListenFooter";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -286,6 +287,8 @@ const LearnAndListen = () => {
           </div>
         </div>
       </section>
+      
+      <LearnListenFooter />
     </div>
   );
 };
