@@ -104,7 +104,7 @@ const LearnAndListen = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
         
         <div className="relative z-10 container max-w-6xl mx-auto px-4 flex items-center min-h-[600px]">
-          <div className="max-w-2xl">
+          <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-left text-white">
               Why Tune In to the Digital Legacy Podcast
             </h2>
