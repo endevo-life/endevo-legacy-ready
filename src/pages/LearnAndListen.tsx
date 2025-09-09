@@ -54,7 +54,7 @@ const LearnAndListen = () => {
               <img 
                 src="/lovable-uploads/26e4b3c4-e17f-4a89-880a-4d2ac57c3269.png" 
                 alt="Listen on Spotify" 
-                className="h-auto w-auto"
+                className="h-16 w-auto"
               />
             </a>
             <a href="#" className="hover-scale transition-transform duration-300">
