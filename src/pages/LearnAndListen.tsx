@@ -37,6 +37,57 @@ const LearnAndListen = () => {
           </div>
         </div>
       </section>
+      
+      {/* Content Section */}
+      <section className="py-16 bg-background">
+        <div className="container max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Life's Final Playbook, Planned for Today's Digital Age
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12">
+            Safeguard Your Assets. Preserve Your Digital Legacy. Protect What Matters Most.
+          </p>
+          
+          {/* Podcast Platform Buttons */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="#" className="hover-scale transition-transform duration-300">
+              <img 
+                src="/lovable-uploads/8d51ea5c-e37d-41df-84ed-00d68ce7f784.png" 
+                alt="Listen on Spotify" 
+                className="h-12 w-auto"
+              />
+            </a>
+            <a href="#" className="hover-scale transition-transform duration-300">
+              <img 
+                src="/lovable-uploads/a558af9e-3ab5-4ac7-8c69-2f39c9f097df.png" 
+                alt="Listen on Apple Podcasts" 
+                className="h-12 w-auto"
+              />
+            </a>
+            <a href="#" className="hover-scale transition-transform duration-300">
+              <img 
+                src="/lovable-uploads/ee4ddaa8-f259-41cf-a026-11581e67b1fd.png" 
+                alt="Listen on YouTube" 
+                className="h-12 w-auto"
+              />
+            </a>
+            <a href="#" className="hover-scale transition-transform duration-300">
+              <img 
+                src="/lovable-uploads/55d1cd8a-3ce8-4ba2-9965-b96ecd1a4d63.png" 
+                alt="Listen on Pandora" 
+                className="h-12 w-auto"
+              />
+            </a>
+            <a href="#" className="hover-scale transition-transform duration-300">
+              <img 
+                src="/lovable-uploads/762c9eba-581b-49da-89ce-66da9577a848.png" 
+                alt="Listen on Amazon Music" 
+                className="h-12 w-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
