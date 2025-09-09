@@ -9,11 +9,11 @@ const LearnListenFooter = () => {
   ];
 
   const podcastPlatforms = [
-    { name: "Apple Podcasts", src: "/lovable-uploads/f6babc84-f525-4844-86a2-dd58e7313d90.png", href: "#" },
-    { name: "Amazon Music", src: "/lovable-uploads/52a87b6b-8b2f-4bc0-9c73-b68f62df7b5d.png", href: "#" },
-    { name: "Spotify", src: "/lovable-uploads/ff2f1422-2b37-4f11-b883-e24612bbb6af.png", href: "#" },
-    { name: "Pandora", src: "/lovable-uploads/9d063b21-239e-4b1d-aea8-4a4ccdc0c9ba.png", href: "#" },
-    { name: "YouTube", src: "/lovable-uploads/a4b7dcdc-52dd-431f-a44a-9bd6232bc7dd.png", href: "#" },
+    { name: "Apple Podcasts", href: "#" },
+    { name: "Amazon Music", href: "#" },
+    { name: "Spotify", href: "#" },
+    { name: "Pandora", href: "#" },
+    { name: "YouTube", href: "#" },
   ];
 
   return (
@@ -55,13 +55,9 @@ const LearnListenFooter = () => {
                 <a
                   key={platform.name}
                   href={platform.href}
-                  className="hover-scale transition-transform duration-300"
+                  className="story-link hover:text-brand-orange transition-colors hover-scale"
                 >
-                  <img
-                    src={platform.src}
-                    alt={`Listen on ${platform.name}`}
-                    className="h-8 w-auto"
-                  />
+                  {platform.name}
                 </a>
               ))}
             </div>
