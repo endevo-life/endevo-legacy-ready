@@ -40,7 +40,7 @@ const LearnAndListen = () => {
       
       {/* Content Section */}
       <section className="py-8 bg-background">
-        <div className="container max-w-4xl mx-auto px-2 text-center">
+        <div className="container max-w-6xl mx-auto px-2 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Life's Final Playbook, Planned for Today's Digital Age
           </h2>
