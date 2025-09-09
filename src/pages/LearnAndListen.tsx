@@ -13,7 +13,7 @@ const LearnAndListen = () => {
       <section 
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/e1962475-57a2-4dd5-ab64-3d261596e3cd.png')`
+          backgroundImage: `url('/lovable-uploads/c4e16bc3-599c-45d7-b44e-39d8c6f5ef91.png')`
         }}
       >
         {/* Overlay */}
