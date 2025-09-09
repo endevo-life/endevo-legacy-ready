@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 
 const LearnListenHeader = () => {
   const navItems = [
-    { name: "Podcast", href: "#podcast" },
-    { name: "Video", href: "#video" },
-    { name: "Blog", href: "#blog" },
-    { name: "Resources", href: "#resources" },
+    { name: "Podcast", href: "/podcast" },
+    { name: "Video", href: "/video" },
+    { name: "Blog", href: "/blog" },
+    { name: "Resources", href: "/resources" },
   ];
 
   return (
