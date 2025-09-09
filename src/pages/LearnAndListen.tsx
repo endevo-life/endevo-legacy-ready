@@ -52,9 +52,9 @@ const LearnAndListen = () => {
           <div className="flex justify-center items-center gap-12 overflow-x-auto">
             <a href="#" className="hover-scale transition-transform duration-300">
               <img 
-                src="/lovable-uploads/26e4b3c4-e17f-4a89-880a-4d2ac57c3269.png" 
+                src="/lovable-uploads/ff2f1422-2b37-4f11-b883-e24612bbb6af.png" 
                 alt="Listen on Spotify" 
-                className="h-16 w-32"
+                className="h-auto w-auto"
               />
             </a>
             <a href="#" className="hover-scale transition-transform duration-300">
