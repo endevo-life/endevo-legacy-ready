@@ -10,15 +10,9 @@ const FrameworkSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div 
-            className={`transition-all duration-700 ${
-              isVisible 
-                ? "opacity-100 translate-x-0" 
-                : "opacity-0 -translate-x-8"
-            }`}
-          >
+          <div>
             <img 
-              src="/lovable-uploads/cff05551-a4e0-4e23-9c84-f293f69611c6.png"
+              src="/lovable-uploads/7d0feb8d-f1ed-492e-bb9a-3d6fadea724e.png"
               alt="ENDevo Framework - Digital, Legal, Physical, Financial around Your Beliefs"
               className="w-full max-w-md mx-auto"
             />
