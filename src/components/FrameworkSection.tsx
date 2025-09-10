@@ -1,34 +1,22 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const FrameworkSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
-
-  return (
-    <section ref={elementRef} className="py-16 bg-background">
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation();
+  return <section ref={elementRef} className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div>
-            <img 
-              src="/lovable-uploads/7d0feb8d-f1ed-492e-bb9a-3d6fadea724e.png"
-              alt="ENDevo Framework - Digital, Legal, Physical, Financial around Your Beliefs"
-              className="w-full max-w-md mx-auto"
-            />
+            <img src="/lovable-uploads/7d0feb8d-f1ed-492e-bb9a-3d6fadea724e.png" alt="ENDevo Framework - Digital, Legal, Physical, Financial around Your Beliefs" className="w-full max-w-md mx-auto" />
           </div>
 
           {/* Content */}
-          <div 
-            className={`transition-all duration-700 delay-200 ${
-              isVisible 
-                ? "opacity-100 translate-x-0" 
-                : "opacity-0 translate-x-8"
-            }`}
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              🌟 Our Framework
-            </h2>
+          <div className={`transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our Framework</h2>
             
             <p className="text-lg text-muted-foreground mb-8">
               Your decisions should reflect your values. That's why our approach focuses on four key areas:
@@ -80,8 +68,6 @@ const FrameworkSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FrameworkSection;
