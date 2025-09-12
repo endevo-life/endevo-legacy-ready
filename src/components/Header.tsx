@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -60,13 +61,13 @@ const Header = () => {
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2 animate-fade-in">
-          <a href="/" className="hover-scale transition-transform duration-300">
+          <Link to="/" className="hover-scale transition-transform duration-300">
             <img 
               src="/lovable-uploads/7cfe182f-92e2-4cba-83af-773a3b175ea6.png" 
               alt="ENDevo Logo" 
               className="h-8 w-auto"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Navigation */}
@@ -82,25 +83,25 @@ const Header = () => {
                     <NavigationMenuContent className="animate-scale-in">
                       <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] animate-fade-in">
                         {item.items.map((subItem, index) => (
-                          <a
+                          <Link
                             key={subItem.name}
-                            href={subItem.href}
+                            to={subItem.href}
                             className="story-link block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover-scale"
                             style={{ animationDelay: `${index * 50}ms` }}
                           >
                             <div className="text-sm font-medium leading-none">{subItem.name}</div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </NavigationMenuContent>
                   </>
                 ) : (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="story-link text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300 px-4 py-2 block hover-scale"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 )}
               </NavigationMenuItem>
             ))}
