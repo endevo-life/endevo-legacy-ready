@@ -13,44 +13,44 @@ const Header = () => {
       name: "Solutions", 
       href: "/solution",
       items: [
-        { name: "Loss Support", href: "#loss-support" },
-        { name: "Legacy Planning", href: "#legacy-planning" },
-        { name: "EAP Replacement", href: "#eap-replacement" },
-        { name: "Approach", href: "#approach" },
+        { name: "Loss Support", href: "/loss-support" },
+        { name: "Legacy Planning", href: "/legacy-planning" },
+        { name: "EAP Replacement", href: "/eap-replacement" },
+        { name: "Approach", href: "/approach" },
       ]
     },
     { 
       name: "Who We Serve", 
-      href: "#who-we-serve",
+      href: "/who-we-serve",
       items: [
-        { name: "Employers", href: "#employers" },
-        { name: "Consultants", href: "#consultants" },
-        { name: "Members", href: "#members" },
-        { name: "Providers", href: "#providers" },
-        { name: "Financial Institutions", href: "#financial-institutions" },
+        { name: "Employers", href: "/employers" },
+        { name: "Consultants", href: "/consultants" },
+        { name: "Members", href: "/members" },
+        { name: "Providers", href: "/providers" },
+        { name: "Financial Institutions", href: "/financial-institutions" },
       ]
     },
     { 
       name: "Resources", 
-      href: "#resources",
+      href: "/resources",
       items: [
-        { name: "Knowledge Base", href: "#knowledge-base" },
-        { name: "Blogs & Podcasts", href: "#blogs-podcasts" },
-        { name: "Guides", href: "#guides" },
-        { name: "Events", href: "#events" },
-        { name: "Customer Stories", href: "#customer-stories" },
+        { name: "Knowledge Base", href: "/knowledge-base" },
+        { name: "Blogs & Podcasts", href: "/blogs-podcasts" },
+        { name: "Guides", href: "/guides" },
+        { name: "Events", href: "/events" },
+        { name: "Customer Stories", href: "/customer-stories" },
       ]
     },
-    { name: "Plan", href: "#plan" },
+    { name: "Plan", href: "/plan" },
     { 
       name: "Company", 
-      href: "#company",
+      href: "/company",
       items: [
-        { name: "About Us", href: "#about-us" },
-        { name: "Team", href: "#team" },
-        { name: "Careers", href: "#careers" },
-        { name: "News", href: "#news" },
-        { name: "Alliance", href: "#alliance" },
+        { name: "About Us", href: "/about-us" },
+        { name: "Team", href: "/team" },
+        { name: "Careers", href: "/careers" },
+        { name: "News", href: "/news" },
+        { name: "Alliance", href: "/alliance" },
       ]
     },
   ];

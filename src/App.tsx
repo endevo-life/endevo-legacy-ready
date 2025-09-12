@@ -24,6 +24,28 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/learn-and-listen" element={<LearnAndListen />} />
           <Route path="/solution" element={<Solution />} />
+          <Route path="/loss-support" element={<NotFound />} />
+          <Route path="/legacy-planning" element={<NotFound />} />
+          <Route path="/eap-replacement" element={<NotFound />} />
+          <Route path="/approach" element={<NotFound />} />
+          <Route path="/who-we-serve" element={<NotFound />} />
+          <Route path="/employers" element={<NotFound />} />
+          <Route path="/consultants" element={<NotFound />} />
+          <Route path="/members" element={<NotFound />} />
+          <Route path="/providers" element={<NotFound />} />
+          <Route path="/financial-institutions" element={<NotFound />} />
+          <Route path="/knowledge-base" element={<NotFound />} />
+          <Route path="/blogs-podcasts" element={<NotFound />} />
+          <Route path="/guides" element={<NotFound />} />
+          <Route path="/events" element={<NotFound />} />
+          <Route path="/customer-stories" element={<NotFound />} />
+          <Route path="/plan" element={<NotFound />} />
+          <Route path="/company" element={<NotFound />} />
+          <Route path="/about-us" element={<NotFound />} />
+          <Route path="/team" element={<NotFound />} />
+          <Route path="/careers" element={<NotFound />} />
+          <Route path="/news" element={<NotFound />} />
+          <Route path="/alliance" element={<NotFound />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/video" element={<Video />} />
           <Route path="/blog" element={<Blog />} />
