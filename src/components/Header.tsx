@@ -11,7 +11,7 @@ const Header = () => {
   const navItems = [
     { 
       name: "Solutions", 
-      href: "#solutions",
+      href: "/solution",
       items: [
         { name: "Loss Support", href: "#loss-support" },
         { name: "Legacy Planning", href: "#legacy-planning" },
