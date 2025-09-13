@@ -1,10 +1,10 @@
-import LearnListenHeader from "@/components/LearnListenHeader";
+import Header from "@/components/Header";
 import LearnListenFooter from "@/components/LearnListenFooter";
 
 const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
-      <LearnListenHeader />
+      <Header />
       
       <main className="container max-w-7xl mx-auto px-4 py-12">
         <div className="animate-fade-in">

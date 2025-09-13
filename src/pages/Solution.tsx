@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -6,6 +7,7 @@ const Solution = () => {
 
   return (
     <div className="min-h-screen">
+      <Header />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary to-primary-variant">
         <div className="container max-w-7xl mx-auto px-4">

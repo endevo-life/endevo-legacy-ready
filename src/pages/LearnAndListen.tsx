@@ -1,4 +1,4 @@
-import LearnListenHeader from "@/components/LearnListenHeader";
+import Header from "@/components/Header";
 import LearnListenFooter from "@/components/LearnListenFooter";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -13,7 +13,7 @@ const LearnAndListen = () => {
   
   return (
     <div className="min-h-screen bg-background">
-      <LearnListenHeader />
+      <Header />
       
       {/* Hero Section */}
       <section 
