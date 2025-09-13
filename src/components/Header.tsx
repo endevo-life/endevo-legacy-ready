@@ -1,59 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const navItems = [
-    { 
-      name: "Solutions", 
-      href: "/solution",
-      items: [
-        { name: "Loss Support", href: "/loss-support" },
-        { name: "Legacy Planning", href: "/legacy-planning" },
-        { name: "EAP Replacement", href: "/eap-replacement" },
-        { name: "Approach", href: "/approach" },
-      ]
-    },
-    { 
-      name: "Who We Serve", 
-      href: "/who-we-serve",
-      items: [
-        { name: "Employers", href: "/employers" },
-        { name: "Consultants", href: "/consultants" },
-        { name: "Members", href: "/members" },
-        { name: "Providers", href: "/providers" },
-        { name: "Financial Institutions", href: "/financial-institutions" },
-      ]
-    },
-    { 
-      name: "Resources", 
-      href: "/resources",
-      items: [
-        { name: "Knowledge Base", href: "/knowledge-base" },
-        { name: "Blogs & Podcasts", href: "/blogs-podcasts" },
-        { name: "Guides", href: "/guides" },
-        { name: "Events", href: "/events" },
-        { name: "Customer Stories", href: "/customer-stories" },
-      ]
-    },
+    { name: "Solutions", href: "/solution" },
+    { name: "Who We Serve", href: "/who-we-serve" },
+    { name: "Resources", href: "/resources" },
     { name: "Plan", href: "/plan" },
-    { 
-      name: "Company", 
-      href: "/company",
-      items: [
-        { name: "About Us", href: "/about-us" },
-        { name: "Team", href: "/team" },
-        { name: "Careers", href: "/careers" },
-        { name: "News", href: "/news" },
-        { name: "Alliance", href: "/alliance" },
-      ]
-    },
+    { name: "Company", href: "/company" },
   ];
 
   return (
@@ -71,42 +25,17 @@ const Header = () => {
         </div>
 
         {/* Navigation */}
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
-            {navItems.map((item) => (
-              <NavigationMenuItem key={item.name}>
-                {item.items ? (
-                  <>
-                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300 hover-scale">
-                      {item.name}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="animate-scale-in">
-                      <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] animate-fade-in">
-                        {item.items.map((subItem, index) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.href}
-                            className="story-link block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all duration-300 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover-scale"
-                            style={{ animationDelay: `${index * 50}ms` }}
-                          >
-                            <div className="text-sm font-medium leading-none">{subItem.name}</div>
-                          </Link>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className="story-link text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300 px-4 py-2 block hover-scale"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
+        <nav className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className="story-link text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300 px-4 py-2 hover-scale"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
 
         {/* CTA Button */}
         <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
