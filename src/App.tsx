@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import LearnAndListen from "./pages/LearnAndListen";
 import Solution from "./pages/Solution";
+import WhoWeServe from "./pages/WhoWeServe";
 import Podcast from "./pages/Podcast";
 import Video from "./pages/Video";
 import Blog from "./pages/Blog";
@@ -28,7 +29,7 @@ const App = () => (
           <Route path="/legacy-planning" element={<NotFound />} />
           <Route path="/eap-replacement" element={<NotFound />} />
           <Route path="/approach" element={<NotFound />} />
-          <Route path="/who-we-serve" element={<NotFound />} />
+          <Route path="/who-we-serve" element={<WhoWeServe />} />
           <Route path="/employers" element={<NotFound />} />
           <Route path="/consultants" element={<NotFound />} />
           <Route path="/members" element={<NotFound />} />
