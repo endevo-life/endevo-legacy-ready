@@ -37,10 +37,10 @@ const Resources = () => {
               <Button variant="cta" size="lg" className="flex items-center gap-2">
                 🎙️ Learn from Experts
               </Button>
-              <Button variant="secondary" size="lg" className="flex items-center gap-2">
+              <Button variant="cta" size="lg" className="flex items-center gap-2">
                 📱 Plan with Our App
               </Button>
-              <Button variant="outline" size="lg" className="flex items-center gap-2 border-white text-white hover:bg-white hover:text-primary">
+              <Button variant="cta" size="lg" className="flex items-center gap-2">
                 📘 Explore Practical Guides
               </Button>
             </div>
@@ -77,7 +77,7 @@ const Resources = () => {
       </section>
 
       {/* Access Care Anywhere Section */}
-      <section ref={appRef} className="py-20 bg-secondary">
+      <section ref={appRef} className="py-20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className={`${appVisible ? 'animate-fade-in' : 'opacity-0'}`}>
