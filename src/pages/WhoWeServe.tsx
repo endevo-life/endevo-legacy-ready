@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import heroBackground from "@/assets/who-we-serve-hero-bg.jpg";
 import professionalHeadshot from "@/assets/professional-headshot.jpg";
-import whyEndevoBackground from "@/assets/why-endevo-bg.jpg";
 
 const WhoWeServe = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -74,7 +73,7 @@ const WhoWeServe = () => {
       {/* Why ENDevo Section */}
       <section 
         className="py-20 bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: `url(${whyEndevoBackground})` }}
+        style={{ backgroundImage: `url(${professionalHeadshot})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
