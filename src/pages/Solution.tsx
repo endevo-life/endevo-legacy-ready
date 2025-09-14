@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import heroBackground from "@/assets/solution-hero-bg.jpg";
-import holisticFramework from "@/assets/holistic-framework.jpg";
+import holisticFramework from "@/assets/holistic-framework.png";
 import threeStepProcess from "@/assets/three-step-process.jpg";
 import forCompanies from "@/assets/for-companies.jpg";
 import forEmployees from "@/assets/for-employees.jpg";
