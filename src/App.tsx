@@ -11,6 +11,7 @@ import Podcast from "./pages/Podcast";
 import Video from "./pages/Video";
 import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
+import Plan from "./pages/Plan";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,7 +41,7 @@ const App = () => (
           <Route path="/guides" element={<NotFound />} />
           <Route path="/events" element={<NotFound />} />
           <Route path="/customer-stories" element={<NotFound />} />
-          <Route path="/plan" element={<NotFound />} />
+          <Route path="/plan" element={<Plan />} />
           <Route path="/company" element={<NotFound />} />
           <Route path="/about-us" element={<NotFound />} />
           <Route path="/team" element={<NotFound />} />
