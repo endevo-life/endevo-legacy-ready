@@ -40,39 +40,39 @@ const Plan = () => {
       </section>
 
       {/* Index Cards Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section className="py-20 bg-muted/30 rounded-t-[50px]">
+        <div className="container max-w-4xl mx-auto px-4">
           <div 
             ref={cardsRef as any}
-            className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 ${
+            className={`grid md:grid-cols-2 gap-6 transition-all duration-1000 ${
               cardsVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-10'
             }`}
           >
             {/* Enterprise Pilot Card */}
-            <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-t-[50px] shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-2xl font-bold text-center">
+            <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl font-bold text-center">
                   Start an Enterprise Pilot
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-lg leading-relaxed">
+              <CardContent className="text-center pt-0">
+                <p className="text-base leading-relaxed">
                   Test ENDevo's readiness program with your team and see the impact on resilience, productivity, and peace of mind.
                 </p>
               </CardContent>
             </Card>
 
             {/* Assessment Card */}
-            <Card className="bg-gradient-to-br from-brand-orange to-brand-orange/80 text-white rounded-t-[50px] shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-2xl font-bold text-center">
+            <Card className="bg-gradient-to-br from-brand-orange to-brand-orange/80 text-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl font-bold text-center">
                   Take the Peace of Mind Assessment
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-lg leading-relaxed">
+              <CardContent className="text-center pt-0">
+                <p className="text-base leading-relaxed">
                   Quickly spot gaps, gain clarity, and understand your readiness for life's inevitable transitions.
                 </p>
               </CardContent>
