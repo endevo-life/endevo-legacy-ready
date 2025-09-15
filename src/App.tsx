@@ -12,6 +12,7 @@ import Video from "./pages/Video";
 import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
 import Plan from "./pages/Plan";
+import Company from "./pages/Company";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,7 +43,7 @@ const App = () => (
           <Route path="/events" element={<NotFound />} />
           <Route path="/customer-stories" element={<NotFound />} />
           <Route path="/plan" element={<Plan />} />
-          <Route path="/company" element={<NotFound />} />
+          <Route path="/company" element={<Company />} />
           <Route path="/about-us" element={<NotFound />} />
           <Route path="/team" element={<NotFound />} />
           <Route path="/careers" element={<NotFound />} />
