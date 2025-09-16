@@ -42,22 +42,7 @@ const Header = () => {
                 Solutions
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 w-[400px] lg:w-[500px]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/solution"
-                      >
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          Enterprise Solutions
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          Comprehensive legacy readiness for organizations
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
+                <ul className="grid gap-2 p-4 w-[280px]">
                   <li>
                     <NavigationMenuLink asChild>
                       <a
@@ -67,7 +52,7 @@ const Header = () => {
                         )}
                       >
                         <div className="text-sm font-medium leading-none">Our Holistic Framework</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Four key areas of readiness
                         </p>
                       </a>
@@ -82,7 +67,7 @@ const Header = () => {
                         )}
                       >
                         <div className="text-sm font-medium leading-none">Core Solutions</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Key service offerings
                         </p>
                       </a>
@@ -97,7 +82,7 @@ const Header = () => {
                         )}
                       >
                         <div className="text-sm font-medium leading-none">Process</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Simple 3-step approach
                         </p>
                       </a>
@@ -112,7 +97,7 @@ const Header = () => {
                         )}
                       >
                         <div className="text-sm font-medium leading-none">For Companies</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Enterprise benefits
                         </p>
                       </a>
@@ -127,7 +112,7 @@ const Header = () => {
                         )}
                       >
                         <div className="text-sm font-medium leading-none">For Employees</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Personal benefits
                         </p>
                       </a>
