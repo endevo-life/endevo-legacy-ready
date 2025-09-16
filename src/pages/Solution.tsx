@@ -44,7 +44,7 @@ const Solution = () => {
       </section>
 
       {/* Our Holistic Framework Section */}
-      <section className="py-20 bg-background">
+      <section id="framework" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Holistic Framework</h2>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -78,7 +78,7 @@ const Solution = () => {
       </section>
 
       {/* Core Solutions Section */}
-      <section className="py-20 bg-muted/50">
+      <section id="core-solutions" className="py-20 bg-muted/50">
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Core Solutions</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -142,7 +142,7 @@ const Solution = () => {
       </section>
 
       {/* Simple 3-Step Process Section */}
-      <section className="py-20 bg-background">
+      <section id="process" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Simple 3-Step Process</h2>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -189,7 +189,7 @@ const Solution = () => {
       </section>
 
       {/* For Companies Section */}
-      <section className="py-20 bg-muted/50">
+      <section id="for-companies" className="py-20 bg-muted/50">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -217,7 +217,7 @@ const Solution = () => {
       </section>
 
       {/* For Employees Section */}
-      <section className="py-20 bg-background">
+      <section id="for-employees" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
