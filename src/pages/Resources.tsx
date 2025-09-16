@@ -49,7 +49,7 @@ const Resources = () => {
       </section>
 
       {/* Peace of Mind Section */}
-      <section 
+      <section id="peace-of-mind"
         ref={peaceRef}
         className="py-20 bg-cover bg-center bg-no-repeat relative"
         style={{ 
@@ -77,7 +77,7 @@ const Resources = () => {
       </section>
 
       {/* Access Care Anywhere Section */}
-      <section ref={appRef} className="py-20">
+      <section id="mobile-app" ref={appRef} className="py-20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className={`${appVisible ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -116,7 +116,7 @@ const Resources = () => {
       </section>
 
       {/* Niki Weiss Section */}
-      <section ref={nikiRef} className="py-20">
+      <section id="niki-weiss" ref={nikiRef} className="py-20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className={`${nikiVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`}>

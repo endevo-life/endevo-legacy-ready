@@ -40,7 +40,7 @@ const Plan = () => {
       </section>
 
       {/* Index Cards Section */}
-      <section className="py-20 bg-muted/30 rounded-t-[50px]">
+      <section id="path-options" className="py-20 bg-muted/30 rounded-t-[50px]">
         <div className="container max-w-4xl mx-auto px-4">
           <div 
             ref={cardsRef as any}
@@ -82,7 +82,7 @@ const Plan = () => {
       </section>
 
       {/* Avoid the Mess Section */}
-      <section className="py-20 bg-background">
+      <section id="avoid-chaos" className="py-20 bg-background">
         <div className="container max-w-6xl mx-auto px-4">
           <div 
             ref={chaosRef as any}
@@ -115,7 +115,7 @@ const Plan = () => {
       </section>
 
       {/* Framework Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="smart-framework" className="py-20 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-4">
           <div 
             ref={frameworkRef as any}
@@ -190,7 +190,7 @@ const Plan = () => {
       </section>
 
       {/* Legacy Readiness Section */}
-      <section className="py-20 bg-background">
+      <section id="legacy-readiness" className="py-20 bg-background">
         <div className="container max-w-6xl mx-auto px-4">
           <div 
             ref={legacyRef as any}

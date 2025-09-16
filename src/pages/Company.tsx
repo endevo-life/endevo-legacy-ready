@@ -68,7 +68,7 @@ const Company = () => {
       </section>
 
       {/* About ENDevo Section */}
-      <section className="py-20 bg-background">
+      <section id="about" className="py-20 bg-background">
         <div className="container max-w-6xl mx-auto px-4">
           <div 
             ref={aboutRef as any}
@@ -98,7 +98,7 @@ const Company = () => {
       </section>
 
       {/* Our Values Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="values" className="py-20 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-4">
           <div 
             ref={valuesRef as any}
@@ -180,7 +180,7 @@ const Company = () => {
       </section>
 
       {/* Meet Our Team Section */}
-      <section className="py-20 bg-primary/10 rounded-t-[50px]">
+      <section id="team" className="py-20 bg-primary/10 rounded-t-[50px]">
         <div className="container max-w-6xl mx-auto px-4">
           <div 
             ref={teamRef as any}

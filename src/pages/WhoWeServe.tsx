@@ -32,7 +32,7 @@ const WhoWeServe = () => {
       </section>
 
       {/* Industries Served Section */}
-      <section className="py-20 bg-background">
+      <section id="industries" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Industries Served</h2>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -71,7 +71,7 @@ const WhoWeServe = () => {
       </section>
 
       {/* Why ENDevo Section */}
-      <section 
+      <section id="why-endevo"
         className="py-20 bg-cover bg-center bg-no-repeat relative"
         style={{ backgroundImage: `url(${professionalHeadshot})` }}
       >
