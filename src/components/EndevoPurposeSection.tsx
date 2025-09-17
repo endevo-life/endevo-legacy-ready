@@ -7,7 +7,7 @@ const EndevoPurposeSection = () => {
     <section 
       className="relative py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/cdba9dc9-fda6-4e55-93b5-c348508632af.png')`
+        backgroundImage: `url('/lovable-uploads/bb68aa0f-b17f-4fdc-a383-97a8eb74e1ea.png')`
       }}
     >
       {/* Gradient overlay - left black to right transparent */}

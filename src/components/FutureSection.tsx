@@ -7,7 +7,7 @@ const FutureSection = () => {
     <section 
       className="relative py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/f816080f-83b6-4d73-a63c-3dcd165d5268.png')`
+        backgroundImage: `url('/lovable-uploads/762c9eba-581b-49da-89ce-66da9577a848.png')`
       }}
     >
       {/* Gradient overlay - right black to left transparent */}

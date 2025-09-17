@@ -25,10 +25,34 @@ const NewHeroSection = () => {
         </p>
         
         <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
-          <button className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-1000 ease-out hover-scale ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
+          <button className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-1000 ease-out hover-scale mb-12 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
             📝 Take the Peace of Mind Assessment
           </button>
         </a>
+        
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+          <a 
+            href="#" 
+            className={`text-white hover:text-brand-orange text-lg font-medium transition-all duration-700 ease-out story-link ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}
+          >
+            📲 Download My Final Playbook App
+          </a>
+          <a 
+            href="/podcast" 
+            className={`text-white hover:text-brand-orange text-lg font-medium transition-all duration-700 ease-out story-link ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: isVisible ? '1s' : '0s' }}
+          >
+            🎙️ Listen to the Digital Legacy Podcast
+          </a>
+          <a 
+            href="#" 
+            className={`text-white hover:text-brand-orange text-lg font-medium transition-all duration-700 ease-out story-link ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: isVisible ? '1.2s' : '0s' }}
+          >
+            💼 Start a Legacy Readiness Wellness Program
+          </a>
+        </div>
       </div>
     </section>
   );

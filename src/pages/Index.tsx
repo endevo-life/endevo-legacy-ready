@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import NewHeroSection from "@/components/NewHeroSection";
-import LinkSection from "@/components/LinkSection";
 import VideoSection from "@/components/VideoSection";
 import EndevoPurposeSection from "@/components/EndevoPurposeSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
@@ -14,7 +13,6 @@ const Index = () => {
       <Header />
       <main>
         <NewHeroSection />
-        <LinkSection />
         <VideoSection />
         <EndevoPurposeSection />
         <HiddenCostSection />
