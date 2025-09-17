@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import futureImage from "@/assets/building-future-legacy.jpg";
 
 const FutureSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -7,7 +8,7 @@ const FutureSection = () => {
     <section 
       className="relative py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/762c9eba-581b-49da-89ce-66da9577a848.png')`
+        backgroundImage: `url('${futureImage}')`
       }}
     >
       {/* Gradient overlay - right black to left transparent */}

@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import endevoImage from "@/assets/endevo-redefining-preparedness.jpg";
 
 const EndevoPurposeSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -7,7 +8,7 @@ const EndevoPurposeSection = () => {
     <section 
       className="relative py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/bb68aa0f-b17f-4fdc-a383-97a8eb74e1ea.png')`
+        backgroundImage: `url('${endevoImage}')`
       }}
     >
       {/* Gradient overlay - left black to right transparent */}
