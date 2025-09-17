@@ -346,7 +346,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
-          Book a Demo
+          Book a Call
         </Button>
       </div>
     </header>

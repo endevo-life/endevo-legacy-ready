@@ -1,14 +1,11 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import CriticalQuestion from "@/components/CriticalQuestion";
-import AboutSection from "@/components/AboutSection";
-import FrameworkSection from "@/components/FrameworkSection";
-import LegacySection from "@/components/LegacySection";
+import NewHeroSection from "@/components/NewHeroSection";
+import LinkSection from "@/components/LinkSection";
 import VideoSection from "@/components/VideoSection";
-import ProcessSection from "@/components/ProcessSection";
-import MobileAppSection from "@/components/MobileAppSection";
+import EndevoPurposeSection from "@/components/EndevoPurposeSection";
+import HiddenCostSection from "@/components/HiddenCostSection";
+import FutureSection from "@/components/FutureSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import CallToActionSection from "@/components/CallToActionSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,16 +13,13 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <HeroSection />
-        <CriticalQuestion />
-        <AboutSection />
-        <LegacySection />
-        <FrameworkSection />
+        <NewHeroSection />
+        <LinkSection />
         <VideoSection />
-        <ProcessSection />
-        <MobileAppSection />
+        <EndevoPurposeSection />
+        <HiddenCostSection />
+        <FutureSection />
         <TestimonialsSection />
-        <CallToActionSection />
       </main>
       <Footer />
     </div>
