@@ -6,7 +6,7 @@ const LinkSection = () => {
   return (
     <section className="py-16 bg-background">
       <div ref={elementRef as any} className="container max-w-6xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        <div className="flex flex-row items-center justify-center gap-4 md:gap-8 lg:gap-12 flex-wrap">
           <a 
             href="#" 
             className={`text-brand-navy hover:text-brand-orange text-lg font-medium transition-all duration-700 ease-out story-link ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
