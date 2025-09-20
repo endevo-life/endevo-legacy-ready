@@ -74,20 +74,18 @@ const WhoWeServe = () => {
       {/* Why ENDevo Section */}
       <section id="why-endevo" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
-          {/* Weighing Scale Image */}
-          <div className="text-center mb-16 animate-fade-in">
+          {/* Weighing Scale Image with Overlay Text */}
+          <div className="relative text-center animate-fade-in">
             <img 
               src={weighingScale} 
               alt="Traditional weighing scale showing ENDevo's balanced approach" 
               className="w-full max-w-4xl mx-auto h-auto"
             />
-          </div>
-          
-          {/* Why ENDevo Content */}
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Why ENDevo?</h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-muted-foreground leading-relaxed">
+            
+            {/* Text Overlay */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 max-w-2xl px-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Why ENDevo?</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Something written here Something written here Something written here
                 Something written here Something written here
               </p>
