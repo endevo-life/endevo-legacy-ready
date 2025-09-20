@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import heroBackground from "@/assets/who-we-serve-hero-bg.jpg";
 import professionalHeadshot from "@/assets/professional-headshot.jpg";
-import weighingScale from "@/assets/weighing-scale-endevo.jpg";
+import weighingScale from "@/assets/weighing-scale-transparent.png";
 
 const WhoWeServe = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -72,13 +72,17 @@ const WhoWeServe = () => {
       </section>
 
       {/* Why ENDevo Section */}
-      <section 
-        id="why-endevo" 
-        className="py-20 bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: `url(${weighingScale})` }}
-      >
-        <div className="absolute inset-0 bg-white/80"></div>
-        <div className="container max-w-7xl mx-auto px-4 relative z-10">
+      <section id="why-endevo" className="py-20 bg-background">
+        <div className="container max-w-7xl mx-auto px-4">
+          {/* Weighing Scale Image */}
+          <div className="text-center mb-16 animate-fade-in">
+            <img 
+              src={weighingScale} 
+              alt="Traditional weighing scale showing ENDevo's balanced approach" 
+              className="w-full max-w-4xl mx-auto h-auto"
+            />
+          </div>
+          
           {/* Why ENDevo Content */}
           <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Why ENDevo?</h2>
