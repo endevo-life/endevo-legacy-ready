@@ -72,8 +72,8 @@ const WhoWeServe = () => {
       </section>
 
       {/* Why ENDevo Section */}
-      <section id="why-endevo" className="py-20 bg-background">
-        <div className="container max-w-7xl mx-auto px-4">
+      <section id="why-endevo" className="bg-background">
+        <div className="container max-w-7xl mx-auto">
           {/* Weighing Scale Image with Overlay Text */}
           <div className="relative text-center animate-fade-in">
             <img 
