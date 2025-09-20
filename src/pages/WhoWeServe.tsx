@@ -79,7 +79,7 @@ const WhoWeServe = () => {
             <img 
               src={weighingScale} 
               alt="Traditional weighing scale showing ENDevo's balanced approach" 
-              className="w-full max-w-6xl mx-auto h-auto"
+              className="w-full max-w-6xl mx-auto h-auto border-0"
             />
             
             {/* Text Overlay */}
