@@ -65,7 +65,7 @@ const ResponsiveNavbar = () => {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                   <div className="py-2">
                     {item.submenu.map((subItem) => (
                       <Link
