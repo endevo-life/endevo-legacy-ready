@@ -26,6 +26,15 @@ const ResponsiveNavbar = () => {
       ]
     },
     {
+      name: "Resources",
+      href: "/resources",
+      submenu: [
+        { name: "Peace of Mind", href: "/resources#peace-of-mind" },
+        { name: "Mobile App", href: "/resources#mobile-app" },
+        { name: "Niki Weiss", href: "/resources#niki-weiss" },
+      ]
+    },
+    {
       name: "Plan",
       href: "/plan",
       submenu: [
@@ -33,6 +42,15 @@ const ResponsiveNavbar = () => {
         { name: "Avoid the Mess", href: "/plan#avoid-chaos" },
         { name: "Smart Framework", href: "/plan#smart-framework" },
         { name: "Legacy Readiness", href: "/plan#legacy-readiness" },
+      ]
+    },
+    {
+      name: "Company",
+      href: "/company",
+      submenu: [
+        { name: "About ENDevo", href: "/company#about" },
+        { name: "Our Values", href: "/company#values" },
+        { name: "Meet Our Team", href: "/company#team" },
       ]
     }
   ];
