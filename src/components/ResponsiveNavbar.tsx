@@ -132,27 +132,14 @@ const ResponsiveNavbar = () => {
         }`}>
           <div className="py-4 space-y-4">
             {menuItems.map((item) => (
-              <div key={item.name} className="space-y-2">
-                <Link
-                  to={item.href}
-                  className="block text-foreground hover:text-primary transition-colors duration-300 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                <div className="pl-4 space-y-1">
-                  {item.submenu.map((subItem) => (
-                    <Link
-                      key={subItem.name}
-                      to={subItem.href}
-                      className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 py-1"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              <Link
+                key={item.name}
+                to={item.href}
+                className="block text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
             ))}
             <div className="pt-4 border-t border-border">
               <Link
