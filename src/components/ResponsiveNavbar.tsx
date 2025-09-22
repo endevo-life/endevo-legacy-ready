@@ -82,7 +82,7 @@ const ResponsiveNavbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Desktop CTA Button */}
           <div className="hidden md:block">
             <Link
               to="/contact"
@@ -92,11 +92,12 @@ const ResponsiveNavbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile hamburger menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-accent transition-colors duration-300"
+              aria-label="Toggle navigation menu"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
