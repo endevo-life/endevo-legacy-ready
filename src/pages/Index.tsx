@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import NewHeroSection from "@/components/NewHeroSection";
 import VideoSection from "@/components/VideoSection";
 import EndevoPurposeSection from "@/components/EndevoPurposeSection";
@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+      <ResponsiveNavbar />
       <main>
         <NewHeroSection />
         <VideoSection />
