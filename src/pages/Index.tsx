@@ -6,6 +6,7 @@ import HiddenCostSection from "@/components/HiddenCostSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
 import FutureSection from "@/components/FutureSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ConsultationSection from "@/components/ConsultationSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
         <CoreValuesSection />
         <FutureSection />
         <TestimonialsSection />
+        <ConsultationSection />
       </main>
       <Footer />
     </div>
