@@ -127,22 +127,6 @@ const ConsultationSection = () => {
             </div>
           </div>
         </div>
-
-        {/* Urgent Matter Box */}
-        <div className={`bg-brand-orange rounded-xl p-8 text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '1s' : '0s' }}>
-          <h3 className="text-2xl font-bold text-white mb-4">Urgent Matter?</h3>
-          <p className="text-white/90 mb-6">For time-sensitive legacy planning matters</p>
-          <div className="max-w-md mx-auto">
-            <textarea
-              className="w-full px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-foreground"
-              rows={3}
-              placeholder="Describe your urgent matter and we'll prioritize your request..."
-            />
-            <button className="mt-4 bg-white text-brand-orange font-semibold py-3 px-8 rounded-lg hover:bg-gray-50 transition-colors duration-300 hover-scale">
-              Submit Urgent Request
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
