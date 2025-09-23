@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import heroBackground from "@/assets/hero-background.png";
 
 const NewHeroSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -7,7 +8,7 @@ const NewHeroSection = () => {
     <section 
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/9e254043-ae74-4e4d-b86f-694807a431d0.png')`
+        backgroundImage: `url('${heroBackground}')`
       }}
     >
       {/* Overlay */}
