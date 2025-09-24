@@ -15,10 +15,14 @@ const VideoSection = () => {
 
         {/* Demo Video Area */}
         <div className="relative bg-card rounded-2xl shadow-lg mb-16 overflow-hidden">
-          <div className="aspect-video bg-muted/20 flex items-center justify-center">
-            <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover-scale">
-              Watch the Demo Video
-            </button>
+          <div className="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/T8bDMPgohvM"
+              title="ENDevo Demo Video"
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
 
