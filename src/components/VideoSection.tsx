@@ -16,13 +16,14 @@ const VideoSection = () => {
         {/* Demo Video Area */}
         <div className="relative bg-card rounded-2xl shadow-lg mb-16 overflow-hidden">
           <div className="aspect-video">
-            <iframe
-              src="https://www.youtube.com/embed/T8bDMPgohvM"
-              title="ENDevo Demo Video"
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <video
+              src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/68cc14fa55e7995370b04348.mp4"
+              controls
+              className="w-full h-full object-cover"
+              poster=""
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
