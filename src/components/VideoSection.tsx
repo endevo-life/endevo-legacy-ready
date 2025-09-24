@@ -1,6 +1,5 @@
 const VideoSection = () => {
-  return (
-    <section className="py-12 px-4 bg-background">
+  return <section className="py-12 px-4 bg-background">
       <div className="container max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -16,12 +15,7 @@ const VideoSection = () => {
         {/* Demo Video Area */}
         <div className="relative bg-card rounded-2xl shadow-lg mb-12 overflow-hidden">
           <div className="aspect-video">
-            <video
-              src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/68cc14fa55e7995370b04348.mp4"
-              controls
-              className="w-full h-full object-cover"
-              poster=""
-            >
+            <video src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/68cc14fa55e7995370b04348.mp4" controls className="w-full h-full object-cover" poster="">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -30,22 +24,21 @@ const VideoSection = () => {
         {/* Feature Boxes */}
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-card rounded-xl shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-brand-orange mb-4">Legacy Planning Tools</h3>
-            <p className="text-muted-foreground">AI-powered tools to help you organize and plan your digital and physical legacy with precision.</p>
+            <h3 className="text-xl font-bold text-brand-orange mb-4">AI Tools</h3>
+            <p className="text-muted-foreground">Legacy Planning Tools</p>
           </div>
           
           <div className="bg-card rounded-xl shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-brand-orange mb-4">Asset Protection</h3>
-            <p className="text-muted-foreground">Comprehensive digital asset protection strategies to secure your valuable information and accounts.</p>
+            <h3 className="text-xl font-bold text-brand-orange mb-4">Digital</h3>
+            <p className="text-muted-foreground">Asset Protection</p>
           </div>
           
           <div className="bg-card rounded-xl shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-brand-orange mb-4">Guidance & Support</h3>
-            <p className="text-muted-foreground">Human-centered guidance and support throughout your legacy readiness journey.</p>
+            <h3 className="text-xl font-bold text-brand-orange mb-4">Human-Centered</h3>
+            <p className="text-muted-foreground">Guidance & Support</p>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default VideoSection;
