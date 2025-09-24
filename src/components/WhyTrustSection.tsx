@@ -1,37 +1,36 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Globe, Bot, Building2, Shield, Heart } from "lucide-react";
+import marketIcon from "@/assets/trust-icon-market.png";
+import aiHumanIcon from "@/assets/trust-icon-ai-human.png";
+import businessIcon from "@/assets/trust-icon-business.png";
+import securityIcon from "@/assets/trust-icon-security.png";
+import valuesIcon from "@/assets/trust-icon-values.png";
 
 const WhyTrustSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   
   const features = [
     {
-      icon: Globe,
-      iconColor: "text-blue-500",
+      iconSrc: marketIcon,
       title: "$126B Market Need",
       description: "Legacy readiness & digital preparedness are urgent, but overlooked."
     },
     {
-      icon: Bot,
-      iconColor: "text-teal-500",
+      iconSrc: aiHumanIcon,
       title: "AI + Human-Centered Design",
       description: "Smart tools made simple, supportive, and compassionate."
     },
     {
-      icon: Building2,
-      iconColor: "text-orange-500",
+      iconSrc: businessIcon,
       title: "Trusted by Businesses & Individuals",
       description: "Early HR/EAP pilots and app users already seeing impact."
     },
     {
-      icon: Shield,
-      iconColor: "text-blue-600",
+      iconSrc: securityIcon,
       title: "Secure & Reliable",
       description: "Enterprise-grade safeguards to protect digital footprints."
     },
     {
-      icon: Heart,
-      iconColor: "text-red-500",
+      iconSrc: valuesIcon,
       title: "Built on Values (C.L.A.R.I.T.Y.)",
       description: "Compassion, Clarity, Resilience, and Innovation at the core."
     }
@@ -47,9 +46,7 @@ const WhyTrustSection = () => {
         
         {/* Features List */}
         <div className="space-y-8 mb-16">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
+        {features.map((feature, index) => (
               <div 
                 key={index}
                 className={`flex items-start gap-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
@@ -57,8 +54,12 @@ const WhyTrustSection = () => {
               >
                 {/* Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-background border border-border rounded-lg flex items-center justify-center shadow-sm">
-                    <Icon className={`w-6 h-6 ${feature.iconColor}`} />
+                  <div className="w-16 h-16 flex items-center justify-center">
+                    <img 
+                      src={feature.iconSrc} 
+                      alt={feature.title}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 </div>
                 
@@ -72,8 +73,8 @@ const WhyTrustSection = () => {
                   </p>
                 </div>
               </div>
-            );
-          })}
+            )
+          )}
         </div>
         
         {/* CTA Button */}
