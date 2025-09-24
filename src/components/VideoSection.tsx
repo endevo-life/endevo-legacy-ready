@@ -1,7 +1,7 @@
 const VideoSection = () => {
   return (
-    <section className="py-16 px-4 bg-background">
-      <div className="container max-w-6xl mx-auto">
+    <section className="py-12 px-4 bg-background">
+      <div className="container max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -14,7 +14,7 @@ const VideoSection = () => {
         </div>
 
         {/* Demo Video Area */}
-        <div className="relative bg-card rounded-2xl shadow-lg mb-16 overflow-hidden">
+        <div className="relative bg-card rounded-2xl shadow-lg mb-12 overflow-hidden">
           <div className="aspect-video">
             <video
               src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/68cc14fa55e7995370b04348.mp4"
