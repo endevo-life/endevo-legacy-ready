@@ -45,7 +45,7 @@ const WhyTrustSection = () => {
         </h2>
         
         {/* Features List */}
-        <div className="space-y-8 mb-16">
+        <div className="space-y-8 mb-16 flex flex-col items-center">
         {features.map((feature, index) => (
               <div 
                 key={index}
