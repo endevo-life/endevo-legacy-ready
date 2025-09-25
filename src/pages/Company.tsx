@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NikiWeissSection from "@/components/NikiWeissSection";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import companyHeroBg from "@/assets/company-hero-bg.jpg";
 import aboutEndevo from "@/assets/about-endevo.jpg";
@@ -96,6 +97,9 @@ const Company = () => {
           </div>
         </div>
       </section>
+
+      {/* Niki Weiss Section */}
+      <NikiWeissSection />
 
       {/* Our Values Section */}
       <section id="values" className="py-20 bg-muted/30">
