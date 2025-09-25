@@ -8,6 +8,7 @@ import CoreValuesSection from "@/components/CoreValuesSection";
 import FutureSection from "@/components/FutureSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
+import VisionValuesSection from "@/components/VisionValuesSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
         <CoreValuesSection />
         <FutureSection />
         <TestimonialsSection />
+        <VisionValuesSection />
         <ConsultationSection />
       </main>
       <Footer />
