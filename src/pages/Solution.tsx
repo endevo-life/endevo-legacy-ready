@@ -12,7 +12,7 @@ import hrEapPrograms from "@/assets/hr-eap-programs.jpg";
 import digitalLegacy from "@/assets/digital-legacy.jpg";
 import workshopsAssessments from "@/assets/workshops-assessments.jpg";
 import peaceMindAssessment from "@/assets/peace-mind-assessment.jpg";
-import CoreValuesSection from "@/components/CoreValuesSection";
+
 
 const Solution = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -241,8 +241,6 @@ const Solution = () => {
         </div>
       </section>
 
-      {/* Core Values Section */}
-      <CoreValuesSection />
 
       <Footer />
     </div>
