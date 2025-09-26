@@ -12,6 +12,7 @@ import hrEapPrograms from "@/assets/hr-eap-programs.jpg";
 import digitalLegacy from "@/assets/digital-legacy.jpg";
 import workshopsAssessments from "@/assets/workshops-assessments.jpg";
 import peaceMindAssessment from "@/assets/peace-mind-assessment.jpg";
+import empowering from "@/assets/empowering.png";
 
 
 const Solution = () => {
@@ -83,6 +84,68 @@ const Solution = () => {
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg rounded-full">
               Start Your Readiness Journey
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Empowering You to Take Control Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              Legacy planning doesn't have to be overwhelming. We empower families, employees, and employers with simple, supportive resources designed to guide every step of the way.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Graphic */}
+            <div className="animate-fade-in">
+              <img 
+                src={empowering} 
+                alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
+                className="w-full h-auto max-w-md mx-auto"
+              />
+            </div>
+            
+            {/* Right side - Feature Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Educational App</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    Interactive learning made easy by our app that breaks down complex legacy planning into practical, everyday steps.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.1s' }}>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Community Support</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    You're not alone. Connect with peers and experts in a compassionate network built to share stories, guidance, and encouragement.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.2s' }}>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Workshops</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    Hands-on sessions designed to demystify legacy planning, blending technology with human guidance to make tough topics approachable.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.3s' }}>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Tools & Resources</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    A full suite of practical tools, templates, and guides that turn uncertainty into clear, actionable next steps.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
