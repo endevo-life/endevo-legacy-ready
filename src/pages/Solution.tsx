@@ -222,40 +222,6 @@ const Solution = () => {
         </div>
       </section>
 
-      {/* Our Holistic Framework Section */}
-      <section id="framework" className="py-20 bg-background">
-        <div className="container max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Holistic Framework</h2>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <img 
-                src={holisticFramework} 
-                alt="Holistic Framework Illustration" 
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="space-y-6">
-              <div className="bg-card p-6 rounded-lg border animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <h3 className="text-xl font-bold mb-2">Digital</h3>
-                <p className="text-muted-foreground">Protect online accounts, files, and identity</p>
-              </div>
-              <div className="bg-card p-6 rounded-lg border animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <h3 className="text-xl font-bold mb-2">Legal</h3>
-                <p className="text-muted-foreground">Secure wills, directives, and power of attorney</p>
-              </div>
-              <div className="bg-card p-6 rounded-lg border animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                <h3 className="text-xl font-bold mb-2">Financial</h3>
-                <p className="text-muted-foreground">Organize assets, insurance, and beneficiaries</p>
-              </div>
-              <div className="bg-card p-6 rounded-lg border animate-fade-in" style={{ animationDelay: '0.8s' }}>
-                <h3 className="text-xl font-bold mb-2">Physical</h3>
-                <p className="text-muted-foreground">Capture healthcare wishes and personal care preferences</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Core Solutions Section */}
       <section id="core-solutions" className="py-20 bg-muted/50">
         <div className="container max-w-7xl mx-auto px-4">
