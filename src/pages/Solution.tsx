@@ -44,6 +44,49 @@ const Solution = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How It Works</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Step 1 */}
+            <div className="bg-card rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+              <div className="w-16 h-16 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-4">Discover</h3>
+              <p className="text-muted-foreground">Take the Peace of Mind Assessment.</p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-card rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+              <div className="w-16 h-16 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6">
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-4">Plan</h3>
+              <p className="text-muted-foreground">Use our AI-driven platform to organize legal, financial, and digital assets.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-card rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
+              <div className="w-16 h-16 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6">
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-4">Secure & Share</h3>
+              <p className="text-muted-foreground">Ensure your family and organization can act with clarity when it matters most.</p>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg rounded-full">
+              Start Your Readiness Journey
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Our Holistic Framework Section */}
       <section id="framework" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
