@@ -13,6 +13,7 @@ import digitalLegacy from "@/assets/digital-legacy.jpg";
 import workshopsAssessments from "@/assets/workshops-assessments.jpg";
 import peaceMindAssessment from "@/assets/peace-mind-assessment.jpg";
 import empowering from "@/assets/empowering.png";
+import framework from "@/assets/framework.png";
 
 
 const Solution = () => {
@@ -142,6 +143,77 @@ const Solution = () => {
                   <CardTitle className="mb-3 text-lg">Tools & Resources</CardTitle>
                   <p className="text-muted-foreground text-sm">
                     A full suite of practical tools, templates, and guides that turn uncertainty into clear, actionable next steps.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Comprehensive Framework Section */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Comprehensive Framework</h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              Legacy planning isn't one-dimensional. We center your beliefs, then build around them with four key areas that make your plan complete.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Framework Graphic */}
+            <div className="animate-fade-in">
+              <img 
+                src={framework} 
+                alt="Comprehensive Framework - Your Beliefs at the center surrounded by Legal, Financial, Physical, and Digital areas" 
+                className="w-full h-auto max-w-md mx-auto"
+              />
+            </div>
+            
+            {/* Right side - Framework Cards */}
+            <div className="space-y-4">
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Your Beliefs</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    The foundation of every decision, your values, wishes, and priorities.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.1s' }}>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Legal</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    Protect your rights and ensure your documents reflect your intentions.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.2s' }}>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Financial</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    Secure your assets and provide clarity for future generations.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.3s' }}>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Physical</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    Address care, health, and personal needs with confidence.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.4s' }}>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-3 text-lg">Digital</CardTitle>
+                  <p className="text-muted-foreground text-sm">
+                    Organize and safeguard your online presence and digital assets.
                   </p>
                 </CardContent>
               </Card>
