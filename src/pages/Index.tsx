@@ -5,7 +5,7 @@ import EndevoPurposeSection from "@/components/EndevoPurposeSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import WhyTrustSection from "@/components/WhyTrustSection";
 
-import FutureSection from "@/components/FutureSection";
+
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import VisionValuesSection from "@/components/VisionValuesSection";
@@ -22,7 +22,7 @@ const Index = () => {
         <HiddenCostSection />
         <WhyTrustSection />
         
-        <FutureSection />
+        
         <TestimonialsSection />
         <VisionValuesSection />
         <ConsultationSection />
