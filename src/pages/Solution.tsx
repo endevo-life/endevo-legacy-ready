@@ -14,6 +14,7 @@ import workshopsAssessments from "@/assets/workshops-assessments.jpg";
 import peaceMindAssessment from "@/assets/peace-mind-assessment.jpg";
 import empowering from "@/assets/empowering.png";
 import framework from "@/assets/framework.png";
+import hrEapIcon from "@/assets/hr-eap-programs.png";
 
 
 const Solution = () => {
@@ -285,9 +286,109 @@ const Solution = () => {
           </div>
         </div>
       </section>
+      {/* HR & Employee Wellness Section */}
+      <section id="hr-wellness" className="py-20 bg-background">
+        <div className="container max-w-7xl mx-auto px-4">
+          {/* Top Section */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              For Companies: HR & Employee Wellness
+            </h2>
+            <h3 className="text-xl md:text-2xl text-brand-orange font-semibold mb-6">
+              A Smarter Way to Support Your Team
+            </h3>
+            <p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
+              When employees aren't prepared for life's inevitable transitions, workplaces feel the impact—stress, absenteeism, and lost productivity. ENDevo equips organizations with tools, guidance, and resources that help employees plan ahead, fostering resilience at work and at home.
+            </p>
+          </div>
 
+          {/* Middle Section - Two Boxes */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {/* Core Features Box */}
+            <div className="bg-card p-8 rounded-lg shadow-md border">
+              <h3 className="text-xl font-bold text-foreground mb-6">Core Features:</h3>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">•</span>
+                  <span><strong>All-in-One Platform:</strong> Legal, financial, and digital readiness in one place.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">•</span>
+                  <span><strong>Guided Support:</strong> AI-powered tools and workshops simplify complex steps.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">•</span>
+                  <span><strong>Workplace Integration:</strong> Scalable for HR and EAP programs, easing administrative burden.</span>
+                </li>
+              </ul>
+            </div>
 
+            {/* Benefits Box */}
+            <div className="bg-card p-8 rounded-lg shadow-md border">
+              <h3 className="text-xl font-bold text-foreground mb-6">Benefits:</h3>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">•</span>
+                  <span>Reduce employee stress and mental health strain.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">•</span>
+                  <span>Protect organizational continuity and productivity.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange mr-2">•</span>
+                  <span>Strengthen workplace resilience and loyalty.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
+          {/* Lower Section - Our Differentiator */}
+          <div className="text-center mb-16">
+            <h3 className="text-2xl font-bold text-foreground mb-8">Our Differentiator</h3>
+            <div className="max-w-3xl mx-auto">
+              <ol className="text-left space-y-3 text-muted-foreground text-lg">
+                <li className="flex items-start">
+                  <span className="text-brand-orange font-bold mr-3">1.</span>
+                  <span>Corporate HR EAP focus</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange font-bold mr-3">2.</span>
+                  <span>Empathetic AI guidance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange font-bold mr-3">3.</span>
+                  <span>Unified offerings across legal, financial, physical, and digital needs</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange font-bold mr-3">4.</span>
+                  <span>Marketplace integration with trusted providers</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-brand-orange font-bold mr-3">5.</span>
+                  <span>Human-centered workshops that demystify planning</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          {/* Bottom Area */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex-1">
+              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors hover-scale">
+                Start a Pilot
+              </button>
+            </div>
+            <div className="flex-1 flex justify-center md:justify-end">
+              <img 
+                src={hrEapIcon} 
+                alt="HR & EAP Wellness Programs" 
+                className="w-32 h-32 rounded-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );
