@@ -73,18 +73,6 @@ const HiddenCostSection = () => {
           </div>
         </div>
         
-        {/* Divider */}
-        <div className="border-t border-border mb-12"></div>
-        
-        {/* Subheading */}
-        <h3 className={`text-3xl font-bold text-brand-navy text-center mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.9s' : '0s' }}>
-          ENDevo Brings Clarity, Confidence, and Continuity.
-        </h3>
-        
-        {/* Supporting Text */}
-        <p className={`text-lg text-muted-foreground italic text-center mb-12 max-w-4xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '1s' : '0s' }}>
-          With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future—without the overwhelm.
-        </p>
         
         {/* CTA Button */}
         <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '1.1s' : '0s' }}>
