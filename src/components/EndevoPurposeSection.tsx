@@ -22,7 +22,7 @@ const EndevoPurposeSection = () => {
         <div className="max-w-3xl">
           <div className="space-y-8">
             <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
-              <h3 className="text-2xl font-bold text-white mb-3">For Companies (HR/EAP):</h3>
+              <h3 className="text-2xl font-bold text-white mb-1">For Companies (HR/EAP):</h3>
               <p className="text-white/90 text-lg mb-4">Reduce risk, protect employees, safeguard continuity.</p>
               <a href="/who-we-serve" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
                 Learn More
@@ -30,7 +30,7 @@ const EndevoPurposeSection = () => {
             </div>
 
             <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.4s' : '0s' }}>
-              <h3 className="text-2xl font-bold text-white mb-3">For Individuals:</h3>
+              <h3 className="text-2xl font-bold text-white mb-1">For Individuals:</h3>
               <p className="text-white/90 text-lg mb-4">AI-powered tools for personal legacy & digital preparedness.</p>
               <a href="/plan" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
                 Get Started
@@ -38,7 +38,7 @@ const EndevoPurposeSection = () => {
             </div>
 
             <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
-              <h3 className="text-2xl font-bold text-white mb-3">For Investors:</h3>
+              <h3 className="text-2xl font-bold text-white mb-1">For Investors:</h3>
               <p className="text-white/90 text-lg mb-4">Be part of a $126B industry transformation.</p>
               <a href="/company" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
                 Explore Opportunity
