@@ -1,5 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import individualsIcon from "@/assets/individuals-icon.png";
+import serviceProvidersIcon from "@/assets/service-providers-icon.png";
+import employersIcon from "@/assets/employers-icon.png";
 
 const WhoWeServe = () => {
   return (
@@ -77,6 +80,75 @@ const WhoWeServe = () => {
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Benefits From ENDevo Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container max-w-7xl mx-auto px-4">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-orange mb-12">
+              Who Benefits From ENDevo
+            </h2>
+          </div>
+
+          {/* 3-Column Card Layout */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Individuals Card */}
+            <div className="bg-white rounded-lg shadow-sm p-8 text-center h-full flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={individualsIcon} 
+                  alt="Individuals Icon" 
+                  className="w-16 h-16"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Individuals</h3>
+              <p className="text-muted-foreground mb-8 flex-grow">
+                Simplifying legacy readiness with AI-powered guidance and compassionate resources.
+              </p>
+              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
+
+            {/* Service Providers Card */}
+            <div className="bg-white rounded-lg shadow-sm p-8 text-center h-full flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={serviceProvidersIcon} 
+                  alt="Service Providers Icon" 
+                  className="w-16 h-16"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Service Providers</h3>
+              <p className="text-muted-foreground mb-8 flex-grow">
+                Unlock pre-qualified clients and boost revenue with efficient operations and smart partnerships.
+              </p>
+              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Learn More
+              </button>
+            </div>
+
+            {/* Employers Card */}
+            <div className="bg-white rounded-lg shadow-sm p-8 text-center h-full flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={employersIcon} 
+                  alt="Employers Icon" 
+                  className="w-16 h-16"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Employers</h3>
+              <p className="text-muted-foreground mb-8 flex-grow">
+                Boost workplace resilience with dashboards and tools that cut absenteeism, increase productivity, and support employee well-being.
+              </p>
+              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
