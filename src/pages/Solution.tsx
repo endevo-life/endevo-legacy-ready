@@ -346,46 +346,46 @@ const Solution = () => {
           {/* Lower Section - Our Differentiator */}
           <div className="text-center mb-16">
             <h3 className="text-2xl font-bold text-foreground mb-8">Our Differentiator</h3>
-            <div className="max-w-3xl mx-auto">
-              <ol className="text-left space-y-3 text-muted-foreground text-lg">
-                <li className="flex items-start">
-                  <span className="text-brand-orange font-bold mr-3">1.</span>
-                  <span>Corporate HR EAP focus</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-brand-orange font-bold mr-3">2.</span>
-                  <span>Empathetic AI guidance</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-brand-orange font-bold mr-3">3.</span>
-                  <span>Unified offerings across legal, financial, physical, and digital needs</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-brand-orange font-bold mr-3">4.</span>
-                  <span>Marketplace integration with trusted providers</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-brand-orange font-bold mr-3">5.</span>
-                  <span>Human-centered workshops that demystify planning</span>
-                </li>
-              </ol>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
+              <div className="flex-1">
+                <ol className="text-left space-y-3 text-muted-foreground text-lg">
+                  <li className="flex items-start">
+                    <span className="text-brand-orange font-bold mr-3">1.</span>
+                    <span>Corporate HR EAP focus</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-orange font-bold mr-3">2.</span>
+                    <span>Empathetic AI guidance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-orange font-bold mr-3">3.</span>
+                    <span>Unified offerings across legal, financial, physical, and digital needs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-orange font-bold mr-3">4.</span>
+                    <span>Marketplace integration with trusted providers</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-orange font-bold mr-3">5.</span>
+                    <span>Human-centered workshops that demystify planning</span>
+                  </li>
+                </ol>
+              </div>
+              <div className="flex justify-center md:justify-end">
+                <img 
+                  src={hrEapIcon} 
+                  alt="HR & EAP Wellness Programs" 
+                  className="w-36 h-36 rounded-full"
+                />
+              </div>
             </div>
           </div>
 
           {/* Bottom Area */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-1">
-              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors hover-scale">
-                Start a Pilot
-              </button>
-            </div>
-            <div className="flex-1 flex justify-center md:justify-end">
-              <img 
-                src={hrEapIcon} 
-                alt="HR & EAP Wellness Programs" 
-                className="w-32 h-32 rounded-full"
-              />
-            </div>
+          <div className="text-center">
+            <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors hover-scale">
+              Start a Pilot
+            </button>
           </div>
         </div>
       </section>
