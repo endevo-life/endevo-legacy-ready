@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import individualsIcon from "@/assets/individuals-icon.png";
 import serviceProvidersIcon from "@/assets/service-providers-icon.png";
 import employersIcon from "@/assets/employers-icon.png";
+import whoWeServeTeam from "@/assets/who-we-serve-team.png";
 
 const WhoWeServe = () => {
   return (
@@ -26,10 +27,11 @@ const WhoWeServe = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Image */}
             <div className="relative">
-              <div className="bg-gray-200 rounded-xl aspect-square flex items-center justify-center">
-                <span className="text-gray-500">Image Placeholder - Upload your image here</span>
-              </div>
-              {/* Digital Icons Overlay - will be added once image is provided */}
+              <img 
+                src={whoWeServeTeam} 
+                alt="Professional team collaborating with digital icons overlay" 
+                className="w-full h-auto rounded-xl shadow-lg"
+              />
             </div>
 
             {/* Right Side - Content */}
