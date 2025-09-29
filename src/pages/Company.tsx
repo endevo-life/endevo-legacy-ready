@@ -10,8 +10,10 @@ import aboutEndevo from "@/assets/about-endevo.jpg";
 import clarityGuidance from "@/assets/clarity-guidance.jpg";
 import compassionTrust from "@/assets/compassion-trust.jpg";
 import resilienceContinuity from "@/assets/resilience-continuity.jpg";
+import companyHeroFamily from "@/assets/company-hero-family.png";
 
 const Company = () => {
+  const { elementRef: newHeroRef, isVisible: newHeroVisible } = useScrollAnimation();
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
   const { elementRef: valuesRef, isVisible: valuesVisible } = useScrollAnimation();
@@ -45,6 +47,47 @@ const Company = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      
+      {/* New Hero Section */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div 
+            ref={newHeroRef as any}
+            className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ${
+              newHeroVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-10'
+            }`}
+          >
+            {/* Left Column - Text Content */}
+            <div className="space-y-6">
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                Simplifying Legacy Readiness & Digital Resilience
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Empowering people to prepare with clarity, protect digital footprints, and create peace of mind for generations.
+              </p>
+              <p className="text-2xl font-bold text-brand-orange">
+                Live Fully, Die Ready.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Founded to bring clarity and compassion to one of life's hardest conversations, ENDevo blends AI intelligence with human guidance to make legacy readiness and digital resilience accessible, scalable, and impactful.
+              </p>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="relative">
+              <div className="relative bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl">
+                <img 
+                  src={companyHeroFamily} 
+                  alt="Happy family representing legacy and continuity" 
+                  className="w-full h-auto rounded-xl shadow-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Hero Section */}
       <section 
