@@ -14,9 +14,10 @@ import companyHeroFamily from "@/assets/company-hero-family.png";
 
 const Company = () => {
   const { elementRef: newHeroRef, isVisible: newHeroVisible } = useScrollAnimation();
+  const { elementRef: clarityRef, isVisible: clarityVisible } = useScrollAnimation();
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
-  const { elementRef: valuesRef, isVisible: valuesVisible } = useScrollAnimation();
+  const { elementRef: oldValuesRef, isVisible: oldValuesVisible } = useScrollAnimation();
   const { elementRef: teamRef, isVisible: teamVisible } = useScrollAnimation();
 
   const [hoveredTeamMember, setHoveredTeamMember] = useState<number | null>(null);
@@ -88,6 +89,127 @@ const Company = () => {
           </div>
         </div>
       </section>
+
+      {/* C.L.A.R.I.T.Y. Core Values Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div 
+            ref={clarityRef as any}
+            className={`text-center mb-16 transition-all duration-1000 ${
+              clarityVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-10'
+            }`}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Our Core Values: <span className="text-brand-orange">C.L.A.R.I.T.Y.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Every service we provide is guided by our core values, ensuring comprehensive support that addresses both digital resilience and human-centered legacy readiness.
+            </p>
+          </div>
+
+          <div 
+            className={`grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-1000 ${
+              clarityVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-10'
+            }`}
+            style={{ animationDelay: '0.2s' }}
+          >
+            {/* C - Compassion */}
+            <Card className="relative overflow-hidden bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+              <div className="absolute top-2 right-2 text-8xl font-bold text-gray-100 select-none pointer-events-none">
+                C
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-foreground mb-3">Compassion</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Honor humanity while simplifying the complex. We approach every situation with empathy and understanding.
+                </p>
+              </div>
+            </Card>
+
+            {/* L - Legacy Readiness */}
+            <Card className="relative overflow-hidden bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+              <div className="absolute top-2 right-2 text-8xl font-bold text-gray-100 select-none pointer-events-none">
+                L
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-foreground mb-3">Legacy Readiness</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Act today to safeguard families, organizations, and communities for tomorrow's challenges.
+                </p>
+              </div>
+            </Card>
+
+            {/* A - Action & Empowerment */}
+            <Card className="relative overflow-hidden bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+              <div className="absolute top-2 right-2 text-8xl font-bold text-gray-100 select-none pointer-events-none">
+                A
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-foreground mb-3">Action & Empowerment</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Educate, project manage, and empower people to act with confidence and clarity.
+                </p>
+              </div>
+            </Card>
+
+            {/* R - Resilience */}
+            <Card className="relative overflow-hidden bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+              <div className="absolute top-2 right-2 text-8xl font-bold text-gray-100 select-none pointer-events-none">
+                R
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-foreground mb-3">Resilience (Digital & Human)</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Protect identities, assets, and digital footprints with comprehensive safeguards.
+                </p>
+              </div>
+            </Card>
+
+            {/* I - Innovation with Integrity */}
+            <Card className="relative overflow-hidden bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+              <div className="absolute top-2 right-2 text-8xl font-bold text-gray-100 select-none pointer-events-none">
+                I
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-foreground mb-3">Innovation with Integrity</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Harness AI and emerging tech responsibly to serve human needs and values.
+                </p>
+              </div>
+            </Card>
+
+            {/* T - Teamwork & Collaboration */}
+            <Card className="relative overflow-hidden bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+              <div className="absolute top-2 right-2 text-8xl font-bold text-gray-100 select-none pointer-events-none">
+                T
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-foreground mb-3">Teamwork & Collaboration</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Build systemic resilience with trusted partners and connected communities.
+                </p>
+              </div>
+            </Card>
+
+            {/* Y - Yesterday, Today, Tomorrow */}
+            <Card className="relative overflow-hidden bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 md:col-span-2 lg:col-span-1 xl:col-span-3">
+              <div className="absolute top-2 right-2 text-8xl font-bold text-gray-100 select-none pointer-events-none">
+                Y
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold text-foreground mb-3">Yesterday, Today, Tomorrow</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Honor the past, strengthen the present, secure the future for generations.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
       
       {/* Hero Section */}
       <section 
@@ -149,9 +271,9 @@ const Company = () => {
       <section id="values" className="py-20 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-4">
           <div 
-            ref={valuesRef as any}
+            ref={oldValuesRef as any}
             className={`transition-all duration-1000 ${
-              valuesVisible 
+              oldValuesVisible
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-10'
             }`}
