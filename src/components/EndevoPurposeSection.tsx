@@ -20,6 +20,9 @@ const EndevoPurposeSection = () => {
       {/* Content */}
       <div ref={elementRef as any} className="relative z-10 container max-w-7xl mx-auto px-4">
         <div className="max-w-3xl">
+          <h2 className={`text-3xl md:text-4xl font-bold text-white mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            ENDevo is redefining preparedness.
+          </h2>
           <div className="space-y-8">
             <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
               <h3 className="text-2xl font-bold text-white mb-1">For Companies (HR/EAP):</h3>
