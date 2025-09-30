@@ -1,84 +1,84 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import oneInThreeImage from "@/assets/1in3.png";
-import companyLossImage from "@/assets/company_loss.png";
-import digitalLossImage from "@/assets/loss.png";
+import familyOverwhelmedImage from "@/assets/family-overwhelmed.png";
 
 const HiddenCostSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   
   return (
     <section className="py-24 bg-background">
-      <div ref={elementRef as any} className="container max-w-6xl mx-auto px-4">
-        {/* Header */}
-        <h2 className={`text-4xl md:text-5xl font-bold text-foreground text-center mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
-          The Hidden Cost of Being Unprepared
-        </h2>
-        
-        {/* Intro Paragraph */}
-        <p className={`text-lg text-muted-foreground text-center mb-16 max-w-4xl mx-auto transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.3s' : '0s' }}>
-          Most people—and most companies—are not ready for life's inevitable events. The result? Families face chaos. Employers lose billions. Legacies are left incomplete.
-        </p>
-        
-        {/* Three Column Layout */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {/* Column 1 */}
-          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.4s' : '0s' }}>
-            <div className="mb-6">
+      <div ref={elementRef as any} className="container max-w-7xl mx-auto px-4">
+        {/* Two Column Layout */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Image */}
+          <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
               <img 
-                src={oneInThreeImage} 
-                alt="Only 1 in 3 adults have a plan" 
-                className="w-32 h-32 mx-auto object-contain drop-shadow-md"
+                src={familyOverwhelmedImage} 
+                alt="Family overwhelmed with documents and planning" 
+                className="w-full h-auto object-cover"
               />
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-4">
-              Only 1 in 3 adults have a plan.
-            </h3>
-            <p className="text-muted-foreground">
-              The majority lack preparation for critical life events, leaving families vulnerable.
-            </p>
           </div>
           
-          {/* Column 2 */}
-          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
-            <div className="mb-6">
-              <img 
-                src={companyLossImage} 
-                alt="Companies lose billions annually" 
-                className="w-32 h-32 mx-auto object-contain drop-shadow-md"
-              />
-            </div>
-            <h3 className="text-xl font-bold text-foreground mb-4">
-              Companies lose $33B annually in productivity from unpreparedness.
-            </h3>
-            <p className="text-muted-foreground">
-              Workplace disruption from unprepared events costs billions in lost productivity.
+          {/* Right Column - Content */}
+          <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: '0.2s' }}>
+            {/* Headline */}
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              The Hidden Cost of Being Unprepared
+            </h2>
+            
+            {/* Intro Paragraph */}
+            <p className="text-lg text-muted-foreground mb-8">
+              Most people and most companies are not ready for life's inevitable events. The result? Families face chaos. Employers lose billions. Legacies are left incomplete.
             </p>
-          </div>
-          
-          {/* Column 3 */}
-          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
+            
+            {/* Subsection 1 */}
             <div className="mb-6">
-              <img 
-                src={digitalLossImage} 
-                alt="Digital accounts locked away" 
-                className="w-32 h-32 mx-auto object-contain drop-shadow-md"
-              />
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Only 1 in 3 adults have a plan –
+              </h3>
+              <p className="text-muted-foreground">
+                Most Americans are unprepared. Without a plan, families face chaos, expensive legal issues, unclear asset distribution, disputes, locked accounts, and even lost business revenue.
+              </p>
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-4">
-              Digital accounts and assets are often locked away or lost forever.
-            </h3>
-            <p className="text-muted-foreground">
-              Critical digital assets become inaccessible without proper planning.
-            </p>
+            
+            {/* Subsection 2 */}
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Companies Lose $33B Each Year –
+              </h3>
+              <p className="text-muted-foreground">
+                Unpreparedness leads to lost productivity as employees juggle end-of-life and caregiving responsibilities, causing absenteeism, presenteeism, interruptions, and higher turnover.
+              </p>
+            </div>
+            
+            {/* Subsection 3 */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Digital Assets Are Lost Forever –
+              </h3>
+              <p className="text-muted-foreground">
+                Avoidance driven by procrastination, overwhelm, and fear leaves accounts and assets locked away, often never recovered.
+              </p>
+            </div>
+            
+            {/* Closing Statement */}
+            <div className="text-center mb-6">
+              <p className="text-2xl font-bold text-brand-orange mb-2">
+                ENDevo Brings Clarity, Confidence, and Continuity
+              </p>
+              <p className="text-lg text-muted-foreground italic">
+                With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future without the overwhelm.
+              </p>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="text-center">
+              <button className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+                Learn How We Solve It
+              </button>
+            </div>
           </div>
-        </div>
-        
-        
-        {/* CTA Button */}
-        <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '1.1s' : '0s' }}>
-          <button className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-300">
-            Learn How We Solve It
-          </button>
         </div>
       </div>
     </section>
