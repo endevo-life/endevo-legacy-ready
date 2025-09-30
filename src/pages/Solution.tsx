@@ -15,6 +15,7 @@ import peaceMindAssessment from "@/assets/peace-mind-assessment.jpg";
 import empowering from "@/assets/empowering.png";
 import framework from "@/assets/framework.png";
 import hrEapIcon from "@/assets/hr-eap-programs.png";
+import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 
 
 const Solution = () => {
@@ -222,6 +223,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* Service Providers Section */}
+      <ServiceProvidersSection />
 
       {/* Core Solutions Section */}
       <section id="core-solutions" className="py-20 bg-muted/50">

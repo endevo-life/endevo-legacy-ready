@@ -1,0 +1,110 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import physicalPartners from "@/assets/physical-partners.png";
+import financialPartners from "@/assets/financial-partners.png";
+import digitalPartners from "@/assets/digital-partners.png";
+
+const ServiceProvidersSection = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+
+  return (
+    <section className="py-20 bg-background">
+      <div 
+        ref={elementRef as any}
+        className={`container max-w-7xl mx-auto px-4 transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        {/* Headline */}
+        <div className="text-center mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Connecting You With Trusted Service Providers
+          </h2>
+          <p className="text-xl text-brand-orange font-semibold mb-8">
+            Because no plan is complete without the right support.
+          </p>
+        </div>
+
+        {/* Supporting Intro */}
+        <p className="text-center text-lg text-muted-foreground max-w-4xl mx-auto mb-16 leading-relaxed">
+          ENDevo does not just give you tools. We connect you with the experts and services that help bring your plan to life. Our role is to educate, guide, and empower you to know who to talk to, when to talk to them, and how to take action.
+        </p>
+
+        {/* Three Feature Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* Card 1 - Physical Partners */}
+          <Card className="hover:shadow-xl transition-shadow duration-300">
+            <CardContent className="p-0">
+              <div className="overflow-hidden rounded-t-lg">
+                <img 
+                  src={physicalPartners} 
+                  alt="Physical Partners - Funeral homes, hospice care, and long-term care providers"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Physical Partners</h3>
+                <p className="text-muted-foreground">
+                  Funeral homes, hospice care, and long-term care providers to support you and your loved ones through life's toughest transitions.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Card 2 - Financial Partners */}
+          <Card className="hover:shadow-xl transition-shadow duration-300">
+            <CardContent className="p-0">
+              <div className="overflow-hidden rounded-t-lg">
+                <img 
+                  src={financialPartners} 
+                  alt="Financial Partners - Wealth advisors, accountants, and insurance providers"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Financial Partners</h3>
+                <p className="text-muted-foreground">
+                  Wealth advisors, accountants, Social Security specialists, and life insurance providers to secure your family's financial future.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Card 3 - Digital Partners */}
+          <Card className="hover:shadow-xl transition-shadow duration-300">
+            <CardContent className="p-0">
+              <div className="overflow-hidden rounded-t-lg">
+                <img 
+                  src={digitalPartners} 
+                  alt="Digital Partners - Digital asset managers and secure storage services"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Digital Partners</h3>
+                <p className="text-muted-foreground">
+                  Digital asset managers and secure storage services to protect cryptocurrency, online accounts, and your entire digital footprint.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Closing Tagline */}
+        <p className="text-center text-lg text-muted-foreground italic max-w-3xl mx-auto mb-8">
+          With ENDevo you do not have to navigate the end of life landscape alone. We help you find the right people and services at the right time.
+        </p>
+
+        {/* CTA Button */}
+        <div className="text-center">
+          <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
+            Get Connected Now
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServiceProvidersSection;
