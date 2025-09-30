@@ -7,9 +7,14 @@ const ExploreOurSolutions = () => {
     <section className="py-24 bg-background">
       <div ref={elementRef as any} className="container max-w-6xl mx-auto px-4">
         {/* Header */}
-        <h2 className={`text-4xl md:text-5xl font-bold text-foreground text-center mb-16 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
-          Explore Our Solutions
-        </h2>
+        <div className="text-center mb-16">
+          <p className={`text-xl md:text-2xl text-muted-foreground mb-4 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            ENDevo is redefining preparedness.
+          </p>
+          <h2 className={`text-4xl md:text-5xl font-bold text-foreground transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
+            Explore Our Solutions
+          </h2>
+        </div>
         
         {/* Three Column Layout */}
         <div className="grid md:grid-cols-3 gap-8">
