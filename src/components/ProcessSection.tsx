@@ -1,67 +1,84 @@
-import { ClipboardCheck, Smartphone, Headphones } from "lucide-react";
+import { Search, ClipboardCheck, Shield, ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Button } from "@/components/ui/button";
 
 const ProcessSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   
   return (
-    <section ref={elementRef} className="py-20 bg-gradient-to-b from-muted/30 to-background">
+    <section ref={elementRef} className="py-20 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="heading-section mb-4 text-primary">Our Simple Process</h2>
-          <p className="text-lead text-muted-foreground">
-            Three steps to complete care
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">How It Works</h2>
+          <p className="text-lg text-muted-foreground">
+            Three simple steps to complete preparedness
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start justify-items-center">
-          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.3s' : '0s' }}>
-            <div className="w-20 h-20 mx-auto mb-8 bg-primary rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
-              <span className="text-2xl font-bold text-primary-foreground">1</span>
-            </div>
-            <div className="bg-card rounded-3xl p-6 relative h-80 border shadow-lg hover-scale transition-transform duration-300"
-                 style={{
-                   background: 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%)'
-                 }}>
-              <div className="flex justify-center mb-4">
-                <ClipboardCheck className="w-12 h-12 text-primary hover-scale transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-primary">Take the Peace of Mind Assessment</h3>
-              <p className="text-muted-foreground leading-relaxed">Quickly assess your preparedness for life's transitions, spot gaps, and gain clarity with a short summary of your readiness.</p>
-            </div>
-          </div>
+        <div className="relative max-w-5xl mx-auto">
+          {/* Connecting line */}
+          <div className="hidden md:block absolute top-[60px] left-[20%] right-[20%] h-0.5 bg-gradient-to-r from-brand-navy via-brand-teal to-brand-navy opacity-30" />
           
-          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
-            <div className="w-20 h-20 mx-auto mb-8 bg-accent rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
-              <span className="text-2xl font-bold text-accent-foreground">2</span>
-            </div>
-            <div className="bg-card rounded-3xl p-6 relative h-80 border shadow-lg hover-scale transition-transform duration-300"
-                 style={{
-                   background: 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--accent) / 0.1) 100%)'
-                 }}>
-              <div className="flex justify-center mb-4">
-                <Smartphone className="w-12 h-12 text-accent hover-scale transition-transform duration-300" />
+          <div className="grid md:grid-cols-3 gap-8 items-start relative">
+            {/* Step 1: Discover */}
+            <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
+              <div className="relative inline-block mb-6">
+                <div className="w-24 h-24 mx-auto bg-brand-navy rounded-full flex items-center justify-center shadow-lg relative z-10">
+                  <span className="text-3xl font-bold text-white">1</span>
+                </div>
+                <div className="absolute -top-2 -right-2 bg-background rounded-full p-2 shadow-md">
+                  <Search className="w-8 h-8 text-brand-teal" />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-primary">Download My Final Playbook app</h3>
-              <p className="text-muted-foreground leading-relaxed">My Final Playbook makes end-of-life planning simple with expert guidance, digital tools, and seamless in-app options to secure your legacy.</p>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Discover</h3>
+              <p className="text-muted-foreground leading-relaxed">Take the Peace of Mind Assessment.</p>
+            </div>
+
+            {/* Arrow 1 */}
+            <div className="hidden md:flex items-center justify-center absolute top-[60px] left-[30%] transform -translate-x-1/2">
+              <ArrowRight className="w-6 h-6 text-brand-teal opacity-60" />
+            </div>
+            
+            {/* Step 2: Plan */}
+            <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.4s' : '0s' }}>
+              <div className="relative inline-block mb-6">
+                <div className="w-24 h-24 mx-auto bg-brand-teal rounded-full flex items-center justify-center shadow-lg relative z-10">
+                  <span className="text-3xl font-bold text-white">2</span>
+                </div>
+                <div className="absolute -top-2 -right-2 bg-background rounded-full p-2 shadow-md">
+                  <ClipboardCheck className="w-8 h-8 text-brand-navy" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Plan</h3>
+              <p className="text-muted-foreground leading-relaxed">Use our AI-driven platform to organize legal, financial, and digital assets.</p>
+            </div>
+
+            {/* Arrow 2 */}
+            <div className="hidden md:flex items-center justify-center absolute top-[60px] left-[63%] transform -translate-x-1/2">
+              <ArrowRight className="w-6 h-6 text-brand-teal opacity-60" />
+            </div>
+            
+            {/* Step 3: Secure & Share */}
+            <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
+              <div className="relative inline-block mb-6">
+                <div className="w-24 h-24 mx-auto bg-brand-navy rounded-full flex items-center justify-center shadow-lg relative z-10">
+                  <span className="text-3xl font-bold text-white">3</span>
+                </div>
+                <div className="absolute -top-2 -right-2 bg-background rounded-full p-2 shadow-md">
+                  <Shield className="w-8 h-8 text-brand-orange" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Secure & Share</h3>
+              <p className="text-muted-foreground leading-relaxed">Ensure your family and organization can act with clarity when it matters most.</p>
             </div>
           </div>
-          
-          <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '1.3s' : '0s' }}>
-            <div className="w-20 h-20 mx-auto mb-8 bg-secondary rounded-full flex items-center justify-center relative shadow-lg hover-scale transition-transform duration-300 pulse">
-              <span className="text-2xl font-bold text-secondary-foreground">3</span>
-            </div>
-            <div className="bg-card rounded-3xl p-6 relative h-80 border shadow-lg hover-scale transition-transform duration-300"
-                 style={{
-                   background: 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--secondary) / 0.1) 100%)'
-                 }}>
-              <div className="flex justify-center mb-4">
-                <Headphones className="w-12 h-12 text-secondary hover-scale transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-primary">Listen to the Digital Legacy Podcast</h3>
-              <p className="text-muted-foreground leading-relaxed">The Digital Legacy Podcast shows you how to protect your online assets, avoid chaos, and give loved ones peace of mind.</p>
-            </div>
-          </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className={`text-center mt-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
+          <Button variant="cta" size="lg" className="text-lg px-10 py-6 h-auto">
+            Start Your Readiness Journey
+          </Button>
         </div>
       </div>
     </section>
