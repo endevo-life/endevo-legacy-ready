@@ -2,18 +2,15 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import endevoImage from "@/assets/endevo-redefining-preparedness.jpg";
-
 const EndevoPurposeSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation();
   const navigate = useNavigate();
-  
-  return (
-    <section 
-      className="relative py-24 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url('${endevoImage}')`
-      }}
-    >
+  return <section className="relative py-24 bg-cover bg-center bg-no-repeat" style={{
+    backgroundImage: `url('${endevoImage}')`
+  }}>
       {/* Gradient overlay - left black to right transparent */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
       
@@ -24,7 +21,9 @@ const EndevoPurposeSection = () => {
             ENDevo is redefining preparedness.
           </h2>
           <div className="space-y-8">
-            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
+            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
+            transitionDelay: isVisible ? '0.2s' : '0s'
+          }}>
               <h3 className="text-2xl font-bold text-white mb-1">For Companies (HR/EAP):</h3>
               <p className="text-white/90 text-lg mb-4">Reduce risk, protect employees, safeguard continuity.</p>
               <a href="/who-we-serve" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
@@ -32,7 +31,9 @@ const EndevoPurposeSection = () => {
               </a>
             </div>
 
-            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.4s' : '0s' }}>
+            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
+            transitionDelay: isVisible ? '0.4s' : '0s'
+          }}>
               <h3 className="text-2xl font-bold text-white mb-1">For Individuals:</h3>
               <p className="text-white/90 text-lg mb-4">AI-powered tools for personal legacy & digital preparedness.</p>
               <a href="/plan" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
@@ -40,7 +41,9 @@ const EndevoPurposeSection = () => {
               </a>
             </div>
 
-            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
+            <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
+            transitionDelay: isVisible ? '0.6s' : '0s'
+          }}>
               <h3 className="text-2xl font-bold text-white mb-1">For Investors:</h3>
               <p className="text-white/90 text-lg mb-4">Be part of a $126B industry transformation.</p>
               <a href="/company" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
@@ -49,19 +52,9 @@ const EndevoPurposeSection = () => {
             </div>
           </div>
           
-          <Button 
-            variant="cta" 
-            size="lg"
-            onClick={() => navigate('/solution')}
-            className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
-            style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}
-          >
-            Explore Our Solutions
-          </Button>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default EndevoPurposeSection;
