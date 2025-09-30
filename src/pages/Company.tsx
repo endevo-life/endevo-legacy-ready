@@ -107,6 +107,9 @@ const Company = () => {
         </div>
       </section>
 
+      {/* Niki Weiss Section */}
+      <NikiWeissSection />
+
       {/* C.L.A.R.I.T.Y. Core Values Section */}
       <section className="py-20 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-4">
@@ -280,9 +283,6 @@ const Company = () => {
           </div>
         </div>
       </section>
-
-      {/* Niki Weiss Section */}
-      <NikiWeissSection />
 
       {/* Our Values Section */}
       <section id="values" className="py-20 bg-muted/30">
