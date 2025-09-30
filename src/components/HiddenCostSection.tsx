@@ -23,7 +23,7 @@ const HiddenCostSection = () => {
           {/* Right Column - Content */}
           <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: '0.2s' }}>
             {/* Headline */}
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
               The Hidden Cost of Being Unprepared
             </h2>
             
