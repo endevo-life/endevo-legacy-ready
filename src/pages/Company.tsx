@@ -12,6 +12,13 @@ import compassionTrust from "@/assets/compassion-trust.jpg";
 import resilienceContinuity from "@/assets/resilience-continuity.jpg";
 import companyHeroFamily from "@/assets/company-hero-family.png";
 
+// Import team portraits
+import nikiPortrait from "@/assets/niki-portrait.png";
+import aaronPortrait from "@/assets/aaron-portrait.png";
+import mercedesPortrait from "@/assets/mercedes-portrait.png";
+import tyPortrait from "@/assets/ty-portrait.png";
+import deepPortrait from "@/assets/deep-portrait.png";
+
 const Company = () => {
   const { elementRef: newHeroRef, isVisible: newHeroVisible } = useScrollAnimation();
   const { elementRef: clarityRef, isVisible: clarityVisible } = useScrollAnimation();
@@ -24,24 +31,34 @@ const Company = () => {
 
   const teamMembers = [
     {
-      image: "/lovable-uploads/niki-headshot.jpg",
-      name: "Dr. Sarah Johnson",
-      title: "CEO & Founder"
+      name: "Niki Weiss, PMP, PMI-RMP",
+      title: "Digital Thanatologist",
+      organization: "Founder / CEO",
+      image: nikiPortrait
     },
     {
-      image: "/lovable-uploads/professional-headshot.jpg",
-      name: "Michael Chen",
-      title: "CTO"
+      name: "Aaron Swam",
+      title: "AI Enablement and Strategist",
+      organization: "Choice Appointments",
+      image: aaronPortrait
     },
     {
-      image: "/lovable-uploads/niki-lifestyle.jpg",
-      name: "Emily Rodriguez",
-      title: "Head of Product"
+      name: "Mercedes Sullivan",
+      title: "VP, HR Storefront, PMO",
+      organization: "TIAA",
+      image: mercedesPortrait
     },
     {
-      image: "/lovable-uploads/niki-headshot.jpg",
-      name: "David Thompson",
-      title: "VP of Strategy"
+      name: "Ty Hagler",
+      title: "Design Engineer",
+      organization: "Principal, Trig",
+      image: tyPortrait
+    },
+    {
+      name: "Deep Parmar",
+      title: "Fractional CFO",
+      organization: "Founders Institute Mentor",
+      image: deepPortrait
     }
   ];
 
@@ -350,8 +367,8 @@ const Company = () => {
       </section>
 
       {/* Meet Our Team Section */}
-      <section id="team" className="py-20 bg-primary/10 rounded-t-[50px]">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section id="team" className="py-20 bg-gradient-to-b from-background to-primary/5">
+        <div className="container max-w-7xl mx-auto px-4">
           <div 
             ref={teamRef as any}
             className={`transition-all duration-1000 ${
@@ -360,31 +377,32 @@ const Company = () => {
                 : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-foreground">
               Meet Our Team
             </h2>
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {teamMembers.map((member, index) => (
                 <div 
                   key={index}
-                  className="relative group cursor-pointer"
-                  onMouseEnter={() => setHoveredTeamMember(index)}
-                  onMouseLeave={() => setHoveredTeamMember(null)}
+                  className="bg-card rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="relative overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative mb-6">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-32 h-32 object-cover rounded-full mx-auto border-4 border-primary/10"
                     />
-                    {hoveredTeamMember === index && (
-                      <div className="absolute inset-0 bg-black/80 flex items-center justify-center transition-opacity duration-300">
-                        <div className="text-center text-white">
-                          <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                          <p className="text-sm">{member.title}</p>
-                        </div>
-                      </div>
-                    )}
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-bold text-foreground leading-tight">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm font-medium text-primary italic">
+                      {member.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {member.organization}
+                    </p>
                   </div>
                 </div>
               ))}
