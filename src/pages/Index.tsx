@@ -6,6 +6,7 @@ import HiddenCostSection from "@/components/HiddenCostSection";
 import ProcessSection from "@/components/ProcessSection";
 import ExploreOurSolutions from "@/components/ExploreOurSolutions";
 import WhyTrustSection from "@/components/WhyTrustSection";
+import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 
 
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -23,6 +24,7 @@ const Index = () => {
         <EndevoPurposeSection />
         <HiddenCostSection />
         <ProcessSection />
+        <WhoBenefitsSection />
         <ExploreOurSolutions />
         <WhyTrustSection />
         
