@@ -128,6 +128,9 @@ const Company = () => {
       {/* Our Values Section */}
       
 
+      {/* Core Values Section */}
+      <CoreValuesSection />
+
       {/* Meet Our Team Section */}
       <section id="team" className="py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container max-w-7xl mx-auto px-4">
@@ -156,9 +159,6 @@ const Company = () => {
           </div>
         </div>
       </section>
-
-      {/* Core Values Section */}
-      <CoreValuesSection />
 
       <Footer />
     </div>;
