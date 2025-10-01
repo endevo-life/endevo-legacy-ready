@@ -108,7 +108,7 @@ const Company = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: `url(${companyHeroBg})`
     }}>
-        <div className="absolute inset-0 bg-black/40"></div>
+        
         <div ref={heroRef as any} className={`relative z-10 text-center text-white px-4 transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 max-w-4xl mx-auto">
             Our Mission: Building Resilient Legacies
