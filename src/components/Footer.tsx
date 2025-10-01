@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Center Column - Navigation & Podcast */}
           <div className="space-y-8">
-            <nav className="flex flex-col space-y-3">
+            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
