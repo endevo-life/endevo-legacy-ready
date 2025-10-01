@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Youtube, Linkedin, Instagram, Music2, Facebook, Send } from "lucide-react";
-import endevoLogo from "@/assets/endevo-logo-tagline.png";
-import podcastLogo from "@/assets/death-dying-podcast.png";
+import endevoLogo from "@/assets/endevo-logo-footer.png";
+import podcastLogo from "@/assets/death-dying-footer.png";
 
 const Footer = () => {
   const socialLinks = [
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Center Column - Navigation & Podcast */}
           <div className="space-y-8">
-            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <nav className="flex flex-col space-y-3 items-center">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
