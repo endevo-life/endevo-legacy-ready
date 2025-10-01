@@ -21,8 +21,8 @@ const Index = () => {
       <main>
         <NewHeroSection />
         <VideoSection />
-        <EndevoPurposeSection />
         <HiddenCostSection />
+        <EndevoPurposeSection />
         <ProcessSection />
         <WhoBenefitsSection />
         <ExploreOurSolutions />
