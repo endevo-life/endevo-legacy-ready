@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import heroBackground from "@/assets/resources-hero-bg.jpg";
@@ -112,9 +111,6 @@ const Resources = () => {
           </div>
         </div>
       </section>
-
-      
-      <Footer />
     </div>
   );
 };

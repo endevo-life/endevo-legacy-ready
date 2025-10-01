@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import individualsLegacy from "@/assets/individuals-legacy-planning.png";
 import serviceProviders from "@/assets/service-providers-new.png";
 import employersTeams from "@/assets/employers-teams-new.png";
@@ -117,8 +116,6 @@ const WhoWeServe = () => {
           </div>
         </div>
       </section>
-      
-      <Footer />
     </div>
   );
 };
