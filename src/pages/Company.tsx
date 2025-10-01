@@ -103,22 +103,6 @@ const Company = () => {
         </div>
       </section>
 
-      
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${companyHeroBg})`
-    }}>
-        
-        <div ref={heroRef as any} className={`relative z-10 text-center text-white px-4 transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 max-w-4xl mx-auto">
-            Our Mission: Building Resilient Legacies
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
-            We believe preparedness is a gift—for families, employees, companies, and communities.
-          </p>
-        </div>
-      </section>
-
       {/* About ENDevo Section */}
       <section id="about" className="py-20 bg-background">
         <div className="container max-w-6xl mx-auto px-4">
