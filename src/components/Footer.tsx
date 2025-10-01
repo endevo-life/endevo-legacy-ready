@@ -1,61 +1,122 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Youtube, Linkedin, Instagram, Music2, Facebook, Send } from "lucide-react";
+import endevoLogo from "@/assets/endevo-logo-tagline.png";
+import podcastLogo from "@/assets/death-dying-podcast.png";
 
 const Footer = () => {
-  
+  const socialLinks = [
+    { icon: Youtube, label: "YouTube", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: Instagram, label: "Instagram", href: "#" },
+    { icon: Music2, label: "TikTok", href: "#" },
+    { icon: Facebook, label: "Facebook", href: "#" },
+  ];
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Solutions", href: "/solution" },
+    { name: "Plan", href: "/plan" },
+    { name: "Company", href: "/company" },
+    { name: "Resources", href: "/resources" },
+    { name: "Who We Serve", href: "/who-we-serve" },
+  ];
+
   return (
-    <footer className="bg-primary text-primary-foreground py-12 animate-fade-in">
-      <div className="container max-w-6xl mx-auto px-4">
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
-          {/* Logo Section */}
-          <div className="flex items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+    <footer className="bg-[#2C8B8B] text-white py-16">
+      <div className="container max-w-7xl mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+          {/* Left Column - Logo & Social */}
+          <div className="space-y-6">
             <img 
-              src="/lovable-uploads/af6b9811-d420-4217-81d1-4de28da0a7ec.png" 
-              alt="ENDevo Logo - Plan. Protect. Peace." 
-              className="h-12 w-auto hover-scale transition-transform duration-300"
+              src={endevoLogo} 
+              alt="ENDevo - Plan. Protect. Peace." 
+              className="h-16 w-auto"
             />
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="hover:text-brand-orange transition-colors"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
           </div>
-          
-          {/* Navigation Links */}
-          <div className="flex flex-col space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+
+          {/* Center Column - Navigation & Podcast */}
+          <div className="space-y-8">
             <nav className="flex flex-col space-y-3">
-              <a href="#solutions" className="story-link hover:text-brand-orange transition-colors hover-scale">Solutions</a>
-              <a href="#who-we-serve" className="story-link hover:text-brand-orange transition-colors hover-scale">Who We Serve</a>
-              <a href="#resources" className="story-link hover:text-brand-orange transition-colors hover-scale">Resources</a>
-              <a href="#plan" className="story-link hover:text-brand-orange transition-colors hover-scale">Plan</a>
-              <a href="#company" className="story-link hover:text-brand-orange transition-colors hover-scale">Company</a>
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="hover:text-brand-orange transition-colors text-sm"
+                >
+                  {link.name}
+                </a>
+              ))}
             </nav>
+            
+            <div className="space-y-3">
+              <img 
+                src={podcastLogo} 
+                alt="Death & Dying Podcast" 
+                className="h-12 w-auto"
+              />
+              <p className="text-sm text-white/90">
+                Life's Final Chapter, Planned for Today's Digital Age.
+              </p>
+              <a 
+                href="#" 
+                className="inline-block text-brand-orange text-sm font-semibold hover:underline"
+              >
+                Listen Now!
+              </a>
+            </div>
           </div>
-          
-          {/* Stay Connected Form */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <h3 className="text-lg font-semibold">Stay Connected</h3>
+
+          {/* Right Column - Newsletter */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Stay Connected:</h3>
             <div className="space-y-3">
               <Input 
                 type="text" 
                 placeholder="Your Name" 
-                className="bg-primary-foreground text-primary border-primary-foreground/20 hover-scale transition-transform duration-300"
+                className="bg-white text-gray-900 border-white rounded-full"
               />
               <Input 
                 type="email" 
                 placeholder="Your Email" 
-                className="bg-primary-foreground text-primary border-primary-foreground/20 hover-scale transition-transform duration-300"
+                className="bg-white text-gray-900 border-white rounded-full"
               />
               <Button 
-                variant="secondary" 
-                className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white hover-scale transition-transform duration-300"
+                className="w-full bg-white text-[#2C8B8B] hover:bg-white/90 rounded-full font-semibold"
               >
-                Send
+                <Send className="w-4 h-4 mr-2" />
+                Subscribe
               </Button>
             </div>
           </div>
         </div>
         
-        {/* Copyright */}
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-primary-foreground/80">
-            © 2025 ENDevo. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="border-t border-white/20 pt-8 text-center space-y-2">
+          <p className="text-sm">
+            © 2025 ENDevo Services. All rights reserved.
           </p>
+          <div className="flex justify-center gap-4 text-sm">
+            <a href="#" className="hover:text-brand-orange transition-colors">
+              Privacy Policy
+            </a>
+            <span>|</span>
+            <a href="#" className="hover:text-brand-orange transition-colors">
+              Terms of Service
+            </a>
+          </div>
         </div>
       </div>
     </footer>
