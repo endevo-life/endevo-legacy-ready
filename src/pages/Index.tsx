@@ -29,8 +29,8 @@ const Index = () => {
         <WhyTrustSection />
         
         
-        <TestimonialsSection />
         <VisionValuesSection />
+        <TestimonialsSection />
         <ConsultationSection />
       </main>
       <Footer />
