@@ -10,6 +10,7 @@ import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import VisionValuesSection from "@/components/VisionValuesSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
         <TestimonialsSection />
         <ConsultationSection />
       </main>
+      <Footer />
     </div>
   );
 };
