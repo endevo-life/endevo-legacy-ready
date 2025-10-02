@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#2C8B8B] text-white py-16">
+    <footer className="bg-[#2C8B8B] text-white py-8">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Left Column - Logo & Social */}
