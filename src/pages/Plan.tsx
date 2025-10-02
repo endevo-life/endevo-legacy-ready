@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Plan = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
@@ -131,6 +132,7 @@ const Plan = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
