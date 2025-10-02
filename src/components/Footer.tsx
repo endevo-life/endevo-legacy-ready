@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#2C8B8B] text-white py-16">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Left Column - Logo & Social */}
           <div className="space-y-6">
             <img 
@@ -47,9 +47,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Center Column - Navigation & Podcast */}
-          <div className="space-y-8">
-            <nav className="flex flex-col space-y-3 items-center">
+          {/* Navigation Column */}
+          <div className="flex flex-col items-center md:items-start">
+            <nav className="flex flex-col space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -60,26 +60,27 @@ const Footer = () => {
                 </a>
               ))}
             </nav>
-            
-            <div className="space-y-3">
-              <img 
-                src={podcastLogo} 
-                alt="Death & Dying Podcast" 
-                className="h-12 w-auto"
-              />
-              <p className="text-sm text-white/90">
-                Life's Final Chapter, Planned for Today's Digital Age.
-              </p>
-              <a 
-                href="#" 
-                className="inline-block text-brand-orange text-sm font-semibold hover:underline"
-              >
-                Listen Now!
-              </a>
-            </div>
           </div>
 
-          {/* Right Column - Newsletter */}
+          {/* Podcast Column */}
+          <div className="space-y-3 flex flex-col items-center md:items-start">
+            <img 
+              src={podcastLogo} 
+              alt="Death & Dying Podcast" 
+              className="h-12 w-auto"
+            />
+            <p className="text-sm text-white/90">
+              Life's Final Chapter, Planned for Today's Digital Age.
+            </p>
+            <a 
+              href="#" 
+              className="inline-block text-brand-orange text-sm font-semibold hover:underline"
+            >
+              Listen Now!
+            </a>
+          </div>
+
+          {/* Newsletter Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Stay Connected:</h3>
             <div className="space-y-3">
