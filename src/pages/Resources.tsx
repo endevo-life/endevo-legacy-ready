@@ -32,10 +32,20 @@ const Resources = () => {
             </p>
             
             <div className="flex flex-col md:flex-row gap-6">
-              <Button variant="cta" size="lg" className="flex items-center gap-2">
+              <Button 
+                variant="cta" 
+                size="lg" 
+                className="flex items-center gap-2"
+                onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}
+              >
                 🎙️ Learn from Experts
               </Button>
-              <Button variant="cta" size="lg" className="flex items-center gap-2">
+              <Button 
+                variant="cta" 
+                size="lg" 
+                className="flex items-center gap-2"
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US', '_blank')}
+              >
                 📱 Plan with Our App
               </Button>
               <Button variant="cta" size="lg" className="flex items-center gap-2">
