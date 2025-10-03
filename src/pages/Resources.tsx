@@ -121,7 +121,11 @@ const Resources = () => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <Button variant="cta" size="lg">
+            <Button 
+              variant="cta" 
+              size="lg"
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share', '_blank')}
+            >
               Get the App
             </Button>
           </div>
