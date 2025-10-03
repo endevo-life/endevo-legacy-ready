@@ -290,9 +290,11 @@ const Header = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300">
-                Company
-              </NavigationMenuTrigger>
+              <Link to="/company">
+                <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300">
+                  Company
+                </NavigationMenuTrigger>
+              </Link>
               <NavigationMenuContent>
                 <ul className="grid gap-2 p-4 w-[280px]">
                   <li>
@@ -351,6 +353,21 @@ const Header = () => {
                         <div className="text-sm font-medium leading-none">Meet Our Team</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           The people behind ENDevo
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/company#partners"
+                        className={cn(
+                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        )}
+                      >
+                        <div className="text-sm font-medium leading-none">Our Partners</div>
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
+                          Building resilience together
                         </p>
                       </a>
                     </NavigationMenuLink>
