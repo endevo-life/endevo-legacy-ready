@@ -38,11 +38,28 @@ const Header = () => {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300">
-                Solutions
-              </NavigationMenuTrigger>
+              <Link to="/solution">
+                <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300">
+                  Solutions
+                </NavigationMenuTrigger>
+              </Link>
               <NavigationMenuContent>
                 <ul className="grid gap-2 p-4 w-[280px]">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/solution#empowering"
+                        className={cn(
+                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        )}
+                      >
+                        <div className="text-sm font-medium leading-none">Empowering You to Take Control</div>
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
+                          Resources to guide every step
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
                   <li>
                     <NavigationMenuLink asChild>
                       <a
@@ -51,9 +68,24 @@ const Header = () => {
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Our Holistic Framework</div>
+                        <div className="text-sm font-medium leading-none">Our Comprehensive Framework</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Four key areas of readiness
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/solution#service-providers"
+                        className={cn(
+                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        )}
+                      >
+                        <div className="text-sm font-medium leading-none">Connect with Service Providers</div>
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
+                          Trusted experts at your fingertips
                         </p>
                       </a>
                     </NavigationMenuLink>
@@ -76,44 +108,14 @@ const Header = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <a
-                        href="/solution#process"
+                        href="/solution#why-endevo"
                         className={cn(
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Process</div>
+                        <div className="text-sm font-medium leading-none">Why ENDevo</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Simple 3-step approach
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/solution#for-companies"
-                        className={cn(
-                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        )}
-                      >
-                        <div className="text-sm font-medium leading-none">For Companies</div>
-                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Enterprise benefits
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/solution#for-employees"
-                        className={cn(
-                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        )}
-                      >
-                        <div className="text-sm font-medium leading-none">For Employees</div>
-                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Personal benefits
+                          Where AI meets empathy
                         </p>
                       </a>
                     </NavigationMenuLink>

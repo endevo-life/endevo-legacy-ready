@@ -50,7 +50,7 @@ const Solution = () => {
       </section>
 
       {/* Empowering You to Take Control Section */}
-      <section className="py-20 bg-muted/50">
+      <section id="empowering" className="py-20 bg-muted/50">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
@@ -112,7 +112,7 @@ const Solution = () => {
       </section>
 
       {/* Our Comprehensive Framework Section */}
-      <section className="py-20 bg-background">
+      <section id="framework" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Comprehensive Framework</h2>
@@ -249,7 +249,7 @@ const Solution = () => {
         </div>
       </section>
       {/* Our Edge: Where AI Meets Empathy Section */}
-      <section className="py-20 bg-background">
+      <section id="why-endevo" className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Text */}
