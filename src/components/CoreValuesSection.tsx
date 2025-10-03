@@ -50,7 +50,7 @@ const CoreValuesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="values" className="py-20 bg-background">
       <div ref={elementRef as any} className="container max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
