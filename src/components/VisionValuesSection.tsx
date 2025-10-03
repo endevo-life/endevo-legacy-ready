@@ -23,7 +23,11 @@ const VisionValuesSection = () => {
         <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
         transitionDelay: '400ms'
       }}>
-          <Button size="lg" className="bg-[#fe5d01] hover:bg-[#e54d01] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+          <Button 
+            size="lg" 
+            className="bg-[#fe5d01] hover:bg-[#e54d01] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => window.location.href = '/company'}
+          >
             Read More About Us
           </Button>
         </div>

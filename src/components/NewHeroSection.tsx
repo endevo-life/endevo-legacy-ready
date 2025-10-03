@@ -40,14 +40,26 @@ const NewHeroSection = () => {
         </a>
         
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
-          <a href="#" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-          transitionDelay: isVisible ? '0.8s' : '0s'
-        }}>
+          <a 
+            href="https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            style={{
+              transitionDelay: isVisible ? '0.8s' : '0s'
+            }}
+          >
             Download My Final Playbook App
           </a>
-          <a href="/podcast" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-          transitionDelay: isVisible ? '1s' : '0s'
-        }}>
+          <a 
+            href="https://digitallegacypodcast.com/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            style={{
+              transitionDelay: isVisible ? '1s' : '0s'
+            }}
+          >
             Listen to the Digital Legacy Podcast
           </a>
           <a href="#" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
