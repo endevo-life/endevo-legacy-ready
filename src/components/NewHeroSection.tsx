@@ -27,7 +27,7 @@ const NewHeroSection = () => {
         
         <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
           <button 
-            className={`text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 ease-out mb-12 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out mb-12 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{
               backgroundColor: '#FF4D00',
               transitionDelay: isVisible ? '0.6s' : '0s'
