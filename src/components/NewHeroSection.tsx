@@ -25,10 +25,16 @@ const NewHeroSection = () => {
       }}>ENDevo educates, project manages and empowers people so their life story, values, and digital footprint are protected, preserved, and passed on with intention.</p>
         
         <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
-          <button className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-1000 ease-out hover-scale mb-12 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-          transitionDelay: isVisible ? '0.6s' : '0s'
-        }}>
-            📝 Take the Peace of Mind Assessment
+          <button 
+            className={`text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 ease-out mb-12 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            style={{
+              backgroundColor: '#FF4D00',
+              transitionDelay: isVisible ? '0.6s' : '0s'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
+          >
+            Take the Peace of Mind Assessment
           </button>
         </a>
         
