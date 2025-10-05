@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -13,7 +13,7 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <ResponsiveNavbar />
       
       {/* Hero Section */}
       <section 

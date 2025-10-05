@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import Header from "@/components/Header";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 
 const Plan = () => {
@@ -10,7 +10,7 @@ const Plan = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <ResponsiveNavbar />
       
       {/* Pricing Section */}
       <section className="py-20 bg-background">

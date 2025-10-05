@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,7 +24,7 @@ const Solution = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      <ResponsiveNavbar />
       
       {/* Hero Section */}
       <section 

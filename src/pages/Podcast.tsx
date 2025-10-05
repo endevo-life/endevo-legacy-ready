@@ -1,10 +1,10 @@
-import Header from "@/components/Header";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import LearnListenFooter from "@/components/LearnListenFooter";
 
 const Podcast = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <ResponsiveNavbar />
       
       <main className="container max-w-7xl mx-auto px-4 py-12">
         <div className="animate-fade-in">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Header from "@/components/Header";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import NikiWeissSection from "@/components/NikiWeissSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
@@ -76,7 +76,7 @@ const Company = () => {
     image: deepPortrait
   }];
   return <div className="min-h-screen bg-background">
-      <Header />
+      <ResponsiveNavbar />
       
       {/* New Hero Section */}
       <section className="py-20 bg-background">

@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import individualsLegacy from "@/assets/individuals-legacy-planning.png";
 import serviceProviders from "@/assets/service-providers-new.png";
@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const WhoWeServe = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+      <ResponsiveNavbar />
       
       {/* Who We Serve Section */}
       <section className="py-20 bg-background">
