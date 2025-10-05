@@ -45,7 +45,7 @@ const WhoWeServe = () => {
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                ENDevo's AI-powered tools help you organize essential documents, set reminders for important milestones, and provide compassionate resources every step of the way. We remove the stress and complexity from legacy planning, so you can focus on what matters most—your family, your values, and your peace of mind.
+                ENDevo's AI-powered tools help you organize essential documents, set reminders for important milestones, and provide compassionate resources every step of the way. We remove the stress and complexity from legacy planning, so you can focus on what matters most: your family, your values, and your peace of mind.
               </p>
               
               <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-6 text-lg rounded-full">
