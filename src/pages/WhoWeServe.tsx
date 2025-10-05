@@ -67,7 +67,7 @@ const WhoWeServe = () => {
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                ENDevo connects service providers with pre-qualified clients who are ready for your expertise. Our platform improves onboarding efficiency, strengthens client trust through seamless integration, and reduces the time you spend on administrative paperwork—so you can focus on delivering exceptional service.
+                ENDevo connects service providers with pre-qualified clients who are ready for your expertise. Our platform improves onboarding efficiency, strengthens client trust through seamless integration, and reduces the time you spend on administrative paperwork so you can focus on delivering exceptional service.
               </p>
               
               <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-6 text-lg rounded-full">
