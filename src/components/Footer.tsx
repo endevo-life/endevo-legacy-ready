@@ -75,7 +75,9 @@ const Footer = () => {
               Life's Final Chapter, Planned for Today's Digital Age.
             </p>
             <a 
-              href="#" 
+              href="https://digitallegacypodcast.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block text-brand-orange text-sm font-semibold hover:underline"
             >
               Listen Now!
