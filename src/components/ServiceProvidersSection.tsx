@@ -59,7 +59,7 @@ const ServiceProvidersSection = () => {
           </Card>
 
           {/* Card 2 - Financial Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img 
@@ -72,6 +72,12 @@ const ServiceProvidersSection = () => {
                 <h3 className="text-xl font-bold mb-3">Financial Partners</h3>
                 <p className="text-muted-foreground">
                   Wealth advisors, accountants, Social Security specialists, and life insurance providers to secure your family's financial future.
+                </p>
+              </div>
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-center text-base leading-relaxed">
+                  Securing your family's financial future is about more than just money. It is about peace of mind and stability. Legacy connects you with trusted experts who can guide you through complex decisions, from retirement planning to life insurance, helping ensure that your loved ones are protected and prepared for whatever comes next.
                 </p>
               </div>
             </CardContent>
