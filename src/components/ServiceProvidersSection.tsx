@@ -4,18 +4,13 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import physicalPartners from "@/assets/physical-partners.png";
 import financialPartners from "@/assets/financial-partners.png";
 import digitalPartners from "@/assets/digital-partners.png";
-
 const ServiceProvidersSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
-
-  return (
-    <section id="service-providers" className="py-20 bg-background">
-      <div 
-        ref={elementRef as any}
-        className={`container max-w-7xl mx-auto px-4 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-      >
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation();
+  return <section id="service-providers" className="py-20 bg-background">
+      <div ref={elementRef as any} className={`container max-w-7xl mx-auto px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         {/* Headline */}
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -37,11 +32,7 @@ const ServiceProvidersSection = () => {
           <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
-                <img 
-                  src={physicalPartners} 
-                  alt="Physical Partners - Funeral homes, hospice care, and long-term care providers"
-                  className="w-full h-64 object-cover"
-                />
+                <img src={physicalPartners} alt="Physical Partners - Funeral homes, hospice care, and long-term care providers" className="w-full h-64 object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3">Physical Partners</h3>
@@ -62,11 +53,7 @@ const ServiceProvidersSection = () => {
           <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
-                <img 
-                  src={financialPartners} 
-                  alt="Financial Partners - Wealth advisors, accountants, and insurance providers"
-                  className="w-full h-64 object-cover"
-                />
+                <img src={financialPartners} alt="Financial Partners - Wealth advisors, accountants, and insurance providers" className="w-full h-64 object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3">Financial Partners</h3>
@@ -76,9 +63,7 @@ const ServiceProvidersSection = () => {
               </div>
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-center text-base leading-relaxed">
-                  Securing your family's financial future is about more than just money. It is about peace of mind and stability. Legacy connects you with trusted experts who can guide you through complex decisions, from retirement planning to life insurance, helping ensure that your loved ones are protected and prepared for whatever comes next.
-                </p>
+                <p className="text-white text-center text-base leading-relaxed">Securing your family's financial future is about more than just money. It is about peace of mind and stability. ENDevo connects you with trusted experts who can guide you through complex decisions, from retirement planning to life insurance, helping ensure that your loved ones are protected and prepared for whatever comes next.</p>
               </div>
             </CardContent>
           </Card>
@@ -87,11 +72,7 @@ const ServiceProvidersSection = () => {
           <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
-                <img 
-                  src={digitalPartners} 
-                  alt="Digital Partners - Digital asset managers and secure storage services"
-                  className="w-full h-64 object-cover"
-                />
+                <img src={digitalPartners} alt="Digital Partners - Digital asset managers and secure storage services" className="w-full h-64 object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3">Digital Partners</h3>
@@ -121,8 +102,6 @@ const ServiceProvidersSection = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ServiceProvidersSection;
