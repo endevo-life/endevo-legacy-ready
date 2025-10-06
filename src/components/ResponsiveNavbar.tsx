@@ -37,12 +37,7 @@ const ResponsiveNavbar = () => {
     {
       name: "Plan",
       href: "/plan",
-      submenu: [
-        { name: "Path Options", href: "/plan#path-options" },
-        { name: "Avoid the Mess", href: "/plan#avoid-chaos" },
-        { name: "Smart Framework", href: "/plan#smart-framework" },
-        { name: "Legacy Readiness", href: "/plan#legacy-readiness" },
-      ]
+      submenu: []
     },
     {
       name: "Company",
