@@ -24,7 +24,7 @@ const WhoWeServe = () => {
           </div>
 
           {/* Subsection 1 - Legacy Planning for Individuals */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
+          <div id="individuals" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
             {/* Left - Image */}
             <div className="relative">
               <img 

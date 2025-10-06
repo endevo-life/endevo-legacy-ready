@@ -1,8 +1,10 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useNavigate } from "react-router-dom";
 import individualsIcon from "@/assets/individuals-icon.png";
 import serviceProvidersIcon from "@/assets/service-providers-icon.png";
 import employersIcon from "@/assets/employers-icon.png";
 const WhoBenefitsSection = () => {
+  const navigate = useNavigate();
   const {
     elementRef,
     isVisible
@@ -27,7 +29,18 @@ const WhoBenefitsSection = () => {
             <p className="text-muted-foreground mb-8 flex-grow">
               Simplifying legacy readiness with AI-powered guidance and compassionate resources.
             </p>
-            <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            <button 
+              onClick={() => {
+                navigate('/who-we-serve#individuals');
+                setTimeout(() => {
+                  const element = document.getElementById('individuals');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 100);
+              }}
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            >
               Learn More
             </button>
           </div>
