@@ -10,12 +10,14 @@ const ForCompanies = () => {
       <ResponsiveNavbar />
       <main className="py-20">
         <div className="container mx-auto px-4 max-w-7xl">
+          {/* Centered Headline */}
+          <h1 className="text-4xl md:text-5xl font-bold mb-12 text-[#FF6B35] text-center">
+            Reduce risk. Protect employees. Safeguard continuity.
+          </h1>
+
           {/* Hero Section with Image */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#FF6B35]">
-                Reduce risk. Protect employees. Safeguard continuity.
-              </h1>
               <p className="text-lg text-gray-700 mb-8">
                 Employees are the backbone of every organization, but when personal crises or major life events occur, they often bring stress and uncertainty into the workplace. The impact shows up in absenteeism, reduced productivity, and higher turnover. Companies that provide meaningful support during these moments create stronger, more resilient teams.
               </p>
