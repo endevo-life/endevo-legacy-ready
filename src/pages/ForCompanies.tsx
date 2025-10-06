@@ -2,9 +2,12 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import hrEapImage from "@/assets/hr-eap-consultation.png";
 
 const ForCompanies = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
@@ -35,8 +38,10 @@ const ForCompanies = () => {
           </div>
 
           {/* Four Column Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <Card className="bg-gray-100 shadow-md">
+          <div ref={elementRef as any} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
                   Provide employees with access to our Peace of Mind Assessment to quickly identify their level of preparedness.
@@ -44,7 +49,9 @@ const ForCompanies = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-100 shadow-md">
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 delay-150 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
                   Guide staff with AI-powered tools that help them organize legal, financial, and digital assets in one secure place.
@@ -52,7 +59,9 @@ const ForCompanies = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-100 shadow-md">
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 delay-300 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
                   Offer confidence and support that reduces stress, protects well-being, and lowers the risk of extended absences.
@@ -60,7 +69,9 @@ const ForCompanies = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-100 shadow-md">
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 delay-[450ms] ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
                   Strengthen continuity by ensuring employees can focus on their work, even while navigating personal challenges.
