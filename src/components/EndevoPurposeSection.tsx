@@ -46,7 +46,7 @@ const EndevoPurposeSection = () => {
           }}>
               <h3 className="text-2xl font-bold text-white mb-1">For Investors:</h3>
               <p className="text-white/90 text-lg mb-4">Be part of a $126B industry transformation.</p>
-              <a href="/company" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
+              <a href="/for-investors" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
                 Explore Opportunity
               </a>
             </div>
