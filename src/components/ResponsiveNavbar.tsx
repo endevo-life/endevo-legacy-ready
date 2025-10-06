@@ -10,11 +10,11 @@ const ResponsiveNavbar = () => {
       name: "Solutions",
       href: "/solution",
       submenu: [
-        { name: "Our Holistic Framework", href: "/solution#framework" },
-        { name: "Core Solutions", href: "/solution#core-solutions" },
-        { name: "Process", href: "/solution#process" },
-        { name: "For Companies", href: "/solution#for-companies" },
-        { name: "For Employees", href: "/solution#for-employees" },
+        { name: "Our Holistic Framework", href: "/solution#framework", hover: "Our comprehensive framework" },
+        { name: "Core Solutions", href: "/solution#core-solutions", hover: "Core solutions" },
+        { name: "Process", href: "/solution#process", hover: "Empowering you to take control" },
+        { name: "For Companies", href: "/solution#for-companies", hover: "Our edge" },
+        { name: "For Employees", href: "/solution#for-employees", hover: "Get connected with service providers" },
       ]
     },
     {
@@ -88,9 +88,15 @@ const ResponsiveNavbar = () => {
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200"
+                        className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200 group/item"
+                        title={subItem.hover || subItem.name}
                       >
-                        {subItem.name}
+                        <div className="font-medium">{subItem.name}</div>
+                        {subItem.hover && (
+                          <div className="text-xs text-muted-foreground/80 mt-0.5 group-hover/item:text-foreground/70">
+                            {subItem.hover}
+                          </div>
+                        )}
                       </Link>
                     ))}
                   </div>
