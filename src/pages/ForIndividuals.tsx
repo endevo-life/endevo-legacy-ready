@@ -110,7 +110,7 @@ const ForIndividuals = () => {
               size="lg"
               className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 rounded-full"
             >
-              Partner With Us
+              Start Your Plan
             </Button>
           </div>
         </div>
