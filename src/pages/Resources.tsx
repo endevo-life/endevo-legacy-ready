@@ -71,7 +71,7 @@ const Resources = () => {
                 Peace of Mind for Life's What-Ifs
               </h2>
               <p className="text-lg text-white/90 mb-8">
-                Life is unpredictable, but your loved ones don't have to face uncertainty alone. With ENDevo, you can organize plans, protect your digital and financial legacy, and give your family the confidence of knowing exactly what to do — no matter what tomorrow brings.
+                Life is unpredictable, but your loved ones don't have to face uncertainty alone. With ENDevo, you can organize plans, protect your digital and financial legacy, and give your family the confidence of knowing exactly what to do no matter what tomorrow brings.
               </p>
               <Button 
                 variant="cta" 
