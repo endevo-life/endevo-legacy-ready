@@ -34,7 +34,7 @@ const ServiceProvidersSection = () => {
         {/* Three Feature Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Card 1 - Physical Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img 
@@ -47,6 +47,12 @@ const ServiceProvidersSection = () => {
                 <h3 className="text-xl font-bold mb-3">Physical Partners</h3>
                 <p className="text-muted-foreground">
                   Funeral homes, hospice care, and long-term care providers to support you and your loved ones through life's toughest transitions.
+                </p>
+              </div>
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-center text-base leading-relaxed">
+                  Life's most challenging moments are easier to navigate when you have guidance and support. At Legacy, we help you plan ahead so your loved ones are cared for with compassion and dignity, easing stress during difficult times and ensuring peace of mind for the future.
                 </p>
               </div>
             </CardContent>

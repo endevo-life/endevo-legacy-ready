@@ -160,19 +160,13 @@ const Solution = () => {
                 </CardContent>
               </Card>
 
-              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300 relative group overflow-hidden" style={{ animationDelay: '0.3s' }}>
+              <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.3s' }}>
                 <CardContent className="p-6">
                   <CardTitle className="mb-3 text-lg">Physical</CardTitle>
                   <p className="text-muted-foreground text-sm">
                     Address care, health, and personal needs with confidence.
                   </p>
                 </CardContent>
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-center text-sm leading-relaxed">
-                    Life's most challenging moments are easier to navigate when you have guidance and support. At Legacy, we help you plan ahead so your loved ones are cared for with compassion and dignity, easing stress during difficult times and ensuring peace of mind for the future.
-                  </p>
-                </div>
               </Card>
 
               <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.4s' }}>
