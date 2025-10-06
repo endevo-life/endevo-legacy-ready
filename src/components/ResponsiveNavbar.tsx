@@ -74,23 +74,27 @@ const ResponsiveNavbar = () => {
                   className="flex items-center text-foreground hover:text-primary transition-colors duration-300 py-2 px-4 rounded-md hover:bg-accent/50"
                 >
                   {item.name}
-                  <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                  {item.submenu.length > 0 && (
+                    <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                  )}
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                  <div className="py-2">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                {item.submenu.length > 0 && (
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <div className="py-2">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
