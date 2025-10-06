@@ -9,7 +9,7 @@ const ServiceProvidersSection = () => {
     elementRef,
     isVisible
   } = useScrollAnimation();
-  return <section id="service-providers" className="py-20 bg-background">
+  return <section id="for-employees" className="py-20 bg-background scroll-mt-20">
       <div ref={elementRef as any} className={`container max-w-7xl mx-auto px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         {/* Headline */}
         <div className="text-center mb-6">
