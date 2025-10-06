@@ -21,8 +21,9 @@ const ResponsiveNavbar = () => {
       name: "Who We Serve",
       href: "/who-we-serve",
       submenu: [
-        { name: "Industries Served", href: "/who-we-serve#industries" },
-        { name: "Why ENDevo?", href: "/who-we-serve#why-endevo" },
+        { name: "For Individuals", href: "/who-we-serve#individuals" },
+        { name: "For Service Providers", href: "/who-we-serve#service-providers" },
+        { name: "For Employers", href: "/who-we-serve#employers" },
       ]
     },
     {
