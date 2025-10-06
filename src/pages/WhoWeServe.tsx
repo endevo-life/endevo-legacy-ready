@@ -49,9 +49,6 @@ const WhoWeServe = () => {
               </p>
               
               <div className="flex gap-4">
-                <Button variant="outline" className="px-8 py-6 text-lg rounded-full">
-                  Learn More
-                </Button>
                 <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-6 text-lg rounded-full">
                   Start Your Journey Today
                 </Button>
@@ -76,9 +73,6 @@ const WhoWeServe = () => {
               </p>
               
               <div className="flex gap-4">
-                <Button variant="outline" className="px-8 py-6 text-lg rounded-full">
-                  Learn More
-                </Button>
                 <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-6 text-lg rounded-full">
                   Partner With ENDevo
                 </Button>
@@ -121,9 +115,6 @@ const WhoWeServe = () => {
               </p>
               
               <div className="flex gap-4">
-                <Button variant="outline" className="px-8 py-6 text-lg rounded-full">
-                  Learn More
-                </Button>
                 <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white px-8 py-6 text-lg rounded-full">
                   Empower Your Team
                 </Button>
