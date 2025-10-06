@@ -41,7 +41,7 @@ const Plan = () => {
             }`}
           >
             {/* Card 1 - Starter (Left) */}
-            <Card className="bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg">
+            <Card className="bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg flex flex-col">
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-2xl font-bold mb-4">Starter</CardTitle>
                 <div className="text-4xl font-bold text-foreground mb-4">Free</div>
@@ -49,8 +49,8 @@ const Plan = () => {
                   Get started with a personal consultation and essential first steps.
                 </p>
               </CardHeader>
-              <CardContent className="pt-0">
-                <ul className="space-y-3 text-left mb-8">
+              <CardContent className="pt-0 flex flex-col flex-grow">
+                <ul className="space-y-3 text-left mb-8 flex-grow">
                   <li className="flex items-start">
                     <span className="text-brand-orange mr-2">•</span>
                     One-on-one meeting with the CEO to discuss your goals.
@@ -64,14 +64,14 @@ const Plan = () => {
                     Personalized guidance to begin your legacy planning journey.
                   </li>
                 </ul>
-                <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white">
+                <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white mt-auto">
                   Schedule Your Free Session
                 </Button>
               </CardContent>
             </Card>
 
             {/* Card 2 - Pro (Center) */}
-            <Card className="bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg">
+            <Card className="bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg flex flex-col">
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-2xl font-bold mb-4">Pro</CardTitle>
                 <div className="text-4xl font-bold text-foreground mb-4">$00.00</div>
@@ -79,8 +79,8 @@ const Plan = () => {
                   Unlock the Final Playbook app with guided courses and challenges.
                 </p>
               </CardHeader>
-              <CardContent className="pt-0">
-                <ul className="space-y-3 text-left mb-8">
+              <CardContent className="pt-0 flex flex-col flex-grow">
+                <ul className="space-y-3 text-left mb-8 flex-grow">
                   <li className="flex items-start">
                     <span className="text-brand-orange mr-2">•</span>
                     Full access to the Final Playbook App.
@@ -94,14 +94,14 @@ const Plan = () => {
                     Tools and resources to build confidence and reduce planning stress.
                   </li>
                 </ul>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-black">
+                <Button className="w-full bg-green-500 hover:bg-green-600 text-black mt-auto">
                   Download the App & Enroll
                 </Button>
               </CardContent>
             </Card>
 
             {/* Card 3 - Starter (Right) */}
-            <Card className="bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg">
+            <Card className="bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg flex flex-col">
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-2xl font-bold mb-4">Starter</CardTitle>
                 <div className="text-4xl font-bold text-foreground mb-4">Free</div>
@@ -109,8 +109,8 @@ const Plan = () => {
                   Get started with a personal consultation and essential first steps.
                 </p>
               </CardHeader>
-              <CardContent className="pt-0">
-                <ul className="space-y-3 text-left mb-8">
+              <CardContent className="pt-0 flex flex-col flex-grow">
+                <ul className="space-y-3 text-left mb-8 flex-grow">
                   <li className="flex items-start">
                     <span className="text-brand-orange mr-2">•</span>
                     One-on-one meeting with the CEO to discuss your goals.
@@ -124,7 +124,7 @@ const Plan = () => {
                     Personalized guidance to begin your legacy planning journey.
                   </li>
                 </ul>
-                <Button className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white">
+                <Button className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white mt-auto">
                   Start for Free
                 </Button>
               </CardContent>
