@@ -190,12 +190,12 @@ const Solution = () => {
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Core Solutions</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="animate-fade-in hover-scale">
-              <CardHeader className="p-0">
+            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group">
+              <CardHeader className="p-0 overflow-hidden">
                 <img 
                   src={hrEapPrograms} 
                   alt="HR/EAP Programs" 
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
                 />
               </CardHeader>
               <CardContent className="p-6">
@@ -204,12 +204,12 @@ const Solution = () => {
               </CardContent>
             </Card>
 
-            <Card className="animate-fade-in hover-scale" style={{ animationDelay: '0.2s' }}>
-              <CardHeader className="p-0">
+            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.2s' }}>
+              <CardHeader className="p-0 overflow-hidden">
                 <img 
                   src={digitalLegacy} 
                   alt="Digital Legacy Protection" 
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
                 />
               </CardHeader>
               <CardContent className="p-6">
@@ -218,12 +218,12 @@ const Solution = () => {
               </CardContent>
             </Card>
 
-            <Card className="animate-fade-in hover-scale" style={{ animationDelay: '0.4s' }}>
-              <CardHeader className="p-0">
+            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.4s' }}>
+              <CardHeader className="p-0 overflow-hidden">
                 <img 
                   src={workshopsAssessments} 
                   alt="Workshops & Assessments" 
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
                 />
               </CardHeader>
               <CardContent className="p-6">
@@ -232,12 +232,12 @@ const Solution = () => {
               </CardContent>
             </Card>
 
-            <Card className="animate-fade-in hover-scale" style={{ animationDelay: '0.6s' }}>
-              <CardHeader className="p-0">
+            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.6s' }}>
+              <CardHeader className="p-0 overflow-hidden">
                 <img 
                   src={peaceMindAssessment} 
                   alt="Peace of Mind Assessment" 
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
                 />
               </CardHeader>
               <CardContent className="p-6">
