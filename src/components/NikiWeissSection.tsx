@@ -30,7 +30,7 @@ const NikiWeissSection = () => {
                 Niki normalizes and simplifies the often daunting end-of-life planning process by merging innovative digital tools with traditional methods. With a background in healthcare, project management, and risk analysis, Niki brings a unique skill set in coaching her clients through developing a well-thought-out, customized legacy plan.
               </p>
               <p>
-                My Final Playbook App incorporates a holistic approach that guides users through a customizable journey of exploring end-of-life options by breaking down complex decision-making into actionable steps. By comprehensively planning and documenting various facets of your life—such as legal, financial, physical, and digital aspects—we gain peace of mind to live fully while providing a roadmap for preserving our digital imprint and protecting the people we leave behind.
+                My Final Playbook App incorporates a holistic approach that guides users through a customizable journey of exploring end-of-life options by breaking down complex decision-making into actionable steps. By comprehensively planning and documenting various facets of your life (such as legal, financial, physical, and digital aspects) we gain peace of mind to live fully while providing a roadmap for preserving our digital imprint and protecting the people we leave behind.
               </p>
             </div>
           </div>
