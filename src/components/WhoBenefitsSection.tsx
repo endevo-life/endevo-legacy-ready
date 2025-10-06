@@ -54,7 +54,18 @@ const WhoBenefitsSection = () => {
             <p className="text-muted-foreground mb-8 flex-grow">
               Unlock pre-qualified clients and boost revenue with efficient operations and smart partnerships.
             </p>
-            <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            <button 
+              onClick={() => {
+                navigate('/who-we-serve#service-providers');
+                setTimeout(() => {
+                  const element = document.getElementById('service-providers');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 100);
+              }}
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            >
               Learn More
             </button>
           </div>

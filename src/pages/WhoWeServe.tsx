@@ -57,7 +57,7 @@ const WhoWeServe = () => {
           </div>
 
           {/* Subsection 2 - Solutions for Service Providers */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
+          <div id="service-providers" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
             {/* Left - Content */}
             <div className="space-y-6 order-2 lg:order-1">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
