@@ -26,7 +26,7 @@ const EndevoPurposeSection = () => {
           }}>
               <h3 className="text-2xl font-bold text-white mb-1">For Companies (HR/EAP):</h3>
               <p className="text-white/90 text-lg mb-4">Reduce risk, protect employees, safeguard continuity.</p>
-              <a href="/who-we-serve" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
+              <a href="/for-companies" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
                 Learn More
               </a>
             </div>
