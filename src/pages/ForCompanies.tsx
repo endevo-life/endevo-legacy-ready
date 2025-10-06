@@ -3,16 +3,29 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import hrEapImage from "@/assets/hr-eap-consultation.png";
 
 const ForCompanies = () => {
   const { elementRef, isVisible } = useScrollAnimation();
+  const navigate = useNavigate();
   
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="py-20">
         <div className="container mx-auto px-4 max-w-7xl">
+          {/* Go Back Button */}
+          <Button
+            variant="ghost"
+            onClick={() => navigate(-1)}
+            className="mb-8 hover:bg-gray-100"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Go Back
+          </Button>
+          
           {/* Centered Headline */}
           <h1 className="text-4xl md:text-5xl font-bold mb-12 text-[#FF6B35] text-center">
             Reduce risk. Protect employees. Safeguard continuity.
