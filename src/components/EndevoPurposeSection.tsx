@@ -36,7 +36,7 @@ const EndevoPurposeSection = () => {
           }}>
               <h3 className="text-2xl font-bold text-white mb-1">For Individuals:</h3>
               <p className="text-white/90 text-lg mb-4">AI-powered tools for personal legacy & digital preparedness.</p>
-              <a href="/plan" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
+              <a href="/for-individuals" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
                 Get Started
               </a>
             </div>
