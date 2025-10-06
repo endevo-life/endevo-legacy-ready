@@ -79,7 +79,10 @@ const HiddenCostSection = () => {
           </p>
 
           <Button 
-            onClick={() => navigate('/solution')}
+            onClick={() => {
+              navigate('/solution');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             size="lg"
             className="bg-brand-orange hover:bg-brand-orange-hover text-white font-bold px-8 py-6 rounded-full text-lg"
           >
