@@ -82,9 +82,7 @@ const ServiceProvidersSection = () => {
               </div>
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-center text-base leading-relaxed">
-                  Protecting your digital life is becoming increasingly important. Legacy connects you with experts who can help manage and secure your cryptocurrency, online accounts, and entire digital footprint, giving you peace of mind that your digital assets are safe and accessible when your loved ones need them.
-                </p>
+                <p className="text-white text-center text-base leading-relaxed">Protecting your digital life is becoming increasingly important. ENDevo connects you with experts who can help manage and secure your cryptocurrency, online accounts, and entire digital footprint, giving you peace of mind that your digital assets are safe and accessible when your loved ones need them.</p>
               </div>
             </CardContent>
           </Card>
