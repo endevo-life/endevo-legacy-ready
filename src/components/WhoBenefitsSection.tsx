@@ -79,7 +79,18 @@ const WhoBenefitsSection = () => {
             <p className="text-muted-foreground mb-8 flex-grow">
               Boost workplace resilience with dashboards and tools that cut absenteeism, increase productivity, and support employee well-being.
             </p>
-            <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            <button 
+              onClick={() => {
+                navigate('/who-we-serve#employers');
+                setTimeout(() => {
+                  const element = document.getElementById('employers');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 100);
+              }}
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            >
               Learn More
             </button>
           </div>

@@ -90,7 +90,7 @@ const WhoWeServe = () => {
           </div>
 
           {/* Subsection 3 - Tools for Employers & Teams */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div id="employers" className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20">
             {/* Left - Image */}
             <div className="relative">
               <img 
