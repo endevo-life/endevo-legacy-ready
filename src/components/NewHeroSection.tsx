@@ -44,7 +44,7 @@ const NewHeroSection = () => {
             href="https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
             style={{
               transitionDelay: isVisible ? '0.8s' : '0s'
             }}
@@ -55,14 +55,14 @@ const NewHeroSection = () => {
             href="https://digitallegacypodcast.com/" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
             style={{
               transitionDelay: isVisible ? '1s' : '0s'
             }}
           >
             Listen to the Digital Legacy Podcast
           </a>
-          <a href="#" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+          <a href="#" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-300 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
           transitionDelay: isVisible ? '1.2s' : '0s'
         }}>
             Start a Legacy Readiness Wellness Program
