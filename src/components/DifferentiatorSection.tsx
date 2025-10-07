@@ -13,27 +13,32 @@ const DifferentiatorSection = () => {
     {
       image: corporateHrEap,
       title: "Corporate HR EAP Focus",
-      alt: "Employee Assistance Program Integration"
+      alt: "Employee Assistance Program Integration",
+      description: "Unique focus on integrating Legacy Readiness and Digital Resilience planning into Employee Assistance Programs (EAPs) for businesses."
     },
     {
       image: aiGuidance,
       title: "Empathetic AI Guidance",
-      alt: "AI and Human Collaboration"
+      alt: "AI and Human Collaboration",
+      description: "Combining artificial intelligence with human empathy to provide compassionate guidance through sensitive end-of-life planning."
     },
     {
       image: comprehensiveOfferings,
       title: "Comprehensive Offerings",
-      alt: "Legal, Financial, Physical, and Digital Planning"
+      alt: "Legal, Financial, Physical, and Digital Planning",
+      description: "Complete coverage across legal, financial, physical, and digital aspects of legacy planning for holistic preparation."
     },
     {
       image: marketplaceIntegration,
       title: "Marketplace Integration",
-      alt: "Connected Service Marketplace"
+      alt: "Connected Service Marketplace",
+      description: "Seamless integration with trusted service providers through our curated marketplace ecosystem."
     },
     {
       image: educationalWorkshops,
       title: "Educational Workshops",
-      alt: "Professional Training and Workshops"
+      alt: "Professional Training and Workshops",
+      description: "Expert-led educational programs and workshops to empower individuals and organizations with knowledge and tools."
     }
   ];
 
@@ -56,15 +61,22 @@ const DifferentiatorSection = () => {
             {differentiators.map((item, index) => (
               <Card
                 key={index}
-                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full flex flex-col"
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full flex flex-col group relative"
               >
                 {/* Image Container */}
                 <div className="aspect-square w-full overflow-hidden bg-gradient-to-br from-teal-50 to-blue-50">
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-20"
                   />
+                </div>
+
+                {/* Hover Description Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/95">
+                  <p className="text-sm text-center text-foreground leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
 
                 {/* Title */}
