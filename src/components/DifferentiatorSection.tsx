@@ -26,7 +26,7 @@ const DifferentiatorSection = () => {
       image: comprehensiveOfferings,
       title: "Comprehensive Offerings",
       alt: "Legal, Financial, Physical, and Digital Planning",
-      description: "Complete coverage across legal, financial, physical, and digital aspects of legacy planning for holistic preparation."
+      description: "Combines legal, financial, physical and digital aspects into one unified platform."
     },
     {
       image: marketplaceIntegration,
