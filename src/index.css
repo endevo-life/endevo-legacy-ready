@@ -132,14 +132,21 @@
   /* Professional Typography */
   .heading-hero {
     @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    font-family: 'Times New Roman', serif;
     line-height: 1.1;
   }
   
   .heading-section {
     @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
+    font-family: 'Times New Roman', serif;
   }
   
   .text-lead {
     @apply text-lg md:text-xl leading-relaxed;
+  }
+  
+  /* Apply Times New Roman to all section headings */
+  h2, h3 {
+    font-family: 'Times New Roman', serif;
   }
 }
