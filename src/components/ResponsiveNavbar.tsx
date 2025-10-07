@@ -44,8 +44,10 @@ const ResponsiveNavbar = () => {
       href: "/company",
       submenu: [
         { name: "About ENDevo", href: "/company#about" },
-        { name: "Our Values", href: "/company#values" },
+        { name: "Niki Weiss", href: "/company#niki" },
+        { name: "Our Core Values", href: "/company#values" },
         { name: "Meet Our Team", href: "/company#team" },
+        { name: "Our Partners", href: "/company#partners" },
       ]
     }
   ];
