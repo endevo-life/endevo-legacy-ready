@@ -32,7 +32,7 @@ const DifferentiatorSection = () => {
       image: marketplaceIntegration,
       title: "Marketplace Integration",
       alt: "Connected Service Marketplace",
-      description: "Seamless integration with trusted service providers through our curated marketplace ecosystem."
+      description: "Direct access to service providers, offering seamless connections for diverse end-of-life needs."
     },
     {
       image: educationalWorkshops,
