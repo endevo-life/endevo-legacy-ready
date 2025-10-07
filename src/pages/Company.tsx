@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import NikiWeissSection from "@/components/NikiWeissSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
+import MeetOurTeamSection from "@/components/MeetOurTeamSection";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import companyHeroBg from "@/assets/company-hero-bg.jpg";
 import aboutEndevo from "@/assets/about-endevo.jpg";
@@ -11,13 +11,6 @@ import clarityGuidance from "@/assets/clarity-guidance.jpg";
 import compassionTrust from "@/assets/compassion-trust.jpg";
 import resilienceContinuity from "@/assets/resilience-continuity.jpg";
 import companyHeroFamily from "@/assets/company-hero-family.png";
-
-// Import team portraits
-import nikiPortrait from "@/assets/niki-portrait.png";
-import aaronPortrait from "@/assets/aaron-portrait.png";
-import mercedesPortrait from "@/assets/mercedes-portrait.png";
-import tyPortrait from "@/assets/ty-portrait.png";
-import deepPortrait from "@/assets/deep-portrait.png";
 
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo.png";
@@ -44,37 +37,6 @@ const Company = () => {
     elementRef: oldValuesRef,
     isVisible: oldValuesVisible
   } = useScrollAnimation();
-  const {
-    elementRef: teamRef,
-    isVisible: teamVisible
-  } = useScrollAnimation();
-  const [hoveredTeamMember, setHoveredTeamMember] = useState<number | null>(null);
-  const teamMembers = [{
-    name: "Niki Weiss, PMP, PMI-RMP",
-    title: "Digital Thanatologist",
-    organization: "Founder / CEO",
-    image: nikiPortrait
-  }, {
-    name: "Aaron Swam",
-    title: "AI Enablement and Strategist",
-    organization: "Choice Appointments",
-    image: aaronPortrait
-  }, {
-    name: "Mercedes Sullivan",
-    title: "VP, HR Storefront, PMO",
-    organization: "TIAA",
-    image: mercedesPortrait
-  }, {
-    name: "Ty Hagler",
-    title: "Design Engineer",
-    organization: "Principal, Trig",
-    image: tyPortrait
-  }, {
-    name: "Deep Parmar",
-    title: "Fractional CFO",
-    organization: "Founders Institute Mentor",
-    image: deepPortrait
-  }];
   return <div className="min-h-screen bg-background">
       <ResponsiveNavbar />
       
@@ -137,33 +99,7 @@ const Company = () => {
       <CoreValuesSection />
 
       {/* Meet Our Team Section */}
-      <section id="team" className="py-20 bg-gradient-to-b from-background to-primary/5">
-        <div className="container max-w-7xl mx-auto px-4">
-          <div ref={teamRef as any} className={`transition-all duration-1000 ${teamVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-foreground">
-              Meet Our Team
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-              {teamMembers.map((member, index) => <div key={index} className="bg-card rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative mb-6">
-                    <img src={member.image} alt={member.name} className="w-32 h-32 object-cover rounded-full mx-auto border-4 border-primary/10" />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-foreground leading-tight">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm font-medium text-primary italic">
-                      {member.title}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      {member.organization}
-                    </p>
-                  </div>
-                </div>)}
-            </div>
-          </div>
-        </div>
-      </section>
+      <MeetOurTeamSection />
 
       {/* Our Partners Section */}
       <section id="partners" className="py-20 bg-background">
