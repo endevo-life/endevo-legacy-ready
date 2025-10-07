@@ -38,7 +38,7 @@ const DifferentiatorSection = () => {
       image: educationalWorkshops,
       title: "Educational Workshops",
       alt: "Professional Training and Workshops",
-      description: "Expert-led educational programs and workshops to empower individuals and organizations with knowledge and tools."
+      description: "Blends technology with human-centric education to demystify planning processes for employees and their families."
     }
   ];
 
