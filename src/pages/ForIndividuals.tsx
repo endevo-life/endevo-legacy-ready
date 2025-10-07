@@ -59,8 +59,8 @@ const ForIndividuals = () => {
 
           {/* Four Column Cards */}
           <div ref={elementRef as any} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <Card className={`bg-gray-100 shadow-md transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-20 scale-95'
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
@@ -69,8 +69,8 @@ const ForIndividuals = () => {
               </CardContent>
             </Card>
 
-            <Card className={`bg-gray-100 shadow-md transition-all duration-700 delay-150 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 ease-out delay-150 ${
+              isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-20 scale-95'
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
@@ -79,8 +79,8 @@ const ForIndividuals = () => {
               </CardContent>
             </Card>
 
-            <Card className={`bg-gray-100 shadow-md transition-all duration-700 delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 ease-out delay-300 ${
+              isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-20 scale-95'
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
@@ -89,8 +89,8 @@ const ForIndividuals = () => {
               </CardContent>
             </Card>
 
-            <Card className={`bg-gray-100 shadow-md transition-all duration-700 delay-[450ms] ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            <Card className={`bg-gray-100 shadow-md transition-all duration-700 ease-out delay-[450ms] ${
+              isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-20 scale-95'
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
