@@ -25,7 +25,12 @@ const VisionValuesSection = () => {
       }}>
           <Button 
             size="lg" 
-            className="bg-[#fe5d01] hover:bg-[#e54d01] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out"
+            style={{
+              backgroundColor: '#FF4D00'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
             onClick={() => window.location.href = '/company'}
           >
             Read More About Us
