@@ -24,7 +24,7 @@ const VideoSection = () => {
         {/* Feature Boxes */}
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-card rounded-xl shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-brand-orange mb-4">AI Tools</h3>
+            <h3 className="text-xl font-bold text-brand-orange mb-4" style={{ fontFamily: 'Times New Roman, serif' }}>AI Tools</h3>
             <p className="text-muted-foreground">Legacy Planning Tools</p>
           </div>
           
