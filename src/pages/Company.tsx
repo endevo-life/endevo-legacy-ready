@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import NikiWeissSection from "@/components/NikiWeissSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
 import MeetOurTeamSection from "@/components/MeetOurTeamSection";
+import ConsultationSection from "@/components/ConsultationSection";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import companyHeroBg from "@/assets/company-hero-bg.jpg";
 import aboutEndevo from "@/assets/about-endevo.jpg";
@@ -137,6 +138,10 @@ const Company = () => {
           </div>
         </div>
       </section>
+
+      {/* Let's Start Your Legacy Journey Section */}
+      <ConsultationSection />
+
       <Footer />
     </div>;
 };
