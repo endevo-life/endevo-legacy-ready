@@ -14,7 +14,7 @@ const HiddenCostSection = () => {
     >
       <div className="container mx-auto px-4">
         {/* Centered Heading */}
-        <h2 className="heading-section text-center mb-12">
+        <h2 className="heading-section text-center mb-12" style={{ fontFamily: 'Times New Roman, serif' }}>
           The Hidden Cost of Being Unprepared
         </h2>
 
