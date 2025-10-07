@@ -39,12 +39,7 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out"
-              style={{
-                backgroundColor: '#FF4D00'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             >
               Learn More
             </button>
@@ -69,12 +64,7 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out"
-              style={{
-                backgroundColor: '#FF4D00'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             >
               Learn More
             </button>
@@ -99,12 +89,7 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out"
-              style={{
-                backgroundColor: '#FF4D00'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             >
               Learn More
             </button>

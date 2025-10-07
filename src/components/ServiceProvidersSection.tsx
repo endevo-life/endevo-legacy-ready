@@ -95,14 +95,7 @@ const ServiceProvidersSection = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button 
-            className="text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out"
-            style={{
-              backgroundColor: '#FF4D00'
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
-          >
+          <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
             Get Connected Now
           </Button>
         </div>

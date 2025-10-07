@@ -84,12 +84,7 @@ const HiddenCostSection = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             size="lg"
-            className="text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out"
-            style={{
-              backgroundColor: '#FF4D00'
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
+            className="bg-brand-orange hover:bg-brand-orange-hover text-white font-bold px-8 py-6 rounded-full text-lg transition-all duration-150 ease-out hover:scale-105"
           >
             Learn How We Solve It
           </Button>

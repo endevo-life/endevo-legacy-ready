@@ -15,7 +15,7 @@ const buttonVariants = cva(
         secondary: "bg-brand-teal text-white hover:bg-brand-teal-dark transition-all duration-300",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        cta: "text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out",
+        cta: "bg-brand-orange text-white hover:bg-brand-orange-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-full",
       },
       size: {
         default: "h-10 px-4 py-2",
