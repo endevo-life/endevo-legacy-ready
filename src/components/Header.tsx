@@ -17,7 +17,7 @@ const Header = () => {
     { name: "Who We Serve", href: "/who-we-serve" },
     { name: "Resources", href: "/resources" },
     { name: "Plan", href: "/plan" },
-    { name: "Company", href: "/company" },
+    { name: "About Us", href: "/company" },
   ];
 
   return (
@@ -277,7 +277,7 @@ const Header = () => {
             <NavigationMenuItem>
               <Link to="/company">
                 <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300">
-                  Company
+                  About Us
                 </NavigationMenuTrigger>
               </Link>
               <NavigationMenuContent>

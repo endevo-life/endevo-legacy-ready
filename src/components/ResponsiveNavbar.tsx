@@ -40,7 +40,7 @@ const ResponsiveNavbar = () => {
       submenu: []
     },
     {
-      name: "Company",
+      name: "About Us",
       href: "/company",
       submenu: [
         { name: "About ENDevo", href: "/company#about" },
