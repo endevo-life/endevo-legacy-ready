@@ -13,7 +13,8 @@ const MeetOurTeamSection = () => {
       name: "Niki Weiss, PMP, PMI-RMP",
       title: "Digital Thanatologist",
       organization: "Founder / CEO",
-      image: nikiPortrait
+      image: nikiPortrait,
+      linkedIn: "https://www.linkedin.com/in/nikiweiss/"
     },
     {
       name: "Aaron Swam",
@@ -61,37 +62,45 @@ const MeetOurTeamSection = () => {
 
           {/* Team Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-stretch">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index} 
-                className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center group hover:-translate-y-2 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {/* Portrait Image */}
-                <div className="mb-4 w-full">
-                  <img 
-                    src={member.image} 
-                    alt={`${member.name} - ${member.title}`}
-                    className="w-full aspect-square object-cover rounded-xl shadow-sm"
-                  />
-                </div>
+            {teamMembers.map((member, index) => {
+              const CardWrapper = member.linkedIn ? 'a' : 'div';
+              const cardProps = member.linkedIn 
+                ? { href: member.linkedIn, target: "_blank", rel: "noopener noreferrer" }
+                : {};
+              
+              return (
+                <CardWrapper
+                  key={index}
+                  {...cardProps}
+                  className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center group hover:-translate-y-2 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  } ${member.linkedIn ? 'cursor-pointer' : ''}`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  {/* Portrait Image */}
+                  <div className="mb-4 w-full">
+                    <img 
+                      src={member.image} 
+                      alt={`${member.name} - ${member.title}`}
+                      className="w-full aspect-square object-cover rounded-xl shadow-sm"
+                    />
+                  </div>
 
-                {/* Text Content */}
-                <div className="space-y-2 flex-grow flex flex-col justify-start">
-                  <h3 className="text-base font-bold text-gray-900 leading-tight">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-gray-700 italic leading-snug">
-                    {member.title}
-                  </p>
-                  <p className="text-xs text-gray-600 leading-snug">
-                    {member.organization}
-                  </p>
-                </div>
-              </div>
-            ))}
+                  {/* Text Content */}
+                  <div className="space-y-2 flex-grow flex flex-col justify-start">
+                    <h3 className="text-base font-bold text-gray-900 leading-tight">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm text-gray-700 italic leading-snug">
+                      {member.title}
+                    </p>
+                    <p className="text-xs text-gray-600 leading-snug">
+                      {member.organization}
+                    </p>
+                  </div>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </div>
