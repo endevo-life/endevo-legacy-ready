@@ -59,11 +59,11 @@ const DifferentiatorSection = () => {
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full flex flex-col"
               >
                 {/* Image Container */}
-                <div className="aspect-square w-full overflow-hidden bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center">
+                <div className="aspect-square w-full overflow-hidden bg-gradient-to-br from-teal-50 to-blue-50">
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
