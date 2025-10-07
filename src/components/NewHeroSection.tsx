@@ -44,7 +44,7 @@ const NewHeroSection = () => {
             href="https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-150 ease-out hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-0 ease-out hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{
               transitionDelay: isVisible ? '0.8s' : '0s'
             }}
