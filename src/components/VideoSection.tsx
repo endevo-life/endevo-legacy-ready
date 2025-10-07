@@ -15,7 +15,7 @@ const VideoSection = () => {
         {/* Demo Video Area */}
         <div className="relative bg-card rounded-2xl shadow-lg mb-12 overflow-hidden">
           <div className="aspect-video">
-            <video src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/68cc14fa55e7995370b04348.mp4" controls className="w-full h-full object-cover" poster="">
+            <video src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/68e53ec071a176600afb0fd2.mp4" controls className="w-full h-full object-cover" poster="">
               Your browser does not support the video tag.
             </video>
           </div>
