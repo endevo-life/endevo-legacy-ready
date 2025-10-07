@@ -20,7 +20,7 @@ const DifferentiatorSection = () => {
       image: aiGuidance,
       title: "Empathetic AI Guidance",
       alt: "AI and Human Collaboration",
-      description: "Combining artificial intelligence with human empathy to provide compassionate guidance through sensitive end-of-life planning."
+      description: "Uses AI not just for technical tasks but for compassionate and personalized guidance."
     },
     {
       image: comprehensiveOfferings,
