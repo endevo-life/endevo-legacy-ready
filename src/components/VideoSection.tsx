@@ -34,7 +34,7 @@ const VideoSection = () => {
           </div>
           
           <div className="bg-card rounded-xl shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-brand-orange mb-4">Human-Centered</h3>
+            <h3 className="text-xl font-bold text-brand-orange mb-4" style={{ fontFamily: 'Times New Roman, serif' }}>Human-Centered</h3>
             <p className="text-muted-foreground">Guidance & Support</p>
           </div>
         </div>
