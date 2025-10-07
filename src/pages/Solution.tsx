@@ -251,7 +251,7 @@ const Solution = () => {
       {/* Our Edge: Where AI Meets Empathy Section */}
       <section id="for-companies" className="py-20 bg-background scroll-mt-20">
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl text-foreground">
