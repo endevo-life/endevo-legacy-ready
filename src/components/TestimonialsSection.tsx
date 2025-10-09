@@ -39,10 +39,10 @@ const TestimonialsSection = () => {
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-brand-orange/20 flex items-center justify-center mr-3 hover-scale transition-transform duration-300">
-                  <span className="text-primary font-semibold text-lg">MS</span>
+                  <span className="text-primary font-semibold text-lg">P</span>
                 </div>
                 <div className="flex-1">
-                  <p className="font-semibold text-foreground">Mike Smith</p>
+                  <p className="font-semibold text-foreground">Patty</p>
                   <p className="text-sm text-muted-foreground">Client</p>
                 </div>
                 <div className="flex">
@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "The compassionate care and guidance we received during our most difficult time was invaluable. The team made everything so much easier to navigate."
+                "The final playbook has helped guide me through a difficult and challenging subject that is unfortunately avoided by most. The tools that the playbook offers help you delve deeper into personal beliefs and desires in a clear and easy to use layout. The process gives peace of mind in a respectful, comfortable, and easy-to-use format. This is a crucial subject that brings peace of mind to you and those you leave behind."
               </p>
             </CardContent>
           </Card>
