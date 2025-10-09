@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Youtube, Linkedin, Instagram, Music2, Facebook, Send } from "lucide-react";
-import endevoLogo from "@/assets/endevo-logo-footer.png";
+import endevoLogo from "@/assets/endevo-logo-footer-new.png";
 import podcastLogo from "@/assets/death-dying-footer.png";
 
 const Footer = () => {
