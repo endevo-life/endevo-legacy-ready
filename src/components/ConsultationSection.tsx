@@ -102,20 +102,14 @@ const ConsultationSection = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">📞 Phone</h4>
-                  <p className="text-muted-foreground">(555) 123-4567</p>
+                  <p className="text-muted-foreground">484-545-4327</p>
                   <p className="text-sm text-muted-foreground">Monday–Friday, 9AM–6PM</p>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">✉️ Email</h4>
-                  <p className="text-muted-foreground">info@endevo.com</p>
+                  <p className="text-muted-foreground">hello@endevo.life</p>
                   <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">📍 Address</h4>
-                  <p className="text-muted-foreground">123 Main Street, Suite 400</p>
-                  <p className="text-muted-foreground">Financial District, NY 10001</p>
                 </div>
                 
                 <div>
