@@ -61,11 +61,11 @@ const DifferentiatorSection = () => {
           </h2>
 
           {/* Cards Grid - Desktop */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {differentiators.map((item, index) => (
               <Card
                 key={index}
-                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full flex flex-col group relative"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full flex flex-col group relative"
               >
                 {/* Image Container */}
                 <div className="aspect-square w-full overflow-hidden bg-gradient-to-br from-teal-50 to-blue-50">
@@ -77,15 +77,15 @@ const DifferentiatorSection = () => {
                 </div>
 
                 {/* Hover Description Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/95">
-                  <p className="text-sm text-center text-foreground leading-relaxed">
+                <div className="absolute inset-0 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/95">
+                  <p className="text-xs text-center text-foreground leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Title */}
-                <div className="p-6 flex items-center justify-center flex-1">
-                  <h3 className="text-lg font-bold text-center text-foreground leading-tight">
+                <div className="p-4 flex items-center justify-center flex-1">
+                  <h3 className="text-sm font-bold text-center text-foreground leading-tight">
                     {item.title}
                   </h3>
                 </div>
