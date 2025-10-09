@@ -77,15 +77,15 @@ const MeetOurTeamSection = () => {
                   : {};
                 
                 return (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/4">
+                  <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                     <CardWrapper
                       {...cardProps}
-                      className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col items-center text-center group hover:-translate-y-2 h-full ${
+                      className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4 sm:p-6 flex flex-col items-center text-center group hover:-translate-y-2 h-full ${
                         member.linkedIn ? 'cursor-pointer' : ''
                       }`}
                     >
                       {/* Portrait Image */}
-                      <div className="mb-4 w-full">
+                      <div className="mb-3 sm:mb-4 w-full max-w-[200px] sm:max-w-none">
                         <img 
                           src={member.image} 
                           alt={`${member.name} - ${member.title}`}
@@ -94,11 +94,11 @@ const MeetOurTeamSection = () => {
                       </div>
 
                       {/* Text Content */}
-                      <div className="space-y-2 flex-grow flex flex-col justify-start">
-                        <h3 className="text-base font-bold text-gray-900 leading-tight">
+                      <div className="space-y-1 sm:space-y-2 flex-grow flex flex-col justify-start">
+                        <h3 className="text-sm sm:text-base font-bold text-gray-900 leading-tight">
                           {member.name}
                         </h3>
-                        <p className="text-sm text-gray-700 italic leading-snug">
+                        <p className="text-xs sm:text-sm text-gray-700 italic leading-snug">
                           {member.title}
                         </p>
                         <p className="text-xs text-gray-600 leading-snug">
