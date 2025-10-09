@@ -14,7 +14,7 @@ import digitalLegacy from "@/assets/digital-legacy.jpg";
 import workshopsAssessments from "@/assets/workshops-assessments.jpg";
 import peaceMindAssessment from "@/assets/peace-mind-assessment.jpg";
 import empowering from "@/assets/empowering.png";
-import framework from "@/assets/framework.png";
+import framework from "@/assets/4-domains.png";
 import hrEapIcon from "@/assets/hr-eap-programs.png";
 import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 
