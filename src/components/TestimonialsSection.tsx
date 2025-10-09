@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
           <h2 className="heading-section text-primary">What Our Families Say</h2>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Card 1 - With profile */}
           <Card className="p-6 shadow-lg hover-scale transition-transform duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <CardContent className="p-0">
@@ -76,6 +76,29 @@ const TestimonialsSection = () => {
               </div>
               <p className="text-muted-foreground italic">
                 "Niki coached my husband and me by asking questions about how we want two very important future events handled - our estate and our own care when we are unable to care for ourselves fully. This helped us develop a comprehensive plan partly with our attorney and partly on our own. Now, with the proper documentation in place, our adult children will have an easier time when having to take actions during the emotional times of our disability or loss. Thanks, Niki!"
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Card 4 */}
+          <Card className="p-6 shadow-lg hover-scale transition-transform duration-300 animate-fade-in" style={{ animationDelay: '1.0s' }}>
+            <CardContent className="p-0">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-brand-orange/20 flex items-center justify-center mr-3 hover-scale transition-transform duration-300">
+                  <span className="text-primary font-semibold text-lg">KM</span>
+                </div>
+                <div className="flex-1">
+                  <p className="font-semibold text-foreground">Kristen M.</p>
+                  <p className="text-sm text-muted-foreground">Client</p>
+                </div>
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400 hover-scale transition-transform duration-300" style={{ animationDelay: `${1.2 + i * 0.1}s` }} />
+                  ))}
+                </div>
+              </div>
+              <p className="text-muted-foreground italic">
+                "Niki Weiss is a true professional who brings both compassion and expertise to a difficult process. She helped me start the process of organizing all the necessary documents for end-of-life planning, and her guidance made everything much less overwhelming. I feel so much more at ease knowing that everything will be in order. I highly recommend Niki to anyone needing support in end-of-life planning."
               </p>
             </CardContent>
           </Card>
