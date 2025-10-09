@@ -110,8 +110,8 @@ const MeetOurTeamSection = () => {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="hover-scale" />
-            <CarouselNext className="hover-scale" />
+            <CarouselPrevious className="hover-scale -left-12 bg-brand-orange text-white hover:bg-brand-orange/90" />
+            <CarouselNext className="hover-scale -right-12 bg-brand-orange text-white hover:bg-brand-orange/90" />
           </Carousel>
         </div>
       </div>
