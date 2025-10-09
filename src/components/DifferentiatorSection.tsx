@@ -60,8 +60,8 @@ const DifferentiatorSection = () => {
             ENDevo's Differentiator
           </h2>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          {/* Cards Grid - Desktop */}
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {differentiators.map((item, index) => (
               <Card
                 key={index}
@@ -91,6 +91,23 @@ const DifferentiatorSection = () => {
                 </div>
               </Card>
             ))}
+          </div>
+
+          {/* Bullet List - Mobile */}
+          <div className="md:hidden bg-white rounded-xl shadow-md p-6">
+            <ul className="space-y-6">
+              {differentiators.map((item, index) => (
+                <li key={index} className="flex gap-4">
+                  <span className="text-brand-orange font-bold text-xl flex-shrink-0">•</span>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
