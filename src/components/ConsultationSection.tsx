@@ -18,13 +18,13 @@ const ConsultationSection = () => {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 mb-16 items-stretch">
           {/* Left Column - Consultation Form */}
-          <div className={`bg-card rounded-xl shadow-lg p-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
+          <div className={`bg-card rounded-xl shadow-lg p-8 flex flex-col transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
             <h3 className="text-2xl font-bold text-foreground mb-4">Schedule Your Consultation</h3>
             <p className="text-muted-foreground mb-6">Fill out the form below and we&apos;ll be in touch within 24 hours.</p>
             
-            <form className="space-y-6">
+            <form className="space-y-6 flex-1 flex flex-col">
               <div>
                 <label htmlFor="fullName" className="block text-sm font-medium text-foreground mb-2">
                   Full Name
@@ -64,7 +64,7 @@ const ConsultationSection = () => {
                 />
               </div>
               
-              <div>
+              <div className="flex-1">
                 <label htmlFor="needs" className="block text-sm font-medium text-foreground mb-2">
                   Tell us about your needs
                 </label>
@@ -72,7 +72,7 @@ const ConsultationSection = () => {
                   id="needs"
                   name="needs"
                   rows={4}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors resize-vertical"
+                  className="w-full h-full min-h-[120px] px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors resize-vertical"
                   placeholder="Briefly describe your legacy planning goals and any specific concerns…"
                 />
               </div>
