@@ -62,8 +62,8 @@ const Company = () => {
               </p>
             </div>
 
-            {/* Right Column - Image */}
-            <div className="relative">
+            {/* Right Column - Image (Hidden on mobile) */}
+            <div className="relative hidden md:block">
               <div className="relative bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl">
                 <img src={companyHeroFamily} alt="Happy family representing legacy and continuity" className="w-full h-auto rounded-xl shadow-lg object-cover" />
               </div>
@@ -84,7 +84,7 @@ const Company = () => {
                 Founded to bring clarity and compassion to one of life's hardest conversations, ENDevo blends AI intelligence with human guidance to make legacy readiness and digital resilience accessible, scalable, and impactful.
               </p>
             </div>
-            <div className="relative">
+            <div className="relative hidden md:block">
               <img src={aboutEndevo} alt="About ENDevo - Team collaboration" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
           </div>
