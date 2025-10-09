@@ -17,7 +17,7 @@ const LearnListenFooter = () => {
   ];
 
   return (
-    <footer className="bg-primary text-primary-foreground py-12 animate-fade-in">
+    <footer className="bg-[#08123A] text-white py-12 animate-fade-in">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-4 gap-8 items-start">
           {/* Logo Section */}

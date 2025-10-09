@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#2C8B8B] text-white py-8">
+    <footer className="bg-[#08123A] text-white py-8">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Left Column - Logo & Social */}
@@ -99,7 +99,7 @@ const Footer = () => {
                 className="bg-white text-gray-900 border-white rounded-full"
               />
               <Button 
-                className="w-full bg-white text-[#2C8B8B] hover:bg-white/90 rounded-full font-semibold"
+                className="w-full bg-white text-[#08123A] hover:bg-white/90 rounded-full font-semibold"
               >
                 <Send className="w-4 h-4 mr-2" />
                 Subscribe
