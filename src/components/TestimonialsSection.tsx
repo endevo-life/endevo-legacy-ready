@@ -16,10 +16,10 @@ const TestimonialsSection = () => {
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-brand-orange/20 flex items-center justify-center mr-3 hover-scale transition-transform duration-300">
-                  <span className="text-primary font-semibold text-lg">JD</span>
+                  <span className="text-primary font-semibold text-lg">B</span>
                 </div>
                 <div className="flex-1">
-                  <p className="font-semibold text-foreground">Jane Doe</p>
+                  <p className="font-semibold text-foreground">Beth</p>
                   <p className="text-sm text-muted-foreground">Client</p>
                 </div>
                 <div className="flex">
@@ -29,7 +29,7 @@ const TestimonialsSection = () => {
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "The compassionate care and guidance we received during our most difficult time was invaluable. The team made everything so much easier to navigate."
+                "During my stage four cancer journey, I journaled extensively, which was helpful for me. However, I did not want my family to read the words I wrote after I was gone. I needed to spare them the pain of reading my raw emotions. I am forever grateful to Niki for supporting me in making this final decision and helping me plan for this meaningful exercise of letting go."
               </p>
             </CardContent>
           </Card>
