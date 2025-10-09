@@ -68,7 +68,7 @@ const ResponsiveNavbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
@@ -102,7 +102,7 @@ const ResponsiveNavbar = () => {
           </div>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Link
               to="/contact"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium"
@@ -112,7 +112,7 @@ const ResponsiveNavbar = () => {
           </div>
 
           {/* Mobile hamburger menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-accent transition-colors duration-300"
@@ -128,7 +128,7 @@ const ResponsiveNavbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="py-4 space-y-4">
