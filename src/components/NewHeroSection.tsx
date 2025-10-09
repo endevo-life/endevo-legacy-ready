@@ -65,7 +65,7 @@ const NewHeroSection = () => {
           <a href="#" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-150 ease-out hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
           transitionDelay: isVisible ? '1.2s' : '0s'
         }}>
-            Start a Legacy Readiness Wellness Program
+            Start a Legacy Readiness Employee Wellness Program
           </a>
         </div>
       </div>
