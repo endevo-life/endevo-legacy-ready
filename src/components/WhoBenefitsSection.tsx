@@ -39,7 +39,10 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+              }}
             >
               Learn More
             </button>
@@ -64,7 +67,10 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+              }}
             >
               Learn More
             </button>
@@ -89,7 +95,10 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+              }}
             >
               Learn More
             </button>
