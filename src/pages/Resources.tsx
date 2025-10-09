@@ -32,25 +32,26 @@ const Resources = () => {
             </p>
             
             <div className="flex flex-col md:flex-row gap-6">
-              <Button 
-                variant="cta" 
-                size="lg" 
-                className="flex items-center gap-2"
+              <button 
+                className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}
               >
                 🎙️ Learn from Experts
-              </Button>
-              <Button 
-                variant="cta" 
-                size="lg" 
-                className="flex items-center gap-2"
+              </button>
+              <button 
+                className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US', '_blank')}
               >
                 📱 Plan with Our App
-              </Button>
-              <Button variant="cta" size="lg" className="flex items-center gap-2">
+              </button>
+              <button 
+                className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+              >
                 📘 Explore Practical Guides
-              </Button>
+              </button>
             </div>
           </div>
         </div>
@@ -73,14 +74,13 @@ const Resources = () => {
               <p className="text-lg text-white/90 mb-8">
                 Life is unpredictable, but your loved ones don't have to face uncertainty alone. With ENDevo, you can organize plans, protect your digital and financial legacy, and give your family the confidence of knowing exactly what to do no matter what tomorrow brings.
               </p>
-              <Button 
-                variant="cta" 
-                size="lg" 
-                className="mb-4"
+              <button 
+                className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}
               >
                 Learn and Listen
-              </Button>
+              </button>
               <p className="text-sm text-white/70">
                 Explore blogs, podcasts, and videos where our founder shares insights, stories, and guidance to help you prepare with confidence.
               </p>
@@ -121,13 +121,13 @@ const Resources = () => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <Button 
-              variant="cta" 
-              size="lg"
+            <button 
+              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share', '_blank')}
             >
               Get the App
-            </Button>
+            </button>
           </div>
         </div>
       </section>
