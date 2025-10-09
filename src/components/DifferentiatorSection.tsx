@@ -61,7 +61,7 @@ const DifferentiatorSection = () => {
           </h2>
 
           {/* Cards Grid - Desktop */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+          <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {differentiators.map((item, index) => (
               <Card
                 key={index}
@@ -94,7 +94,7 @@ const DifferentiatorSection = () => {
           </div>
 
           {/* Bullet List - Mobile */}
-          <div className="md:hidden bg-white rounded-xl shadow-md p-6">
+          <div className="lg:hidden bg-white rounded-xl shadow-md p-6">
             <ul className="space-y-6">
               {differentiators.map((item, index) => (
                 <li key={index} className="flex gap-4">
