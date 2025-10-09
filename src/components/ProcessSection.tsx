@@ -78,9 +78,14 @@ const ProcessSection = () => {
         <div className={`text-center mt-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
         transitionDelay: isVisible ? '0.8s' : '0s'
       }}>
-          <Button variant="cta" size="lg" className="text-lg px-10 py-6 h-auto">
+          <button 
+            className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-4 rounded-xl shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+            style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+            }}
+          >
             Start Your Readiness Journey
-          </Button>
+          </button>
         </div>
       </div>
     </section>;
