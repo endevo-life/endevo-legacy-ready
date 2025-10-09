@@ -62,10 +62,10 @@ const TestimonialsSection = () => {
             <CardContent className="p-0">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-brand-orange/20 flex items-center justify-center mr-3 hover-scale transition-transform duration-300">
-                  <span className="text-primary font-semibold text-lg">RJ</span>
+                  <span className="text-primary font-semibold text-lg">S</span>
                 </div>
                 <div className="flex-1">
-                  <p className="font-semibold text-foreground">Robert Johnson</p>
+                  <p className="font-semibold text-foreground">Stacy</p>
                   <p className="text-sm text-muted-foreground">Client</p>
                 </div>
                 <div className="flex">
@@ -75,7 +75,7 @@ const TestimonialsSection = () => {
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "The compassionate care and guidance we received during our most difficult time was invaluable. The team made everything so much easier to navigate."
+                "Niki coached my husband and me by asking questions about how we want two very important future events handled - our estate and our own care when we are unable to care for ourselves fully. This helped us develop a comprehensive plan partly with our attorney and partly on our own. Now, with the proper documentation in place, our adult children will have an easier time when having to take actions during the emotional times of our disability or loss. Thanks, Niki!"
               </p>
             </CardContent>
           </Card>
