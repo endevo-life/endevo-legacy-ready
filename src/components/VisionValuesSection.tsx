@@ -24,8 +24,7 @@ const VisionValuesSection = () => {
         transitionDelay: '400ms'
       }}>
           <Button 
-            size="lg" 
-            className="bg-[#fe5d01] hover:bg-[#e54d01] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-[#fe5d01] hover:bg-[#e54d01] text-white px-6 py-1.5 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             onClick={() => window.location.href = '/company'}
           >
             Read More About Us

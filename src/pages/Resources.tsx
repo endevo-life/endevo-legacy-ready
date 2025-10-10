@@ -75,7 +75,7 @@ const Resources = () => {
                 Life is unpredictable, but your loved ones don't have to face uncertainty alone. With ENDevo, you can organize plans, protect your digital and financial legacy, and give your family the confidence of knowing exactly what to do no matter what tomorrow brings.
               </p>
               <button 
-                className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4"
+                className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4"
                 style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}
               >
@@ -122,7 +122,7 @@ const Resources = () => {
           </div>
           <div className="text-center mt-12">
             <button 
-              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
               style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share', '_blank')}
             >

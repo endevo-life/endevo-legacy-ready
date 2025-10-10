@@ -18,10 +18,10 @@ const buttonVariants = cva(
         cta: "bg-brand-orange text-white hover:bg-brand-orange-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-full",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        default: "h-9 px-6 py-1.5",
+        sm: "h-8 rounded-md px-4",
+        lg: "h-10 rounded-md px-8",
+        icon: "h-9 w-9",
       },
     },
     defaultVariants: {

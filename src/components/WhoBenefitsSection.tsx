@@ -39,7 +39,7 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
               style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
               }}
@@ -67,7 +67,7 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
               style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
               }}
@@ -95,7 +95,7 @@ const WhoBenefitsSection = () => {
                   }
                 }, 100);
               }}
-              className="bg-[#FF5A00] text-white font-bold text-lg px-12 py-3 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+              className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
               style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
               }}

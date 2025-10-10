@@ -95,7 +95,7 @@ const ServiceProvidersSection = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
+          <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full">
             Get Connected Now
           </Button>
         </div>
