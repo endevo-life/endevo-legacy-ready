@@ -83,6 +83,7 @@ const ProcessSection = () => {
             style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }}
+            onClick={() => window.location.href = '/plan'}
           >
             Start Your Readiness Journey
           </button>
