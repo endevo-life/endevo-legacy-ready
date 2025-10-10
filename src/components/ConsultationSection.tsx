@@ -81,7 +81,7 @@ const ConsultationSection = () => {
                 type="submit"
                 className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 hover-scale"
               >
-                Schedule My Consultation
+                Send Message
               </button>
             </form>
           </div>
