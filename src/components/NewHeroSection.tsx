@@ -13,9 +13,8 @@ const NewHeroSection = () => {
       
       {/* Content */}
       <div ref={elementRef as any} className="relative z-10 container max-w-5xl mx-auto px-4 text-center text-white">
-        <h1 className={`font-bold mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+        <h1 className={`font-bold mb-8 transition-all duration-1000 ease-out text-4xl md:text-6xl lg:text-7xl xl:text-8xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
         fontFamily: 'serif',
-        fontSize: '96px',
         transitionDelay: isVisible ? '0.2s' : '0s'
       }}>
           Are you ready for what comes next?
