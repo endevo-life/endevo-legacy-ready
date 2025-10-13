@@ -193,17 +193,25 @@ const Solution = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <HoverCard>
               <HoverCardTrigger asChild>
-                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer">
-                  <CardHeader className="p-0 overflow-hidden">
-                    <img 
-                      src={hrEapPrograms} 
-                      alt="HR/EAP Programs" 
-                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <CardTitle className="mb-3">HR/EAP Programs</CardTitle>
-                    <p className="text-muted-foreground">Reduce risk while improving workplace well-being.</p>
+                <Card className="animate-fade-in transition-shadow duration-300 hover:shadow-xl overflow-hidden group cursor-pointer relative">
+                  <CardContent className="p-0">
+                    <div className="overflow-hidden">
+                      <img 
+                        src={hrEapPrograms} 
+                        alt="HR/EAP Programs" 
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <CardTitle className="mb-3">HR/EAP Programs</CardTitle>
+                      <p className="text-muted-foreground">Reduce risk while improving workplace well-being.</p>
+                    </div>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-center text-base leading-relaxed">
+                        Our HR and Employee Assistance Programs (EAP) are designed to reduce organizational risk while enhancing overall workplace well-being. By providing employees with confidential support, counseling, and wellness resources, these programs help address stress, burnout, and personal challenges before they impact performance. The result is a healthier, more resilient workforce and a stronger, more productive workplace culture.
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
               </HoverCardTrigger>
@@ -216,17 +224,25 @@ const Solution = () => {
 
             <HoverCard>
               <HoverCardTrigger asChild>
-                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer" style={{ animationDelay: '0.2s' }}>
-                  <CardHeader className="p-0 overflow-hidden">
-                    <img 
-                      src={digitalLegacy} 
-                      alt="Digital Legacy Protection" 
-                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <CardTitle className="mb-3">Digital Legacy Protection</CardTitle>
-                    <p className="text-muted-foreground">Safeguard critical online access points</p>
+                <Card className="animate-fade-in transition-shadow duration-300 hover:shadow-xl overflow-hidden group cursor-pointer relative" style={{ animationDelay: '0.2s' }}>
+                  <CardContent className="p-0">
+                    <div className="overflow-hidden">
+                      <img 
+                        src={digitalLegacy} 
+                        alt="Digital Legacy Protection" 
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <CardTitle className="mb-3">Digital Legacy Protection</CardTitle>
+                      <p className="text-muted-foreground">Safeguard critical online access points</p>
+                    </div>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-center text-base leading-relaxed">
+                        Digital Legacy Protection ensures that your critical online accounts and assets are securely managed and transferred when needed. From safeguarding passwords and financial accounts to protecting social media and digital files, this service provides peace of mind that your online presence remains secure, accessible, and handled according to your wishes.
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
               </HoverCardTrigger>
@@ -239,17 +255,25 @@ const Solution = () => {
 
             <HoverCard>
               <HoverCardTrigger asChild>
-                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer" style={{ animationDelay: '0.4s' }}>
-                  <CardHeader className="p-0 overflow-hidden">
-                    <img 
-                      src={workshopsAssessments} 
-                      alt="Workshops & Assessments" 
-                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <CardTitle className="mb-3">Workshops & Assessments</CardTitle>
-                    <p className="text-muted-foreground">Engage teams with tailored readiness education.</p>
+                <Card className="animate-fade-in transition-shadow duration-300 hover:shadow-xl overflow-hidden group cursor-pointer relative" style={{ animationDelay: '0.4s' }}>
+                  <CardContent className="p-0">
+                    <div className="overflow-hidden">
+                      <img 
+                        src={workshopsAssessments} 
+                        alt="Workshops & Assessments" 
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <CardTitle className="mb-3">Workshops & Assessments</CardTitle>
+                      <p className="text-muted-foreground">Engage teams with tailored readiness education.</p>
+                    </div>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-center text-base leading-relaxed">
+                        Workshops & Assessments engage your teams through customized training and readiness evaluations designed to strengthen preparedness and understanding. These interactive sessions provide practical insights, hands-on learning, and actionable feedback to help individuals and organizations identify gaps, build confidence, and improve overall resilience.
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
               </HoverCardTrigger>
@@ -262,17 +286,25 @@ const Solution = () => {
 
             <HoverCard>
               <HoverCardTrigger asChild>
-                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer" style={{ animationDelay: '0.6s' }}>
-                  <CardHeader className="p-0 overflow-hidden">
-                    <img 
-                      src={peaceMindAssessment} 
-                      alt="Peace of Mind Assessment" 
-                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <CardTitle className="mb-3">Peace of Mind Assessment</CardTitle>
-                    <p className="text-muted-foreground">Identify gaps before they become crises</p>
+                <Card className="animate-fade-in transition-shadow duration-300 hover:shadow-xl overflow-hidden group cursor-pointer relative" style={{ animationDelay: '0.6s' }}>
+                  <CardContent className="p-0">
+                    <div className="overflow-hidden">
+                      <img 
+                        src={peaceMindAssessment} 
+                        alt="Peace of Mind Assessment" 
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <CardTitle className="mb-3">Peace of Mind Assessment</CardTitle>
+                      <p className="text-muted-foreground">Identify gaps before they become crises</p>
+                    </div>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-center text-base leading-relaxed">
+                        Peace of Mind Assessment helps you uncover vulnerabilities before they turn into crises. Through a comprehensive review of your personal, financial, and digital preparedness, this assessment highlights potential risks and offers clear, practical steps to strengthen your plans and give you lasting peace of mind.
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
               </HoverCardTrigger>
