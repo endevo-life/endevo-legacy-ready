@@ -32,7 +32,7 @@ const HiddenCostSection = () => {
           {/* Right: Text Content */}
           <div className="space-y-8">
             {/* Intro Paragraph */}
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed text-center">
               Most people and most companies are not ready for life's inevitable events. The result? Families face chaos. Employers lose billions. Legacies are left incomplete.
             </p>
 
