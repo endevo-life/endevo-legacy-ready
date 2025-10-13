@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import nikiPortrait from "@/assets/niki-portrait-2.png";
 import aaronPortrait from "@/assets/aaron-portrait-2.png";
 import mercedesPortrait from "@/assets/mercedes-portrait-2.png";
@@ -56,46 +57,58 @@ const MeetOurTeamSection = () => {
             Meet Our Team
           </h2>
 
-          {/* Team Grid - Horizontal Layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-            {teamMembers.map((member, index) => {
-              const CardWrapper = member.linkedIn ? 'a' : 'div';
-              const cardProps = member.linkedIn 
-                ? { href: member.linkedIn, target: "_blank", rel: "noopener noreferrer" }
-                : {};
-              
-              return (
-                <div key={index} className="flex flex-col items-center">
-                  <CardWrapper
-                    {...cardProps}
-                    className={`group ${member.linkedIn ? 'cursor-pointer' : ''}`}
-                  >
-                    {/* Portrait Image - Rounded Rectangle */}
-                    <div className="mb-4 w-32 h-32 mx-auto">
-                      <img 
-                        src={member.image} 
-                        alt={`${member.name} - ${member.title}`}
-                        className="w-full h-full object-cover rounded-2xl shadow-lg transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
+          {/* Team Grid - Horizontal Carousel */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-4">
+              {teamMembers.map((member, index) => {
+                const CardWrapper = member.linkedIn ? 'a' : 'div';
+                const cardProps = member.linkedIn 
+                  ? { href: member.linkedIn, target: "_blank", rel: "noopener noreferrer" }
+                  : {};
+                
+                return (
+                  <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5">
+                    <div className="flex flex-col items-center">
+                      <CardWrapper
+                        {...cardProps}
+                        className={`group ${member.linkedIn ? 'cursor-pointer' : ''}`}
+                      >
+                        {/* Portrait Image - Rounded Rectangle */}
+                        <div className="mb-4 w-32 h-32 mx-auto">
+                          <img 
+                            src={member.image} 
+                            alt={`${member.name} - ${member.title}`}
+                            className="w-full h-full object-cover rounded-2xl shadow-lg transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
 
-                    {/* Text Content */}
-                    <div className="text-center space-y-2">
-                      <h3 className="text-base font-bold text-gray-900 border-b-2 border-gray-300 pb-1 inline-block">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-gray-700 font-medium">
-                        {member.title}
-                      </p>
-                      <p className="text-xs text-gray-600 font-sans">
-                        {member.organization}
-                      </p>
+                        {/* Text Content */}
+                        <div className="text-center space-y-2">
+                          <h3 className="text-base font-bold text-gray-900 border-b-2 border-gray-300 pb-1 inline-block">
+                            {member.name}
+                          </h3>
+                          <p className="text-sm text-gray-700 font-medium">
+                            {member.title}
+                          </p>
+                          <p className="text-xs text-gray-600 font-sans">
+                            {member.organization}
+                          </p>
+                        </div>
+                      </CardWrapper>
                     </div>
-                  </CardWrapper>
-                </div>
-              );
-            })}
-          </div>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="-left-12 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg" />
+            <CarouselNext className="-right-12 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg" />
+          </Carousel>
         </div>
       </div>
     </section>
