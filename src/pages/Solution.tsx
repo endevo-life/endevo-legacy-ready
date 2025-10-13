@@ -60,16 +60,7 @@ const Solution = () => {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Graphic */}
-            <div className="animate-fade-in">
-              <img 
-                src={empowering} 
-                alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
-                className="w-full h-auto max-w-md mx-auto"
-              />
-            </div>
-            
-            {/* Right side - Feature Cards */}
+            {/* Left side - Feature Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
@@ -106,6 +97,15 @@ const Solution = () => {
                   </p>
                 </CardContent>
               </Card>
+            </div>
+            
+            {/* Right side - Graphic */}
+            <div className="animate-fade-in">
+              <img 
+                src={empowering} 
+                alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
+                className="w-full h-auto max-w-md mx-auto"
+              />
             </div>
           </div>
         </div>
