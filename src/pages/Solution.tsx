@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import heroBackground from "@/assets/solution-hero-bg.jpg";
 import holisticFramework from "@/assets/holistic-framework.png";
@@ -190,19 +191,28 @@ const Solution = () => {
         <div className="container max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Core Solutions</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group">
-              <CardHeader className="p-0 overflow-hidden">
-                <img 
-                  src={hrEapPrograms} 
-                  alt="HR/EAP Programs" 
-                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                />
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="mb-3">HR/EAP Programs</CardTitle>
-                <p className="text-muted-foreground">Reduce risk while improving workplace well-being.</p>
-              </CardContent>
-            </Card>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer">
+                  <CardHeader className="p-0 overflow-hidden">
+                    <img 
+                      src={hrEapPrograms} 
+                      alt="HR/EAP Programs" 
+                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3">HR/EAP Programs</CardTitle>
+                    <p className="text-muted-foreground">Reduce risk while improving workplace well-being.</p>
+                  </CardContent>
+                </Card>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-96">
+                <p className="text-sm text-muted-foreground">
+                  Our HR and Employee Assistance Programs (EAP) are designed to reduce organizational risk while enhancing overall workplace well-being. By providing employees with confidential support, counseling, and wellness resources, these programs help address stress, burnout, and personal challenges before they impact performance. The result is a healthier, more resilient workforce and a stronger, more productive workplace culture.
+                </p>
+              </HoverCardContent>
+            </HoverCard>
 
             <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.2s' }}>
               <CardHeader className="p-0 overflow-hidden">
