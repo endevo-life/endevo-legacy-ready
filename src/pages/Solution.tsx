@@ -50,7 +50,7 @@ const Solution = () => {
       </section>
 
       {/* Empowering You to Take Control Section */}
-      <section id="process" className="py-20 bg-muted/50 scroll-mt-20">
+      <section id="process" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
