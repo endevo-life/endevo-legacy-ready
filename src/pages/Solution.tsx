@@ -260,19 +260,28 @@ const Solution = () => {
               </HoverCardContent>
             </HoverCard>
 
-            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.6s' }}>
-              <CardHeader className="p-0 overflow-hidden">
-                <img 
-                  src={peaceMindAssessment} 
-                  alt="Peace of Mind Assessment" 
-                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                />
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="mb-3">Peace of Mind Assessment</CardTitle>
-                <p className="text-muted-foreground">Identify gaps before they become crises</p>
-              </CardContent>
-            </Card>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer" style={{ animationDelay: '0.6s' }}>
+                  <CardHeader className="p-0 overflow-hidden">
+                    <img 
+                      src={peaceMindAssessment} 
+                      alt="Peace of Mind Assessment" 
+                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3">Peace of Mind Assessment</CardTitle>
+                    <p className="text-muted-foreground">Identify gaps before they become crises</p>
+                  </CardContent>
+                </Card>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-96">
+                <p className="text-sm text-muted-foreground">
+                  Peace of Mind Assessment helps you uncover vulnerabilities before they turn into crises. Through a comprehensive review of your personal, financial, and digital preparedness, this assessment highlights potential risks and offers clear, practical steps to strengthen your plans and give you lasting peace of mind.
+                </p>
+              </HoverCardContent>
+            </HoverCard>
           </div>
         </div>
       </section>
