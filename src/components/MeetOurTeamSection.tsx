@@ -71,11 +71,11 @@ const MeetOurTeamSection = () => {
                     className={`group ${member.linkedIn ? 'cursor-pointer' : ''}`}
                   >
                     {/* Portrait Image - Rounded Rectangle */}
-                    <div className="mb-4 w-full">
+                    <div className="mb-4 w-48 h-48 mx-auto">
                       <img 
                         src={member.image} 
                         alt={`${member.name} - ${member.title}`}
-                        className="w-full aspect-square object-cover rounded-2xl shadow-lg transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-full object-cover rounded-2xl shadow-lg transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
 
