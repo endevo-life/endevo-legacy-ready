@@ -214,19 +214,28 @@ const Solution = () => {
               </HoverCardContent>
             </HoverCard>
 
-            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.2s' }}>
-              <CardHeader className="p-0 overflow-hidden">
-                <img 
-                  src={digitalLegacy} 
-                  alt="Digital Legacy Protection" 
-                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                />
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="mb-3">Digital Legacy Protection</CardTitle>
-                <p className="text-muted-foreground">Safeguard critical online access points</p>
-              </CardContent>
-            </Card>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer" style={{ animationDelay: '0.2s' }}>
+                  <CardHeader className="p-0 overflow-hidden">
+                    <img 
+                      src={digitalLegacy} 
+                      alt="Digital Legacy Protection" 
+                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3">Digital Legacy Protection</CardTitle>
+                    <p className="text-muted-foreground">Safeguard critical online access points</p>
+                  </CardContent>
+                </Card>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-96">
+                <p className="text-sm text-muted-foreground">
+                  Digital Legacy Protection ensures that your critical online accounts and assets are securely managed and transferred when needed. From safeguarding passwords and financial accounts to protecting social media and digital files, this service provides peace of mind that your online presence remains secure, accessible, and handled according to your wishes.
+                </p>
+              </HoverCardContent>
+            </HoverCard>
 
             <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.4s' }}>
               <CardHeader className="p-0 overflow-hidden">
