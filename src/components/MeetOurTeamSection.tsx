@@ -71,7 +71,7 @@ const MeetOurTeamSection = () => {
                     className={`group ${member.linkedIn ? 'cursor-pointer' : ''}`}
                   >
                     {/* Portrait Image - Rounded Rectangle */}
-                    <div className="mb-4 w-48 h-48 mx-auto">
+                    <div className="mb-4 w-32 h-32 mx-auto">
                       <img 
                         src={member.image} 
                         alt={`${member.name} - ${member.title}`}
