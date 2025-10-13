@@ -14,9 +14,14 @@ const HiddenCostSection = () => {
     >
       <div className="container mx-auto px-4">
         {/* Centered Heading */}
-        <h2 className="heading-section text-center mb-12" style={{ fontFamily: 'Times New Roman, serif' }}>
-          The Hidden Cost of Being Unprepared
-        </h2>
+        <div className="text-center mb-12 space-y-4">
+          <h2 className="heading-section" style={{ fontFamily: 'Times New Roman, serif' }}>
+            The Hidden Cost of Being Unprepared
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Most people and most companies are not ready for life's inevitable events. The result? Families face chaos. Employers lose billions. Legacies are left incomplete.
+          </p>
+        </div>
 
         {/* Two Column Layout */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
@@ -31,10 +36,6 @@ const HiddenCostSection = () => {
 
           {/* Right: Text Content */}
           <div className="space-y-8">
-            {/* Intro Paragraph */}
-            <p className="text-lg text-foreground leading-relaxed text-center">
-              Most people and most companies are not ready for life's inevitable events. The result? Families face chaos. Employers lose billions. Legacies are left incomplete.
-            </p>
 
             {/* Stat 1 */}
             <div>
