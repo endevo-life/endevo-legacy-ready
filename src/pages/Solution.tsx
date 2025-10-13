@@ -237,19 +237,28 @@ const Solution = () => {
               </HoverCardContent>
             </HoverCard>
 
-            <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.4s' }}>
-              <CardHeader className="p-0 overflow-hidden">
-                <img 
-                  src={workshopsAssessments} 
-                  alt="Workshops & Assessments" 
-                  className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
-                />
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="mb-3">Workshops & Assessments</CardTitle>
-                <p className="text-muted-foreground">Engage teams with tailored readiness education.</p>
-              </CardContent>
-            </Card>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group cursor-pointer" style={{ animationDelay: '0.4s' }}>
+                  <CardHeader className="p-0 overflow-hidden">
+                    <img 
+                      src={workshopsAssessments} 
+                      alt="Workshops & Assessments" 
+                      className="w-full h-48 object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3">Workshops & Assessments</CardTitle>
+                    <p className="text-muted-foreground">Engage teams with tailored readiness education.</p>
+                  </CardContent>
+                </Card>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-96">
+                <p className="text-sm text-muted-foreground">
+                  Workshops & Assessments engage your teams through customized training and readiness evaluations designed to strengthen preparedness and understanding. These interactive sessions provide practical insights, hands-on learning, and actionable feedback to help individuals and organizations identify gaps, build confidence, and improve overall resilience.
+                </p>
+              </HoverCardContent>
+            </HoverCard>
 
             <Card className="animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden group" style={{ animationDelay: '0.6s' }}>
               <CardHeader className="p-0 overflow-hidden">
