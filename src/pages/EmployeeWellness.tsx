@@ -2,6 +2,7 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import employeeWellnessHero from "@/assets/employee-wellness-hero.png";
 const EmployeeWellness = () => {
   const {
     elementRef,
@@ -12,7 +13,7 @@ const EmployeeWellness = () => {
       <main>
         {/* Hero Section */}
         <section ref={elementRef as any} className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url('/lovable-uploads/placeholder-wellness-hero.jpg')`
+        backgroundImage: `url('${employeeWellnessHero}')`
       }}>
           {/* Dark overlay for text contrast */}
           <div className="absolute inset-0 bg-black/50"></div>
