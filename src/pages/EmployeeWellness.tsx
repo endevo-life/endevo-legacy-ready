@@ -120,6 +120,34 @@ const EmployeeWellness = () => {
             </div>
           </div>
         </section>
+
+        {/* Get Involved Section */}
+        <section className="py-20 px-4 bg-muted/30">
+          <div className="container max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
+              Get Involved
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+              Ready to invest in your well-being and legacy?<br />
+              Let's build a culture of clarity, compassion, and balance together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                className="bg-[#002147] hover:bg-[#003366] text-white font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                onClick={() => window.location.href = 'https://jbigogmrgex.typeform.com/to/qBsak5CQ'}
+              >
+                Join the Program
+              </Button>
+              <Button 
+                variant="outline"
+                className="border-2 font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                onClick={() => window.location.href = 'https://jbigogmrgex.typeform.com/to/qBsak5CQ'}
+              >
+                Schedule a Consultation
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
