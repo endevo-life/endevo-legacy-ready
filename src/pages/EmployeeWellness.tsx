@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import employeeWellnessHero from "@/assets/employee-wellness-hero.png";
-import wellnessPillars from "@/assets/wellness-pillars-infographic.png";
 const EmployeeWellness = () => {
   const {
     elementRef,
@@ -60,22 +59,6 @@ const EmployeeWellness = () => {
           </div>
         </section>
 
-        {/* Core Pillars Section */}
-        <section className="py-20 px-4 bg-muted/30">
-          <div className="container max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground" style={{ fontFamily: 'serif' }}>
-              Our Core Pillars of Wellness
-            </h2>
-            
-            <div className="flex justify-center">
-              <img 
-                src={wellnessPillars} 
-                alt="Five Core Pillars of Wellness: Physical Health, Emotional Well-Being, Financial Readiness, Career Growth and Purpose, and Community and Connection" 
-                className="w-full max-w-5xl h-auto"
-              />
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>;
