@@ -41,6 +41,23 @@ const EmployeeWellness = () => {
             </div>
           </div>
         </section>
+
+        {/* About the Program Section */}
+        <section className="py-20 px-4 bg-background">
+          <div className="container max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground" style={{ fontFamily: 'serif' }}>
+              About the Program
+            </h2>
+            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+              <p>
+                The Legacy Readiness Employee Wellness Program is built around one simple truth: you cannot build a lasting legacy without caring for yourself first.
+              </p>
+              <p>
+                We provide a holistic approach to wellness that supports employees physically, emotionally, and financially. Whether it is improving daily habits, navigating career changes, or preparing for major life events, our goal is to empower you to show up as your best self, today and in the future.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>;
