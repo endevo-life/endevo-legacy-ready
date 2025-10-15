@@ -99,8 +99,8 @@ const EmployeeWellness = () => {
         <section className="py-20 px-4">
           <div className="container max-w-7xl mx-auto">
             <div className="grid grid-cols-12 gap-8 items-center">
-              {/* Title - 25% */}
-              <div className="col-span-12 md:col-span-3 space-y-4">
+              {/* Title - 40% */}
+              <div className="col-span-12 md:col-span-5 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
                   Our Core Pillars of Wellness
                 </h2>
@@ -109,8 +109,8 @@ const EmployeeWellness = () => {
                 </p>
               </div>
               
-              {/* Image - 75% */}
-              <div className="col-span-12 md:col-span-9">
+              {/* Image - 60% */}
+              <div className="col-span-12 md:col-span-7">
                 <img 
                   src={wellnessPillars} 
                   alt="Five Core Pillars of Wellness: Physical Health, Emotional Well-Being, Financial Readiness, Career Growth and Purpose, and Community and Connection" 
