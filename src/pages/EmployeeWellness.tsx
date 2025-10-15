@@ -58,7 +58,11 @@ const EmployeeWellness = () => {
               </p>
             </div>
             
-            <div className="mt-12 flex justify-center">
+            <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-12 text-center text-foreground" style={{ fontFamily: 'serif' }}>
+              Our Core Pillars of Wellness
+            </h2>
+            
+            <div className="flex justify-center">
               <img 
                 src={wellnessPillars} 
                 alt="Five Core Pillars of Wellness: Physical Health, Emotional Well-Being, Financial Readiness, Career Growth and Purpose, and Community and Connection" 
