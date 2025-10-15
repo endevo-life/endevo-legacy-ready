@@ -72,6 +72,23 @@ const EmployeeWellness = () => {
           </div>
         </section>
 
+        {/* Why It Matters Section */}
+        <section className="py-20 px-4 bg-muted/30">
+          <div className="container max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground" style={{ fontFamily: 'serif' }}>
+              Why It Matters
+            </h2>
+            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+              <p>
+                When employees are supported as whole individuals, they become more focused, motivated, and inspired. Our program strengthens workplace culture, reduces burnout, and helps teams create meaningful impact in their careers, families, and communities.
+              </p>
+              <p>
+                Legacy readiness is more than preparing for what is next; it is about living well right now.
+              </p>
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>;
