@@ -3,16 +3,30 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import employeeWellnessHero from "@/assets/employee-wellness-hero.png";
 import wellnessPillars from "@/assets/wellness-pillars.png";
 
 const EmployeeWellness = () => {
   const { elementRef, isVisible } = useScrollAnimation();
+  const navigate = useNavigate();
   
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
       <main>
+        {/* Back Button - Top */}
+        <div className="container max-w-7xl mx-auto px-4 pt-8">
+          <Button
+            variant="ghost"
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Go Back
+          </Button>
+        </div>
         {/* Hero Section */}
         <section 
           ref={elementRef as any} 
@@ -148,6 +162,18 @@ const EmployeeWellness = () => {
             </div>
           </div>
         </section>
+
+        {/* Back Button - Bottom */}
+        <div className="container max-w-7xl mx-auto px-4 py-8">
+          <Button
+            variant="ghost"
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Go Back
+          </Button>
+        </div>
       </main>
       <Footer />
     </div>
