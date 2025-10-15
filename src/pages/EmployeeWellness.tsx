@@ -45,7 +45,7 @@ const EmployeeWellness = () => {
         </section>
 
         {/* About the Program and Why It Matters Section */}
-        <section className="py-20 px-4 bg-background">
+        <section className="py-20 px-4 bg-muted/30">
           <div className="container max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* About the Program Card */}
