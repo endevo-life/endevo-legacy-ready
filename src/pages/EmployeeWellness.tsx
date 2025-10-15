@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import employeeWellnessHero from "@/assets/employee-wellness-hero.png";
+import wellnessPillars from "@/assets/wellness-pillars.png";
 const EmployeeWellness = () => {
   const {
     elementRef,
@@ -55,6 +56,14 @@ const EmployeeWellness = () => {
               <p>
                 We provide a holistic approach to wellness that supports employees physically, emotionally, and financially. Whether it is improving daily habits, navigating career changes, or preparing for major life events, our goal is to empower you to show up as your best self, today and in the future.
               </p>
+            </div>
+            
+            <div className="mt-12 flex justify-center">
+              <img 
+                src={wellnessPillars} 
+                alt="Five Core Pillars of Wellness: Physical Health, Emotional Well-Being, Financial Readiness, Career Growth and Purpose, and Community and Connection" 
+                className="w-full max-w-5xl h-auto"
+              />
             </div>
           </div>
         </section>
