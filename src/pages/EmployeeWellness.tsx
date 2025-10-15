@@ -17,7 +17,7 @@ const EmployeeWellness = () => {
       <ResponsiveNavbar />
       <main>
         {/* Back Button - Top */}
-        <div className="container max-w-7xl mx-auto px-4 pt-8">
+        <div className="p-0 m-0">
           <Button
             variant="ghost"
             onClick={() => navigate(-1)}
@@ -164,7 +164,7 @@ const EmployeeWellness = () => {
         </section>
 
         {/* Back Button - Bottom */}
-        <div className="container max-w-7xl mx-auto px-4 py-8">
+        <div className="p-0 m-0">
           <Button
             variant="ghost"
             onClick={() => navigate(-1)}
