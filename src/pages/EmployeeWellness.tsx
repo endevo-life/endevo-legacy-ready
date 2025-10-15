@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import employeeWellnessHero from "@/assets/employee-wellness-hero.png";
 import wellnessPillars from "@/assets/wellness-pillars.png";
@@ -43,22 +44,55 @@ const EmployeeWellness = () => {
           </div>
         </section>
 
-        {/* About the Program Section */}
+        {/* About the Program and Why It Matters Section */}
         <section className="py-20 px-4 bg-background">
-          <div className="container max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground" style={{ fontFamily: 'serif' }}>
-              About the Program
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                The Legacy Readiness Employee Wellness Program is built around one simple truth: you cannot build a lasting legacy without caring for yourself first.
-              </p>
-              <p>
-                We provide a holistic approach to wellness that supports employees physically, emotionally, and financially. Whether it is improving daily habits, navigating career changes, or preparing for major life events, our goal is to empower you to show up as your best self, today and in the future.
-              </p>
+          <div className="container max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* About the Program Card */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
+                    About the Program
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+                    <p>
+                      The Legacy Readiness Employee Wellness Program is built around one simple truth: you cannot build a lasting legacy without caring for yourself first.
+                    </p>
+                    <p>
+                      We provide a holistic approach to wellness that supports employees physically, emotionally, and financially. Whether it is improving daily habits, navigating career changes, or preparing for major life events, our goal is to empower you to show up as your best self, today and in the future.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Why It Matters Card */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
+                    Why It Matters
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+                    <p>
+                      When employees are supported as whole individuals, they become more focused, motivated, and inspired. Our program strengthens workplace culture, reduces burnout, and helps teams create meaningful impact in their careers, families, and communities.
+                    </p>
+                    <p>
+                      Legacy readiness is more than preparing for what is next; it is about living well right now.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-            
-            <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-12 text-center text-foreground" style={{ fontFamily: 'serif' }}>
+          </div>
+        </section>
+
+        {/* Core Pillars Section */}
+        <section className="py-20 px-4 bg-muted/30">
+          <div className="container max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground" style={{ fontFamily: 'serif' }}>
               Our Core Pillars of Wellness
             </h2>
             
@@ -68,23 +102,6 @@ const EmployeeWellness = () => {
                 alt="Five Core Pillars of Wellness: Physical Health, Emotional Well-Being, Financial Readiness, Career Growth and Purpose, and Community and Connection" 
                 className="w-full max-w-5xl h-auto"
               />
-            </div>
-          </div>
-        </section>
-
-        {/* Why It Matters Section */}
-        <section className="py-20 px-4 bg-muted/30">
-          <div className="container max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground" style={{ fontFamily: 'serif' }}>
-              Why It Matters
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                When employees are supported as whole individuals, they become more focused, motivated, and inspired. Our program strengthens workplace culture, reduces burnout, and helps teams create meaningful impact in their careers, families, and communities.
-              </p>
-              <p>
-                Legacy readiness is more than preparing for what is next; it is about living well right now.
-              </p>
             </div>
           </div>
         </section>
