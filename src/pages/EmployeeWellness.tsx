@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import employeeWellnessHero from "@/assets/employee-wellness-hero.png";
+import { Heart, Smile, DollarSign, TrendingUp, Users } from "lucide-react";
 const EmployeeWellness = () => {
   const {
     elementRef,
@@ -67,65 +68,78 @@ const EmployeeWellness = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {/* Pillar 1 */}
-              <div className="flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/10">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+              {/* Pillar 1 - Physical Health */}
+              <div className="flex flex-col items-center text-center group">
+                {/* Pillar Top */}
+                <div className="w-20 h-3 bg-primary rounded-t-sm mb-1"></div>
+                {/* Pillar Body with Icon */}
+                <div className="w-16 bg-gradient-to-b from-primary/90 to-primary/70 p-6 flex items-center justify-center min-h-[200px] relative">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg">
+                    <Heart className="w-7 h-7 text-primary" />
+                  </div>
                 </div>
+                {/* Pillar Base */}
+                <div className="w-24 h-4 bg-primary/80 rounded-b-sm mb-4"></div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Physical Health</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Encouraging movement, nutrition, and rest through fitness challenges, meal planning, and health education.
                 </p>
               </div>
 
-              {/* Pillar 2 */}
-              <div className="flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/10">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              {/* Pillar 2 - Emotional Well-Being */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="w-20 h-3 bg-primary rounded-t-sm mb-1"></div>
+                <div className="w-16 bg-gradient-to-b from-primary/90 to-primary/70 p-6 flex items-center justify-center min-h-[200px] relative">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg">
+                    <Smile className="w-7 h-7 text-primary" />
+                  </div>
                 </div>
+                <div className="w-24 h-4 bg-primary/80 rounded-b-sm mb-4"></div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Emotional Well-Being</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Offering mindfulness sessions, counseling resources, and stress management tools to foster inner calm and balance.
                 </p>
               </div>
 
-              {/* Pillar 3 */}
-              <div className="flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/10">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              {/* Pillar 3 - Financial Readiness */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="w-20 h-3 bg-primary rounded-t-sm mb-1"></div>
+                <div className="w-16 bg-gradient-to-b from-primary/90 to-primary/70 p-6 flex items-center justify-center min-h-[200px] relative">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg">
+                    <DollarSign className="w-7 h-7 text-primary" />
+                  </div>
                 </div>
+                <div className="w-24 h-4 bg-primary/80 rounded-b-sm mb-4"></div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Financial Readiness</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Helping employees manage money with clarity, from saving strategies to long-term financial planning that supports life beyond work.
                 </p>
               </div>
 
-              {/* Pillar 4 */}
-              <div className="flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/10">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
+              {/* Pillar 4 - Career Growth */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="w-20 h-3 bg-primary rounded-t-sm mb-1"></div>
+                <div className="w-16 bg-gradient-to-b from-primary/90 to-primary/70 p-6 flex items-center justify-center min-h-[200px] relative">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg">
+                    <TrendingUp className="w-7 h-7 text-primary" />
+                  </div>
                 </div>
+                <div className="w-24 h-4 bg-primary/80 rounded-b-sm mb-4"></div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Career Growth and Purpose</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Guidance for personal and professional development, helping employees align their work with their values and goals.
                 </p>
               </div>
 
-              {/* Pillar 5 */}
-              <div className="flex flex-col items-center text-center p-6 bg-background rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/10">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+              {/* Pillar 5 - Community */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="w-20 h-3 bg-primary rounded-t-sm mb-1"></div>
+                <div className="w-16 bg-gradient-to-b from-primary/90 to-primary/70 p-6 flex items-center justify-center min-h-[200px] relative">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg">
+                    <Users className="w-7 h-7 text-primary" />
+                  </div>
                 </div>
+                <div className="w-24 h-4 bg-primary/80 rounded-b-sm mb-4"></div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Community and Connection</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Building a culture of care through team activities, shared learning, and open dialogue, because we grow stronger together.
