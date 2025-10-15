@@ -49,9 +49,9 @@ const EmployeeWellness = () => {
           <div className="container max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* About the Program Card */}
-              <Card>
+              <Card className="shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
+                  <CardTitle className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
                     About the Program
                   </CardTitle>
                 </CardHeader>
@@ -68,9 +68,9 @@ const EmployeeWellness = () => {
               </Card>
 
               {/* Why It Matters Card */}
-              <Card>
+              <Card className="shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
+                  <CardTitle className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
                     Why It Matters
                   </CardTitle>
                 </CardHeader>
