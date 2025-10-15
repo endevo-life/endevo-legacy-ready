@@ -90,7 +90,7 @@ const EmployeeWellness = () => {
         </section>
 
         {/* Core Pillars Section */}
-        <section className="py-20 px-4 bg-secondary/20">
+        <section className="py-20 px-4">
           <div className="container max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground" style={{ fontFamily: 'serif' }}>
               Our Core Pillars of Wellness
