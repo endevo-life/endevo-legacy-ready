@@ -124,7 +124,7 @@ const EmployeeWellness = () => {
         {/* Get Involved Section */}
         <section className="py-20 px-4 bg-muted/30">
           <div className="container max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-orange-600" style={{ fontFamily: 'serif' }}>
               Get Involved
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
