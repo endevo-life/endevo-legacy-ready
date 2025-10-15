@@ -100,10 +100,13 @@ const EmployeeWellness = () => {
           <div className="container max-w-7xl mx-auto">
             <div className="grid grid-cols-12 gap-8 items-center">
               {/* Title - 25% */}
-              <div className="col-span-12 md:col-span-3">
+              <div className="col-span-12 md:col-span-3 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
                   Our Core Pillars of Wellness
                 </h2>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  Our Core Pillars of Wellness focus on nurturing every aspect of well-being. They bring together the physical, emotional, financial, and professional sides of life to help individuals find balance, clarity, and long-term fulfillment in both their personal and work journeys.
+                </p>
               </div>
               
               {/* Image - 75% */}
