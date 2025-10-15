@@ -96,7 +96,7 @@ const EmployeeWellness = () => {
         </section>
 
         {/* Core Pillars Section */}
-        <section className="py-20 px-4">
+        <section className="py-12 px-4">
           <div className="container max-w-7xl mx-auto">
             <div className="grid grid-cols-12 gap-8 items-center">
               {/* Title - 25% */}
