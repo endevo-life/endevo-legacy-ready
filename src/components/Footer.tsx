@@ -69,7 +69,7 @@ const Footer = () => {
             <img 
               src={podcastLogo} 
               alt="Death & Dying Podcast" 
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
             <p className="text-sm text-white/90">
               Life's Final Chapter, Planned for Today's Digital Age.
