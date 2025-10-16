@@ -99,6 +99,21 @@ const ServiceProvidersSection = () => {
             Get Connected Now
           </Button>
         </div>
+
+        {/* Legal Framework Section */}
+        <div className="mt-16 bg-muted/30 rounded-lg p-8 md:p-12">
+          <div className="max-w-4xl mx-auto space-y-4 text-center">
+            <p className="text-lg leading-relaxed">
+              At ENDevo, we believe that meaningful partnerships are built on trust, integrity, and shared responsibility. Our legal framework ensures that every collaboration is grounded in clarity, fairness, and respect.
+            </p>
+            <p className="text-lg leading-relaxed">
+              We uphold the highest ethical standards and comply with all applicable laws and regulations to protect our partners, clients, and community. Every agreement reflects our commitment to transparency, confidentiality, and the responsible use of information and resources.
+            </p>
+            <p className="text-lg leading-relaxed">
+              By partnering with ENDevo, you join a network guided by principles of accountability and mutual respect. We take pride in creating partnerships that last, supported by sound governance and a shared vision for long-term impact.
+            </p>
+          </div>
+        </div>
       </div>
     </section>;
 };
