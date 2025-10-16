@@ -103,7 +103,7 @@ const ServiceProvidersSection = () => {
       </div>
 
       {/* Legal Framework Section - Full Width */}
-      <div className="bg-muted/30 relative overflow-hidden py-12 mt-16">
+      <div className="bg-muted/30 relative overflow-hidden py-8 mt-16">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-50"
           style={{ backgroundImage: `url(${legalFrameworkBg})` }}
