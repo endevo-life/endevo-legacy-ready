@@ -186,7 +186,7 @@ const Solution = () => {
       <ServiceProvidersSection />
 
       {/* Our Edge: Where AI Meets Empathy Section */}
-      <section id="for-companies" className="py-8 bg-background scroll-mt-20">
+      <section id="for-companies" className="py-6 bg-background scroll-mt-20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
