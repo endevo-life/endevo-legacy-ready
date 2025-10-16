@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import physicalPartners from "@/assets/physical-partners.png";
 import financialPartners from "@/assets/financial-partners.png";
 import digitalPartners from "@/assets/digital-partners.png";
-import legalFrameworkBg from "@/assets/legal-framework-bg.png";
+import legalFrameworkBg from "@/assets/legal-collaboration-bg.png";
 const ServiceProvidersSection = () => {
   const {
     elementRef,
