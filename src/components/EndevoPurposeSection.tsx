@@ -1,7 +1,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import endevoImage from "@/assets/endevo-redefining-preparedness.jpg";
+import endevoImage from "@/assets/endevo-preparedness-bg.jpg";
 const EndevoPurposeSection = () => {
   const {
     elementRef,
