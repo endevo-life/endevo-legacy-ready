@@ -18,13 +18,13 @@ const NikiWeissSection = () => {
             <h3 className="text-2xl font-semibold text-brand-orange mb-6">Digital Legacy Thanatologist</h3>
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
-                Niki Weiss is transforming how we approach and navigate death, dying and end-of-life planning in the digital age. Digital Legacy Thanatologist, Founder of ENDevo, Creator of My Final Playbook App, and host of the Digital Legacy Podcast
+                Niki is transforming how people navigate death, dying and end-of-life planning in the digital age.
               </p>
               <p>
-                Niki normalizes and simplifies the often daunting end-of-life planning process by merging innovative digital tools with traditional methods. With a background in healthcare, project management, and risk analysis, Niki brings a unique skill set in coaching her clients through developing a well-thought-out, customized legacy plan.
+                Merging innovative digital tools with traditional estate planning methods, Niki simplifies the often daunting end-of-life planning process using a proprietary framework centered around our beliefs in four key areas of legal, financial, physical and digital. By creating a comprehensive and well-thought-out end-of-life plan before something happens, we gain peace of mind and provide a roadmap for those we leave behind to navigate and adapt to life when we are no longer here. With an extensive background in healthcare, project management, data governance and risk analysis, Niki brings a unique skill set and progressive strategies for coaching her clients through developing end-of-life legacy plans that safeguard and preserve their digital legacy and provide protection and relief for the significant people in their lives.
               </p>
               <p>
-                My Final Playbook App incorporates a holistic approach that guides users through a customizable journey of exploring end-of-life options by breaking down complex decision-making into actionable steps. By comprehensively planning and documenting various facets of your life (such as legal, financial, physical, and digital aspects) we gain peace of mind to live fully while providing a roadmap for preserving our digital imprint and protecting the people we leave behind.
+                Through speaking, training and coaching, Niki's mission is to normalize conversations about death, dying and end-of-life planning, break down complex decision-making into actionable steps and provide cutting-edge tools to prepare for the inevitable, so we can live fully and die ready.
               </p>
             </div>
           </div>
