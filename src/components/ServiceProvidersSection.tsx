@@ -102,7 +102,7 @@ const ServiceProvidersSection = () => {
         </div>
 
         {/* Legal Framework Section */}
-        <div className="mt-16 bg-muted/30 rounded-lg p-8 md:p-12 relative overflow-hidden">
+        <div className="bg-muted/30 rounded-lg p-8 md:p-12 relative overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-50"
             style={{ backgroundImage: `url(${legalFrameworkBg})` }}
