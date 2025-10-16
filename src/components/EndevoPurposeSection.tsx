@@ -8,7 +8,7 @@ const EndevoPurposeSection = () => {
     isVisible
   } = useScrollAnimation();
   const navigate = useNavigate();
-  return <section className="relative py-24 bg-cover bg-center bg-no-repeat" style={{
+  return <section className="relative py-12 bg-cover bg-center bg-no-repeat" style={{
     backgroundImage: `url('${endevoImage}')`
   }}>
       {/* Gradient overlay - left black to right transparent */}
