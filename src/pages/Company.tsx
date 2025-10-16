@@ -123,7 +123,7 @@ const Company = () => {
               <img src={prisidioLogo} alt="Prisidio" className="max-h-20 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center h-20">
-              <img src={cignaLogo} alt="Cigna Healthcare" className="max-h-20 w-auto object-contain" />
+              
             </div>
           </div>
         </div>
