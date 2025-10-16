@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import physicalPartners from "@/assets/physical-partners.png";
 import financialPartners from "@/assets/financial-partners.png";
 import digitalPartners from "@/assets/digital-partners.png";
+import legalFrameworkBg from "@/assets/legal-framework-bg.png";
 const ServiceProvidersSection = () => {
   const {
     elementRef,
@@ -101,8 +102,12 @@ const ServiceProvidersSection = () => {
         </div>
 
         {/* Legal Framework Section */}
-        <div className="mt-16 bg-muted/30 rounded-lg p-8 md:p-12">
-          <div className="max-w-4xl mx-auto space-y-4 text-center">
+        <div className="mt-16 bg-muted/30 rounded-lg p-8 md:p-12 relative overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-50"
+            style={{ backgroundImage: `url(${legalFrameworkBg})` }}
+          />
+          <div className="max-w-4xl mx-auto space-y-4 text-center relative z-10">
             <p className="text-lg leading-relaxed">
               At ENDevo, we believe that meaningful partnerships are built on trust, integrity, and shared responsibility. Our legal framework ensures that every collaboration is grounded in clarity, fairness, and respect.
             </p>
