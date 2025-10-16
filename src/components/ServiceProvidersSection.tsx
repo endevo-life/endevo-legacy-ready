@@ -125,6 +125,13 @@ const ServiceProvidersSection = () => {
             <p className="text-lg leading-relaxed">
               By partnering with ENDevo, you join a network guided by principles of accountability and mutual respect. We take pride in creating partnerships that last, supported by sound governance and a shared vision for long-term impact.
             </p>
+            
+            {/* CTA Button */}
+            <div className="pt-8">
+              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full">
+                Become a Legal Partner
+              </Button>
+            </div>
           </div>
         </div>
       </div>
