@@ -100,13 +100,15 @@ const ServiceProvidersSection = () => {
             Get Connected Now
           </Button>
         </div>
+      </div>
 
-        {/* Legal Framework Section */}
-        <div className="bg-muted/30 relative overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-50"
-            style={{ backgroundImage: `url(${legalFrameworkBg})` }}
-          />
+      {/* Legal Framework Section - Full Width */}
+      <div className="bg-muted/30 relative overflow-hidden py-16">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: `url(${legalFrameworkBg})` }}
+        />
+        <div className="container max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-4 text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Legal Collaboration Opportunities
