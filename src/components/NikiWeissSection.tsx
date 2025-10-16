@@ -1,27 +1,21 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import nikiHeadshot from "@/assets/niki-headshot.jpg";
-
 const NikiWeissSection = () => {
-  const { elementRef: nikiRef, isVisible: nikiVisible } = useScrollAnimation();
-
-  return (
-    <section id="niki-weiss" ref={nikiRef} className="py-20">
+  const {
+    elementRef: nikiRef,
+    isVisible: nikiVisible
+  } = useScrollAnimation();
+  return <section id="niki-weiss" ref={nikiRef} className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={`${nikiVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`}>
-            <img 
-              src={nikiHeadshot} 
-              alt="Niki Weiss" 
-              className="max-w-md w-full h-auto rounded-lg"
-            />
+            <img src={nikiHeadshot} alt="Niki Weiss" className="max-w-md w-full h-auto rounded-lg" />
           </div>
           <div className={`${nikiVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <h2 className="text-4xl font-bold text-foreground mb-2">
               Niki Weiss
             </h2>
-            <h3 className="text-2xl font-semibold text-brand-orange mb-6">
-              LIVE FULLY. DIE READY
-            </h3>
+            <h3 className="text-2xl font-semibold text-brand-orange mb-6">Digital Legacy Thanatologist</h3>
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
                 Niki Weiss is transforming how we approach and navigate death, dying and end-of-life planning in the digital age. Digital Legacy Thanatologist, Founder of ENDevo, Creator of My Final Playbook App, and host of the Digital Legacy Podcast
@@ -36,8 +30,6 @@ const NikiWeissSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default NikiWeissSection;
