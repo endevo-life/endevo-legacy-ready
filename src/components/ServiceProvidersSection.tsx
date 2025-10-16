@@ -30,7 +30,7 @@ const ServiceProvidersSection = () => {
         {/* Three Feature Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Card 1 - Physical Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden border-0">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img src={physicalPartners} alt="Physical Partners - Funeral homes, hospice care, and long-term care providers" className="w-full h-64 object-cover" />
@@ -51,7 +51,7 @@ const ServiceProvidersSection = () => {
           </Card>
 
           {/* Card 2 - Financial Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden border-0">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img src={financialPartners} alt="Financial Partners - Wealth advisors, accountants, and insurance providers" className="w-full h-64 object-cover" />
@@ -70,7 +70,7 @@ const ServiceProvidersSection = () => {
           </Card>
 
           {/* Card 3 - Digital Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden border-0">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img src={digitalPartners} alt="Digital Partners - Digital asset managers and secure storage services" className="w-full h-64 object-cover" />
