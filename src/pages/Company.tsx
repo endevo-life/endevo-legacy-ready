@@ -54,9 +54,7 @@ const Company = () => {
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Empowering people to prepare with clarity, protect digital footprints, and create peace of mind for generations.
               </p>
-              <p className="text-2xl font-bold text-brand-orange">
-                Live Fully, Die Ready.
-              </p>
+              <p className="text-2xl font-bold text-brand-orange">Live Fully. Die Ready.</p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Founded to bring clarity and compassion to one of life's hardest conversations, ENDevo blends AI intelligence with human guidance to make legacy readiness and digital resilience accessible, scalable, and impactful.
               </p>
@@ -119,25 +117,13 @@ const Company = () => {
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-20">
             <div className="flex items-center justify-center h-20">
-              <img 
-                src={trustWillLogo} 
-                alt="Trust & Will" 
-                className="max-h-20 w-auto object-contain"
-              />
+              <img src={trustWillLogo} alt="Trust & Will" className="max-h-20 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center h-20">
-              <img 
-                src={prisidioLogo} 
-                alt="Prisidio" 
-                className="max-h-20 w-auto object-contain"
-              />
+              <img src={prisidioLogo} alt="Prisidio" className="max-h-20 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center h-20">
-              <img 
-                src={cignaLogo} 
-                alt="Cigna Healthcare" 
-                className="max-h-20 w-auto object-contain"
-              />
+              <img src={cignaLogo} alt="Cigna Healthcare" className="max-h-20 w-auto object-contain" />
             </div>
           </div>
         </div>
