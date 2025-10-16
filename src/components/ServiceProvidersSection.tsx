@@ -108,6 +108,12 @@ const ServiceProvidersSection = () => {
             style={{ backgroundImage: `url(${legalFrameworkBg})` }}
           />
           <div className="max-w-4xl mx-auto space-y-4 text-center relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Legal Collaboration Opportunities
+            </h2>
+            <p className="text-xl text-brand-orange font-semibold mb-8">
+              Join us in creating lasting impact through trusted partnerships
+            </p>
             <p className="text-lg leading-relaxed">
               At ENDevo, we believe that meaningful partnerships are built on trust, integrity, and shared responsibility. Our legal framework ensures that every collaboration is grounded in clarity, fairness, and respect.
             </p>
