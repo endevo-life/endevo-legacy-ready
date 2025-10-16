@@ -50,7 +50,7 @@ const ProcessSection = () => {
                 
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Plan</h3>
-              <p className="text-muted-foreground leading-relaxed">Use our AI-driven platform to organize legal, financial, and digital assets.</p>
+              <p className="text-muted-foreground leading-relaxed">Use our AI-driven platform to organize legal, financial, physical and digital assets.</p>
             </div>
 
             {/* Arrow 2 */}
