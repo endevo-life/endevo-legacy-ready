@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useNavigate } from "react-router-dom";
 import physicalPartners from "@/assets/physical-partners.png";
 import financialPartners from "@/assets/financial-partners.png";
 import digitalPartners from "@/assets/digital-partners.png";
 import legalFrameworkBg from "@/assets/legal-collaboration-bg.png";
 const ServiceProvidersSection = () => {
+  const navigate = useNavigate();
   const {
     elementRef,
     isVisible
@@ -96,7 +98,10 @@ const ServiceProvidersSection = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full">
+          <Button 
+            onClick={() => navigate('/marketplace')}
+            className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full"
+          >
             Get Connected Now
           </Button>
         </div>
