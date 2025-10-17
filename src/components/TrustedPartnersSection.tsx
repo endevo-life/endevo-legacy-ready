@@ -53,7 +53,7 @@ const TrustedPartnersSection = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1 space-y-3">
+                  <div className="flex-1 space-y-4">
                     <h3 className="text-xl md:text-2xl font-bold text-foreground">
                       {partner.name}
                     </h3>
@@ -63,15 +63,15 @@ const TrustedPartnersSection = () => {
                     <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                       {partner.description}
                     </p>
-                  </div>
-                  
-                  {/* CTA Button */}
-                  <div className="flex-shrink-0 w-full md:w-auto">
-                    <Button 
-                      className="w-full md:w-auto bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8"
-                    >
-                      {partner.buttonText}
-                    </Button>
+                    
+                    {/* CTA Button */}
+                    <div className="pt-2">
+                      <Button 
+                        className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8"
+                      >
+                        {partner.buttonText}
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>
