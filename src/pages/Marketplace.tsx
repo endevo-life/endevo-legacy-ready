@@ -1,5 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import TrustedPartnersSection from "@/components/TrustedPartnersSection";
 import heroBackground from "@/assets/marketplace-hero-bg.png";
 
 const Marketplace = () => {
@@ -24,6 +25,9 @@ const Marketplace = () => {
             </div>
           </div>
         </section>
+
+        {/* Trusted Partners Section */}
+        <TrustedPartnersSection />
       </main>
       <Footer />
     </div>
