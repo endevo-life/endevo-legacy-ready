@@ -11,6 +11,7 @@ const partners = [
     tagline: "Your partner through the end-of-life experience",
     description: "Partner with a nationwide network of over 1,700 compassionate professionals dedicated to guiding families through life's most difficult moments. Together, we provide care, clarity, and comfort when it matters most.",
     buttonText: "Partner Now",
+    url: "https://www.altogetherfuneral.com/",
   },
   {
     name: "Prisidio",
@@ -18,6 +19,7 @@ const partners = [
     tagline: "Your Digital Vault. For Life.®",
     description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
     buttonText: "Sign Up",
+    url: "https://www.prisidio.com/endevo",
   },
   {
     name: "Memorial Tribute Legacy",
@@ -25,6 +27,7 @@ const partners = [
     tagline: "Let us carry this with you.",
     description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
     buttonText: "Learn More",
+    url: "https://www.memorial-tribute-legacy.com/",
   },
 ];
 
@@ -67,6 +70,7 @@ const TrustedPartnersSection = () => {
                     {/* CTA Button */}
                     <div className="pt-2">
                       <Button 
+                        onClick={() => window.open(partner.url, '_blank')}
                         className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8"
                       >
                         {partner.buttonText}
