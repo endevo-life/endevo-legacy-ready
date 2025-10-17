@@ -9,7 +9,7 @@ const Marketplace = () => {
       <main>
         {/* Hero Section */}
         <section 
-          className="relative py-32 bg-cover bg-center"
+          className="relative py-16 md:py-20 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBackground})` }}
         >
           <div className="absolute inset-0 bg-brand-navy/70"></div>
