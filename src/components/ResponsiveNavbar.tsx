@@ -40,6 +40,11 @@ const ResponsiveNavbar = () => {
       submenu: []
     },
     {
+      name: "Marketplace",
+      href: "/marketplace",
+      submenu: []
+    },
+    {
       name: "About Us",
       href: "/company",
       submenu: [
