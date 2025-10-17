@@ -49,7 +49,7 @@ const TrustedPartnersSection = () => {
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} logo`}
-                      className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                      className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]"
                     />
                   </div>
                   
