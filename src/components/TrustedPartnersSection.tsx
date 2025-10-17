@@ -46,13 +46,11 @@ const TrustedPartnersSection = () => {
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                   {/* Logo */}
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4">
-                      <img 
-                        src={partner.logo} 
-                        alt={`${partner.name} logo`}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`}
+                      className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                    />
                   </div>
                   
                   {/* Content */}
