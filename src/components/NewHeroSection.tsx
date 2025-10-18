@@ -14,9 +14,13 @@ const NewHeroSection = () => {
     ? "https://apps.apple.com/us/app/my-final-playbook/id6502518647"
     : "https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share";
   
-  return <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{
-    backgroundImage: `url('${heroBackground}')`
-  }}>
+  return <section 
+    ref={elementRef} 
+    className={`relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`} 
+    style={{
+      backgroundImage: `url('${heroBackground}')`
+    }}
+  >
       {/* Subtle overlay for text readability */}
       <div className="absolute inset-0 bg-black/20 animate-[fade-in_3s_cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
       
