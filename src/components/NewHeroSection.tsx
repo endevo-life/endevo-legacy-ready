@@ -73,7 +73,7 @@ const NewHeroSection = () => {
           >
             Listen to the Digital Legacy Podcast
           </a>
-          <a href="/employee-wellness" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+          <a href="/employee-wellness" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 animate-pulse ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
           transitionDelay: isVisible ? '0.9s' : '0s'
         }}>
             Start a Legacy Readiness Employee Wellness Program
