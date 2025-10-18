@@ -8,7 +8,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@DigitalLegacyPodcast" },
     { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/endevo-digitallegacy/posts/?feedView=all" },
-    { icon: Instagram, label: "Instagram", href: "#" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/endevo_digitallegacy/" },
     { icon: Music2, label: "TikTok", href: "https://www.tiktok.com/@endevo_digitallegacy?_t=ZS-90FW0Oec9NB&_r=1" },
     { icon: Facebook, label: "Facebook", href: "#" },
   ];
