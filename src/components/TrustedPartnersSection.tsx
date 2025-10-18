@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Filter } from "lucide-react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
@@ -38,6 +40,48 @@ const TrustedPartnersSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
           Connecting You to Trusted Experts
         </h2>
+        
+        {/* Search and Filter Bar */}
+        <div className="bg-muted/50 rounded-lg p-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 items-center">
+            {/* Search Input */}
+            <div className="flex items-center gap-2 flex-1 w-full sm:w-auto">
+              <Input 
+                placeholder="Search"
+                className="bg-background rounded-full"
+              />
+              <Button 
+                variant="outline" 
+                size="icon"
+                className="rounded-full bg-background shrink-0"
+              >
+                <Filter className="h-4 w-4" />
+              </Button>
+            </div>
+            
+            {/* Category Buttons */}
+            <div className="flex gap-2 w-full sm:w-auto">
+              <Button 
+                variant="outline" 
+                className="rounded-full bg-background flex-1 sm:flex-none"
+              >
+                Physical
+              </Button>
+              <Button 
+                variant="outline" 
+                className="rounded-full bg-background flex-1 sm:flex-none"
+              >
+                Financial
+              </Button>
+              <Button 
+                variant="outline" 
+                className="rounded-full bg-background flex-1 sm:flex-none"
+              >
+                Digital
+              </Button>
+            </div>
+          </div>
+        </div>
         
         <div className="space-y-6">
           {partners.map((partner, index) => (
