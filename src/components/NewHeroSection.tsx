@@ -22,23 +22,23 @@ const NewHeroSection = () => {
       
       {/* Content */}
       <div ref={elementRef as any} className="relative z-10 container max-w-5xl mx-auto px-4 text-center text-white">
-        <h1 className={`font-bold mb-8 transition-all duration-1000 ease-out text-4xl md:text-6xl lg:text-7xl xl:text-8xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+        <h1 className={`font-bold mb-8 transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-4xl md:text-6xl lg:text-7xl xl:text-8xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
         fontFamily: 'serif',
-        transitionDelay: isVisible ? '0.2s' : '0s'
+        transitionDelay: isVisible ? '0.15s' : '0s'
       }}>
           Are you ready for what comes next?
         </h1>
         
-        <p className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-        transitionDelay: isVisible ? '0.4s' : '0s'
+        <p className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+        transitionDelay: isVisible ? '0.3s' : '0s'
       }}>ENDevo educates, project manages and empowers people so their life story, values, and digital footprint are protected, preserved, and passed on with intention.</p>
         
         <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
           <button 
-            className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-300 ease-out mb-12 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mb-12 hover:shadow-xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{
               backgroundColor: '#FF4D00',
-              transitionDelay: isVisible ? '0.6s' : '0s'
+              transitionDelay: isVisible ? '0.45s' : '0s'
             }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
@@ -52,9 +52,9 @@ const NewHeroSection = () => {
             href={appStoreLink}
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-200 ease-in-out hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{
-              transitionDelay: isVisible ? '0.8s' : '0s'
+              transitionDelay: isVisible ? '0.6s' : '0s'
             }}
           >
             Download My Final Playbook App
@@ -63,15 +63,15 @@ const NewHeroSection = () => {
             href="https://digitallegacypodcast.com/" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-150 ease-out hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} 
             style={{
-              transitionDelay: isVisible ? '1s' : '0s'
+              transitionDelay: isVisible ? '0.75s' : '0s'
             }}
           >
             Listen to the Digital Legacy Podcast
           </a>
-          <a href="/employee-wellness" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-150 ease-out hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-          transitionDelay: isVisible ? '1.2s' : '0s'
+          <a href="/employee-wellness" className={`text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+          transitionDelay: isVisible ? '0.9s' : '0s'
         }}>
             Start a Legacy Readiness Employee Wellness Program
           </a>
