@@ -108,12 +108,14 @@ const ResponsiveNavbar = () => {
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:block">
-            <Link
-              to="/contact"
+            <a
+              href="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium"
             >
               Book a Call
-            </Link>
+            </a>
           </div>
 
           {/* Mobile hamburger menu button */}
@@ -148,13 +150,15 @@ const ResponsiveNavbar = () => {
               </Link>
             ))}
             <div className="pt-4 border-t border-border">
-              <Link
-                to="/contact"
+              <a
+                href="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Call
-              </Link>
+              </a>
             </div>
           </div>
         </div>
