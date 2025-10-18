@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -14,6 +15,7 @@ const partners = [
     description: "Partner with a nationwide network of over 1,700 compassionate professionals dedicated to guiding families through life's most difficult moments. Together, we provide care, clarity, and comfort when it matters most.",
     buttonText: "Partner Now",
     url: "https://www.altogetherfuneral.com/",
+    category: "physical" as const,
   },
   {
     name: "Prisidio",
@@ -22,6 +24,7 @@ const partners = [
     description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
     buttonText: "Sign Up",
     url: "https://www.prisidio.com/endevo",
+    category: "digital" as const,
   },
   {
     name: "Memorial Tribute Legacy",
@@ -30,10 +33,17 @@ const partners = [
     description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
     buttonText: "Learn More",
     url: "https://www.memorial-tribute-legacy.com/",
+    category: "physical" as const,
   },
 ];
 
 const TrustedPartnersSection = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const filteredPartners = selectedCategory
+    ? partners.filter(partner => partner.category === selectedCategory)
+    : partners;
+
   return (
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
@@ -64,18 +74,21 @@ const TrustedPartnersSection = () => {
               <Button 
                 variant="outline" 
                 className="rounded-full bg-background flex-1 sm:flex-none"
+                onClick={() => setSelectedCategory(selectedCategory === 'physical' ? null : 'physical')}
               >
                 Physical
               </Button>
               <Button 
                 variant="outline" 
                 className="rounded-full bg-background flex-1 sm:flex-none"
+                onClick={() => setSelectedCategory(selectedCategory === 'financial' ? null : 'financial')}
               >
                 Financial
               </Button>
               <Button 
                 variant="outline" 
                 className="rounded-full bg-background flex-1 sm:flex-none"
+                onClick={() => setSelectedCategory(selectedCategory === 'digital' ? null : 'digital')}
               >
                 Digital
               </Button>
@@ -84,7 +97,7 @@ const TrustedPartnersSection = () => {
         </div>
         
         <div className="space-y-6">
-          {partners.map((partner, index) => (
+          {filteredPartners.map((partner, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
               <CardContent className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
