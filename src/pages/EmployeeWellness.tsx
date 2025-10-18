@@ -56,7 +56,7 @@ const EmployeeWellness = () => {
             >
               <Button 
                 className="bg-[#002147] hover:bg-[#003366] text-white font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300" 
-                onClick={() => window.location.href = 'https://jbigogmrgex.typeform.com/to/qBsak5CQ'}
+                onClick={() => navigate('/plan')}
               >
                 Join the Program
               </Button>
@@ -148,7 +148,7 @@ const EmployeeWellness = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="bg-[#002147] hover:bg-[#003366] text-white font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
-                onClick={() => window.location.href = 'https://jbigogmrgex.typeform.com/to/qBsak5CQ'}
+                onClick={() => navigate('/plan')}
               >
                 Join the Program
               </Button>
