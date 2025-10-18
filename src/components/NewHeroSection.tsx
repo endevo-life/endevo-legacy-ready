@@ -18,7 +18,7 @@ const NewHeroSection = () => {
     backgroundImage: `url('${heroBackground}')`
   }}>
       {/* Subtle overlay for text readability */}
-      <div className="absolute inset-0 bg-black/20 animate-[fade-in_2s_ease-out]"></div>
+      <div className="absolute inset-0 bg-black/20 animate-[fade-in_3s_cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
       
       {/* Content */}
       <div ref={elementRef as any} className="relative z-10 container max-w-5xl mx-auto px-4 text-center text-white">
