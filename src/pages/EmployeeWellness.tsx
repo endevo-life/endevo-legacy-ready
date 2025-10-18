@@ -155,7 +155,7 @@ const EmployeeWellness = () => {
               <Button 
                 variant="outline"
                 className="border-2 font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
-                onClick={() => window.location.href = 'https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH'}
+                onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
               >
                 Schedule a Consultation
               </Button>
