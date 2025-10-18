@@ -42,7 +42,7 @@ const TrustedPartnersSection = () => {
         </h2>
         
         {/* Search and Filter Bar */}
-        <div className="bg-muted/50 rounded-lg p-4 mb-8">
+        <div className="rounded-lg p-4 mb-8">
           <div className="flex flex-col sm:flex-row gap-3 items-center">
             {/* Search Input */}
             <div className="flex items-center gap-2 flex-1 w-full sm:w-auto">
