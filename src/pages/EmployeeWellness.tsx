@@ -69,7 +69,7 @@ const EmployeeWellness = () => {
           <div className="container max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* About the Program Card */}
-              <Card className="shadow-lg">
+              <Card className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
                 <CardHeader>
                   <CardTitle className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: 'serif' }}>
                     About the Program
@@ -88,7 +88,7 @@ const EmployeeWellness = () => {
               </Card>
 
               {/* Why It Matters Card */}
-              <Card className="shadow-lg">
+              <Card className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
                 <CardHeader>
                   <CardTitle className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: 'serif' }}>
                     Why It Matters
