@@ -16,11 +16,11 @@ const Footer = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Solutions", href: "/solution" },
-    { name: "Plan", href: "/plan" },
-    { name: "Company", href: "/company" },
-    { name: "Resources", href: "/resources" },
     { name: "Who We Serve", href: "/who-we-serve" },
+    { name: "Resources", href: "/resources" },
+    { name: "Plan", href: "/plan" },
     { name: "Marketplace", href: "/marketplace" },
+    { name: "About Us", href: "/company" },
   ];
 
   return (
