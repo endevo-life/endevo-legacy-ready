@@ -72,22 +72,22 @@ const TrustedPartnersSection = () => {
             {/* Category Buttons */}
             <div className="flex gap-2 w-full sm:w-auto">
               <Button 
-                variant="outline" 
-                className="rounded-full bg-background flex-1 sm:flex-none"
+                variant={selectedCategory === 'physical' ? 'default' : 'outline'}
+                className="rounded-full flex-1 sm:flex-none"
                 onClick={() => setSelectedCategory(selectedCategory === 'physical' ? null : 'physical')}
               >
                 Physical
               </Button>
               <Button 
-                variant="outline" 
-                className="rounded-full bg-background flex-1 sm:flex-none"
+                variant={selectedCategory === 'financial' ? 'default' : 'outline'}
+                className="rounded-full flex-1 sm:flex-none"
                 onClick={() => setSelectedCategory(selectedCategory === 'financial' ? null : 'financial')}
               >
                 Financial
               </Button>
               <Button 
-                variant="outline" 
-                className="rounded-full bg-background flex-1 sm:flex-none"
+                variant={selectedCategory === 'digital' ? 'default' : 'outline'}
+                className="rounded-full flex-1 sm:flex-none"
                 onClick={() => setSelectedCategory(selectedCategory === 'digital' ? null : 'digital')}
               >
                 Digital
