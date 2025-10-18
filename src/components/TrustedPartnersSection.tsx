@@ -38,11 +38,19 @@ const partners = [
 ];
 
 const TrustedPartnersSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
-  const filteredPartners = selectedCategory
-    ? partners.filter(partner => partner.category === selectedCategory)
+  const filteredPartners = selectedCategories.length > 0
+    ? partners.filter(partner => selectedCategories.includes(partner.category))
     : partners;
+
+  const toggleCategory = (category: string) => {
+    setSelectedCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
 
   return (
     <section className="py-16 md:py-20 bg-muted/30">
@@ -72,28 +80,28 @@ const TrustedPartnersSection = () => {
             {/* Category Buttons */}
             <div className="flex gap-2 w-full sm:w-auto">
               <Button 
-                variant={selectedCategory === 'physical' ? 'default' : 'outline'}
+                variant={selectedCategories.includes('physical') ? 'default' : 'outline'}
                 className="rounded-full flex-1 sm:flex-none"
-                onClick={() => setSelectedCategory(selectedCategory === 'physical' ? null : 'physical')}
+                onClick={() => toggleCategory('physical')}
               >
                 Physical
-                {selectedCategory === 'physical' && <X className="ml-2 h-4 w-4" />}
+                {selectedCategories.includes('physical') && <X className="ml-2 h-4 w-4" />}
               </Button>
               <Button 
-                variant={selectedCategory === 'financial' ? 'default' : 'outline'}
+                variant={selectedCategories.includes('financial') ? 'default' : 'outline'}
                 className="rounded-full flex-1 sm:flex-none"
-                onClick={() => setSelectedCategory(selectedCategory === 'financial' ? null : 'financial')}
+                onClick={() => toggleCategory('financial')}
               >
                 Financial
-                {selectedCategory === 'financial' && <X className="ml-2 h-4 w-4" />}
+                {selectedCategories.includes('financial') && <X className="ml-2 h-4 w-4" />}
               </Button>
               <Button 
-                variant={selectedCategory === 'digital' ? 'default' : 'outline'}
+                variant={selectedCategories.includes('digital') ? 'default' : 'outline'}
                 className="rounded-full flex-1 sm:flex-none"
-                onClick={() => setSelectedCategory(selectedCategory === 'digital' ? null : 'digital')}
+                onClick={() => toggleCategory('digital')}
               >
                 Digital
-                {selectedCategory === 'digital' && <X className="ml-2 h-4 w-4" />}
+                {selectedCategories.includes('digital') && <X className="ml-2 h-4 w-4" />}
               </Button>
             </div>
           </div>
