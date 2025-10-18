@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Filter } from "lucide-react";
+import { Filter, X } from "lucide-react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
@@ -77,6 +77,7 @@ const TrustedPartnersSection = () => {
                 onClick={() => setSelectedCategory(selectedCategory === 'physical' ? null : 'physical')}
               >
                 Physical
+                {selectedCategory === 'physical' && <X className="ml-2 h-4 w-4" />}
               </Button>
               <Button 
                 variant={selectedCategory === 'financial' ? 'default' : 'outline'}
@@ -84,6 +85,7 @@ const TrustedPartnersSection = () => {
                 onClick={() => setSelectedCategory(selectedCategory === 'financial' ? null : 'financial')}
               >
                 Financial
+                {selectedCategory === 'financial' && <X className="ml-2 h-4 w-4" />}
               </Button>
               <Button 
                 variant={selectedCategory === 'digital' ? 'default' : 'outline'}
@@ -91,6 +93,7 @@ const TrustedPartnersSection = () => {
                 onClick={() => setSelectedCategory(selectedCategory === 'digital' ? null : 'digital')}
               >
                 Digital
+                {selectedCategory === 'digital' && <X className="ml-2 h-4 w-4" />}
               </Button>
             </div>
           </div>
