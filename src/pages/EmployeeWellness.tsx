@@ -110,7 +110,7 @@ const EmployeeWellness = () => {
         </section>
 
         {/* Core Pillars Section */}
-        <section className="py-12 px-4">
+        <section className={`py-12 px-4 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <div className="container max-w-7xl mx-auto">
             <div className="grid grid-cols-12 gap-8 items-center">
               {/* Title - 25% */}
@@ -136,7 +136,7 @@ const EmployeeWellness = () => {
         </section>
 
         {/* Get Involved Section */}
-        <section className="py-20 px-4 bg-muted/30">
+        <section className={`py-20 px-4 bg-muted/30 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <div className="container max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold text-orange-600" style={{ fontFamily: 'serif' }}>
               Get Involved
