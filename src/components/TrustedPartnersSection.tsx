@@ -39,10 +39,20 @@ const partners = [
 
 const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredPartners = selectedCategories.length > 0
-    ? partners.filter(partner => selectedCategories.includes(partner.category))
-    : partners;
+  const filteredPartners = partners.filter(partner => {
+    // Filter by category
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(partner.category);
+    
+    // Filter by search query
+    const matchesSearch = searchQuery === "" || 
+      partner.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      partner.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      partner.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesCategory && matchesSearch;
+  });
 
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev => 
@@ -67,6 +77,8 @@ const TrustedPartnersSection = () => {
               <Input 
                 placeholder="Search"
                 className="bg-background rounded-full"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
               <Button 
                 variant="outline" 
