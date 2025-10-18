@@ -15,17 +15,16 @@ const NewHeroSection = () => {
     : "https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share";
   
   return <section 
-    ref={elementRef} 
-    className={`relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`} 
+    className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed" 
     style={{
       backgroundImage: `url('${heroBackground}')`
     }}
   >
       {/* Subtle overlay for text readability */}
-      <div className="absolute inset-0 bg-black/20 animate-[fade-in_3s_cubic-bezier(0.25,0.46,0.45,0.94)]"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
       
       {/* Content */}
-      <div ref={elementRef as any} className="relative z-10 container max-w-5xl mx-auto px-4 text-center text-white">
+      <div ref={elementRef as any} className={`relative z-10 container max-w-5xl mx-auto px-4 text-center text-white transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
         <h1 className={`font-bold mb-8 transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-4xl md:text-6xl lg:text-7xl xl:text-8xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
         fontFamily: 'serif',
         transitionDelay: isVisible ? '0.15s' : '0s'
