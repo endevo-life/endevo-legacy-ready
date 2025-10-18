@@ -20,6 +20,7 @@ const Footer = () => {
     { name: "Company", href: "/company" },
     { name: "Resources", href: "/resources" },
     { name: "Who We Serve", href: "/who-we-serve" },
+    { name: "Marketplace", href: "/marketplace" },
   ];
 
   return (
