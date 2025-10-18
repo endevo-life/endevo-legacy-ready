@@ -66,7 +66,7 @@ const EmployeeWellness = () => {
 
         {/* About the Program and Why It Matters Section */}
         <section className="py-20 px-4 bg-muted/30">
-          <div className="container max-w-7xl mx-auto">
+          <div className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
             <div className="grid md:grid-cols-2 gap-8">
               {/* About the Program Card */}
               <Card className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
