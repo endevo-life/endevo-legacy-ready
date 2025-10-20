@@ -31,34 +31,27 @@ const partners = [{
   url: "https://www.memorial-tribute-legacy.com/",
   category: "physical" as const
 }];
-const categoryInfo = [
-  {
-    name: "Beliefs",
-    description: "The foundation of every decision, your values, wishes, and priorities.",
-    category: "beliefs" as const
-  },
-  {
-    name: "Legal",
-    description: "Protect your rights and ensure your documents reflect your intentions.",
-    category: "legal" as const
-  },
-  {
-    name: "Financial",
-    description: "Secure your assets and provide clarity for future generations.",
-    category: "financial" as const
-  },
-  {
-    name: "Physical",
-    description: "Address care, health, and personal needs with confidence.",
-    category: "physical" as const
-  },
-  {
-    name: "Digital",
-    description: "Organize and safeguard your online presence and digital assets.",
-    category: "digital" as const
-  }
-];
-
+const categoryInfo = [{
+  name: "Beliefs",
+  description: "The foundation of every decision, your values, wishes, and priorities.",
+  category: "beliefs" as const
+}, {
+  name: "Legal",
+  description: "Protect your rights and ensure your documents reflect your intentions.",
+  category: "legal" as const
+}, {
+  name: "Financial",
+  description: "Secure your assets and provide clarity for future generations.",
+  category: "financial" as const
+}, {
+  name: "Physical",
+  description: "Address care, health, and personal needs with confidence.",
+  category: "physical" as const
+}, {
+  name: "Digital",
+  description: "Organize and safeguard your online presence and digital assets.",
+  category: "digital" as const
+}];
 const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -80,16 +73,7 @@ const TrustedPartnersSection = () => {
         </h2>
         
         {/* Category Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {['Legal', 'Financial', 'Physical', 'Digital', 'Beliefs'].map(category => {
-          const categoryLower = category.toLowerCase();
-          const isSelected = selectedCategories.includes(categoryLower);
-          return <Button key={category} variant={isSelected ? 'default' : 'outline'} className="rounded-full" onClick={() => toggleCategory(categoryLower)}>
-                {category}
-                {isSelected && <X className="ml-2 h-4 w-4" />}
-              </Button>;
-        })}
-        </div>
+        
         
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
@@ -100,8 +84,7 @@ const TrustedPartnersSection = () => {
 
         {/* Category Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-          {categoryInfo.map((category) => (
-            <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
+          {categoryInfo.map(category => <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   {category.name}
@@ -110,8 +93,7 @@ const TrustedPartnersSection = () => {
                   {category.description}
                 </p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
         
         <div className="space-y-6">
