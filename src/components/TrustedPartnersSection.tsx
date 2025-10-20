@@ -83,11 +83,11 @@ const TrustedPartnersSection = () => {
         </h2>
 
         {/* Browse by category heading */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-center gap-4 mb-3">
           <h3 className="text-xl md:text-2xl text-muted-foreground">
             Browse by category
           </h3>
-          <Button variant="outline" className="hidden md:flex">
+          <Button variant="outline">
             View All Experts
           </Button>
         </div>
