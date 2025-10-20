@@ -6,6 +6,7 @@ import { Filter, X } from "lucide-react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
+import beliefsIcon from "@/assets/beliefs-icon.png";
 const partners = [{
   name: "Altogether",
   logo: altogetherLogo,
@@ -34,7 +35,8 @@ const partners = [{
 const categoryInfo = [{
   name: "Beliefs",
   description: "The foundation of every decision, your values, wishes, and priorities.",
-  category: "beliefs" as const
+  category: "beliefs" as const,
+  icon: beliefsIcon
 }, {
   name: "Legal",
   description: "Protect your rights and ensure your documents reflect your intentions.",
@@ -86,6 +88,11 @@ const TrustedPartnersSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
           {categoryInfo.map(category => <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
               <CardContent className="p-6">
+                {category.icon && (
+                  <div className="flex justify-center mb-4">
+                    <img src={category.icon} alt={category.name} className="w-16 h-16 object-contain" />
+                  </div>
+                )}
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   {category.name}
                 </h3>
