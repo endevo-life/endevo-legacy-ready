@@ -82,6 +82,14 @@ const TrustedPartnersSection = () => {
           Connecting You to Trusted Experts
         </h2>
 
+        {/* Browse by category heading */}
+        <h3 className="text-xl md:text-2xl text-center mb-3 text-muted-foreground">
+          Browse by category
+        </h3>
+        <p className="text-center text-muted-foreground mb-8">
+          Filter partners by selecting the categories that matter most to you
+        </p>
+
         {/* Category Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
           {categoryInfo.map(category => <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
@@ -98,16 +106,6 @@ const TrustedPartnersSection = () => {
               </CardContent>
             </Card>)}
         </div>
-        
-        {/* Subtitle */}
-        
-        
-        {/* Browse by category heading */}
-        <h3 className="text-xl md:text-2xl font-semibold text-center mb-3 text-foreground">
-          Browse by category
-        </h3>
-        
-        
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
           <div className="flex items-center gap-2">
