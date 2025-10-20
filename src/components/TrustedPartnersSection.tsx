@@ -65,57 +65,45 @@ const TrustedPartnersSection = () => {
   return (
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
           Connecting You to Trusted Experts
         </h2>
         
-        {/* Search and Filter Bar */}
-        <div className="rounded-lg p-4 mb-8">
-          <div className="flex flex-col sm:flex-row gap-3 items-center">
-            {/* Search Input */}
-            <div className="flex items-center gap-2 flex-1 w-full sm:w-auto">
-              <Input 
-                placeholder="Search"
-                className="bg-background rounded-full"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
+        {/* Category Buttons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {['Legal', 'Financial', 'Physical', 'Digital', 'Beliefs'].map((category) => {
+            const categoryLower = category.toLowerCase();
+            const isSelected = selectedCategories.includes(categoryLower);
+            return (
               <Button 
-                variant="outline" 
-                size="icon"
-                className="rounded-full bg-background shrink-0"
+                key={category}
+                variant={isSelected ? 'default' : 'outline'}
+                className="rounded-full"
+                onClick={() => toggleCategory(categoryLower)}
               >
-                <Filter className="h-4 w-4" />
+                {category}
+                {isSelected && <X className="ml-2 h-4 w-4" />}
               </Button>
-            </div>
-            
-            {/* Category Buttons */}
-            <div className="flex gap-2 w-full sm:w-auto">
-              <Button 
-                variant={selectedCategories.includes('physical') ? 'default' : 'outline'}
-                className="rounded-full flex-1 sm:flex-none"
-                onClick={() => toggleCategory('physical')}
-              >
-                Physical
-                {selectedCategories.includes('physical') && <X className="ml-2 h-4 w-4" />}
-              </Button>
-              <Button 
-                variant={selectedCategories.includes('financial') ? 'default' : 'outline'}
-                className="rounded-full flex-1 sm:flex-none"
-                onClick={() => toggleCategory('financial')}
-              >
-                Financial
-                {selectedCategories.includes('financial') && <X className="ml-2 h-4 w-4" />}
-              </Button>
-              <Button 
-                variant={selectedCategories.includes('digital') ? 'default' : 'outline'}
-                className="rounded-full flex-1 sm:flex-none"
-                onClick={() => toggleCategory('digital')}
-              >
-                Digital
-                {selectedCategories.includes('digital') && <X className="ml-2 h-4 w-4" />}
-              </Button>
-            </div>
+            );
+          })}
+        </div>
+        
+        {/* Search Bar */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <div className="flex items-center gap-2">
+            <Input 
+              placeholder="Search"
+              className="bg-background rounded-full"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <Button 
+              variant="outline" 
+              size="icon"
+              className="rounded-full bg-background shrink-0"
+            >
+              <Filter className="h-4 w-4" />
+            </Button>
           </div>
         </div>
         
