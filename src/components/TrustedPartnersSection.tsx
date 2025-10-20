@@ -75,19 +75,9 @@ const TrustedPartnersSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
           Connecting You to Trusted Experts
         </h2>
-        
-        {/* Category Buttons */}
-        
-        
-        {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-12">
-          <div className="flex items-center gap-2">
-            <Input placeholder="Search" className="bg-background rounded-full" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
-          </div>
-        </div>
 
         {/* Category Information Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
           {categoryInfo.map(category => <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 {category.icon && (
@@ -103,6 +93,13 @@ const TrustedPartnersSection = () => {
                 </p>
               </CardContent>
             </Card>)}
+        </div>
+        
+        {/* Search Bar */}
+        <div className="max-w-2xl mx-auto mb-12">
+          <div className="flex items-center gap-2">
+            <Input placeholder="Search" className="bg-background rounded-full" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
+          </div>
         </div>
         
         <div className="space-y-6">
