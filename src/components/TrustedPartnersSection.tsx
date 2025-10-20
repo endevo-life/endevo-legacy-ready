@@ -9,6 +9,7 @@ import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
 import beliefsIcon from "@/assets/beliefs-icon.png";
 import legalIcon from "@/assets/legal-icon.png";
 import financialIcon from "@/assets/financial-icon.png";
+import physicalIcon from "@/assets/physical-icon.png";
 const partners = [{
   name: "Altogether",
   logo: altogetherLogo,
@@ -52,7 +53,8 @@ const categoryInfo = [{
 }, {
   name: "Physical",
   description: "Address care, health, and personal needs with confidence.",
-  category: "physical" as const
+  category: "physical" as const,
+  icon: physicalIcon
 }, {
   name: "Digital",
   description: "Organize and safeguard your online presence and digital assets.",
