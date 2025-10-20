@@ -7,6 +7,7 @@ import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
 import beliefsIcon from "@/assets/beliefs-icon.png";
+import legalIcon from "@/assets/legal-icon.png";
 const partners = [{
   name: "Altogether",
   logo: altogetherLogo,
@@ -40,7 +41,8 @@ const categoryInfo = [{
 }, {
   name: "Legal",
   description: "Protect your rights and ensure your documents reflect your intentions.",
-  category: "legal" as const
+  category: "legal" as const,
+  icon: legalIcon
 }, {
   name: "Financial",
   description: "Secure your assets and provide clarity for future generations.",
