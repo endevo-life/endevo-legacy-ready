@@ -10,6 +10,7 @@ import beliefsIcon from "@/assets/beliefs-icon.png";
 import legalIcon from "@/assets/legal-icon.png";
 import financialIcon from "@/assets/financial-icon.png";
 import physicalIcon from "@/assets/physical-icon.png";
+import digitalIcon from "@/assets/digital-icon.png";
 const partners = [{
   name: "Altogether",
   logo: altogetherLogo,
@@ -58,7 +59,8 @@ const categoryInfo = [{
 }, {
   name: "Digital",
   description: "Organize and safeguard your online presence and digital assets.",
-  category: "digital" as const
+  category: "digital" as const,
+  icon: digitalIcon
 }];
 const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
