@@ -106,6 +106,11 @@ const TrustedPartnersSection = () => {
           Connecting You to Trusted Experts
         </h3>
         
+        {/* Browse by category heading */}
+        <h3 className="text-xl md:text-2xl font-semibold text-center mb-4 text-foreground">
+          Browse by category
+        </h3>
+        
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
           <div className="flex items-center gap-2">
