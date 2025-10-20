@@ -103,7 +103,12 @@ const TrustedPartnersSection = () => {
         
         
         {/* Browse by category heading */}
-        
+        <h3 className="text-xl md:text-2xl font-semibold text-center mb-3 text-foreground">
+          Browse by category
+        </h3>
+        <p className="text-center text-foreground/70 mb-8 max-w-2xl mx-auto">
+          Filter partners by selecting the categories that matter most to you
+        </p>
         
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
