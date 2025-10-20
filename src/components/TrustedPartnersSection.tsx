@@ -95,7 +95,7 @@ const TrustedPartnersSection = () => {
           {categoryInfo.map(category => <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 {category.icon && <div className="flex justify-center mb-4">
-                    <img src={category.icon} alt={category.name} className="w-16 h-16 object-contain" />
+                    <img src={category.icon} alt={category.name} className="w-12 h-12 object-contain" />
                   </div>}
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   {category.name}
