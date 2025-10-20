@@ -10,7 +10,7 @@ import beliefsIcon from "@/assets/beliefs-icon-new.png";
 import legalIcon from "@/assets/legal-icon-new.png";
 import financialIcon from "@/assets/financial-icon-new.png";
 import physicalIcon from "@/assets/physical-icon-new.png";
-import digitalIcon from "@/assets/digital-icon.png";
+import digitalIcon from "@/assets/digital-icon-new.png";
 const partners = [{
   name: "Altogether",
   logo: altogetherLogo,
