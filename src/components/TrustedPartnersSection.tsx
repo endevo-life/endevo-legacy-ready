@@ -91,9 +91,7 @@ const TrustedPartnersSection = () => {
             View All Experts
           </Button>
         </div>
-        <p className="text-center text-muted-foreground mb-8">
-          Filter partners by selecting the categories that matter most to you
-        </p>
+        
 
         {/* Category Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
