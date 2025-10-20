@@ -7,7 +7,7 @@ import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
 import beliefsIcon from "@/assets/beliefs-icon-new.png";
-import legalIcon from "@/assets/legal-icon.png";
+import legalIcon from "@/assets/legal-icon-new.png";
 import financialIcon from "@/assets/financial-icon.png";
 import physicalIcon from "@/assets/physical-icon.png";
 import digitalIcon from "@/assets/digital-icon.png";
