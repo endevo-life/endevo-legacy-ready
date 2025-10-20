@@ -31,6 +31,34 @@ const partners = [{
   url: "https://www.memorial-tribute-legacy.com/",
   category: "physical" as const
 }];
+const categoryInfo = [
+  {
+    name: "Beliefs",
+    description: "The foundation of every decision, your values, wishes, and priorities.",
+    category: "beliefs" as const
+  },
+  {
+    name: "Legal",
+    description: "Protect your rights and ensure your documents reflect your intentions.",
+    category: "legal" as const
+  },
+  {
+    name: "Financial",
+    description: "Secure your assets and provide clarity for future generations.",
+    category: "financial" as const
+  },
+  {
+    name: "Physical",
+    description: "Address care, health, and personal needs with confidence.",
+    category: "physical" as const
+  },
+  {
+    name: "Digital",
+    description: "Organize and safeguard your online presence and digital assets.",
+    category: "digital" as const
+  }
+];
+
 const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -64,11 +92,26 @@ const TrustedPartnersSection = () => {
         </div>
         
         {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-8">
+        <div className="max-w-2xl mx-auto mb-12">
           <div className="flex items-center gap-2">
             <Input placeholder="Search" className="bg-background rounded-full" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
-            
           </div>
+        </div>
+
+        {/* Category Information Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          {categoryInfo.map((category) => (
+            <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-foreground mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-sm text-foreground/70 leading-relaxed">
+                  {category.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
         
         <div className="space-y-6">
