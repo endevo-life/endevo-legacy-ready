@@ -83,9 +83,14 @@ const TrustedPartnersSection = () => {
         </h2>
 
         {/* Browse by category heading */}
-        <h3 className="text-xl md:text-2xl text-center mb-3 text-muted-foreground">
-          Browse by category
-        </h3>
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-xl md:text-2xl text-muted-foreground">
+            Browse by category
+          </h3>
+          <Button variant="outline" className="hidden md:flex">
+            View All Experts
+          </Button>
+        </div>
         <p className="text-center text-muted-foreground mb-8">
           Filter partners by selecting the categories that matter most to you
         </p>
