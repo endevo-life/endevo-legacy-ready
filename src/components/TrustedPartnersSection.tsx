@@ -6,64 +6,46 @@ import { Filter, X } from "lucide-react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
-
-const partners = [
-  {
-    name: "Altogether",
-    logo: altogetherLogo,
-    tagline: "Your partner through the end-of-life experience",
-    description: "Partner with a nationwide network of over 1,700 compassionate professionals dedicated to guiding families through life's most difficult moments. Together, we provide care, clarity, and comfort when it matters most.",
-    buttonText: "Partner Now",
-    url: "https://www.altogetherfuneral.com/",
-    category: "physical" as const,
-  },
-  {
-    name: "Prisidio",
-    logo: prisidioLogo,
-    tagline: "Your Digital Vault. For Life.®",
-    description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
-    buttonText: "Sign Up",
-    url: "https://www.prisidio.com/endevo",
-    category: "digital" as const,
-  },
-  {
-    name: "Memorial Tribute Legacy",
-    logo: memorialTributeLogo,
-    tagline: "Let us carry this with you.",
-    description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
-    buttonText: "Learn More",
-    url: "https://www.memorial-tribute-legacy.com/",
-    category: "physical" as const,
-  },
-];
-
+const partners = [{
+  name: "Altogether",
+  logo: altogetherLogo,
+  tagline: "Your partner through the end-of-life experience",
+  description: "Partner with a nationwide network of over 1,700 compassionate professionals dedicated to guiding families through life's most difficult moments. Together, we provide care, clarity, and comfort when it matters most.",
+  buttonText: "Partner Now",
+  url: "https://www.altogetherfuneral.com/",
+  category: "physical" as const
+}, {
+  name: "Prisidio",
+  logo: prisidioLogo,
+  tagline: "Your Digital Vault. For Life.®",
+  description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
+  buttonText: "Sign Up",
+  url: "https://www.prisidio.com/endevo",
+  category: "digital" as const
+}, {
+  name: "Memorial Tribute Legacy",
+  logo: memorialTributeLogo,
+  tagline: "Let us carry this with you.",
+  description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
+  buttonText: "Learn More",
+  url: "https://www.memorial-tribute-legacy.com/",
+  category: "physical" as const
+}];
 const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-
   const filteredPartners = partners.filter(partner => {
     // Filter by category
     const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(partner.category);
-    
+
     // Filter by search query
-    const matchesSearch = searchQuery === "" || 
-      partner.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      partner.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      partner.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
+    const matchesSearch = searchQuery === "" || partner.name.toLowerCase().includes(searchQuery.toLowerCase()) || partner.tagline.toLowerCase().includes(searchQuery.toLowerCase()) || partner.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   const toggleCategory = (category: string) => {
-    setSelectedCategories(prev => 
-      prev.includes(category) 
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
+    setSelectedCategories(prev => prev.includes(category) ? prev.filter(c => c !== category) : [...prev, category]);
   };
-
-  return (
-    <section className="py-16 md:py-20 bg-muted/30">
+  return <section className="py-16 md:py-20 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
           Connecting You to Trusted Experts
@@ -71,54 +53,31 @@ const TrustedPartnersSection = () => {
         
         {/* Category Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {['Legal', 'Financial', 'Physical', 'Digital', 'Beliefs'].map((category) => {
-            const categoryLower = category.toLowerCase();
-            const isSelected = selectedCategories.includes(categoryLower);
-            return (
-              <Button 
-                key={category}
-                variant={isSelected ? 'default' : 'outline'}
-                className="rounded-full"
-                onClick={() => toggleCategory(categoryLower)}
-              >
+          {['Legal', 'Financial', 'Physical', 'Digital', 'Beliefs'].map(category => {
+          const categoryLower = category.toLowerCase();
+          const isSelected = selectedCategories.includes(categoryLower);
+          return <Button key={category} variant={isSelected ? 'default' : 'outline'} className="rounded-full" onClick={() => toggleCategory(categoryLower)}>
                 {category}
                 {isSelected && <X className="ml-2 h-4 w-4" />}
-              </Button>
-            );
-          })}
+              </Button>;
+        })}
         </div>
         
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-8">
           <div className="flex items-center gap-2">
-            <Input 
-              placeholder="Search"
-              className="bg-background rounded-full"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <Button 
-              variant="outline" 
-              size="icon"
-              className="rounded-full bg-background shrink-0"
-            >
-              <Filter className="h-4 w-4" />
-            </Button>
+            <Input placeholder="Search" className="bg-background rounded-full" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
+            
           </div>
         </div>
         
         <div className="space-y-6">
-          {filteredPartners.map((partner, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+          {filteredPartners.map((partner, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
               <CardContent className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                   {/* Logo */}
                   <div className="flex-shrink-0">
-                    <img 
-                      src={partner.logo} 
-                      alt={`${partner.name} logo`}
-                      className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]"
-                    />
+                    <img src={partner.logo} alt={`${partner.name} logo`} className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]" />
                   </div>
                   
                   {/* Content */}
@@ -135,22 +94,16 @@ const TrustedPartnersSection = () => {
                     
                     {/* CTA Button */}
                     <div className="pt-2">
-                      <Button 
-                        onClick={() => window.open(partner.url, '_blank')}
-                        className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8"
-                      >
+                      <Button onClick={() => window.open(partner.url, '_blank')} className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8">
                         {partner.buttonText}
                       </Button>
                     </div>
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TrustedPartnersSection;
