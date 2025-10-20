@@ -6,7 +6,7 @@ import { Filter, X } from "lucide-react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
-import beliefsIcon from "@/assets/beliefs-icon.png";
+import beliefsIcon from "@/assets/beliefs-icon-new.png";
 import legalIcon from "@/assets/legal-icon.png";
 import financialIcon from "@/assets/financial-icon.png";
 import physicalIcon from "@/assets/physical-icon.png";
