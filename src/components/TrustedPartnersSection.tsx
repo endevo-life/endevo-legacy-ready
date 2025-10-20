@@ -86,11 +86,9 @@ const TrustedPartnersSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
           {categoryInfo.map(category => <Card key={category.category} className="bg-card hover:shadow-md transition-shadow">
               <CardContent className="p-6">
-                {category.icon && (
-                  <div className="flex justify-center mb-4">
+                {category.icon && <div className="flex justify-center mb-4">
                     <img src={category.icon} alt={category.name} className="w-16 h-16 object-contain" />
-                  </div>
-                )}
+                  </div>}
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   {category.name}
                 </h3>
@@ -102,14 +100,10 @@ const TrustedPartnersSection = () => {
         </div>
         
         {/* Subtitle */}
-        <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-foreground">
-          Connecting You to Trusted Experts
-        </h3>
+        
         
         {/* Browse by category heading */}
-        <h3 className="text-xl md:text-2xl font-semibold text-center mb-4 text-foreground">
-          Browse by category
-        </h3>
+        
         
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
