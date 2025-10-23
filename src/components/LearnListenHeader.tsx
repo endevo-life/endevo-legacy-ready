@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useScrollDirection } from "@/hooks/use-scroll-direction";
 
 const LearnListenHeader = () => {
+  const isHeaderVisible = useScrollDirection();
   const navItems = [
     { name: "Podcast", href: "/podcast" },
     { name: "Video", href: "/video" },
@@ -9,7 +11,9 @@ const LearnListenHeader = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b animate-fade-in">
+    <header className={`sticky top-0 z-50 w-full bg-white border-b animate-fade-in transition-transform duration-300 ${
+      isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center animate-fade-in">
