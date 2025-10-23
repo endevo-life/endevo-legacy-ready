@@ -17,7 +17,7 @@ const LearnAndListen = () => {
       
       {/* Hero Section */}
       <section 
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat pt-16"
         style={{
           backgroundImage: `url('/lovable-uploads/e1962475-57a2-4dd5-ab64-3d261596e3cd.png')`
         }}

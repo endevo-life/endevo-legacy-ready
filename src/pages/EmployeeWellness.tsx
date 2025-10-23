@@ -15,7 +15,7 @@ const EmployeeWellness = () => {
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
-      <main>
+      <main className="pt-16">
         {/* Back Button - Top */}
         <div className="p-0 m-0">
           <Button

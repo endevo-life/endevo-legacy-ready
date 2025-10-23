@@ -7,7 +7,7 @@ const Marketplace = () => {
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
-      <main>
+      <main className="pt-16">
         {/* Hero Section */}
         <section 
           className="relative py-16 md:py-20 bg-cover bg-center"

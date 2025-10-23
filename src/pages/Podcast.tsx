@@ -6,7 +6,7 @@ const Podcast = () => {
     <div className="min-h-screen bg-background">
       <ResponsiveNavbar />
       
-      <main className="container max-w-7xl mx-auto px-4 py-12">
+      <main className="container max-w-7xl mx-auto px-4 py-12 pt-28">
         <div className="animate-fade-in">
           <h1 className="text-4xl font-bold text-foreground mb-8">Podcast</h1>
           <div className="prose prose-lg max-w-none">

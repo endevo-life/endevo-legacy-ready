@@ -9,7 +9,7 @@ const LearnListenHeader = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b animate-fade-in">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white border-b animate-fade-in">
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center animate-fade-in">

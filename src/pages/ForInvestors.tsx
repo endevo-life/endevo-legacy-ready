@@ -14,7 +14,7 @@ const ForInvestors = () => {
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
-      <main className="pt-8 pb-20">
+      <main className="pt-8 pb-20 pt-24">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Go Back Button */}
           <Button

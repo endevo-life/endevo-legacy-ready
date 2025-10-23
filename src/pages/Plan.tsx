@@ -13,7 +13,7 @@ const Plan = () => {
       <ResponsiveNavbar />
       
       {/* Pricing Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background pt-36">
         <div className="container max-w-6xl mx-auto px-4 text-center">
           <div 
             ref={headerRef as any}

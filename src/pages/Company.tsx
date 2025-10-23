@@ -43,7 +43,7 @@ const Company = () => {
       <ResponsiveNavbar />
       
       {/* New Hero Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background pt-36">
         <div className="container max-w-6xl mx-auto px-4">
           <div ref={newHeroRef as any} className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Left Column - Text Content */}
