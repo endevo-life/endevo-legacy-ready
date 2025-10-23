@@ -94,10 +94,10 @@ const TrustedPartnersSection = () => {
         
 
         {/* Category Information Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
+        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-3 mb-8">
           {categoryInfo.map(category => <Card key={category.category} className={`cursor-pointer transition-all aspect-square flex items-center justify-center ${selectedCategories.includes(category.category) ? 'ring-2 ring-brand-orange bg-brand-orange/10' : 'bg-card hover:shadow-md'}`} onClick={() => toggleCategory(category.category)}>
-              <CardContent className="px-3 py-2">
-                <h3 className="text-sm font-bold text-foreground text-center">
+              <CardContent className="px-2 py-1.5">
+                <h3 className="text-xs font-bold text-foreground text-center leading-tight">
                   {category.name}
                 </h3>
               </CardContent>
