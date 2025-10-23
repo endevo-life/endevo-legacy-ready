@@ -11,6 +11,11 @@ import legalIcon from "@/assets/legal-icon-new.png";
 import financialIcon from "@/assets/financial-icon-new.png";
 import physicalIcon from "@/assets/physical-icon-new.png";
 import digitalIcon from "@/assets/digital-icon-new.png";
+import categoryBeliefsIcon from "@/assets/category-beliefs-icon.png";
+import categoryLegalIcon from "@/assets/category-legal-icon.png";
+import categoryFinancialIcon from "@/assets/category-financial-icon.png";
+import categoryPhysicalIcon from "@/assets/category-physical-icon.png";
+import categoryDigitalIcon from "@/assets/category-digital-icon.png";
 const partners = [{
   name: "Altogether",
   logo: altogetherLogo,
@@ -78,9 +83,34 @@ const TrustedPartnersSection = () => {
   };
   return <section className="py-16 md:py-20 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
           Connecting You to Trusted Experts
         </h2>
+
+        {/* Category Icon Cards - New Horizontal Layout */}
+        <div className="flex justify-center gap-6 mb-16 flex-wrap">
+          {[
+            { icon: categoryBeliefsIcon, label: "Beliefs" },
+            { icon: categoryLegalIcon, label: "Legal" },
+            { icon: categoryFinancialIcon, label: "Financial" },
+            { icon: categoryPhysicalIcon, label: "Physical" },
+            { icon: categoryDigitalIcon, label: "Digital" }
+          ].map((item, index) => (
+            <div 
+              key={index}
+              className="bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow p-8 flex flex-col items-center justify-center w-[140px] h-[140px]"
+            >
+              <img 
+                src={item.icon} 
+                alt={`${item.label} icon`}
+                className="w-16 h-16 mb-3 object-contain"
+              />
+              <span className="text-sm font-medium text-foreground">
+                {item.label}
+              </span>
+            </div>
+          ))}
+        </div>
 
         {/* Browse by category heading */}
         <div className="flex items-center justify-center gap-4 mb-3">
