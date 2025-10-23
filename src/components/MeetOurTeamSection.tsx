@@ -100,8 +100,8 @@ const MeetOurTeamSection = () => {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg lg:hidden" />
-            <CarouselNext className="right-0 md:-right-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg lg:hidden" />
+            <CarouselPrevious className="left-0 md:-left-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg" />
+            <CarouselNext className="right-0 md:-right-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg" />
           </Carousel>
         </div>
       </div>
