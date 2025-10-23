@@ -1,57 +1,50 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const useScrollDirection = () => {
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrollThreshold] = useState(5); // Minimum pixels to trigger hide/show
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
     let ticking = false;
 
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-          
-          // Only apply on mobile (screen width <= 1024px)
-          if (window.innerWidth > 1024) {
-            setIsVisible(true);
-            ticking = false;
-            return;
-          }
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
 
-          // Always show header when at top of page
-          if (currentScrollY < 10) {
-            setIsVisible(true);
-          } 
-          // Check scroll direction with threshold
-          else {
-            const scrollDifference = currentScrollY - lastScrollY;
-            
-            // Scrolling down - hide header
-            if (scrollDifference > scrollThreshold) {
-              setIsVisible(false);
-            } 
-            // Scrolling up - show header immediately
-            else if (scrollDifference < -scrollThreshold) {
-              setIsVisible(true);
-            }
-          }
+      window.requestAnimationFrame(() => {
+        const currentY = window.scrollY;
 
-          setLastScrollY(currentScrollY);
+        // Only apply on mobile (<= 1024px)
+        if (window.innerWidth > 1024) {
+          setIsVisible(true);
+          lastScrollYRef.current = currentY;
           ticking = false;
-        });
+          return;
+        }
 
-        ticking = true;
-      }
+        // Always show at top
+        if (currentY <= 0) {
+          setIsVisible(true);
+        } else if (currentY > lastScrollYRef.current) {
+          // Scrolling down
+          setIsVisible(false);
+        } else if (currentY < lastScrollYRef.current) {
+          // Any upward movement
+          setIsVisible(true);
+        }
+
+        lastScrollYRef.current = currentY;
+        ticking = false;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScroll);
     };
-  }, [lastScrollY, scrollThreshold]);
+  }, []);
 
   return isVisible;
 };
+
