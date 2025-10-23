@@ -68,7 +68,7 @@ const MeetOurTeamSection = () => {
                   : {};
                 
                 return (
-                  <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
+                  <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
 
                     <div className="flex flex-col items-center">
                       <CardWrapper
@@ -102,8 +102,8 @@ const MeetOurTeamSection = () => {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg" />
-            <CarouselNext className="right-0 md:-right-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg" />
+            <CarouselPrevious className="left-0 md:-left-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg lg:hidden" />
+            <CarouselNext className="right-0 md:-right-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg lg:hidden" />
           </Carousel>
         </div>
       </div>
