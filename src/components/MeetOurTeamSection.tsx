@@ -54,12 +54,13 @@ const MeetOurTeamSection = () => {
           {/* Team Grid - Horizontal Carousel */}
           <Carousel
             opts={{
-              align: "center",
+              align: "start",
               loop: true,
+              slidesToScroll: 1,
             }}
             className="w-full max-w-6xl mx-auto"
           >
-            <CarouselContent className="-ml-4 justify-center">
+            <CarouselContent className="-ml-4">
               {teamMembers.map((member, index) => {
                 const CardWrapper = member.linkedIn ? 'a' : 'div';
                 const cardProps = member.linkedIn 
@@ -67,7 +68,8 @@ const MeetOurTeamSection = () => {
                   : {};
                 
                 return (
-                  <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5">
+                  <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
+
                     <div className="flex flex-col items-center">
                       <CardWrapper
                         {...cardProps}
