@@ -50,7 +50,7 @@ const NewHeroSection = () => {
           </button>
         </a>
         
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+        <div className="flex flex-col md:flex-row items-start justify-center gap-6 md:gap-12">
           <a 
             href={appStoreLink}
             target="_blank"
