@@ -39,7 +39,7 @@ const MeetOurTeamSection = () => {
 
   return (
     <section id="team" className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-orange-50/30 to-orange-100/40">
-      <div className="container max-w-7xl mx-auto px-4 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 relative z-10 overflow-hidden">
         <div 
           ref={elementRef as any} 
           className={`transition-all duration-1000 ease-out ${
@@ -58,7 +58,7 @@ const MeetOurTeamSection = () => {
               loop: true,
               slidesToScroll: 1,
             }}
-            className="w-full max-w-6xl mx-auto"
+            className="w-full max-w-6xl mx-auto overflow-hidden"
           >
             <CarouselContent className="-ml-4">
               {teamMembers.map((member, index) => {
