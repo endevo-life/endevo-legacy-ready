@@ -88,7 +88,7 @@ const TrustedPartnersSection = () => {
         </h2>
 
         {/* Category Icon Cards - New Horizontal Layout */}
-        <div className="flex justify-center gap-6 mb-16 flex-wrap">
+        <div className="flex justify-center gap-4 mb-16 flex-wrap">
           {[
             { icon: categoryBeliefsIcon, label: "Beliefs" },
             { icon: categoryLegalIcon, label: "Legal" },
@@ -98,14 +98,14 @@ const TrustedPartnersSection = () => {
           ].map((item, index) => (
             <div 
               key={index}
-              className="bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow p-8 flex flex-col items-center justify-center w-[140px] h-[140px]"
+              className="bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5 flex flex-col items-center justify-center w-[100px] h-[100px]"
             >
               <img 
                 src={item.icon} 
                 alt={`${item.label} icon`}
-                className="w-16 h-16 mb-3 object-contain"
+                className="w-10 h-10 mb-2 object-contain"
               />
-              <span className="text-sm font-medium text-foreground">
+              <span className="text-xs font-medium text-foreground">
                 {item.label}
               </span>
             </div>
