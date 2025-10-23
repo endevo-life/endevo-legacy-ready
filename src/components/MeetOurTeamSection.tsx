@@ -19,7 +19,7 @@ const MeetOurTeamSection = () => {
     },
     {
       name: "Mercedes Sullivan",
-      title: "VP, HR Storefront, PMO",
+      title: "Executive Vice President",
       organization: "TIAA",
       image: mercedesPortrait
     },
