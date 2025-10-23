@@ -18,12 +18,6 @@ const MeetOurTeamSection = () => {
       linkedIn: "https://www.linkedin.com/in/nikiweiss/"
     },
     {
-      name: "Aaron Swam",
-      title: "AI Enablement and Strategist",
-      organization: "Choice Appointments",
-      image: aaronPortrait
-    },
-    {
       name: "Mercedes Sullivan",
       title: "VP, HR Storefront, PMO",
       organization: "TIAA",
