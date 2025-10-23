@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useScrollDirection } from "@/hooks/use-scroll-direction";
 
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const isHeaderVisible = useScrollDirection();
 
   const menuItems = [
     {
@@ -60,9 +58,7 @@ const ResponsiveNavbar = () => {
   ];
 
   return (
-    <nav className={`bg-white shadow-md border-b sticky top-0 z-50 transition-transform duration-300 ${
-      isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
+    <nav className="bg-white shadow-md border-b sticky top-0 z-50">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
