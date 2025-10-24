@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import jesseAvatar from "@/assets/jesse-avatar.png";
 
 const pageLinks = {
   companies: { url: "/for-companies", title: "Solutions for Companies" },
@@ -101,7 +102,7 @@ const AIChatBot = () => {
           {/* Header */}
           <div className="bg-primary text-primary-foreground p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <MessageCircle className="w-5 h-5" />
+              <img src={jesseAvatar} alt="Jesse" className="w-8 h-8 rounded-full object-cover" />
               <span className="font-semibold">Jesse</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="hover:opacity-80">
@@ -165,9 +166,9 @@ const AIChatBot = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="w-14 h-14 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+          className="w-14 h-14 rounded-full shadow-lg overflow-hidden transition-transform hover:scale-110 border-2 border-primary"
         >
-          <MessageCircle className="w-6 h-6" />
+          <img src={jesseAvatar} alt="Chat with Jesse" className="w-full h-full object-cover" />
         </button>
       )}
     </div>

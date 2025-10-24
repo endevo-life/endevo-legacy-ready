@@ -124,9 +124,6 @@ const TrustedPartnersSection = () => {
         
 
         {/* Category Information Cards */}
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-3 mb-8">
-          {categoryInfo.map(category => {})}
-        </div>
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
           <div className="flex items-center gap-2">
