@@ -11,7 +11,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import VisionValuesSection from "@/components/VisionValuesSection";
 import Footer from "@/components/Footer";
-import AIChatBot from "@/components/AIChatBot";
 
 const Index = () => {
   return (
@@ -31,7 +30,6 @@ const Index = () => {
         <ConsultationSection />
       </main>
       <Footer />
-      <AIChatBot />
     </div>
   );
 };

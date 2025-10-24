@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import AIChatBot from "@/components/AIChatBot";
 import Index from "./pages/Index";
 import LearnAndListen from "./pages/LearnAndListen";
 import Solution from "./pages/Solution";
@@ -83,6 +84,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <AIChatBot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
