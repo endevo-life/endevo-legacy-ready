@@ -89,27 +89,27 @@ const TrustedPartnersSection = () => {
 
         {/* Category Icon Cards - New Horizontal Layout */}
         <div className="flex justify-center gap-4 mb-16 flex-wrap">
-          {[
-            { icon: categoryBeliefsIcon, label: "Beliefs" },
-            { icon: categoryLegalIcon, label: "Legal" },
-            { icon: categoryFinancialIcon, label: "Financial" },
-            { icon: categoryPhysicalIcon, label: "Physical" },
-            { icon: categoryDigitalIcon, label: "Digital" }
-          ].map((item, index) => (
-            <div 
-              key={index}
-              className="bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5 flex flex-col items-center justify-center w-[100px] h-[100px]"
-            >
-              <img 
-                src={item.icon} 
-                alt={`${item.label} icon`}
-                className="w-10 h-10 mb-2 object-contain"
-              />
+          {[{
+          icon: categoryBeliefsIcon,
+          label: "Beliefs"
+        }, {
+          icon: categoryLegalIcon,
+          label: "Legal"
+        }, {
+          icon: categoryFinancialIcon,
+          label: "Financial"
+        }, {
+          icon: categoryPhysicalIcon,
+          label: "Physical"
+        }, {
+          icon: categoryDigitalIcon,
+          label: "Digital"
+        }].map((item, index) => <div key={index} className="bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5 flex flex-col items-center justify-center w-[100px] h-[100px]">
+              <img src={item.icon} alt={`${item.label} icon`} className="w-10 h-10 mb-2 object-contain" />
               <span className="text-xs font-medium text-foreground">
                 {item.label}
               </span>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Browse by category heading */}
@@ -125,13 +125,7 @@ const TrustedPartnersSection = () => {
 
         {/* Category Information Cards */}
         <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-3 mb-8">
-          {categoryInfo.map(category => <Card key={category.category} className={`cursor-pointer transition-all aspect-square flex items-center justify-center ${selectedCategories.includes(category.category) ? 'ring-2 ring-brand-orange bg-brand-orange/10' : 'bg-card hover:shadow-md'}`} onClick={() => toggleCategory(category.category)}>
-              <CardContent className="px-2 py-1.5">
-                <h3 className="text-xs font-bold text-foreground text-center leading-tight">
-                  {category.name}
-                </h3>
-              </CardContent>
-            </Card>)}
+          {categoryInfo.map(category => {})}
         </div>
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
