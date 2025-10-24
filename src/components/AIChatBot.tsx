@@ -33,7 +33,7 @@ const AIChatBot = () => {
           <div className="bg-primary text-primary-foreground p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center gap-2">
               <MessageCircle className="w-5 h-5" />
-              <span className="font-semibold">ENDevo Assistant</span>
+              <span className="font-semibold">Jesse</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="hover:opacity-80">
               <X className="w-5 h-5" />
