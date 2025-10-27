@@ -2,8 +2,10 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Search } from "lucide-react";
+import { useState } from "react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
@@ -34,6 +36,14 @@ const experts = [{
 }];
 const TrustedExperts = () => {
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  const filteredExperts = experts.filter(expert => 
+    expert.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    expert.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    expert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    expert.category.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
@@ -45,9 +55,17 @@ const TrustedExperts = () => {
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="text-sm font-medium">Go Back</span>
             </button>
-            <div className="text-center max-w-3xl mx-auto">
-              
-              
+            <div className="max-w-2xl mx-auto pb-8">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Search by name, category, or description..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 h-12 text-base"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -56,43 +74,51 @@ const TrustedExperts = () => {
         <section className="py-8 md:py-12">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="space-y-8">
-              {experts.map((expert, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 md:p-8">
-                    <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-                      {/* Logo */}
-                      <div className="flex-shrink-0">
-                        <img src={expert.logo} alt={`${expert.name} logo`} className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]" />
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="flex-1 space-y-4">
-                        <div className="flex flex-wrap items-start justify-between gap-4">
-                          <div>
-                            <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                              {expert.name}
-                            </h3>
-                            <span className="inline-block mt-2 px-3 py-1 bg-brand-orange/10 text-brand-orange text-sm font-medium rounded-full">
-                              {expert.category}
-                            </span>
+              {filteredExperts.length === 0 ? (
+                <div className="text-center py-12">
+                  <p className="text-muted-foreground text-lg">No trusted experts found matching your search.</p>
+                </div>
+              ) : (
+                filteredExperts.map((expert, index) => (
+                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6 md:p-8">
+                      <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+                        {/* Logo */}
+                        <div className="flex-shrink-0">
+                          <img src={expert.logo} alt={`${expert.name} logo`} className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]" />
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="flex-1 space-y-4">
+                          <div className="flex flex-wrap items-start justify-between gap-4">
+                            <div>
+                              <h3 className="text-xl md:text-2xl font-bold text-foreground">
+                                {expert.name}
+                              </h3>
+                              <span className="inline-block mt-2 px-3 py-1 bg-brand-orange/10 text-brand-orange text-sm font-medium rounded-full">
+                                {expert.category}
+                              </span>
+                            </div>
+                          </div>
+                          <p className="text-base md:text-lg font-bold text-brand-orange">
+                            {expert.tagline}
+                          </p>
+                          <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                            {expert.description}
+                          </p>
+                          
+                          {/* CTA Button */}
+                          <div className="pt-2">
+                            <Button onClick={() => window.open(expert.url, '_blank')} className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8">
+                              {expert.buttonText}
+                            </Button>
                           </div>
                         </div>
-                        <p className="text-base md:text-lg font-bold text-brand-orange">
-                          {expert.tagline}
-                        </p>
-                        <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
-                          {expert.description}
-                        </p>
-                        
-                        {/* CTA Button */}
-                        <div className="pt-2">
-                          <Button onClick={() => window.open(expert.url, '_blank')} className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8">
-                            {expert.buttonText}
-                          </Button>
-                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>)}
+                    </CardContent>
+                  </Card>
+                ))
+              )}
             </div>
           </div>
         </section>
