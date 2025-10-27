@@ -136,21 +136,31 @@ const TrustedPartnersSection = () => {
         {/* Category Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {categoryInfo.map((category, index) => (
-            <Card key={index} className="p-6 text-center">
-              <CardContent className="p-0 space-y-3">
-                <img 
-                  src={category.icon} 
-                  alt={`${category.name} icon`} 
-                  className="w-12 h-12 mx-auto object-contain"
-                />
-                <h3 className="font-bold text-lg text-foreground">
-                  {category.name === "Beliefs" ? "Your Beliefs" : category.name}
-                </h3>
-                <p className="text-sm text-foreground/70">
-                  {category.description}
-                </p>
-              </CardContent>
-            </Card>
+            <button
+              key={index}
+              onClick={() => toggleCategory(category.category)}
+              className={`text-left transition-all hover:shadow-lg ${
+                selectedCategories.includes(category.category) 
+                  ? 'ring-2 ring-brand-orange' 
+                  : ''
+              }`}
+            >
+              <Card className="p-6 text-center h-full">
+                <CardContent className="p-0 space-y-3">
+                  <img 
+                    src={category.icon} 
+                    alt={`${category.name} icon`} 
+                    className="w-12 h-12 mx-auto object-contain"
+                  />
+                  <h3 className="font-bold text-lg text-foreground">
+                    {category.name === "Beliefs" ? "Your Beliefs" : category.name}
+                  </h3>
+                  <p className="text-sm text-foreground/70">
+                    {category.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </button>
           ))}
         </div>
         
