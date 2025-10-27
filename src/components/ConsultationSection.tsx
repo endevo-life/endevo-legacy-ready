@@ -1,18 +1,22 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import consultationImage from "@/assets/consultation-image.jpg";
-
 const ConsultationSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
-  
-  return (
-    <section className="py-20 bg-muted/20">
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation();
+  return <section className="py-20 bg-muted/20">
       <div ref={elementRef as any} className="container max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl font-bold text-foreground mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>
+          <h2 className={`text-4xl md:text-5xl font-bold text-foreground mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+          transitionDelay: isVisible ? '0.2s' : '0s'
+        }}>
             Let&apos;s Start Your <span className="text-brand-orange">Legacy Journey</span>
           </h2>
-          <p className={`text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.4s' : '0s' }}>
+          <p className={`text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+          transitionDelay: isVisible ? '0.4s' : '0s'
+        }}>
             Ready to protect your family&apos;s future? Contact us today for a confidential consultation.
           </p>
         </div>
@@ -20,41 +24,30 @@ const ConsultationSection = () => {
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16 items-stretch">
           {/* Left Column - Consultation Form */}
-          <div className={`bg-card rounded-xl shadow-lg p-8 flex flex-col transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
-            <h3 className="text-2xl font-bold text-foreground mb-4">Schedule Your Consultation</h3>
-            <p className="text-muted-foreground mb-6">Fill out the form below and we&apos;ll be in touch within 24 hours.</p>
+          <div className={`bg-card rounded-xl shadow-lg p-8 flex flex-col transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
+          transitionDelay: isVisible ? '0.6s' : '0s'
+        }}>
+            
+            
             
             <div className="flex-1 min-h-[679px]">
-              <iframe
-                src="https://link.endevo.life/widget/form/klbP5ZsVH8lpWmnctFP6"
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
-                id="inline-klbP5ZsVH8lpWmnctFP6"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Website - Schedule Your Consultation"
-                data-height="679"
-                data-layout-iframe-id="inline-klbP5ZsVH8lpWmnctFP6"
-                data-form-id="klbP5ZsVH8lpWmnctFP6"
-                title="Website - Schedule Your Consultation"
-              />
+              <iframe src="https://link.endevo.life/widget/form/klbP5ZsVH8lpWmnctFP6" style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+              borderRadius: '3px'
+            }} id="inline-klbP5ZsVH8lpWmnctFP6" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Website - Schedule Your Consultation" data-height="679" data-layout-iframe-id="inline-klbP5ZsVH8lpWmnctFP6" data-form-id="klbP5ZsVH8lpWmnctFP6" title="Website - Schedule Your Consultation" />
             </div>
           </div>
           <script src="https://link.endevo.life/js/form_embed.js"></script>
 
           {/* Right Column - Contact Info + Image */}
-          <div className={`space-y-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
+          <div className={`space-y-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{
+          transitionDelay: isVisible ? '0.8s' : '0s'
+        }}>
             {/* Image */}
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src={consultationImage} 
-                alt="Professional business consultation meeting" 
-                className="w-full h-64 object-cover"
-              />
+              <img src={consultationImage} alt="Professional business consultation meeting" className="w-full h-64 object-cover" />
             </div>
             
             {/* Contact Info Box */}
@@ -82,8 +75,6 @@ const ConsultationSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ConsultationSection;
