@@ -38,7 +38,7 @@ const TrustedExperts = () => {
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-8 md:py-12 bg-gradient-to-b from-brand-navy/10 to-background">
+        <section className="bg-gradient-to-b from-brand-navy/10 to-background">
           <div className="container max-w-7xl mx-auto px-4">
             {/* Go Back Link - Top */}
             <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors mb-6 group">
