@@ -125,9 +125,9 @@ const TrustedPartnersSection = () => {
           icon: categoryDigitalIcon,
           label: "Digital",
           category: "digital"
-        }].map((item, index) => <button key={index} onClick={() => toggleCategory(item.category)} className={`bg-background rounded-2xl shadow-md hover:shadow-lg transition-all p-5 flex flex-col items-center justify-center w-[100px] h-[100px] ${selectedCategories.includes(item.category) ? 'ring-2 ring-brand-orange' : ''}`}>
-              <img src={item.icon} alt={`${item.label} icon`} className="w-10 h-10 mb-2 object-contain" />
-              <span className="text-xs font-medium text-foreground">
+        }].map((item, index) => <button key={index} onClick={() => toggleCategory(item.category)} className={`bg-background rounded-2xl shadow-md hover:shadow-lg transition-all p-6 flex flex-col items-center justify-center w-[140px] h-[140px] ${selectedCategories.includes(item.category) ? 'ring-2 ring-brand-orange' : ''}`}>
+              <img src={item.icon} alt={`${item.label} icon`} className="w-14 h-14 mb-3 object-contain" />
+              <span className="text-sm font-medium text-foreground">
                 {item.label}
               </span>
             </button>)}
