@@ -2,6 +2,8 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
@@ -37,6 +39,8 @@ const experts = [
 ];
 
 const TrustedExperts = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
@@ -44,6 +48,14 @@ const TrustedExperts = () => {
         {/* Hero Section */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-brand-navy/10 to-background">
           <div className="container max-w-7xl mx-auto px-4">
+            {/* Go Back Link - Top */}
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors mb-6 group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span className="text-sm font-medium">Go Back</span>
+            </button>
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 All Trusted Experts
@@ -106,6 +118,19 @@ const TrustedExperts = () => {
                 </Card>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Go Back Link - Bottom */}
+        <section className="py-8 bg-gradient-to-t from-brand-navy/10 to-background">
+          <div className="container max-w-6xl mx-auto px-4">
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span className="text-sm font-medium">Go Back</span>
+            </button>
           </div>
         </section>
       </main>
