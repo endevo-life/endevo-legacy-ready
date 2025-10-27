@@ -125,13 +125,7 @@ const TrustedPartnersSection = () => {
           icon: categoryDigitalIcon,
           label: "Digital",
           category: "digital"
-        }].map((item, index) => <button 
-              key={index} 
-              onClick={() => toggleCategory(item.category)}
-              className={`bg-background rounded-2xl shadow-md hover:shadow-lg transition-all p-5 flex flex-col items-center justify-center w-[100px] h-[100px] ${
-                selectedCategories.includes(item.category) ? 'ring-2 ring-brand-orange' : ''
-              }`}
-            >
+        }].map((item, index) => <button key={index} onClick={() => toggleCategory(item.category)} className={`bg-background rounded-2xl shadow-md hover:shadow-lg transition-all p-5 flex flex-col items-center justify-center w-[100px] h-[100px] ${selectedCategories.includes(item.category) ? 'ring-2 ring-brand-orange' : ''}`}>
               <img src={item.icon} alt={`${item.label} icon`} className="w-10 h-10 mb-2 object-contain" />
               <span className="text-xs font-medium text-foreground">
                 {item.label}
@@ -140,23 +134,14 @@ const TrustedPartnersSection = () => {
         </div>
 
         {/* Browse by category heading */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <h3 className="text-xl md:text-2xl text-muted-foreground">
-            Browse by category
-          </h3>
-          {selectedCategories.length > 0 && (
-            <Button variant="outline" onClick={() => setSelectedCategories([])}>
-              Clear Filters
-            </Button>
-          )}
-        </div>
+        
         
 
         {/* Category Information Cards */}
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-12">
           <div className="flex items-center gap-2">
-            <Input placeholder="Search" className="bg-background rounded-full" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
+            
           </div>
         </div>
         
