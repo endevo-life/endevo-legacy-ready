@@ -24,7 +24,7 @@ const ConsultationSection = () => {
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16 items-stretch">
           {/* Left Column - Consultation Form */}
-          <div className={`bg-card rounded-xl shadow-lg p-8 flex flex-col transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
+          <div className={`bg-card rounded-xl shadow-lg flex flex-col transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
           transitionDelay: isVisible ? '0.6s' : '0s'
         }}>
             
