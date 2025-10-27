@@ -104,36 +104,6 @@ const TrustedPartnersSection = () => {
           Connecting You to Trusted Experts
         </h2>
 
-        {/* Category Icon Cards - New Horizontal Layout */}
-        <div className="flex justify-center gap-4 mb-16 flex-wrap">
-          {[{
-          icon: categoryBeliefsIcon,
-          label: "Beliefs",
-          category: "beliefs"
-        }, {
-          icon: categoryLegalIcon,
-          label: "Legal",
-          category: "legal"
-        }, {
-          icon: categoryFinancialIcon,
-          label: "Financial",
-          category: "financial"
-        }, {
-          icon: categoryPhysicalIcon,
-          label: "Physical",
-          category: "physical"
-        }, {
-          icon: categoryDigitalIcon,
-          label: "Digital",
-          category: "digital"
-        }].map((item, index) => <button key={index} onClick={() => toggleCategory(item.category)} className={`bg-background rounded-2xl shadow-md hover:shadow-lg transition-all p-6 flex flex-col items-center justify-center w-[140px] h-[140px] ${selectedCategories.includes(item.category) ? 'ring-2 ring-brand-orange' : ''}`}>
-              <img src={item.icon} alt={`${item.label} icon`} className="w-14 h-14 mb-3 object-contain" />
-              <span className="text-sm font-medium text-foreground">
-                {item.label}
-              </span>
-            </button>)}
-        </div>
-
         {/* Category Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {categoryInfo.map((category, index) => (
