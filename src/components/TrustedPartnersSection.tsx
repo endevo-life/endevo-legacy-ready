@@ -145,7 +145,7 @@ const TrustedPartnersSection = () => {
                   : ''
               }`}
             >
-              <Card className="p-6 text-center h-full">
+              <Card className="p-6 text-center h-full rounded-2xl">
                 <CardContent className="p-0 space-y-3">
                   <img 
                     src={category.icon} 
