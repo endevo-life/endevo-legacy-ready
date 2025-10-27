@@ -117,7 +117,7 @@ const TrustedExperts = () => {
                           />
                           <label
                             htmlFor={category}
-                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                            className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                           >
                             {category}
                           </label>
