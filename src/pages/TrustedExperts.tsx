@@ -53,7 +53,7 @@ const TrustedExperts = () => {
         </section>
 
         {/* Experts List */}
-        <section className="py-16 md:py-20">
+        <section className="py-8 md:py-12">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="space-y-8">
               {experts.map((expert, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
