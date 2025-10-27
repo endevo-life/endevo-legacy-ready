@@ -24,67 +24,27 @@ const ConsultationSection = () => {
             <h3 className="text-2xl font-bold text-foreground mb-4">Schedule Your Consultation</h3>
             <p className="text-muted-foreground mb-6">Fill out the form below and we&apos;ll be in touch within 24 hours.</p>
             
-            <form className="space-y-6 flex-1 flex flex-col">
-              <div>
-                <label htmlFor="fullName" className="block text-sm font-medium text-foreground mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors"
-                  placeholder="Enter your full name"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              
-              <div className="flex-1">
-                <label htmlFor="needs" className="block text-sm font-medium text-foreground mb-2">
-                  Tell us about your needs
-                </label>
-                <textarea
-                  id="needs"
-                  name="needs"
-                  rows={4}
-                  className="w-full h-full min-h-[120px] px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors resize-vertical"
-                  placeholder="Briefly describe your legacy planning goals and any specific concerns…"
-                />
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-300 hover-scale"
-              >
-                Send Message
-              </button>
-            </form>
+            <div className="flex-1 min-h-[679px]">
+              <iframe
+                src="https://link.endevo.life/widget/form/klbP5ZsVH8lpWmnctFP6"
+                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                id="inline-klbP5ZsVH8lpWmnctFP6"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Website - Schedule Your Consultation"
+                data-height="679"
+                data-layout-iframe-id="inline-klbP5ZsVH8lpWmnctFP6"
+                data-form-id="klbP5ZsVH8lpWmnctFP6"
+                title="Website - Schedule Your Consultation"
+              />
+            </div>
           </div>
+          <script src="https://link.endevo.life/js/form_embed.js"></script>
 
           {/* Right Column - Contact Info + Image */}
           <div className={`space-y-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
