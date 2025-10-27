@@ -3,6 +3,14 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
@@ -37,13 +45,31 @@ const experts = [{
 const TrustedExperts = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   
-  const filteredExperts = experts.filter(expert => 
-    expert.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    expert.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    expert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    expert.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Get unique categories
+  const categories = Array.from(new Set(experts.map(expert => expert.category)));
+  
+  const toggleCategory = (category: string) => {
+    setSelectedCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
+  
+  const filteredExperts = experts.filter(expert => {
+    const matchesSearch = 
+      expert.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      expert.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      expert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      expert.category.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    const matchesCategory = selectedCategories.length === 0 || 
+      selectedCategories.includes(expert.category);
+    
+    return matchesSearch && matchesCategory;
+  });
   return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
@@ -67,14 +93,54 @@ const TrustedExperts = () => {
                     className="pl-11 h-12 text-base rounded-full"
                   />
                 </div>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-12 w-12 rounded-full flex-shrink-0"
-                  aria-label="Filters"
-                >
-                  <SlidersHorizontal className="h-5 w-5" />
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-12 w-12 rounded-full flex-shrink-0"
+                      aria-label="Filters"
+                    >
+                      <SlidersHorizontal className="h-5 w-5" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-56 bg-background z-50">
+                    <DropdownMenuLabel>Filter by Category</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <div className="px-2 py-2 space-y-2">
+                      {categories.map((category) => (
+                        <div key={category} className="flex items-center space-x-2">
+                          <Checkbox
+                            id={category}
+                            checked={selectedCategories.includes(category)}
+                            onCheckedChange={() => toggleCategory(category)}
+                          />
+                          <label
+                            htmlFor={category}
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+                          >
+                            {category}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                    {selectedCategories.length > 0 && (
+                      <>
+                        <DropdownMenuSeparator />
+                        <div className="px-2 py-2">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="w-full"
+                            onClick={() => setSelectedCategories([])}
+                          >
+                            Clear Filters
+                          </Button>
+                        </div>
+                      </>
+                    )}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
           </div>
