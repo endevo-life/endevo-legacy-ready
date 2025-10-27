@@ -104,64 +104,21 @@ const TrustedPartnersSection = () => {
         </h2>
 
         {/* Category Icon Cards - New Horizontal Layout */}
-        <div className="flex justify-center gap-4 mb-16 flex-wrap">
-          {[{
-          icon: categoryBeliefsIcon,
-          label: "Beliefs",
-          category: "beliefs"
-        }, {
-          icon: categoryLegalIcon,
-          label: "Legal",
-          category: "legal"
-        }, {
-          icon: categoryFinancialIcon,
-          label: "Financial",
-          category: "financial"
-        }, {
-          icon: categoryPhysicalIcon,
-          label: "Physical",
-          category: "physical"
-        }, {
-          icon: categoryDigitalIcon,
-          label: "Digital",
-          category: "digital"
-        }].map((item, index) => <button key={index} onClick={() => toggleCategory(item.category)} className={`bg-background rounded-2xl shadow-md hover:shadow-lg transition-all p-6 flex flex-col items-center justify-center w-[140px] h-[140px] ${selectedCategories.includes(item.category) ? 'ring-2 ring-brand-orange' : ''}`}>
-              <img src={item.icon} alt={`${item.label} icon`} className="w-14 h-14 mb-3 object-contain" />
-              <span className="text-sm font-medium text-foreground">
-                {item.label}
-              </span>
-            </button>)}
-        </div>
+        
 
         {/* Category Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-          {categoryInfo.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => toggleCategory(category.category)}
-              className={`text-left transition-all hover:shadow-lg ${
-                selectedCategories.includes(category.category) 
-                  ? 'ring-2 ring-brand-orange' 
-                  : ''
-              }`}
-            >
-              <Card className="p-6 text-center h-full">
-                <CardContent className="p-0 space-y-3">
-                  <img 
-                    src={category.icon} 
-                    alt={`${category.name} icon`} 
-                    className="w-12 h-12 mx-auto object-contain"
-                  />
-                  <h3 className="font-bold text-lg text-foreground">
-                    {category.name === "Beliefs" ? "Your Beliefs" : category.name}
-                  </h3>
-                  <p className="text-sm text-foreground/70">
-                    {category.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </button>
-          ))}
+          {categoryInfo.map((category, index) => <Card key={index} className="p-6 text-center">
+              <CardContent className="p-0 space-y-3">
+                <img src={category.icon} alt={`${category.name} icon`} className="w-12 h-12 mx-auto object-contain" />
+                <h3 className="font-bold text-lg text-foreground">
+                  {category.name === "Beliefs" ? "Your Beliefs" : category.name}
+                </h3>
+                <p className="text-sm text-foreground/70">
+                  {category.description}
+                </p>
+              </CardContent>
+            </Card>)}
         </div>
         
         <div className="space-y-6">
