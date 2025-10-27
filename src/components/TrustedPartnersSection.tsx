@@ -23,7 +23,15 @@ const partners = [{
   description: "Partner with a nationwide network of over 1,700 compassionate professionals dedicated to guiding families through life's most difficult moments. Together, we provide care, clarity, and comfort when it matters most.",
   buttonText: "Partner Now",
   url: "https://www.altogetherfuneral.com/",
-  category: "physical" as const
+  category: "beliefs" as const
+}, {
+  name: "Prisidio",
+  logo: prisidioLogo,
+  tagline: "Your Digital Vault. For Life.®",
+  description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
+  buttonText: "Sign Up",
+  url: "https://www.prisidio.com/endevo",
+  category: "financial" as const
 }, {
   name: "Prisidio",
   logo: prisidioLogo,
@@ -32,6 +40,14 @@ const partners = [{
   buttonText: "Sign Up",
   url: "https://www.prisidio.com/endevo",
   category: "digital" as const
+}, {
+  name: "Memorial Tribute Legacy",
+  logo: memorialTributeLogo,
+  tagline: "Let us carry this with you.",
+  description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
+  buttonText: "Learn More",
+  url: "https://www.memorial-tribute-legacy.com/",
+  category: "beliefs" as const
 }, {
   name: "Memorial Tribute Legacy",
   logo: memorialTributeLogo,
@@ -71,8 +87,8 @@ const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const filteredPartners = partners.filter(partner => {
-    // Filter by category
-    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(partner.category);
+    // Filter by category - only show if category is selected
+    const matchesCategory = selectedCategories.length > 0 && selectedCategories.includes(partner.category);
 
     // Filter by search query
     const matchesSearch = searchQuery === "" || partner.name.toLowerCase().includes(searchQuery.toLowerCase()) || partner.tagline.toLowerCase().includes(searchQuery.toLowerCase()) || partner.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -91,35 +107,48 @@ const TrustedPartnersSection = () => {
         <div className="flex justify-center gap-4 mb-16 flex-wrap">
           {[{
           icon: categoryBeliefsIcon,
-          label: "Beliefs"
+          label: "Beliefs",
+          category: "beliefs"
         }, {
           icon: categoryLegalIcon,
-          label: "Legal"
+          label: "Legal",
+          category: "legal"
         }, {
           icon: categoryFinancialIcon,
-          label: "Financial"
+          label: "Financial",
+          category: "financial"
         }, {
           icon: categoryPhysicalIcon,
-          label: "Physical"
+          label: "Physical",
+          category: "physical"
         }, {
           icon: categoryDigitalIcon,
-          label: "Digital"
-        }].map((item, index) => <div key={index} className="bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5 flex flex-col items-center justify-center w-[100px] h-[100px]">
+          label: "Digital",
+          category: "digital"
+        }].map((item, index) => <button 
+              key={index} 
+              onClick={() => toggleCategory(item.category)}
+              className={`bg-background rounded-2xl shadow-md hover:shadow-lg transition-all p-5 flex flex-col items-center justify-center w-[100px] h-[100px] ${
+                selectedCategories.includes(item.category) ? 'ring-2 ring-brand-orange' : ''
+              }`}
+            >
               <img src={item.icon} alt={`${item.label} icon`} className="w-10 h-10 mb-2 object-contain" />
               <span className="text-xs font-medium text-foreground">
                 {item.label}
               </span>
-            </div>)}
+            </button>)}
         </div>
 
         {/* Browse by category heading */}
-        <div className="flex items-center justify-center gap-4 mb-3">
+        <div className="flex items-center justify-center gap-4 mb-8">
           <h3 className="text-xl md:text-2xl text-muted-foreground">
             Browse by category
           </h3>
-          <Button variant="outline">
-            View All Experts
-          </Button>
+          {selectedCategories.length > 0 && (
+            <Button variant="outline" onClick={() => setSelectedCategories([])}>
+              Clear Filters
+            </Button>
+          )}
         </div>
         
 
