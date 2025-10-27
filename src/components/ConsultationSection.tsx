@@ -30,12 +30,13 @@ const ConsultationSection = () => {
             
             
             
-            <div className="flex-1 min-h-[679px]">
+            <div className="flex-1 min-h-[679px] overflow-hidden">
               <iframe src="https://link.endevo.life/widget/form/klbP5ZsVH8lpWmnctFP6" style={{
               width: '100%',
               height: '100%',
               border: 'none',
-              borderRadius: '3px'
+              borderRadius: '3px',
+              overflow: 'hidden'
             }} id="inline-klbP5ZsVH8lpWmnctFP6" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Website - Schedule Your Consultation" data-height="679" data-layout-iframe-id="inline-klbP5ZsVH8lpWmnctFP6" data-form-id="klbP5ZsVH8lpWmnctFP6" title="Website - Schedule Your Consultation" />
             </div>
           </div>
