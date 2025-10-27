@@ -32,7 +32,7 @@ const experts = [{
   description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
   buttonText: "Sign Up",
   url: "https://www.prisidio.com/endevo",
-  category: "Financial & Digital"
+  category: "Digital"
 }, {
   name: "Memorial Tribute Legacy",
   logo: memorialTributeLogo,
@@ -40,15 +40,15 @@ const experts = [{
   description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
   buttonText: "Learn More",
   url: "https://www.memorial-tribute-legacy.com/",
-  category: "Beliefs & Physical"
+  category: "Physical"
 }];
 const TrustedExperts = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   
-  // Get unique categories
-  const categories = Array.from(new Set(experts.map(expert => expert.category)));
+  // All 5 categories
+  const categories = ["Beliefs", "Financial", "Digital", "Legal", "Physical"];
   
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev => 
