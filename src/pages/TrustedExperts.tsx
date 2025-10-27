@@ -39,7 +39,7 @@ const TrustedExperts = () => {
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-brand-navy/10 to-background">
-          <div className="container max-w-7xl mx-auto px-4 mt-8">
+          <div className="container max-w-7xl mx-auto px-4 pt-8">
             {/* Go Back Link - Top */}
             <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors mb-6 group">
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
