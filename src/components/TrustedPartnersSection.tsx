@@ -104,6 +104,10 @@ const TrustedPartnersSection = () => {
           Connecting You to Trusted Experts
         </h2>
 
+        <p className="text-center text-lg text-foreground/80 mb-8">
+          Browse by category
+        </p>
+
         {/* Category Information Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {categoryInfo.map((category, index) => (
