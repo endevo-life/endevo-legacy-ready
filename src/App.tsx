@@ -20,6 +20,7 @@ import ForIndividuals from "./pages/ForIndividuals";
 import ForInvestors from "./pages/ForInvestors";
 import EmployeeWellness from "./pages/EmployeeWellness";
 import Marketplace from "./pages/Marketplace";
+import TrustedExperts from "./pages/TrustedExperts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/for-investors" element={<ForInvestors />} />
           <Route path="/employee-wellness" element={<EmployeeWellness />} />
           <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/trusted-experts" element={<TrustedExperts />} />
           <Route path="/employers" element={<NotFound />} />
           <Route path="/consultants" element={<NotFound />} />
           <Route path="/members" element={<NotFound />} />

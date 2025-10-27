@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Filter, X } from "lucide-react";
+import { Filter, X, ArrowRight } from "lucide-react";
 import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
@@ -162,6 +163,16 @@ const TrustedPartnersSection = () => {
               </Card>
             </button>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="flex justify-center mb-12">
+          <Link to="/trusted-experts">
+            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-6 text-lg group">
+              View All Trusted Experts
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
         
         <div className="space-y-6">
