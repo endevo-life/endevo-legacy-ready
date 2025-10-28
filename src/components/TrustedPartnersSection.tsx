@@ -145,7 +145,7 @@ const TrustedPartnersSection = () => {
               <CardContent className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                   {/* Logo */}
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 cursor-pointer" onClick={() => window.open(partner.url, '_blank')}>
                     <img src={partner.logo} alt={`${partner.name} logo`} className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]" />
                   </div>
                   
