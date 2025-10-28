@@ -14,18 +14,9 @@ import {
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
-import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
 const experts = [{
-  name: "Altogether",
-  logo: altogetherLogo,
-  tagline: "Your partner through the end-of-life experience",
-  description: "Partner with a nationwide network of over 1,700 compassionate professionals dedicated to guiding families through life's most difficult moments. Together, we provide care, clarity, and comfort when it matters most.",
-  buttonText: "Partner Now",
-  url: "https://www.altogetherfuneral.com/",
-  category: "Beliefs"
-}, {
   name: "Prisidio",
   logo: prisidioLogo,
   tagline: "Your Digital Vault. For Life.®",
