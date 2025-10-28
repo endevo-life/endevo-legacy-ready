@@ -1,5 +1,5 @@
 const VideoSection = () => {
-  return <section className="py-12 px-4 bg-background">
+  return <section className="pt-12 pb-6 px-4 bg-background">
       <div className="container max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
