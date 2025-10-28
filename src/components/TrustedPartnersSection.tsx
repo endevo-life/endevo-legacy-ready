@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Filter, X, ArrowRight } from "lucide-react";
-import altogetherLogo from "@/assets/altogether-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
 import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
 import beliefsIcon from "@/assets/beliefs-icon-new.png";
@@ -18,14 +17,6 @@ import categoryFinancialIcon from "@/assets/category-financial-icon.png";
 import categoryPhysicalIcon from "@/assets/category-physical-icon.png";
 import categoryDigitalIcon from "@/assets/category-digital-icon.png";
 const partners = [{
-  name: "Altogether",
-  logo: altogetherLogo,
-  tagline: "Your partner through the end-of-life experience",
-  description: "Partner with a nationwide network of over 1,700 compassionate professionals dedicated to guiding families through life's most difficult moments. Together, we provide care, clarity, and comfort when it matters most.",
-  buttonText: "Partner Now",
-  url: "https://www.altogetherfuneral.com/",
-  category: "beliefs" as const
-}, {
   name: "Prisidio",
   logo: prisidioLogo,
   tagline: "Your Digital Vault. For Life.®",
