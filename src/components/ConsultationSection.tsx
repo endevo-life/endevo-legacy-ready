@@ -57,13 +57,13 @@ const ConsultationSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">📞 Phone</h4>
                   <p className="text-muted-foreground">484-545-4327</p>
-                  <p className="text-sm text-muted-foreground">Monday–Friday, 8AM - 8PM</p>
+                  <p className="text-sm text-muted-foreground">Monday–Friday, 8AM - 8PM ET</p>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">✉️ Email</h4>
                   <p className="text-muted-foreground">hello@endevo.life</p>
-                  <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
+                  
                 </div>
                 
                 <div>
