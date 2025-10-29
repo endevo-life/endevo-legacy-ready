@@ -88,24 +88,24 @@ const Footer = () => {
           {/* Newsletter Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Stay Connected:</h3>
-            <iframe
-              src="https://link.endevo.life/widget/form/BgNNJ8PpyFu2svaaJGTp"
-              style={{ width: '100%', height: '412px', border: 'none', borderRadius: '3px' }}
-              id="inline-BgNNJ8PpyFu2svaaJGTp"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Website - Stay Connected (Footer Form)"
-              data-height="412"
-              data-layout-iframe-id="inline-BgNNJ8PpyFu2svaaJGTp"
-              data-form-id="BgNNJ8PpyFu2svaaJGTp"
-              title="Website - Stay Connected (Footer Form)"
-            />
-            <script src="https://link.endevo.life/js/form_embed.js" />
+            <div className="space-y-3">
+              <Input 
+                type="text" 
+                placeholder="Your Name" 
+                className="bg-white text-gray-900 border-white rounded-full"
+              />
+              <Input 
+                type="email" 
+                placeholder="Your Email" 
+                className="bg-white text-gray-900 border-white rounded-full"
+              />
+              <Button 
+                className="w-full bg-white text-[#08123A] hover:bg-white/90 rounded-full font-semibold"
+              >
+                <Send className="w-4 h-4 mr-2" />
+                Subscribe
+              </Button>
+            </div>
           </div>
         </div>
         
