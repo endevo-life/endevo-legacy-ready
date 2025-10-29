@@ -86,10 +86,10 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Column */}
-          <div>
+          <div className="min-h-[492px]">
             <iframe
               src="https://link.endevo.life/widget/form/BgNNJ8PpyFu2svaaJGTp"
-              style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+              style={{ width: '100%', height: '492px', border: 'none', borderRadius: '3px' }}
               id="inline-BgNNJ8PpyFu2svaaJGTp"
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
