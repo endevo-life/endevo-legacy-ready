@@ -50,11 +50,6 @@ const partners = [{
   category: "physical" as const
 }];
 const categoryInfo = [{
-  name: "Beliefs",
-  description: "The foundation of every decision, your values, wishes, and priorities.",
-  category: "beliefs" as const,
-  icon: beliefsIcon
-}, {
   name: "Legal",
   description: "Protect your rights and ensure your documents reflect your intentions.",
   category: "legal" as const,
@@ -74,6 +69,11 @@ const categoryInfo = [{
   description: "Organize and safeguard your online presence and digital assets.",
   category: "digital" as const,
   icon: digitalIcon
+}, {
+  name: "Beliefs",
+  description: "The foundation of every decision, your values, wishes, and priorities.",
+  category: "beliefs" as const,
+  icon: beliefsIcon
 }];
 const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
