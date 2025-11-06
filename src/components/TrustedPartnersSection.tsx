@@ -23,23 +23,7 @@ const partners = [{
   description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
   buttonText: "Sign Up",
   url: "https://www.prisidio.com/endevo",
-  category: "financial" as const
-}, {
-  name: "Prisidio",
-  logo: prisidioLogo,
-  tagline: "Your Digital Vault. For Life.®",
-  description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
-  buttonText: "Sign Up",
-  url: "https://www.prisidio.com/endevo",
   category: "digital" as const
-}, {
-  name: "Memorial Tribute Legacy",
-  logo: memorialTributeLogo,
-  tagline: "Let us carry this with you.",
-  description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
-  buttonText: "Learn More",
-  url: "https://www.memorial-tribute-legacy.com/",
-  category: "beliefs" as const
 }, {
   name: "Memorial Tribute Legacy",
   logo: memorialTributeLogo,
