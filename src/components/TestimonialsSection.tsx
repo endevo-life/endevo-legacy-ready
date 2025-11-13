@@ -33,9 +33,6 @@ const TestimonialsSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <h2 className="heading-section text-primary">What Our Families Say</h2>
-          <Button variant="cta" size="lg" className="mt-6">
-            Watch Client Testimonials
-          </Button>
         </div>
         
         <Carousel
@@ -75,6 +72,12 @@ const TestimonialsSection = () => {
           <CarouselPrevious className="hover-scale" />
           <CarouselNext className="hover-scale" />
         </Carousel>
+        
+        <div className="text-center mt-8">
+          <Button variant="cta" size="lg">
+            Watch Client Testimonials
+          </Button>
+        </div>
       </div>
     </section>
   );
