@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-12 bg-muted/30 animate-fade-in">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <h2 className="heading-section text-primary">What Our Families Say</h2>
+          <h2 className="heading-section text-primary">Our Clients Stories</h2>
         </div>
         
         <Carousel
