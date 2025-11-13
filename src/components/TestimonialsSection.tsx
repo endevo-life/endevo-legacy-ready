@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const TestimonialsSection = () => {
   const videos = [
     {
-      title: "Client Story 1",
+      title: "Jeff Monger",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       description: "Discover how our clients found peace of mind through comprehensive legacy planning."
     },
