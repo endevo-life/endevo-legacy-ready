@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
     },
     {
       title: "Mary Cioffi", 
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/NB-o-8hGavI",
       description: "Business Coach"
     }
   ];
