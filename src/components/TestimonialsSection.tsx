@@ -7,7 +7,7 @@ const TestimonialsSection = () => {
       description: "Discover how our clients found peace of mind through comprehensive legacy planning."
     },
     {
-      title: "Client Story 2", 
+      title: "Mary Cioffi", 
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       description: "Real experiences from families who prepared for the future with confidence."
     }
