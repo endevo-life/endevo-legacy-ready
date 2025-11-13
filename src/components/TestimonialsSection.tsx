@@ -22,7 +22,7 @@ const TestimonialsSection = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {videos.map((video, index) => (
-            <Card key={index} className="overflow-hidden animate-fade-in" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+            <Card key={index} className="overflow-hidden animate-fade-in border-0 shadow-none" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
               <CardContent className="p-0">
                 <div className="aspect-video bg-muted">
                   <iframe
