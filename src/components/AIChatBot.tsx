@@ -175,7 +175,7 @@ const AIChatBot = () => {
           {/* Input */}
           <div className="p-4 border-t border-border">
             <div className="flex gap-2">
-              <Input value={inputValue} onChange={e => setInputValue(e.target.value)} onKeyPress={e => e.key === "Enter" && handleSend()} placeholder="Type your message..." className="flex-1" />
+              <Input value={inputValue} onChange={e => setInputValue(e.target.value)} onKeyPress={e => e.key === "Enter" && handleSend()} placeholder="Type your message..." className="flex-1 focus-visible:ring-0 focus-visible:ring-offset-0" />
               <Button onClick={handleSend} size="icon">
                 <Send className="w-4 h-4" />
               </Button>
