@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
     {
       title: "Mary Cioffi", 
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Real experiences from families who prepared for the future with confidence."
+      description: "Business Coach"
     }
   ];
   return <section id="testimonials" className="py-12 bg-muted/30 animate-fade-in">
