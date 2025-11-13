@@ -5,6 +5,10 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleMainMenuClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const menuItems = [
     {
       name: "Solutions",
@@ -79,6 +83,7 @@ const ResponsiveNavbar = () => {
               <div key={item.name} className="relative group">
                 <Link
                   to={item.href}
+                  onClick={handleMainMenuClick}
                   className="flex items-center text-foreground hover:text-primary transition-colors duration-300 py-2 px-4 rounded-md hover:bg-accent/50"
                 >
                   {item.name}
@@ -145,7 +150,10 @@ const ResponsiveNavbar = () => {
                 key={item.name}
                 to={item.href}
                 className="block text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  handleMainMenuClick();
+                }}
               >
                 {item.name}
               </Link>
