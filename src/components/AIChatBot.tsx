@@ -187,7 +187,12 @@ const AIChatBot = () => {
       {!isOpen && <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              
+              <button onClick={() => setIsOpen(true)} className="relative bg-primary hover:bg-primary/90 text-primary-foreground rounded-full p-4 shadow-lg transition-all hover:scale-105">
+                <img src={jesseAvatar} alt="Chat" className="w-12 h-12 rounded-full object-cover" />
+                <span className="absolute -top-3 -right-3 bg-destructive text-destructive-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                  !
+                </span>
+              </button>
             </TooltipTrigger>
             <TooltipContent side="left" className="bg-primary text-primary-foreground">
               <p>Chat with a support agent</p>
