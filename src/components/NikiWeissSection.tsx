@@ -5,7 +5,7 @@ const NikiWeissSection = () => {
     elementRef: nikiRef,
     isVisible: nikiVisible
   } = useScrollAnimation();
-  return <section id="niki-weiss" ref={nikiRef} className="py-20">
+  return <section id="niki" ref={nikiRef} className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={`${nikiVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`}>
