@@ -32,6 +32,7 @@ const ResponsiveNavbar = () => {
       submenu: [
         { name: "Peace of Mind", href: "/resources#peace-of-mind" },
         { name: "Mobile App", href: "/resources#mobile-app" },
+        { name: "Client Testimonials", href: "/#testimonials" },
       ]
     },
     {
