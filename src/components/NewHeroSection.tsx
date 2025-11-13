@@ -5,21 +5,13 @@ const NewHeroSection = () => {
     elementRef,
     isVisible
   } = useScrollAnimation();
-  
+
   // Detect iOS devices
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  
-  const appStoreLink = isIOS 
-    ? "https://apps.apple.com/us/app/my-final-playbook/id6502518647"
-    : "https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share";
-  
-  return <section 
-    className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed" 
-    style={{
-      backgroundImage: `url('${heroBackground}')`
-    }}
-  >
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+  const appStoreLink = isIOS ? "https://apps.apple.com/us/app/my-final-playbook/id6502518647" : "https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share";
+  return <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed" style={{
+    backgroundImage: `url('${heroBackground}')`
+  }}>
       {/* Subtle overlay for text readability */}
       <div className="absolute inset-0 bg-black/20"></div>
       
@@ -37,48 +29,15 @@ const NewHeroSection = () => {
       }}>ENDevo educates, project manages and empowers people so their life story, values, and digital footprint are protected, preserved, and passed on with intention.</p>
         
         <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
-          <button 
-            className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mb-12 hover:shadow-xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            style={{
-              backgroundColor: '#FF4D00',
-              transitionDelay: isVisible ? '0.45s' : '0s'
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E64400'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF4D00'}
-          >
+          <button className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mb-12 hover:shadow-xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+          backgroundColor: '#FF4D00',
+          transitionDelay: isVisible ? '0.45s' : '0s'
+        }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#E64400'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#FF4D00'}>
             Take the Peace of Mind Assessment
           </button>
         </a>
         
-        <div className="flex flex-col md:flex-row items-start justify-center gap-6 md:gap-12">
-          <a 
-            href={appStoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`w-full md:w-80 text-center text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            style={{
-              transitionDelay: isVisible ? '0.6s' : '0s'
-            }}
-          >
-            Download My Final Playbook App
-          </a>
-          <a 
-            href="https://digitallegacypodcast.com/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`w-full md:w-80 text-center text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} 
-            style={{
-              transitionDelay: isVisible ? '0.75s' : '0s'
-            }}
-          >
-            Listen to the Digital Legacy Podcast
-          </a>
-          <a href="/employee-wellness" className={`w-full md:w-80 text-center text-white hover:text-brand-orange text-base md:text-lg font-medium transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
-          transitionDelay: isVisible ? '0.9s' : '0s'
-        }}>
-            Start a Legacy Readiness Employee Wellness Program
-          </a>
-        </div>
+        
       </div>
     </section>;
 };
