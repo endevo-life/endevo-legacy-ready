@@ -2,6 +2,7 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Button } from "@/components/ui/button";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -32,6 +33,9 @@ const TestimonialsSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <h2 className="heading-section text-primary">What Our Families Say</h2>
+          <Button variant="cta" size="lg" className="mt-6">
+            Watch Client Testimonials
+          </Button>
         </div>
         
         <Carousel
