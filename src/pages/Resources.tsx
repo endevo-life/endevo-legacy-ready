@@ -5,22 +5,26 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import heroBackground from "@/assets/resources-hero-bg.jpg";
 import nikiLifestyle from "@/assets/niki-lifestyle.jpg";
 import mobileApp from "@/assets/mobile-app.png";
-
 const Resources = () => {
-  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
-  const { elementRef: peaceRef, isVisible: peaceVisible } = useScrollAnimation();
-  const { elementRef: appRef, isVisible: appVisible } = useScrollAnimation();
-
-  return (
-    <div className="min-h-screen bg-background">
+  const {
+    elementRef: heroRef,
+    isVisible: heroVisible
+  } = useScrollAnimation();
+  const {
+    elementRef: peaceRef,
+    isVisible: peaceVisible
+  } = useScrollAnimation();
+  const {
+    elementRef: appRef,
+    isVisible: appVisible
+  } = useScrollAnimation();
+  return <div className="min-h-screen bg-background">
       <ResponsiveNavbar />
       
       {/* Hero Section */}
-      <section 
-        ref={heroRef}
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      >
+      <section ref={heroRef} className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center" style={{
+      backgroundImage: `url(${heroBackground})`
+    }}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
           <div className={`max-w-4xl ${heroVisible ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -32,39 +36,26 @@ const Resources = () => {
             </p>
             
             <div className="flex flex-col md:flex-row gap-6">
-              <button 
-                className="bg-[#FF5A00] text-white font-semibold text-base px-8 py-2 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-                onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}
-              >
+              <button className="bg-[#FF5A00] text-white font-semibold text-base px-8 py-2 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+            }} onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}>
                 🎙️ Learn from Experts
               </button>
-              <button 
-                className="bg-[#FF5A00] text-white font-semibold text-base px-8 py-2 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US', '_blank')}
-              >
+              <button className="bg-[#FF5A00] text-white font-semibold text-base px-8 py-2 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+            }} onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US', '_blank')}>
                 📱 Plan with Our App
               </button>
-              <button 
-                className="bg-[#FF5A00] text-white font-semibold text-base px-8 py-2 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-              >
-                📘 Explore Practical Guides
-              </button>
+              
             </div>
           </div>
         </div>
       </section>
 
       {/* Peace of Mind Section */}
-      <section id="peace-of-mind"
-        ref={peaceRef}
-        className="py-20 bg-cover bg-center bg-no-repeat relative"
-        style={{ 
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(${nikiLifestyle})` 
-        }}
-      >
+      <section id="peace-of-mind" ref={peaceRef} className="py-20 bg-cover bg-center bg-no-repeat relative" style={{
+      backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(${nikiLifestyle})`
+    }}>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className={`${peaceVisible ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -74,11 +65,9 @@ const Resources = () => {
               <p className="text-lg text-white/90 mb-8">
                 Life is unpredictable, but your loved ones don't have to face uncertainty alone. With ENDevo, you can organize plans, protect your digital and financial legacy, and give your family the confidence of knowing exactly what to do no matter what tomorrow brings.
               </p>
-              <button 
-                className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-                onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}
-              >
+              <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4" style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+            }} onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}>
                 Learn and Listen
               </button>
               <p className="text-sm text-white/70">
@@ -113,27 +102,19 @@ const Resources = () => {
               </ul>
             </div>
             <div className={`${appVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`}>
-              <img 
-                src={mobileApp} 
-                alt="My Final Playbook Mobile App" 
-                className="max-w-md w-full h-auto"
-              />
+              <img src={mobileApp} alt="My Final Playbook Mobile App" className="max-w-md w-full h-auto" />
             </div>
           </div>
           <div className="text-center mt-12">
-            <button 
-              className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
-              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share', '_blank')}
-            >
+            <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105" style={{
+            fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+          }} onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share', '_blank')}>
               Get the App
             </button>
           </div>
         </div>
       </section>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Resources;
