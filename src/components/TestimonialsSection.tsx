@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 const TestimonialsSection = () => {
   const videos = [
     {
@@ -20,25 +19,23 @@ const TestimonialsSection = () => {
           <h2 className="heading-section text-primary">Our Clients Stories</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {videos.map((video, index) => (
-            <Card key={index} className="overflow-hidden animate-fade-in border-0 shadow-none" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
-              <CardContent className="p-0">
-                <div className="aspect-video bg-muted">
-                  <iframe
-                    src={video.videoUrl}
-                    title={video.title}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{video.title}</h3>
-                  <p className="text-muted-foreground">{video.description}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <div key={index} className="animate-fade-in" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+              <div className="aspect-video mb-4">
+                <iframe
+                  src={video.videoUrl}
+                  title={video.title}
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-foreground mb-1">{video.title}</h3>
+                <p className="text-muted-foreground">{video.description}</p>
+              </div>
+            </div>
           ))}
         </div>
         
