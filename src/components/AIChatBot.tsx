@@ -2,6 +2,7 @@ import { useState } from "react";
 import { X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import jesseAvatar from "@/assets/jesse-avatar.png";
 
 const pageLinks = {
@@ -164,12 +165,26 @@ const AIChatBot = () => {
 
       {/* Floating Button */}
       {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="w-14 h-14 rounded-full shadow-lg overflow-hidden transition-transform hover:scale-110 border-2 border-primary"
-        >
-          <img src={jesseAvatar} alt="Chat with Jesse" className="w-full h-full object-cover" />
-        </button>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={() => setIsOpen(true)}
+                className="relative w-14 h-14 rounded-full shadow-lg overflow-hidden transition-transform hover:scale-110 border-2 border-primary"
+              >
+                <img src={jesseAvatar} alt="Chat with Jesse" className="w-full h-full object-cover" />
+                {/* Notification Badge */}
+                <span className="absolute -top-1 -right-1 flex h-4 w-4">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-4 w-4 bg-brand-orange"></span>
+                </span>
+              </button>
+            </TooltipTrigger>
+            <TooltipContent side="left" className="bg-primary text-primary-foreground">
+              <p>Chat with a support agent</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       )}
     </div>
   );
