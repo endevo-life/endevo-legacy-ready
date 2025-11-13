@@ -3,7 +3,7 @@ const TestimonialsSection = () => {
   const videos = [
     {
       title: "Jeff Monger",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://www.youtube.com/embed/B7dWaPlK76s",
       description: "Realtor"
     },
     {
