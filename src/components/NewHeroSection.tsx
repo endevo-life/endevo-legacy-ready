@@ -28,14 +28,25 @@ const NewHeroSection = () => {
         transitionDelay: isVisible ? '0.3s' : '0s'
       }}>ENDevo educates, project manages and empowers people so their life story, values, and digital footprint are protected, preserved, and passed on with intention.</p>
         
-        <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
-          <button className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] mb-12 hover:shadow-xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
-          backgroundColor: '#FF4D00',
-          transitionDelay: isVisible ? '0.45s' : '0s'
-        }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#E64400'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#FF4D00'}>
-            Take the Peace of Mind Assessment
-          </button>
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
+            <button className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:shadow-xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+            backgroundColor: '#FF4D00',
+            transitionDelay: isVisible ? '0.45s' : '0s'
+          }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#E64400'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#FF4D00'}>
+              Take the Peace of Mind Assessment
+            </button>
+          </a>
+          
+          <a href="/employee-wellness">
+            <button className={`text-white font-bold py-3 px-12 rounded-full text-lg transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:shadow-xl hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+            backgroundColor: '#FF4D00',
+            transitionDelay: isVisible ? '0.6s' : '0s'
+          }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#E64400'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#FF4D00'}>
+              Start a Legacy Readiness Employee Wellness Program
+            </button>
+          </a>
+        </div>
         
         
       </div>
