@@ -4,7 +4,7 @@ const TestimonialsSection = () => {
     {
       title: "Jeff Monger",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Discover how our clients found peace of mind through comprehensive legacy planning."
+      description: "Realtor"
     },
     {
       title: "Mary Cioffi", 
