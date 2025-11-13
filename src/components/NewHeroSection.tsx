@@ -34,7 +34,7 @@ const NewHeroSection = () => {
             backgroundColor: '#FF4D00',
             transitionDelay: isVisible ? '0.45s' : '0s'
           }} onMouseEnter={e => e.currentTarget.style.backgroundColor = '#E64400'} onMouseLeave={e => e.currentTarget.style.backgroundColor = '#FF4D00'}>
-              Take the Peace of Mind Assessment
+              Take the Peace of Mind Assessment for Free
             </button>
           </a>
           
