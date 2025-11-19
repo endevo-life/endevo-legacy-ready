@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Subscribe to our newsletter</h3>
+            <h3 className="text-lg font-semibold text-center">Subscribe to our newsletter</h3>
             <div className="space-y-3">
               <Input 
                 type="text" 
