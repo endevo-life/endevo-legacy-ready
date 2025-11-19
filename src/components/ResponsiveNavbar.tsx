@@ -39,11 +39,11 @@ const ResponsiveNavbar = () => {
         { name: "Client Testimonials", href: "/#testimonials" },
       ]
     },
-    {
-      name: "Plan",
-      href: "/plan",
-      submenu: []
-    },
+    // {
+    //   name: "Plan",
+    //   href: "/plan",
+    //   submenu: []
+    // },
     {
       name: "Marketplace",
       href: "/marketplace",
