@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Stay Connected:</h3>
+            <h3 className="text-lg font-semibold">Subscribe to our newsletter</h3>
             <div className="space-y-3">
               <Input 
                 type="text" 
@@ -103,7 +103,7 @@ const Footer = () => {
                 className="w-full bg-white text-[#08123A] hover:bg-white/90 rounded-full font-semibold"
               >
                 <Send className="w-4 h-4 mr-2" />
-                Subscribe
+                Stay Connected
               </Button>
             </div>
           </div>
