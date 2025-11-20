@@ -66,11 +66,7 @@ const ConsultationSection = () => {
                   
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">🗓️ Scheduling</h4>
-                  <p className="text-muted-foreground">Flexible Scheduling</p>
-                  <p className="text-sm text-muted-foreground">Evening & weekend appointments available</p>
-                </div>
+                
               </div>
             </div>
           </div>
