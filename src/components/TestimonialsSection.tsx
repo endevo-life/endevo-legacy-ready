@@ -2,8 +2,10 @@ const TestimonialsSection = () => {
   const videos = [
     {
       title: "Jeff Monger",
-      videoUrl: "https://www.youtube.com/embed/B7dWaPlK76s",
-      description: "Realtor"
+      videoUrl: "https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/66f577cf33c02706dbce43d5.mp4",
+      thumbnail: "https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/66f578778a8a073a07cf7acd.jpeg",
+      description: "Realtor",
+      isDirectVideo: true
     },
     {
       title: "Mary Cioffi", 
@@ -23,13 +25,24 @@ const TestimonialsSection = () => {
           {videos.map((video, index) => (
             <div key={index} className="animate-fade-in" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
               <div className="aspect-video mb-4">
-                <iframe
-                  src={video.videoUrl}
-                  title={video.title}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                {video.isDirectVideo ? (
+                  <video
+                    src={video.videoUrl}
+                    poster={video.thumbnail}
+                    controls
+                    className="w-full h-full object-cover rounded-lg"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <iframe
+                    src={video.videoUrl}
+                    title={video.title}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                )}
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-1">{video.title}</h3>
