@@ -26,13 +26,13 @@ const TestimonialsSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {videos.map((video, index) => (
             <div key={index} className="animate-fade-in" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
-              <div className="aspect-video mb-4">
+              <div className="mb-4">
                 {video.isDirectVideo ? (
                   <video
                     src={video.videoUrl}
                     poster={video.thumbnail}
                     controls
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-auto rounded-lg"
                   >
                     Your browser does not support the video tag.
                   </video>
