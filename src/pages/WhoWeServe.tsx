@@ -76,9 +76,12 @@ const WhoWeServe = () => {
               </p>
               
               <div className="flex gap-4">
-                <Button className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 py-1.5 text-base rounded-full">
-                  Partner With ENDevo
-                </Button>
+              <Button 
+                onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
+                className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 py-1.5 text-base rounded-full"
+              >
+                Partner With ENDevo
+              </Button>
               </div>
             </div>
 
