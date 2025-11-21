@@ -9,8 +9,10 @@ const TestimonialsSection = () => {
     },
     {
       title: "Mary Cioffi", 
-      videoUrl: "https://www.youtube.com/embed/NB-o-8hGavI",
-      description: "Business Coach"
+      videoUrl: "https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/66f577cffae5c95204b208b9.mp4",
+      thumbnail: "https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/66f5787775b6040ca16ef6e1.jpeg",
+      description: "Business Coach",
+      isDirectVideo: true
     }
   ];
   return <section id="testimonials" className="py-12 bg-muted/30 animate-fade-in">
