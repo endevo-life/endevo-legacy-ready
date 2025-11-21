@@ -109,6 +109,7 @@ const ForInvestors = () => {
               variant="cta"
               size="lg"
               className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 rounded-full"
+              onClick={() => navigate('/contact')}
             >
               Explore Investment Opportunities
             </Button>
