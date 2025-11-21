@@ -2,20 +2,19 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import familyUnprepared from "@/assets/family-unprepared.png";
-
 const HiddenCostSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation();
   const navigate = useNavigate();
-
-  return (
-    <section 
-      ref={elementRef} 
-      className={`py-20 bg-background transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
-    >
+  return <section ref={elementRef} className={`py-20 bg-background transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-4">
         {/* Centered Heading */}
         <div className="text-center mb-12 space-y-4">
-          <h2 className="heading-section" style={{ fontFamily: 'Times New Roman, serif' }}>
+          <h2 className="heading-section" style={{
+          fontFamily: 'Times New Roman, serif'
+        }}>
             The Hidden Cost of Being Unprepared
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -27,11 +26,7 @@ const HiddenCostSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
           {/* Left: Image */}
           <div className="flex justify-center">
-            <img 
-              src={familyUnprepared} 
-              alt="Family facing financial uncertainty" 
-              className="rounded-2xl shadow-lg w-full max-w-lg"
-            />
+            <img src={familyUnprepared} alt="Family facing financial uncertainty" className="rounded-2xl shadow-lg w-full max-w-lg" />
           </div>
 
           {/* Right: Text Content */}
@@ -43,7 +38,7 @@ const HiddenCostSection = () => {
                 Only 1 in 3 adults have a plan
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Most Americans are unprepared. Without a plan, families face chaos, expensive legal issues, unclear asset distribution, disputes, locked accounts, and even lost business revenue.
+                Most Americans are unprepared. Without end-of-life planning, families face chaos, expensive legal issues, unclear asset distribution, disputes, locked accounts, and even lost business revenue, and many end up facing more than $10,000 in unexpected costs.
               </p>
             </div>
 
@@ -79,19 +74,17 @@ const HiddenCostSection = () => {
             With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future without the overwhelm.
           </p>
 
-          <Button 
-            onClick={() => {
-              navigate('/solution');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="bg-brand-orange hover:bg-brand-orange-hover text-white font-semibold px-6 py-1.5 rounded-full text-base transition-all duration-150 ease-out hover:scale-105"
-          >
+          <Button onClick={() => {
+          navigate('/solution');
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }} className="bg-brand-orange hover:bg-brand-orange-hover text-white font-semibold px-6 py-1.5 rounded-full text-base transition-all duration-150 ease-out hover:scale-105">
             Learn How We Solve It
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HiddenCostSection;
