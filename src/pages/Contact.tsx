@@ -1,12 +1,13 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import ConsultationSection from "@/components/ConsultationSection";
 
 const Contact = () => {
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
-        {/* Content will go here */}
+        <ConsultationSection />
       </main>
       <Footer />
     </div>
