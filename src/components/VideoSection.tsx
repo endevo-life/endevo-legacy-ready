@@ -15,9 +15,9 @@ const VideoSection = () => {
         </div>
 
         {/* Demo Video Area */}
-        <div className="relative bg-card rounded-2xl shadow-lg mb-12 overflow-hidden max-w-[270px] mx-auto">
+        <div className="relative bg-card rounded-2xl shadow-lg mb-12 overflow-hidden max-w-4xl mx-auto">
           <div style={{
-          aspectRatio: '9/16'
+          aspectRatio: '16/9'
         }}>
             <video src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/691dfee088e1e604ea8cd838.mp4" controls className="w-full h-full object-contain" poster="">
               Your browser does not support the video tag.
