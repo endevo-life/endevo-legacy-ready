@@ -19,7 +19,7 @@ const VideoSection = () => {
           <div style={{
           aspectRatio: '9/16'
         }}>
-            <video src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/68ffeb149d3acf6be441f118.mp4" controls className="w-full h-full object-contain" poster="">
+            <video src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/691dfee088e1e604ea8cd838.mp4" controls className="w-full h-full object-contain" poster="">
               Your browser does not support the video tag.
             </video>
           </div>
