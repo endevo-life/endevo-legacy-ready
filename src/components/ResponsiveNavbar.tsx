@@ -115,12 +115,10 @@ const ResponsiveNavbar = () => {
           {/* Desktop CTA Button */}
           <div className="hidden lg:block">
             <a
-              href="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/plan"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium"
             >
-              Book a Call
+              Take Peace of Mind Assessment Quiz for Free
             </a>
           </div>
 
@@ -160,13 +158,11 @@ const ResponsiveNavbar = () => {
             ))}
             <div className="pt-4 border-t border-border">
               <a
-                href="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/plan"
                 className="block bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Book a Call
+                Take Peace of Mind Assessment Quiz for Free
               </a>
             </div>
           </div>
