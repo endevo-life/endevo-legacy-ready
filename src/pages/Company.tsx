@@ -7,6 +7,7 @@ import MeetOurTeamSection from "@/components/MeetOurTeamSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import DifferentiatorSection from "@/components/DifferentiatorSection";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import VideoSection from "@/components/VideoSection";
 import companyHeroBg from "@/assets/company-hero-bg.jpg";
 import aboutEndevo from "@/assets/about-endevo.jpg";
 import clarityGuidance from "@/assets/clarity-guidance.jpg";
@@ -69,6 +70,9 @@ const Company = () => {
           </div>
         </div>
       </section>
+
+      {/* Video Section */}
+      <VideoSection />
 
       {/* About ENDevo Section */}
       <section id="about" className="py-20 bg-background">
