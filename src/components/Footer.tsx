@@ -75,15 +75,21 @@ const Footer = () => {
             <p className="text-sm text-white/90">
               Life's Final Chapter, Planned for Today's Digital Age.
             </p>
-            <a 
-              href="https://digitallegacypodcast.com/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-brand-orange text-sm font-semibold hover:underline"
-            >
-              Listen Now!
-            </a>
-          </div>
+          <a 
+            href="https://digitallegacypodcast.com/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-brand-orange text-sm font-semibold hover:underline"
+          >
+            Listen Now!
+          </a>
+          <a 
+            href="/plan" 
+            className="inline-block text-brand-orange text-sm font-semibold hover:underline"
+          >
+            Take the Peace of Mind Assessment for Free
+          </a>
+        </div>
 
           {/* Newsletter Column */}
           <div className="space-y-4">
