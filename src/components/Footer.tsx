@@ -85,7 +85,7 @@ const Footer = () => {
           </a>
           <a 
             href="/plan" 
-            className="inline-block text-brand-orange text-sm font-semibold hover:underline"
+            className="inline-block text-white text-sm font-bold hover:underline"
           >
             Take the Peace of Mind Assessment for Free
           </a>
