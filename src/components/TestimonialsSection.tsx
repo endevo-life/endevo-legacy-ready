@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {videos.map((video, index) => (
             <div key={index} className="animate-fade-in" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
-              <div className="mb-4">
+              <div className="mb-4 shadow-lg rounded-lg">
                 {video.isDirectVideo ? (
                   <video
                     src={video.videoUrl}
@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
                   <iframe
                     src={video.videoUrl}
                     title={video.title}
-                    className="w-full h-full"
+                    className="w-full h-full rounded-lg"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
