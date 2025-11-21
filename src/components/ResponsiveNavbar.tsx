@@ -115,7 +115,9 @@ const ResponsiveNavbar = () => {
           {/* Desktop CTA Button */}
           <div className="hidden lg:block">
             <a
-              href="/plan"
+              href="https://jbigogmrgex.typeform.com/to/qBsak5CQ"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium"
             >
               Peace of Mind Assessment
@@ -158,7 +160,9 @@ const ResponsiveNavbar = () => {
             ))}
             <div className="pt-4 border-t border-border">
               <a
-                href="/plan"
+                href="https://jbigogmrgex.typeform.com/to/qBsak5CQ"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
