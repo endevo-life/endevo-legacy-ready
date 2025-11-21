@@ -102,6 +102,7 @@ const ForCompanies = () => {
               variant="cta"
               size="lg"
               className="bg-[#FF6B35] hover:bg-[#FF6B35]/90"
+              onClick={() => navigate('/contact')}
             >
               Partner With Us
             </Button>
