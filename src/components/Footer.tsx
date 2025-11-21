@@ -48,6 +48,12 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+            <a 
+              href="/plan" 
+              className="inline-block text-white text-sm font-bold hover:underline"
+            >
+              Take the Peace of Mind Assessment for Free
+            </a>
           </div>
 
           {/* Navigation Column */}
@@ -82,12 +88,6 @@ const Footer = () => {
             className="inline-block text-brand-orange text-sm font-semibold hover:underline"
           >
             Listen Now!
-          </a>
-          <a 
-            href="/plan" 
-            className="inline-block text-white text-sm font-bold hover:underline"
-          >
-            Take the Peace of Mind Assessment for Free
           </a>
         </div>
 
