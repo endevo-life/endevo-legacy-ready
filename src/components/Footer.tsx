@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
 
           {/* Podcast Column */}
-          <div className="space-y-3 flex flex-col items-center">
+          <div className="space-y-3 flex flex-col items-center md:items-start">
             <img 
               src={podcastLogo} 
               alt="Death & Dying Podcast" 
