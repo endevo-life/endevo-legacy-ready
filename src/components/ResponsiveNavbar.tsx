@@ -59,6 +59,11 @@ const ResponsiveNavbar = () => {
         { name: "Meet Our Team", href: "/company#team" },
         { name: "Our Partners", href: "/company#partners" },
       ]
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      submenu: []
     }
   ];
 
