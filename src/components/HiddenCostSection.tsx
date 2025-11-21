@@ -38,7 +38,7 @@ const HiddenCostSection = () => {
                 Only 1 in 3 adults have a plan
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Most Americans are unprepared. Without end-of-life planning, families face chaos, expensive legal issues, unclear asset distribution, disputes, locked accounts, and even lost business revenue, and many end up facing more than $10,000 in unexpected costs.
+                Most Americans are unprepared. Without end-of-life planning, families face chaos, expensive legal issues, unclear asset distribution, disputes, locked accounts, and even lost business revenue, and many end up facing <strong>more than $10,000 in unexpected costs</strong>.
               </p>
             </div>
 
