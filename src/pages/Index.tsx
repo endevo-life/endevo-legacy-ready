@@ -4,8 +4,6 @@ import EndevoPurposeSection from "@/components/EndevoPurposeSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
-
-
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import VisionValuesSection from "@/components/VisionValuesSection";
@@ -14,10 +12,8 @@ import Footer from "@/components/Footer";
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo.png";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
         <NewHeroSection />
@@ -28,7 +24,7 @@ const Index = () => {
         
         
         <VisionValuesSection />
-        <TestimonialsSection />
+        
         
         {/* Our Partners Section */}
         <section id="partners" className="py-20 bg-background">
@@ -58,8 +54,6 @@ const Index = () => {
         <ConsultationSection />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
