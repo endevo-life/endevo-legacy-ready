@@ -29,9 +29,9 @@ const Index = () => {
         {/* Our Partners Section */}
         <section id="partners" className="py-12 bg-background">
           <div className="container max-w-6xl mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               
-              <p className="text-xl text-brand-orange font-semibold">
+              <p className="text-[1.3125rem] text-brand-orange font-semibold">
                 Building Resilience Together
               </p>
             </div>
