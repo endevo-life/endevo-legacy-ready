@@ -21,7 +21,6 @@ import ForInvestors from "./pages/ForInvestors";
 import EmployeeWellness from "./pages/EmployeeWellness";
 import Marketplace from "./pages/Marketplace";
 import TrustedExperts from "./pages/TrustedExperts";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -84,7 +83,6 @@ const App = () => (
           <Route path="/video" element={<Video />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
