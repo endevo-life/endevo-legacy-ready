@@ -83,7 +83,7 @@ const ProcessSection = () => {
             style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }}
-            onClick={() => window.location.href = '/plan'}
+            onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
           >
             Take the Peace of Mind Assessment for Free
           </button>
