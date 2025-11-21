@@ -85,7 +85,7 @@ const ProcessSection = () => {
             }}
             onClick={() => window.location.href = '/plan'}
           >
-            Start Your Readiness Journey
+            Take the Peace of Mind Assessment for Free
           </button>
         </div>
       </div>
