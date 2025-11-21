@@ -109,7 +109,7 @@ const ForIndividuals = () => {
               variant="cta"
               size="lg"
               className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 rounded-full"
-              onClick={() => window.location.href = 'https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH'}
+              onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
             >
               Start Your Plan
             </Button>
