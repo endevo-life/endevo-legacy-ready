@@ -83,7 +83,7 @@ const ResponsiveNavbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {menuItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
