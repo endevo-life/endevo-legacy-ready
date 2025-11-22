@@ -31,9 +31,9 @@ const Index = () => {
           <div className="container max-w-6xl mx-auto px-4">
             <div className="text-center mb-8">
               
-              <p className="text-[1.3125rem] text-brand-orange font-semibold">
+              <h2 className="text-[1.3125rem] text-brand-orange font-semibold">
                 Building Resilience Together
-              </p>
+              </h2>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-20">
               <div className="flex items-center justify-center h-20">
