@@ -4,8 +4,11 @@ import individualsLegacy from "@/assets/individuals-legacy-planning.png";
 import serviceProviders from "@/assets/service-providers-new.png";
 import employersTeams from "@/assets/employers-teams-new.png";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const WhoWeServe = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
@@ -50,7 +53,7 @@ const WhoWeServe = () => {
               
               <div className="flex gap-4">
               <Button 
-                onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
+                onClick={() => navigate('/contact')}
                 className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 py-1.5 text-base rounded-full"
               >
                 Start Your Journey Today
