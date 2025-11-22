@@ -31,7 +31,7 @@ const Index = () => {
           <div className="container max-w-6xl mx-auto px-4">
             <div className="text-center mb-8">
               
-              <h2 className="text-[1.3125rem] text-brand-orange font-semibold">
+              <h2 className="text-3xl md:text-4xl text-brand-orange font-semibold">
                 Building Resilience Together
               </h2>
             </div>
