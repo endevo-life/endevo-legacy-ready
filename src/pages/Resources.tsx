@@ -28,7 +28,7 @@ const Resources = () => {
     }}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
-          <div className={`max-w-4xl ${heroVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+          <div className={`max-w-4xl transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Your Hub for Legacy Readiness & Digital Preparedness
             </h1>
@@ -59,7 +59,7 @@ const Resources = () => {
     }}>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className={`${peaceVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            <div className={`transition-all duration-1000 ${peaceVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Peace of Mind for Life's What-Ifs
               </h2>
@@ -83,7 +83,7 @@ const Resources = () => {
       <section id="mobile-app" ref={appRef} className="py-20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className={`${appVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            <div className={`transition-all duration-1000 ${appVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-4xl font-bold text-foreground mb-4">
                 Access Care Anywhere
               </h2>
@@ -102,7 +102,7 @@ const Resources = () => {
                 <li>Appointment reminders and care schedule management</li>
               </ul>
             </div>
-            <div className={`${appVisible ? 'animate-fade-in' : 'opacity-0'} flex justify-center`}>
+            <div className={`transition-all duration-1000 delay-200 ${appVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} flex justify-center`}>
               <img src={mobileApp} alt="My Final Playbook Mobile App" className="max-w-md w-full h-auto" />
             </div>
           </div>
