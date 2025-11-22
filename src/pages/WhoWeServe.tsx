@@ -5,9 +5,14 @@ import serviceProviders from "@/assets/service-providers-new.png";
 import employersTeams from "@/assets/employers-teams-new.png";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const WhoWeServe = () => {
   const navigate = useNavigate();
+  const headerAnimation = useScrollAnimation();
+  const individualsAnimation = useScrollAnimation();
+  const providersAnimation = useScrollAnimation();
+  const employersAnimation = useScrollAnimation();
   
   return (
     <div className="min-h-screen">
@@ -17,19 +22,19 @@ const WhoWeServe = () => {
       <section className="py-20 bg-background pt-36">
         <div className="container max-w-7xl mx-auto px-4">
           {/* Main Heading */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6" style={{ fontFamily: 'serif' }}>
+          <div ref={headerAnimation.elementRef as any} className="text-center mb-16">
+            <h1 className={`text-4xl md:text-5xl font-bold text-foreground mb-6 transition-all duration-1000 ${headerAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: 'serif' }}>
               Who We Serve
             </h1>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className={`text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${headerAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               At ENDevo, we help companies, organizations, and individuals prepare with clarity and confidence so their legacy, digital footprint, and critical operations remain protected, resilient, and continuous. Our AI-powered platform bridges the gap between personal planning and workplace readiness, making Legacy Readiness and Digital Preparedness accessible and actionable.
             </p>
           </div>
 
           {/* Subsection 1 - Legacy Planning for Individuals */}
-          <div id="individuals" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
+          <div ref={individualsAnimation.elementRef as any} id="individuals" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
             {/* Left - Image */}
-            <div className="relative">
+            <div className={`relative transition-all duration-1000 ${individualsAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <img 
                 src={individualsLegacy} 
                 alt="Person organizing legacy planning documents" 
@@ -38,7 +43,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Right - Content */}
-            <div className="space-y-6">
+            <div className={`space-y-6 transition-all duration-1000 delay-200 ${individualsAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Legacy Planning for Individuals
               </h2>
@@ -63,9 +68,9 @@ const WhoWeServe = () => {
           </div>
 
           {/* Subsection 2 - Solutions for Service Providers */}
-          <div id="service-providers" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
+          <div ref={providersAnimation.elementRef as any} id="service-providers" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
             {/* Left - Content */}
-            <div className="space-y-6 order-2 lg:order-1">
+            <div className={`space-y-6 order-2 lg:order-1 transition-all duration-1000 delay-200 ${providersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Solutions for Service Providers
               </h2>
@@ -89,7 +94,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Right - Image */}
-            <div className="relative order-1 lg:order-2">
+            <div className={`relative order-1 lg:order-2 transition-all duration-1000 ${providersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <img 
                 src={serviceProviders} 
                 alt="Service providers collaborating with clients" 
@@ -99,9 +104,9 @@ const WhoWeServe = () => {
           </div>
 
           {/* Subsection 3 - Tools for Employers & Teams */}
-          <div id="employers" className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20">
+          <div ref={employersAnimation.elementRef as any} id="employers" className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20">
             {/* Left - Image */}
-            <div className="relative">
+            <div className={`relative transition-all duration-1000 ${employersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <img 
                 src={employersTeams} 
                 alt="Employers and teams using ENDevo tools" 
@@ -110,7 +115,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Right - Content */}
-            <div className="space-y-6">
+            <div className={`space-y-6 transition-all duration-1000 delay-200 ${employersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Tools for Employers & Teams
               </h2>
