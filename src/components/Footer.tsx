@@ -49,7 +49,9 @@ const Footer = () => {
               ))}
             </div>
             <a 
-              href="/plan" 
+              href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block text-brand-orange text-sm font-bold hover:underline"
             >
               Take the Peace of Mind Assessment for Free
