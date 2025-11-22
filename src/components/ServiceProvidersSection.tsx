@@ -133,7 +133,10 @@ const ServiceProvidersSection = () => {
             
             {/* CTA Button */}
             <div className="pt-8">
-              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full">
+              <Button 
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full"
+                onClick={() => navigate('/contact')}
+              >
                 Become a Legal Partner
               </Button>
             </div>
