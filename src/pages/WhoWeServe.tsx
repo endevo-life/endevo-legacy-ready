@@ -34,7 +34,7 @@ const WhoWeServe = () => {
           {/* Subsection 1 - Legacy Planning for Individuals */}
           <div ref={individualsAnimation.elementRef as any} id="individuals" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
             {/* Left - Image */}
-            <div className={`relative transition-all duration-1000 ${individualsAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className={`relative transition-all duration-1000 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <img 
                 src={individualsLegacy} 
                 alt="Person organizing legacy planning documents" 
@@ -43,7 +43,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Right - Content */}
-            <div className={`space-y-6 transition-all duration-1000 delay-200 ${individualsAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className={`space-y-6 transition-all duration-1000 delay-200 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Legacy Planning for Individuals
               </h2>
@@ -70,7 +70,7 @@ const WhoWeServe = () => {
           {/* Subsection 2 - Solutions for Service Providers */}
           <div ref={providersAnimation.elementRef as any} id="service-providers" className="grid lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-20">
             {/* Left - Content */}
-            <div className={`space-y-6 order-2 lg:order-1 transition-all duration-1000 delay-200 ${providersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className={`space-y-6 order-2 lg:order-1 transition-all duration-1000 delay-200 ${providersAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Solutions for Service Providers
               </h2>
@@ -94,7 +94,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Right - Image */}
-            <div className={`relative order-1 lg:order-2 transition-all duration-1000 ${providersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className={`relative order-1 lg:order-2 transition-all duration-1000 ${providersAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <img 
                 src={serviceProviders} 
                 alt="Service providers collaborating with clients" 
@@ -106,7 +106,7 @@ const WhoWeServe = () => {
           {/* Subsection 3 - Tools for Employers & Teams */}
           <div ref={employersAnimation.elementRef as any} id="employers" className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20">
             {/* Left - Image */}
-            <div className={`relative transition-all duration-1000 ${employersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className={`relative transition-all duration-1000 ${employersAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <img 
                 src={employersTeams} 
                 alt="Employers and teams using ENDevo tools" 
@@ -115,7 +115,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Right - Content */}
-            <div className={`space-y-6 transition-all duration-1000 delay-200 ${employersAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className={`space-y-6 transition-all duration-1000 delay-200 ${employersAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Tools for Employers & Teams
               </h2>
