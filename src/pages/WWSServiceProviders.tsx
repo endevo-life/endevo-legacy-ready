@@ -51,21 +51,20 @@ const WWSServiceProviders = () => {
               {/* Right - Content */}
               <div className={`space-y-6 transition-all duration-1000 delay-200 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  Legacy Planning for Service Providers
+                  Solutions for Service Providers
                 </h2>
                 
                 <p className="text-xl text-brand-orange font-semibold">
-                  Simplify your journey with AI-powered guidance and compassionate resources designed to give you peace of mind.
+                  Unlock pre-qualified clients, streamline operations, and strengthen trust with the people who need you most.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  ENDevo's AI-powered tools help you organize essential documents, set reminders for important milestones, and provide compassionate resources every step of the way. We remove the stress and complexity from legacy planning, so you can focus on what matters most: your family, your values, and your peace of mind.
+                  ENDevo connects service providers with pre-qualified clients who are ready for your expertise. Our platform improves onboarding efficiency, strengthens client trust through seamless integration, and reduces the time you spend on administrative paperwork so you can focus on delivering exceptional service.
                 </p>
                 
                 <div className="mt-8">
-                  <p className="text-muted-foreground/70 italic mb-3">Find out how ready you are</p>
-                  <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="outline" size="lg" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-3 text-lg rounded-full">
-                    Take the peace of mind assessment for free
+                  <Button onClick={() => navigate('/contact')} variant="default" size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
+                    Partner with ENDevo
                   </Button>
                 </div>
               </div>
