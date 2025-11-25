@@ -203,7 +203,7 @@ const WWSIndividuals = () => {
 
         {/* White Bar Section with Navy Blue Background */}
         <section ref={barAnimation.elementRef as any} className="py-20">
-          <div className={`shadow-2xl px-8 md:px-16 py-12 w-[85%] transition-all duration-1000 ${barAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`} style={{ backgroundColor: '#08123A', borderTopRightRadius: '100px', borderBottomRightRadius: '100px' }}>
+          <div className={`shadow-2xl px-8 md:px-16 py-12 w-[85%] transition-all duration-[1500ms] ease-out origin-left ${barAnimation.isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`} style={{ backgroundColor: '#08123A', borderTopRightRadius: '100px', borderBottomRightRadius: '100px' }}>
             <p className="text-lg md:text-xl text-white leading-relaxed">
               With ENDevo, you are not just supporting individual employees. You are creating a healthier workplace culture, protecting business continuity, and showing that your organization values its people in the moments that matter most.
             </p>
