@@ -51,6 +51,17 @@ const WWSIndividuals = () => {
                   ENDevo's AI-powered tools help you organize essential documents, set reminders for important milestones, and provide compassionate resources every step of the way. We remove the stress and complexity from legacy planning, so you can focus on what matters most: your family, your values, and your peace of mind.
                 </p>
                 
+                <div className="mt-8">
+                  <Button 
+                    onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
+                    variant="cta"
+                    size="lg"
+                    className="px-8 py-3 text-lg rounded-full"
+                  >
+                    Take the peace of mind assessment for free
+                  </Button>
+                </div>
+                
                 <div className="flex gap-4">
                   
                   <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="outline" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base rounded-full">
@@ -58,18 +69,6 @@ const WWSIndividuals = () => {
                   </Button>
                 </div>
               </div>
-            </div>
-            
-            {/* Centered CTA Button */}
-            <div className="text-center mt-12">
-              <Button 
-                onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
-                variant="cta"
-                size="lg"
-                className="px-8 py-3 text-lg rounded-full"
-              >
-                Take the peace of mind assessment for free
-              </Button>
             </div>
           </div>
         </section>
