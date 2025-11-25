@@ -142,8 +142,8 @@ const WWSIndividuals = () => {
                 {/* Right - Step Blocks */}
                 <div className="grid grid-cols-1 gap-12">
                   {/* Step 1 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                  <div className="flex gap-6 items-start">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       1
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
@@ -152,8 +152,8 @@ const WWSIndividuals = () => {
                   </div>
 
                   {/* Step 2 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                  <div className="flex gap-6 items-start">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       2
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
@@ -162,8 +162,8 @@ const WWSIndividuals = () => {
                   </div>
 
                   {/* Step 3 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                  <div className="flex gap-6 items-start">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       3
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
@@ -172,8 +172,8 @@ const WWSIndividuals = () => {
                   </div>
 
                   {/* Step 4 */}
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                  <div className="flex gap-6 items-start">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       4
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
