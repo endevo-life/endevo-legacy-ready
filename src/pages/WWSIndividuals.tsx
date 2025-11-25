@@ -177,6 +177,17 @@ const WWSIndividuals = () => {
                 </div>
               </div>
             </div>
+
+            {/* CTA Button */}
+            <div className="mt-12 text-center">
+              <Button 
+                onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
+                size="lg" 
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full"
+              >
+                Start Your Journey Today
+              </Button>
+            </div>
           </div>
         </section>
       </main>
