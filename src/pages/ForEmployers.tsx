@@ -30,19 +30,19 @@ const ForEmployers = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-8">
             <div>
               <p className="text-xl font-semibold mb-4 text-foreground">
-                For Employers
+                For Individuals
               </p>
               <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#FF6B35]">
-                AI-powered tools for employee wellness and organizational preparedness.
+                AI-powered tools for personal legacy and digital preparedness.
               </h1>
               <p className="text-lg text-gray-700">
-                Supporting your employees through life's most difficult moments can feel overwhelming, but ENDevo makes it simple and approachable. Our platform helps your organization provide comprehensive support so that your employees and their families are always prepared.
+                Planning for the future can feel overwhelming, but ENDevo makes it simple and approachable. Our platform helps you organize every part of your life so that you and your loved ones are always prepared.
               </p>
             </div>
             <div>
               <img 
                 src={individualPlanningImage} 
-                alt="Employer supporting employee wellness with ENDevo"
+                alt="Individual using ENDevo for digital legacy planning"
                 className="rounded-lg shadow-lg w-full"
               />
             </div>
@@ -51,7 +51,7 @@ const ForEmployers = () => {
           {/* Centered Result Statement */}
           <div className="text-center max-w-4xl mx-auto mb-16">
             <p className="text-xl font-bold text-gray-900">
-              The result is a more resilient workforce. Your employees know they have support, their families have clarity during difficult times, and your organization maintains continuity when it matters most.
+              The result is peace of mind. You know your affairs are organized, your digital presence is protected, and your family will have the clarity they need in the future.
             </p>
           </div>
 
@@ -62,7 +62,7 @@ const ForEmployers = () => {
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
-                  Begin with organizational assessments that help you understand your workforce's preparedness needs and identify gaps in your current support systems.
+                  Begin with the Peace of Mind Assessment, a quick check-up that highlights gaps and gives you a clear readiness score.
                 </p>
               </CardContent>
             </Card>
@@ -72,7 +72,7 @@ const ForEmployers = () => {
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
-                  Provide employees with AI-driven tools to organize their important information including legal documents, financial records, insurance, health information, and digital accounts.
+                  Use our AI-driven platform to gather your most important information in one place, including legal documents, financial records, insurance, health information, and digital accounts.
                 </p>
               </CardContent>
             </Card>
@@ -82,7 +82,7 @@ const ForEmployers = () => {
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
-                  Gain access to guided support programs, including workshops and one-on-one sessions with ENDevo experts, to help your employees understand their options and plan effectively.
+                  Gain access to guided support, including one-on-one sessions with ENDevo leadership, to walk you through your options and help you understand your next steps.
                 </p>
               </CardContent>
             </Card>
@@ -92,7 +92,7 @@ const ForEmployers = () => {
             }`}>
               <CardContent className="p-6">
                 <p className="text-gray-800">
-                  Ensure business continuity with comprehensive planning tools that help protect your organization while supporting employee well-being during life transitions.
+                  Securely share your plan with trusted family members or designated contacts so they have what they need when it matters most.
                 </p>
               </CardContent>
             </Card>
@@ -107,9 +107,9 @@ const ForEmployers = () => {
               variant="cta"
               size="lg"
               className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 rounded-full"
-              onClick={() => navigate('/contact')}
+              onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
             >
-              Partner with ENDevo
+              Start Your Plan
             </Button>
           </div>
         </div>
