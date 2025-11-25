@@ -56,20 +56,20 @@ const WWSForEmployers = () => {
               {/* Right - Content */}
               <div className={`space-y-6 transition-all duration-1000 delay-200 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  Solutions for Employers
+                  Tools for Employers & Teams
                 </h2>
                 
                 <p className="text-xl text-brand-orange font-semibold">
-                  Support your workforce with comprehensive preparedness solutions that protect both employees and business continuity.
+                  Support employee well-being, reduce absenteeism, and build a more resilient workforce with ENDevo.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  ENDevo empowers employers to provide meaningful support during life's most challenging moments. Our platform helps organizations reduce absenteeism, improve employee retention, and ensure business continuity through comprehensive preparedness planning and compassionate guidance.
+                  ENDevo reduces workplace absenteeism and stress by supporting employees with clarity and confidence during life's most challenging moments. By integrating legacy readiness into your wellness programs, you strengthen employee engagement, build organizational resilience, and demonstrate genuine care for your team's well-being.
                 </p>
                 
                 <div className="mt-8">
                   <Button onClick={() => navigate('/contact')} variant="default" size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
-                    Partner with ENDevo
+                    Empower your team
                   </Button>
                 </div>
               </div>
