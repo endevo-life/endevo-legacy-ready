@@ -128,18 +128,9 @@ const WWSIndividuals = () => {
                 Your Path to Peace of Mind Starts Here
               </h2>
               
-              {/* Two Column Layout: Image and Steps */}
-              <div className="grid lg:grid-cols-2 gap-12 items-start">
-                {/* Left - Image */}
-                <div className="relative">
-                  <img 
-                    src={consultationMeeting} 
-                    alt="Professional consultation meeting" 
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                  />
-                </div>
-
-                {/* Right - Step Blocks */}
+              {/* Two Column Layout: Steps and Image */}
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left - Step Blocks */}
                 <div className="grid grid-cols-1 gap-12">
                   {/* Step 1 */}
                   <div className="flex gap-6 items-start">
@@ -180,6 +171,15 @@ const WWSIndividuals = () => {
                       Securely share your plan with trusted family members or designated contacts so they have what they need when it matters most.
                     </p>
                   </div>
+                </div>
+
+                {/* Right - Image */}
+                <div className="relative">
+                  <img 
+                    src={consultationMeeting} 
+                    alt="Professional consultation meeting" 
+                    className="w-full h-auto rounded-2xl shadow-lg"
+                  />
                 </div>
               </div>
             </div>
