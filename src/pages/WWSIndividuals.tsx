@@ -76,7 +76,7 @@ const WWSIndividuals = () => {
               {/* Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <Card className="bg-white shadow-lg rounded-xl border-0">
-                  <CardContent className="px-4 py-12 text-center space-y-4">
+                  <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
@@ -86,7 +86,7 @@ const WWSIndividuals = () => {
                 </Card>
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
-                  <CardContent className="px-4 py-12 text-center space-y-4">
+                  <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
@@ -96,7 +96,7 @@ const WWSIndividuals = () => {
                 </Card>
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
-                  <CardContent className="px-4 py-12 text-center space-y-4">
+                  <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
@@ -106,7 +106,7 @@ const WWSIndividuals = () => {
                 </Card>
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
-                  <CardContent className="px-4 py-12 text-center space-y-4">
+                  <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
