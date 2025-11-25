@@ -38,12 +38,19 @@ const WWSIndividuals = () => {
                   ENDevo's AI-powered tools help you organize essential documents, set reminders for important milestones, and provide compassionate resources every step of the way. We remove the stress and complexity from legacy planning, so you can focus on what matters most: your family, your values, and your peace of mind.
                 </p>
                 
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   <Button 
                     onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
                     className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 py-1.5 text-base rounded-full"
                   >
                     Start Your Journey Today
+                  </Button>
+                  <Button 
+                    onClick={() => window.location.href = '/plan'}
+                    variant="outline"
+                    className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base rounded-full"
+                  >
+                    Take the Peace of Mind Assessment for Free
                   </Button>
                 </div>
               </div>
