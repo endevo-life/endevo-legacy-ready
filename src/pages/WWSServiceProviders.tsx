@@ -80,7 +80,7 @@ const WWSServiceProviders = () => {
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
               <h2 className={`text-3xl md:text-4xl font-bold text-black transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                If you don't <span className="text-brand-orange">prepare</span>, this is what happens…
+                Clients expect <span className="text-brand-orange">guidance</span>. Most aren't prepared.
               </h2>
               
               {/* Statistics */}
