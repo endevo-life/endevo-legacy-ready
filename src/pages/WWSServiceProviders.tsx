@@ -209,6 +209,11 @@ const WWSServiceProviders = () => {
 
         {/* White Bar Section with Navy Blue Background */}
         <section ref={barAnimation.elementRef as any} className="py-20 overflow-hidden">
+          <div className="container max-w-7xl mx-auto px-4 mb-8">
+            <h2 className={`text-3xl md:text-4xl font-bold text-brand-orange text-center transition-all duration-1000 ${barAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              Be part of a 126 billion dollar industry transformation.
+            </h2>
+          </div>
           <div className={`shadow-2xl px-8 md:px-16 py-12 transition-all ease-out ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
           backgroundColor: '#08123A',
           borderTopRightRadius: '100px',
