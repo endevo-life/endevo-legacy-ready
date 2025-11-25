@@ -1,7 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import serviceProvidersHero from "@/assets/service-providers-hero.jpg";
-import consultationMeeting from "@/assets/consultation-meeting.jpg";
+import investorMeeting from "@/assets/investor-meeting.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -191,7 +191,7 @@ const WWSServiceProviders = () => {
                 <div className={`relative transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{
                 transitionDelay: pathAnimation.isVisible ? '400ms' : '0ms'
               }}>
-                  <img src={consultationMeeting} alt="Professional consultation meeting" className="w-full h-auto rounded-2xl shadow-lg" />
+                  <img src={investorMeeting} alt="Investment meeting collaboration" className="w-full h-auto rounded-2xl shadow-lg" />
                 </div>
               </div>
             </div>
