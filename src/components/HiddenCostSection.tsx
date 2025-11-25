@@ -23,14 +23,14 @@ const HiddenCostSection = () => {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           {/* Left: Image */}
-          <div className="flex justify-center">
-            <img src={familyUnprepared} alt="Family facing financial uncertainty" className="rounded-2xl shadow-lg w-full max-w-lg" />
+          <div className="flex justify-center items-center h-full">
+            <img src={familyUnprepared} alt="Family facing financial uncertainty" className="rounded-2xl shadow-lg w-full max-w-lg h-full object-cover" />
           </div>
 
           {/* Right: Text Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 flex flex-col justify-center h-full">
 
             {/* Stat 1 */}
             <div>
