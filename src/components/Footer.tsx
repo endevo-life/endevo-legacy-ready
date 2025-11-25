@@ -14,13 +14,12 @@ const Footer = () => {
   ];
 
   const navLinks = [
-    { name: "Home", href: "/" },
     { name: "Solutions", href: "/solution" },
     { name: "Who We Serve", href: "/who-we-serve" },
     { name: "Resources", href: "/resources" },
-    { name: "Plan", href: "/plan" },
     { name: "Marketplace", href: "/marketplace" },
     { name: "About Us", href: "/company" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
