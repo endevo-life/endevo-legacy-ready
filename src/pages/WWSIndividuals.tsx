@@ -1,6 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
-import individualsLegacy from "@/assets/individuals-legacy-planning.png";
+import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -19,7 +19,7 @@ const WWSIndividuals = () => {
               <div className={`relative transition-all duration-1000 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <img 
                   src={individualsLegacy} 
-                  alt="Person organizing legacy planning documents" 
+                  alt="Person working on laptop for legacy planning" 
                   className="w-full h-auto rounded-2xl shadow-lg"
                 />
               </div>
