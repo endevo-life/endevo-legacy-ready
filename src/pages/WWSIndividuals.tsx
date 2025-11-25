@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 const WWSIndividuals = () => {
+  const navigate = useNavigate();
   const individualsAnimation = useScrollAnimation();
   const [lineWidth, setLineWidth] = useState(0);
   const lineRef = useRef<HTMLDivElement>(null);
@@ -181,7 +183,7 @@ const WWSIndividuals = () => {
             {/* CTA Button */}
             <div className="mt-12 text-center">
               <Button 
-                onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
+                onClick={() => navigate('/contact')}
                 size="lg" 
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full"
               >
