@@ -68,7 +68,7 @@ const WWSIndividuals = () => {
         
 
         {/* Your Personal Path Section */}
-        <section className="py-20">
+        <section className="py-20 bg-[hsl(204_14%_83%)]">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
               <h2 className="text-3xl md:text-4xl font-bold text-black">
