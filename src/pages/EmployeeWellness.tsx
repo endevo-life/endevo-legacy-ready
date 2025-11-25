@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import employeeWellnessHero from "@/assets/employee-wellness-hero.png";
+import employeeWellnessHero from "@/assets/employee-wellness-hero-bg.jpg";
 import wellnessPillars from "@/assets/wellness-pillars.png";
 
 const EmployeeWellness = () => {
