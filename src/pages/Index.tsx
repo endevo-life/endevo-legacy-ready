@@ -37,25 +37,25 @@ const Index = () => {
             <div className="overflow-hidden w-full">
               <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused]">
                 {/* First set of logos */}
-                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
-                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-24 w-auto object-contain" />
+                <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-16 w-auto object-contain" />
                 </div>
-                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
-                  <img src={prisidioLogo} alt="Prisidio" className="max-h-24 w-auto object-contain" />
+                <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                  <img src={prisidioLogo} alt="Prisidio" className="max-h-16 w-auto object-contain" />
                 </div>
                 {/* Duplicate set for seamless loop */}
-                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
-                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-24 w-auto object-contain" />
+                <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-16 w-auto object-contain" />
                 </div>
-                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
-                  <img src={prisidioLogo} alt="Prisidio" className="max-h-24 w-auto object-contain" />
+                <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                  <img src={prisidioLogo} alt="Prisidio" className="max-h-16 w-auto object-contain" />
                 </div>
                 {/* Third set for extra smoothness */}
-                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
-                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-24 w-auto object-contain" />
+                <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-16 w-auto object-contain" />
                 </div>
-                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
-                  <img src={prisidioLogo} alt="Prisidio" className="max-h-24 w-auto object-contain" />
+                <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                  <img src={prisidioLogo} alt="Prisidio" className="max-h-16 w-auto object-contain" />
                 </div>
               </div>
             </div>
