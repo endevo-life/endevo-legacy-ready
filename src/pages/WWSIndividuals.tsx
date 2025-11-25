@@ -57,13 +57,6 @@ const WWSIndividuals = () => {
                     Take the peace of mind assessment for free
                   </Button>
                 </div>
-                
-                <div className="flex gap-4">
-                  
-                  <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="outline" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base rounded-full">
-                    Take the Peace of Mind Assessment
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
