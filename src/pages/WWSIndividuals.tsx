@@ -147,9 +147,7 @@ const WWSIndividuals = () => {
                     <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       2
                     </div>
-                    <p className="text-lg text-foreground leading-relaxed text-left">
-                      Use our AI-driven platform to gather your most important information in one place, including legal documents, financial records, insurance, health information, and digital accounts.
-                    </p>
+                    <p className="text-lg text-foreground leading-relaxed text-left">Use our AI-driven platform to gather your most important information in one place.</p>
                   </div>
 
                   {/* Step 3 */}
@@ -175,11 +173,7 @@ const WWSIndividuals = () => {
 
                 {/* Right - Image */}
                 <div className="relative">
-                  <img 
-                    src={consultationMeeting} 
-                    alt="Professional consultation meeting" 
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                  />
+                  <img src={consultationMeeting} alt="Professional consultation meeting" className="w-full h-auto rounded-2xl shadow-lg" />
                 </div>
               </div>
             </div>
