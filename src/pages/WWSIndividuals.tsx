@@ -81,9 +81,7 @@ const WWSIndividuals = () => {
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
                   }}>67%</p>
-                    <p className="text-lg text-black">
-                      of adults have no plan in place, leaving families to make painful decisions alone.
-                    </p>
+                    <p className="text-lg text-black">67% of adults have no plan in place, leaving families to make painful decisions alone.</p>
                   </CardContent>
                 </Card>
 
@@ -93,9 +91,8 @@ const WWSIndividuals = () => {
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
                   }}>420+</p>
-                    <p className="text-lg text-black">
-                      hours spent by families sorting affairs when information isn't organized.
-                    </p>
+                    <p className="text-lg text-black">• Families spend 420+ hours sorting affairs when information isn’t organized.
+                  </p>
                   </CardContent>
                 </Card>
 
