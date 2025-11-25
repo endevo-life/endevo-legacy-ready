@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
+import consultationMeeting from "@/assets/consultation-meeting.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -127,46 +128,58 @@ const WWSIndividuals = () => {
                 Your Path to Peace of Mind Starts Here
               </h2>
               
-              {/* Step Blocks */}
-              <div className="grid grid-cols-1 gap-12 max-w-3xl mx-auto">
-                {/* Step 1 */}
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
-                    1
-                  </div>
-                  <p className="text-lg text-foreground leading-relaxed text-left">
-                    Begin with the Peace of Mind Assessment, a quick check-up that highlights gaps and gives you a clear readiness score.
-                  </p>
+              {/* Two Column Layout: Image and Steps */}
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                {/* Left - Image */}
+                <div className="relative">
+                  <img 
+                    src={consultationMeeting} 
+                    alt="Professional consultation meeting" 
+                    className="w-full h-auto rounded-2xl shadow-lg"
+                  />
                 </div>
 
-                {/* Step 2 */}
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
-                    2
+                {/* Right - Step Blocks */}
+                <div className="grid grid-cols-1 gap-12">
+                  {/* Step 1 */}
+                  <div className="space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                      1
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Begin with the Peace of Mind Assessment, a quick check-up that highlights gaps and gives you a clear readiness score.
+                    </p>
                   </div>
-                  <p className="text-lg text-foreground leading-relaxed text-left">
-                    Use our AI-driven platform to gather your most important information in one place, including legal documents, financial records, insurance, health information, and digital accounts.
-                  </p>
-                </div>
 
-                {/* Step 3 */}
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
-                    3
+                  {/* Step 2 */}
+                  <div className="space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                      2
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Use our AI-driven platform to gather your most important information in one place, including legal documents, financial records, insurance, health information, and digital accounts.
+                    </p>
                   </div>
-                  <p className="text-lg text-foreground leading-relaxed text-left">
-                    Gain access to guided support, including one-on-one sessions with ENDevo leadership, to walk you through your options and help you understand your next steps.
-                  </p>
-                </div>
 
-                {/* Step 4 */}
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
-                    4
+                  {/* Step 3 */}
+                  <div className="space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                      3
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Gain access to guided support, including one-on-one sessions with ENDevo leadership, to walk you through your options and help you understand your next steps.
+                    </p>
                   </div>
-                  <p className="text-lg text-foreground leading-relaxed text-left">
-                    Securely share your plan with trusted family members or designated contacts so they have what they need when it matters most.
-                  </p>
+
+                  {/* Step 4 */}
+                  <div className="space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
+                      4
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Securely share your plan with trusted family members or designated contacts so they have what they need when it matters most.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
