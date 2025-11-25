@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 const WWSIndividuals = () => {
   const navigate = useNavigate();
   const individualsAnimation = useScrollAnimation();
+  const statsAnimation = useScrollAnimation();
   const [lineWidth, setLineWidth] = useState(0);
   const lineRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -69,16 +70,16 @@ const WWSIndividuals = () => {
         
 
         {/* Your Personal Path Section */}
-        <section className="py-20">
+        <section ref={statsAnimation.elementRef as any} className="py-20">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <h2 className={`text-3xl md:text-4xl font-bold text-black transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 If you don't <span className="text-brand-orange">prepare</span>, this is what happens…
               </h2>
               
               {/* Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="bg-white shadow-lg rounded-xl border-0">
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '200ms' : '0ms' }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
@@ -88,7 +89,7 @@ const WWSIndividuals = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-white shadow-lg rounded-xl border-0">
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '400ms' : '0ms' }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
@@ -98,7 +99,7 @@ const WWSIndividuals = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-white shadow-lg rounded-xl border-0">
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '600ms' : '0ms' }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
@@ -108,7 +109,7 @@ const WWSIndividuals = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-white shadow-lg rounded-xl border-0">
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '800ms' : '0ms' }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
