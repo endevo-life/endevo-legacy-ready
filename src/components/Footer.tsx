@@ -29,11 +29,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Left Column - Logo & Social */}
           <div className="space-y-6">
-            <img 
-              src={endevoLogo} 
-              alt="ENDevo - Plan. Protect. Peace." 
-              className="h-16 w-auto"
-            />
+            <a href="/" className="inline-block">
+              <img 
+                src={endevoLogo} 
+                alt="ENDevo - Plan. Protect. Peace." 
+                className="h-16 w-auto"
+              />
+            </a>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
