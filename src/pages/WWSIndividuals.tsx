@@ -118,6 +118,68 @@ const WWSIndividuals = () => {
             </div>
           </div>
         </section>
+
+        {/* Your Path to Peace of Mind Section */}
+        <section className="py-20 bg-background">
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="text-center space-y-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-16">
+                Your Path to Peace of Mind Starts Here
+              </h2>
+              
+              {/* Step Blocks */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                {/* Step 1 */}
+                <Card className="bg-white shadow-lg rounded-xl border-0 hover:shadow-xl transition-shadow">
+                  <CardContent className="p-8 space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold mb-4">
+                      1
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Begin with the Peace of Mind Assessment, a quick check-up that highlights gaps and gives you a clear readiness score.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Step 2 */}
+                <Card className="bg-white shadow-lg rounded-xl border-0 hover:shadow-xl transition-shadow">
+                  <CardContent className="p-8 space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold mb-4">
+                      2
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Use our AI-driven platform to gather your most important information in one place, including legal documents, financial records, insurance, health information, and digital accounts.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Step 3 */}
+                <Card className="bg-white shadow-lg rounded-xl border-0 hover:shadow-xl transition-shadow">
+                  <CardContent className="p-8 space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold mb-4">
+                      3
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Gain access to guided support, including one-on-one sessions with ENDevo leadership, to walk you through your options and help you understand your next steps.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Step 4 */}
+                <Card className="bg-white shadow-lg rounded-xl border-0 hover:shadow-xl transition-shadow">
+                  <CardContent className="p-8 space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold mb-4">
+                      4
+                    </div>
+                    <p className="text-lg text-foreground leading-relaxed text-left">
+                      Securely share your plan with trusted family members or designated contacts so they have what they need when it matters most.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>;
