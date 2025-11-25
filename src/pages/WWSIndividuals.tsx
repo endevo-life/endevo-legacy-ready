@@ -9,25 +9,22 @@ const WWSIndividuals = () => {
   const individualsAnimation = useScrollAnimation();
   const [lineWidth, setLineWidth] = useState(0);
   const lineRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (lineRef.current) {
         const linePosition = lineRef.current.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        
+
         // Calculate progress based on scroll position
-        const progress = Math.max(0, Math.min(100, ((windowHeight - linePosition) / windowHeight) * 100));
+        const progress = Math.max(0, Math.min(100, (windowHeight - linePosition) / windowHeight * 100));
         setLineWidth(progress);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial call
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
@@ -68,14 +65,7 @@ const WWSIndividuals = () => {
         </section>
 
         {/* Animated Divider Line */}
-        <div ref={lineRef} className="container max-w-7xl mx-auto px-4 py-8">
-          <div className="relative h-1 bg-gray-200 rounded-full overflow-hidden">
-            <div 
-              className="absolute left-0 top-0 h-full bg-brand-orange transition-all duration-300 ease-out rounded-full"
-              style={{ width: `${lineWidth}%` }}
-            />
-          </div>
-        </div>
+        
 
         {/* Your Personal Path Section */}
         <section className="py-20">
@@ -89,7 +79,10 @@ const WWSIndividuals = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="px-4 py-12 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#394161' }}>67%</p>
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>67%</p>
                     <p className="text-lg text-black">
                       of adults have no plan in place, leaving families to make painful decisions alone.
                     </p>
@@ -98,7 +91,10 @@ const WWSIndividuals = () => {
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="px-4 py-12 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#394161' }}>420+</p>
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>420+</p>
                     <p className="text-lg text-black">
                       hours spent by families sorting affairs when information isn't organized.
                     </p>
@@ -107,7 +103,10 @@ const WWSIndividuals = () => {
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="px-4 py-12 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#394161' }}>30%</p>
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>30%</p>
                     <p className="text-lg text-black">
                       of loved ones never access digital accounts, losing photos, messages, and records forever.
                     </p>
@@ -116,7 +115,10 @@ const WWSIndividuals = () => {
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="px-4 py-12 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#394161' }}>$58B</p>
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>$58B</p>
                     <p className="text-lg text-black">
                       in assets goes unclaimed because families didn't know accounts or policies existed.
                     </p>
