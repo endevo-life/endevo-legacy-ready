@@ -195,9 +195,9 @@ const WWSIndividuals = () => {
 
         {/* White Bar Section with Navy Blue Background */}
         <section className="py-20" style={{ backgroundColor: '#1e3a5f' }}>
-          <div className="container max-w-6xl mx-auto px-4">
-            <div className="bg-white rounded-2xl shadow-xl px-8 md:px-16 py-12">
-              <p className="text-lg md:text-xl text-black leading-relaxed text-center">
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="bg-white shadow-xl px-8 md:px-16 py-12 w-[75%]" style={{ borderTopRightRadius: '100px', borderBottomRightRadius: '100px' }}>
+              <p className="text-lg md:text-xl text-black leading-relaxed">
                 With ENDevo, you are not just supporting individual employees. You are creating a healthier workplace culture, protecting business continuity, and showing that your organization values its people in the moments that matter most.
               </p>
             </div>
