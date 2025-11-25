@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-
 const WWSForEmployers = () => {
   const navigate = useNavigate();
   const individualsAnimation = useScrollAnimation();
@@ -16,12 +15,10 @@ const WWSForEmployers = () => {
   const barAnimation = useScrollAnimation();
   const [lineWidth, setLineWidth] = useState(0);
   const lineRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-
   useEffect(() => {
     const handleScroll = () => {
       if (lineRef.current) {
@@ -33,15 +30,12 @@ const WWSForEmployers = () => {
         setLineWidth(progress);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial call
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Legacy Planning for Employers Section */}
@@ -97,8 +91,8 @@ const WWSForEmployers = () => {
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>70%</p>
-                    <p className="text-lg text-black">70% of employees face a major life event within 5 years, impacting productivity and morale</p>
+                  }}>30%</p>
+                    <p className="text-lg text-black">Employees dealing with personal loss experience a 20–30% productivity drop for months</p>
                   </CardContent>
                 </Card>
 
@@ -237,8 +231,6 @@ const WWSForEmployers = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default WWSForEmployers;
