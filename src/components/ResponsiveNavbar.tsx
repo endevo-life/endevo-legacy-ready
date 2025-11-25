@@ -25,7 +25,7 @@ const ResponsiveNavbar = () => {
       name: "Who We Serve",
       href: "/who-we-serve",
       submenu: [
-        { name: "For Individuals", href: "/for-individuals" },
+        { name: "For Individuals", href: "/wws-individuals" },
         { name: "For Service Providers", href: "/who-we-serve#service-providers" },
         { name: "For Employers", href: "/who-we-serve#employers" },
       ]
