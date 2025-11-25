@@ -4,8 +4,30 @@ import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useState, useEffect, useRef } from "react";
 const WWSIndividuals = () => {
   const individualsAnimation = useScrollAnimation();
+  const [lineWidth, setLineWidth] = useState(0);
+  const lineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (lineRef.current) {
+        const linePosition = lineRef.current.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        // Calculate progress based on scroll position
+        const progress = Math.max(0, Math.min(100, ((windowHeight - linePosition) / windowHeight) * 100));
+        setLineWidth(progress);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
@@ -44,6 +66,16 @@ const WWSIndividuals = () => {
             </div>
           </div>
         </section>
+
+        {/* Animated Divider Line */}
+        <div ref={lineRef} className="container max-w-7xl mx-auto px-4 py-8">
+          <div className="relative h-1 bg-gray-200 rounded-full overflow-hidden">
+            <div 
+              className="absolute left-0 top-0 h-full bg-brand-orange transition-all duration-300 ease-out rounded-full"
+              style={{ width: `${lineWidth}%` }}
+            />
+          </div>
+        </div>
 
         {/* Your Personal Path Section */}
         <section className="py-20">
