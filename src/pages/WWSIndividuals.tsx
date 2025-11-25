@@ -55,28 +55,28 @@ const WWSIndividuals = () => {
               {/* Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="p-6 text-center space-y-2">
-                  <p className="text-7xl font-bold text-brand-orange">67%</p>
+                  <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>67%</p>
                   <p className="text-base text-white">
                     of adults have no plan in place, leaving families to make painful decisions alone.
                   </p>
                 </div>
 
                 <div className="p-6 text-center space-y-2">
-                  <p className="text-7xl font-bold text-brand-orange">420+</p>
+                  <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>420+</p>
                   <p className="text-base text-white">
                     hours spent by families sorting affairs when information isn't organized.
                   </p>
                 </div>
 
                 <div className="p-6 text-center space-y-2">
-                  <p className="text-7xl font-bold text-brand-orange">30%</p>
+                  <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>30%</p>
                   <p className="text-base text-white">
                     of loved ones never access digital accounts, losing photos, messages, and records forever.
                   </p>
                 </div>
 
                 <div className="p-6 text-center space-y-2">
-                  <p className="text-7xl font-bold text-brand-orange">$58B</p>
+                  <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>$58B</p>
                   <p className="text-base text-white">
                     in assets goes unclaimed because families didn't know accounts or policies existed.
                   </p>
