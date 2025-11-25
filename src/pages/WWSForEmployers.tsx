@@ -85,7 +85,7 @@ const WWSForEmployers = () => {
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
               <h2 className={`text-3xl md:text-4xl font-bold text-black transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Employees need <span className="text-brand-orange">support</span>. Most organizations aren't prepared.
+                Unprepared employees cost businesses <span className="text-brand-orange">time and money</span>.
               </h2>
               
               {/* Statistics */}
