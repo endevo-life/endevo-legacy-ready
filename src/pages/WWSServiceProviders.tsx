@@ -155,9 +155,7 @@ const WWSServiceProviders = () => {
                     <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       1
                     </div>
-                    <p className="text-lg text-foreground leading-relaxed text-left">
-                      We are addressing a market valued at over 126 billion dollars, combining traditional estate and legacy planning with digital preparedness.
-                    </p>
+                    <p className="text-lg text-foreground leading-relaxed text-left">We are addressing a market valued at over 126 billion dollars, combining traditional estate and legacy planning with digital preparedness.</p>
                   </div>
 
                   {/* Step 2 */}
