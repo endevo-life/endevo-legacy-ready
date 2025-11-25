@@ -19,7 +19,6 @@ const WWSServiceProviders = () => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-
   useEffect(() => {
     const handleScroll = () => {
       if (lineRef.current) {
@@ -85,43 +84,51 @@ const WWSServiceProviders = () => {
               
               {/* Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '200ms' : '0ms' }}>
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
+                transitionDelay: statsAnimation.isVisible ? '200ms' : '0ms'
+              }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>67%</p>
-                    <p className="text-lg text-black">67% of adults have no plan in place, leaving families to make painful decisions alone.</p>
+                  }}>70%</p>
+                    <p className="text-lg text-black">70% of clients arrive without organized documents, slowing every process</p>
                   </CardContent>
                 </Card>
 
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '400ms' : '0ms' }}>
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
+                transitionDelay: statsAnimation.isVisible ? '400ms' : '0ms'
+              }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>420+</p>
-                    <p className="text-lg text-black">Families spend 420+ hours sorting affairs when information isn't organized.</p>
+                  }}>40%</p>
+                    <p className="text-lg text-black">Advisors spend up to 40% of time chasing paperwork instead of providing value.</p>
                   </CardContent>
                 </Card>
 
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '600ms' : '0ms' }}>
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
+                transitionDelay: statsAnimation.isVisible ? '600ms' : '0ms'
+              }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>30%</p>
-                    <p className="text-lg text-black">30% of loved ones never access digital accounts, losing photos, messages, and records forever.</p>
+                  }}>60%</p>
+                    <p className="text-lg text-black">60% of clients expect digital guidance but most providers lack the tools.</p>
                   </CardContent>
                 </Card>
 
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '800ms' : '0ms' }}>
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
+                transitionDelay: statsAnimation.isVisible ? '800ms' : '0ms'
+              }}>
                   <CardContent className="px-3 py-16 text-center space-y-4">
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>$58B</p>
-                    <p className="text-lg text-black">$58B in assets goes unclaimed because families didn't know accounts or policies existed.</p>
+                  }}>1 in 3</p>
+                    <p className="text-lg text-black">1 in 3 legal or financial cases is delayed due to missing or outdated information.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -140,7 +147,9 @@ const WWSServiceProviders = () => {
               {/* Two Column Layout: Steps and Image */}
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left - Step Blocks */}
-                <div className={`grid grid-cols-1 gap-12 transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: pathAnimation.isVisible ? '200ms' : '0ms' }}>
+                <div className={`grid grid-cols-1 gap-12 transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
+                transitionDelay: pathAnimation.isVisible ? '200ms' : '0ms'
+              }}>
                   {/* Step 1 */}
                   <div className="flex gap-6 items-start">
                     <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
@@ -181,19 +190,19 @@ const WWSServiceProviders = () => {
                 </div>
 
                 {/* Right - Image */}
-                <div className={`relative transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: pathAnimation.isVisible ? '400ms' : '0ms' }}>
+                <div className={`relative transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{
+                transitionDelay: pathAnimation.isVisible ? '400ms' : '0ms'
+              }}>
                   <img src={consultationMeeting} alt="Professional consultation meeting" className="w-full h-auto rounded-2xl shadow-lg" />
                 </div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <div className={`mt-12 text-center transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: pathAnimation.isVisible ? '600ms' : '0ms' }}>
-              <Button 
-                onClick={() => navigate('/contact')}
-                size="lg" 
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full"
-              >
+            <div className={`mt-12 text-center transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+            transitionDelay: pathAnimation.isVisible ? '600ms' : '0ms'
+          }}>
+              <Button onClick={() => navigate('/contact')} size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
                 Start Your Journey Today
               </Button>
             </div>
@@ -202,18 +211,17 @@ const WWSServiceProviders = () => {
 
         {/* White Bar Section with Navy Blue Background */}
         <section ref={barAnimation.elementRef as any} className="py-20 overflow-hidden">
-          <div 
-            className={`shadow-2xl px-8 md:px-16 py-12 transition-all ease-out ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`}
-            style={{ 
-              backgroundColor: '#08123A', 
-              borderTopRightRadius: '100px', 
-              borderBottomRightRadius: '100px',
-              width: barAnimation.isVisible ? '85%' : '0%',
-              transitionDuration: '2000ms',
-              transitionProperty: 'width, opacity'
-            }}
-          >
-            <p className={`text-lg md:text-xl text-white leading-relaxed transition-opacity duration-1000 ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: barAnimation.isVisible ? '800ms' : '0ms' }}>
+          <div className={`shadow-2xl px-8 md:px-16 py-12 transition-all ease-out ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
+          backgroundColor: '#08123A',
+          borderTopRightRadius: '100px',
+          borderBottomRightRadius: '100px',
+          width: barAnimation.isVisible ? '85%' : '0%',
+          transitionDuration: '2000ms',
+          transitionProperty: 'width, opacity'
+        }}>
+            <p className={`text-lg md:text-xl text-white leading-relaxed transition-opacity duration-1000 ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
+            transitionDelay: barAnimation.isVisible ? '800ms' : '0ms'
+          }}>
               With ENDevo, you are not just supporting individual employees. You are creating a healthier workplace culture, protecting business continuity, and showing that your organization values its people in the moments that matter most.
             </p>
           </div>
