@@ -14,6 +14,11 @@ const WWSIndividuals = () => {
   const [lineWidth, setLineWidth] = useState(0);
   const lineRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       if (lineRef.current) {
         const linePosition = lineRef.current.getBoundingClientRect().top;
