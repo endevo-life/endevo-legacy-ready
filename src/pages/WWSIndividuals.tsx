@@ -52,15 +52,8 @@ const WWSIndividuals = () => {
                 </p>
                 
                 <div className="mt-8">
-                  <p className="text-muted-foreground/70 italic mb-3">
-                    how ready are you? find out
-                  </p>
-                  <Button 
-                    onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
-                    variant="cta"
-                    size="lg"
-                    className="px-8 py-3 text-lg rounded-full"
-                  >
+                  <p className="text-muted-foreground/70 italic mb-3">Find out how ready you are</p>
+                  <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="cta" size="lg" className="px-8 py-3 text-lg rounded-full">
                     Take the peace of mind assessment for free
                   </Button>
                 </div>
