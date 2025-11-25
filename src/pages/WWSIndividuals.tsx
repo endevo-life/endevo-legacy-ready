@@ -57,6 +57,20 @@ const WWSIndividuals = () => {
             </div>
           </div>
         </section>
+
+        {/* Your Personal Path Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Your Personal Path to Peace of Mind and Digital Preparedness
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                We guide you through every step of organizing your life's most important information, from digital assets to final wishes, ensuring your legacy is protected and your loved ones are supported.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
