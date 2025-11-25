@@ -26,17 +26,15 @@ const ForIndividuals = () => {
             Go Back
           </Button>
           
-          {/* Section Title */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            For Individuals
-          </h1>
-
           {/* Hero Section with Image */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#FF6B35]">
+              <p className="text-xl font-semibold mb-4 text-foreground">
+                For Individuals
+              </p>
+              <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#FF6B35]">
                 AI-powered tools for personal legacy and digital preparedness.
-              </h2>
+              </h1>
               <p className="text-lg text-gray-700">
                 Planning for the future can feel overwhelming, but ENDevo makes it simple and approachable. Our platform helps you organize every part of your life so that you and your loved ones are always prepared.
               </p>
