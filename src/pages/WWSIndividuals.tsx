@@ -55,7 +55,7 @@ const WWSIndividuals = () => {
               
               {/* Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="border-2" style={{ backgroundColor: 'rgba(8, 18, 58, 0.5)' }}>
+                <Card className="border-2" style={{ backgroundColor: '#84899D' }}>
                   <CardContent className="p-6 text-center space-y-2">
                     <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>67%</p>
                     <p className="text-base text-white">
@@ -64,7 +64,7 @@ const WWSIndividuals = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2" style={{ backgroundColor: 'rgba(8, 18, 58, 0.5)' }}>
+                <Card className="border-2" style={{ backgroundColor: '#84899D' }}>
                   <CardContent className="p-6 text-center space-y-2">
                     <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>420+</p>
                     <p className="text-base text-white">
@@ -73,7 +73,7 @@ const WWSIndividuals = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2" style={{ backgroundColor: 'rgba(8, 18, 58, 0.5)' }}>
+                <Card className="border-2" style={{ backgroundColor: '#84899D' }}>
                   <CardContent className="p-6 text-center space-y-2">
                     <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>30%</p>
                     <p className="text-base text-white">
@@ -82,7 +82,7 @@ const WWSIndividuals = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2" style={{ backgroundColor: 'rgba(8, 18, 58, 0.5)' }}>
+                <Card className="border-2" style={{ backgroundColor: '#84899D' }}>
                   <CardContent className="p-6 text-center space-y-2">
                     <p className="text-7xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>$58B</p>
                     <p className="text-base text-white">
