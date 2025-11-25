@@ -59,6 +59,18 @@ const WWSIndividuals = () => {
                 </div>
               </div>
             </div>
+            
+            {/* Centered CTA Button */}
+            <div className="text-center mt-12">
+              <Button 
+                onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
+                variant="cta"
+                size="lg"
+                className="px-8 py-3 text-lg"
+              >
+                Take the peace of mind assessment for free
+              </Button>
+            </div>
           </div>
         </section>
 
