@@ -11,6 +11,7 @@ const WWSIndividuals = () => {
   const navigate = useNavigate();
   const individualsAnimation = useScrollAnimation();
   const statsAnimation = useScrollAnimation();
+  const pathAnimation = useScrollAnimation();
   const [lineWidth, setLineWidth] = useState(0);
   const lineRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -129,17 +130,17 @@ const WWSIndividuals = () => {
         </section>
 
         {/* Your Path to Peace of Mind Section */}
-        <section className="py-20 bg-background">
+        <section ref={pathAnimation.elementRef as any} className="py-20 bg-background">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-16">
+              <h2 className={`text-3xl md:text-4xl font-bold text-foreground mb-16 transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 Your Path to Peace of Mind Starts Here
               </h2>
               
               {/* Two Column Layout: Steps and Image */}
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left - Step Blocks */}
-                <div className="grid grid-cols-1 gap-12">
+                <div className={`grid grid-cols-1 gap-12 transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{ transitionDelay: pathAnimation.isVisible ? '200ms' : '0ms' }}>
                   {/* Step 1 */}
                   <div className="flex gap-6 items-start">
                     <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
@@ -180,14 +181,14 @@ const WWSIndividuals = () => {
                 </div>
 
                 {/* Right - Image */}
-                <div className="relative">
+                <div className={`relative transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: pathAnimation.isVisible ? '400ms' : '0ms' }}>
                   <img src={consultationMeeting} alt="Professional consultation meeting" className="w-full h-auto rounded-2xl shadow-lg" />
                 </div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <div className="mt-12 text-center">
+            <div className={`mt-12 text-center transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: pathAnimation.isVisible ? '600ms' : '0ms' }}>
               <Button 
                 onClick={() => navigate('/contact')}
                 size="lg" 
