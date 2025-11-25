@@ -156,7 +156,7 @@ const WWSServiceProviders = () => {
                       1
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
-                      Begin with the Peace of Mind Assessment, a quick check-up that highlights gaps and gives you a clear readiness score.
+                      We are addressing a market valued at over 126 billion dollars, combining traditional estate and legacy planning with digital preparedness.
                     </p>
                   </div>
 
@@ -165,7 +165,7 @@ const WWSServiceProviders = () => {
                     <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       2
                     </div>
-                    <p className="text-lg text-foreground leading-relaxed text-left">Use our AI-driven platform to gather your most important information in one place.</p>
+                    <p className="text-lg text-foreground leading-relaxed text-left">Our technology is built to scale, offering AI-powered tools alongside personalized human guidance.</p>
                   </div>
 
                   {/* Step 3 */}
@@ -174,7 +174,7 @@ const WWSServiceProviders = () => {
                       3
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
-                      Gain access to guided support, including one-on-one sessions with ENDevo leadership, to walk you through your options and help you understand your next steps.
+                      Multiple revenue streams are available through individual subscriptions, corporate partnerships, and enterprise solutions.
                     </p>
                   </div>
 
@@ -184,7 +184,7 @@ const WWSServiceProviders = () => {
                       4
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
-                      Securely share your plan with trusted family members or designated contacts so they have what they need when it matters most.
+                      ENDevo combines financial opportunity with social impact by solving a real human problem that affects every person, family, and organization.
                     </p>
                   </div>
                 </div>
