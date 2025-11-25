@@ -3,12 +3,9 @@ import Footer from "@/components/Footer";
 import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
 const WWSIndividuals = () => {
   const individualsAnimation = useScrollAnimation();
-  
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Legacy Planning for Individuals Section */}
@@ -17,11 +14,7 @@ const WWSIndividuals = () => {
             <div ref={individualsAnimation.elementRef as any} id="individuals" className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20">
               {/* Left - Image */}
               <div className={`relative transition-all duration-1000 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <img 
-                  src={individualsLegacy} 
-                  alt="Person working on laptop for legacy planning" 
-                  className="w-full h-auto rounded-2xl shadow-lg"
-                />
+                <img src={individualsLegacy} alt="Person working on laptop for legacy planning" className="w-full h-auto rounded-2xl shadow-lg" />
               </div>
 
               {/* Right - Content */}
@@ -39,17 +32,10 @@ const WWSIndividuals = () => {
                 </p>
                 
                 <div className="flex gap-4">
-                  <Button 
-                    onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
-                    className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 py-1.5 text-base rounded-full"
-                  >
+                  <Button onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')} className="bg-brand-orange hover:bg-brand-orange-dark text-white px-6 py-1.5 text-base rounded-full">
                     Start Your Journey Today
                   </Button>
-                  <Button 
-                    onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
-                    variant="outline"
-                    className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base rounded-full"
-                  >
+                  <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="outline" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base rounded-full">
                     Take the Peace of Mind Assessment
                   </Button>
                 </div>
@@ -65,16 +51,12 @@ const WWSIndividuals = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 If you don't prepare, this is what happens…
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                We guide you through every step of organizing your life's most important information, from digital assets to final wishes, ensuring your legacy is protected and your loved ones are supported.
-              </p>
+              
             </div>
           </div>
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default WWSIndividuals;
