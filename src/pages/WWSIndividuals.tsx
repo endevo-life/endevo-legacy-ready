@@ -50,7 +50,7 @@ const WWSIndividuals = () => {
                     variant="outline"
                     className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base rounded-full"
                   >
-                    Take the Peace of Mind Assessment for Free
+                    Take the Peace of Mind Assessment
                   </Button>
                 </div>
               </div>
