@@ -2,7 +2,6 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const WWSIndividuals = () => {
   const individualsAnimation = useScrollAnimation();
@@ -53,43 +52,35 @@ const WWSIndividuals = () => {
                 If you don't prepare, this is what happens…
               </h2>
               
-              {/* Statistics Cards */}
+              {/* Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="bg-card border-2 hover:border-brand-orange transition-colors duration-300">
-                  <CardContent className="p-6 text-center space-y-2">
-                    <p className="text-6xl font-bold text-brand-orange">67%</p>
-                    <p className="text-sm text-muted-foreground">
-                      of adults have no plan in place, leaving families to make painful decisions alone.
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="p-6 text-center space-y-2">
+                  <p className="text-6xl font-bold text-brand-orange">67%</p>
+                  <p className="text-sm text-muted-foreground">
+                    of adults have no plan in place, leaving families to make painful decisions alone.
+                  </p>
+                </div>
 
-                <Card className="bg-card border-2 hover:border-brand-orange transition-colors duration-300">
-                  <CardContent className="p-6 text-center space-y-2">
-                    <p className="text-6xl font-bold text-brand-orange">420+</p>
-                    <p className="text-sm text-muted-foreground">
-                      hours spent by families sorting affairs when information isn't organized.
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="p-6 text-center space-y-2">
+                  <p className="text-6xl font-bold text-brand-orange">420+</p>
+                  <p className="text-sm text-muted-foreground">
+                    hours spent by families sorting affairs when information isn't organized.
+                  </p>
+                </div>
 
-                <Card className="bg-card border-2 hover:border-brand-orange transition-colors duration-300">
-                  <CardContent className="p-6 text-center space-y-2">
-                    <p className="text-6xl font-bold text-brand-orange">30%</p>
-                    <p className="text-sm text-muted-foreground">
-                      of loved ones never access digital accounts, losing photos, messages, and records forever.
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="p-6 text-center space-y-2">
+                  <p className="text-6xl font-bold text-brand-orange">30%</p>
+                  <p className="text-sm text-muted-foreground">
+                    of loved ones never access digital accounts, losing photos, messages, and records forever.
+                  </p>
+                </div>
 
-                <Card className="bg-card border-2 hover:border-brand-orange transition-colors duration-300">
-                  <CardContent className="p-6 text-center space-y-2">
-                    <p className="text-6xl font-bold text-brand-orange">$58B</p>
-                    <p className="text-sm text-muted-foreground">
-                      in assets goes unclaimed because families didn't know accounts or policies existed.
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="p-6 text-center space-y-2">
+                  <p className="text-6xl font-bold text-brand-orange">$58B</p>
+                  <p className="text-sm text-muted-foreground">
+                    in assets goes unclaimed because families didn't know accounts or policies existed.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
