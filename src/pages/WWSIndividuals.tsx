@@ -214,7 +214,7 @@ const WWSIndividuals = () => {
               transitionProperty: 'width, opacity'
             }}
           >
-            <p className={`text-lg md:text-xl text-white leading-relaxed whitespace-nowrap transition-opacity duration-1000 ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: barAnimation.isVisible ? '800ms' : '0ms' }}>
+            <p className={`text-lg md:text-xl text-white leading-relaxed transition-opacity duration-1000 ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: barAnimation.isVisible ? '800ms' : '0ms' }}>
               With ENDevo, you are not just supporting individual employees. You are creating a healthier workplace culture, protecting business continuity, and showing that your organization values its people in the moments that matter most.
             </p>
           </div>
