@@ -49,8 +49,8 @@ const WWSIndividuals = () => {
         <section className="py-20">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                If you don't prepare, this is what happens…
+              <h2 className="text-3xl md:text-4xl font-bold text-black">
+                If you don't <span className="text-brand-orange">prepare</span>, this is what happens…
               </h2>
               
               {/* Statistics */}
