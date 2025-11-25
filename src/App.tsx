@@ -17,6 +17,7 @@ import Plan from "./pages/Plan";
 import Company from "./pages/Company";
 import ForCompanies from "./pages/ForCompanies";
 import ForIndividuals from "./pages/ForIndividuals";
+import ForEmployers from "./pages/ForEmployers";
 import ForInvestors from "./pages/ForInvestors";
 import EmployeeWellness from "./pages/EmployeeWellness";
 import WWSIndividuals from "./pages/WWSIndividuals";
@@ -61,13 +62,14 @@ const App = () => (
           <Route path="/who-we-serve" element={<WhoWeServe />} />
           <Route path="/for-companies" element={<ForCompanies />} />
           <Route path="/for-individuals" element={<ForIndividuals />} />
+          <Route path="/for-employers" element={<ForEmployers />} />
           <Route path="/wws-individuals" element={<WWSIndividuals />} />
           <Route path="/wws-service-providers" element={<WWSServiceProviders />} />
           <Route path="/for-investors" element={<ForInvestors />} />
           <Route path="/employee-wellness" element={<EmployeeWellness />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/trusted-experts" element={<TrustedExperts />} />
-          <Route path="/employers" element={<NotFound />} />
+          <Route path="/employers" element={<ForEmployers />} />
           <Route path="/consultants" element={<NotFound />} />
           <Route path="/members" element={<NotFound />} />
           <Route path="/providers" element={<NotFound />} />
