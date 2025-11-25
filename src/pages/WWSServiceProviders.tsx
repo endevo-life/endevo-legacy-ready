@@ -1,6 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
-import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
+import serviceProvidersHero from "@/assets/service-providers-hero.jpg";
 import consultationMeeting from "@/assets/consultation-meeting.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,7 +45,7 @@ const WWSServiceProviders = () => {
             <div ref={individualsAnimation.elementRef as any} id="service-providers" className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20">
               {/* Left - Image */}
               <div className={`relative transition-all duration-1000 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <img src={individualsLegacy} alt="Person working on laptop for legacy planning" className="w-full h-auto rounded-2xl shadow-lg" />
+                <img src={serviceProvidersHero} alt="Business professionals collaborating" className="w-full h-auto rounded-2xl shadow-lg" />
               </div>
 
               {/* Right - Content */}
