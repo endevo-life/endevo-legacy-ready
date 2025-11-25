@@ -128,7 +128,7 @@ const WWSIndividuals = () => {
               </h2>
               
               {/* Step Blocks */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 gap-12 max-w-3xl mx-auto">
                 {/* Step 1 */}
                 <div className="space-y-4">
                   <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold">
