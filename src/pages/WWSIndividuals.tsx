@@ -53,7 +53,7 @@ const WWSIndividuals = () => {
                 
                 <div className="mt-8">
                   <p className="text-muted-foreground/70 italic mb-3">Find out how ready you are</p>
-                  <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="cta" size="lg" className="px-8 py-3 text-lg rounded-full">
+                  <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="outline" size="lg" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-3 text-lg rounded-full">
                     Take the peace of mind assessment for free
                   </Button>
                 </div>
