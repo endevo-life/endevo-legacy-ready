@@ -220,7 +220,7 @@ const WWSServiceProviders = () => {
             <p className={`text-lg md:text-xl text-white leading-relaxed transition-opacity duration-1000 ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
             transitionDelay: barAnimation.isVisible ? '800ms' : '0ms'
           }}>
-              With ENDevo, you are not just supporting individual employees. You are creating a healthier workplace culture, protecting business continuity, and showing that your organization values its people in the moments that matter most.
+              By joining ENDevo, you are not only investing in a company but also in a movement to bring clarity, confidence, and preparedness to millions of people. This is your chance to participate in shaping a new market while generating both financial return and meaningful impact.
             </p>
           </div>
         </section>
