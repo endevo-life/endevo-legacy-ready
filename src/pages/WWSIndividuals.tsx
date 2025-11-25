@@ -57,7 +57,7 @@ const WWSIndividuals = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="p-8 text-center space-y-4">
-                    <p className="text-8xl font-bold text-brand-orange" style={{ fontFamily: 'Times New Roman, serif' }}>67%</p>
+                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#08123A' }}>67%</p>
                     <p className="text-lg text-black">
                       of adults have no plan in place, leaving families to make painful decisions alone.
                     </p>
@@ -66,7 +66,7 @@ const WWSIndividuals = () => {
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="p-8 text-center space-y-4">
-                    <p className="text-8xl font-bold text-brand-orange" style={{ fontFamily: 'Times New Roman, serif' }}>420+</p>
+                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#08123A' }}>420+</p>
                     <p className="text-lg text-black">
                       hours spent by families sorting affairs when information isn't organized.
                     </p>
@@ -75,7 +75,7 @@ const WWSIndividuals = () => {
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="p-8 text-center space-y-4">
-                    <p className="text-8xl font-bold text-brand-orange" style={{ fontFamily: 'Times New Roman, serif' }}>30%</p>
+                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#08123A' }}>30%</p>
                     <p className="text-lg text-black">
                       of loved ones never access digital accounts, losing photos, messages, and records forever.
                     </p>
@@ -84,7 +84,7 @@ const WWSIndividuals = () => {
 
                 <Card className="bg-white shadow-lg rounded-xl border-0">
                   <CardContent className="p-8 text-center space-y-4">
-                    <p className="text-8xl font-bold text-brand-orange" style={{ fontFamily: 'Times New Roman, serif' }}>$58B</p>
+                    <p className="text-8xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#08123A' }}>$58B</p>
                     <p className="text-lg text-black">
                       in assets goes unclaimed because families didn't know accounts or policies existed.
                     </p>
