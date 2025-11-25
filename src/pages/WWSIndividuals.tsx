@@ -52,6 +52,9 @@ const WWSIndividuals = () => {
                 </p>
                 
                 <div className="mt-8">
+                  <p className="text-muted-foreground/70 italic mb-3">
+                    how ready are you? find out
+                  </p>
                   <Button 
                     onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
                     variant="cta"
