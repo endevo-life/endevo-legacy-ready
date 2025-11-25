@@ -46,7 +46,7 @@ const WWSIndividuals = () => {
                     Start Your Journey Today
                   </Button>
                   <Button 
-                    onClick={() => window.location.href = '/plan'}
+                    onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
                     variant="outline"
                     className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base rounded-full"
                   >
