@@ -104,7 +104,7 @@ const WWSForEmployers = () => {
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
                   }}>40%</p>
-                    <p className="text-lg text-black">Organizations lose up to 40% productivity when employees manage personal crises without support.</p>
+                    <p className="text-lg text-black">1 in 4 workers faces a major life event each year that requires immediate documentation</p>
                   </CardContent>
                 </Card>
 
