@@ -8,11 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import VisionValuesSection from "@/components/VisionValuesSection";
 import Footer from "@/components/Footer";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
 // Import partner logos
@@ -36,22 +32,14 @@ const Index = () => {
         <section id="partners" className="py-12 bg-background">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl text-brand-orange font-semibold">
-                Building Resilience Together
-              </h2>
+              
             </div>
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 3000,
-                }),
-              ]}
-              className="w-full max-w-4xl mx-auto"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} plugins={[Autoplay({
+            delay: 3000
+          })]} className="w-full max-w-4xl mx-auto">
               <CarouselContent>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="flex items-center justify-center h-20 p-4">
