@@ -91,8 +91,7 @@ const WWSIndividuals = () => {
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
                   }}>420+</p>
-                    <p className="text-lg text-black">• Families spend 420+ hours sorting affairs when information isn’t organized.
-                  </p>
+                    <p className="text-lg text-black">Families spend 420+ hours sorting affairs when information isn’t organized.</p>
                   </CardContent>
                 </Card>
 
@@ -102,9 +101,7 @@ const WWSIndividuals = () => {
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
                   }}>30%</p>
-                    <p className="text-lg text-black">
-                      of loved ones never access digital accounts, losing photos, messages, and records forever.
-                    </p>
+                    <p className="text-lg text-black">30% of loved ones never access digital accounts, losing photos, messages, and records forever.</p>
                   </CardContent>
                 </Card>
 
@@ -114,9 +111,7 @@ const WWSIndividuals = () => {
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
                   }}>$58B</p>
-                    <p className="text-lg text-black">
-                      in assets goes unclaimed because families didn't know accounts or policies existed.
-                    </p>
+                    <p className="text-lg text-black">$58B in assets goes unclaimed because families didn’t know accounts or policies existed.</p>
                   </CardContent>
                 </Card>
               </div>
