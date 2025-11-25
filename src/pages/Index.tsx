@@ -34,25 +34,31 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-orange">Building Resilience Together</h2>
               
             </div>
-            <Carousel opts={{
-            align: "center",
-            loop: true
-          }} plugins={[Autoplay({
-            delay: 3000
-          })]} className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="flex items-center justify-center h-32 p-6 hover-scale">
-                    <img src={trustWillLogo} alt="Trust & Will" className="max-h-24 w-auto object-contain transition-all duration-300" />
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="flex items-center justify-center h-32 p-6 hover-scale">
-                    <img src={prisidioLogo} alt="Prisidio" className="max-h-24 w-auto object-contain transition-all duration-300" />
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-            </Carousel>
+            <div className="overflow-hidden w-full">
+              <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused]">
+                {/* First set of logos */}
+                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
+                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-24 w-auto object-contain" />
+                </div>
+                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
+                  <img src={prisidioLogo} alt="Prisidio" className="max-h-24 w-auto object-contain" />
+                </div>
+                {/* Duplicate set for seamless loop */}
+                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
+                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-24 w-auto object-contain" />
+                </div>
+                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
+                  <img src={prisidioLogo} alt="Prisidio" className="max-h-24 w-auto object-contain" />
+                </div>
+                {/* Third set for extra smoothness */}
+                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
+                  <img src={trustWillLogo} alt="Trust & Will" className="max-h-24 w-auto object-contain" />
+                </div>
+                <div className="flex items-center justify-center min-w-[300px] h-32 p-6">
+                  <img src={prisidioLogo} alt="Prisidio" className="max-h-24 w-auto object-contain" />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         
