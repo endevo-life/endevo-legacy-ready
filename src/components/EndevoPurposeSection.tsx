@@ -34,20 +34,20 @@ const EndevoPurposeSection = () => {
             <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
             transitionDelay: isVisible ? '0.4s' : '0s'
           }}>
-              <h3 className="text-2xl font-bold text-white mb-1">For Individuals:</h3>
-              <p className="text-white/90 text-lg mb-4">AI-powered tools for personal legacy & digital preparedness.</p>
-              <a href="/for-individuals" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
-                Get Started
+              <h3 className="text-2xl font-bold text-white mb-1">For Service Providers:</h3>
+              <p className="text-white/90 text-lg mb-4">Connect with clients and grow your practice through our trusted network.</p>
+              <a href="/wws-service-providers" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
+                Join Our Network
               </a>
             </div>
 
             <div className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} style={{
             transitionDelay: isVisible ? '0.6s' : '0s'
           }}>
-              <h3 className="text-2xl font-bold text-white mb-1">For Investors:</h3>
-              <p className="text-white/90 text-lg mb-4">Be part of a $126B industry transformation.</p>
-              <a href="/for-investors" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
-                Explore Opportunity
+              <h3 className="text-2xl font-bold text-white mb-1">For Individuals:</h3>
+              <p className="text-white/90 text-lg mb-4">AI-powered tools for personal legacy & digital preparedness.</p>
+              <a href="/for-individuals" className="text-brand-orange hover:text-brand-orange-dark font-semibold text-lg transition-colors">
+                Get Started
               </a>
             </div>
           </div>
