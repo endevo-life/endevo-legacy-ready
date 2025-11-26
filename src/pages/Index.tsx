@@ -26,7 +26,6 @@ const Index = () => {
         
         
         <VisionValuesSection />
-        <TestimonialsSection />
         
         {/* Partners Carousel Section */}
         <section className="py-16 bg-gradient-to-b from-background to-muted/20">
