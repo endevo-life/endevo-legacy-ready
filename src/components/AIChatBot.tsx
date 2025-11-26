@@ -6,8 +6,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import jesseAvatar from "@/assets/jesse-avatar.png";
 const pageLinks = {
   companies: {
-    url: "/for-companies",
-    title: "Solutions for Companies"
+    url: "/wws-for-employers",
+    title: "Solutions for Employers"
   },
   individuals: {
     url: "/for-individuals",
