@@ -1,10 +1,26 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import { useState, useCallback } from "react";
 const FamilyTestimonialsSection = () => {
   const {
     elementRef,
     isVisible
   } = useScrollAnimation();
+  
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "start" });
+  const [selectedTestimonial, setSelectedTestimonial] = useState<typeof testimonials[0] | null>(null);
+  
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+  
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
   const testimonials = [{
     quote: "The final playbook has helped guide me through a difficult and challenging subject that is unfortunately avoided by most. The tools that the playbook offers help you delve deeper into personal beliefs and desires in a clear and easy to use layout. The process gives peace of mind in a respectful, comfortable, and easy-to-use format. This is a crucial subject that brings peace of mind to you and those you leave behind.",
     author: "Patty",
@@ -28,23 +44,67 @@ const FamilyTestimonialsSection = () => {
           What Our <span className="text-brand-orange">Families Say</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => <Card key={index} className={`bg-white border-0 shadow-lg transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
-          transitionDelay: isVisible ? `${200 + index * 200}ms` : '0ms'
-        }}>
-              <CardContent className="p-8 space-y-6">
-                
-                <p className="text-lg text-foreground leading-relaxed italic">
-                  {testimonial.quote}
-                </p>
-                <div className="pt-4 border-t border-border">
-                  <p className="font-semibold text-foreground">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </CardContent>
-            </Card>)}
+        <div className="relative">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6">
+              {testimonials.map((testimonial, index) => <div key={index} className={`flex-[0_0_100%] md:flex-[0_0_calc(33.333%-16px)] min-w-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
+              transitionDelay: isVisible ? `${200 + index * 200}ms` : '0ms'
+            }}>
+                  <Card className="bg-white border-0 shadow-lg h-full">
+                    <CardContent className="p-8 space-y-6">
+                      <p className="text-lg text-foreground leading-relaxed italic line-clamp-3">
+                        {testimonial.quote}
+                      </p>
+                      <Button
+                        variant="link"
+                        className="p-0 h-auto text-brand-orange hover:text-brand-orange/80"
+                        onClick={() => setSelectedTestimonial(testimonial)}
+                      >
+                        Read more
+                      </Button>
+                      <div className="pt-4 border-t border-border">
+                        <p className="font-semibold text-foreground">{testimonial.author}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>)}
+            </div>
+          </div>
+          
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg"
+            onClick={scrollPrev}
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg"
+            onClick={scrollNext}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
         </div>
       </div>
+      
+      <Dialog open={!!selectedTestimonial} onOpenChange={(open) => !open && setSelectedTestimonial(null)}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">
+              {selectedTestimonial?.author}
+              <span className="text-sm text-muted-foreground ml-2">({selectedTestimonial?.role})</span>
+            </DialogTitle>
+          </DialogHeader>
+          <p className="text-lg text-foreground leading-relaxed italic mt-4">
+            {selectedTestimonial?.quote}
+          </p>
+        </DialogContent>
+      </Dialog>
     </section>;
 };
 export default FamilyTestimonialsSection;
