@@ -163,7 +163,7 @@ const WWSForEmployers = () => {
                     <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       2
                     </div>
-                    <p className="text-lg text-foreground leading-relaxed text-left">Implement comprehensive planning tools that help employees organize their affairs while protecting business continuity.</p>
+                    <p className="text-lg text-foreground leading-relaxed text-left">Guide staff with AI-powered tools that help them organize legal, financial, and digital assets in one secure place.</p>
                   </div>
 
                   {/* Step 3 */}
@@ -172,7 +172,7 @@ const WWSForEmployers = () => {
                       3
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
-                      Provide workshops, educational resources, and expert guidance to support employees through life transitions.
+                      Offer confidence and support that reduces stress, protects well-being, and lowers the risk of extended absences.
                     </p>
                   </div>
 
@@ -182,7 +182,7 @@ const WWSForEmployers = () => {
                       4
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
-                      Build a workplace culture that values preparedness, reduces stress, and demonstrates genuine care for employees during critical moments.
+                      Strengthen continuity by ensuring employees can focus on their work, even while navigating personal challenges.
                     </p>
                   </div>
                 </div>
