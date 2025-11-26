@@ -38,8 +38,8 @@ const pageLinks = {
     title: "About Us"
   },
   whoweserve: {
-    url: "/who-we-serve",
-    title: "Who We Serve"
+    url: "/wws-for-employers",
+    title: "Who We Serve - Employers"
   },
   wellness: {
     url: "/employee-wellness",
