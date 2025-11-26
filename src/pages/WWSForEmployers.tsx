@@ -103,8 +103,8 @@ const WWSForEmployers = () => {
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>40%</p>
-                    <p className="text-lg text-black">1 in 4 workers faces a major life event each year that requires immediate documentation</p>
+                  }}>76%</p>
+                    <p className="text-lg text-black">76% of employees say they’d feel more loyal to an employer that supports personal preparedness.</p>
                   </CardContent>
                 </Card>
 
@@ -115,8 +115,8 @@ const WWSForEmployers = () => {
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>60%</p>
-                    <p className="text-lg text-black">60% of employees say their employer lacks adequate support for life planning and crisis management.</p>
+                  }}>$1,900</p>
+                    <p className="text-lg text-black">Businesses lose an estimated $1,900 per employee annually due to disorganization and crisis-driven leave.</p>
                   </CardContent>
                 </Card>
 
@@ -127,8 +127,8 @@ const WWSForEmployers = () => {
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>1 in 3</p>
-                    <p className="text-lg text-black">1 in 3 companies experience disruption due to unprepared succession or knowledge transfer.</p>
+                  }}>1 in 4</p>
+                    <p className="text-lg text-black">1 in 4 workers faces a major life event each year that requires immediate documentation.</p>
                   </CardContent>
                 </Card>
               </div>
