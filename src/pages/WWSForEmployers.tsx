@@ -1,7 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import employerMeeting from "@/assets/employer-meeting.jpg";
-import investorMeeting from "@/assets/investor-meeting.jpg";
+import employerResilience from "@/assets/employer-resilience.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -191,7 +191,7 @@ const WWSForEmployers = () => {
                 <div className={`relative transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{
                 transitionDelay: pathAnimation.isVisible ? '400ms' : '0ms'
               }}>
-                  <img src={investorMeeting} alt="Professional consultation meeting" className="w-full h-auto rounded-2xl shadow-lg" />
+                  <img src={employerResilience} alt="Professional consultation meeting" className="w-full h-auto rounded-2xl shadow-lg" />
                 </div>
               </div>
             </div>
