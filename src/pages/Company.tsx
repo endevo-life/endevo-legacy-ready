@@ -75,23 +75,7 @@ const Company = () => {
       <VideoSection />
 
       {/* About ENDevo Section */}
-      <section id="about" className="py-20 bg-background">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div ref={aboutRef as any} className={`grid md:grid-cols-2 gap-12 items-center transition-all duration-1000 ${aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                About ENDevo
-              </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Founded to bring clarity and compassion to one of life's hardest conversations, ENDevo blends AI intelligence with human guidance to make legacy readiness and digital resilience accessible, scalable, and impactful.
-              </p>
-            </div>
-            <div className="relative hidden md:block">
-              <img src={aboutEndevo} alt="About ENDevo - Team collaboration" className="rounded-lg shadow-lg w-full h-auto" />
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* ENDevo's Differentiator Section */}
       <DifferentiatorSection />
