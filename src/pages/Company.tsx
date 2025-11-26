@@ -13,7 +13,7 @@ import aboutEndevo from "@/assets/about-endevo.jpg";
 import clarityGuidance from "@/assets/clarity-guidance.jpg";
 import compassionTrust from "@/assets/compassion-trust.jpg";
 import resilienceContinuity from "@/assets/resilience-continuity.jpg";
-import companyHeroFamily from "@/assets/company-hero-family.png";
+import companyHeroFamily from "@/assets/company-hero-family.jpg";
 
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo.png";
