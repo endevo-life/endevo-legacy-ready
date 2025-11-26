@@ -1,7 +1,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import familyUnprepared from "@/assets/family-unprepared-new.jpg";
+import familyUnprepared from "@/assets/hidden-cost-unprepared.jpg";
 const HiddenCostSection = () => {
   const {
     elementRef,
