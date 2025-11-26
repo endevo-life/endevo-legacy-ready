@@ -50,7 +50,7 @@ const FamilyTestimonialsSection = () => {
               {testimonials.map((testimonial, index) => <div key={index} className={`flex-[0_0_100%] md:flex-[0_0_calc(33.333%-16px)] min-w-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
               transitionDelay: isVisible ? `${200 + index * 200}ms` : '0ms'
             }}>
-                  <Card className="bg-white border-0 shadow-lg h-full">
+                  <Card className="bg-white border-0 shadow-2xl h-full">
                     <CardContent className="p-8 space-y-6">
                       <p className="text-lg text-foreground leading-relaxed italic line-clamp-3">
                         {testimonial.quote}
