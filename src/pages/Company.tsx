@@ -63,7 +63,7 @@ const Company = () => {
 
             {/* Right Column - Image (Hidden on mobile) */}
             <div className="relative hidden md:block">
-              <div className="relative bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl">
+              <div className="relative">
                 <img src={companyHeroFamily} alt="Happy family representing legacy and continuity" className="w-full h-auto rounded-xl shadow-lg object-cover" />
               </div>
             </div>
