@@ -45,10 +45,8 @@ const Company = () => {
       
       {/* New Hero Section */}
       <section 
-        className="py-20 pt-36 bg-cover bg-right bg-no-repeat relative"
-        style={{ backgroundImage: `url(${companyHeroFamily})` }}
+        className="py-20 pt-36 relative"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-background from-25% to-transparent to-25%"></div>
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div ref={newHeroRef as any} className={`max-w-2xl transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="space-y-6">
