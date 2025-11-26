@@ -15,7 +15,6 @@ import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
 import Plan from "./pages/Plan";
 import Company from "./pages/Company";
-import ForIndividuals from "./pages/ForIndividuals";
 import ForEmployers from "./pages/ForEmployers";
 import ForInvestors from "./pages/ForInvestors";
 import EmployeeWellness from "./pages/EmployeeWellness";
@@ -60,7 +59,6 @@ const App = () => (
           <Route path="/eap-replacement" element={<NotFound />} />
           <Route path="/approach" element={<NotFound />} />
           <Route path="/who-we-serve" element={<WhoWeServe />} />
-          <Route path="/for-individuals" element={<ForIndividuals />} />
           <Route path="/for-employers" element={<ForEmployers />} />
           <Route path="/wws-individuals" element={<WWSIndividuals />} />
           <Route path="/wws-service-providers" element={<WWSServiceProviders />} />

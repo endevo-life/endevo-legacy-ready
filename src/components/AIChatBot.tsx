@@ -10,7 +10,7 @@ const pageLinks = {
     title: "Solutions for Employers"
   },
   individuals: {
-    url: "/for-individuals",
+    url: "/wws-individuals",
     title: "Solutions for Individuals"
   },
   investors: {
