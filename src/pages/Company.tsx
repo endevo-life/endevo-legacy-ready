@@ -14,7 +14,7 @@ import clarityGuidance from "@/assets/clarity-guidance.jpg";
 import compassionTrust from "@/assets/compassion-trust.jpg";
 import resilienceContinuity from "@/assets/resilience-continuity.jpg";
 import companyHeroFamily from "@/assets/company-hero-family.jpg";
-import aboutUsHero from "@/assets/about-us-hero-new.jpg";
+import aboutUsFamily from "@/assets/about-us-family.jpg";
 
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo.png";
@@ -45,14 +45,10 @@ const Company = () => {
       <ResponsiveNavbar />
       
       {/* New Hero Section */}
-      <section 
-        className="py-20 pt-36 bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: `url(${aboutUsHero})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 via-background/30 to-transparent"></div>
-        <div className="container max-w-6xl mx-auto px-4 relative z-10">
-          <div ref={newHeroRef as any} className={`max-w-2xl transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="space-y-6">
+      <section className="py-20 pt-36 bg-background">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div ref={newHeroRef as any} className={`space-y-6 transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Simplifying Legacy Readiness & Digital Resilience
               </h1>
@@ -63,6 +59,13 @@ const Company = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Founded to bring clarity and compassion to one of life's hardest conversations, ENDevo blends AI intelligence with human guidance to make legacy readiness and digital resilience accessible, scalable, and impactful.
               </p>
+            </div>
+            <div className="relative">
+              <img 
+                src={aboutUsFamily} 
+                alt="Family walking together" 
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
