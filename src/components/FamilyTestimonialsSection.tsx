@@ -7,7 +7,7 @@ const FamilyTestimonialsSection = () => {
   const testimonials = [
     {
       quote: "During my stage four cancer journey, I journaled extensively, which was helpful for me. However, I did not want my family to read the words I wrote after I was gone. I needed to spare them the pain of reading my raw emotions. I am forever grateful to Niki for supporting me in making this final decision and helping me plan for this meaningful exercise of letting go.",
-      author: "Sarah M.",
+      author: "Beth",
       role: "Mother of two"
     },
     {
