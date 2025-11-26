@@ -30,15 +30,7 @@ const WhoBenefitsSection = () => {
               Simplifying legacy readiness with AI-powered guidance and compassionate resources.
             </p>
             <button 
-              onClick={() => {
-                navigate('/who-we-serve#individuals');
-                setTimeout(() => {
-                  const element = document.getElementById('individuals');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }, 100);
-              }}
+              onClick={() => navigate('/wws-individuals')}
               className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
               style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
@@ -58,15 +50,7 @@ const WhoBenefitsSection = () => {
               Unlock pre-qualified clients and boost revenue with efficient operations and smart partnerships.
             </p>
             <button 
-              onClick={() => {
-                navigate('/who-we-serve#service-providers');
-                setTimeout(() => {
-                  const element = document.getElementById('service-providers');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }, 100);
-              }}
+              onClick={() => navigate('/wws-service-providers')}
               className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
               style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
@@ -86,15 +70,7 @@ const WhoBenefitsSection = () => {
               Boost workplace resilience with dashboards and tools that cut absenteeism, increase productivity, and support employee well-being.
             </p>
             <button 
-              onClick={() => {
-                navigate('/who-we-serve#employers');
-                setTimeout(() => {
-                  const element = document.getElementById('employers');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }, 100);
-              }}
+              onClick={() => navigate('/wws-for-employers')}
               className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
               style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"

@@ -133,14 +133,14 @@ const Header = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <a
-                        href="/who-we-serve#industries"
+                        href="/wws-for-employers"
                         className={cn(
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Industries Served</div>
+                        <div className="text-sm font-medium leading-none">For Employers</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Organizations we partner with
+                          Support employee well-being
                         </p>
                       </a>
                     </NavigationMenuLink>
@@ -148,14 +148,29 @@ const Header = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <a
-                        href="/who-we-serve#why-endevo"
+                        href="/wws-service-providers"
                         className={cn(
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Why ENDevo?</div>
+                        <div className="text-sm font-medium leading-none">For Service Providers</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Our unique approach and value
+                          Connect with clients
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/wws-individuals"
+                        className={cn(
+                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        )}
+                      >
+                        <div className="text-sm font-medium leading-none">For Individuals</div>
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
+                          Personal legacy planning
                         </p>
                       </a>
                     </NavigationMenuLink>

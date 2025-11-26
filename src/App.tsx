@@ -8,7 +8,6 @@ import AIChatBot from "@/components/AIChatBot";
 import Index from "./pages/Index";
 import LearnAndListen from "./pages/LearnAndListen";
 import Solution from "./pages/Solution";
-import WhoWeServe from "./pages/WhoWeServe";
 import Podcast from "./pages/Podcast";
 import Video from "./pages/Video";
 import Blog from "./pages/Blog";
@@ -58,7 +57,6 @@ const App = () => (
           <Route path="/legacy-planning" element={<NotFound />} />
           <Route path="/eap-replacement" element={<NotFound />} />
           <Route path="/approach" element={<NotFound />} />
-          <Route path="/who-we-serve" element={<WhoWeServe />} />
           <Route path="/for-employers" element={<ForEmployers />} />
           <Route path="/wws-individuals" element={<WWSIndividuals />} />
           <Route path="/wws-service-providers" element={<WWSServiceProviders />} />
