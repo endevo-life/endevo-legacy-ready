@@ -44,10 +44,13 @@ const Company = () => {
       <ResponsiveNavbar />
       
       {/* New Hero Section */}
-      <section className="py-20 bg-background pt-36">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div ref={newHeroRef as any} className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            {/* Left Column - Text Content */}
+      <section 
+        className="py-20 pt-36 bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: `url(${companyHeroFamily})` }}
+      >
+        <div className="absolute inset-0 bg-background/80"></div>
+        <div className="container max-w-6xl mx-auto px-4 relative z-10">
+          <div ref={newHeroRef as any} className={`max-w-3xl transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Simplifying Legacy Readiness & Digital Resilience
@@ -59,13 +62,6 @@ const Company = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Founded to bring clarity and compassion to one of life's hardest conversations, ENDevo blends AI intelligence with human guidance to make legacy readiness and digital resilience accessible, scalable, and impactful.
               </p>
-            </div>
-
-            {/* Right Column - Image (Hidden on mobile) */}
-            <div className="relative hidden md:block">
-              <div className="relative">
-                <img src={companyHeroFamily} alt="Happy family representing legacy and continuity" className="w-full h-auto rounded-xl shadow-lg object-cover" />
-              </div>
             </div>
           </div>
         </div>
