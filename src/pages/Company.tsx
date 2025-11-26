@@ -48,7 +48,7 @@ const Company = () => {
         className="py-20 pt-36 bg-cover bg-right bg-no-repeat relative"
         style={{ backgroundImage: `url(${companyHeroFamily})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 via-30% to-transparent"></div>
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div ref={newHeroRef as any} className={`max-w-3xl transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="space-y-6">
