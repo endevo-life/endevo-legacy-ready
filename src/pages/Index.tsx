@@ -7,6 +7,7 @@ import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import VisionValuesSection from "@/components/VisionValuesSection";
+import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -26,6 +27,7 @@ const Index = () => {
         
         
         <VisionValuesSection />
+        <FamilyTestimonialsSection />
         
         {/* Partners Carousel Section */}
         <section className="py-16 bg-gradient-to-b from-background to-muted/20">
