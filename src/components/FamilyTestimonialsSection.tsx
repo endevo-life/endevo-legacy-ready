@@ -17,6 +17,10 @@ const FamilyTestimonialsSection = () => {
     quote: "Niki Weiss is a true professional who brings both compassion and expertise to a difficult process. She helped me start the process of organizing all the necessary documents for end-of-life planning, and her guidance made everything much less overwhelming. I feel so much more at ease knowing that everything will be in order. I highly recommend Niki to anyone needing support in end-of-life planning.",
     author: "Kristen M.",
     role: "Client"
+  }, {
+    quote: "During my stage four cancer journey, I journaled extensively, which was helpful for me. However, I did not want my family to read the words I wrote after I was gone. I needed to spare them the pain of reading my raw emotions. I am forever grateful to Niki for supporting me in making this final decision and helping me plan for this meaningful exercise of letting go.",
+    author: "Beth",
+    role: "Client"
   }];
   return <section ref={elementRef} className="py-20 bg-muted/30">
       <div className="container max-w-7xl mx-auto px-4">
