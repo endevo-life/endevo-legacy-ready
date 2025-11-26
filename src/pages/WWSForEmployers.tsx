@@ -155,7 +155,7 @@ const WWSForEmployers = () => {
                     <div className="w-12 h-12 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       1
                     </div>
-                    <p className="text-lg text-foreground leading-relaxed text-left">Assess your organization's preparedness gaps and understand where your employees need support most.</p>
+                    <p className="text-lg text-foreground leading-relaxed text-left">Provide employees with access to our Peace of Mind Assessment to quickly identify their level of preparedness.</p>
                   </div>
 
                   {/* Step 2 */}
