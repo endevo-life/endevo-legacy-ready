@@ -49,7 +49,6 @@ const Company = () => {
       <section className="relative py-20 pt-36 overflow-hidden">
         <div className="absolute inset-0">
           <img src={aboutHeroBg} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
         </div>
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
