@@ -15,6 +15,7 @@ import compassionTrust from "@/assets/compassion-trust.jpg";
 import resilienceContinuity from "@/assets/resilience-continuity.jpg";
 import companyHeroFamily from "@/assets/company-hero-family.jpg";
 import aboutUsFamily from "@/assets/about-us-family.jpg";
+import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo.png";
@@ -45,8 +46,12 @@ const Company = () => {
       <ResponsiveNavbar />
       
       {/* New Hero Section */}
-      <section className="py-20 pt-36 bg-background">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section className="relative py-20 pt-36 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={aboutHeroBg} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
+        </div>
+        <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div ref={newHeroRef as any} className={`space-y-6 transition-all duration-1000 ${newHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
