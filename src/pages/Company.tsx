@@ -94,27 +94,7 @@ const Company = () => {
 
       {/* Our Partners Section */}
       <section id="partners" className="py-20 bg-background">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Our Partners
-            </h2>
-            <p className="text-xl text-brand-orange font-semibold">
-              Building Resilience Together
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-20">
-            <div className="flex items-center justify-center h-20">
-              <img src={trustWillLogo} alt="Trust & Will" className="max-h-20 w-auto object-contain" />
-            </div>
-            <div className="flex items-center justify-center h-20">
-              <img src={prisidioLogo} alt="Prisidio" className="max-h-20 w-auto object-contain" />
-            </div>
-            <div className="flex items-center justify-center h-20">
-              
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Building Resilience Together Section */}
