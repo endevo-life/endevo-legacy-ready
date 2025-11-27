@@ -61,11 +61,7 @@ const Company = () => {
               </p>
             </div>
             <div className="relative">
-              <img 
-                src={aboutUsFamily} 
-                alt="Family walking together" 
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
+              
             </div>
           </div>
         </div>
