@@ -101,7 +101,8 @@ const Company = () => {
       <section className="py-16 bg-gradient-to-b from-background to-muted/20">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-brand-orange">Our Partners</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Our Partners</h2>
+            <p className="text-2xl font-semibold text-brand-orange">Building Resilience Together</p>
           </div>
           <div className="overflow-hidden w-full">
             <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused]">
