@@ -12,11 +12,10 @@ const NewHeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed" style={{
     backgroundImage: `url('${heroBackground}')`
   }}>
-      {/* Subtle overlay for text readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
-      
-      {/* Content */}
+      {/* Content with localized backdrop blur */}
       <div ref={elementRef as any} className={`relative z-10 container max-w-5xl mx-auto px-4 text-center text-white transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+        {/* Backdrop blur container behind text only */}
+        <div className="absolute inset-0 backdrop-blur-md bg-gradient-to-b from-black/45 via-black/40 to-black/35 rounded-3xl -z-10"></div>
         <h1 className={`font-bold mb-8 transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-4xl md:text-6xl lg:text-7xl xl:text-8xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
         fontFamily: 'serif',
         transitionDelay: isVisible ? '0.15s' : '0s'
@@ -38,7 +37,6 @@ const NewHeroSection = () => {
             </button>
           </a>
         </div>
-        
         
       </div>
     </section>;
