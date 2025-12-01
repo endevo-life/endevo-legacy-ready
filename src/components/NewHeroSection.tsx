@@ -9,10 +9,13 @@ const NewHeroSection = () => {
   // Detect iOS devices
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
   const appStoreLink = isIOS ? "https://apps.apple.com/us/app/my-final-playbook/id6502518647" : "https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share";
-  return <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed" style={{
-    backgroundImage: `url('${heroBackground}')`,
-    filter: 'brightness(0.7)'
-  }}>
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image with brightness filter */}
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed" style={{
+        backgroundImage: `url('${heroBackground}')`,
+        filter: 'brightness(0.7)'
+      }}></div>
+      
       {/* Content */}
       <div ref={elementRef as any} className={`relative z-10 container max-w-5xl mx-auto px-4 text-center text-white transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
         {/* Localized gradient behind text only */}
