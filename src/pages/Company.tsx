@@ -16,6 +16,7 @@ import resilienceContinuity from "@/assets/resilience-continuity.jpg";
 import companyHeroFamily from "@/assets/company-hero-family.jpg";
 import aboutUsFamily from "@/assets/about-us-family.jpg";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
+import companyHeroFamilyNew from "@/assets/company-hero-family-new.jpg";
 
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo-new.png";
@@ -48,7 +49,7 @@ const Company = () => {
       {/* New Hero Section */}
       <section className="relative py-20 pt-36 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={aboutHeroBg} alt="" className="w-full h-full object-cover" />
+          <img src={companyHeroFamilyNew} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
