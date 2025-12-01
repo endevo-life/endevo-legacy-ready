@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import heroBackground from "@/assets/home-hero-family.jpg";
+import heroBackground from "@/assets/hero-family-new.jpg";
 const NewHeroSection = () => {
   const {
     elementRef,
