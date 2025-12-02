@@ -38,16 +38,14 @@ const HiddenCostStatsSection = () => {
           The Hidden Cost of Being Unprepared.
         </h2>
 
-        <div
-          className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-          style={{ transitionDelay: "200ms" }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              className={`bg-white rounded-xl shadow-lg p-8 text-center transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${200 + index * 200}ms` }}
             >
               <p className="text-5xl md:text-6xl font-bold text-foreground font-serif mb-2">
                 {stat.value}
