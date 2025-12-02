@@ -12,7 +12,7 @@ const EmpowerEmployeesSection = () => {
       style={{ backgroundImage: `url(${empowerBg})` }}
     >
       
-      <div className="container max-w-4xl mx-auto px-4 text-left relative z-10">
+      <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
         <h2 
           className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
