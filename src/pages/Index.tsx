@@ -61,7 +61,7 @@ const Index = () => {
         
         <HiddenCostStatsSection />
         <EndevoPurposeSection />
-        <HiddenCostSection />
+        
         <ProcessSection />
         <VisionValuesSection />
         <FamilyTestimonialsSection />
