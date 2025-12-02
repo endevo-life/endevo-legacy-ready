@@ -3,6 +3,7 @@ import NewHeroSection from "@/components/NewHeroSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
+import EndevoPurposeSection from "@/components/EndevoPurposeSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -58,6 +59,8 @@ const Index = () => {
         </section>
         
         
+        <HiddenCostStatsSection />
+        <EndevoPurposeSection />
         <HiddenCostSection />
         <ProcessSection />
         <VisionValuesSection />
