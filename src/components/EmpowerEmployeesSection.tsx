@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import empowerBg from "@/assets/empower-employees-bg.png";
-import individualsBg from "@/assets/individuals-hero-bg.jpg";
+import individualsBg from "@/assets/individuals-hero-bg.png";
 
 type TabType = "individuals" | "employers" | "providers";
 
