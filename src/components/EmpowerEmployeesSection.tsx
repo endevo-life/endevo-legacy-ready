@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Button } from "@/components/ui/button";
 import empowerBg from "@/assets/empower-employees-bg.png";
 
 const EmpowerEmployeesSection = () => {
@@ -23,6 +24,29 @@ const EmpowerEmployeesSection = () => {
           <span className="text-brand-orange">Confidence</span> and{' '}
           <span className="text-brand-orange">Clarity</span>
         </h2>
+        
+        <p 
+          className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{ transitionDelay: '200ms' }}
+        >
+          With ENDevo, HR teams can offer guided legacy planning that supports employees through life transitions while improving engagement and reducing burnout.
+        </p>
+        
+        <div 
+          className={`mt-8 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{ transitionDelay: '400ms' }}
+        >
+          <Button 
+            className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-6 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => window.location.href = '/employee-wellness'}
+          >
+            Start a Legacy Readiness Employee Wellness Program
+          </Button>
+        </div>
       </div>
     </section>
   );
