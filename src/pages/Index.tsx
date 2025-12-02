@@ -25,7 +25,7 @@ const Index = () => {
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
           <div className="container max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12 animate-fade-in">
+            <div className="text-center mb-4 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-brand-orange">Building Resilience Together</h2>
               
             </div>
