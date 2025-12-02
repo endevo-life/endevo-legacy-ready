@@ -8,7 +8,8 @@ type TabType = "individuals" | "employers" | "providers";
 
 const tabContent = {
   individuals: {
-    heading: "Are you ready for what comes next?",
+    heading: "Are you ready for what comes",
+    headingLine2: "next?",
     subtext: "ENDevo educates, project manages and empowers people so their life story, values, and digital footprint are protected, preserved, and passed on with intention.",
     ctaText: "Get Started",
     ctaLink: "/wws-individuals",
