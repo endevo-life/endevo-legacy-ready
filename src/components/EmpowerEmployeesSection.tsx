@@ -11,24 +11,26 @@ const EmpowerEmployeesSection = () => {
   }}>
       
       <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
-        <div className={`flex flex-wrap gap-2 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`flex flex-wrap gap-4 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
-            variant="outline" 
-            className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy rounded-full px-6"
+            variant="ghost" 
+            className="text-white hover:bg-transparent hover:text-white/80 px-0"
             onClick={() => window.location.href = '/wws-individuals'}
           >
             For Individuals
           </Button>
+          <span className="text-white">|</span>
           <Button 
-            variant="outline" 
-            className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy rounded-full px-6"
+            variant="ghost" 
+            className="text-brand-orange hover:bg-transparent hover:text-brand-orange/80 px-0"
             onClick={() => window.location.href = '/wws-for-employers'}
           >
             For Employers
           </Button>
+          <span className="text-white">|</span>
           <Button 
-            variant="outline" 
-            className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy rounded-full px-6"
+            variant="ghost" 
+            className="text-white hover:bg-transparent hover:text-white/80 px-0"
             onClick={() => window.location.href = '/wws-service-providers'}
           >
             For Service Providers
