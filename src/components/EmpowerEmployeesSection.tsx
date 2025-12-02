@@ -42,8 +42,11 @@ const EmpowerEmployeesSection = () => {
         
         <p className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
         transitionDelay: '200ms'
-      }}>With ENDevo, HR teams can offer guided legacy planning that supports 
-employees through life transitions while improving engagement and reducing burnout.</p>
+      }}>
+          With ENDevo, HR teams can offer guided legacy planning that supports<br />
+          employees through life transitions while improving engagement and reducing<br />
+          burnout.
+        </p>
         
         <div className={`mt-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
         transitionDelay: '400ms'
