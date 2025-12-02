@@ -11,7 +11,7 @@ const HiddenCostStatsSection = () => {
       value: "$33B",
       subtitle: "Lost Every Year",
       description:
-        "Unpreparedness leads to absenteeism, presenteeism, caregiver strain, interruptions, and turnover—costing U.S. companies billions in lost productivity.",
+        "Unpreparedness leads to absenteeism, presenteeism, caregiver strain, interruptions, and turnover, costing U.S. companies billions in lost productivity.",
     },
     {
       value: "1 in 3",
