@@ -14,7 +14,7 @@ const EmpowerEmployeesSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
       
-      <div className="container max-w-4xl mx-auto px-4 text-center relative z-10">
+      <div className="container max-w-4xl mx-auto px-4 text-left relative z-10">
         <h2 
           className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -26,7 +26,7 @@ const EmpowerEmployeesSection = () => {
         </h2>
         
         <p 
-          className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto transition-all duration-1000 ${
+          className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
           style={{ transitionDelay: '200ms' }}
