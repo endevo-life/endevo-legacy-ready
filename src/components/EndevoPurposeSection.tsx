@@ -12,7 +12,7 @@ const EndevoPurposeSection = () => {
     backgroundImage: `url('${endevoImage}')`
   }}>
       {/* Gradient overlay - left black to right transparent */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+      
       
       {/* Content */}
       
