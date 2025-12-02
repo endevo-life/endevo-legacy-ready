@@ -11,7 +11,30 @@ const EmpowerEmployeesSection = () => {
   }}>
       
       <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Empower Your Employees 
+        <div className={`flex flex-wrap gap-2 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <Button 
+            variant="outline" 
+            className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy rounded-full px-6"
+            onClick={() => window.location.href = '/wws-individuals'}
+          >
+            For Individuals
+          </Button>
+          <Button 
+            variant="outline" 
+            className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy rounded-full px-6"
+            onClick={() => window.location.href = '/wws-for-employers'}
+          >
+            For Employers
+          </Button>
+          <Button 
+            variant="outline" 
+            className="bg-transparent border-white text-white hover:bg-white hover:text-brand-navy rounded-full px-6"
+            onClick={() => window.location.href = '/wws-service-providers'}
+          >
+            For Service Providers
+          </Button>
+        </div>
+        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Empower Your Employees 
 with Confidence and Clarity</h2>
         
         <p className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
