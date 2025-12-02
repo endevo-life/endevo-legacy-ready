@@ -36,8 +36,9 @@ const EmpowerEmployeesSection = () => {
             For Service Providers
           </Button>
         </div>
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Empower Your Employees 
-with Confidence and Clarity</h2>
+        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          Empower Your Employees<br />with Confidence and Clarity
+        </h2>
         
         <p className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
         transitionDelay: '200ms'
