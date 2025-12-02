@@ -18,9 +18,7 @@ const EmpowerEmployeesSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          Empower Your Employees with{' '}
-          <span className="text-brand-orange">Confidence</span> and{' '}
-          <span className="text-brand-orange">Clarity</span>
+          Empower Your Employees with Confidence and Clarity
         </h2>
         
         <p 
