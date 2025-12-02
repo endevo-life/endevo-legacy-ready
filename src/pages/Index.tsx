@@ -1,6 +1,5 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import NewHeroSection from "@/components/NewHeroSection";
-import EndevoPurposeSection from "@/components/EndevoPurposeSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -58,7 +57,6 @@ const Index = () => {
         </section>
         
         <HiddenCostSection />
-        <EndevoPurposeSection />
         <ProcessSection />
         <VisionValuesSection />
         <FamilyTestimonialsSection />
