@@ -57,7 +57,7 @@ const Index = () => {
           </div>
         </section>
         
-        <HiddenCostStatsSection />
+        
         <HiddenCostSection />
         <ProcessSection />
         <VisionValuesSection />
