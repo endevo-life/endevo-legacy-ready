@@ -55,6 +55,7 @@ const EmpowerEmployeesSection = () => {
       className="py-24 md:py-32 relative bg-cover bg-center bg-no-repeat transition-all duration-500"
       style={{ backgroundImage: `url(${content.background})` }}
     >
+      <div className="absolute inset-0 bg-black/10" />
       <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
         <div className={`flex flex-wrap gap-4 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button
