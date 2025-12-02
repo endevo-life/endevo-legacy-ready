@@ -3,6 +3,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import empowerBg from "@/assets/empower-employees-bg.png";
 import individualsBg from "@/assets/individuals-hero-bg.png";
+import providersBg from "@/assets/providers-hero-bg.png";
 
 type TabType = "individuals" | "employers" | "providers";
 
@@ -28,12 +29,12 @@ const tabContent = {
     background: empowerBg,
   },
   providers: {
-    heading: "Grow Your Practice",
-    headingLine2: "Through Trusted Partnerships",
-    subtext: "Connect with clients and grow your practice through our trusted network of service providers dedicated to legacy planning.",
+    heading: "Be part of a 126 billion dollar",
+    headingLine2: "industry transformation.",
+    subtext: "Partner with ENDevo to reach more clients, showcase your expertise, and grow your business with ease.",
     ctaText: "Join Our Network",
     ctaLink: "/wws-service-providers",
-    background: empowerBg,
+    background: providersBg,
   },
 };
 
