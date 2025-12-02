@@ -20,9 +20,8 @@ const Index = () => {
   return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
-        
-        <HiddenCostSection />
         <EmpowerEmployeesSection />
+        <HiddenCostSection />
         <EndevoPurposeSection />
         <ProcessSection />
         
