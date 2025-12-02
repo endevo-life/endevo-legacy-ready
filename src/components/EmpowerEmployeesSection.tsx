@@ -11,8 +11,6 @@ const EmpowerEmployeesSection = () => {
       className="py-24 md:py-32 relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${empowerBg})` }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
       
       <div className="container max-w-4xl mx-auto px-4 text-left relative z-10">
         <h2 
