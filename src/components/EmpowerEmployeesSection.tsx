@@ -10,7 +10,11 @@ const tabContent = {
   individuals: {
     heading: "Are you ready for what comes",
     headingLine2: "next?",
-    subtext: "ENDevo educates, project manages and empowers people so their life story, values, and digital footprint are protected, preserved, and passed on with intention.",
+    subtextLines: [
+      "ENDevo educates, project manages and empowers people so their life story,",
+      "values, and digital footprint are protected, preserved, and passed on with",
+      "intention."
+    ],
     ctaText: "Get Started",
     ctaLink: "/wws-individuals",
     background: individualsBg,
@@ -86,7 +90,16 @@ const EmpowerEmployeesSection = () => {
           className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           style={{ transitionDelay: "200ms" }}
         >
-          {content.subtext}
+          {"subtextLines" in content ? (
+            content.subtextLines.map((line, index) => (
+              <span key={index}>
+                {line}
+                {index < content.subtextLines.length - 1 && <br />}
+              </span>
+            ))
+          ) : (
+            content.subtext
+          )}
         </p>
 
         <div
