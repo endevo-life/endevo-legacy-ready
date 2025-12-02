@@ -17,18 +17,24 @@ import Autoplay from "embla-carousel-autoplay";
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo-new.png";
 import prisidioLogo from "@/assets/prisidio-logo-new.jpg";
+
 const Index = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
         <EmpowerEmployeesSection />
+        <HiddenCostStatsSection />
+        <EndevoPurposeSection />
+        <ProcessSection />
+        <VisionValuesSection />
+        <FamilyTestimonialsSection />
         
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
           <div className="container max-w-6xl mx-auto px-4">
             <div className="text-center mb-12 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-brand-orange">Building Resilience Together</h2>
-              
             </div>
             <div className="overflow-hidden w-full">
               <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused]">
@@ -58,16 +64,11 @@ const Index = () => {
           </div>
         </section>
         
-        
-        <HiddenCostStatsSection />
-        <EndevoPurposeSection />
-        
-        <ProcessSection />
-        <VisionValuesSection />
-        <FamilyTestimonialsSection />
         <ConsultationSection />
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
