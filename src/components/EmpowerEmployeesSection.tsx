@@ -23,7 +23,12 @@ const tabContent = {
   employers: {
     heading: "Empower Your Employees",
     headingLine2: "with Confidence and Clarity",
-    subtext: "ENDevo helps employers support their teams with a structured, guided program that educates, project-manages, and empowers employees so their life story, values, and digital footprint are protected, preserved, and passed on with intention.",
+    subtextLines: [
+      "ENDevo helps employers support their teams with a structured, guided program",
+      "that educates, project-manages, and empowers employees so their life story,",
+      "values, and digital footprint are protected, preserved, and passed on",
+      "with intention."
+    ],
     ctaText: "Start a Legacy Readiness Employee Wellness Program",
     ctaLink: "/employee-wellness",
     background: empowerBg,
