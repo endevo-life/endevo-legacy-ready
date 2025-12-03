@@ -9,7 +9,6 @@ import WhoWeServeHomeSection from "@/components/WhoWeServeHomeSection";
 import WhyEndevoExistsSection from "@/components/WhyEndevoExistsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
-import VisionValuesSection from "@/components/VisionValuesSection";
 import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
@@ -27,7 +26,6 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
-        <VisionValuesSection />
         <ProcessSection />
         <WhoWeServeHomeSection />
         <WhyEndevoExistsSection />
