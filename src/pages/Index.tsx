@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 import VisionValuesSection from "@/components/VisionValuesSection";
 import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
+import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -64,6 +65,7 @@ const Index = () => {
         </section>
         
         <FamilyTestimonialsSection />
+        <LegacyJourneyCTA />
       </main>
       <Footer />
     </div>
