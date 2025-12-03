@@ -3,7 +3,6 @@ import NewHeroSection from "@/components/NewHeroSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
-import EndevoPurposeSection from "@/components/EndevoPurposeSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 import WhoWeServeHomeSection from "@/components/WhoWeServeHomeSection";
@@ -26,7 +25,6 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
-        <EndevoPurposeSection />
         <WhoWeServeHomeSection />
         <ProcessSection />
         <VisionValuesSection />
