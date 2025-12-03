@@ -57,30 +57,39 @@ const EmpowerEmployeesSection = () => {
     >
       <div className="absolute inset-0 bg-black/10" />
       <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
-        <div className={`flex flex-wrap gap-4 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <Button
-            variant="ghost"
-            className={`hover:bg-transparent px-0 ${activeTab === "individuals" ? "text-brand-orange" : "text-white hover:text-white/80"}`}
+        <div className={`flex flex-wrap items-center gap-6 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <span
+            className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
+              activeTab === "individuals"
+                ? "text-brand-orange font-bold border-b-2 border-brand-orange"
+                : "text-[#6E6E6E] hover:text-[#5a5a5a] hover:border-b border-[#6E6E6E]"
+            }`}
             onClick={() => setActiveTab("individuals")}
           >
             For Individuals
-          </Button>
-          <span className="text-white">|</span>
-          <Button
-            variant="ghost"
-            className={`hover:bg-transparent px-0 ${activeTab === "employers" ? "text-brand-orange" : "text-white hover:text-white/80"}`}
+          </span>
+          <span className="text-white/50">|</span>
+          <span
+            className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
+              activeTab === "employers"
+                ? "text-brand-orange font-bold border-b-2 border-brand-orange"
+                : "text-[#6E6E6E] hover:text-[#5a5a5a] hover:border-b border-[#6E6E6E]"
+            }`}
             onClick={() => setActiveTab("employers")}
           >
             For Employers
-          </Button>
-          <span className="text-white">|</span>
-          <Button
-            variant="ghost"
-            className={`hover:bg-transparent px-0 ${activeTab === "providers" ? "text-brand-orange" : "text-white hover:text-white/80"}`}
+          </span>
+          <span className="text-white/50">|</span>
+          <span
+            className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
+              activeTab === "providers"
+                ? "text-brand-orange font-bold border-b-2 border-brand-orange"
+                : "text-[#6E6E6E] hover:text-[#5a5a5a] hover:border-b border-[#6E6E6E]"
+            }`}
             onClick={() => setActiveTab("providers")}
           >
             For Service Providers
-          </Button>
+          </span>
         </div>
 
         <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
