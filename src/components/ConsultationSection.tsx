@@ -21,8 +21,16 @@ const ConsultationSection = () => {
           </p>
         </div>
 
-        {/* Two Column Layout */}
-        
+        {/* CTA Button */}
+        <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+          transitionDelay: isVisible ? '0.6s' : '0s'
+        }}>
+          <a href="/contact">
+            <button className="bg-brand-orange text-white hover:bg-brand-orange-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-full px-8 py-3 text-lg font-semibold">
+              Get Started
+            </button>
+          </a>
+        </div>
       </div>
     </section>;
 };
