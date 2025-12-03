@@ -6,6 +6,7 @@ import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 import WhoWeServeHomeSection from "@/components/WhoWeServeHomeSection";
+import WhyEndevoExistsSection from "@/components/WhyEndevoExistsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 import VisionValuesSection from "@/components/VisionValuesSection";
@@ -29,6 +30,7 @@ const Index = () => {
         <VisionValuesSection />
         <ProcessSection />
         <WhoWeServeHomeSection />
+        <WhyEndevoExistsSection />
         
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
