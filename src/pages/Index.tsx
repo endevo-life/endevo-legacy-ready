@@ -26,9 +26,9 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
+        <VisionValuesSection />
         <ProcessSection />
         <WhoWeServeHomeSection />
-        <VisionValuesSection />
         
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
