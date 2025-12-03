@@ -28,7 +28,6 @@ const Index = () => {
         <ProcessSection />
         <WhoWeServeHomeSection />
         <VisionValuesSection />
-        <FamilyTestimonialsSection />
         
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
@@ -63,6 +62,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        <FamilyTestimonialsSection />
         
         <ConsultationSection />
       </main>
