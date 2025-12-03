@@ -6,6 +6,7 @@ import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import EndevoPurposeSection from "@/components/EndevoPurposeSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
+import WhoWeServeHomeSection from "@/components/WhoWeServeHomeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import VisionValuesSection from "@/components/VisionValuesSection";
@@ -26,6 +27,7 @@ const Index = () => {
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
         <EndevoPurposeSection />
+        <WhoWeServeHomeSection />
         <ProcessSection />
         <VisionValuesSection />
         <FamilyTestimonialsSection />
