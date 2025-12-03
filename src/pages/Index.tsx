@@ -25,8 +25,8 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
-        <WhoWeServeHomeSection />
         <ProcessSection />
+        <WhoWeServeHomeSection />
         <VisionValuesSection />
         <FamilyTestimonialsSection />
         
