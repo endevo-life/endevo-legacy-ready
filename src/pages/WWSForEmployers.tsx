@@ -127,7 +127,7 @@ const WWSForEmployers = () => {
                     <p className="text-8xl font-bold" style={{
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
-                  }}>1 in 4</p>
+                  }}>25%</p>
                     <p className="text-lg text-black">25% of workers face a major life event each year that requires immediate documentation.</p>
                   </CardContent>
                 </Card>
