@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useNavigate } from "react-router-dom";
 import physicalPartners from "@/assets/physical-partners-new.jpeg";
-import financialPartners from "@/assets/financial-partners.png";
+import financialPartners from "@/assets/financial-partners-new.jpeg";
 import digitalPartners from "@/assets/digital-partners.png";
 import legalFrameworkBg from "@/assets/legal-collaboration-bg.png";
 const ServiceProvidersSection = () => {
