@@ -14,7 +14,7 @@ const HiddenCostStatsSection = () => {
         "Unpreparedness leads to absenteeism, presenteeism, caregiver strain, interruptions, and turnover, costing U.S. companies billions in lost productivity.",
     },
     {
-      value: "1 in 3",
+      value: "67%",
       subtitle: "of adults are unprepared.",
       description:
         "Disorganized legal, financial, and digital information leads to unnecessary stress and reduced productivity at work.",
