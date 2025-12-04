@@ -17,7 +17,7 @@ const HiddenCostStatsSection = () => {
       value: "1 in 3",
       subtitle: "of adults are unprepared.",
       description:
-        "Most individuals lack organized legal, financial, and digital information, causing stress that affects well-being and performance at work.",
+        "Disorganized legal, financial, and digital information leads to unnecessary stress and reduced productivity at work.",
     },
     {
       value: "40%",
