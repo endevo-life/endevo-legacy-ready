@@ -66,9 +66,9 @@ const Resources = () => {
               <p className="text-lg text-white/90 mb-8">
                 Life is unpredictable, but your loved ones don't have to face uncertainty alone. With ENDevo, you can organize plans, protect your digital and financial legacy, and give your family the confidence of knowing exactly what to do no matter what tomorrow brings.
               </p>
-              <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4" style={{
+            <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-            }} onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}>
+            }} onClick={() => window.open('https://digitallegacypodcast.com/podcast', '_blank')}>
                 Learn and Listen
               </button>
               <p className="text-sm text-white/70">
