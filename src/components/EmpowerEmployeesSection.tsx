@@ -62,7 +62,7 @@ const EmpowerEmployeesSection = () => {
             className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
               activeTab === "individuals"
                 ? "text-brand-orange font-bold border-b-2 border-brand-orange"
-                : "text-[#6E6E6E] hover:text-[#5a5a5a] hover:border-b border-[#6E6E6E]"
+                : "text-white/80 hover:text-white hover:border-b border-white/80"
             }`}
             onClick={() => setActiveTab("individuals")}
           >
@@ -73,7 +73,7 @@ const EmpowerEmployeesSection = () => {
             className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
               activeTab === "employers"
                 ? "text-brand-orange font-bold border-b-2 border-brand-orange"
-                : "text-[#6E6E6E] hover:text-[#5a5a5a] hover:border-b border-[#6E6E6E]"
+                : "text-white/80 hover:text-white hover:border-b border-white/80"
             }`}
             onClick={() => setActiveTab("employers")}
           >
@@ -84,7 +84,7 @@ const EmpowerEmployeesSection = () => {
             className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
               activeTab === "providers"
                 ? "text-brand-orange font-bold border-b-2 border-brand-orange"
-                : "text-[#6E6E6E] hover:text-[#5a5a5a] hover:border-b border-[#6E6E6E]"
+                : "text-white/80 hover:text-white hover:border-b border-white/80"
             }`}
             onClick={() => setActiveTab("providers")}
           >
