@@ -62,7 +62,7 @@ const EmpowerEmployeesSection = () => {
             className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
               activeTab === "individuals"
                 ? "text-brand-orange font-bold border-b-2 border-brand-orange"
-                : "text-white/80 hover:text-white hover:border-b border-white/80"
+                : "text-white font-medium hover:text-brand-orange hover:border-b border-white"
             }`}
             onClick={() => setActiveTab("individuals")}
           >
@@ -73,7 +73,7 @@ const EmpowerEmployeesSection = () => {
             className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
               activeTab === "employers"
                 ? "text-brand-orange font-bold border-b-2 border-brand-orange"
-                : "text-white/80 hover:text-white hover:border-b border-white/80"
+                : "text-white font-medium hover:text-brand-orange hover:border-b border-white"
             }`}
             onClick={() => setActiveTab("employers")}
           >
@@ -84,7 +84,7 @@ const EmpowerEmployeesSection = () => {
             className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
               activeTab === "providers"
                 ? "text-brand-orange font-bold border-b-2 border-brand-orange"
-                : "text-white/80 hover:text-white hover:border-b border-white/80"
+                : "text-white font-medium hover:text-brand-orange hover:border-b border-white"
             }`}
             onClick={() => setActiveTab("providers")}
           >
