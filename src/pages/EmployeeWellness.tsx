@@ -148,7 +148,7 @@ const EmployeeWellness = () => {
                 className="bg-[#002147] hover:bg-[#003366] text-white font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
                 onClick={() => navigate('/contact')}
               >
-                Join the Program
+                Start the Program
               </Button>
               <Button 
                 variant="outline"
