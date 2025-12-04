@@ -15,7 +15,7 @@ const HiddenCostStatsSection = () => {
     },
     {
       value: "1 in 3",
-      subtitle: "Adults have no plan",
+      subtitle: "of adults are unprepared.",
       description:
         "Most individuals lack organized legal, financial, and digital information, causing stress that affects well-being and performance at work.",
     },
