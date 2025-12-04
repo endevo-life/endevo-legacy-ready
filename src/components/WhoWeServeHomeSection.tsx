@@ -18,17 +18,17 @@ const WhoWeServeHomeSection = () => {
       isPrimary: true,
     },
     {
-      icon: individualsIcon,
-      title: "Individuals",
-      description: "Simplifying legacy readiness with AI-powered guidance and compassionate resources.",
-      link: "/wws-individuals",
-      isPrimary: false,
-    },
-    {
       icon: providersIcon,
       title: "Service Providers",
       description: "Unlock pre-qualified clients and boost revenue with organized operations and smart partnerships.",
       link: "/wws-service-providers",
+      isPrimary: false,
+    },
+    {
+      icon: individualsIcon,
+      title: "Individuals",
+      description: "Simplifying legacy readiness with AI-powered guidance and compassionate resources.",
+      link: "/wws-individuals",
       isPrimary: false,
     },
   ];
