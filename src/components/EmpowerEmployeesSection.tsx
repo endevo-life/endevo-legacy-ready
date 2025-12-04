@@ -3,7 +3,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import empowerBg from "@/assets/empower-employees-bg.png";
 import individualsBg from "@/assets/individuals-hero-bg.png";
-import providersBg from "@/assets/providers-hero-bg.png";
+import providersBg from "@/assets/service-providers-hero-new.png";
 
 type TabType = "individuals" | "employers" | "providers";
 
