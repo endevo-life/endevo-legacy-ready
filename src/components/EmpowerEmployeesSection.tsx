@@ -43,6 +43,12 @@ const tabContent = {
   },
 };
 
+const backgrounds = [
+  { key: "individuals", bg: individualsBg },
+  { key: "employers", bg: empowerBg },
+  { key: "providers", bg: providersBg },
+];
+
 const EmpowerEmployeesSection = () => {
   const [activeTab, setActiveTab] = useState<TabType>("employers");
   const { elementRef, isVisible } = useScrollAnimation();
@@ -52,10 +58,22 @@ const EmpowerEmployeesSection = () => {
   return (
     <section
       ref={elementRef}
-      className="py-24 md:py-32 relative bg-cover bg-center bg-no-repeat transition-all duration-500"
-      style={{ backgroundImage: `url(${content.background})` }}
+      className="py-24 md:py-32 relative bg-cover bg-center bg-no-repeat overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black/10" />
+      {/* Background layers for smooth crossfade */}
+      {backgrounds.map(({ key, bg }) => (
+        <div
+          key={key}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out"
+          style={{
+            backgroundImage: `url(${bg})`,
+            opacity: activeTab === key ? 1 : 0,
+          }}
+        />
+      ))}
+      
+      <div className="absolute inset-0 bg-black/10 transition-opacity duration-700" />
+      
       <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
         <div className={`flex flex-wrap items-center gap-6 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <span
@@ -92,42 +110,45 @@ const EmpowerEmployeesSection = () => {
           </span>
         </div>
 
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {content.heading}
-          {"headingLine2" in content && (
-            <>
-              <br />
-              {content.headingLine2}
-            </>
-          )}
-        </h2>
+        {/* Content with fade transition */}
+        <div key={activeTab} className="animate-fade-in">
+          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            {content.heading}
+            {"headingLine2" in content && (
+              <>
+                <br />
+                {content.headingLine2}
+              </>
+            )}
+          </h2>
 
-        <p
-          className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-          style={{ transitionDelay: "200ms" }}
-        >
-          {"subtextLines" in content ? (
-            content.subtextLines.map((line, index) => (
-              <span key={index}>
-                {line}
-                {index < content.subtextLines.length - 1 && <br />}
-              </span>
-            ))
-          ) : (
-            content.subtext
-          )}
-        </p>
-
-        <div
-          className={`mt-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-          style={{ transitionDelay: "400ms" }}
-        >
-          <Button
-            className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-3 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            onClick={() => (window.location.href = content.ctaLink)}
+          <p
+            className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: "200ms" }}
           >
-            {content.ctaText}
-          </Button>
+            {"subtextLines" in content ? (
+              content.subtextLines.map((line, index) => (
+                <span key={index}>
+                  {line}
+                  {index < content.subtextLines.length - 1 && <br />}
+                </span>
+              ))
+            ) : (
+              content.subtext
+            )}
+          </p>
+
+          <div
+            className={`mt-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: "400ms" }}
+          >
+            <Button
+              className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-3 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => (window.location.href = content.ctaLink)}
+            >
+              {content.ctaText}
+            </Button>
+          </div>
         </div>
       </div>
     </section>
