@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useNavigate } from "react-router-dom";
-import physicalPartners from "@/assets/physical-partners.png";
+import physicalPartners from "@/assets/physical-partners-new.jpeg";
 import financialPartners from "@/assets/financial-partners.png";
 import digitalPartners from "@/assets/digital-partners.png";
 import legalFrameworkBg from "@/assets/legal-collaboration-bg.png";
