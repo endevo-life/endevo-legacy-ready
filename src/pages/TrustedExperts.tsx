@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
-import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
 const experts = [{
   name: "Prisidio",
   logo: prisidioLogo,
@@ -24,14 +23,6 @@ const experts = [{
   buttonText: "Sign Up",
   url: "https://www.prisidio.com/endevo",
   category: "Digital"
-}, {
-  name: "Memorial Tribute Legacy",
-  logo: memorialTributeLogo,
-  tagline: "Let us carry this with you.",
-  description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
-  buttonText: "Learn More",
-  url: "https://www.memorial-tribute-legacy.com/",
-  category: "Physical"
 }];
 const TrustedExperts = () => {
   const navigate = useNavigate();
