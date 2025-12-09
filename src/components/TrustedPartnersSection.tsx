@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Filter, X, ArrowRight } from "lucide-react";
 import prisidioLogo from "@/assets/prisidio-logo.jpg";
-import memorialTributeLogo from "@/assets/memorial-tribute-logo.jpg";
 import beliefsIcon from "@/assets/beliefs-icon-new.png";
 import legalIcon from "@/assets/legal-icon-new.png";
 import financialIcon from "@/assets/financial-icon-new.png";
@@ -24,14 +23,6 @@ const partners = [{
   buttonText: "Sign Up",
   url: "https://www.prisidio.com/endevo",
   category: "digital" as const
-}, {
-  name: "Memorial Tribute Legacy",
-  logo: memorialTributeLogo,
-  tagline: "Let us carry this with you.",
-  description: "After a loss, even small tasks can feel heavy. Simply share your photos, memories, and details, and we will create a beautiful digital tribute that celebrates their legacy and is ready to share. You focus on healing. We will handle the rest.",
-  buttonText: "Learn More",
-  url: "https://www.memorial-tribute-legacy.com/",
-  category: "physical" as const
 }];
 const categoryInfo = [{
   name: "Legal",
