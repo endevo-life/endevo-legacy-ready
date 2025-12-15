@@ -18,9 +18,9 @@ const buttonVariants = cva(
         cta: "bg-brand-orange text-white hover:bg-brand-orange-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-full",
       },
       size: {
-        default: "h-auto min-h-9 px-4 py-2 sm:px-6",
-        sm: "h-auto min-h-8 rounded-md px-3 py-1.5 sm:px-4",
-        lg: "h-auto min-h-10 rounded-md px-6 py-2.5 sm:px-8",
+        default: "h-auto min-h-9 px-4 py-2",
+        sm: "h-auto min-h-8 rounded-md px-4 py-2",
+        lg: "h-auto min-h-10 rounded-md px-4 py-2",
         icon: "h-9 w-9",
       },
     },
