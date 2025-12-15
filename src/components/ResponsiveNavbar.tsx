@@ -83,13 +83,13 @@ const ResponsiveNavbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden xl:flex items-center space-x-4">
             {menuItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   to={item.href}
                   onClick={handleMainMenuClick}
-                  className="flex items-center text-foreground hover:text-primary transition-colors duration-300 py-2 px-4 rounded-md hover:bg-accent/50"
+                  className="flex items-center text-foreground hover:text-primary transition-colors duration-300 py-2 px-3 rounded-md hover:bg-accent/50 text-sm whitespace-nowrap"
                 >
                   {item.name}
                   {item.submenu.length > 0 && (
@@ -99,7 +99,7 @@ const ResponsiveNavbar = () => {
                 
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
                     <div className="py-2">
                       {item.submenu.map((subItem) => (
                         <Link
@@ -118,19 +118,19 @@ const ResponsiveNavbar = () => {
           </div>
 
           {/* Desktop CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block flex-shrink-0">
             <a
               href="https://jbigogmrgex.typeform.com/to/qBsak5CQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium"
+              className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-sm whitespace-nowrap"
             >
               Peace of Mind Assessment
             </a>
           </div>
 
           {/* Mobile hamburger menu button */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-accent transition-colors duration-300"
@@ -146,7 +146,7 @@ const ResponsiveNavbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        <div className={`xl:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="py-4 space-y-2 max-h-[70vh] overflow-y-auto">
