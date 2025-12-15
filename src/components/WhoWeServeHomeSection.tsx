@@ -52,7 +52,7 @@ const WhoWeServeHomeSection = () => {
             <div
               key={audience.title}
               className={`
-                bg-white rounded-2xl p-8 text-center shadow-md hover:shadow-lg transition-all duration-500
+                bg-white rounded-2xl p-8 text-center shadow-md hover:shadow-lg transition-all duration-500 flex flex-col h-full
                 ${audience.isPrimary ? "md:scale-[1.02] shadow-lg" : ""}
                 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
               `}
@@ -73,7 +73,7 @@ const WhoWeServeHomeSection = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 min-h-[60px]">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
                 {audience.description}
               </p>
 
@@ -83,7 +83,7 @@ const WhoWeServeHomeSection = () => {
                   navigate(audience.link);
                   window.scrollTo(0, 0);
                 }}
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-full px-6 py-2"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-full px-6 py-2 mt-auto"
               >
                 Learn More
               </Button>
