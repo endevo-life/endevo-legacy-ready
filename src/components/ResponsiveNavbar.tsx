@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
 
   const handleMainMenuClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const toggleMobileSubmenu = (menuName: string) => {
+    setExpandedMobileMenu(expandedMobileMenu === menuName ? null : menuName);
   };
 
   const menuItems = [
@@ -150,19 +155,58 @@ const ResponsiveNavbar = () => {
           isMobileMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="py-4 space-y-2 max-h-[70vh] overflow-y-auto">
-            {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="block text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-300 font-medium py-3 px-2 rounded-md"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  handleMainMenuClick();
-                }}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {menuItems.map((item) => {
+              const hasSubmenu = item.submenu.length > 0;
+              const isExpandable = hasSubmenu && item.href === "#";
+              const isExpanded = expandedMobileMenu === item.name;
+
+              if (isExpandable) {
+                return (
+                  <div key={item.name}>
+                    <button
+                      onClick={() => toggleMobileSubmenu(item.name)}
+                      className="w-full flex items-center justify-between text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-300 font-medium py-3 px-2 rounded-md"
+                    >
+                      {item.name}
+                      <ChevronRight className={`h-4 w-4 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="pl-4 space-y-1 py-2">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className="block text-muted-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-300 py-2 px-2 rounded-md text-sm"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setExpandedMobileMenu(null);
+                              handleMainMenuClick();
+                            }}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="block text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-300 font-medium py-3 px-2 rounded-md"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setExpandedMobileMenu(null);
+                    handleMainMenuClick();
+                  }}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
             <div className="pt-4 border-t border-border">
               <a
                 href="https://jbigogmrgex.typeform.com/to/qBsak5CQ"
