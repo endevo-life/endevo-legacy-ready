@@ -64,7 +64,12 @@ const WWSIndividuals = () => {
                 
                 <div className="mt-8">
                   <p className="text-muted-foreground/70 italic mb-3">Find out how ready you are</p>
-                  <Button onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} variant="outline" size="lg" className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-3 text-lg rounded-full">
+                  <Button 
+                    onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')} 
+                    variant="outline" 
+                    className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base font-semibold rounded-full"
+                    style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                  >
                     Take the peace of mind assessment for free
                   </Button>
                 </div>
@@ -192,8 +197,8 @@ const WWSIndividuals = () => {
             <div className={`mt-12 text-center transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: pathAnimation.isVisible ? '600ms' : '0ms' }}>
               <Button 
                 onClick={() => navigate('/contact')}
-                size="lg" 
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               >
                 Start Your Journey Today
               </Button>

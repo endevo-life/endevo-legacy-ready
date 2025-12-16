@@ -379,7 +379,11 @@ const Header = () => {
         </NavigationMenu>
 
         {/* CTA Button */}
-        <Button variant="cta" size="sm" className="animate-fade-in hover-scale">
+        <Button 
+          variant="cta" 
+          className="animate-fade-in hover-scale px-6 py-1.5 text-base font-semibold"
+          style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+        >
           Book a Call
         </Button>
       </div>

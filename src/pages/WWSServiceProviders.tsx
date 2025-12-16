@@ -62,7 +62,12 @@ const WWSServiceProviders = () => {
                 </p>
                 
                 <div className="mt-8">
-                  <Button onClick={() => navigate('/contact')} variant="default" size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
+                  <Button 
+                    onClick={() => navigate('/contact')} 
+                    variant="default" 
+                    className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
+                    style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                  >
                     Partner with ENDevo
                   </Button>
                 </div>
@@ -200,7 +205,11 @@ const WWSServiceProviders = () => {
             <div className={`mt-12 text-center transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
             transitionDelay: pathAnimation.isVisible ? '600ms' : '0ms'
           }}>
-              <Button onClick={() => navigate('/contact')} size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-lg rounded-full">
+              <Button 
+                onClick={() => navigate('/contact')} 
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+              >
                 Partner with ENDevo
               </Button>
             </div>

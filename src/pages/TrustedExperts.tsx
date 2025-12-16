@@ -167,7 +167,11 @@ const TrustedExperts = () => {
                           
                           {/* CTA Button */}
                           <div className="pt-2">
-                            <Button onClick={() => window.open(expert.url, '_blank')} className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8">
+                            <Button 
+                              onClick={() => window.open(expert.url, '_blank')} 
+                              className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base rounded-full"
+                              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                            >
                               {expert.buttonText}
                             </Button>
                           </div>

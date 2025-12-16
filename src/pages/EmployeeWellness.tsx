@@ -146,14 +146,16 @@ const EmployeeWellness = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="bg-[#002147] hover:bg-[#003366] text-white font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 onClick={() => navigate('/contact')}
               >
                 Start the Program
               </Button>
               <Button 
                 variant="outline"
-                className="border-2 font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="border-2 font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 onClick={() => window.open('https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH', '_blank')}
               >
                 Schedule a Consultation

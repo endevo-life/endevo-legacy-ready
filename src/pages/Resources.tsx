@@ -37,12 +37,12 @@ const Resources = () => {
             </p>
             
             <div className="flex flex-col md:flex-row gap-6">
-              <button className="bg-[#FF5A00] text-white font-semibold text-base px-8 py-2 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
+              <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }} onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}>
                 🎙️ Learn from Experts
               </button>
-              <button className="bg-[#FF5A00] text-white font-semibold text-base px-8 py-2 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
+              <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }} onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US', '_blank')}>
                 📱 Plan with Our App
