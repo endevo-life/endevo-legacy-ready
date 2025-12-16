@@ -74,7 +74,8 @@ const HiddenCostStatsSection = () => {
           </p>
           <Button
             onClick={() => navigate("/solution")}
-            className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 rounded-full text-lg"
+            className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 rounded-full text-base font-semibold"
+            style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
           >
             Learn How We Solve It
           </Button>
