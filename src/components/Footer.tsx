@@ -108,7 +108,8 @@ const Footer = () => {
                 className="bg-white text-gray-900 border-white rounded-full"
               />
               <Button 
-                className="w-full bg-white text-[#08123A] hover:bg-white/90 rounded-full font-semibold"
+                className="w-full bg-white text-[#08123A] hover:bg-white/90 rounded-full font-semibold px-6 py-1.5 text-base"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               >
                 <Send className="w-4 h-4 mr-2" />
                 Stay Connected

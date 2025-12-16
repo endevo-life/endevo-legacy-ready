@@ -64,7 +64,10 @@ const Plan = () => {
                     Personalized guidance to begin your legacy planning journey.
                   </li>
                 </ul>
-                <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white mt-auto">
+                <Button 
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white mt-auto px-6 py-1.5 text-base font-semibold rounded-full"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
                   Schedule Your Free Session
                 </Button>
               </CardContent>
@@ -94,7 +97,10 @@ const Plan = () => {
                     Tools and resources to build confidence and reduce planning stress.
                   </li>
                 </ul>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-black mt-auto">
+                <Button 
+                  className="w-full bg-green-500 hover:bg-green-600 text-black mt-auto px-6 py-1.5 text-base font-semibold rounded-full"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
                   Download the App & Enroll
                 </Button>
               </CardContent>
@@ -124,7 +130,10 @@ const Plan = () => {
                     Personalized guidance to begin your legacy planning journey.
                   </li>
                 </ul>
-                <Button className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white mt-auto">
+                <Button 
+                  className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white mt-auto px-6 py-1.5 text-base font-semibold rounded-full"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
                   Start for Free
                 </Button>
               </CardContent>

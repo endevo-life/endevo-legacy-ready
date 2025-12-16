@@ -57,7 +57,8 @@ const EndevoPurposeSection = () => {
               <p className="text-white/90 mb-6">{audience.description}</p>
               <Button
                 onClick={() => navigate(audience.link)}
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               >
                 {audience.cta}
               </Button>

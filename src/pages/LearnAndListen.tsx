@@ -37,7 +37,10 @@ const LearnAndListen = () => {
           </h2>
           
           <div className={`mb-12 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: heroVisible ? '0.6s' : '0s' }}>
-            <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 ease-out hover-scale">
+            <button 
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-1.5 rounded-full text-base transition-all duration-300 ease-out hover-scale"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+            >
               Listen Now
             </button>
           </div>
@@ -222,7 +225,10 @@ const LearnAndListen = () => {
           </div>
           
           <div className={`text-center transition-all duration-1000 ease-out ${episodesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: episodesVisible ? '0.4s' : '0s' }}>
-            <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+            <button 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-1.5 rounded-full text-base transition-all duration-300"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+            >
               View All
             </button>
           </div>
@@ -253,7 +259,10 @@ const LearnAndListen = () => {
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
                 Join today and receive the Digital Asset Inventory Worksheet. This downloadable PDF makes it quick and easy to document and store your online accounts, subscriptions and assets.
               </p>
-              <button className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover-scale">
+              <button 
+                className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-1.5 rounded-full text-base transition-all duration-300 hover-scale"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+              >
                 Subscribe Now
               </button>
             </div>

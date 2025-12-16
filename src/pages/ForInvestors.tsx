@@ -107,8 +107,8 @@ const ForInvestors = () => {
             </p>
             <Button 
               variant="cta"
-              size="lg"
-              className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 rounded-full"
+              className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 rounded-full px-6 py-1.5 text-base font-semibold"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               onClick={() => navigate('/contact')}
             >
               Explore Investment Opportunities

@@ -108,7 +108,10 @@ const TrustedPartnersSection = () => {
         {/* View All Button */}
         <div className="flex justify-center mb-12">
           <Link to="/trusted-experts">
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-6 text-lg group">
+            <Button 
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base group rounded-full"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+            >
               View All Trusted Experts
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -138,7 +141,11 @@ const TrustedPartnersSection = () => {
                     
                     {/* CTA Button */}
                     <div className="pt-2">
-                      <Button onClick={() => window.open(partner.url, '_blank')} className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8">
+                      <Button 
+                        onClick={() => window.open(partner.url, '_blank')} 
+                        className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base rounded-full"
+                        style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                      >
                         {partner.buttonText}
                       </Button>
                     </div>

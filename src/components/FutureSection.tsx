@@ -26,7 +26,10 @@ const FutureSection = () => {
               A $126B industry that no one wants to talk about—but everyone will eventually need. ENDevo is building the category-defining platform for Legacy Readiness & Digital Preparedness, backed by AI and scalable enterprise integration.
             </p>
             
-            <button className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-1000 ease-out hover-scale ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}>
+            <button 
+              className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-1.5 rounded-full text-base transition-all duration-1000 ease-out hover-scale ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} 
+              style={{ transitionDelay: isVisible ? '0.6s' : '0s', fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+            >
               Learn About Investment Opportunities
             </button>
           </div>

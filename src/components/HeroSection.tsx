@@ -30,7 +30,10 @@ const HeroSection = () => {
         </p>
         
         <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer">
-          <button className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-1000 ease-out hover-scale ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.8s' : '0s' }}>
+          <button 
+            className={`bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-1.5 rounded-full text-base transition-all duration-1000 ease-out hover-scale ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            style={{ transitionDelay: isVisible ? '0.8s' : '0s', fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+          >
             Peace of Mind Assessment
           </button>
         </a>
