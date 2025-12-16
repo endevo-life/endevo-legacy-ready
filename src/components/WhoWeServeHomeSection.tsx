@@ -83,7 +83,8 @@ const WhoWeServeHomeSection = () => {
                   navigate(audience.link);
                   window.scrollTo(0, 0);
                 }}
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white rounded-full px-6 py-2 mt-auto"
+                className="bg-[#FF5D00] hover:bg-[#FF5D00]/90 text-white rounded-full px-6 py-1.5 text-base font-semibold mt-auto"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               >
                 Learn More
               </Button>
