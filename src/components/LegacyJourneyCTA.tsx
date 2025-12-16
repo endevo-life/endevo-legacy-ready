@@ -32,10 +32,10 @@ const LegacyJourneyCTA = () => {
             navigate("/contact");
             window.scrollTo(0, 0);
           }}
-          className={`bg-brand-orange hover:bg-brand-orange/90 text-white rounded-full px-8 py-3 text-lg transition-all duration-700 ${
+          className={`bg-brand-orange hover:bg-brand-orange/90 text-white rounded-full px-6 py-1.5 text-base font-semibold transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-          style={{ transitionDelay: "300ms" }}
+          style={{ transitionDelay: "300ms", fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
         >
           Schedule a Consultation
         </Button>
