@@ -123,7 +123,8 @@ const EmpowerEmployeesSection = () => {
           style={{ transitionDelay: "400ms" }}
         >
           <Button
-            className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-3 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-brand-navy hover:bg-brand-navy/90 text-white px-6 py-1.5 text-base rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
             onClick={() => (window.location.href = content.ctaLink)}
           >
             {content.ctaText}
