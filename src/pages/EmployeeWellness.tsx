@@ -53,7 +53,8 @@ const EmployeeWellness = () => {
               style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}
             >
               <Button 
-                className="bg-[#002147] hover:bg-[#003366] text-white font-bold py-4 px-9 rounded-full text-lg shadow-lg hover:shadow-2xl transition-all duration-300" 
+                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300" 
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 onClick={() => navigate('/contact')}
               >
                 Start the Program
