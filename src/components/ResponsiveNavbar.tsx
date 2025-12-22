@@ -128,7 +128,8 @@ const ResponsiveNavbar = () => {
               href="https://jbigogmrgex.typeform.com/to/qBsak5CQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-sm whitespace-nowrap"
+              className="bg-primary text-primary-foreground px-6 py-1.5 rounded-full hover:bg-primary/90 transition-colors duration-300 font-semibold text-base whitespace-nowrap"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
             >
               Peace of Mind Assessment
             </a>
