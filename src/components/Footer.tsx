@@ -94,27 +94,24 @@ const Footer = () => {
         </div>
 
           {/* Newsletter Column */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-center">Subscribe to our newsletter</h3>
-            <div className="space-y-3">
-              <Input 
-                type="text" 
-                placeholder="Your Name" 
-                className="bg-white text-gray-900 border-white rounded-full"
-              />
-              <Input 
-                type="email" 
-                placeholder="Your Email" 
-                className="bg-white text-gray-900 border-white rounded-full"
-              />
-              <Button 
-                className="w-full bg-white text-[#08123A] hover:bg-white/90 rounded-full font-semibold px-6 py-1.5 text-base"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-              >
-                <Send className="w-4 h-4 mr-2" />
-                Stay Connected
-              </Button>
-            </div>
+          <div className="h-full">
+            <iframe
+              src="https://link.endevo.life/widget/form/BgNNJ8PpyFu2svaaJGTp"
+              style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px', minHeight: '200px' }}
+              id="inline-BgNNJ8PpyFu2svaaJGTp"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Website - Stay Connected (Footer Form)"
+              data-height="412"
+              data-layout-iframe-id="inline-BgNNJ8PpyFu2svaaJGTp"
+              data-form-id="BgNNJ8PpyFu2svaaJGTp"
+              title="Website - Stay Connected (Footer Form)"
+            />
           </div>
         </div>
         
