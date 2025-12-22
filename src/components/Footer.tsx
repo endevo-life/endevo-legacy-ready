@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#08123A] text-white py-8">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-6">
           {/* Left Column - Logo & Social */}
           <div className="space-y-6">
             <a href="/" className="inline-block">
