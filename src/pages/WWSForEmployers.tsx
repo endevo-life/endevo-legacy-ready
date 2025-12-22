@@ -62,12 +62,9 @@ const WWSForEmployers = () => {
                 </p>
                 
                 <div className="mt-8">
-                  <Button 
-                    onClick={() => navigate('/contact')} 
-                    variant="default" 
-                    className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
-                    style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-                  >
+                  <Button onClick={() => navigate('/contact')} variant="default" className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full" style={{
+                  fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+                }}>
                     Empower your team
                   </Button>
                 </div>
@@ -97,7 +94,7 @@ const WWSForEmployers = () => {
                     fontFamily: 'Times New Roman, serif',
                     color: '#394161'
                   }}>30%</p>
-                    <p className="text-lg text-black">Employees dealing with personal loss experience a 20–30% productivity drop for months</p>
+                    <p className="text-lg text-black">Employees dealing with personal loss experience a 20–30% productivity drop for months.</p>
                   </CardContent>
                 </Card>
 
@@ -205,11 +202,9 @@ const WWSForEmployers = () => {
             <div className={`mt-12 text-center transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
             transitionDelay: pathAnimation.isVisible ? '600ms' : '0ms'
           }}>
-              <Button 
-                onClick={() => navigate('/contact')} 
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-              >
+              <Button onClick={() => navigate('/contact')} className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full" style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+            }}>
                 Start Your Journey Today
               </Button>
             </div>
