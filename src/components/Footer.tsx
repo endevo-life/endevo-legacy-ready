@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#08123A] text-white py-8">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-4">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Left Column - Logo & Social */}
           <div className="space-y-6">
             <a href="/" className="inline-block">
@@ -95,28 +95,31 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           <div className="space-y-4">
-            <iframe
-              src="https://link.endevo.life/widget/form/BgNNJ8PpyFu2svaaJGTp"
-              style={{ width: '100%', height: '412px', border: 'none', borderRadius: '3px' }}
-              id="inline-BgNNJ8PpyFu2svaaJGTp"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Website - Stay Connected (Footer Form)"
-              data-height="412"
-              data-layout-iframe-id="inline-BgNNJ8PpyFu2svaaJGTp"
-              data-form-id="BgNNJ8PpyFu2svaaJGTp"
-              title="Website - Stay Connected (Footer Form)"
-            />
+            <h3 className="text-lg font-semibold text-center">Subscribe to our newsletter</h3>
+            <div className="space-y-3">
+              <Input 
+                type="text" 
+                placeholder="Your Name" 
+                className="bg-white text-gray-900 border-white rounded-full"
+              />
+              <Input 
+                type="email" 
+                placeholder="Your Email" 
+                className="bg-white text-gray-900 border-white rounded-full"
+              />
+              <Button 
+                className="w-full bg-white text-[#08123A] hover:bg-white/90 rounded-full font-semibold px-6 py-1.5 text-base"
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+              >
+                <Send className="w-4 h-4 mr-2" />
+                Stay Connected
+              </Button>
+            </div>
           </div>
         </div>
         
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 text-center space-y-2">
+        <div className="border-t border-white/20 pt-8 text-center space-y-2">
           <p className="text-sm">
             © 2025 ENDevo Services. All rights reserved.
           </p>
