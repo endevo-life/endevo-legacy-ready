@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
         
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-8 text-center space-y-2">
+        <div className="border-t border-white/20 text-center space-y-2">
           <p className="text-sm">
             © 2025 ENDevo Services. All rights reserved.
           </p>
