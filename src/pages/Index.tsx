@@ -65,7 +65,6 @@ const Index = () => {
         </section>
         
         <FamilyTestimonialsSection />
-        <LegacyJourneyCTA />
       </main>
       <Footer />
     </div>
