@@ -214,29 +214,6 @@ const WWSServiceProviders = () => {
           </div>
         </section>
 
-        {/* White Bar Section with Navy Blue Background */}
-        <section ref={barAnimation.elementRef as any} className="py-20 overflow-hidden">
-          <div className="container max-w-7xl mx-auto px-4 mb-8">
-            <h2 className={`text-3xl md:text-4xl font-bold text-brand-orange text-center transition-all duration-1000 ${barAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Be part of a 126 billion dollar industry transformation.
-            </h2>
-          </div>
-          <div className={`shadow-2xl px-8 md:px-16 py-12 transition-all ease-out ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
-          backgroundColor: '#08123A',
-          borderTopRightRadius: '100px',
-          borderBottomRightRadius: '100px',
-          width: barAnimation.isVisible ? '85%' : '0%',
-          transitionDuration: '2000ms',
-          transitionProperty: 'width, opacity'
-        }}>
-            <p className={`text-lg md:text-xl text-white leading-relaxed transition-opacity duration-1000 ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
-            transitionDelay: barAnimation.isVisible ? '800ms' : '0ms'
-          }}>
-              By joining ENDevo, you are not only investing in a company but also in a movement to bring clarity, confidence, and preparedness to millions of people. This is your chance to participate in shaping a new market while generating both financial return and meaningful impact.
-            </p>
-          </div>
-        </section>
-
         {/* Legal Collaboration Opportunities Section */}
         <section className="bg-muted/30 relative overflow-hidden py-6">
           <div 
@@ -271,6 +248,29 @@ const WWSServiceProviders = () => {
                 </Button>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* White Bar Section with Navy Blue Background */}
+        <section ref={barAnimation.elementRef as any} className="py-20 overflow-hidden">
+          <div className="container max-w-7xl mx-auto px-4 mb-8">
+            <h2 className={`text-3xl md:text-4xl font-bold text-brand-orange text-center transition-all duration-1000 ${barAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              Be part of a 126 billion dollar industry transformation.
+            </h2>
+          </div>
+          <div className={`shadow-2xl px-8 md:px-16 py-12 transition-all ease-out ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
+          backgroundColor: '#08123A',
+          borderTopRightRadius: '100px',
+          borderBottomRightRadius: '100px',
+          width: barAnimation.isVisible ? '85%' : '0%',
+          transitionDuration: '2000ms',
+          transitionProperty: 'width, opacity'
+        }}>
+            <p className={`text-lg md:text-xl text-white leading-relaxed transition-opacity duration-1000 ${barAnimation.isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
+            transitionDelay: barAnimation.isVisible ? '800ms' : '0ms'
+          }}>
+              By joining ENDevo, you are not only investing in a company but also in a movement to bring clarity, confidence, and preparedness to millions of people. This is your chance to participate in shaping a new market while generating both financial return and meaningful impact.
+            </p>
           </div>
         </section>
       </main>
