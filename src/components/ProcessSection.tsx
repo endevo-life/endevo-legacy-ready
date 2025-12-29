@@ -30,7 +30,7 @@ const ProcessSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Discover</h3>
-              <p className="text-muted-foreground leading-relaxed">Take the Peace of Mind Assessment.</p>
+              <p className="text-muted-foreground leading-relaxed">Provide employees with access to our Peace of Mind Assessment to quickly identify their level of preparedness.</p>
             </div>
             
             {/* Step 2: Plan */}
@@ -43,7 +43,7 @@ const ProcessSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Plan</h3>
-              <p className="text-muted-foreground leading-relaxed">Use our AI-driven platform to organize legal, financial, physical and digital assets.</p>
+              <p className="text-muted-foreground leading-relaxed">Guide staff with AI-powered tools that help them organize legal, financial, and digital assets in one secure place.</p>
             </div>
             
             {/* Step 3: Secure & Share */}
@@ -56,7 +56,7 @@ const ProcessSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Secure & Share</h3>
-              <p className="text-muted-foreground leading-relaxed">Ensure your family and organization can act with clarity when it matters most.</p>
+              <p className="text-muted-foreground leading-relaxed">Offer confidence and support that reduces stress, protects well-being, and lowers the risk of extended absences.</p>
             </div>
 
             {/* Step 4: Strengthen Continuity */}
@@ -69,7 +69,7 @@ const ProcessSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Strengthen Continuity</h3>
-              <p className="text-muted-foreground leading-relaxed">Ensure employees can focus on their work, even while navigating personal challenges.</p>
+              <p className="text-muted-foreground leading-relaxed">Strengthen continuity by ensuring employees can focus on their work, even while navigating personal challenges.</p>
             </div>
           </div>
         </div>
