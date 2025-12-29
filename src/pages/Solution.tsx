@@ -31,19 +31,23 @@ const Solution = () => {
       {/* Empowering You to Take Control Section */}
       <section id="process" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
-            </p>
-          </div>
-          
-          <div className="flex justify-center">
-            <img 
-              src={empoweringControlGraphic} 
-              alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
-              className="w-full max-w-3xl h-auto"
-            />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="flex justify-center">
+              <img 
+                src={empoweringControlGraphic} 
+                alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
+                className="w-full max-w-lg h-auto"
+              />
+            </div>
+            
+            {/* Right side - Text */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
+              <p className="text-lg text-muted-foreground">
+                Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
+              </p>
+            </div>
           </div>
         </div>
       </section>
