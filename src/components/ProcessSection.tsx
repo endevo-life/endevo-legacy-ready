@@ -85,7 +85,7 @@ const ProcessSection = () => {
             }}
             onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
           >
-            Take the Peace of Mind Assessment for Free
+            Take a free Peace of Mind Assessment
           </button>
         </div>
       </div>
