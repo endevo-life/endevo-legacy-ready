@@ -14,10 +14,10 @@ const HiddenCostStatsSection = () => {
         "Employees dealing with personal loss experience a 20–30% productivity drop for months.",
     },
     {
-      value: "67%",
-      subtitle: "of adults are unprepared.",
+      value: "76%",
+      subtitle: "Employee Loyalty",
       description:
-        "Disorganized legal, financial, and digital information leads to unnecessary stress and reduced productivity at work.",
+        "76% of employees say they'd feel more loyal to an employer that supports personal preparedness.",
     },
     {
       value: "40%",
