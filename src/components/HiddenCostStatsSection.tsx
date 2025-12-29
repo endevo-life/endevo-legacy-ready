@@ -8,10 +8,10 @@ const HiddenCostStatsSection = () => {
 
   const stats = [
     {
-      value: "$33B",
-      subtitle: "Lost Every Year",
+      value: "30%",
+      subtitle: "Productivity Drop",
       description:
-        "Unpreparedness leads to absenteeism, presenteeism, caregiver strain, interruptions, and turnover, costing U.S. companies billions in lost productivity.",
+        "Employees dealing with personal loss experience a 20–30% productivity drop for months.",
     },
     {
       value: "67%",
