@@ -26,8 +26,8 @@ const Index = () => {
       <ResponsiveNavbar />
       <main className="pt-16">
         <EmpowerEmployeesSection />
-        <ToolsForEmployersSection />
         <HiddenCostStatsSection />
+        <ToolsForEmployersSection />
         <ProcessSection />
         
         <WhyEndevoExistsSection />
