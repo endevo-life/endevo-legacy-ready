@@ -15,9 +15,9 @@ const ProcessSection = () => {
           </p>
         </div>
         
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-start relative">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 items-start relative">
             {/* Step 1 */}
             <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
             transitionDelay: isVisible ? '0.2s' : '0s'
@@ -32,8 +32,8 @@ const ProcessSection = () => {
             </div>
 
             {/* Arrow 1 */}
-            <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[22%] z-20">
-              <ArrowRight className="w-6 h-6 text-brand-orange" />
+            <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[21%] z-20">
+              <ArrowRight className="w-10 h-10 text-brand-orange" />
             </div>
             
             {/* Step 2 */}
@@ -50,8 +50,8 @@ const ProcessSection = () => {
             </div>
 
             {/* Arrow 2 */}
-            <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[47%] z-20">
-              <ArrowRight className="w-6 h-6 text-brand-orange" />
+            <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[46%] z-20">
+              <ArrowRight className="w-10 h-10 text-brand-orange" />
             </div>
             
             {/* Step 3 */}
@@ -68,8 +68,8 @@ const ProcessSection = () => {
             </div>
 
             {/* Arrow 3 */}
-            <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[72%] z-20">
-              <ArrowRight className="w-6 h-6 text-brand-orange" />
+            <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[71%] z-20">
+              <ArrowRight className="w-10 h-10 text-brand-orange" />
             </div>
 
             {/* Step 4 */}
