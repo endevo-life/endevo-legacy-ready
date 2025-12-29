@@ -30,8 +30,6 @@ const Index = () => {
         <ToolsForEmployersSection />
         <ProcessSection />
         
-        <WhyEndevoExistsSection />
-        
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
           <div className="container max-w-6xl mx-auto px-4">
