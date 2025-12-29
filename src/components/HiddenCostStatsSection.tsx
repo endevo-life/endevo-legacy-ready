@@ -35,7 +35,7 @@ const HiddenCostStatsSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          The Hidden Cost of Being Unprepared.
+          Unprepared employees cost businesses time and money.
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
