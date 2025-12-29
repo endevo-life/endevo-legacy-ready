@@ -60,17 +60,6 @@ const EmpowerEmployeesSection = () => {
         <div className={`flex flex-wrap items-center gap-6 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <span
             className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
-              activeTab === "individuals"
-                ? "text-brand-orange font-bold border-b-2 border-brand-orange"
-                : "text-white font-medium hover:text-brand-orange hover:border-b border-white"
-            }`}
-            onClick={() => setActiveTab("individuals")}
-          >
-            For Individuals
-          </span>
-          <span className="text-white/50">|</span>
-          <span
-            className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
               activeTab === "employers"
                 ? "text-brand-orange font-bold border-b-2 border-brand-orange"
                 : "text-white font-medium hover:text-brand-orange hover:border-b border-white"
@@ -89,6 +78,17 @@ const EmpowerEmployeesSection = () => {
             onClick={() => setActiveTab("providers")}
           >
             For Service Providers
+          </span>
+          <span className="text-white/50">|</span>
+          <span
+            className={`cursor-pointer pt-1 pb-1 transition-all duration-300 ${
+              activeTab === "individuals"
+                ? "text-brand-orange font-bold border-b-2 border-brand-orange"
+                : "text-white font-medium hover:text-brand-orange hover:border-b border-white"
+            }`}
+            onClick={() => setActiveTab("individuals")}
+          >
+            For Individuals
           </span>
         </div>
 
