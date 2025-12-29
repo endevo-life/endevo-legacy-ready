@@ -8,7 +8,7 @@ const EmpowerEmployeesSection = () => {
   return (
     <section
       ref={elementRef}
-      className="py-24 md:py-32 relative bg-cover bg-center bg-no-repeat"
+      className="min-h-[calc(100vh-4rem)] flex items-center relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${empowerBg})` }}
     >
       <div className="absolute inset-0 bg-black/10" />
