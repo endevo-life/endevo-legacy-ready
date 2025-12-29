@@ -1,6 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
-import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
+import ServiceProvidersHeroSection from "@/components/ServiceProvidersHeroSection";
 import serviceProvidersHero from "@/assets/service-providers-hero.jpg";
 import serviceProviderMeeting from "@/assets/service-provider-meeting.jpg";
 import { Button } from "@/components/ui/button";
@@ -39,7 +39,7 @@ const WWSServiceProviders = () => {
   return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
-        <EmpowerEmployeesSection />
+        <ServiceProvidersHeroSection />
         {/* Legacy Planning for Service Providers Section */}
         <section className="py-20 bg-background">
           <div className="container max-w-7xl mx-auto px-4">
