@@ -14,7 +14,7 @@ import Blog from "./pages/Blog";
 import Resources from "./pages/Resources";
 import Plan from "./pages/Plan";
 import Company from "./pages/Company";
-import ForEmployers from "./pages/ForEmployers";
+
 import ForInvestors from "./pages/ForInvestors";
 import EmployeeWellness from "./pages/EmployeeWellness";
 import WWSIndividuals from "./pages/WWSIndividuals";
@@ -57,7 +57,7 @@ const App = () => (
           <Route path="/legacy-planning" element={<NotFound />} />
           <Route path="/eap-replacement" element={<NotFound />} />
           <Route path="/approach" element={<NotFound />} />
-          <Route path="/for-employers" element={<ForEmployers />} />
+          
           <Route path="/wws-individuals" element={<WWSIndividuals />} />
           <Route path="/wws-service-providers" element={<WWSServiceProviders />} />
           <Route path="/wws-for-employers" element={<WWSForEmployers />} />
@@ -65,7 +65,7 @@ const App = () => (
           <Route path="/employee-wellness" element={<EmployeeWellness />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/trusted-experts" element={<TrustedExperts />} />
-          <Route path="/employers" element={<ForEmployers />} />
+          <Route path="/employers" element={<NotFound />} />
           <Route path="/consultants" element={<NotFound />} />
           <Route path="/members" element={<NotFound />} />
           <Route path="/providers" element={<NotFound />} />
