@@ -55,7 +55,7 @@ const Solution = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              Legacy planning doesn't have to be overwhelming. We empower families, employees, and employers with simple, supportive resources designed to guide every step of the way.
+              Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
             </p>
           </div>
           
