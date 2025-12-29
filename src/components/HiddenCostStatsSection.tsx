@@ -25,6 +25,12 @@ const HiddenCostStatsSection = () => {
       description:
         "Businesses lose an estimated $1,900 per employee annually due to disorganization and crisis-driven leave.",
     },
+    {
+      value: "25%",
+      subtitle: "Major Life Events",
+      description:
+        "25% of workers face a major life event each year that requires immediate documentation.",
+    },
   ];
 
   return (
@@ -38,7 +44,7 @@ const HiddenCostStatsSection = () => {
           Unprepared employees cost businesses <span className="text-brand-orange">time and money</span>.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div
               key={index}
