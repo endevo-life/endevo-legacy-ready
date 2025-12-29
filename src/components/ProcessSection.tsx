@@ -29,7 +29,7 @@ const ProcessSection = () => {
                   <span className="text-3xl font-bold text-white">1</span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Discover</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Assess Readiness</h3>
               <p className="text-muted-foreground leading-relaxed">Provide employees with access to our Peace of Mind Assessment to quickly identify their level of preparedness.</p>
             </div>
             
@@ -42,7 +42,7 @@ const ProcessSection = () => {
                   <span className="text-3xl font-bold text-white">2</span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Plan</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Organize & Secure</h3>
               <p className="text-muted-foreground leading-relaxed">Guide staff with AI-powered tools that help them organize legal, financial, and digital assets in one secure place.</p>
             </div>
             
@@ -55,7 +55,7 @@ const ProcessSection = () => {
                   <span className="text-3xl font-bold text-white">3</span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Secure & Share</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Support Well-being</h3>
               <p className="text-muted-foreground leading-relaxed">Offer confidence and support that reduces stress, protects well-being, and lowers the risk of extended absences.</p>
             </div>
 
