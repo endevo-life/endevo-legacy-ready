@@ -49,9 +49,6 @@ const GuidedProgramSection = () => {
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-4">
-            Employee Journey
-          </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4">
             A Guided Path to <span className="text-orange-600">Preparedness</span>
           </h2>
@@ -136,25 +133,6 @@ const GuidedProgramSection = () => {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className={`text-center mt-14 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <a 
-            href="https://docs.google.com/forms/d/e/1FAIpQLScL84N2XYOJpgGl8_UxQqbmxIBKg3cyZWd2AGDS7fkbVAFdpA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:from-slate-900 hover:to-slate-800 transition-all duration-300 group"
-          >
-            Start Your Team's Journey
-            <svg 
-              className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   );
