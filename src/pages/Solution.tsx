@@ -16,6 +16,7 @@ import peaceMindAssessment from "@/assets/peace-mind-assessment.jpg";
 import empowering from "@/assets/empowering-new.png";
 import framework from "@/assets/4-domains.png";
 import hrEapIcon from "@/assets/hr-eap-programs.png";
+import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 
 
@@ -37,6 +38,13 @@ const Solution = () => {
             </p>
           </div>
           
+          <div className="flex justify-center">
+            <img 
+              src={empoweringControlGraphic} 
+              alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
+              className="w-full max-w-3xl h-auto"
+            />
+          </div>
         </div>
       </section>
 
