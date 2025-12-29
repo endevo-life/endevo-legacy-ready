@@ -26,28 +26,6 @@ const Solution = () => {
     <div className="min-h-screen">
       <ResponsiveNavbar />
       
-      {/* Hero Section */}
-      <section 
-        className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-end"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container max-w-7xl mx-auto px-4 pb-20 relative z-10">
-          <div 
-            ref={elementRef as any}
-            className={`max-w-2xl transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Enterprise Solutions for Legacy Readiness & Digital Preparedness
-            </h1>
-            <p className="text-xl text-white/90">
-              Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Empowering You to Take Control Section */}
       <section id="process" className="py-20 bg-gray-50 scroll-mt-20">
