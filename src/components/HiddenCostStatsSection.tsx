@@ -20,10 +20,10 @@ const HiddenCostStatsSection = () => {
         "76% of employees say they'd feel more loyal to an employer that supports personal preparedness.",
     },
     {
-      value: "40%",
-      subtitle: "of Digital Assets are Never Recovered",
+      value: "$1,900",
+      subtitle: "Per Employee Lost",
       description:
-        "Locked accounts, forgotten passwords, and inaccessible information affect families and organizations every day.",
+        "Businesses lose an estimated $1,900 per employee annually due to disorganization and crisis-driven leave.",
     },
   ];
 
