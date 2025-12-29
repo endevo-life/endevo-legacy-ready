@@ -16,8 +16,6 @@ const ProcessSection = () => {
         </div>
         
         <div className="relative max-w-5xl mx-auto">
-          {/* Connecting line */}
-          <div className="hidden md:block absolute top-[60px] left-[20%] right-[20%] h-0.5 bg-gradient-to-r from-brand-navy via-brand-teal to-brand-navy opacity-30" />
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-start relative">
             {/* Step 1: Discover */}
