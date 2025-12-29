@@ -29,7 +29,7 @@ const Solution = () => {
       
 
       {/* Empowering You to Take Control Section */}
-      <section id="process" className="py-20 bg-gray-50 scroll-mt-20">
+      <section id="process" className="py-20 scroll-mt-20" style={{ backgroundColor: '#f6f7f8' }}>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             {/* Left side - Text (40%) */}
