@@ -23,13 +23,7 @@ const EmpowerEmployeesSection = () => {
           className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           style={{ transitionDelay: "200ms" }}
         >
-          ENDevo helps employers support their teams with a structured, guided program
-          <br />
-          that educates, project-manages, and empowers employees so their life story,
-          <br />
-          values, and digital footprint are protected, preserved, and passed on
-          <br />
-          with intention.
+          Legacy planning doesn't have to be overwhelming. We empower families, employees, and employers with simple, supportive resources designed to guide every step of the way.
         </p>
 
         <div
