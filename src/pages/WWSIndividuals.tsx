@@ -1,6 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
-import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
+import IndividualsHeroSection from "@/components/IndividualsHeroSection";
 import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import consultationMeeting from "@/assets/consultation-meeting.jpg";
 import { Button } from "@/components/ui/button";
@@ -40,7 +40,7 @@ const WWSIndividuals = () => {
   return <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
-        <EmpowerEmployeesSection />
+        <IndividualsHeroSection />
         {/* Legacy Planning for Individuals Section */}
         <section className="py-20 bg-background">
           <div className="container max-w-7xl mx-auto px-4">
