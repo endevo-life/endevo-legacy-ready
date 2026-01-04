@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
-import empowerBg from "@/assets/employers-hero-new.png";
+import empowerBg from "@/assets/hero-section-home.png";
 
 const EmpowerEmployeesSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
