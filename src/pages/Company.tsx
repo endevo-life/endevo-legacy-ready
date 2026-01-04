@@ -6,7 +6,6 @@ import NikiWeissSection from "@/components/NikiWeissSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
 import MeetOurTeamSection from "@/components/MeetOurTeamSection";
 import ConsultationSection from "@/components/ConsultationSection";
-import DifferentiatorSection from "@/components/DifferentiatorSection";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 import companyHeroBg from "@/assets/company-hero-bg.jpg";
@@ -183,9 +182,6 @@ const Company = () => {
           </div>
         </div>
       </section>
-
-      {/* ENDevo's Differentiator Section */}
-      <DifferentiatorSection />
 
       {/* Niki Weiss Section */}
       <NikiWeissSection />
