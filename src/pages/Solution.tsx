@@ -20,6 +20,7 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
+import employeeWellnessHero from "@/assets/employee-wellness-hero-bg.jpg";
 
 
 const Solution = () => {
@@ -29,6 +30,42 @@ const Solution = () => {
     <div className="min-h-screen">
       <ResponsiveNavbar />
       
+      {/* Employee Wellness Hero Section */}
+      <section 
+        ref={elementRef as any} 
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: `url('${employeeWellnessHero}')` }}
+      >
+        <div className="relative z-10 container max-w-4xl mx-auto px-4 text-center">
+          <h1 
+            className={`font-bold mb-6 transition-all duration-1000 ease-out text-4xl md:text-5xl lg:text-6xl text-white ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            style={{ fontFamily: 'serif', transitionDelay: isVisible ? '0.2s' : '0s' }}
+          >
+            Empowering Employees to Thrive in Work, Life, and Legacy
+          </h1>
+          
+          <p 
+            className={`text-lg md:text-xl mb-12 leading-relaxed transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            style={{ color: '#e5e7eb', transitionDelay: isVisible ? '0.4s' : '0s' }}
+          >
+            Our Employee Wellness Program helps individuals find balance, build resilience, and prepare for life's transitions because a strong legacy starts with a healthy, fulfilled you.
+          </p>
+          
+          <div 
+            className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+            style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}
+          >
+            <a href="/contact">
+              <button 
+                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300" 
+                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+              >
+                Start the Program
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Empowering You to Take Control Section */}
       <section id="process" className="py-20 scroll-mt-20" style={{ backgroundColor: '#f6f7f8' }}>
