@@ -35,7 +35,7 @@ const EmpowerEmployeesSection = () => {
             style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
             onClick={() => (window.location.href = "/solution")}
           >
-            Start a Legacy Readiness Employee Wellness Program
+            Start A Legacy Readiness Employee Wellness Program
           </Button>
         </div>
       </div>

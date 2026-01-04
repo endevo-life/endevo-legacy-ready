@@ -47,7 +47,7 @@ const MobileAppSection = () => {
         {/* Centered button */}
         <div className={`flex justify-center mt-12 transition-all duration-700 delay-900 ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-90'}`}>
           <Button className="px-6 py-1.5 text-base hover-scale">
-            Get the App
+            Get The App
           </Button>
         </div>
       </div>

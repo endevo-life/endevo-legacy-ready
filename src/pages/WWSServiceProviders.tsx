@@ -68,7 +68,7 @@ const WWSServiceProviders = () => {
                   <Button onClick={() => navigate('/contact')} variant="default" className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full" style={{
                   fontFamily: "'Open Sans', 'Helvetica', sans-serif"
                 }}>
-                    Partner with ENDevo
+                    Partner With ENDevo
                   </Button>
                 </div>
               </div>
@@ -208,7 +208,7 @@ const WWSServiceProviders = () => {
               <Button onClick={() => navigate('/contact')} className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }}>
-                Partner with ENDevo
+                Partner With ENDevo
               </Button>
             </div>
           </div>
@@ -244,7 +244,7 @@ const WWSServiceProviders = () => {
                   className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full"
                   onClick={() => navigate('/contact')}
                 >
-                  Become a Legal Partner
+                  Become A Legal Partner
                 </Button>
               </div>
             </div>

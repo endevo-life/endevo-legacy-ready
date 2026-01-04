@@ -68,7 +68,7 @@ const ToolsForEmployersSection = () => {
                   fontFamily: "'Open Sans', 'Helvetica', sans-serif",
                 }}
               >
-                Empower your team
+                Empower Your Team
               </Button>
             </div>
           </div>

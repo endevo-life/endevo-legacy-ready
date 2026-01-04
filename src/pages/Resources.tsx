@@ -40,12 +40,12 @@ const Resources = () => {
               <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }} onClick={() => window.open('https://digitallegacypodcast.com/', '_blank')}>
-                🎙️ Learn from Experts
+                🎙️ Learn From Experts
               </button>
               <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }} onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US', '_blank')}>
-                📱 Plan with Our App
+                📱 Plan With Our App
               </button>
               
             </div>
@@ -69,7 +69,7 @@ const Resources = () => {
             <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 mb-4" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
             }} onClick={() => window.open('https://digitallegacypodcast.com/podcast', '_blank')}>
-                Learn and Listen
+                Learn And Listen
               </button>
               <p className="text-sm text-white/70">
                 Explore blogs, podcasts, and videos where our founder shares insights, stories, and guidance to help you prepare with confidence.
@@ -110,7 +110,7 @@ const Resources = () => {
             <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105" style={{
             fontFamily: "'Open Sans', 'Helvetica', sans-serif"
           }} onClick={() => window.open('https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share', '_blank')}>
-              Get the App
+              Get The App
             </button>
           </div>
         </div>
