@@ -50,7 +50,7 @@ const Solution = () => {
             className={`text-lg md:text-xl mb-12 leading-relaxed transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
             style={{ color: '#e5e7eb', transitionDelay: isVisible ? '0.4s' : '0s' }}
           >
-            Our Employee Wellness Program helps individuals find balance, build resilience, and prepare for life's transitions because a strong legacy starts with a healthy, fulfilled you.
+            Empowering employees to thrive through life's transitions without overwhelming HR teams.
           </p>
           
           <div 
