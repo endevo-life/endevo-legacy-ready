@@ -13,21 +13,18 @@ const WhoWeServeSection = () => {
       title: "Employers",
       description: "Boost workplace resilience with legacy and digital readiness tools that reduce absenteeism, increase productivity, and support employee well-being.",
       link: "/wws-for-employers",
-      isPrimary: true,
     },
     {
       icon: Handshake,
       title: "Service Providers",
       description: "Unlock pre-qualified clients and boost revenue with organized operations and smart partnerships.",
       link: "/wws-service-providers",
-      isPrimary: false,
     },
     {
       icon: User,
       title: "Individuals",
       description: "Simplifying legacy readiness with AI-powered guidance and compassionate resources.",
       link: "/wws-individuals",
-      isPrimary: false,
     },
   ];
 
@@ -53,16 +50,15 @@ const WhoWeServeSection = () => {
                 key={audience.title}
                 className={`
                   bg-card rounded-2xl p-8 text-center shadow-md hover:shadow-lg transition-all duration-500 flex flex-col h-full border border-border/50
-                  ${audience.isPrimary ? "md:scale-[1.02] shadow-lg ring-1 ring-brand-orange/20" : ""}
                   ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
                 `}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Icon */}
                 <div className="flex justify-center mb-6">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center ${audience.isPrimary ? "bg-brand-orange/10" : "bg-muted"}`}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center bg-muted">
                     <IconComponent 
-                      className={`w-8 h-8 ${audience.isPrimary ? "text-brand-orange" : "text-muted-foreground"}`} 
+                      className="w-8 h-8 text-muted-foreground" 
                       strokeWidth={1.5}
                     />
                   </div>
