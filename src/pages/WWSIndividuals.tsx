@@ -74,7 +74,7 @@ const WWSIndividuals = () => {
                     className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base font-semibold rounded-full"
                     style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                   >
-                    Take a free Peace of Mind Assessment
+                    Take A Free Peace Of Mind Assessment
                   </Button>
                 </div>
               </div>

@@ -37,7 +37,7 @@ const LegacyJourneyCTA = () => {
           }`}
           style={{ transitionDelay: "300ms", fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
         >
-          Schedule a Consultation
+          Schedule A Consultation
         </Button>
       </div>
     </section>

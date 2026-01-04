@@ -54,7 +54,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="inline-block text-brand-orange text-sm font-bold hover:underline"
             >
-              Take the Peace of Mind Assessment for Free
+              Take The Peace Of Mind Assessment For Free
             </a>
           </div>
 
