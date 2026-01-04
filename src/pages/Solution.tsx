@@ -20,6 +20,7 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
+import DifferentiatorSection from "@/components/DifferentiatorSection";
 import employeeWellnessHero from "@/assets/employee-wellness-hero-bg.jpg";
 import wellnessPillars from "@/assets/wellness-pillars.png";
 
@@ -168,6 +169,9 @@ const Solution = () => {
 
       {/* Tools for Employers & Teams Section */}
       <ToolsForEmployersSection />
+
+      {/* ENDevo's Differentiator Section */}
+      <DifferentiatorSection />
 
       <Footer />
     </div>
