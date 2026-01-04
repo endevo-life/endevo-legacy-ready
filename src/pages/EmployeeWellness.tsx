@@ -27,51 +27,6 @@ const EmployeeWellness = () => {
             Go Back
           </Button>
         </div>
-        {/* About the Program and Why It Matters Section */}
-        <section className="py-20 px-4 bg-muted/30">
-          <div className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* About the Program Card */}
-              <Card className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
-                <CardHeader>
-                  <CardTitle className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: 'serif' }}>
-                    About the Program
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-                    <p>
-                      The Legacy Readiness Employee Wellness Program is built around one simple truth: you cannot build a lasting legacy without caring for yourself first.
-                    </p>
-                    <p>
-                      We provide a holistic approach to wellness that supports employees physically, emotionally, and financially. Whether it is improving daily habits, navigating career changes, or preparing for major life events, our goal is to empower you to show up as your best self, today and in the future.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Why It Matters Card */}
-              <Card className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
-                <CardHeader>
-                  <CardTitle className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: 'serif' }}>
-                    Why It Matters
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-                    <p>
-                      When employees are supported as whole individuals, they become more focused, motivated, and inspired. Our program strengthens workplace culture, reduces burnout, and helps teams create meaningful impact in their careers, families, and communities.
-                    </p>
-                    <p>
-                      Legacy readiness is more than preparing for what is next; it is about living well right now.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Core Pillars Section */}
         <section className="py-12 px-4">
           <div className="container max-w-7xl mx-auto">
