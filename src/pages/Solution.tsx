@@ -17,7 +17,7 @@ import empowering from "@/assets/empowering-new.png";
 import framework from "@/assets/4-domains.png";
 import hrEapIcon from "@/assets/hr-eap-programs.png";
 import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
-import ServiceProvidersSection from "@/components/ServiceProvidersSection";
+
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
 import employeeWellnessHero from "@/assets/employee-wellness-hero-bg.jpg";
@@ -169,8 +169,7 @@ const Solution = () => {
       {/* Tools for Employers & Teams Section */}
       <ToolsForEmployersSection />
 
-      {/* Service Providers Section */}
-      <ServiceProvidersSection />
+      {/* Our Edge: Where AI Meets Empathy Section */}
 
       {/* Our Edge: Where AI Meets Empathy Section */}
       <section id="for-companies" className="py-6 bg-background scroll-mt-20">

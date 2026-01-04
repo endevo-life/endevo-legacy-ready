@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import TrustedPartnersSection from "@/components/TrustedPartnersSection";
+import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 import heroBackground from "@/assets/marketplace-hero-bg.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -29,6 +30,9 @@ const Marketplace = () => {
             </div>
           </div>
         </section>
+
+        {/* Connecting You With Trusted Service Providers Section */}
+        <ServiceProvidersSection />
 
         {/* Trusted Partners Section */}
         <TrustedPartnersSection />
