@@ -43,7 +43,7 @@ const Solution = () => {
             className={`font-bold mb-6 transition-all duration-1000 ease-out text-4xl md:text-5xl lg:text-6xl text-white ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
             style={{ fontFamily: 'serif', transitionDelay: isVisible ? '0.2s' : '0s' }}
           >
-            Empowering Employees to Thrive in Work, Life, and Legacy
+            A Legacy Readiness Employee Wellness Program
           </h1>
           
           <p 
