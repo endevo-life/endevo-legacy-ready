@@ -20,7 +20,6 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
-import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 
 
 const Solution = () => {
@@ -30,8 +29,6 @@ const Solution = () => {
     <div className="min-h-screen">
       <ResponsiveNavbar />
       
-      {/* Hero Section - Empowering Employees */}
-      <EmpowerEmployeesSection />
 
       {/* Empowering You to Take Control Section */}
       <section id="process" className="py-20 scroll-mt-20" style={{ backgroundColor: '#f6f7f8' }}>

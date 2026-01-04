@@ -2,7 +2,7 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import NewHeroSection from "@/components/NewHeroSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
-
+import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 
@@ -25,6 +25,7 @@ const Index = () => {
     <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
+        <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
 
         {/* Partners Carousel Section */}
