@@ -5,7 +5,7 @@ import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
-import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
+
 
 import WhyEndevoExistsSection from "@/components/WhyEndevoExistsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -27,7 +27,6 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
-        <ToolsForEmployersSection />
         
         <ProcessSection />
         
