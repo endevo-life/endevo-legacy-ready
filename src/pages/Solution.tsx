@@ -19,6 +19,7 @@ import hrEapIcon from "@/assets/hr-eap-programs.png";
 import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
+import ProcessSection from "@/components/ProcessSection";
 
 
 const Solution = () => {
@@ -123,6 +124,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* How It Works Section */}
+      <ProcessSection />
 
       {/* Tools for Employers & Teams Section */}
       <ToolsForEmployersSection />
