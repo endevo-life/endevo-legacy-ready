@@ -57,6 +57,9 @@ const ToolsForEmployersSection = () => {
             </p>
 
             <div className="mt-8">
+              <p className="text-sm text-muted-foreground mb-3">
+                Built on compassionate guidance, AI-powered organization, and human-centered legacy readiness.
+              </p>
               <Button
                 onClick={() => navigate("/contact")}
                 variant="default"
