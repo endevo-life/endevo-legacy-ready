@@ -1,14 +1,8 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
-import NewHeroSection from "@/components/NewHeroSection";
-import HiddenCostSection from "@/components/HiddenCostSection";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import VideoSection from "@/components/VideoSection";
-
-import WhoBenefitsSection from "@/components/WhoBenefitsSection";
-
-
-import WhyEndevoExistsSection from "@/components/WhyEndevoExistsSection";
+import WhoWeServeSection from "@/components/WhoWeServeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 
@@ -28,6 +22,7 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <VideoSection />
+        <WhoWeServeSection />
         <HiddenCostStatsSection />
 
         {/* Partners Carousel Section */}
