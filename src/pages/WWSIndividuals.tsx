@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import IndividualsHeroSection from "@/components/IndividualsHeroSection";
+import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import consultationMeeting from "@/assets/consultation-meeting.jpg";
 import { Button } from "@/components/ui/button";
@@ -226,6 +227,9 @@ const WWSIndividuals = () => {
             </p>
           </div>
         </section>
+
+        {/* Stories From Across Our Community Section */}
+        <FamilyTestimonialsSection />
       </main>
       <Footer />
     </div>;
