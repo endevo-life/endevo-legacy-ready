@@ -4,8 +4,9 @@ import IndividualsHeroSection from "@/components/IndividualsHeroSection";
 import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import consultationMeeting from "@/assets/consultation-meeting.jpg";
+import framework from "@/assets/4-domains.png";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -76,6 +77,77 @@ const WWSIndividuals = () => {
                     Take a free Peace of Mind Assessment
                   </Button>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Comprehensive Framework Section */}
+        <section id="framework" className="py-20 bg-background scroll-mt-20">
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Comprehensive Framework</h2>
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+                Legacy planning isn't one-dimensional. We center your beliefs, then build around them with four key areas that make your plan complete.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left side - Framework Graphic */}
+              <div className="animate-fade-in">
+                <img 
+                  src={framework} 
+                  alt="Comprehensive Framework - Your Beliefs at the center surrounded by Legal, Financial, Physical, and Digital areas" 
+                  className="w-full h-auto max-w-md mx-auto"
+                />
+              </div>
+              
+              {/* Right side - Framework Cards */}
+              <div className="space-y-4">
+                <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3 text-lg">Your Beliefs</CardTitle>
+                    <p className="text-muted-foreground text-sm">
+                      The foundation of every decision, your values, wishes, and priorities.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.1s' }}>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3 text-lg">Legal</CardTitle>
+                    <p className="text-muted-foreground text-sm">
+                      Protect your rights and ensure your documents reflect your intentions.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.2s' }}>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3 text-lg">Financial</CardTitle>
+                    <p className="text-muted-foreground text-sm">
+                      Secure your assets and provide clarity for future generations.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.3s' }}>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3 text-lg">Physical</CardTitle>
+                    <p className="text-muted-foreground text-sm">
+                      Address care, health, and personal needs with confidence.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="animate-fade-in hover:shadow-lg transition-shadow duration-300" style={{ animationDelay: '0.4s' }}>
+                  <CardContent className="p-6">
+                    <CardTitle className="mb-3 text-lg">Digital</CardTitle>
+                    <p className="text-muted-foreground text-sm">
+                      Organize and safeguard your online presence and digital assets.
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
