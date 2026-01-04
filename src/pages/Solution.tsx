@@ -20,7 +20,7 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
-import employeeWellnessHero from "@/assets/employee-wellness-hero-bg.jpg";
+import solutionHeroConsultation from "@/assets/solution-hero-consultation.jpg";
 import wellnessPillars from "@/assets/wellness-pillars.png";
 
 
@@ -35,7 +35,7 @@ const Solution = () => {
       <section 
         ref={elementRef as any} 
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: `url('${employeeWellnessHero}')` }}
+        style={{ backgroundImage: `url('${solutionHeroConsultation}')` }}
       >
         <div className="relative z-10 container max-w-4xl mx-auto px-4 text-center">
           <h1 
