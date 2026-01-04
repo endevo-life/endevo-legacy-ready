@@ -18,6 +18,7 @@ import framework from "@/assets/4-domains.png";
 import hrEapIcon from "@/assets/hr-eap-programs.png";
 import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 import ServiceProvidersSection from "@/components/ServiceProvidersSection";
+import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 
 
 const Solution = () => {
@@ -122,6 +123,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* Tools for Employers & Teams Section */}
+      <ToolsForEmployersSection />
 
       {/* Service Providers Section */}
       <ServiceProvidersSection />
