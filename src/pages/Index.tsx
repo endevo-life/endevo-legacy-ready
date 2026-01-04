@@ -3,6 +3,7 @@ import NewHeroSection from "@/components/NewHeroSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
+import VideoSection from "@/components/VideoSection";
 
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 
@@ -26,6 +27,7 @@ const Index = () => {
       <ResponsiveNavbar />
       <main className="pt-16">
         <EmpowerEmployeesSection />
+        <VideoSection />
         <HiddenCostStatsSection />
 
         {/* Partners Carousel Section */}
