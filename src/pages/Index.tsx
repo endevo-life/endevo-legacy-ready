@@ -10,7 +10,7 @@ import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 import WhyEndevoExistsSection from "@/components/WhyEndevoExistsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
-import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
+
 import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -61,8 +61,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-        
-        <FamilyTestimonialsSection />
       </main>
       <Footer />
     </div>
