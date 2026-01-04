@@ -37,6 +37,7 @@ const Solution = () => {
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
         style={{ backgroundImage: `url('${solutionHeroConsultation}')` }}
       >
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container max-w-4xl mx-auto px-4 text-center">
           <h1 
             className={`font-bold mb-6 transition-all duration-1000 ease-out text-4xl md:text-5xl lg:text-6xl text-white ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
