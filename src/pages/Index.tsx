@@ -3,7 +3,7 @@ import NewHeroSection from "@/components/NewHeroSection";
 import HiddenCostSection from "@/components/HiddenCostSection";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
-import ProcessSection from "@/components/ProcessSection";
+
 import WhoBenefitsSection from "@/components/WhoBenefitsSection";
 
 
@@ -27,9 +27,7 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
-        
-        <ProcessSection />
-        
+
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
           <div className="container max-w-6xl mx-auto px-4">
