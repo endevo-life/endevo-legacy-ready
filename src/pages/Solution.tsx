@@ -21,6 +21,7 @@ import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
 import employeeWellnessHero from "@/assets/employee-wellness-hero-bg.jpg";
+import wellnessPillars from "@/assets/wellness-pillars.png";
 
 
 const Solution = () => {
@@ -108,6 +109,32 @@ const Solution = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Pillars of Wellness Section */}
+      <section className="py-12 px-4">
+        <div className="container max-w-7xl mx-auto">
+          <div className="grid grid-cols-12 gap-8 items-center">
+            {/* Title - 25% */}
+            <div className="col-span-12 md:col-span-3 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'serif' }}>
+                Our Core Pillars of Wellness
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Our Core Pillars of Wellness focus on nurturing every aspect of well-being. They bring together the physical, emotional, financial, and professional sides of life to help individuals find balance, clarity, and long-term fulfillment in both their personal and work journeys.
+              </p>
+            </div>
+            
+            {/* Image - 75% */}
+            <div className="col-span-12 md:col-span-9">
+              <img 
+                src={wellnessPillars} 
+                alt="Five Core Pillars of Wellness: Physical Health, Emotional Well-Being, Financial Readiness, Career Growth and Purpose, and Community and Connection" 
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
