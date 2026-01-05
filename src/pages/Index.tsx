@@ -22,7 +22,6 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <VideoSection />
-        <WhoWeServeSection />
         <HiddenCostStatsSection />
 
         {/* Partners Carousel Section */}
@@ -58,6 +57,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+        <WhoWeServeSection />
       </main>
       <Footer />
     </div>
