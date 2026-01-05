@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
-import employersIcon from "@/assets/who-we-serve-employers.png";
 import individualsIcon from "@/assets/who-we-serve-individuals.png";
 import providersIcon from "@/assets/who-we-serve-providers.png";
 
@@ -11,18 +10,11 @@ const WhoWeServeHomeSection = () => {
 
   const audiences = [
     {
-      icon: employersIcon,
-      title: "Employers",
-      description: "Boost workplace resilience with legacy and digital readiness tools that reduce absenteeism, increase productivity, and support employee well-being.",
-      link: "/wws-for-employers",
-      isPrimary: true,
-    },
-    {
       icon: providersIcon,
       title: "Service Providers",
       description: "Unlock pre-qualified clients and boost revenue with organized operations and smart partnerships.",
       link: "/wws-service-providers",
-      isPrimary: false,
+      isPrimary: true,
     },
     {
       icon: individualsIcon,
@@ -47,7 +39,7 @@ const WhoWeServeHomeSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto">
           {audiences.map((audience, index) => (
             <div
               key={audience.title}
