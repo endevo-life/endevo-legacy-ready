@@ -22,11 +22,11 @@ const HiddenCostStatsSection = () => {
   }];
   return <section ref={elementRef} className="py-20 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
-        <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-16 text-foreground font-serif transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-foreground font-serif transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           Unprepared employees cost businesses <span className="text-brand-orange">time and money</span>.
         </h2>
 
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
+        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "200ms"
       }}>
           <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-sans">ENDevo Brings Clarity, Confidence, and Continuity</h3>
