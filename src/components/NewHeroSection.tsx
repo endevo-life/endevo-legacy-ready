@@ -47,7 +47,7 @@ const NewHeroSection = () => {
               onMouseEnter={e => e.currentTarget.style.backgroundColor = '#E64400'} 
               onMouseLeave={e => e.currentTarget.style.backgroundColor = '#FF4D00'}
             >
-              Start A Legacy Readiness Employee Wellness Program
+              Start a Legacy Readiness Employee Wellness Program
             </button>
           </a>
         </div>
