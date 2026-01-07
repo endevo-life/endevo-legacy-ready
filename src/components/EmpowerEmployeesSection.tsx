@@ -8,7 +8,7 @@ const EmpowerEmployeesSection = () => {
   return (
     <section
       ref={elementRef}
-      className="min-h-[calc(100vh-4rem)] flex items-center relative bg-cover bg-center bg-no-repeat mx-4 md:mx-8 mt-4 overflow-hidden"
+      className="min-h-[calc(100vh-4rem)] flex items-center relative bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${empowerBg})`, borderRadius: '25px' }}
     >
       <div className="absolute inset-0 bg-black/10 rounded-[25px]" />
