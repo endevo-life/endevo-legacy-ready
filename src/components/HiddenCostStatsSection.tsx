@@ -44,7 +44,7 @@ const HiddenCostStatsSection = () => {
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          <h3 className="text-2xl md:text-3xl font-serif font-bold text-brand-orange mb-4">
+          <h3 className="text-xl md:text-2xl font-serif text-brand-navy mb-4">
             ENDevo Brings Clarity, Confidence, and Continuity
           </h3>
           <p className="text-muted-foreground italic text-base md:text-lg max-w-3xl mx-auto mb-8">
