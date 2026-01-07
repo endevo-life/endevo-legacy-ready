@@ -2,6 +2,7 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import VideoSection from "@/components/VideoSection";
+import ProcessSection from "@/components/ProcessSection";
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
@@ -23,6 +24,7 @@ const Index = () => {
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
         <VideoSection />
+        <ProcessSection />
 
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
