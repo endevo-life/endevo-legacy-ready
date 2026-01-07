@@ -10,9 +10,7 @@ const ProcessSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">How It Works</h2>
-          <p className="text-lg text-muted-foreground">
-            Three simple steps to complete preparedness
-          </p>
+          <p className="text-lg text-muted-foreground">Four simple steps to complete preparedness</p>
         </div>
         
         <div className="relative max-w-7xl mx-auto">
@@ -91,13 +89,9 @@ const ProcessSection = () => {
         <div className={`text-center mt-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
         transitionDelay: isVisible ? '0.8s' : '0s'
       }}>
-          <button 
-            className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
-            style={{
-              fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-            }}
-            onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}
-          >
+          <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105" style={{
+          fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+        }} onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}>
             Take A Free Peace Of Mind Assessment
           </button>
         </div>
