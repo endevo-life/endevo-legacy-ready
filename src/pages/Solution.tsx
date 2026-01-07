@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import ResiliencePathSection from "@/components/ResiliencePathSection";
 import heroBackground from "@/assets/solution-hero-bg.jpg";
 import holisticFramework from "@/assets/holistic-framework.png";
 import threeStepProcess from "@/assets/three-step-process.jpg";
@@ -69,6 +70,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* Resilience Path Section */}
+      <ResiliencePathSection />
 
       {/* About the Program and Why It Matters Section */}
       <section className="py-20 px-4 bg-muted/30">
