@@ -58,18 +58,6 @@ const OrganizationalResilienceSection = () => {
                 </p>
               </div>
             ))}
-
-            {/* CTA Button */}
-            <div 
-              className={`pt-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: '0.8s' }}
-            >
-              <a href="/contact">
-                <button className="bg-brand-navy hover:bg-brand-navy/90 text-white font-semibold px-8 py-3 rounded-full text-base shadow-lg hover:shadow-xl transition-all duration-300">
-                  Start Your Journey Today
-                </button>
-              </a>
-            </div>
           </div>
 
           {/* Right Column - Image */}
@@ -83,6 +71,18 @@ const OrganizationalResilienceSection = () => {
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
+        </div>
+
+        {/* CTA Button - Centered below both columns */}
+        <div 
+          className={`pt-12 text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          style={{ transitionDelay: '0.8s' }}
+        >
+          <a href="/contact">
+            <button className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 rounded-full text-base shadow-lg hover:shadow-xl transition-all duration-300">
+              Start Your Journey Today
+            </button>
+          </a>
         </div>
       </div>
     </section>
