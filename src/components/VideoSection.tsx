@@ -18,7 +18,7 @@ const VideoSection = () => {
 
   return (
     <section className="relative w-full overflow-hidden py-8 px-4 bg-background">
-      <div className="relative w-full max-w-5xl mx-auto rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+      <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
         <video
           ref={videoRef}
           src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/691dfee088e1e604ea8cd838.mp4"
