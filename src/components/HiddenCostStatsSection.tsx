@@ -30,17 +30,12 @@ const HiddenCostStatsSection = () => {
         transitionDelay: "200ms"
       }}>
           <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-sans">ENDevo Brings Clarity, Confidence, and Continuity</h3>
-          <p className="text-muted-foreground italic text-base md:text-lg max-w-3xl mx-auto mb-8">
+          <p className="text-muted-foreground italic text-base md:text-lg max-w-3xl mx-auto">
             With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future without the overwhelm.
           </p>
-          <Button onClick={() => navigate("/solution")} className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 rounded-full text-base font-semibold" style={{
-          fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-        }}>
-            Learn How We Solve It
-          </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {stats.map((stat, index) => <div key={index} className={`bg-white rounded-xl shadow-lg p-8 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
           transitionDelay: `${400 + index * 200}ms`
         }}>
@@ -54,6 +49,16 @@ const HiddenCostStatsSection = () => {
                 {stat.description}
               </p>
             </div>)}
+        </div>
+
+        <div className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
+        transitionDelay: "1000ms"
+      }}>
+          <Button onClick={() => navigate("/solution")} className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 rounded-full text-base font-semibold" style={{
+          fontFamily: "'Open Sans', 'Helvetica', sans-serif"
+        }}>
+            Learn How We Solve It
+          </Button>
         </div>
       </div>
     </section>;
