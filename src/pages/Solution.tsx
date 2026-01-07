@@ -21,6 +21,7 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
+import OrganizationalResilienceSection from "@/components/OrganizationalResilienceSection";
 import solutionHeroConsultation from "@/assets/solution-hero-consultation.jpg";
 import wellnessPillars from "@/assets/wellness-pillars.png";
 
@@ -69,6 +70,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* Organizational Resilience Section */}
+      <OrganizationalResilienceSection />
 
       {/* About the Program and Why It Matters Section */}
       <section className="py-20 px-4 bg-muted/30">
