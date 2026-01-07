@@ -29,7 +29,7 @@ const HiddenCostStatsSection = () => {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "200ms"
       }}>
-          <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4">ENDevo Brings Clarity, Confidence, and Continuity</h3>
+          <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-sans">ENDevo Brings Clarity, Confidence, and Continuity</h3>
           <p className="text-muted-foreground italic text-base md:text-lg max-w-3xl mx-auto mb-8">
             With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future without the overwhelm.
           </p>
