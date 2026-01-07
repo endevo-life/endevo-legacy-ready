@@ -21,8 +21,8 @@ const Index = () => {
       <ResponsiveNavbar />
       <main className="pt-16">
         <EmpowerEmployeesSection />
-        <VideoSection />
         <HiddenCostStatsSection />
+        <VideoSection />
 
         {/* Partners Carousel Section */}
         <section className="py-4 bg-gradient-to-b from-background to-muted/20">
