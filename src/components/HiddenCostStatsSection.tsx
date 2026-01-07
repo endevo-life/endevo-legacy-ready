@@ -54,7 +54,7 @@ const HiddenCostStatsSection = () => {
         <div className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "1000ms"
       }}>
-          <Button onClick={() => navigate("/solution")} className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 rounded-full text-base font-semibold" style={{
+          <Button onClick={() => navigate("/solution")} variant="outline" className="border-2 border-brand-navy text-brand-navy bg-transparent hover:bg-brand-navy/10 px-6 py-1.5 rounded-full text-base font-semibold" style={{
           fontFamily: "'Open Sans', 'Helvetica', sans-serif"
         }}>
             Learn How We Solve It
