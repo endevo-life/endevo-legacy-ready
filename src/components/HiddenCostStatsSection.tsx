@@ -14,12 +14,6 @@ const HiddenCostStatsSection = () => {
         "Employees dealing with personal loss experience a 20–30% productivity drop for months.",
     },
     {
-      value: "76%",
-      subtitle: "Employee Loyalty",
-      description:
-        "76% of employees say they'd feel more loyal to an employer that supports personal preparedness.",
-    },
-    {
       value: "$1,900",
       subtitle: "Per Employee Lost",
       description:
@@ -44,7 +38,7 @@ const HiddenCostStatsSection = () => {
           Unprepared employees cost businesses <span className="text-brand-orange">time and money</span>.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div
               key={index}
