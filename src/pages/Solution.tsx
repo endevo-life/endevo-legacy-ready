@@ -72,9 +72,6 @@ const Solution = () => {
       {/* How It Works Section */}
       <ProcessSection />
 
-      {/* Organizational Resilience Section */}
-      <OrganizationalResilienceSection />
-
       {/* About the Program and Why It Matters Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
@@ -119,6 +116,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* Organizational Resilience Section */}
+      <OrganizationalResilienceSection />
 
       {/* Empowering You to Take Control Section */}
       <section id="process" className="py-20 scroll-mt-20" style={{ backgroundColor: '#f6f7f8' }}>
