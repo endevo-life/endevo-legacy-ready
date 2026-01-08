@@ -18,7 +18,9 @@ const EmpowerEmployeesSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          A New Standard of Employee Support for Life's What-Ifs
+          A New Standard of Employee Support
+          <br />
+          for Life's What-Ifs
         </h2>
 
         <p
