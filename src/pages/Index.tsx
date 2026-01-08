@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
+import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 
 
 import WhoWeServeSection from "@/components/WhoWeServeSection";
@@ -60,6 +61,7 @@ const Index = () => {
           </div>
         </section>
         <WhoWeServeSection />
+        <ToolsForEmployersSection />
       </main>
       <Footer />
     </div>
