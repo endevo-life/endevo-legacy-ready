@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
+import HowEndevoHelpsSection from "@/components/HowEndevoHelpsSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -25,8 +26,7 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
-        
-        
+        <HowEndevoHelpsSection />
 
         <ToolsForEmployersSection />
 
