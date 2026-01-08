@@ -61,8 +61,8 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <WhoWeServeSection />
         <ToolsForEmployersSection />
+        <WhoWeServeSection />
 
         {/* Our Edge: Where AI Meets Empathy Section */}
         <section id="our-edge" className="py-20 bg-background scroll-mt-20">
