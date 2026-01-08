@@ -243,9 +243,16 @@ const WWSIndividuals = () => {
               {/* Left side - Text (40%) */}
               <div className="lg:col-span-2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-muted-foreground mb-6">
                   Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
                 </p>
+                <Button 
+                  onClick={() => navigate('/resources')}
+                  className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  Explore Resources
+                </Button>
               </div>
               
               {/* Right side - Image (60%) */}
