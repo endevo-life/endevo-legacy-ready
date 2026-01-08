@@ -29,9 +29,18 @@ const HiddenCostStatsSection = () => {
           Major life events don't pause work. Without preparation, they create stress, disruption, and lost productivity across teams.
         </p>
 
+        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
+        transitionDelay: "200ms"
+      }}>
+          <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-sans">ENDevo Brings Clarity, Confidence, and Continuity</h3>
+          <p className="text-muted-foreground italic text-base md:text-lg max-w-3xl mx-auto">
+            With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future without the overwhelm.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {stats.map((stat, index) => <div key={index} className={`bg-white rounded-xl shadow-lg p-8 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
-          transitionDelay: `${200 + index * 200}ms`
+          transitionDelay: `${400 + index * 200}ms`
         }}>
               <p className="text-5xl md:text-6xl font-bold text-foreground font-serif mb-2">
                 {stat.value}
@@ -43,15 +52,6 @@ const HiddenCostStatsSection = () => {
                 {stat.description}
               </p>
             </div>)}
-        </div>
-
-        <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
-        transitionDelay: "800ms"
-      }}>
-          <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-sans">ENDevo Brings Clarity, Confidence, and Continuity</h3>
-          <p className="text-muted-foreground italic text-base md:text-lg max-w-3xl mx-auto">
-            With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future without the overwhelm.
-          </p>
         </div>
 
         <div className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
