@@ -28,7 +28,7 @@ const NewHeroSection = () => {
         fontFamily: 'serif',
         transitionDelay: isVisible ? '0.15s' : '0s'
       }}>
-          Are you ready for what comes next?
+          A New Standard of Employee Support for Life's What-Ifs
         </h1>
         
         <p className={`text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
