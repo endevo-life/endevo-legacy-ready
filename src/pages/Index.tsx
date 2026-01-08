@@ -3,12 +3,12 @@ import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import HowEndevoHelpsSection from "@/components/HowEndevoHelpsSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
+import VideoSection from "@/components/VideoSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-
 
 import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
@@ -29,6 +29,7 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
+        <VideoSection />
         <HowEndevoHelpsSection />
 
         <ToolsForEmployersSection />
