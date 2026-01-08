@@ -45,6 +45,61 @@ const WWSIndividuals = () => {
       <ResponsiveNavbar />
       <main className="pt-16">
         <IndividualsHeroSection />
+
+        {/* If you don't prepare Section */}
+        <section ref={statsAnimation.elementRef as any} className="py-20">
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="text-center space-y-12">
+              <h2 className={`text-3xl md:text-4xl font-bold text-black transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                If you don't <span className="text-brand-orange">prepare</span>, this is what happens…
+              </h2>
+              
+              {/* Statistics */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '200ms' : '0ms' }}>
+                  <CardContent className="px-3 py-16 text-center space-y-4">
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>67%</p>
+                    <p className="text-lg text-black">67% of adults have no plan in place, leaving families to make painful decisions alone.</p>
+                  </CardContent>
+                </Card>
+
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '400ms' : '0ms' }}>
+                  <CardContent className="px-3 py-16 text-center space-y-4">
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>420+</p>
+                    <p className="text-lg text-black">Families spend 420+ hours sorting affairs when information isn't organized.</p>
+                  </CardContent>
+                </Card>
+
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '600ms' : '0ms' }}>
+                  <CardContent className="px-3 py-16 text-center space-y-4">
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>30%</p>
+                    <p className="text-lg text-black">30% of loved ones never access digital accounts, losing photos, messages, and records forever.</p>
+                  </CardContent>
+                </Card>
+
+                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '800ms' : '0ms' }}>
+                  <CardContent className="px-3 py-16 text-center space-y-4">
+                    <p className="text-8xl font-bold" style={{
+                    fontFamily: 'Times New Roman, serif',
+                    color: '#394161'
+                  }}>$58B</p>
+                    <p className="text-lg text-black">$58B in assets goes unclaimed because families didn't know accounts or policies existed.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Legacy Planning for Individuals Section */}
         <section className="py-20 bg-background">
           <div className="container max-w-7xl mx-auto px-4">
@@ -200,60 +255,6 @@ const WWSIndividuals = () => {
                   alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
                   className="w-full h-auto"
                 />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Your Personal Path Section */}
-        <section ref={statsAnimation.elementRef as any} className="py-20">
-          <div className="container max-w-7xl mx-auto px-4">
-            <div className="text-center space-y-12">
-              <h2 className={`text-3xl md:text-4xl font-bold text-black transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                If you don't <span className="text-brand-orange">prepare</span>, this is what happens…
-              </h2>
-              
-              {/* Statistics */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '200ms' : '0ms' }}>
-                  <CardContent className="px-3 py-16 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{
-                    fontFamily: 'Times New Roman, serif',
-                    color: '#394161'
-                  }}>67%</p>
-                    <p className="text-lg text-black">67% of adults have no plan in place, leaving families to make painful decisions alone.</p>
-                  </CardContent>
-                </Card>
-
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '400ms' : '0ms' }}>
-                  <CardContent className="px-3 py-16 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{
-                    fontFamily: 'Times New Roman, serif',
-                    color: '#394161'
-                  }}>420+</p>
-                    <p className="text-lg text-black">Families spend 420+ hours sorting affairs when information isn’t organized.</p>
-                  </CardContent>
-                </Card>
-
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '600ms' : '0ms' }}>
-                  <CardContent className="px-3 py-16 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{
-                    fontFamily: 'Times New Roman, serif',
-                    color: '#394161'
-                  }}>30%</p>
-                    <p className="text-lg text-black">30% of loved ones never access digital accounts, losing photos, messages, and records forever.</p>
-                  </CardContent>
-                </Card>
-
-                <Card className={`bg-white shadow-lg rounded-xl border-0 transition-all duration-1000 ${statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ transitionDelay: statsAnimation.isVisible ? '800ms' : '0ms' }}>
-                  <CardContent className="px-3 py-16 text-center space-y-4">
-                    <p className="text-8xl font-bold" style={{
-                    fontFamily: 'Times New Roman, serif',
-                    color: '#394161'
-                  }}>$58B</p>
-                    <p className="text-lg text-black">$58B in assets goes unclaimed because families didn’t know accounts or policies existed.</p>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>
