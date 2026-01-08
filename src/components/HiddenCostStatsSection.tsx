@@ -27,9 +27,7 @@ const HiddenCostStatsSection = () => {
         </h2>
         <p className={`text-center text-muted-foreground text-base md:text-lg max-w-3xl mx-auto mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "100ms"
-      }}>
-          Major life events don't pause work. Without preparation, they create stress, disruption, and lost productivity across teams.
-        </p>
+      }}>Major life events don't pause work. Without preparation, they create stress, disruption, and lost productivity across teams. ENDevo helps organizations proactively support employees before life disruptions turn into workplace challenges.</p>
 
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "200ms"
