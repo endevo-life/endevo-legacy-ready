@@ -22,6 +22,7 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import ProcessSection from "@/components/ProcessSection";
 import OrganizationalResilienceSection from "@/components/OrganizationalResilienceSection";
+import VideoSection from "@/components/VideoSection";
 import solutionHeroConsultation from "@/assets/solution-hero-consultation.jpg";
 import wellnessPillars from "@/assets/wellness-pillars.png";
 
@@ -70,6 +71,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* See ENDevo in Action Video Section */}
+      <VideoSection />
 
       {/* Organizational Resilience Section */}
       <OrganizationalResilienceSection />
