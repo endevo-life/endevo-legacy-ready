@@ -32,7 +32,7 @@ const HiddenCostStatsSection = () => {
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "200ms"
       }}>
-          <h3 className="text-xl font-bold text-brand-navy mb-4 font-sans text-center md:text-base">ENDevo helps organizations proactively support employees before life disruptions turn into workplace challenges.</h3>
+          
           
         </div>
 
