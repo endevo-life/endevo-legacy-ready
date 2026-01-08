@@ -4,7 +4,7 @@ import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import HowEndevoHelpsSection from "@/components/HowEndevoHelpsSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -20,6 +20,9 @@ import trustWillLogo from "@/assets/trust-will-logo-new.png";
 import prisidioLogo from "@/assets/prisidio-logo-new.jpg";
 
 const Index = () => {
+  const { elementRef: edgeRef, isVisible: edgeVisible } = useScrollAnimation();
+  const { elementRef: partnersRef, isVisible: partnersVisible } = useScrollAnimation();
+
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
@@ -31,11 +34,11 @@ const Index = () => {
         <ToolsForEmployersSection />
 
         {/* Our Edge: Where AI Meets Empathy Section */}
-        <section id="our-edge" className="py-20 bg-background scroll-mt-20">
+        <section ref={edgeRef as React.RefObject<HTMLElement>} id="our-edge" className="py-20 bg-background scroll-mt-20">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Column - Text */}
-              <div className="space-y-6">
+              <div className={`space-y-6 transition-all duration-1000 ${edgeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <h2 className="text-3xl md:text-4xl text-foreground">
                   Our Edge: Where{" "}
                   <span className="font-bold text-brand-orange">AI Meets Empathy</span>
@@ -46,7 +49,7 @@ const Index = () => {
               </div>
 
               {/* Right Column - Accordion */}
-              <div className="space-y-4">
+              <div className={`space-y-4 transition-all duration-1000 ${edgeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="market-need" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
                     <AccordionTrigger className="text-left hover:no-underline">
@@ -140,12 +143,12 @@ const Index = () => {
         <WhoWeServeSection />
 
         {/* Partners Carousel Section */}
-        <section className="py-4 bg-gradient-to-b from-background to-muted/20">
+        <section ref={partnersRef as React.RefObject<HTMLElement>} className="py-4 bg-gradient-to-b from-background to-muted/20">
           <div className="container max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12 animate-fade-in">
+            <div className={`text-center mb-12 transition-all duration-1000 ${partnersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-brand-orange">Our Partners</h2>
             </div>
-            <div className="overflow-hidden w-full">
+            <div className={`overflow-hidden w-full transition-all duration-1000 ${partnersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
               <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused]">
                 {/* First set of logos */}
                 <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
