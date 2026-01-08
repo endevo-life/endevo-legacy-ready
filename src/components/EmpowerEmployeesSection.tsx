@@ -14,9 +14,9 @@ const EmpowerEmployeesSection = () => {
       <div className="absolute inset-0 bg-black/10" />
       <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
         <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          Empower Your Employees
+          A New Standard of Employee Support
           <br />
-          with Confidence and Clarity
+          for Life's What-Ifs
         </h2>
 
         <p
