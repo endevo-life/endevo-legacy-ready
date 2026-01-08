@@ -6,6 +6,7 @@ import individualsLegacy from "@/assets/wws-individuals-hero.jpg";
 import consultationMeeting from "@/assets/consultation-meeting.jpg";
 import framework from "@/assets/4-domains.png";
 import wellnessPillars from "@/assets/wellness-pillars.png";
+import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -173,6 +174,30 @@ const WWSIndividuals = () => {
                 <img 
                   src={wellnessPillars} 
                   alt="Five Core Pillars of Wellness: Physical Health, Emotional Well-Being, Financial Readiness, Career Growth and Purpose, and Community and Connection" 
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Empowering You to Take Control Section */}
+        <section className="py-20 scroll-mt-20" style={{ backgroundColor: '#f6f7f8' }}>
+          <div className="container max-w-7xl mx-auto px-4">
+            <div className="grid lg:grid-cols-5 gap-12 items-center">
+              {/* Left side - Text (40%) */}
+              <div className="lg:col-span-2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
+                <p className="text-lg text-muted-foreground">
+                  Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
+                </p>
+              </div>
+              
+              {/* Right side - Image (60%) */}
+              <div className="lg:col-span-3 flex justify-center">
+                <img 
+                  src={empoweringControlGraphic} 
+                  alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
                   className="w-full h-auto"
                 />
               </div>
