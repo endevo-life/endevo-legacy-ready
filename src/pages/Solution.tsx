@@ -19,7 +19,7 @@ import framework from "@/assets/4-domains.png";
 import hrEapIcon from "@/assets/hr-eap-programs.png";
 import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
-import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
+
 import ProcessSection from "@/components/ProcessSection";
 import OrganizationalResilienceSection from "@/components/OrganizationalResilienceSection";
 import VideoSection from "@/components/VideoSection";
@@ -176,8 +176,6 @@ const Solution = () => {
       {/* How It Works Section */}
       <ProcessSection />
 
-      {/* Tools for Employers & Teams Section */}
-      <ToolsForEmployersSection />
 
       {/* Our Edge: Where AI Meets Empathy Section */}
       <section id="our-edge" className="py-20 bg-background scroll-mt-20">
