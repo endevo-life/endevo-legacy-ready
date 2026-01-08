@@ -25,17 +25,17 @@ const HiddenCostStatsSection = () => {
         <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-2 text-foreground font-serif transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           When employees are unprepared, businesses <span className="text-brand-orange">feel the impact</span>.
         </h2>
-        <p className={`text-center text-muted-foreground text-base md:text-lg max-w-3xl mx-auto mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: "100ms" }}>
+        <p className={`text-center text-muted-foreground text-base md:text-lg max-w-3xl mx-auto mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
+        transitionDelay: "100ms"
+      }}>
           Major life events don't pause work. Without preparation, they create stress, disruption, and lost productivity across teams.
         </p>
 
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "200ms"
       }}>
-          <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-4 font-sans">ENDevo Brings Clarity, Confidence, and Continuity</h3>
-          <p className="text-muted-foreground italic text-base md:text-lg max-w-3xl mx-auto">
-            With AI-powered tools and compassionate guidance, we help individuals, families, and workplaces safeguard their legacy and prepare for the future without the overwhelm.
-          </p>
+          <h3 className="text-xl font-bold text-brand-navy mb-4 font-sans text-center md:text-base">ENDevo helps organizations proactively support employees before life disruptions turn into workplace challenges.</h3>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
