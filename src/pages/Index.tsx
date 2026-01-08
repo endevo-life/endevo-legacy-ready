@@ -9,6 +9,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 
 import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
@@ -69,6 +70,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Stories From Across Our Community Section */}
+        <FamilyTestimonialsSection />
 
       </main>
       <Footer />
