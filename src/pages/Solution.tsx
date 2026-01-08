@@ -122,29 +122,6 @@ const Solution = () => {
       {/* Organizational Resilience Section */}
       <OrganizationalResilienceSection />
 
-      {/* Empowering You to Take Control Section */}
-      <section id="process" className="py-20 scroll-mt-20" style={{ backgroundColor: '#f6f7f8' }}>
-        <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-5 gap-12 items-center">
-            {/* Left side - Text (40%) */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Empowering You to Take Control</h2>
-              <p className="text-lg text-muted-foreground">
-                Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
-              </p>
-            </div>
-            
-            {/* Right side - Image (60%) */}
-            <div className="lg:col-span-3 flex justify-center">
-              <img 
-                src={empoweringControlGraphic} 
-                alt="Empowering You to Take Control - Educational App, Community Support, Workshops, and Tools & Resources" 
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Our Edge: Where AI Meets Empathy Section */}
       <section ref={edgeRef as React.RefObject<HTMLElement>} id="our-edge" className="py-20 bg-background scroll-mt-20">
