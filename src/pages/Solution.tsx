@@ -69,6 +69,9 @@ const Solution = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <ProcessSection />
+
       {/* Organizational Resilience Section */}
       <OrganizationalResilienceSection />
 
@@ -141,8 +144,6 @@ const Solution = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <ProcessSection />
 
 
       <Footer />
