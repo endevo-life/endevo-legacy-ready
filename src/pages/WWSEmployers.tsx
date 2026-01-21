@@ -36,12 +36,12 @@ const WWSEmployers = () => {
             >
               {/* Main Headline */}
               <h1
-                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-foreground"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6"
                 style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
               >
-                Protect Your Business Continuity
+                <span className="text-foreground">Protect Your Business Continuity</span>
                 <br />
-                by Preparing Your People
+                <span style={{ color: "#D95D26" }}>by Preparing Your People</span>
               </h1>
 
               {/* Subheadline */}
