@@ -350,6 +350,129 @@ const WWSEmployers = () => {
             className="w-full h-auto"
           />
         </section>
+
+        {/* Insights Section - Split Layout */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-6 md:px-12">
+            {/* Section Headline */}
+            <h2
+              className="text-3xl md:text-4xl font-bold text-center mb-12"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                color: "#000",
+              }}
+            >
+              Insights That Shape Our Work
+            </h2>
+
+            {/* Split Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Column - Image with Floating Tags */}
+              <div className="relative flex justify-center">
+                {/* Background Gradient Accent */}
+                <div
+                  className="absolute w-80 h-80 md:w-96 md:h-96 rounded-full blur-3xl opacity-60"
+                  style={{
+                    background: "linear-gradient(135deg, #9b87f5 0%, #D95D26 100%)",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                  }}
+                />
+
+                {/* Portrait Placeholder */}
+                <div className="relative z-10 w-64 h-80 md:w-80 md:h-96 rounded-2xl bg-muted flex items-center justify-center overflow-hidden">
+                  <p className="text-muted-foreground text-center px-4">Portrait Image Placeholder</p>
+                </div>
+
+                {/* Floating Badge 1 - Top Right */}
+                <div
+                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
+                  style={{
+                    backgroundColor: "#0F1738",
+                    top: "5%",
+                    right: "5%",
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                  }}
+                >
+                  Compassionate Leadership
+                </div>
+
+                {/* Floating Badge 2 - Left */}
+                <div
+                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
+                  style={{
+                    backgroundColor: "#0F1738",
+                    top: "40%",
+                    left: "0%",
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                  }}
+                >
+                  Holding Space
+                </div>
+
+                {/* Floating Badge 3 - Bottom Left */}
+                <div
+                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
+                  style={{
+                    backgroundColor: "#D95D26",
+                    bottom: "10%",
+                    left: "5%",
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                  }}
+                >
+                  Empathy in Action
+                </div>
+
+                {/* Floating Badge 4 - Bottom Right */}
+                <div
+                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
+                  style={{
+                    backgroundColor: "#5B8A72",
+                    bottom: "5%",
+                    right: "10%",
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                  }}
+                >
+                  Being Present
+                </div>
+              </div>
+
+              {/* Right Column - Text Content */}
+              <div>
+                {/* Lead Paragraph */}
+                <p
+                  className="text-xl md:text-2xl font-bold mb-6 leading-snug"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  Support employee well-being, reduce absenteeism, and build a more resilient workforce with ENDevo.
+                </p>
+
+                {/* Body Text */}
+                <p
+                  className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  ENDevo reduces workplace absenteeism and stress by supporting employees with clarity and confidence during life's most challenging moments. By integrating legacy readiness into your wellness programs, you strengthen employee engagement, build organizational resilience, and demonstrate genuine care for your team's well-being.
+                </p>
+
+                {/* CTA Button - Ghost/Outline Style */}
+                <Button
+                  variant="outline"
+                  className="px-6 py-1.5 text-base font-semibold rounded-full"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    borderColor: "#0F1738",
+                    color: "#0F1738",
+                    borderWidth: "2px",
+                  }}
+                >
+                  Learn More About Us →
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
