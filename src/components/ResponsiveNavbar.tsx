@@ -98,7 +98,7 @@ const ResponsiveNavbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img alt="ENDevo Logo" className="h-8 w-auto" src="/lovable-uploads/800577cb-fd1f-457a-81f6-05f1daeb6067.png" />
+              <img alt="ENDevo Logo" className="h-9 w-auto" src="/lovable-uploads/800577cb-fd1f-457a-81f6-05f1daeb6067.png" />
             </Link>
           </div>
 
