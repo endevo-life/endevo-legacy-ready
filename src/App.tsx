@@ -19,6 +19,7 @@ import ForInvestors from "./pages/ForInvestors";
 
 import WWSIndividuals from "./pages/WWSIndividuals";
 import WWSServiceProviders from "./pages/WWSServiceProviders";
+import WWSEmployers from "./pages/WWSEmployers";
 
 import Marketplace from "./pages/Marketplace";
 import TrustedExperts from "./pages/TrustedExperts";
@@ -60,6 +61,7 @@ const App = () => (
           
           <Route path="/wws-individuals" element={<WWSIndividuals />} />
           <Route path="/wws-service-providers" element={<WWSServiceProviders />} />
+          <Route path="/wws-employers" element={<WWSEmployers />} />
           
           <Route path="/for-investors" element={<ForInvestors />} />
           <Route path="/employee-wellness" element={<NotFound />} />
