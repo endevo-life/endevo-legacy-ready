@@ -19,16 +19,16 @@ const WWSEmployers = () => {
     <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
-        {/* Hero Section - Split Screen Layout */}
-        <section className="relative min-h-[calc(100vh-4rem)] flex">
-          {/* Left Content Block */}
+        {/* Hero Section - Full Background */}
+        <section
+          className="relative min-h-[calc(100vh-4rem)] flex bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('${employersHeroOffice}')` }}
+        >
+          {/* Content Block */}
           <div
             ref={heroAnimation.elementRef as React.RefObject<HTMLDivElement>}
-            className="relative z-10 w-full lg:w-[45%] flex items-center bg-white"
+            className="relative z-10 w-full lg:w-[45%] flex items-center"
           >
-            {/* White gradient overlay that fades into image */}
-            <div className="hidden lg:block absolute top-0 right-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10" />
-            
             <div
               className={`px-8 md:px-12 lg:px-16 py-16 max-w-xl transition-all duration-1000 ${
                 heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -69,18 +69,6 @@ const WWSEmployers = () => {
               </Button>
             </div>
           </div>
-
-          {/* Right Image Block */}
-          <div
-            className="hidden lg:block absolute top-0 right-0 w-[55%] h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url('${employersHeroOffice}')` }}
-          />
-
-          {/* Mobile Image (shows below content on smaller screens) */}
-          <div
-            className="lg:hidden absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-            style={{ backgroundImage: `url('${employersHeroOffice}')` }}
-          />
         </section>
       </main>
       <Footer />
