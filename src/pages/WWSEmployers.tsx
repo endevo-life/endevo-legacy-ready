@@ -55,7 +55,7 @@ const WWSEmployers = () => {
                 className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed"
                 style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               >
-                Support your team through life's unexpected challenges — reduce absenteeism, maintain focus, and keep your business running smoothly.
+                Support your team through life's unexpected challenges reduce absenteeism, maintain focus, and keep your business running smoothly.
               </p>
 
               {/* CTA Button */}
