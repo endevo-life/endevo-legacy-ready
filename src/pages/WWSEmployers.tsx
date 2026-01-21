@@ -630,6 +630,68 @@ const WWSEmployers = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-20" style={{ backgroundColor: "#F9F9F9" }}>
+          <div className="container mx-auto px-6 md:px-12 text-center">
+            {/* Headline */}
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-4"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                color: "#000",
+              }}
+            >
+              Partner With ENDevo
+            </h2>
+
+            {/* Subheadline */}
+            <p
+              className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                color: "#D95D26",
+              }}
+            >
+              PLAN. PROTECT. PEACE.
+            </p>
+
+            {/* Body Text */}
+            <p
+              className="text-base md:text-lg mx-auto mb-8"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                color: "#000",
+                maxWidth: "600px",
+              }}
+            >
+              Position your company as an employer of choice that supports its people across their entire life journey
+            </p>
+
+            {/* CTA Button */}
+            <Button
+              variant="outline"
+              className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                borderColor: "#D95D26",
+                color: "#D95D26",
+                borderWidth: "2px",
+                backgroundColor: "white",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#D95D26";
+                e.currentTarget.style.color = "white";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "white";
+                e.currentTarget.style.color = "#D95D26";
+              }}
+            >
+              Contact Us
+            </Button>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
