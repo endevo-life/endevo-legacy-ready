@@ -343,14 +343,12 @@ const WWSEmployers = () => {
         </section>
 
         {/* Implementation Roadmap Section */}
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-6 md:px-12">
-            <img
-              src={implementationRoadmap}
-              alt="The ENDevo Implementation Roadmap - A 5-step process from Peace of Mind Assessment to Weekly Office Hours"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
+        <section className="bg-white">
+          <img
+            src={implementationRoadmap}
+            alt="The ENDevo Implementation Roadmap - A 5-step process from Peace of Mind Assessment to Weekly Office Hours"
+            className="w-full h-auto"
+          />
         </section>
       </main>
       <Footer />
