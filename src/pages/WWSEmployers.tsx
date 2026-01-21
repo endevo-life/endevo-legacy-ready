@@ -136,6 +136,107 @@ const WWSEmployers = () => {
             </div>
           </div>
         </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-6 md:px-12">
+            {/* Headline */}
+            <h2
+              className="text-3xl md:text-4xl font-bold text-center mb-4"
+              style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+            >
+              Why Legacy Preparedness is a{" "}
+              <span style={{ color: "#D95D26" }}>Business Priority</span>
+            </h2>
+
+            {/* Subheadline */}
+            <p
+              className="text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+            >
+              Unpreparedness is a hidden operational risk. Data shows that 75% of employees will not complete essential end-of-life planning without a structured framework.
+            </p>
+
+            {/* 2x2 Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* Card 1 - Top Left */}
+              <div
+                className="bg-white rounded-lg p-6 md:p-8"
+                style={{ border: "2px solid #D95D26" }}
+              >
+                <h3
+                  className="text-xl md:text-2xl font-bold mb-3"
+                  style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+                >
+                  5x to 7x ROI:
+                </h3>
+                <p
+                  className="text-base text-muted-foreground"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  Our conservative financial modeling demonstrates significant returns through crisis prevention.
+                </p>
+              </div>
+
+              {/* Card 2 - Top Right */}
+              <div
+                className="bg-white rounded-lg p-6 md:p-8"
+                style={{ border: "2px solid #D95D26" }}
+              >
+                <h3
+                  className="text-xl md:text-2xl font-bold mb-3"
+                  style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+                >
+                  Reduced Absenteeism:
+                </h3>
+                <p
+                  className="text-base text-muted-foreground"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  By providing a pre-managed roadmap, we prevent the unplanned downtime that occurs when a family is in chaos.
+                </p>
+              </div>
+
+              {/* Card 3 - Bottom Left */}
+              <div
+                className="bg-white rounded-lg p-6 md:p-8"
+                style={{ border: "2px solid #D95D26" }}
+              >
+                <h3
+                  className="text-xl md:text-2xl font-bold mb-3"
+                  style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+                >
+                  Activating Dormant Benefits:
+                </h3>
+                <p
+                  className="text-base text-muted-foreground"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  We drive utilization of your existing legal benefits by providing the project-based motivation for employees to finally use them.
+                </p>
+              </div>
+
+              {/* Card 4 - Bottom Right */}
+              <div
+                className="bg-white rounded-lg p-6 md:p-8"
+                style={{ border: "2px solid #D95D26" }}
+              >
+                <h3
+                  className="text-xl md:text-2xl font-bold mb-3"
+                  style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+                >
+                  Competitive Differentiation:
+                </h3>
+                <p
+                  className="text-base text-muted-foreground"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  92% of employees view this program as a competitive advantage that shows you care for them as a whole person.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
