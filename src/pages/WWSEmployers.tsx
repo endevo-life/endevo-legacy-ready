@@ -412,6 +412,116 @@ const WWSEmployers = () => {
             </div>
           </div>
         </section>
+
+        {/* Success Metrics Section */}
+        <section className="py-16 md:py-20 bg-muted/30">
+          <div className="container mx-auto px-6 md:px-12">
+            {/* Headline */}
+            <h2
+              className="text-3xl md:text-4xl font-bold text-center mb-12"
+              style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+            >
+              <span style={{ color: "#D95D26" }}>Proven Results</span>{" "}
+              <span style={{ color: "#000" }}>for Your Workforce</span>
+            </h2>
+
+            {/* 3-column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Card 1 */}
+              <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
+                <p
+                  className="text-5xl md:text-6xl font-bold mb-4"
+                  style={{
+                    fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
+                    color: "#0F1738",
+                  }}
+                >
+                  92%
+                </p>
+                <p
+                  className="text-lg font-bold mb-2"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    color: "#000",
+                  }}
+                >
+                  Planning Clarity
+                </p>
+                <p
+                  className="text-sm md:text-base"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    color: "#555555",
+                  }}
+                >
+                  Moving employees from intending to plan to being fully prepared.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
+                <p
+                  className="text-5xl md:text-6xl font-bold mb-4"
+                  style={{
+                    fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
+                    color: "#0F1738",
+                  }}
+                >
+                  100%
+                </p>
+                <p
+                  className="text-lg font-bold mb-2"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    color: "#000",
+                  }}
+                >
+                  Promoter Score
+                </p>
+                <p
+                  className="text-sm md:text-base"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    color: "#555555",
+                  }}
+                >
+                  Participants report a Net Promoter Score (NPS) of 100, citing massive reductions in stress and increased peace of mind.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
+                <p
+                  className="text-5xl md:text-6xl font-bold mb-4"
+                  style={{
+                    fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
+                    color: "#0F1738",
+                  }}
+                >
+                  2.0→4.0
+                </p>
+                <p
+                  className="text-lg font-bold mb-2"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    color: "#000",
+                  }}
+                >
+                  Data-Driven Improvement
+                </p>
+                <p
+                  className="text-sm md:text-base"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    color: "#555555",
+                  }}
+                >
+                  Employee confidence in document organization and legal requirements jumps from a median of 2.0 to 4.0.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
