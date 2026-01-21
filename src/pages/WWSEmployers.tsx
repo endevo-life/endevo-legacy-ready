@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 import employersHeroOffice from "@/assets/employers-hero-office.jpg";
 import implementationRoadmap from "@/assets/endevo-implementation-roadmap.png";
+import insightsPortrait from "@/assets/insights-portrait.png";
 
 const WWSEmployers = () => {
   const navigate = useNavigate();
@@ -367,75 +368,13 @@ const WWSEmployers = () => {
 
             {/* Split Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left Column - Image with Floating Tags */}
-              <div className="relative flex justify-center">
-                {/* Background Gradient Accent */}
-                <div
-                  className="absolute w-80 h-80 md:w-96 md:h-96 rounded-full blur-3xl opacity-60"
-                  style={{
-                    background: "linear-gradient(135deg, #9b87f5 0%, #D95D26 100%)",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                  }}
+              {/* Left Column - Image */}
+              <div className="flex justify-center">
+                <img
+                  src={insightsPortrait}
+                  alt="Professional woman holding tablet with floating badges for Peace of Mind Assessment, Legacy Map Strategy Session, and 1:1 support"
+                  className="w-full max-w-lg h-auto"
                 />
-
-                {/* Portrait Placeholder */}
-                <div className="relative z-10 w-64 h-80 md:w-80 md:h-96 rounded-2xl bg-muted flex items-center justify-center overflow-hidden">
-                  <p className="text-muted-foreground text-center px-4">Portrait Image Placeholder</p>
-                </div>
-
-                {/* Floating Badge 1 - Top Right */}
-                <div
-                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
-                  style={{
-                    backgroundColor: "#0F1738",
-                    top: "5%",
-                    right: "5%",
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
-                  Compassionate Leadership
-                </div>
-
-                {/* Floating Badge 2 - Left */}
-                <div
-                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
-                  style={{
-                    backgroundColor: "#0F1738",
-                    top: "40%",
-                    left: "0%",
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
-                  Holding Space
-                </div>
-
-                {/* Floating Badge 3 - Bottom Left */}
-                <div
-                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
-                  style={{
-                    backgroundColor: "#D95D26",
-                    bottom: "10%",
-                    left: "5%",
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
-                  Empathy in Action
-                </div>
-
-                {/* Floating Badge 4 - Bottom Right */}
-                <div
-                  className="absolute z-20 px-4 py-2 rounded-full shadow-lg text-sm font-semibold text-white"
-                  style={{
-                    backgroundColor: "#5B8A72",
-                    bottom: "5%",
-                    right: "10%",
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
-                  Being Present
-                </div>
               </div>
 
               {/* Right Column - Text Content */}
