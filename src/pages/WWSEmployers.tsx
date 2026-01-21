@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import employersHeroOffice from "@/assets/employers-hero-office.jpg";
 import implementationRoadmap from "@/assets/endevo-implementation-roadmap.png";
 import insightsPortrait from "@/assets/insights-portrait.png";
+import teamCollaboration from "@/assets/team-collaboration.jpg";
 
 const WWSEmployers = () => {
   const navigate = useNavigate();
@@ -518,6 +519,113 @@ const WWSEmployers = () => {
                 >
                   Employee confidence in document organization and legal requirements jumps from a median of 2.0 to 4.0.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section - How It Works */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-6 md:px-12">
+            {/* Headline */}
+            <h2
+              className="text-3xl md:text-4xl font-bold text-center mb-12"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                color: "#000",
+              }}
+            >
+              Your Path to Organizational Resilience Starts Here
+            </h2>
+
+            {/* Split Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Column - Steps */}
+              <div className="space-y-8">
+                {/* Step 1 */}
+                <div className="flex items-start gap-4">
+                  <div
+                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                    style={{ backgroundColor: "#EF6836" }}
+                  >
+                    1
+                  </div>
+                  <p
+                    className="text-base md:text-lg leading-relaxed"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                      color: "#333",
+                    }}
+                  >
+                    Provide employees with access to our Peace of Mind Assessment to quickly identify their level of preparedness.
+                  </p>
+                </div>
+
+                {/* Step 2 */}
+                <div className="flex items-start gap-4">
+                  <div
+                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                    style={{ backgroundColor: "#EF6836" }}
+                  >
+                    2
+                  </div>
+                  <p
+                    className="text-base md:text-lg leading-relaxed"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                      color: "#333",
+                    }}
+                  >
+                    Guide staff with AI-powered tools that help them organize legal, financial, and digital assets in one secure place.
+                  </p>
+                </div>
+
+                {/* Step 3 */}
+                <div className="flex items-start gap-4">
+                  <div
+                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                    style={{ backgroundColor: "#EF6836" }}
+                  >
+                    3
+                  </div>
+                  <p
+                    className="text-base md:text-lg leading-relaxed"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                      color: "#333",
+                    }}
+                  >
+                    Offer confidence and support that reduces stress, protects well-being, and lowers the risk of extended absences.
+                  </p>
+                </div>
+
+                {/* Step 4 */}
+                <div className="flex items-start gap-4">
+                  <div
+                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                    style={{ backgroundColor: "#EF6836" }}
+                  >
+                    4
+                  </div>
+                  <p
+                    className="text-base md:text-lg leading-relaxed"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                      color: "#333",
+                    }}
+                  >
+                    Strengthen continuity by ensuring employees can focus on their work, even while navigating personal challenges.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column - Image */}
+              <div className="flex justify-center">
+                <img
+                  src={teamCollaboration}
+                  alt="Diverse team of professionals high-fiving in a modern office"
+                  className="w-full h-auto rounded-2xl shadow-lg"
+                />
               </div>
             </div>
           </div>
