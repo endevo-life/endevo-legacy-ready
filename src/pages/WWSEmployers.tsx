@@ -39,7 +39,9 @@ const WWSEmployers = () => {
                 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-foreground"
                 style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
               >
-                Protect Your Business Continuity by Preparing Your People
+                Protect Your Business Continuity
+                <br />
+                by Preparing Your People
               </h1>
 
               {/* Subheadline */}
