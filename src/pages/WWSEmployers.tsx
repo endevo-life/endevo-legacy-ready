@@ -632,7 +632,7 @@ const WWSEmployers = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-20" style={{ backgroundColor: "#F9F9F9" }}>
+        <section className="py-10 md:py-12" style={{ backgroundColor: "#F9F9F9" }}>
           <div className="container mx-auto px-6 md:px-12 text-center">
             {/* Headline */}
             <h2
