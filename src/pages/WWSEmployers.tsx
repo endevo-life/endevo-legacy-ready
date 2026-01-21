@@ -237,6 +237,109 @@ const WWSEmployers = () => {
             </div>
           </div>
         </section>
+
+        {/* Resources/Tools Section */}
+        <section className="py-16 md:py-20" style={{ backgroundColor: "#F5F5F5" }}>
+          <div className="container mx-auto px-6 md:px-12">
+            {/* Headline */}
+            <h2
+              className="text-3xl md:text-4xl font-bold text-center mb-12"
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                color: "#000",
+              }}
+            >
+              Practical Tools for HR Teams
+            </h2>
+
+            {/* 3-column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Card 1 */}
+              <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
+                <h3
+                  className="text-xl font-bold mb-4"
+                  style={{
+                    fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
+                    color: "#0F1738",
+                  }}
+                >
+                  Peace of Mind Assessment
+                </h3>
+                <p
+                  className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  Provide employees with a quick way to identify their current level of preparedness.
+                </p>
+                <Button
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738",
+                  }}
+                >
+                  Take Assessment
+                </Button>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
+                <h3
+                  className="text-xl font-bold mb-4"
+                  style={{
+                    fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
+                    color: "#0F1738",
+                  }}
+                >
+                  Digital Continuity Planning
+                </h3>
+                <p
+                  className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  Support staff with tools to organize legal, financial, and digital assets in one secure place.
+                </p>
+                <Button
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738",
+                  }}
+                >
+                  Explore the Program
+                </Button>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
+                <h3
+                  className="text-xl font-bold mb-4"
+                  style={{
+                    fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
+                    color: "#0F1738",
+                  }}
+                >
+                  Digital Asset Playbook
+                </h3>
+                <p
+                  className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  An app-based guide for navigating transitions with data access planning and clear instructions for designated contacts.
+                </p>
+                <Button
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto"
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738",
+                  }}
+                >
+                  View Playbook
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
