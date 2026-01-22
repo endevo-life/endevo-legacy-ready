@@ -48,7 +48,7 @@ const WWSEmployers = () => {
               {/* Body Text */}
               <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed" style={{
               fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-            }}>Support your team through life's unexpected challenges reduce absenteeism, maintain focus, and keep your business running smoothly.</p>
+            }}>Support your team through life's unexpected challenges, reduce absenteeism, maintain focus, and keep your business running smoothly.</p>
 
               {/* CTA Button */}
               <Button onClick={() => navigate("/contact")} className="text-white px-6 py-1.5 text-base font-semibold rounded-full" style={{
@@ -141,9 +141,7 @@ const WWSEmployers = () => {
             }}>
                 <h3 className="text-xl md:text-2xl font-bold mb-3" style={{
                 fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
-              }}>
-                  5x to 7x ROI:
-                </h3>
+              }}>5-7x ROI:</h3>
                 <p className="text-base text-muted-foreground" style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
               }}>
@@ -178,9 +176,7 @@ const WWSEmployers = () => {
                 </h3>
                 <p className="text-base text-muted-foreground" style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-              }}>
-                  We drive utilization of your existing legal benefits by providing the project-based motivation for employees to finally use them.
-                </p>
+              }}>We drive utilization of your existing benefits by providing the project-based motivation for employees to finally use them.</p>
               </div>
 
               {/* Card 4 - Bottom Right */}
@@ -194,9 +190,7 @@ const WWSEmployers = () => {
                 </h3>
                 <p className="text-base text-muted-foreground" style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-              }}>
-                  92% of employees view this program as a competitive advantage that shows you care for them as a whole person.
-                </p>
+              }}>92% of employees view this program as a competitive advantage that shows you care for employers, demonstrating commitment to whole-person wellness.</p>
               </div>
             </div>
           </div>
@@ -318,9 +312,7 @@ const WWSEmployers = () => {
                 {/* Body Text */}
                 <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed" style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-              }}>
-                  ENDevo reduces workplace absenteeism and stress by supporting employees with clarity and confidence during life's most challenging moments. By integrating legacy readiness into your wellness programs, you strengthen employee engagement, build organizational resilience, and demonstrate genuine care for your team's well-being.
-                </p>
+              }}>ENDevo reduces workplace absenteeism and stress by supporting employees with clarity and confidence during life's most challenging moments. By integrating legacy readiness into your wellness programs, you strengthen employee engagement, build organizational resilience, and demonstrate genuine care for your team's overall well-being, across the whole life-cycle.</p>
 
                 {/* CTA Button - Ghost/Outline Style */}
                 <Button variant="outline" className="px-6 py-1.5 text-base font-semibold rounded-full" style={{
@@ -402,21 +394,15 @@ const WWSEmployers = () => {
                 <p className="text-5xl md:text-6xl font-bold mb-4" style={{
                 fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
                 color: "#0F1738"
-              }}>
-                  2.0→4.0
-                </p>
+              }}>77%</p>
                 <p className="text-lg font-bold mb-2" style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif",
                 color: "#000"
-              }}>
-                  Data-Driven Improvement
-                </p>
+              }}>Statistically-significant outcomes</p>
                 <p className="text-sm md:text-base" style={{
                 fontFamily: "'Open Sans', 'Helvetica', sans-serif",
                 color: "#555555"
-              }}>
-                  Employee confidence in document organization and legal requirements jumps from a median of 2.0 to 4.0.
-                </p>
+              }}>Employee confidence in legacy-readiness more than doubled.</p>
               </div>
             </div>
           </div>
