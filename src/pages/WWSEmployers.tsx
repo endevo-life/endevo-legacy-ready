@@ -5,9 +5,9 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import employersHeroOffice from "@/assets/employers-hero-office.jpg";
-import implementationRoadmap from "@/assets/endevo-implementation-roadmap.png";
 import insightsPortrait from "@/assets/insights-portrait.png";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
+import ImplementationRoadmapSection from "@/components/ImplementationRoadmapSection";
 const WWSEmployers = () => {
   const navigate = useNavigate();
   const heroAnimation = useScrollAnimation();
@@ -278,9 +278,7 @@ const WWSEmployers = () => {
         </section>
 
         {/* Implementation Roadmap Section */}
-        <section className="bg-white">
-          <img src={implementationRoadmap} alt="The ENDevo Implementation Roadmap - A 5-step process from Peace of Mind Assessment to Weekly Office Hours" className="w-full h-auto" />
-        </section>
+        <ImplementationRoadmapSection />
 
         {/* Insights Section - Split Layout */}
         <section className="py-16 md:py-20 bg-white">
