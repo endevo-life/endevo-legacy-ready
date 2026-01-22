@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import employersHeroOffice from "@/assets/employers-hero-office.jpg";
-import implementationRoadmap from "@/assets/endevo-implementation-roadmap.png";
+import implementationRoadmap from "@/assets/endevo-implementation-roadmap-new.png";
 import insightsPortrait from "@/assets/insights-portrait.png";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
 const WWSEmployers = () => {
