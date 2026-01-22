@@ -37,7 +37,7 @@ const Index = () => {
 
         <WhoWeServeSection />
 
-        {/* Partners Carousel Section */}
+        {/* Partners Carousel Section - Hidden for now
         <section ref={partnersRef as React.RefObject<HTMLElement>} className="py-4 bg-gradient-to-b from-background to-muted/20">
           <div className="container max-w-6xl mx-auto px-4">
             <div className={`text-center mb-12 transition-all duration-1000 ${partnersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -45,21 +45,18 @@ const Index = () => {
             </div>
             <div className={`overflow-hidden w-full transition-all duration-1000 ${partnersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
               <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused]">
-                {/* First set of logos */}
                 <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                   <img src={trustWillLogo} alt="Trust & Will" className="max-h-16 w-auto object-contain" />
                 </div>
                 <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                   <img src={prisidioLogo} alt="Prisidio" className="max-h-16 w-auto object-contain" />
                 </div>
-                {/* Duplicate set for seamless loop */}
                 <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                   <img src={trustWillLogo} alt="Trust & Will" className="max-h-16 w-auto object-contain" />
                 </div>
                 <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                   <img src={prisidioLogo} alt="Prisidio" className="max-h-16 w-auto object-contain" />
                 </div>
-                {/* Third set for extra smoothness */}
                 <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                   <img src={trustWillLogo} alt="Trust & Will" className="max-h-16 w-auto object-contain" />
                 </div>
@@ -70,6 +67,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+        */}
 
         {/* Stories From Across Our Community Section */}
         <FamilyTestimonialsSection />
