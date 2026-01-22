@@ -32,7 +32,7 @@ const MeetOurTeamSection = () => {
     {
       name: "Deep Parmar",
       title: "Advisor",
-      organization: "Founders Institute Mentor",
+      organization: "Fractional CFO",
       image: deepPortrait
     }
   ];
