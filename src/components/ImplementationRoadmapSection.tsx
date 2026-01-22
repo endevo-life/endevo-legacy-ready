@@ -1,179 +1,243 @@
-import { ClipboardCheck, BookOpen, Users, UserCheck, CalendarClock } from "lucide-react";
-
 const steps = [
   {
-    number: 1,
+    number: "01",
     title: "Peace of Mind Assessment",
-    description: "Quick baseline survey to identify gaps",
-    icon: ClipboardCheck,
+    description: "A structured audit to identify personal and digital gaps.",
+    color: "#D95D26",
   },
   {
-    number: 2,
-    title: "On-Demand Learning",
-    description: "Self-paced courses on legacy planning",
-    icon: BookOpen,
+    number: "02",
+    title: "On-Demand Self-Guided Learning",
+    description: "Flexible modules designed to fit into a busy professional schedule.",
+    color: "#D95D26",
   },
   {
-    number: 3,
+    number: "03",
     title: "Live Masterclasses",
-    description: "Interactive workshops with experts",
-    icon: Users,
+    description: "Interactive sessions to break down complex planning hurdles.",
+    color: "#D95D26",
   },
   {
-    number: 4,
-    title: "1:1 Legacy Coaching",
-    description: "Personalized guidance sessions",
-    icon: UserCheck,
+    number: "04",
+    title: "1:1 Project Accountability Sessions",
+    description: "Specialized support to ensure all deliverables (legal, financial, physical, and digital) are finalized.",
+    color: "#8B4513",
   },
   {
-    number: 5,
-    title: "Weekly Office Hours",
-    description: "Ongoing support and Q&A",
-    icon: CalendarClock,
+    number: "05",
+    title: "Weekly Office Hours and Progress Reviews",
+    description: "Continuous support to maintain project momentum.",
+    color: "#8B4513",
   },
 ];
 
 const ImplementationRoadmapSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-[#0F1738] via-[#1a2547] to-[#0F1738] relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-64 h-64 bg-[#D95D26] rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#D95D26] rounded-full blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+    <section className="py-16 md:py-24" style={{ backgroundColor: "#E8EEF4" }}>
+      <div className="container mx-auto px-6 md:px-12">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="mb-12">
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-            style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            style={{
+              fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
+              color: "#0F1738",
+            }}
           >
-            The ENDevo{" "}
-            <span style={{ color: "#D95D26" }}>Implementation Roadmap</span>
+            The ENDevo Implementation Roadmap
           </h2>
           <p
-            className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto"
+            className="text-base md:text-lg text-muted-foreground max-w-4xl"
             style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
           >
-            A structured 5-step journey to organizational legacy readiness
+            We treat legacy planning like any other high-stakes corporate project. In this 3-month governed
+            pilot, we move employees from Intention to Action.
           </p>
         </div>
 
-        {/* Desktop: Winding Road Layout */}
-        <div className="hidden lg:block relative">
-          {/* SVG Winding Path */}
-          <svg
-            className="absolute top-1/2 left-0 w-full h-40 -translate-y-1/2 z-0"
-            viewBox="0 0 1200 160"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,80 C150,80 150,30 300,30 C450,30 450,130 600,130 C750,130 750,30 900,30 C1050,30 1050,80 1200,80"
-              stroke="#D95D26"
-              strokeWidth="4"
-              fill="none"
-              strokeDasharray="12,8"
-              className="opacity-60"
-            />
-          </svg>
-
-          {/* Steps Row */}
-          <div className="flex justify-between items-center relative z-10">
-            {steps.map((step, index) => {
-              const Icon = step.icon;
-              const isEven = index % 2 === 0;
-              return (
-                <div
-                  key={step.number}
-                  className={`flex flex-col items-center ${isEven ? "mt-0" : "mt-24"}`}
-                  style={{ width: "18%" }}
-                >
-                  {/* Step Card */}
-                  <div className="bg-white rounded-2xl shadow-xl p-6 text-center transform hover:scale-105 transition-transform duration-300 w-full">
-                    {/* Number Badge */}
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4 shadow-lg"
-                      style={{ backgroundColor: "#D95D26" }}
-                    >
-                      {step.number}
-                    </div>
-
-                    {/* Icon */}
-                    <div className="mb-3">
-                      <Icon className="w-8 h-8 mx-auto" style={{ color: "#0F1738" }} />
-                    </div>
-
-                    {/* Title */}
-                    <h3
-                      className="text-base font-bold mb-2"
-                      style={{
-                        fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
-                        color: "#0F1738",
-                      }}
-                    >
-                      {step.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p
-                      className="text-sm text-muted-foreground"
-                      style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-                    >
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Mobile/Tablet: Vertical Timeline */}
-        <div className="lg:hidden relative">
-          {/* Vertical Line */}
-          <div
-            className="absolute left-6 top-0 bottom-0 w-1 rounded-full"
-            style={{ backgroundColor: "#D95D26" }}
-          />
-
-          <div className="space-y-8">
-            {steps.map((step) => {
-              const Icon = step.icon;
-              return (
-                <div key={step.number} className="flex items-start gap-6 relative">
-                  {/* Number Badge */}
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg flex-shrink-0 z-10"
-                    style={{ backgroundColor: "#D95D26" }}
+        {/* Main Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left Column - Steps List */}
+          <div className="space-y-6">
+            {steps.map((step, index) => (
+              <div key={step.number} className="flex items-start gap-4">
+                {/* Arrow Badge */}
+                <div className="flex-shrink-0 flex items-center">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#D95D26"
+                    className="mr-2"
                   >
-                    {step.number}
-                  </div>
-
-                  {/* Card */}
-                  <div className="bg-white rounded-xl shadow-lg p-6 flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Icon className="w-6 h-6" style={{ color: "#0F1738" }} />
-                      <h3
-                        className="text-lg font-bold"
-                        style={{
-                          fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif",
-                          color: "#0F1738",
-                        }}
-                      >
-                        {step.title}
-                      </h3>
-                    </div>
-                    <p
-                      className="text-sm text-muted-foreground"
-                      style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-                    >
-                      {step.description}
-                    </p>
+                    <polygon points="0,0 24,12 0,24" />
+                  </svg>
+                  <div
+                    className="px-4 py-2 rounded-md text-white text-sm font-semibold text-center min-w-[180px]"
+                    style={{
+                      backgroundColor: step.color,
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    }}
+                  >
+                    {step.title}
                   </div>
                 </div>
-              );
-            })}
+
+                {/* Description */}
+                <p
+                  className="text-sm md:text-base text-muted-foreground pt-2"
+                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                >
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Column - Winding Road Illustration */}
+          <div className="relative h-[400px] md:h-[500px] hidden lg:block">
+            {/* SVG Winding Road */}
+            <svg
+              viewBox="0 0 400 500"
+              className="w-full h-full"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              {/* Road Path */}
+              <path
+                d="M380,80 C380,80 320,80 280,120 C240,160 280,200 240,240 C200,280 140,260 120,300 C100,340 160,380 200,400 C240,420 300,400 340,440"
+                stroke="#0F1738"
+                strokeWidth="50"
+                fill="none"
+                strokeLinecap="round"
+              />
+              {/* Road Center Line */}
+              <path
+                d="M380,80 C380,80 320,80 280,120 C240,160 280,200 240,240 C200,280 140,260 120,300 C100,340 160,380 200,400 C240,420 300,400 340,440"
+                stroke="white"
+                strokeWidth="3"
+                fill="none"
+                strokeDasharray="15,10"
+                strokeLinecap="round"
+              />
+
+              {/* Pin 01 */}
+              <g transform="translate(370, 50)">
+                <ellipse cx="0" cy="35" rx="12" ry="4" fill="rgba(217,93,38,0.3)" />
+                <path d="M0,0 L-15,30 L15,30 Z" fill="#FFD5C2" />
+                <circle cx="0" cy="8" r="18" fill="#FFD5C2" />
+                <text
+                  x="0"
+                  y="13"
+                  textAnchor="middle"
+                  fill="#0F1738"
+                  fontSize="14"
+                  fontWeight="bold"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  01
+                </text>
+              </g>
+
+              {/* Pin 02 */}
+              <g transform="translate(280, 90)">
+                <ellipse cx="0" cy="35" rx="12" ry="4" fill="rgba(217,93,38,0.3)" />
+                <path d="M0,0 L-15,30 L15,30 Z" fill="#D95D26" />
+                <circle cx="0" cy="8" r="18" fill="#D95D26" />
+                <text
+                  x="0"
+                  y="13"
+                  textAnchor="middle"
+                  fill="white"
+                  fontSize="14"
+                  fontWeight="bold"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  02
+                </text>
+              </g>
+
+              {/* Pin 03 */}
+              <g transform="translate(230, 210)">
+                <ellipse cx="0" cy="35" rx="12" ry="4" fill="rgba(217,93,38,0.3)" />
+                <path d="M0,0 L-15,30 L15,30 Z" fill="#D95D26" />
+                <circle cx="0" cy="8" r="18" fill="#D95D26" />
+                <text
+                  x="0"
+                  y="13"
+                  textAnchor="middle"
+                  fill="white"
+                  fontSize="14"
+                  fontWeight="bold"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  03
+                </text>
+              </g>
+
+              {/* Pin 04 */}
+              <g transform="translate(130, 270)">
+                <ellipse cx="0" cy="35" rx="12" ry="4" fill="rgba(139,69,19,0.3)" />
+                <path d="M0,0 L-15,30 L15,30 Z" fill="#8B4513" />
+                <circle cx="0" cy="8" r="18" fill="#8B4513" />
+                <text
+                  x="0"
+                  y="13"
+                  textAnchor="middle"
+                  fill="white"
+                  fontSize="14"
+                  fontWeight="bold"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  04
+                </text>
+              </g>
+
+              {/* Pin 05 */}
+              <g transform="translate(280, 390)">
+                <ellipse cx="0" cy="35" rx="12" ry="4" fill="rgba(217,93,38,0.3)" />
+                <path d="M0,0 L-15,30 L15,30 Z" fill="#D95D26" />
+                <circle cx="0" cy="8" r="18" fill="#D95D26" />
+                <text
+                  x="0"
+                  y="13"
+                  textAnchor="middle"
+                  fill="white"
+                  fontSize="14"
+                  fontWeight="bold"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  05
+                </text>
+              </g>
+            </svg>
+          </div>
+
+          {/* Mobile: Simple numbered list */}
+          <div className="lg:hidden space-y-4">
+            {steps.map((step) => (
+              <div
+                key={step.number}
+                className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm"
+              >
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0"
+                  style={{ backgroundColor: step.color }}
+                >
+                  {step.number}
+                </div>
+                <div>
+                  <h4
+                    className="font-semibold text-sm"
+                    style={{ color: "#0F1738" }}
+                  >
+                    {step.title}
+                  </h4>
+                  <p className="text-xs text-muted-foreground">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
