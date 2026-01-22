@@ -20,7 +20,7 @@ const MeetOurTeamSection = () => {
     {
       name: "Mercedes Sullivan",
       title: "Advisor",
-      organization: "TIAA",
+      organization: "HR Strategist",
       image: mercedesPortrait
     },
     {
