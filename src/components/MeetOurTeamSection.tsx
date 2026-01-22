@@ -25,7 +25,7 @@ const MeetOurTeamSection = () => {
     },
     {
       name: "Ty Hagler",
-      title: "Design Engineer",
+      title: "Advisor",
       organization: "Principal, Trig",
       image: tyPortrait
     },
