@@ -31,7 +31,7 @@ const MeetOurTeamSection = () => {
     },
     {
       name: "Deep Parmar",
-      title: "Fractional CFO",
+      title: "Advisor",
       organization: "Founders Institute Mentor",
       image: deepPortrait
     }
