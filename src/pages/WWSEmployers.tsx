@@ -11,6 +11,14 @@ import ImplementationRoadmapSection from "@/components/ImplementationRoadmapSect
 const WWSEmployers = () => {
   const navigate = useNavigate();
   const heroAnimation = useScrollAnimation();
+  const statsAnimation = useScrollAnimation();
+  const benefitsAnimation = useScrollAnimation();
+  const resourcesAnimation = useScrollAnimation();
+  const insightsAnimation = useScrollAnimation();
+  const metricsAnimation = useScrollAnimation();
+  const processAnimation = useScrollAnimation();
+  const ctaAnimation = useScrollAnimation();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -62,9 +70,9 @@ const WWSEmployers = () => {
         </section>
 
         {/* Stats/Metrics Section */}
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section ref={statsAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 ${statsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {/* Card 1 */}
               <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
                 <p className="text-4xl md:text-5xl font-bold mb-3" style={{
@@ -114,10 +122,10 @@ const WWSEmployers = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 md:py-20 bg-white">
+        <section ref={benefitsAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{
+            <h2 className={`text-3xl md:text-4xl font-bold text-center mb-4 transition-all duration-700 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{
             fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
           }}>
               Why Legacy Preparedness is a{" "}
@@ -127,14 +135,14 @@ const WWSEmployers = () => {
             </h2>
 
             {/* Subheadline */}
-            <p className="text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12" style={{
+            <p className={`text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12 transition-all duration-700 delay-100 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{
             fontFamily: "'Open Sans', 'Helvetica', sans-serif"
           }}>
               Unpreparedness is a hidden operational risk. Data shows that 75% of employees will not complete essential end-of-life planning without a structured framework.
             </p>
 
             {/* 2x2 Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 transition-all duration-700 delay-200 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {/* Card 1 - Top Left */}
               <div className="bg-white rounded-lg p-6 md:p-8" style={{
               border: "2px solid #D95D26"
@@ -197,12 +205,12 @@ const WWSEmployers = () => {
         </section>
 
         {/* Resources/Tools Section */}
-        <section className="py-16 md:py-20" style={{
+        <section ref={resourcesAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20" style={{
         backgroundColor: "#F5F5F5"
       }}>
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{
+            <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${resourcesAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{
             fontFamily: "'Open Sans', 'Helvetica', sans-serif",
             color: "#000"
           }}>
@@ -210,7 +218,7 @@ const WWSEmployers = () => {
             </h2>
 
             {/* 3-column Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 delay-150 ${resourcesAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {/* Card 1 */}
               <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
                 <h3 className="text-xl font-bold mb-4" style={{
@@ -281,10 +289,10 @@ const WWSEmployers = () => {
         <ImplementationRoadmapSection />
 
         {/* Insights Section - Split Layout */}
-        <section className="py-16 md:py-20 bg-white">
+        <section ref={insightsAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-6 md:px-12">
             {/* Section Headline */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{
+            <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${insightsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{
             fontFamily: "'Open Sans', 'Helvetica', sans-serif",
             color: "#000"
           }}>
@@ -292,7 +300,7 @@ const WWSEmployers = () => {
             </h2>
 
             {/* Split Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-700 delay-150 ${insightsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {/* Left Column - Image */}
               <div className="flex justify-center">
                 <img src={insightsPortrait} alt="Professional woman holding tablet with floating badges for Peace of Mind Assessment, Legacy Map Strategy Session, and 1:1 support" className="w-full max-w-lg h-auto" />
@@ -327,10 +335,10 @@ const WWSEmployers = () => {
         </section>
 
         {/* Success Metrics Section */}
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section ref={metricsAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{
+            <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${metricsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{
             fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
           }}>
               <span style={{
@@ -342,7 +350,7 @@ const WWSEmployers = () => {
             </h2>
 
             {/* 3-column Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 delay-150 ${metricsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {/* Card 1 */}
               <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
                 <p className="text-5xl md:text-6xl font-bold mb-4" style={{
@@ -407,10 +415,10 @@ const WWSEmployers = () => {
         </section>
 
         {/* Process Section - How It Works */}
-        <section className="py-16 md:py-20 bg-white">
+        <section ref={processAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{
+            <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${processAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{
             fontFamily: "'Open Sans', 'Helvetica', sans-serif",
             color: "#000"
           }}>
@@ -418,7 +426,7 @@ const WWSEmployers = () => {
             </h2>
 
             {/* Split Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-700 delay-150 ${processAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {/* Left Column - Steps */}
               <div className="space-y-8">
                 {/* Step 1 */}
@@ -491,10 +499,10 @@ const WWSEmployers = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 md:py-12" style={{
+        <section ref={ctaAnimation.elementRef as React.RefObject<HTMLElement>} className="py-10 md:py-12" style={{
         backgroundColor: "#F9F9F9"
       }}>
-          <div className="container mx-auto px-6 md:px-12 text-center">
+          <div className={`container mx-auto px-6 md:px-12 text-center transition-all duration-700 ${ctaAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {/* Headline */}
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{
             fontFamily: "'Open Sans', 'Helvetica', sans-serif",
