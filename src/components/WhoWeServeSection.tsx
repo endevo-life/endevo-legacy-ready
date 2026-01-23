@@ -1,13 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
-import { Handshake, User } from "lucide-react";
+import { Handshake, User, Building2 } from "lucide-react";
 
 const WhoWeServeSection = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
   const navigate = useNavigate();
 
   const audiences = [
+    {
+      icon: Building2,
+      title: "For Employers",
+      description: "Boost workplace resilience with dashboards and tools that cut absenteeism, increase productivity, and support employee well-being.",
+      link: "/wws-employers",
+    },
     {
       icon: Handshake,
       title: "Service Providers",
@@ -36,7 +42,7 @@ const WhoWeServeSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
           {audiences.map((audience, index) => {
             const IconComponent = audience.icon;
             return (
