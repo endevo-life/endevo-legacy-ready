@@ -1,4 +1,5 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import HowEndevoHelpsSection from "@/components/HowEndevoHelpsSection";
@@ -15,6 +16,7 @@ import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { organizationSchema, serviceSchema } from "@/lib/structuredData";
 
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo-new.png";
@@ -25,6 +27,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        canonicalUrl="/"
+        structuredData={[organizationSchema, serviceSchema]}
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         <EmpowerEmployeesSection />
@@ -70,7 +76,9 @@ const Index = () => {
         */}
 
         {/* Stories From Across Our Community Section */}
-        <FamilyTestimonialsSection />
+        <div id="testimonials" className="scroll-mt-20">
+          <FamilyTestimonialsSection />
+        </div>
 
       </main>
       <Footer />

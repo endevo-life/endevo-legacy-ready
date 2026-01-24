@@ -1,4 +1,5 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -23,6 +24,12 @@ const WWSEmployers = () => {
     window.scrollTo(0, 0);
   }, []);
   return <div className="min-h-screen">
+      <SEO 
+        title="For Employers - Employee Wellness & Business Continuity | ENDevo"
+        description="Protect business continuity with ENDevo's legacy readiness employee wellness program. Reduce absenteeism, support your team, and ensure organizational resilience."
+        keywords="employee wellness program, business continuity, organizational resilience, HR solutions, employee benefits, legacy readiness for employers"
+        canonicalUrl="/wws-employers"
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Hero Section - Full Background */}

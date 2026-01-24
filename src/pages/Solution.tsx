@@ -1,4 +1,5 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -31,6 +32,12 @@ const Solution = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Solutions - Legacy Readiness Employee Wellness Program | ENDevo"
+        description="Comprehensive legacy readiness and digital preparedness solutions for organizations. Employee wellness programs, resilience training, and business continuity planning."
+        keywords="employee wellness program, legacy readiness, business continuity, organizational resilience, digital preparedness, HR programs"
+        canonicalUrl="/solution"
+      />
       <ResponsiveNavbar />
       
       {/* Employee Wellness Hero Section */}
@@ -72,10 +79,12 @@ const Solution = () => {
       </section>
 
       {/* How It Works Section */}
-      <ProcessSection />
+      <div id="process">
+        <ProcessSection />
+      </div>
 
       {/* About the Program and Why It Matters Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section id="framework" className="py-20 px-4 bg-muted/30 scroll-mt-20">
         <div className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <div className="grid md:grid-cols-2 gap-8">
             {/* About the Program Card */}
@@ -120,11 +129,13 @@ const Solution = () => {
       </section>
 
       {/* Organizational Resilience Section */}
-      <OrganizationalResilienceSection />
+      <div id="for-employees">
+        <OrganizationalResilienceSection />
+      </div>
 
 
       {/* Our Edge: Where AI Meets Empathy Section */}
-      <section ref={edgeRef as React.RefObject<HTMLElement>} id="our-edge" className="py-20 bg-background scroll-mt-20">
+      <section ref={edgeRef as React.RefObject<HTMLElement>} id="for-companies" className="py-20 bg-background scroll-mt-20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
@@ -139,7 +150,7 @@ const Solution = () => {
             </div>
 
             {/* Right Column - Accordion */}
-            <div className={`space-y-4 transition-all duration-1000 ${edgeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
+            <div id="core-solutions" className={`space-y-4 transition-all duration-1000 ${edgeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="market-need" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
                   <AccordionTrigger className="text-left hover:no-underline">

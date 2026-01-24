@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags (will be overridden by react-helmet-async per page) -->
     <title>ENDevo - Legacy Readiness & Digital Preparedness | Plan. Protect. Peace.</title>
     <meta name="description" content="ENDevo helps you achieve Legacy Readiness & Digital Preparedness. Protect your life story, values, and digital footprint with intention. Enterprise solutions for business continuity." />
     <meta name="author" content="ENDevo" />
+    <meta name="robots" content="index, follow" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://widgets.leadconnectorhq.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Open Graph / Facebook (will be overridden by react-helmet-async per page) -->
     <meta property="og:title" content="ENDevo - Legacy Readiness & Digital Preparedness" />
     <meta property="og:description" content="ENDevo helps you achieve Legacy Readiness & Digital Preparedness. Protect your life story, values, and digital footprint with intention." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/og-image.png" />
 
+    <!-- Twitter (will be overridden by react-helmet-async per page) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="/og-image.png" />
@@ -24,5 +33,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- GoHighLevel Chat Widget -->
+    <script 
+      src="https://widgets.leadconnectorhq.com/loader.js"  
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+      data-widget-id="696728e12fb2fb1f6d6ae215">
+    </script>
   </body>
 </html>

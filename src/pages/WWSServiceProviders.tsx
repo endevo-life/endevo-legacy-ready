@@ -1,4 +1,5 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import ServiceProvidersHeroSection from "@/components/ServiceProvidersHeroSection";
 import serviceProvidersHero from "@/assets/service-providers-hero.jpg";
@@ -38,6 +39,12 @@ const WWSServiceProviders = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return <div className="min-h-screen">
+      <SEO 
+        title="For Service Providers - Partner Network & Client Referrals | ENDevo"
+        description="Connect with pre-qualified clients ready for your expertise. Join ENDevo's trusted network of service providers and streamline client onboarding."
+        keywords="service provider network, client referrals, trusted professionals, financial advisors, estate attorneys, digital legacy experts"
+        canonicalUrl="/wws-service-providers"
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         <ServiceProvidersHeroSection />

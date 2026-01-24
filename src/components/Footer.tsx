@@ -121,11 +121,11 @@ const Footer = () => {
             © 2025 ENDevo Services. All rights reserved.
           </p>
           <div className="flex justify-center gap-4 text-sm">
-            <a href="#" className="hover:text-brand-orange transition-colors">
+            <a href="/privacy-policy" className="hover:text-brand-orange transition-colors">
               Privacy Policy
             </a>
             <span>|</span>
-            <a href="#" className="hover:text-brand-orange transition-colors">
+            <a href="/terms-of-service" className="hover:text-brand-orange transition-colors">
               Terms of Service
             </a>
           </div>
