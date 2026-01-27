@@ -17,19 +17,19 @@ const ResponsiveNavbar = () => {
     name: "Solutions",
     href: "/solution",
     submenu: [{
-      name: "Empowering You To Take Control",
+      name: "Empowering you to take control",
       href: "/solution#process"
     }, {
-      name: "Our Comprehensive Framework",
+      name: "Our comprehensive framework",
       href: "/solution#framework"
     }, {
-      name: "Get Connected With Service Providers",
+      name: "Get connected with service providers",
       href: "/solution#for-employees"
     }, {
-      name: "Core Solutions",
+      name: "Core solutions",
       href: "/solution#core-solutions"
     }, {
-      name: "Our Edge",
+      name: "Our edge",
       href: "/solution#for-companies"
     }]
   }, {
@@ -141,9 +141,9 @@ const ResponsiveNavbar = () => {
           <div className="py-4 space-y-2 max-h-[70vh] overflow-y-auto">
             {menuItems.map(item => {
             const hasSubmenu = item.submenu.length > 0;
+            const isExpandable = hasSubmenu && item.href === "#";
             const isExpanded = expandedMobileMenu === item.name;
-            
-            if (hasSubmenu) {
+            if (isExpandable) {
               return <div key={item.name}>
                     <button onClick={() => toggleMobileSubmenu(item.name)} className="w-full flex items-center justify-between text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-300 font-medium py-3 px-2 rounded-md">
                       {item.name}

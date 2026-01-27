@@ -1,11 +1,11 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
-import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import NikiWeissSection from "@/components/NikiWeissSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
 import MeetOurTeamSection from "@/components/MeetOurTeamSection";
+import ConsultationSection from "@/components/ConsultationSection";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import companyHeroBg from "@/assets/company-hero-bg.jpg";
 import aboutEndevo from "@/assets/about-endevo.jpg";
@@ -43,18 +43,12 @@ const Company = () => {
     isVisible: oldValuesVisible
   } = useScrollAnimation();
   return <div className="min-h-screen bg-background">
-      <SEO 
-        title="About Us - Our Mission & Team | ENDevo"
-        description="Learn about ENDevo's mission to simplify legacy readiness and digital resilience. Meet our team of experts dedicated to empowering people with clarity and peace of mind."
-        keywords="about endevo, mission, team, legacy planning experts, digital thanatologist, niki weiss"
-        canonicalUrl="/company"
-      />
       <ResponsiveNavbar />
       
       {/* New Hero Section */}
-      <section id="about" className="relative py-20 pt-36 overflow-hidden scroll-mt-20">
+      <section className="relative py-20 pt-36 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={companyHeroFamilyNew} alt="Family together planning their legacy and digital preparedness" className="w-full h-full object-cover" />
+          <img src={companyHeroFamilyNew} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -83,28 +77,22 @@ const Company = () => {
 
 
       {/* Niki Weiss Section */}
-      <div id="niki">
-        <NikiWeissSection />
-      </div>
+      <NikiWeissSection />
 
       {/* Our Values Section */}
       
 
       {/* Core Values Section */}
-      <div id="values">
-        <CoreValuesSection />
-      </div>
+      <CoreValuesSection />
 
       {/* Meet Our Team Section */}
-      <div id="team">
-        <MeetOurTeamSection />
-      </div>
+      <MeetOurTeamSection />
 
       {/* Our Partners Section */}
       
 
       {/* Building Resilience Together Section */}
-      <section id="partners" className="py-16 bg-gradient-to-b from-background to-muted/20 scroll-mt-20">
+      <section className="py-16 bg-gradient-to-b from-background to-muted/20">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Our Partners</h2>
@@ -137,6 +125,9 @@ const Company = () => {
           </div>
         </div>
       </section>
+
+      {/* Let's Start Your Legacy Journey Section */}
+      <ConsultationSection />
 
       <Footer />
     </div>;

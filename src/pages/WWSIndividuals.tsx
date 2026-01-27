@@ -1,5 +1,4 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
-import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import IndividualsHeroSection from "@/components/IndividualsHeroSection";
 
@@ -43,12 +42,6 @@ const WWSIndividuals = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return <div className="min-h-screen">
-      <SEO 
-        title="For Individuals - Legacy Planning & Digital Preparedness | ENDevo"
-        description="Simplify your legacy planning journey with AI-powered guidance and compassionate resources. Organize documents, protect your digital footprint, and gain peace of mind."
-        keywords="individual legacy planning, personal estate planning, digital legacy, peace of mind assessment, family preparedness"
-        canonicalUrl="/wws-individuals"
-      />
       <ResponsiveNavbar />
       <main className="pt-16">
         <IndividualsHeroSection />
