@@ -39,59 +39,10 @@ const Header = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link to="/solution">
-                <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300">
+                <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-sm font-medium text-foreground hover:text-brand-orange transition-all duration-300")}>
                   Solutions
-                </NavigationMenuTrigger>
+                </NavigationMenuLink>
               </Link>
-              <NavigationMenuContent>
-                <ul className="grid gap-2 p-4 w-[280px]">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/solution#how-it-works"
-                        className={cn(
-                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        )}
-                      >
-                        <div className="text-sm font-medium leading-none">How It Works</div>
-                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Our step-by-step process
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/solution#about-program"
-                        className={cn(
-                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        )}
-                      >
-                        <div className="text-sm font-medium leading-none">About the Program</div>
-                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Why it matters
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/solution#our-edge"
-                        className={cn(
-                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        )}
-                      >
-                        <div className="text-sm font-medium leading-none">Our Edge</div>
-                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Where AI meets empathy
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
