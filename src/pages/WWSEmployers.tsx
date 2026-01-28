@@ -285,10 +285,14 @@ const WWSEmployers = () => {
               }}>
                   An app-based guide for navigating transitions with data access planning and clear instructions for designated contacts.
                 </p>
-                <Button className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                backgroundColor: "#0F1738"
-              }}>
+                <Button 
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738"
+                  }}
+                  onClick={() => navigate("/resources#mobile-app")}
+                >
                   View Playbook
                 </Button>
               </div>
