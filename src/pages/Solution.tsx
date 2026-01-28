@@ -72,10 +72,12 @@ const Solution = () => {
       </section>
 
       {/* How It Works Section */}
-      <ProcessSection />
+      <section id="how-it-works" className="scroll-mt-20">
+        <ProcessSection />
+      </section>
 
       {/* About the Program and Why It Matters Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section id="about-program" className="py-20 px-4 bg-muted/30 scroll-mt-20">
         <div className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <div className="grid md:grid-cols-2 gap-8">
             {/* About the Program Card */}
