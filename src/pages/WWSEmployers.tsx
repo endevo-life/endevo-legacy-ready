@@ -38,7 +38,7 @@ const WWSEmployers = () => {
             }}>
                 <span className="text-foreground whitespace-nowrap">Protect Your Business Continuity</span>
                 <br />
-                <span style={{
+                <span className="whitespace-nowrap" style={{
                 color: "#D95D26"
               }}>by Preparing Your People</span>
               </h1>
