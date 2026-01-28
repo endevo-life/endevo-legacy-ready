@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -120,6 +121,9 @@ const Solution = () => {
           </div>
         </div>
       </section>
+
+      {/* Connecting You With Trusted Service Providers Section */}
+      <ServiceProvidersSection />
 
       {/* Organizational Resilience Section */}
       <OrganizationalResilienceSection />
