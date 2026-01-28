@@ -336,12 +336,17 @@ const WWSEmployers = () => {
               }}>ENDevo reduces workplace absenteeism and stress by supporting employees with clarity and confidence during life's most challenging moments. By integrating legacy readiness into your wellness programs, you strengthen employee engagement, build organizational resilience, and demonstrate genuine care for your team's overall well-being, across the whole life-cycle.</p>
 
                 {/* CTA Button - Ghost/Outline Style */}
-                <Button variant="outline" className="px-6 py-1.5 text-base font-semibold rounded-full" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                borderColor: "#0F1738",
-                color: "#0F1738",
-                borderWidth: "2px"
-              }}>
+                <Button 
+                  variant="outline" 
+                  className="px-6 py-1.5 text-base font-semibold rounded-full" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    borderColor: "#0F1738",
+                    color: "#0F1738",
+                    borderWidth: "2px"
+                  }}
+                  onClick={() => navigate("/company")}
+                >
                   Learn More About Us →
                 </Button>
               </div>
