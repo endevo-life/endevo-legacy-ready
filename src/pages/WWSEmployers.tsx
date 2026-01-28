@@ -260,10 +260,14 @@ const WWSEmployers = () => {
               }}>
                   Support staff with tools to organize legal, financial, and digital assets in one secure place.
                 </p>
-                <Button className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                backgroundColor: "#0F1738"
-              }}>
+                <Button 
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738"
+                  }}
+                  onClick={() => navigate("/solution#about-program")}
+                >
                   Explore the Program
                 </Button>
               </div>
