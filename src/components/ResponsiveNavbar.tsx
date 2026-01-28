@@ -50,7 +50,7 @@ const ResponsiveNavbar = () => {
       href: "/resources#mobile-app"
     }, {
       name: "Client Testimonials",
-      href: "/#testimonials"
+      href: "/resources#client-stories"
     }]
   },
   // {
