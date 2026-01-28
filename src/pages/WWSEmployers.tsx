@@ -34,11 +34,13 @@ const WWSEmployers = () => {
             <div className={`px-8 md:px-12 lg:px-16 py-16 max-w-xl transition-all duration-1000 ${heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
               {/* Main Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{
-                fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
-              }}>
+              fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
+            }}>
                 <span className="text-foreground">Protect Your Business Continuity</span>
                 <br />
-                <span style={{ color: "#D95D26" }}>by Preparing Your People</span>
+                <span style={{
+                color: "#D95D26"
+              }}>by Preparing Your People</span>
               </h1>
 
               {/* Subheadline */}
@@ -68,48 +70,7 @@ const WWSEmployers = () => {
         </section>
 
         {/* Secondary Hero Section */}
-        <section className="relative min-h-[70vh] flex bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: `url('${employersHeroSecondary}')`
-        }}>
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/40"></div>
-          
-          {/* Content Block */}
-          <div className="relative z-10 w-full lg:w-1/2 flex items-center">
-            <div className="px-8 md:px-12 lg:px-16 py-16 max-w-xl">
-              {/* Headline */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{
-                fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
-              }}>
-                <span className="text-white">Protect Your Business Continuity</span>
-                <br />
-                <span style={{ color: "#D95D26" }}>by Preparing Your People</span>
-              </h2>
-
-              {/* Text */}
-              <p className="text-lg md:text-xl mb-4 text-white" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-              }}>
-                <span className="font-bold" style={{ color: "#D95D26" }}>ENDevo</span>: The Project Management Solution for Legacy & Digital Readiness
-              </p>
-
-              {/* Sub Text */}
-              <p className="text-base md:text-lg text-white/90 mb-8 leading-relaxed" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-              }}>
-                Support your team through life's unexpected challenges, reduce absenteeism, maintain focus, and keep your business running smoothly.
-              </p>
-
-              {/* CTA Button */}
-              <Button onClick={() => navigate("/contact")} className="text-white px-6 py-1.5 text-base font-semibold rounded-full" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                backgroundColor: "#0F1738"
-              }}>
-                Start a Conversation
-              </Button>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Stats/Metrics Section */}
         <section ref={statsAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20 bg-muted/30">
