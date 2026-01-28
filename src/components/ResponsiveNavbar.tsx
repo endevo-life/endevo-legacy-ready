@@ -16,22 +16,7 @@ const ResponsiveNavbar = () => {
   const menuItems = [{
     name: "Solutions",
     href: "/solution",
-    submenu: [{
-      name: "Empowering you to take control",
-      href: "/solution#process"
-    }, {
-      name: "Our comprehensive framework",
-      href: "/solution#framework"
-    }, {
-      name: "Get connected with service providers",
-      href: "/solution#for-employees"
-    }, {
-      name: "Core solutions",
-      href: "/solution#core-solutions"
-    }, {
-      name: "Our edge",
-      href: "/solution#for-companies"
-    }]
+    submenu: []
   }, {
     name: "Who We Serve",
     href: "#",
