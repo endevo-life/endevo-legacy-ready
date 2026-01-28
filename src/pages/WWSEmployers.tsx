@@ -345,7 +345,7 @@ const WWSEmployers = () => {
                     color: "#0F1738",
                     borderWidth: "2px"
                   }}
-                  onClick={() => navigate("/company")}
+                  onClick={() => { navigate("/company"); window.scrollTo(0, 0); }}
                 >
                   Learn More About Us →
                 </Button>
