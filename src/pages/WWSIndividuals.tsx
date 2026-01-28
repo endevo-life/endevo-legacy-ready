@@ -247,7 +247,7 @@ const WWSIndividuals = () => {
                   Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
                 </p>
                 <Button 
-                  onClick={() => navigate('/resources')}
+                  onClick={() => { navigate('/resources'); window.scrollTo(0, 0); }}
                   className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
                   style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 >
