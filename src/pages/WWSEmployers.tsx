@@ -32,7 +32,13 @@ const WWSEmployers = () => {
           <div ref={heroAnimation.elementRef as React.RefObject<HTMLDivElement>} className="relative z-10 w-full lg:w-[45%] flex items-center">
             <div className={`px-8 md:px-12 lg:px-16 py-16 max-w-xl transition-all duration-1000 ${heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
               {/* Main Headline */}
-              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{
+                fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
+              }}>
+                <span className="text-foreground">Protect Your Business Continuity</span>
+                <br />
+                <span style={{ color: "#D95D26" }}>by Preparing Your People</span>
+              </h1>
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl mb-6" style={{
