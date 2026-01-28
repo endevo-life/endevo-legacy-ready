@@ -36,7 +36,8 @@ const WWSEmployers = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6" style={{
               fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
             }}>
-                <span className="text-foreground">Protect Your Business Continuity </span>
+                <span className="text-foreground">Protect Your Business Continuity</span>
+                <br />
                 <span style={{
                 color: "#D95D26"
               }}>by Preparing Your People</span>
