@@ -549,19 +549,26 @@ const WWSEmployers = () => {
             </p>
 
             {/* CTA Button */}
-            <Button variant="outline" className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white" style={{
-            fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-            borderColor: "#D95D26",
-            color: "#D95D26",
-            borderWidth: "2px",
-            backgroundColor: "white"
-          }} onMouseEnter={e => {
-            e.currentTarget.style.backgroundColor = "#D95D26";
-            e.currentTarget.style.color = "white";
-          }} onMouseLeave={e => {
-            e.currentTarget.style.backgroundColor = "white";
-            e.currentTarget.style.color = "#D95D26";
-          }}>
+            <Button 
+              variant="outline" 
+              className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white" 
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                borderColor: "#D95D26",
+                color: "#D95D26",
+                borderWidth: "2px",
+                backgroundColor: "white"
+              }} 
+              onMouseEnter={e => {
+                e.currentTarget.style.backgroundColor = "#D95D26";
+                e.currentTarget.style.color = "white";
+              }} 
+              onMouseLeave={e => {
+                e.currentTarget.style.backgroundColor = "white";
+                e.currentTarget.style.color = "#D95D26";
+              }}
+              onClick={() => { navigate("/contact"); window.scrollTo(0, 0); }}
+            >
               Contact Us
             </Button>
           </div>
