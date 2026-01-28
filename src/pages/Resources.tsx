@@ -115,7 +115,9 @@ const Resources = () => {
           </div>
         </div>
       </section>
-      <TestimonialsSection />
+      <section id="client-stories" className="scroll-mt-20">
+        <TestimonialsSection />
+      </section>
       <Footer />
     </div>;
 };
