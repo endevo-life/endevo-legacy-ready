@@ -83,7 +83,7 @@ const Header = () => {
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Connecting You With Trusted Service Providers</div>
+                        <div className="text-sm font-medium leading-none">Get Connected With Service Providers</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Expert partners for your needs
                         </p>
