@@ -23,6 +23,9 @@ const ResponsiveNavbar = () => {
       name: "About the Program",
       href: "/solution#about-program"
     }, {
+      name: "Connecting You With Trusted Service Providers",
+      href: "/solution#service-providers"
+    }, {
       name: "Our Edge",
       href: "/solution#our-edge"
     }]

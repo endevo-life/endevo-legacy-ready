@@ -123,7 +123,9 @@ const Solution = () => {
       </section>
 
       {/* Connecting You With Trusted Service Providers Section */}
-      <ServiceProvidersSection />
+      <section id="service-providers" className="scroll-mt-20">
+        <ServiceProvidersSection />
+      </section>
 
       {/* Organizational Resilience Section */}
       <OrganizationalResilienceSection />
