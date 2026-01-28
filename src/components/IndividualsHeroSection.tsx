@@ -37,7 +37,7 @@ const IndividualsHeroSection = () => {
           <Button
             className="bg-brand-navy hover:bg-brand-navy/90 text-white px-6 py-1.5 text-base rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-            onClick={() => (window.location.href = "/wws-individuals")}
+            onClick={() => (window.location.href = "/contact")}
           >
             Get Started
           </Button>
