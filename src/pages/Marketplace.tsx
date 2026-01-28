@@ -39,7 +39,7 @@ const Marketplace = () => {
         <TrustedPartnersSection />
 
         {/* Legal Collaboration Opportunities Section */}
-        <section className="bg-muted/30 relative overflow-hidden py-6">
+        <section id="legal-collaboration" className="bg-muted/30 relative overflow-hidden py-6 scroll-mt-20">
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-50"
             style={{ backgroundImage: `url(${legalFrameworkBg})` }}
