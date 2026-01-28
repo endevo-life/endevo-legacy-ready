@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import employersHeroOffice from "@/assets/employers-hero-office.jpg";
 import insightsPortrait from "@/assets/insights-portrait.png";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
+import employersHeroSecondary from "@/assets/employers-hero-secondary.png";
 import ImplementationRoadmapSection from "@/components/ImplementationRoadmapSection";
 const WWSEmployers = () => {
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ const WWSEmployers = () => {
 
         {/* Secondary Hero Section */}
         <section className="relative min-h-[70vh] flex bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: `url('${teamCollaboration}')`
+          backgroundImage: `url('${employersHeroSecondary}')`
         }}>
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
