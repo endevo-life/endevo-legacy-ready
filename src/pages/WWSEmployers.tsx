@@ -235,10 +235,14 @@ const WWSEmployers = () => {
               }}>
                   Provide employees with a quick way to identify their current level of preparedness.
                 </p>
-                <Button className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                backgroundColor: "#0F1738"
-              }}>
+                <Button 
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738"
+                  }}
+                  onClick={() => window.open("https://jbigogmrgex.typeform.com/to/qBsak5CQ", "_blank")}
+                >
                   Take Assessment
                 </Button>
               </div>
