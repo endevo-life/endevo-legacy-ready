@@ -16,7 +16,16 @@ const ResponsiveNavbar = () => {
   const menuItems = [{
     name: "Solutions",
     href: "/solution",
-    submenu: []
+    submenu: [{
+      name: "How It Works",
+      href: "/solution#how-it-works"
+    }, {
+      name: "About the Program",
+      href: "/solution#about-program"
+    }, {
+      name: "Our Edge",
+      href: "/solution#our-edge"
+    }]
   }, {
     name: "Who We Serve",
     href: "#",
