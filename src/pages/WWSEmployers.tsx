@@ -1,5 +1,4 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
-import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -8,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import employersHeroOffice from "@/assets/employers-hero-office.jpg";
 import insightsPortrait from "@/assets/insights-portrait.png";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
+import employersHeroSecondary from "@/assets/employers-hero-secondary.png";
 import ImplementationRoadmapSection from "@/components/ImplementationRoadmapSection";
 const WWSEmployers = () => {
   const navigate = useNavigate();
@@ -19,17 +19,10 @@ const WWSEmployers = () => {
   const metricsAnimation = useScrollAnimation();
   const processAnimation = useScrollAnimation();
   const ctaAnimation = useScrollAnimation();
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return <div className="min-h-screen">
-      <SEO 
-        title="For Employers - Employee Wellness & Business Continuity | ENDevo"
-        description="Protect business continuity with ENDevo's legacy readiness employee wellness program. Reduce absenteeism, support your team, and ensure organizational resilience."
-        keywords="employee wellness program, business continuity, organizational resilience, HR solutions, employee benefits, legacy readiness for employers"
-        canonicalUrl="/wws-employers"
-      />
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Hero Section - Full Background */}
@@ -38,14 +31,14 @@ const WWSEmployers = () => {
       }}>
           {/* Content Block */}
           <div ref={heroAnimation.elementRef as React.RefObject<HTMLDivElement>} className="relative z-10 w-full lg:w-[45%] flex items-center">
-            <div className={`px-8 md:px-12 lg:px-16 py-16 max-w-xl transition-all duration-1000 ${heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <div className={`px-6 md:px-8 lg:px-10 py-10 max-w-xl transition-all duration-1000 ${heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
               {/* Main Headline */}
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6" style={{
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{
               fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif"
             }}>
-                <span className="text-foreground">Protect Your Business Continuity</span>
+                <span className="text-foreground whitespace-nowrap">Protect Your Business Continuity</span>
                 <br />
-                <span style={{
+                <span className="whitespace-nowrap" style={{
                 color: "#D95D26"
               }}>by Preparing Your People</span>
               </h1>
@@ -75,6 +68,9 @@ const WWSEmployers = () => {
             </div>
           </div>
         </section>
+
+        {/* Secondary Hero Section */}
+        
 
         {/* Stats/Metrics Section */}
         <section ref={statsAnimation.elementRef as React.RefObject<HTMLElement>} className="py-16 md:py-20 bg-muted/30">
@@ -239,10 +235,14 @@ const WWSEmployers = () => {
               }}>
                   Provide employees with a quick way to identify their current level of preparedness.
                 </p>
-                <Button className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                backgroundColor: "#0F1738"
-              }}>
+                <Button 
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738"
+                  }}
+                  onClick={() => window.open("https://jbigogmrgex.typeform.com/to/qBsak5CQ", "_blank")}
+                >
                   Take Assessment
                 </Button>
               </div>
@@ -260,10 +260,14 @@ const WWSEmployers = () => {
               }}>
                   Support staff with tools to organize legal, financial, and digital assets in one secure place.
                 </p>
-                <Button className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                backgroundColor: "#0F1738"
-              }}>
+                <Button 
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738"
+                  }}
+                  onClick={() => navigate("/solution#about-program")}
+                >
                   Explore the Program
                 </Button>
               </div>
@@ -281,10 +285,14 @@ const WWSEmployers = () => {
               }}>
                   An app-based guide for navigating transitions with data access planning and clear instructions for designated contacts.
                 </p>
-                <Button className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                backgroundColor: "#0F1738"
-              }}>
+                <Button 
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    backgroundColor: "#0F1738"
+                  }}
+                  onClick={() => navigate("/resources#mobile-app")}
+                >
                   View Playbook
                 </Button>
               </div>
@@ -328,12 +336,17 @@ const WWSEmployers = () => {
               }}>ENDevo reduces workplace absenteeism and stress by supporting employees with clarity and confidence during life's most challenging moments. By integrating legacy readiness into your wellness programs, you strengthen employee engagement, build organizational resilience, and demonstrate genuine care for your team's overall well-being, across the whole life-cycle.</p>
 
                 {/* CTA Button - Ghost/Outline Style */}
-                <Button variant="outline" className="px-6 py-1.5 text-base font-semibold rounded-full" style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                borderColor: "#0F1738",
-                color: "#0F1738",
-                borderWidth: "2px"
-              }}>
+                <Button 
+                  variant="outline" 
+                  className="px-6 py-1.5 text-base font-semibold rounded-full" 
+                  style={{
+                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    borderColor: "#0F1738",
+                    color: "#0F1738",
+                    borderWidth: "2px"
+                  }}
+                  onClick={() => { navigate("/company"); window.scrollTo(0, 0); }}
+                >
                   Learn More About Us →
                 </Button>
               </div>
@@ -536,19 +549,26 @@ const WWSEmployers = () => {
             </p>
 
             {/* CTA Button */}
-            <Button variant="outline" className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white" style={{
-            fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-            borderColor: "#D95D26",
-            color: "#D95D26",
-            borderWidth: "2px",
-            backgroundColor: "white"
-          }} onMouseEnter={e => {
-            e.currentTarget.style.backgroundColor = "#D95D26";
-            e.currentTarget.style.color = "white";
-          }} onMouseLeave={e => {
-            e.currentTarget.style.backgroundColor = "white";
-            e.currentTarget.style.color = "#D95D26";
-          }}>
+            <Button 
+              variant="outline" 
+              className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white" 
+              style={{
+                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                borderColor: "#D95D26",
+                color: "#D95D26",
+                borderWidth: "2px",
+                backgroundColor: "white"
+              }} 
+              onMouseEnter={e => {
+                e.currentTarget.style.backgroundColor = "#D95D26";
+                e.currentTarget.style.color = "white";
+              }} 
+              onMouseLeave={e => {
+                e.currentTarget.style.backgroundColor = "white";
+                e.currentTarget.style.color = "#D95D26";
+              }}
+              onClick={() => { navigate("/contact"); window.scrollTo(0, 0); }}
+            >
               Contact Us
             </Button>
           </div>

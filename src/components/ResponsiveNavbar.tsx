@@ -17,20 +17,17 @@ const ResponsiveNavbar = () => {
     name: "Solutions",
     href: "/solution",
     submenu: [{
-      name: "Empowering You To Take Control",
-      href: "/solution#process"
+      name: "How It Works",
+      href: "/solution#how-it-works"
     }, {
-      name: "Our Comprehensive Framework",
-      href: "/solution#framework"
+      name: "About the Program",
+      href: "/solution#about-program"
     }, {
       name: "Get Connected With Service Providers",
-      href: "/solution#for-employees"
-    }, {
-      name: "Core Solutions",
-      href: "/solution#core-solutions"
+      href: "/solution#service-providers"
     }, {
       name: "Our Edge",
-      href: "/solution#for-companies"
+      href: "/solution#our-edge"
     }]
   }, {
     name: "Who We Serve",
@@ -56,7 +53,7 @@ const ResponsiveNavbar = () => {
       href: "/resources#mobile-app"
     }, {
       name: "Client Testimonials",
-      href: "/#testimonials"
+      href: "/resources#client-stories"
     }]
   },
   // {
@@ -98,7 +95,7 @@ const ResponsiveNavbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img alt="ENDevo Logo" className="h-10 w-auto" src="/lovable-uploads/800577cb-fd1f-457a-81f6-05f1daeb6067.png" />
+              <img alt="ENDevo Logo" className="h-[52px] w-auto" src="/lovable-uploads/800577cb-fd1f-457a-81f6-05f1daeb6067.png" />
             </Link>
           </div>
 
@@ -141,9 +138,9 @@ const ResponsiveNavbar = () => {
           <div className="py-4 space-y-2 max-h-[70vh] overflow-y-auto">
             {menuItems.map(item => {
             const hasSubmenu = item.submenu.length > 0;
+            const isExpandable = hasSubmenu && item.href === "#";
             const isExpanded = expandedMobileMenu === item.name;
-            
-            if (hasSubmenu) {
+            if (isExpandable) {
               return <div key={item.name}>
                     <button onClick={() => toggleMobileSubmenu(item.name)} className="w-full flex items-center justify-between text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-300 font-medium py-3 px-2 rounded-md">
                       {item.name}

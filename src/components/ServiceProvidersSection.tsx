@@ -99,7 +99,10 @@ const ServiceProvidersSection = () => {
         {/* CTA Button */}
         <div className="text-center">
           <Button 
-            onClick={() => navigate('/contact')}
+            onClick={() => {
+              navigate('/marketplace');
+              window.scrollTo(0, 0);
+            }}
             className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full"
           >
             Get Connected Now

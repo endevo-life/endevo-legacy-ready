@@ -1,10 +1,9 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
-import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import ServiceProvidersHeroSection from "@/components/ServiceProvidersHeroSection";
 import serviceProvidersHero from "@/assets/service-providers-hero.jpg";
 import serviceProviderMeeting from "@/assets/service-provider-meeting.jpg";
-import legalFrameworkBg from "@/assets/legal-collaboration-bg.png";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -39,12 +38,6 @@ const WWSServiceProviders = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return <div className="min-h-screen">
-      <SEO 
-        title="For Service Providers - Partner Network & Client Referrals | ENDevo"
-        description="Connect with pre-qualified clients ready for your expertise. Join ENDevo's trusted network of service providers and streamline client onboarding."
-        keywords="service provider network, client referrals, trusted professionals, financial advisors, estate attorneys, digital legacy experts"
-        canonicalUrl="/wws-service-providers"
-      />
       <ResponsiveNavbar />
       <main className="pt-16">
         <ServiceProvidersHeroSection />
@@ -217,43 +210,6 @@ const WWSServiceProviders = () => {
             }}>
                 Partner With ENDevo
               </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Legal Collaboration Opportunities Section */}
-        <section className="bg-muted/30 relative overflow-hidden py-6">
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-50"
-            style={{ backgroundImage: `url(${legalFrameworkBg})` }}
-          />
-          <div className="container max-w-7xl mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-4 text-center relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Legal Collaboration Opportunities
-              </h2>
-              <p className="text-xl text-brand-orange font-semibold mb-8">
-                Join us in creating lasting impact through trusted partnerships
-              </p>
-              <p className="text-lg leading-relaxed">
-                At ENDevo, we believe that meaningful partnerships are built on trust, integrity, and shared responsibility. Our legal framework ensures that every collaboration is grounded in clarity, fairness, and respect.
-              </p>
-              <p className="text-lg leading-relaxed">
-                We uphold the highest ethical standards and comply with all applicable laws and regulations to protect our partners, clients, and community. Every agreement reflects our commitment to transparency, confidentiality, and the responsible use of information and resources.
-              </p>
-              <p className="text-lg leading-relaxed">
-                By partnering with ENDevo, you join a network guided by principles of accountability and mutual respect. We take pride in creating partnerships that last, supported by sound governance and a shared vision for long-term impact.
-              </p>
-              
-              {/* CTA Button */}
-              <div className="pt-8">
-                <Button 
-                  className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full"
-                  onClick={() => navigate('/contact')}
-                >
-                  Become A Legal Partner
-                </Button>
-              </div>
             </div>
           </div>
         </section>

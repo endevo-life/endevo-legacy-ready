@@ -1,5 +1,4 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
-import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import IndividualsHeroSection from "@/components/IndividualsHeroSection";
 
@@ -43,12 +42,6 @@ const WWSIndividuals = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return <div className="min-h-screen">
-      <SEO 
-        title="For Individuals - Legacy Planning & Digital Preparedness | ENDevo"
-        description="Simplify your legacy planning journey with AI-powered guidance and compassionate resources. Organize documents, protect your digital footprint, and gain peace of mind."
-        keywords="individual legacy planning, personal estate planning, digital legacy, peace of mind assessment, family preparedness"
-        canonicalUrl="/wws-individuals"
-      />
       <ResponsiveNavbar />
       <main className="pt-16">
         <IndividualsHeroSection />
@@ -254,7 +247,7 @@ const WWSIndividuals = () => {
                   Endevo empowers organizations to safeguard their people, culture, and future through AI-driven legacy readiness and digital preparedness tools.
                 </p>
                 <Button 
-                  onClick={() => navigate('/resources')}
+                  onClick={() => { navigate('/resources'); window.scrollTo(0, 0); }}
                   className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
                   style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
                 >

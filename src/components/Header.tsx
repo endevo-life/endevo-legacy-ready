@@ -48,14 +48,14 @@ const Header = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <a
-                        href="/solution#empowering"
+                        href="/solution#how-it-works"
                         className={cn(
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Empowering You to Take Control</div>
+                        <div className="text-sm font-medium leading-none">How It Works</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Resources to guide every step
+                          Our step-by-step process
                         </p>
                       </a>
                     </NavigationMenuLink>
@@ -63,14 +63,14 @@ const Header = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <a
-                        href="/solution#framework"
+                        href="/solution#about-program"
                         className={cn(
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Our Comprehensive Framework</div>
+                        <div className="text-sm font-medium leading-none">About the Program</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Four key areas of readiness
+                          Why it matters
                         </p>
                       </a>
                     </NavigationMenuLink>
@@ -83,9 +83,9 @@ const Header = () => {
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Connect with Service Providers</div>
+                        <div className="text-sm font-medium leading-none">Get Connected With Service Providers</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Trusted experts at your fingertips
+                          Expert partners for your needs
                         </p>
                       </a>
                     </NavigationMenuLink>
@@ -93,27 +93,12 @@ const Header = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <a
-                        href="/solution#core-solutions"
+                        href="/solution#our-edge"
                         className={cn(
                           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         )}
                       >
-                        <div className="text-sm font-medium leading-none">Core Solutions</div>
-                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
-                          Key service offerings
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <a
-                        href="/solution#why-endevo"
-                        className={cn(
-                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        )}
-                      >
-                        <div className="text-sm font-medium leading-none">Why ENDevo</div>
+                        <div className="text-sm font-medium leading-none">Our Edge</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Where AI meets empathy
                         </p>
@@ -211,6 +196,21 @@ const Header = () => {
                         <div className="text-sm font-medium leading-none">Mobile App</div>
                         <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
                           Access care anywhere
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <a
+                        href="/resources#client-stories"
+                        className={cn(
+                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        )}
+                      >
+                        <div className="text-sm font-medium leading-none">Client Testimonials</div>
+                        <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
+                          Our clients' stories
                         </p>
                       </a>
                     </NavigationMenuLink>
