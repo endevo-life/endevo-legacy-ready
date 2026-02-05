@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
@@ -120,9 +121,21 @@ const ResponsiveNavbar = () => {
 
           {/* Desktop CTA Button */}
           <div className="hidden xl:block flex-shrink-0">
-            <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-sm whitespace-nowrap">
-              Peace of Mind Assessment
-            </a>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-sm whitespace-nowrap">
+                  Book a Demo
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-3xl h-[80vh] p-0">
+                <iframe
+                  src="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
+                  className="w-full h-full rounded-lg"
+                  style={{ border: 'none' }}
+                  title="Book a Demo"
+                />
+              </DialogContent>
+            </Dialog>
           </div>
 
           {/* Mobile hamburger menu button */}
@@ -168,9 +181,21 @@ const ResponsiveNavbar = () => {
                 </Link>;
           })}
             <div className="pt-4 border-t border-border">
-              <a href="https://jbigogmrgex.typeform.com/to/qBsak5CQ" target="_blank" rel="noopener noreferrer" className="block bg-primary text-primary-foreground px-6 py-3 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-center" onClick={() => setIsMobileMenuOpen(false)}>
-                Peace of Mind Assessment
-              </a>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-center" onClick={() => setIsMobileMenuOpen(false)}>
+                    Book a Demo
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-[95vw] sm:max-w-3xl h-[80vh] p-0">
+                  <iframe
+                    src="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
+                    className="w-full h-full rounded-lg"
+                    style={{ border: 'none' }}
+                    title="Book a Demo"
+                  />
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>

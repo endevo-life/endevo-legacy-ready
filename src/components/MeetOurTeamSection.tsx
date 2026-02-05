@@ -5,6 +5,8 @@ import aaronPortrait from "@/assets/aaron-portrait-2.png";
 import mercedesPortrait from "@/assets/mercedes-portrait-2.png";
 import tyPortrait from "@/assets/ty-portrait-2.png";
 import deepPortrait from "@/assets/deep-portrait-2.png";
+import paulaPortrait from "@/assets/Paula_profile_pic.jpg";
+import brookePortrait from "@/assets/Brook_profile_pic.png";
 
 const MeetOurTeamSection = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -21,19 +23,36 @@ const MeetOurTeamSection = () => {
       name: "Mercedes Sullivan",
       title: "Advisor",
       organization: "HR Strategist",
-      image: mercedesPortrait
+      image: mercedesPortrait,
+      linkedIn: "https://www.linkedin.com/in/mercedessullivan/"
     },
     {
       name: "Ty Hagler",
       title: "Advisor",
       organization: "Strategic Start up Advisor",
-      image: tyPortrait
+      image: tyPortrait,
+      linkedIn: "https://www.linkedin.com/in/tyhagler/"
     },
     {
       name: "Deep Parmar",
       title: "Advisor",
       organization: "Fractional CFO",
-      image: deepPortrait
+      image: deepPortrait,
+      linkedIn: "https://www.linkedin.com/in/deepparmar/"
+    },
+    {
+      name: "Paula Soito",
+      title: "Advisor",
+      organization: "Instructional Design",
+      image: paulaPortrait,
+      linkedIn: "https://www.linkedin.com/in/paulasoito"
+    },
+    {
+      name: "Brooke Clemchak",
+      title: "Advisor",
+      organization: "Product Development",
+      image: brookePortrait,
+      linkedIn: "https://www.linkedin.com/in/brookeclemchak/"
     }
   ];
 
@@ -58,7 +77,7 @@ const MeetOurTeamSection = () => {
               loop: true,
               slidesToScroll: 1,
             }}
-            className="w-full max-w-6xl mx-auto overflow-hidden"
+            className="w-full max-w-6xl mx-auto px-12 md:px-16"
           >
             <CarouselContent className="-ml-4">
               {teamMembers.map((member, index) => {
@@ -102,8 +121,8 @@ const MeetOurTeamSection = () => {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg lg:hidden" />
-            <CarouselNext className="right-0 md:-right-2 bg-brand-orange text-white hover:bg-brand-orange/90 shadow-lg lg:hidden" />
+            <CarouselPrevious className="left-0 md:left-2 bg-white/90 hover:bg-white border-2 border-brand-orange shadow-md text-brand-orange hover:text-brand-orange/80 h-12 w-12" />
+            <CarouselNext className="right-0 md:right-2 bg-white/90 hover:bg-white border-2 border-brand-orange shadow-md text-brand-orange hover:text-brand-orange/80 h-12 w-12" />
           </Carousel>
         </div>
       </div>
