@@ -17,11 +17,11 @@ const EmpowerEmployeesSection = () => {
           for Life's What-Ifs
         </h2>
 
-        <p className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
+        <p className={`mt-6 text-lg md:text-xl text-white/90 md:leading-tight leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "200ms"
-      }}>Legacy planning doesn't have to be overwhelming. We empower families,<br />
-employees, and employers with simple, supportive resources designed to<br />
-guide every step of the way.</p>
+      }}>
+        Legacy planning doesn't have to be overwhelming.<br className="hidden md:block" /> We empower families, employees, and employers with simple,<br className="hidden md:block" /> supportive resources designed to guide every step of the way.
+      </p>
 
         <div className={`mt-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "400ms"
