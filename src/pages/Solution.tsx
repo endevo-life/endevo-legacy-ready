@@ -3,8 +3,12 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import ServiceProvidersSection from "@/components/ServiceProvidersSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import heroBackground from "@/assets/solution-hero-bg.jpg";
@@ -21,7 +25,6 @@ import framework from "@/assets/4-domains.png";
 import hrEapIcon from "@/assets/hr-eap-programs.png";
 import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
-
 import ProcessSection from "@/components/ProcessSection";
 import OrganizationalResilienceSection from "@/components/OrganizationalResilienceSection";
 import solutionHeroConsultation from "@/assets/solution-hero-consultation.jpg";
@@ -33,36 +36,43 @@ const Solution = () => {
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
-      
+
       {/* Employee Wellness Hero Section */}
-      <section 
-        ref={elementRef as any} 
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+      <section
+        ref={elementRef as any}
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('${solutionHeroConsultation}')` }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 container max-w-4xl mx-auto px-4 text-center">
-          <h1 
-            className={`font-bold mb-6 transition-all duration-1000 ease-out text-4xl md:text-5xl lg:text-6xl text-white ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
-            style={{ fontFamily: 'serif', transitionDelay: isVisible ? '0.2s' : '0s' }}
+          <h1
+            className={`font-bold mb-6 transition-all duration-1000 ease-out text-4xl md:text-5xl lg:text-6xl text-white ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            style={{
+              fontFamily: "serif",
+              transitionDelay: isVisible ? "0.2s" : "0s",
+            }}
           >
             A Legacy Readiness Employee Wellness Program
           </h1>
-          
-          <p 
-            className={`text-lg md:text-xl mb-12 leading-relaxed transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
-            style={{ color: '#e5e7eb', transitionDelay: isVisible ? '0.4s' : '0s' }}
+
+          <p
+            className={`text-lg md:text-xl mb-12 leading-relaxed transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            style={{
+              color: "#e5e7eb",
+              transitionDelay: isVisible ? "0.4s" : "0s",
+            }}
           >
-            Empowering employees to thrive through life's transitions without overwhelming HR teams.
+            Empowering employees to thrive through life's transitions without
+            overwhelming HR teams.
           </p>
-          
-          <div 
-            className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
-            style={{ transitionDelay: isVisible ? '0.6s' : '0s' }}
+
+          <div
+            className={`transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            style={{ transitionDelay: isVisible ? "0.6s" : "0s" }}
           >
             <a href="/contact">
-              <button 
-                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300" 
+              <button
+                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300"
                 style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               >
                 Start the Program
@@ -78,42 +88,70 @@ const Solution = () => {
       </section>
 
       {/* About the Program and Why It Matters Section */}
-      <section id="about-program" className="py-20 px-4 bg-muted/30 scroll-mt-20">
-        <div className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}>
+      <section
+        id="about-program"
+        className="py-20 px-4 bg-muted/30 scroll-mt-20"
+      >
+        <div
+          className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
+        >
           <div className="grid md:grid-cols-2 gap-8">
             {/* About the Program Card */}
-            <Card className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
+            <Card
+              className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: "0.1s" }}
+            >
               <CardHeader>
-                <CardTitle className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: 'serif' }}>
+                <CardTitle
+                  className="text-2xl md:text-3xl font-bold text-foreground text-center"
+                  style={{ fontFamily: "serif" }}
+                >
                   About the Program
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                   <p>
-                    The Legacy Readiness Employee Wellness Program is built around one simple truth: you cannot build a lasting legacy without caring for yourself first.
+                    The Legacy Readiness Employee Wellness Program is built
+                    around one simple truth: you cannot build a lasting legacy
+                    without caring for yourself first.
                   </p>
                   <p>
-                    We provide a holistic approach to wellness that supports employees physically, emotionally, and financially. Whether it is improving daily habits, navigating career changes, or preparing for major life events, our goal is to empower you to show up as your best self, today and in the future.
+                    We provide a holistic approach to wellness that supports
+                    employees physically, emotionally, and financially. Whether
+                    it is improving daily habits, navigating career changes, or
+                    preparing for major life events, our goal is to empower you
+                    to show up as your best self, today and in the future.
                   </p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Why It Matters Card */}
-            <Card className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
+            <Card
+              className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: "0.3s" }}
+            >
               <CardHeader>
-                <CardTitle className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: 'serif' }}>
+                <CardTitle
+                  className="text-2xl md:text-3xl font-bold text-foreground text-center"
+                  style={{ fontFamily: "serif" }}
+                >
                   Why It Matters
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                   <p>
-                    When employees are supported as whole individuals, they become more focused, motivated, and inspired. Our program strengthens workplace culture, reduces burnout, and helps teams create meaningful impact in their careers, families, and communities.
+                    When employees are supported as whole individuals, they
+                    become more focused, motivated, and inspired. Our program
+                    strengthens workplace culture, reduces burnout, and helps
+                    teams create meaningful impact in their careers, families,
+                    and communities.
                   </p>
                   <p>
-                    Legacy readiness is more than preparing for what is next; it is about living well right now.
+                    Legacy readiness is more than preparing for what is next; it
+                    is about living well right now.
                   </p>
                 </div>
               </CardContent>
@@ -130,106 +168,165 @@ const Solution = () => {
       {/* Organizational Resilience Section */}
       <OrganizationalResilienceSection />
 
-
       {/* Our Edge: Where AI Meets Empathy Section */}
-      <section ref={edgeRef as React.RefObject<HTMLElement>} id="our-edge" className="py-20 bg-background scroll-mt-20">
+      <section
+        ref={edgeRef as React.RefObject<HTMLElement>}
+        id="our-edge"
+        className="py-20 bg-background scroll-mt-20"
+      >
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
-            <div className={`space-y-6 transition-all duration-1000 ${edgeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div
+              className={`space-y-6 transition-all duration-1000 ${edgeVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
               <h2 className="text-3xl md:text-4xl text-foreground">
                 Our Edge: Where{" "}
-                <span className="font-bold text-brand-orange">AI Meets Empathy</span>
+                <span className="font-bold text-brand-orange">
+                  AI Meets Empathy
+                </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                ENDevo isn't just another platform. It is a new standard for preparedness, where technology meets humanity, blending innovation with empathy to create solutions you can trust. Our edge is what makes us different and what makes planning simpler, smarter, and more human.
+                ENDevo isn't just another platform. It is a new standard for
+                preparedness, where technology meets humanity, blending
+                innovation with empathy to create solutions you can trust. Our
+                edge is what makes us different and what makes planning simpler,
+                smarter, and more human.
               </p>
             </div>
 
             {/* Right Column - Accordion */}
-            <div className={`space-y-4 transition-all duration-1000 ${edgeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
+            <div
+              className={`space-y-4 transition-all duration-1000 ${edgeVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              style={{ transitionDelay: "200ms" }}
+            >
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="market-need" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
+                <AccordionItem
+                  value="market-need"
+                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
+                >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">🌍</span>
-                      <span className="font-semibold text-foreground">$126B Market Need</span>
+                      <span className="font-semibold text-foreground">
+                        $126B Market Need
+                      </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Legacy readiness & digital preparedness are urgent and costly gaps for families and businesses. ENDevo addresses the crisis head-on with scalable, human-centered solutions.
+                    Legacy readiness & digital preparedness are urgent and
+                    costly gaps for families and businesses. ENDevo addresses
+                    the crisis head-on with scalable, human-centered solutions.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="ai-guidance" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
+                <AccordionItem
+                  value="ai-guidance"
+                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
+                >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">🤖</span>
-                      <span className="font-semibold text-foreground">Empathetic AI Guidance</span>
+                      <span className="font-semibold text-foreground">
+                        Empathetic AI Guidance
+                      </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Our AI isn't just about automation. It's supportive, compassionate, and tailored to individuals, families, and employees.
+                    Our AI isn't just about automation. It's supportive,
+                    compassionate, and tailored to individuals, families, and
+                    employees.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="comprehensive" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
+                <AccordionItem
+                  value="comprehensive"
+                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
+                >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">🛠️</span>
-                      <span className="font-semibold text-foreground">Comprehensive Offerings</span>
+                      <span className="font-semibold text-foreground">
+                        Comprehensive Offerings
+                      </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Plan across every domain, beliefs, legal, financial, physical, and digital, all in one unified platform.
+                    Plan across every domain, beliefs, legal, financial,
+                    physical, and digital, all in one unified platform.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="marketplace" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
+                <AccordionItem
+                  value="marketplace"
+                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
+                >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">🛒</span>
-                      <span className="font-semibold text-foreground">Marketplace Integration</span>
+                      <span className="font-semibold text-foreground">
+                        Marketplace Integration
+                      </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Seamless connections to trusted providers like Trust&Will and Presidio for diverse planning needs.
+                    Seamless connections to trusted providers like Trust&Will
+                    and Presidio for diverse planning needs.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="education" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
+                <AccordionItem
+                  value="education"
+                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
+                >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">📚</span>
-                      <span className="font-semibold text-foreground">Human-Centered Education</span>
+                      <span className="font-semibold text-foreground">
+                        Human-Centered Education
+                      </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Workshops and resources blend technology with empathy, making complex planning simple and approachable.
+                    Workshops and resources blend technology with empathy,
+                    making complex planning simple and approachable.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="security" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
+                <AccordionItem
+                  value="security"
+                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
+                >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">🔒</span>
-                      <span className="font-semibold text-foreground">Secure & Reliable</span>
+                      <span className="font-semibold text-foreground">
+                        Secure & Reliable
+                      </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Enterprise-grade safeguards protect sensitive data and digital footprints.
+                    Enterprise-grade safeguards protect sensitive data and
+                    digital footprints.
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="values" className="bg-white rounded-lg shadow-sm px-6 py-2 border-none">
+                <AccordionItem
+                  value="values"
+                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
+                >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">❤️</span>
-                      <span className="font-semibold text-foreground">Built on Values (C.L.A.R.I.T.Y.)</span>
+                      <span className="font-semibold text-foreground">
+                        Built on Values (C.L.A.R.I.T.Y.)
+                      </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Compassion, Clarity, Resilience, and Innovation guide every step of our work.
+                    Compassion, Legacy Readiness, Action & Empowerment,
+                    Resilience (Digital & Human), Innovation with Integrity,
+                    Teamwork & Collaboration, Yesterday-Today-Tomorrow
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
