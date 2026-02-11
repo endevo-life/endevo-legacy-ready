@@ -25,6 +25,7 @@ import companyHeroFamilyNew from "@/assets/company-hero-family-new.jpg";
 // Import partner logos
 import trustWillLogo from "@/assets/trust-will-logo-new.png";
 import prisidioLogo from "@/assets/prisidio-logo-new.jpg";
+import niaEmberlyLogo from "@/assets/Nia-Emberly.png";
 import cignaLogo from "@/assets/cigna-logo.png";
 const Company = () => {
   const { elementRef: newHeroRef, isVisible: newHeroVisible } =
@@ -120,6 +121,13 @@ const Company = () => {
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
+              <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                <img
+                  src={niaEmberlyLogo}
+                  alt="Nia Emberly"
+                  className="max-h-16 w-auto object contain"
+                />
+              </div>
               {/* Duplicate set for seamless loop */}
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
@@ -135,6 +143,13 @@ const Company = () => {
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
+              <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                <img
+                  src={niaEmberlyLogo}
+                  alt="Nia Emberly"
+                  className="max-h-16 w-auto object-contain"
+                />
+              </div>
               {/* Third set for extra smoothness */}
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
@@ -147,6 +162,13 @@ const Company = () => {
                 <img
                   src={prisidioLogo}
                   alt="Prisidio"
+                  className="max-h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
+                <img
+                  src={niaEmberlyLogo}
+                  alt="Nia Emberly"
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
