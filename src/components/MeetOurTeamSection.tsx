@@ -64,7 +64,7 @@ const MeetOurTeamSection = () => {
     },
     {
       name: "Nermeen Nasim",
-      title: "Technical Advisor",
+      title: "Advisor",
       organization: "Software Development",
       image: nermeenPortrait,
       linkedIn: "https://linkedin.com/in/n-nasim",
