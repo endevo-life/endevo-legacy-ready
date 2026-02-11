@@ -11,7 +11,7 @@ import aaronPortrait from "@/assets/aaron-portrait-2.png";
 import mercedesPortrait from "@/assets/mercedes-portrait-2.png";
 import tyPortrait from "@/assets/ty-portrait-2.png";
 import deepPortrait from "@/assets/deep-portrait-2.png";
-import paulaPortrait from "@/assets/Paula_profile_pic.jpg";
+import paulaPortrait from "@/assets/Paula_portrait.png";
 import brookePortrait from "@/assets/Brook_profile_pic.png";
 import nermeenPortrait from "@/assets/nermeen-portrait.png";
 import { Linkedin } from "lucide-react";
@@ -50,7 +50,7 @@ const MeetOurTeamSection = () => {
     },
     {
       name: "Paula Soito",
-      title: "Advisor",
+      title: "Education Product Development",
       organization: "Instructional Design",
       image: paulaPortrait,
       linkedIn: "https://www.linkedin.com/in/paulasoito",
