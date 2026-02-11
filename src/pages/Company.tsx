@@ -42,7 +42,7 @@ const Company = () => {
       <ResponsiveNavbar />
 
       {/* New Hero Section */}
-      <section className="relative py-20 pt-36 overflow-hidden">
+      <section id="about" className="relative py-20 pt-36 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={companyHeroFamilyNew}
@@ -94,7 +94,7 @@ const Company = () => {
       {/* Our Partners Section */}
 
       {/* Building Resilience Together Section */}
-      <section className="py-16 bg-gradient-to-b from-background to-muted/20">
+      <section id="partners" className="py-16 bg-gradient-to-b from-background to-muted/20">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">

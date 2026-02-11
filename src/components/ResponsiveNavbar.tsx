@@ -209,9 +209,10 @@ const ResponsiveNavbar = () => {
           <div className="py-4 space-y-2 max-h-[70vh] overflow-y-auto">
             {menuItems.map((item) => {
               const hasSubmenu = item.submenu.length > 0;
-              const isExpandable = hasSubmenu && item.href === "#";
               const isExpanded = expandedMobileMenu === item.name;
-              if (isExpandable) {
+              
+              // Show submenu if item has submenu items
+              if (hasSubmenu) {
                 return (
                   <div key={item.name}>
                     <button
@@ -246,6 +247,8 @@ const ResponsiveNavbar = () => {
                   </div>
                 );
               }
+              
+              // Show regular link for items without submenu
               return (
                 <Link
                   key={item.name}
