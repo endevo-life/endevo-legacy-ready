@@ -98,12 +98,12 @@ const ResponsiveNavbar = () => {
           href: "/company#niki",
         },
         {
-          name: "Our Core Values",
-          href: "/company#values",
-        },
-        {
           name: "Meet Our Team",
           href: "/company#team",
+        },
+        {
+          name: "Our Core Values",
+          href: "/company#values",
         },
         {
           name: "Our Partners",
