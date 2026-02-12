@@ -5,13 +5,28 @@
     <link rel="icon" href="/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) with Consent Mode v2 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERD7MYD0GX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Set default consent to denied - will be updated based on user choice
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'security_storage': 'granted'
+      });
+      
       gtag('js', new Date());
-      gtag('config', 'G-ERD7MYD0GX');
+      gtag('config', 'G-ERD7MYD0GX', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
     </script>
     
     <title>ENDevo - Legacy Readiness & Digital Preparedness | Plan. Protect. Peace.</title>
