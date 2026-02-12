@@ -42,18 +42,18 @@ const MeetOurTeamSection = () => {
       linkedIn: "https://www.linkedin.com/in/tyhagler/",
     },
     {
-      name: "Deep Parmar",
-      title: "Advisor",
-      organization: "Fractional CFO",
-      image: deepPortrait,
-      linkedIn: "https://www.linkedin.com/in/deepparmar/",
-    },
-    {
       name: "Paula Soito",
       title: "Education Product Development",
       organization: "Instructional Design",
       image: paulaPortrait,
       linkedIn: "https://www.linkedin.com/in/paulasoito",
+    },
+    {
+      name: "Deep Parmar",
+      title: "Advisor",
+      organization: "Fractional CFO",
+      image: deepPortrait,
+      linkedIn: "https://www.linkedin.com/in/deepparmar/",
     },
     {
       name: "Brooke Carroll Lemchak, PhD",
