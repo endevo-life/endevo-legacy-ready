@@ -95,12 +95,20 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8 text-center space-y-2">
           <p className="text-sm">© 2026 ENDevo Services. All rights reserved.</p>
           <div className="flex justify-center gap-4 text-sm">
-            <a href="#" className="hover:text-brand-orange transition-colors">
+            <a href="/legal/privacy-policy" className="hover:text-brand-orange transition-colors">
               Privacy Policy
             </a>
             <span>|</span>
-            <a href="#" className="hover:text-brand-orange transition-colors">
+            <a href="/legal/terms-of-service" className="hover:text-brand-orange transition-colors">
               Terms of Service
+            </a>
+            <span>|</span>
+            <a href="/legal/cookie-policy" className="hover:text-brand-orange transition-colors">
+              Cookie Policy
+            </a>
+            <span>|</span>
+            <a href="/cookie-settings" className="hover:text-brand-orange transition-colors font-semibold">
+              Cookie Settings
             </a>
           </div>
         </div>

@@ -25,10 +25,16 @@ import Marketplace from "./pages/Marketplace";
 import TrustedExperts from "./pages/TrustedExperts";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
+import CookieSettings from "./pages/CookieSettings";
+import CookieBanner from "@/components/CookieBanner";
+import { initializeConsentMode, trackPageView } from "@/lib/analytics";
 
 const queryClient = new QueryClient();
 
-// Smoothly scroll to hash targets on route changes
+// Smoothly scroll to hash targets on route changes and track page views
 const ScrollToHash = () => {
   const location = useLocation();
   useEffect(() => {
@@ -39,7 +45,18 @@ const ScrollToHash = () => {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
+    
+    // Track page view with analytics
+    trackPageView(location.pathname + location.search + location.hash);
   }, [location.pathname, location.hash]);
+  return null;
+};
+
+// Initialize consent mode on app load
+const AppInitializer = () => {
+  useEffect(() => {
+    initializeConsentMode();
+  }, []);
   return null;
 };
 
@@ -49,6 +66,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AppInitializer />
         <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -91,7 +109,13 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/legal/terms-of-service" element={<TermsOfService />} />
+          <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/legal/cookie-settings" element={<CookieSettings />} />
+          <Route path="/cookie-settings" element={<CookieSettings />} />
         </Routes>
+        <CookieBanner />
         <AIChatBot />
       </BrowserRouter>
     </TooltipProvider>
