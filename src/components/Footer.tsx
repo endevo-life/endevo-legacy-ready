@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Youtube, Linkedin, Instagram, Music2, Facebook, Send } from "lucide-react";
+import { FaMedium } from "react-icons/fa";
 import endevoLogo from "@/assets/endevo-logo-footer-new.png";
 import podcastLogo from "@/assets/death-dying-footer.png";
 const Footer = () => {
@@ -24,6 +25,10 @@ const Footer = () => {
     icon: Facebook,
     label: "Facebook",
     href: "https://www.facebook.com/endevo.digitallegacy/"
+  }, {
+    icon: FaMedium,
+    label: "Medium",
+    href: "https://medium.com/@endevo_digitallegacy"
   }];
   const navLinks = [{
     name: "Solutions",
