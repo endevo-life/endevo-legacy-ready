@@ -27,7 +27,7 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
 import ProcessSection from "@/components/ProcessSection";
 import OrganizationalResilienceSection from "@/components/OrganizationalResilienceSection";
-import solutionHeroConsultation from "@/assets/solution-hero-consultation.jpg";
+const solutionHeroConsultation = "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975848df9bdf1a7110b864.jpeg";
 
 const Solution = () => {
   const { elementRef, isVisible } = useScrollAnimation();
