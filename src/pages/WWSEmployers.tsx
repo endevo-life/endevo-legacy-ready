@@ -4,9 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import employersHeroOffice from "@/assets/employers-hero-office.jpg";
-import insightsPortrait from "@/assets/insights-portrait.png";
-import teamCollaboration from "@/assets/team-collaboration.jpg";
 import employersHeroSecondary from "@/assets/employers-hero-secondary.png";
 import ImplementationRoadmapSection from "@/components/ImplementationRoadmapSection";
 const WWSEmployers = () => {
@@ -27,7 +24,7 @@ const WWSEmployers = () => {
       <main className="pt-16">
         {/* Hero Section - Full Background */}
         <section className="relative min-h-[calc(100vh-4rem)] flex bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url('${employersHeroOffice}')`
+        backgroundImage: `url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699758143873af2e849cb9b1.png')`
       }}>
           {/* Content Block */}
           <div ref={heroAnimation.elementRef as React.RefObject<HTMLDivElement>} className="relative z-10 w-full lg:w-[45%] flex items-center">
@@ -318,7 +315,7 @@ const WWSEmployers = () => {
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-700 delay-150 ${insightsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {/* Left Column - Image */}
               <div className="flex justify-center">
-                <img src={insightsPortrait} alt="Professional woman holding tablet with floating badges for Peace of Mind Assessment, Legacy Map Strategy Session, and 1:1 support" className="w-full max-w-lg h-auto" />
+                <img src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699758148523c58649ce446b.png" alt="Professional woman holding tablet with floating badges for Peace of Mind Assessment, Legacy Map Strategy Session, and 1:1 support" className="w-full max-w-lg h-auto" />
               </div>
 
               {/* Right Column - Text Content */}
@@ -512,7 +509,7 @@ const WWSEmployers = () => {
 
               {/* Right Column - Image */}
               <div className="flex justify-center">
-                <img src={teamCollaboration} alt="Diverse team of professionals high-fiving in a modern office" className="w-full h-auto rounded-2xl shadow-lg" />
+                <img src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997581420c03553920ba7c9.jpg" alt="Diverse team of professionals high-fiving in a modern office" className="w-full h-auto rounded-2xl shadow-lg" />
               </div>
             </div>
           </div>
