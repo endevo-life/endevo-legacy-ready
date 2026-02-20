@@ -1,4 +1,3 @@
-import employerMeeting from "@/assets/employer-meeting.jpg";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useNavigate } from "react-router-dom";
@@ -24,7 +23,7 @@ const ToolsForEmployersSection = () => {
             }`}
           >
             <img
-              src={employerMeeting}
+              src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997585b8523c598ecce5807.jpg"
               alt="Business professionals collaborating"
               className="w-full h-auto rounded-2xl shadow-lg"
             />
