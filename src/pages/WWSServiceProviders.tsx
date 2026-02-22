@@ -1,8 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import ServiceProvidersHeroSection from "@/components/ServiceProvidersHeroSection";
-import serviceProvidersHero from "@/assets/service-providers-hero.jpg";
-import serviceProviderMeeting from "@/assets/service-provider-meeting.jpg";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -47,7 +45,7 @@ const WWSServiceProviders = () => {
             <div ref={individualsAnimation.elementRef as any} id="service-providers" className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20">
               {/* Left - Image */}
               <div className={`relative transition-all duration-1000 ${individualsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <img src={serviceProvidersHero} alt="Business professionals collaborating" className="w-full h-auto rounded-2xl shadow-lg" />
+                <img src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757fe4c2502efdc96be1b.jpg" alt="Business professionals collaborating" className="w-full h-auto rounded-2xl shadow-lg" />
               </div>
 
               {/* Right - Content */}
@@ -196,7 +194,7 @@ const WWSServiceProviders = () => {
                 <div className={`relative transition-all duration-1000 ${pathAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{
                 transitionDelay: pathAnimation.isVisible ? '400ms' : '0ms'
               }}>
-                  <img src={serviceProviderMeeting} alt="Investment meeting collaboration" className="w-full h-auto rounded-2xl shadow-lg" />
+                  <img src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757fedf9bdf4f2b10a62f.jpg" alt="Investment meeting collaboration" className="w-full h-auto rounded-2xl shadow-lg" />
                 </div>
               </div>
             </div>

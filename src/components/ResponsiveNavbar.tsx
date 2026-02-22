@@ -127,7 +127,7 @@ const ResponsiveNavbar = () => {
               <img
                 alt="ENDevo Logo"
                 className="h-[52px] w-auto"
-                src="/lovable-uploads/800577cb-fd1f-457a-81f6-05f1daeb6067.png"
+                src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757441817153b30a451cf.png"
               />
             </Link>
           </div>
@@ -210,7 +210,7 @@ const ResponsiveNavbar = () => {
             {menuItems.map((item) => {
               const hasSubmenu = item.submenu.length > 0;
               const isExpanded = expandedMobileMenu === item.name;
-              
+
               // Show submenu if item has submenu items
               if (hasSubmenu) {
                 return (
@@ -247,7 +247,7 @@ const ResponsiveNavbar = () => {
                   </div>
                 );
               }
-              
+
               // Show regular link for items without submenu
               return (
                 <Link
