@@ -6,14 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import nikiPortrait from "@/assets/niki-portrait-2.png";
-import aaronPortrait from "@/assets/aaron-portrait-2.png";
-import mercedesPortrait from "@/assets/mercedes-portrait-2.png";
-import tyPortrait from "@/assets/ty-portrait-2.png";
-import deepPortrait from "@/assets/deep-portrait-2.png";
-import paulaPortrait from "@/assets/Paula_portrait.png";
-import brookePortrait from "@/assets/Brook_profile_pic.png";
-import nermeenPortrait from "@/assets/nermeen-portrait.png";
 import { Linkedin } from "lucide-react";
 
 const MeetOurTeamSection = () => {
@@ -24,49 +16,56 @@ const MeetOurTeamSection = () => {
       name: "Niki Weiss, PMP, PMI-RMP",
       title: "Digital Thanatologist",
       organization: "Founder / CEO",
-      image: nikiPortrait,
+      image:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757793873af535b9c9463.png",
       linkedIn: "https://www.linkedin.com/in/nikiweiss/",
     },
     {
       name: "Mercedes Sullivan",
       title: "Advisor",
       organization: "HR Strategist",
-      image: mercedesPortrait,
+      image:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757798523c5db07ce1cdf.png",
       linkedIn: "https://www.linkedin.com/in/mercedessullivan/",
     },
     {
       name: "Ty Hagler",
       title: "Advisor",
       organization: "Strategic Start up Advisor",
-      image: tyPortrait,
+      image:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975779f83453c1ed32a727.png",
       linkedIn: "https://www.linkedin.com/in/tyhagler/",
     },
     {
       name: "Paula Soito",
       title: "Education Product Development",
       organization: "Instructional Design",
-      image: paulaPortrait,
+      image:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975779181715ca2ca45e1b.png",
       linkedIn: "https://www.linkedin.com/in/paulasoito",
     },
     {
       name: "Deep Parmar",
       title: "Advisor",
       organization: "Fractional CFO",
-      image: deepPortrait,
+      image:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975779f8345325a932a726.png",
       linkedIn: "https://www.linkedin.com/in/deepparmar/",
     },
     {
       name: "Brooke Carroll Lemchak, PhD",
       title: "Advisor",
       organization: "Product Development",
-      image: brookePortrait,
+      image:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757793ff516908a51c80a.png",
       linkedIn: "https://www.linkedin.com/in/brookeclemchak/",
     },
     {
       name: "Nermeen Nasim",
       title: "Advisor",
       organization: "Software Development",
-      image: nermeenPortrait,
+      image:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757798523c530d9ce1cdd.png",
       linkedIn: "https://linkedin.com/in/n-nasim",
     },
   ];
