@@ -9,29 +9,35 @@ const IndividualsHeroSection = () => {
     <section
       ref={elementRef}
       className="py-24 md:py-32 relative bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${individualsBg})` }}
+      style={{
+        backgroundImage: `url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757e88d5b5a22ba811cf6.png')`,
+      }}
     >
       <div className="absolute inset-0 bg-black/10" />
       <div className="container px-4 md:px-8 lg:px-16 text-left relative z-10">
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <h2
+          className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
           Are you ready for what comes
           <br />
           next?
         </h2>
 
         <p
-          className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`mt-6 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ transitionDelay: "200ms" }}
         >
-          ENDevo educates, project manages and empowers people so their life story,
+          ENDevo educates, project manages and empowers people so their life
+          story,
           <br />
-          values, and digital footprint are protected, preserved, and passed on with
+          values, and digital footprint are protected, preserved, and passed on
+          with
           <br />
           intention.
         </p>
 
         <div
-          className={`mt-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`mt-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ transitionDelay: "400ms" }}
         >
           <Button
