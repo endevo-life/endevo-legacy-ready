@@ -56,7 +56,13 @@ const Company = () => {
               ref={newHeroRef as any}
               className={`space-y-6 transition-all duration-1000 ${newHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h1
+                className="text-4xl lg:text-5xl font-bold text-foreground leading-tight"
+                style={{
+                  fontFamily:
+                    "'Playfair Display', 'Merriweather', Georgia, serif",
+                }}
+              >
                 Simplifying Legacy Readiness & Digital Resilience
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -94,7 +100,10 @@ const Company = () => {
       {/* Our Partners Section */}
 
       {/* Building Resilience Together Section */}
-      <section id="partners" className="py-16 bg-gradient-to-b from-background to-muted/20">
+      <section
+        id="partners"
+        className="py-16 bg-gradient-to-b from-background to-muted/20"
+      >
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
