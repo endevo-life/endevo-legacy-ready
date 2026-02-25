@@ -109,7 +109,7 @@ const AIChatBot = () => {
               <img src={jesseAvatar} alt="Jesse" className="w-8 h-8 rounded-full object-cover" />
               <span className="font-semibold">Jesse</span>
             </div>
-            <button onClick={() => setIsOpen(false)} className="hover:opacity-80">
+            <button onClick={() => setIsOpen(false)} className="hover:opacity-80" aria-label="Close chat">
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -132,7 +132,7 @@ const AIChatBot = () => {
           <div className="p-4 border-t border-border">
             <div className="flex gap-2">
               <Input value={inputValue} onChange={e => setInputValue(e.target.value)} onKeyPress={e => e.key === "Enter" && handleSend()} placeholder="Type your message..." className="flex-1 focus-visible:ring-0 focus-visible:ring-offset-0" />
-              <Button onClick={handleSend} size="icon">
+              <Button onClick={handleSend} size="icon" aria-label="Send message">
                 <Send className="w-4 h-4" />
               </Button>
             </div>

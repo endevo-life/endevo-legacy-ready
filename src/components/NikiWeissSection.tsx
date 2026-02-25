@@ -12,6 +12,7 @@ const NikiWeissSection = () => {
               src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757798523c5427fce1cde.jpg"
               alt="Niki Weiss"
               className="max-w-md w-full h-auto rounded-lg"
+              loading="lazy"
             />
           </div>
           <div className={`${nikiVisible ? "animate-fade-in" : "opacity-0"}`}>

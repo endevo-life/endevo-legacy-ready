@@ -26,7 +26,9 @@ const VideoSection = () => {
           className="w-full h-full object-cover"
           onPause={handlePause}
           onEnded={handlePause}
+          aria-label="ENDevo product overview video"
         >
+          <track kind="captions" srcLang="en" label="English captions" default />
           Your browser does not support the video tag.
         </video>
         

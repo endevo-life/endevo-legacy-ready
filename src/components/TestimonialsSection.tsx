@@ -25,7 +25,8 @@ const TestimonialsSection = () => {
           animationDelay: `${0.3 + index * 0.1}s`
         }}>
               <div className="mb-4 shadow-lg rounded-lg">
-                {video.isDirectVideo ? <video src={video.videoUrl} poster={video.thumbnail} controls className="w-full h-auto rounded-lg">
+                {video.isDirectVideo ? <video src={video.videoUrl} poster={video.thumbnail} controls className="w-full h-auto rounded-lg" aria-label={`${video.title} testimonial video`}>
+                    <track kind="captions" srcLang="en" label="English captions" default />
                     Your browser does not support the video tag.
                   </video> : <iframe src={video.videoUrl} title={video.title} className="w-full h-full rounded-lg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />}
               </div>

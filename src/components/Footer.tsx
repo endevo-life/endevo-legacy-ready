@@ -8,7 +8,7 @@ import {
   Facebook,
   Send,
 } from "lucide-react";
-import { FaMedium } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa6";
 const Footer = () => {
   const socialLinks = [
     {
@@ -75,6 +75,7 @@ const Footer = () => {
                 src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6998ba2620c0357c04657c0d.png"
                 alt="ENDevo - Plan. Protect. Peace."
                 className="h-12 w-auto"
+                loading="lazy"
               />
             </a>
             <div className="flex gap-4">
@@ -122,6 +123,7 @@ const Footer = () => {
               src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757444c25023cb696936b.png"
               alt="Death & Dying Podcast"
               className="h-20 w-auto"
+              loading="lazy"
             />
             <p className="text-sm text-white/90">
               Life's Final Chapter, Planned for Today's Digital Age.

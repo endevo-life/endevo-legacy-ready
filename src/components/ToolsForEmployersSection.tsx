@@ -26,6 +26,7 @@ const ToolsForEmployersSection = () => {
               src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997585b8523c598ecce5807.jpg"
               alt="Business professionals collaborating"
               className="w-full h-auto rounded-2xl shadow-lg"
+              loading="lazy"
             />
           </div>
 
