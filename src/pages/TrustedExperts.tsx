@@ -14,52 +14,59 @@ import {
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
-import prisidioLogo from "@/assets/prisidio-logo.jpg";
-const experts = [{
-  name: "Prisidio",
-  logo: prisidioLogo,
-  tagline: "Your Digital Vault. For Life.®",
-  description: "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
-  buttonText: "Sign Up",
-  url: "https://www.prisidio.com/endevo",
-  category: "Digital"
-}];
+const experts = [
+  {
+    name: "Prisidio",
+    logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg",
+    tagline: "Your Digital Vault. For Life.®",
+    description:
+      "Sign up for this special ENDevo offer today and ensure your most important information is secure, accessible, and never lost with Prisidio. Your digital vault. For Life.™",
+    buttonText: "Sign Up",
+    url: "https://www.prisidio.com/endevo",
+    category: "Digital",
+  },
+];
 const TrustedExperts = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  
+
   // All 5 categories
   const categories = ["Beliefs", "Financial", "Digital", "Legal", "Physical"];
-  
+
   const toggleCategory = (category: string) => {
-    setSelectedCategories(prev => 
-      prev.includes(category) 
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category],
     );
   };
-  
-  const filteredExperts = experts.filter(expert => {
-    const matchesSearch = 
+
+  const filteredExperts = experts.filter((expert) => {
+    const matchesSearch =
       expert.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       expert.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       expert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       expert.category.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesCategory = selectedCategories.length === 0 || 
+
+    const matchesCategory =
+      selectedCategories.length === 0 ||
       selectedCategories.includes(expert.category);
-    
+
     return matchesSearch && matchesCategory;
   });
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-brand-navy/10 to-background">
           <div className="container max-w-7xl mx-auto px-4 pt-8">
             {/* Go Back Link - Top */}
-            <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors mb-6 group">
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors mb-6 group"
+            >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="text-sm font-medium">Go Back</span>
             </button>
@@ -86,12 +93,18 @@ const TrustedExperts = () => {
                       <SlidersHorizontal className="h-5 w-5" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-56 bg-background z-50">
+                  <DropdownMenuContent
+                    align="end"
+                    className="w-56 bg-background z-50"
+                  >
                     <DropdownMenuLabel>Filter by Category</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <div className="px-2 py-2 space-y-2">
                       {categories.map((category) => (
-                        <div key={category} className="flex items-center space-x-2">
+                        <div
+                          key={category}
+                          className="flex items-center space-x-2"
+                        >
                           <Checkbox
                             id={category}
                             checked={selectedCategories.includes(category)}
@@ -134,18 +147,30 @@ const TrustedExperts = () => {
             <div className="space-y-8">
               {filteredExperts.length === 0 ? (
                 <div className="text-center py-12">
-                  <p className="text-muted-foreground text-lg">No trusted experts found matching your search.</p>
+                  <p className="text-muted-foreground text-lg">
+                    No trusted experts found matching your search.
+                  </p>
                 </div>
               ) : (
                 filteredExperts.map((expert, index) => (
-                  <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <Card
+                    key={index}
+                    className="overflow-hidden hover:shadow-lg transition-shadow"
+                  >
                     <CardContent className="p-6 md:p-8">
                       <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                         {/* Logo */}
-                        <div className="flex-shrink-0 cursor-pointer" onClick={() => window.open(expert.url, '_blank')}>
-                          <img src={expert.logo} alt={`${expert.name} logo`} className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]" />
+                        <div
+                          className="flex-shrink-0 cursor-pointer"
+                          onClick={() => window.open(expert.url, "_blank")}
+                        >
+                          <img
+                            src={expert.logo}
+                            alt={`${expert.name} logo`}
+                            className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]"
+                          />
                         </div>
-                        
+
                         {/* Content */}
                         <div className="flex-1 space-y-4">
                           <div className="flex flex-wrap items-start justify-between gap-4">
@@ -164,13 +189,16 @@ const TrustedExperts = () => {
                           <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                             {expert.description}
                           </p>
-                          
+
                           {/* CTA Button */}
                           <div className="pt-2">
-                            <Button 
-                              onClick={() => window.open(expert.url, '_blank')} 
+                            <Button
+                              onClick={() => window.open(expert.url, "_blank")}
                               className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base rounded-full"
-                              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                              style={{
+                                fontFamily:
+                                  "'Open Sans', 'Helvetica', sans-serif",
+                              }}
                             >
                               {expert.buttonText}
                             </Button>
@@ -188,7 +216,10 @@ const TrustedExperts = () => {
         {/* Go Back Link - Bottom */}
         <section className="py-8 bg-gradient-to-t from-brand-navy/10 to-background">
           <div className="container max-w-6xl mx-auto px-4">
-            <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors group">
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors group"
+            >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="text-sm font-medium">Go Back</span>
             </button>
@@ -196,6 +227,7 @@ const TrustedExperts = () => {
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
 export default TrustedExperts;

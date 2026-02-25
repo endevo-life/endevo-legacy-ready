@@ -3,9 +3,6 @@ import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import heroBackground from "@/assets/resources-hero-bg.jpg";
-import nikiLifestyle from "@/assets/niki-lifestyle.jpg";
-import mobileApp from "@/assets/mobile-app.png";
 const Resources = () => {
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { elementRef: peaceRef, isVisible: peaceVisible } =
@@ -20,7 +17,7 @@ const Resources = () => {
         ref={heroRef}
         className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
         style={{
-          backgroundImage: `url(${heroBackground})`,
+          backgroundImage: `url("https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699cb1131001a59ab0ea46c8.jpg")`,
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
@@ -79,7 +76,7 @@ const Resources = () => {
         ref={peaceRef}
         className="py-20 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(${nikiLifestyle})`,
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url("https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757b78523c57e95ce2e6d.png")`,
         }}
       >
         <div className="container max-w-7xl mx-auto px-4">
@@ -155,7 +152,7 @@ const Resources = () => {
               className={`transition-all duration-1000 delay-200 ${appVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} flex justify-center`}
             >
               <img
-                src={mobileApp}
+                src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757b73ff516c60251d75b.png"
                 alt="My Final Playbook Mobile App"
                 className="max-w-md w-full h-auto"
               />

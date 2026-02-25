@@ -20,13 +20,9 @@ import resilienceContinuity from "@/assets/resilience-continuity.jpg";
 import companyHeroFamily from "@/assets/company-hero-family.jpg";
 import aboutUsFamily from "@/assets/about-us-family.jpg";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
-import companyHeroFamilyNew from "@/assets/company-hero-family-new.jpg";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
-// Import partner logos
-import trustWillLogo from "@/assets/trust-will-logo-new.png";
-import prisidioLogo from "@/assets/prisidio-logo-new.jpg";
-import niaEmberlyLogo from "@/assets/Nia-Emberly.png";
-import cignaLogo from "@/assets/cigna-logo.png";
 const Company = () => {
   const { elementRef: newHeroRef, isVisible: newHeroVisible } =
     useScrollAnimation();
@@ -37,6 +33,8 @@ const Company = () => {
     useScrollAnimation();
   const { elementRef: oldValuesRef, isVisible: oldValuesVisible } =
     useScrollAnimation();
+  const ctaAnimation = useScrollAnimation();
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
       <ResponsiveNavbar />
@@ -45,7 +43,7 @@ const Company = () => {
       <section id="about" className="relative py-20 pt-36 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={companyHeroFamilyNew}
+            src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757793873af62c19c9462.jpeg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -118,21 +116,21 @@ const Company = () => {
               {/* First set of logos */}
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={trustWillLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757441817156cc8a451cb.png"
                   alt="Trust & Will"
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={prisidioLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg"
                   alt="Prisidio"
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={niaEmberlyLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975744f83453e670329c0b.png"
                   alt="Nia Emberly"
                   className="max-h-16 w-auto object contain"
                 />
@@ -140,21 +138,21 @@ const Company = () => {
               {/* Duplicate set for seamless loop */}
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={trustWillLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757441817156cc8a451cb.png"
                   alt="Trust & Will"
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={prisidioLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg"
                   alt="Prisidio"
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={niaEmberlyLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975744f83453e670329c0b.png"
                   alt="Nia Emberly"
                   className="max-h-16 w-auto object-contain"
                 />
@@ -162,21 +160,21 @@ const Company = () => {
               {/* Third set for extra smoothness */}
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={trustWillLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757441817156cc8a451cb.png"
                   alt="Trust & Will"
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={prisidioLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg"
                   alt="Prisidio"
                   className="max-h-16 w-auto object-contain"
                 />
               </div>
               <div className="flex items-center justify-center min-w-[250px] h-24 p-4">
                 <img
-                  src={niaEmberlyLogo}
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975744f83453e670329c0b.png"
                   alt="Nia Emberly"
                   className="max-h-16 w-auto object-contain"
                 />
@@ -187,7 +185,80 @@ const Company = () => {
       </section>
 
       {/* Let's Start Your Legacy Journey Section */}
-      <ConsultationSection />
+      {/* CTA Section */}
+      <section
+        ref={ctaAnimation.elementRef as React.RefObject<HTMLElement>}
+        className="py-10 md:py-12"
+        style={{
+          backgroundColor: "#F9F9F9",
+        }}
+      >
+        <div
+          className={`container mx-auto px-6 md:px-12 text-center transition-all duration-700 ${ctaAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        >
+          {/* Headline */}
+          <h2
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+              color: "#000",
+            }}
+          >
+            Partner With ENDevo
+          </h2>
+
+          {/* Subheadline */}
+          <p
+            className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6"
+            style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+              color: "#D95D26",
+            }}
+          >
+            PLAN. PROTECT. PEACE.
+          </p>
+
+          {/* Body Text */}
+          <p
+            className="text-base md:text-lg mx-auto mb-8"
+            style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+              color: "#000",
+              maxWidth: "600px",
+            }}
+          >
+            Position your company as an employer of choice that supports its
+            people across their entire life journey
+          </p>
+
+          {/* CTA Button */}
+          <Button
+            variant="outline"
+            className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white"
+            style={{
+              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+              borderColor: "#D95D26",
+              color: "#D95D26",
+              borderWidth: "2px",
+              backgroundColor: "white",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#D95D26";
+              e.currentTarget.style.color = "white";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "white";
+              e.currentTarget.style.color = "#D95D26";
+            }}
+            onClick={() => {
+              navigate("/contact");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Contact Us
+          </Button>
+        </div>
+      </section>
 
       <Footer />
     </div>

@@ -4,7 +4,6 @@ import TrustedPartnersSection from "@/components/TrustedPartnersSection";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
-import heroBackground from "@/assets/marketplace-hero-bg.png";
 import legalFrameworkBg from "@/assets/legal-collaboration-bg.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -20,7 +19,9 @@ const Marketplace = () => {
         <section
           ref={heroRef as any}
           className="relative py-16 md:py-20 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBackground})` }}
+          style={{
+            backgroundImage: `url("https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997579a1817151d64a4656b.png")`,
+          }}
         >
           <div className="absolute inset-0 bg-brand-navy/70"></div>
           <div className="container max-w-7xl mx-auto px-4 relative z-10">
