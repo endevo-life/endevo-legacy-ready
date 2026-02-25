@@ -54,7 +54,13 @@ const Company = () => {
               ref={newHeroRef as any}
               className={`space-y-6 transition-all duration-1000 ${newHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h1
+                className="text-4xl lg:text-5xl font-bold text-foreground leading-tight"
+                style={{
+                  fontFamily:
+                    "'Playfair Display', 'Merriweather', Georgia, serif",
+                }}
+              >
                 Simplifying Legacy Readiness & Digital Resilience
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">

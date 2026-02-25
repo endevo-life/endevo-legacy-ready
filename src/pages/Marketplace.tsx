@@ -28,7 +28,13 @@ const Marketplace = () => {
             <div
               className={`text-center max-w-3xl mx-auto text-white transition-all duration-1000 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+                style={{
+                  fontFamily:
+                    "'Playfair Display', 'Merriweather', Georgia, serif",
+                }}
+              >
                 The Readiness Hub
               </h1>
               <p className="text-lg md:text-xl">

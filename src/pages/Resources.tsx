@@ -25,7 +25,13 @@ const Resources = () => {
           <div
             className={`max-w-4xl transition-all duration-1000 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1
+              className="text-5xl md:text-6xl font-bold text-white mb-6"
+              style={{
+                fontFamily:
+                  "'Playfair Display', 'Merriweather', Georgia, serif",
+              }}
+            >
               Your Hub for Legacy Readiness & Digital Preparedness
             </h1>
             <p className="text-xl text-white/90 mb-12 max-w-3xl">
