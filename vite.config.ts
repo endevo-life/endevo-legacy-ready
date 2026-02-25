@@ -16,18 +16,27 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-components': [
-            './src/components/ui/accordion.tsx',
-            './src/components/ui/alert-dialog.tsx',
-            './src/components/ui/alert.tsx',
-            './src/components/ui/button.tsx',
-            './src/components/ui/input.tsx',
-            './src/components/ui/tooltip.tsx',
-          ],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react-dom') || id.includes('react-router-dom') || id.includes('/react/')) {
+              return 'react-vendor';
+            }
+            if (id.includes('@radix-ui')) {
+              return 'radix-ui';
+            }
+            if (id.includes('recharts') || id.includes('d3-') || id.includes('victory-')) {
+              return 'charts';
+            }
+            if (id.includes('embla-carousel')) {
+              return 'carousel';
+            }
+            if (id.includes('@tanstack')) {
+              return 'query';
+            }
+          }
         },
       },
     },

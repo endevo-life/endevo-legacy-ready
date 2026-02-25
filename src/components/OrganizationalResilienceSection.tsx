@@ -68,6 +68,7 @@ const OrganizationalResilienceSection = () => {
               src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699758484c250204d696d032.png"
               alt="Team collaborating in a modern office environment, celebrating success"
               className="w-full h-auto rounded-lg shadow-lg"
+              loading="lazy"
             />
           </div>
         </div>

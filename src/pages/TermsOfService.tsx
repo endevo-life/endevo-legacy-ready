@@ -1,9 +1,6 @@
 import Footer from "@/components/Footer";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
 const TermsOfService = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-white">

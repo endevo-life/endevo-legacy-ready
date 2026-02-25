@@ -1,36 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import AIChatBot from "@/components/AIChatBot";
-import Index from "./pages/Index";
-import LearnAndListen from "./pages/LearnAndListen";
-import Solution from "./pages/Solution";
-import Podcast from "./pages/Podcast";
-import Video from "./pages/Video";
-import Blog from "./pages/Blog";
-import Resources from "./pages/Resources";
-import Plan from "./pages/Plan";
-import Company from "./pages/Company";
-
-import ForInvestors from "./pages/ForInvestors";
-
-import WWSIndividuals from "./pages/WWSIndividuals";
-import WWSServiceProviders from "./pages/WWSServiceProviders";
-import WWSEmployers from "./pages/WWSEmployers";
-
-import Marketplace from "./pages/Marketplace";
-import TrustedExperts from "./pages/TrustedExperts";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
-import CookiePolicy from "./pages/CookiePolicy";
-import CookieSettings from "./pages/CookieSettings";
 import CookieBanner from "@/components/CookieBanner";
 import { initializeConsentMode, trackPageView } from "@/lib/analytics";
+
+// Route-level code splitting — each page loads only when visited
+const Index = lazy(() => import("./pages/Index"));
+const LearnAndListen = lazy(() => import("./pages/LearnAndListen"));
+const Solution = lazy(() => import("./pages/Solution"));
+const Podcast = lazy(() => import("./pages/Podcast"));
+const Video = lazy(() => import("./pages/Video"));
+const Blog = lazy(() => import("./pages/Blog"));
+const Resources = lazy(() => import("./pages/Resources"));
+const Company = lazy(() => import("./pages/Company"));
+const ForInvestors = lazy(() => import("./pages/ForInvestors"));
+const WWSIndividuals = lazy(() => import("./pages/WWSIndividuals"));
+const WWSServiceProviders = lazy(() => import("./pages/WWSServiceProviders"));
+const WWSEmployers = lazy(() => import("./pages/WWSEmployers"));
+const Marketplace = lazy(() => import("./pages/Marketplace"));
+const TrustedExperts = lazy(() => import("./pages/TrustedExperts"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
+const CookieSettings = lazy(() => import("./pages/CookieSettings"));
 
 const queryClient = new QueryClient();
 
@@ -68,6 +66,7 @@ const App = () => (
       <BrowserRouter>
         <AppInitializer />
         <ScrollToHash />
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-brand-orange border-t-transparent animate-spin" role="status" aria-label="Loading page" /></div>}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/learn-and-listen" element={<LearnAndListen />} />
@@ -115,6 +114,7 @@ const App = () => (
           <Route path="/legal/cookie-settings" element={<CookieSettings />} />
           <Route path="/cookie-settings" element={<CookieSettings />} />
         </Routes>
+        </Suspense>
         <CookieBanner />
         <AIChatBot />
       </BrowserRouter>

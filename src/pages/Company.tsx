@@ -44,7 +44,9 @@ const Company = () => {
         <div className="absolute inset-0">
           <img
             src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757793873af62c19c9462.jpeg"
-            alt=""
+            alt="Hero Image - Endevo Life - A New Standard of Employee Support
+for Life's What-Ifs"
+            aria-hidden="true"
             className="w-full h-full object-cover"
           />
         </div>

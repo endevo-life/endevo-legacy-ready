@@ -42,6 +42,7 @@ const ServiceProvidersSection = () => {
                   src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997584820c0351d060bb450.jpeg"
                   alt="Physical Partners - Funeral homes, hospice care, and long-term care providers"
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">
@@ -73,6 +74,7 @@ const ServiceProvidersSection = () => {
                   src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975848181715f0e9a48f5e.jpeg"
                   alt="Financial Partners - Wealth advisors, accountants, and insurance providers"
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">
@@ -105,6 +107,7 @@ const ServiceProvidersSection = () => {
                   src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699758488523c5f9c2ce5201.jpeg"
                   alt="Digital Partners - Digital asset managers and secure storage services"
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">
