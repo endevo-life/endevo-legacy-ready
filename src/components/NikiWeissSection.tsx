@@ -2,7 +2,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const NikiWeissSection = () => {
   const { elementRef: nikiRef, isVisible: nikiVisible } = useScrollAnimation();
   return (
-    <section id="niki" ref={nikiRef} className="py-10">
+    <section id="niki" ref={nikiRef} className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div
