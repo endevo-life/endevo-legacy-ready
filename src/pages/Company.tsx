@@ -47,7 +47,7 @@ const Company = () => {
             alt="Hero Image - Endevo Life - A New Standard of Employee Support
 for Life's What-Ifs"
             aria-hidden="true"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover [object-position:37%_center] md:object-center"
           />
         </div>
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
