@@ -60,17 +60,13 @@ const Footer = () => {
       name: "About Us",
       href: "/company",
     },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
   ];
   return (
     <footer className="bg-[#08123A] text-white py-8">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Left Column - Logo & Social */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center md:items-start">
             <a href="/" className="inline-block">
               <img
                 src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6998ba2620c0357c04657c0d.png"
@@ -79,7 +75,7 @@ const Footer = () => {
                 loading="lazy"
               />
             </a>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -113,22 +109,32 @@ const Footer = () => {
           </div>
 
           {/* Navigation Column */}
-          <div className="flex flex-col items-center md:items-start">
-            <nav className="flex flex-col space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="hover:text-brand-orange transition-colors text-sm"
-                >
-                  {link.name}
-                </a>
+          <div className="flex flex-col items-center md:items-start gap-4 justify-center md:justify-start">
+            <nav className="flex flex-wrap justify-center md:flex-col md:justify-start gap-y-2 md:space-y-3">
+              {navLinks.map((link, index) => (
+                <span key={link.name} className="flex items-center">
+                  <a
+                    href={link.href}
+                    className="hover:text-brand-orange transition-colors text-sm"
+                  >
+                    {link.name}
+                  </a>
+                  {index < navLinks.length - 1 && (
+                    <span className="mx-2 text-white/40 md:hidden">|</span>
+                  )}
+                </span>
               ))}
             </nav>
+            <a
+              href="/contact"
+              className="text-white text-sm font-bold hover:text-brand-orange transition-colors"
+            >
+              Contact Us
+            </a>
           </div>
 
           {/* Podcast Column */}
-          <div className="space-y-3 flex flex-col items-center md:items-start">
+          <div className="space-y-3 flex flex-col items-center md:items-start text-center md:text-left">
             <img
               src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757444c25023cb696936b.png"
               alt="Death & Dying Podcast"

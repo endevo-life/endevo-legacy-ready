@@ -56,13 +56,13 @@ const ConsultationSection = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">📞 Phone</h4>
-                  <p className="text-muted-foreground">484-545-4327</p>
+                  <a href="tel:4845454327" className="text-muted-foreground underline hover:text-brand-orange transition-colors">484-545-4327</a>
                   <p className="text-sm text-muted-foreground">Monday–Friday, 8AM - 8PM ET</p>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">✉️ Email</h4>
-                  <p className="text-muted-foreground">hello@endevo.life</p>
+                  <a href="mailto:hello@endevo.life" className="text-muted-foreground underline hover:text-brand-orange transition-colors">hello@endevo.life</a>
                   
                 </div>
                 
