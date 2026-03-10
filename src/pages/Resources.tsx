@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 const Resources = () => {
+  const navigate = useNavigate();
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { elementRef: peaceRef, isVisible: peaceVisible } =
     useScrollAnimation();
@@ -40,6 +43,15 @@ const Resources = () => {
             </p>
 
             <div className="flex flex-col md:flex-row gap-6">
+              <button
+                className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                style={{
+                  fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                }}
+                onClick={() => { navigate("/blog"); window.scrollTo(0, 0); }}
+              >
+                📖 Read our Blogs
+              </button>
               <button
                 className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                 style={{
@@ -118,8 +130,9 @@ const Resources = () => {
         </div>
       </section>
 
+
       {/* Access Care Anywhere Section */}
-      <section id="mobile-app" ref={appRef} className="py-20">
+      <section id="mobile-app" ref={appRef} className="py-8">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div

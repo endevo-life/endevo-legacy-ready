@@ -152,6 +152,14 @@ const Footer = () => {
             >
               Listen Now!
             </a>
+            <a
+              href="https://digitallegacypodcast.com/blog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-brand-orange text-sm font-semibold hover:underline"
+            >
+              Read our Blogs
+            </a>
           </div>
 
           {/* Newsletter Column */}

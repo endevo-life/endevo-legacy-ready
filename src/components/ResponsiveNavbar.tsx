@@ -73,6 +73,10 @@ const ResponsiveNavbar = () => {
           name: "Client Testimonials",
           href: "/resources#client-stories",
         },
+        {
+          name: "Blogs",
+          href: "/blog",
+        },
       ],
     },
     // {
