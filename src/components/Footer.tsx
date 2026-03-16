@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -152,14 +153,12 @@ const Footer = () => {
             >
               Listen Now!
             </a>
-            <a
-              href="https://digitallegacypodcast.com/blog"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/blog"
               className="inline-block text-brand-orange text-sm font-semibold hover:underline"
             >
               Read our Blogs
-            </a>
+            </Link>
           </div>
 
           {/* Newsletter Column */}
