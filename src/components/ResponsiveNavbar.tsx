@@ -77,6 +77,10 @@ const ResponsiveNavbar = () => {
           name: "Blogs",
           href: "/blog",
         },
+        {
+          name: "Podcast",
+          href: "/podcast",
+        },
       ],
     },
     // {
