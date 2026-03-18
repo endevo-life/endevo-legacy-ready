@@ -84,7 +84,11 @@ const blogPosts: BlogPost[] = [
     link: "",
     content: [
       { type: "paragraph", text: "Losing a child is a pain so profound that our society struggles to even find the words for it. It is a topic that makes us want to look away. But for parents facing this unimaginable reality, looking away is not an option. They are forced to navigate complex medical systems, overwhelming grief, and heartbreaking choices, often while simply trying to get through the day." },
+<<<<<<< HEAD
       { type: "paragraph", text: "While the journey of pediatric serious illness is heavy, it does not have to be devoid of light. Recently, Niki Weiss sat down with Morgan Motsinger on the Digital Legacy Podcast to discuss her deeply personal experience. Morgan is a psychology and neuroscience student, an entrepreneur, and the host of the \"P.S. We Expire\" podcast. But above all, she is a mother who thoughtfully planned the end of life for her daughter, Annie." },
+=======
+      { type: "html", text: `While the journey of pediatric serious illness is heavy, it does not have to be devoid of light. Recently, Niki Weiss sat down with Morgan Motsinger on the Digital Legacy Podcast to discuss her deeply personal experience. Morgan is a psychology and neuroscience student, an entrepreneur, and the host of the "P.S. We Expire" podcast. But above all, she is a mother who thoughtfully planned the end of life for her daughter, Annie.` },
+>>>>>>> 045958d35444bf739ebbaa343f4dffd9aeba57c7
       { type: "paragraph", text: "Her story is a testament to human resilience. It shows us how careful planning, intentional support, and profound love can transform an incredibly difficult goodbye into a beautiful, sacred moment." },
       { type: "heading", text: "The Gift of Pediatric Palliative Care" },
       { type: "paragraph", text: "When a child is diagnosed with a severe illness, the medical terminology can feel like a foreign language. One of the most important terms a family can learn is \"pediatric palliative care.\" Palliative care focuses on improving the quality of life for patients and their families, regardless of whether a cure is possible." },
