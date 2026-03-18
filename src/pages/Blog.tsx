@@ -14,13 +14,81 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    image: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69bad70753d4f13988a73d7b.webp",
+    title: "The Hidden Administrative Burden of Loss: Navigating the Paperwork of Grief",
+    date: "March 17, 2026",
+    link: "",
+    content: [
+      { type: "paragraph", text: "Losing a loved one is an experience that shakes us to our core. In the midst of profound heartbreak, the last thing anyone wants to think about is paperwork, closing bank accounts, or filing taxes. Yet, this is the reality that millions of grieving families face every day." },
+      { type: "paragraph", text: "When a parent, partner, or family member passes away, those left behind are often thrust into a labyrinth of bureaucracy. This administrative burden of loss is a silent struggle. It adds layers of stress and confusion to an already devastating time in our lives." },
+      { type: "html", text: `Recently, Niki Weiss sat down with <a href="https://www.linkedin.com/company/good-grief-co/" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Emily Kyle</a> on the <a href="https://digitallegacypodcast.com/podcast" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Digital Legacy Podcast</a> to discuss this very challenge. Emily is the founder and CEO of Good Grief, a platform designed to guide families through the overwhelming logistics that follow a death. Her journey offers a compassionate look at why end-of-life planning is the ultimate act of love for those we leave behind.` },
+      { type: "heading", text: "The 570-Hour Part-Time Job" },
+      { type: "paragraph", text: "Many of us mistakenly believe that having a legal will means our affairs are completely in order. While a will provides a necessary roadmap for the courts, it does not manage the day-to-day administrative tasks. It does not tell your family how to sell your house, cancel your utility bills, or track down your digital passwords." },
+      { type: "paragraph", text: "The reality is staggering. On average, settling an estate takes around two years to fully close out. The administrative tasks alone demand roughly 570 hours of work from the grieving family. That is the equivalent of taking on a massive part-time job while trying to process the loss of someone you love." },
+      { type: "paragraph", text: "This burden is growing heavier due to our digital sprawl. We have countless online accounts, recurring subscriptions, and hidden digital assets. Finding and closing these accounts is incredibly difficult. Emily even had to hire a private investigator just to uncover her father's physical and digital footprint." },
+      { type: "heading", text: "Busting the \"I Don't Have Assets\" Myth" },
+      { type: "paragraph", text: "A common reason people avoid end-of-life planning is the belief that they simply do not have enough money to warrant a plan. They might say that they do not have a massive estate, so there is nothing to worry about." },
+      { type: "paragraph", text: "However, everyone leaves behind a footprint. Even if you do not have a large bank account, you still have an identity to close out. You have final taxes that must be filed, as dead people cannot escape the IRS. You also have personal wishes, family stories, and a unique legacy that deserves to be passed down." },
+      { type: "paragraph", text: "When we avoid planning, we leave our families to navigate a complex maze. Banks and service providers do not make it easy to close accounts. Often, grieving family members are forced to track down fax machines just to send death certificates to unhelpful customer service departments." },
+      { type: "heading", text: "Making One-Way Decisions in Crisis" },
+      { type: "paragraph", text: "When a death occurs unexpectedly, families are forced to make major financial and logistical decisions in a state of shock. In these vulnerable moments, our brains are simply not processing information clearly." },
+      { type: "paragraph", text: "This vulnerability is especially apparent when making funeral arrangements. Without a pre-existing plan, families often choose the most accessible or affordable options presented to them, such as standard cremation. They might not know that their loved one would have preferred a green burial or even body donation." },
+      { type: "paragraph", text: "Furthermore, funeral costs are rising rapidly, consistently outpacing regular inflation. Because families feel rushed and believe it is insensitive to negotiate prices while grieving, they often overspend. Shockingly, recent data shows that 37% of people have to finance death-related expenses, plunging them into debt during a tragedy." },
+      { type: "heading", text: "Finding Laughter Amidst the Tears" },
+      { type: "paragraph", text: "While the administrative side of death is daunting, the grieving process itself is deeply human and surprisingly multi-faceted. Grief is not just about crying. It is also about remembering the joy, the quirks, and the humor of the person who passed away." },
+      { type: "paragraph", text: "Emily shared a beautiful, hilarious story about honoring her father, Russell. Three years after his passing, her family finally gathered to scatter his ashes near his childhood home in Los Angeles. Because her parents were divorced, her mother transported the ashes on an airplane inside a giant Ziploc bag labeled \"green beans.\"" },
+      { type: "paragraph", text: "Naturally, the bag was flagged by airport security. Later, while trying to discreetly scatter the ashes on a busy street, a nearby dumpster accidentally fell toward Emily, blowing the ashes right back into her face. While chaotic, these moments brought immense laughter to her family. They knew her prankster father would have found the entire situation absolutely hysterical." },
+      { type: "heading", text: "Small Steps Toward a Prepared Future" },
+      { type: "paragraph", text: "We cannot control the pain of losing someone, but we can completely control the administrative mess left behind. By taking action today, we protect our loved ones from unnecessary stress, legal battles, and financial strain." },
+      { type: "paragraph", text: "Consider taking these small, empowering steps this week:" },
+      { type: "bullet", text: "Start the Conversation: Talk to your family about your final wishes. Even if you just share the \"vibe\" you want for your memorial, that guidance is a massive relief for your family." },
+      { type: "bullet", text: "Document Your Digital Life: Keep a secure, updated list of your online passwords, subscriptions, and bank accounts." },
+      { type: "bullet", text: "Explore Your Options Early: Research funeral, cremation, or body donation options now. You can lock in prices and make calm, informed decisions outside of a crisis scenario." },
+      { type: "html", text: `To hear Emily Kyle's full conversation with Niki Weiss, <a href="https://www.youtube.com/watch?v=4ss8i14EKjY" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">listen to the latest episode of the Digital Legacy Podcast</a>. You can also explore her incredible platform and resources at <a href="https://www.goodgriefrelief.co/" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">GoodGriefRelief.co</a>.` },
+    ],
+  },
+  {
+    image: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69bad61c0d06dbc33ac0e1f5.webp",
+    title: "Embracing the Journey: Rethinking End-of-Life Planning",
+    date: "March 12, 2026",
+    link: "",
+    content: [
+      { type: "paragraph", text: "Facing our mortality is a deeply human experience, yet it is a topic many of us go to great lengths to avoid. The fear of the unknown and the sadness associated with loss often keep us from having crucial conversations with our loved ones. However, waiting until a crisis occurs to discuss end-of-life wishes can lead to overwhelming stress and emotional turbulence for everyone involved." },
+      { type: "html", text: `Recently, Niki Weiss sat down with <a href="https://www.linkedin.com/in/willydonaldson/" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Professor Willy Donaldson</a> on the <a href="https://digitallegacypodcast.com/" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Digital Legacy Podcast</a> to explore this complex terrain. Their conversation delved into the profound importance of early planning and the unexpected liberation that comes from facing these difficult topics head-on. Professor Donaldson, an academic and author of the book "Estimated Time of Departure," shared his personal journey of navigating end-of-life planning with his parents, offering invaluable insights for anyone facing similar transitions.` },
+      { type: "heading", text: "The Resistance to Planning" },
+      { type: "paragraph", text: "One of the most common hurdles in end-of-life planning is the sheer resistance to talking about it. When Professor Donaldson initially approached his parents about their final wishes, they responded with avoidance, even jokingly asking if he was trying to hasten their demise. This reaction is incredibly common. We often equate discussing death with inviting it into our lives." },
+      { type: "paragraph", text: "However, as Professor Donaldson discovered, once the initial discomfort is overcome, these conversations become a normal, even essential, part of life planning. By initiating these discussions while his parents were still in good health, they were able to thoughtfully consider their options without the pressure of an impending medical crisis. This early engagement is key to ensuring that an individual's wishes are not only understood but also respected when the time comes." },
+      { type: "heading", text: "The Power of Knowing What You Don't Want" },
+      { type: "paragraph", text: "When planning for the end of life, it can be challenging to articulate exactly what a \"good death\" looks like. Often, it is much easier to identify what we don't want. Professor Donaldson found that asking his parents about their boundaries was a powerful catalyst for their planning process." },
+      { type: "paragraph", text: "For instance, they were clear about not wanting their lives extended if it meant sacrificing their quality of life. They were specific about not wanting to be entirely dependent on others for basic needs, such as feeding or personal care. These clear directives provided a roadmap for their final days, alleviating the burden of guesswork for their family and healthcare providers. Knowing what a loved one vehemently opposes is just as crucial as knowing what they desire." },
+      { type: "heading", text: "The Concept of \"Allow a Natural Death\"" },
+      { type: "paragraph", text: "In our modern healthcare system, there is often a default setting to intervene and extend life, sometimes regardless of the individual's quality of life. This can lead to situations where patients endure prolonged suffering, and families face agonizing decisions." },
+      { type: "paragraph", text: "Professor Donaldson introduced the concept of an \"Allow a Natural Death\" (AND) directive. Unlike a standard Do Not Resuscitate (DNR) order, which is a medical document, an AND is more of a personal constitution. It outlines an individual's biographical and emotional wishes, clearly stating their desire for nature to take its course without extreme medical interventions. This approach empowers individuals to maintain control over their final days and ensures a more peaceful transition." },
+      { type: "heading", text: "Redefining the Good Death" },
+      { type: "paragraph", text: "Our cultural narrative often equates a long life with a successful life, regardless of the physical or cognitive decline that may accompany those final years. We need to expand our definition of a \"good death\" to include the preservation of dignity and the honoring of individual choices." },
+      { type: "paragraph", text: "Professor Donaldson shared a poignant moment when his mother, following a stroke, declined further medical interventions. She simply stated that she was \"done\" and wanted to transition to hospice care. Because the family had already discussed these scenarios, there was no argument or guilt. They understood her wishes and supported her decision, allowing her to pass away peacefully and on her own terms." },
+      { type: "heading", text: "Taking Control of Your Legacy" },
+      { type: "paragraph", text: "The journey of end-of-life planning is not just about medical directives; it is about shaping your legacy. It is about ensuring that your final chapter reflects your values and that your loved ones are not left navigating a maze of uncertainty and difficult decisions." },
+      { type: "paragraph", text: "If you are caring for aging parents or simply want to be prepared for your own future, consider these actionable steps:" },
+      { type: "bullet", text: "Start the Conversation Early: Do not wait for a diagnosis. Use everyday moments or even a thoughtful book to gently introduce the topic." },
+      { type: "bullet", text: "Focus on Boundaries: If discussing ideal scenarios feels too abstract, start by asking what your loved ones definitely do not want at the end of their lives." },
+      { type: "bullet", text: "Document Everything: Ensure that all legal and medical documents, such as advance directives and powers of attorney, are in place and accessible to the necessary family members." },
+      { type: "paragraph", text: "By embracing these conversations, we can transform a daunting prospect into an opportunity for deep connection, ensuring that our final transition is one of peace and clarity." },
+      { type: "html", text: `To hear Professor Willy Donaldson's full conversation with Niki Weiss, <a href="https://www.youtube.com/watch?v=FFCB70L--3Q" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">listen to the latest episode of the Digital Legacy Podcast</a>. You can also learn more about his book, <a href="https://www.amazon.com/Estimated-Time-Departure-Talked-Parents/dp/1631957112" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">"Estimated Time of Departure,"</a> online.` },
+    ],
+  },
+  {
     image: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69bacf23ba3ec87f100a4a7c.webp",
     title: "Holding Space: A Mother's Journey Through Pediatric End-of-Life Planning",
     date: "March 10, 2026",
     link: "",
     content: [
       { type: "paragraph", text: "Losing a child is a pain so profound that our society struggles to even find the words for it. It is a topic that makes us want to look away. But for parents facing this unimaginable reality, looking away is not an option. They are forced to navigate complex medical systems, overwhelming grief, and heartbreaking choices, often while simply trying to get through the day." },
+<<<<<<< HEAD
+      { type: "paragraph", text: "While the journey of pediatric serious illness is heavy, it does not have to be devoid of light. Recently, Niki Weiss sat down with Morgan Motsinger on the Digital Legacy Podcast to discuss her deeply personal experience. Morgan is a psychology and neuroscience student, an entrepreneur, and the host of the \"P.S. We Expire\" podcast. But above all, she is a mother who thoughtfully planned the end of life for her daughter, Annie." },
+=======
       { type: "html", text: `While the journey of pediatric serious illness is heavy, it does not have to be devoid of light. Recently, Niki Weiss sat down with Morgan Motsinger on the Digital Legacy Podcast to discuss her deeply personal experience. Morgan is a psychology and neuroscience student, an entrepreneur, and the host of the "P.S. We Expire" podcast. But above all, she is a mother who thoughtfully planned the end of life for her daughter, Annie.` },
+>>>>>>> 045958d35444bf739ebbaa343f4dffd9aeba57c7
       { type: "paragraph", text: "Her story is a testament to human resilience. It shows us how careful planning, intentional support, and profound love can transform an incredibly difficult goodbye into a beautiful, sacred moment." },
       { type: "heading", text: "The Gift of Pediatric Palliative Care" },
       { type: "paragraph", text: "When a child is diagnosed with a severe illness, the medical terminology can feel like a foreign language. One of the most important terms a family can learn is \"pediatric palliative care.\" Palliative care focuses on improving the quality of life for patients and their families, regardless of whether a cure is possible." },
@@ -2451,18 +2519,6 @@ const Blog = () => {
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-4 h-4">
                       <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-                    </svg>
-                  </a>
-                  {/* Pinterest */}
-                  <a
-                    href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(selectedPost.link)}&media=${encodeURIComponent(selectedPost.image)}&description=${encodeURIComponent(selectedPost.title)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 flex items-center justify-center rounded-full bg-[#E60023] hover:opacity-80 transition-opacity"
-                    title="Share on Pinterest"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-4 h-4">
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
                     </svg>
                   </a>
                   {/* X (Twitter) */}
