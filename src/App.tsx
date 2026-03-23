@@ -13,6 +13,7 @@ const Index = lazy(() => import("./pages/Index"));
 const LearnAndListen = lazy(() => import("./pages/LearnAndListen"));
 const Solution = lazy(() => import("./pages/Solution"));
 const Podcast = lazy(() => import("./pages/Podcast"));
+const PodcastEpisode = lazy(() => import("./pages/PodcastEpisode"));
 const Video = lazy(() => import("./pages/Video"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Resources = lazy(() => import("./pages/Resources"));
@@ -103,6 +104,7 @@ const App = () => (
           <Route path="/news" element={<NotFound />} />
           <Route path="/alliance" element={<NotFound />} />
           <Route path="/podcast" element={<Podcast />} />
+          <Route path="/podcast/episode" element={<PodcastEpisode />} />
           <Route path="/video" element={<Video />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/resources" element={<Resources />} />
