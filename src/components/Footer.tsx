@@ -195,6 +195,13 @@ const Footer = () => {
             © 2026 ENDevo Services. All rights reserved.
           </p>
           <div className="flex justify-center gap-4 text-sm">
+            <Link
+              to="/faq"
+              className="hover:text-brand-orange transition-colors"
+            >
+              FAQs
+            </Link>
+            <span>|</span>
             <a
               href="/legal/privacy-policy"
               className="hover:text-brand-orange transition-colors"
