@@ -19,9 +19,9 @@ const Blog = lazy(() => import("./pages/Blog"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Company = lazy(() => import("./pages/Company"));
 const ForInvestors = lazy(() => import("./pages/ForInvestors"));
-const WWSIndividuals = lazy(() => import("./pages/WWSIndividuals"));
-const WWSServiceProviders = lazy(() => import("./pages/WWSServiceProviders"));
-const WWSEmployers = lazy(() => import("./pages/WWSEmployers"));
+const WWSIndividuals = lazy(() => import("./pages/ForIndividuals"));
+const WWSServiceProviders = lazy(() => import("./pages/ForServiceProviders"));
+const WWSEmployers = lazy(() => import("./pages/ForEmployers"));
 const Marketplace = lazy(() => import("./pages/Marketplace"));
 const TrustedExperts = lazy(() => import("./pages/TrustedExperts"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -31,6 +31,7 @@ const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const CookieSettings = lazy(() => import("./pages/CookieSettings"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const NewsAndEvents = lazy(() => import("./pages/NewsAndEvents"));
 
 const queryClient = new QueryClient();
 
@@ -117,6 +118,7 @@ const App = () => (
           <Route path="/legal/cookie-settings" element={<CookieSettings />} />
           <Route path="/cookie-settings" element={<CookieSettings />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/news-and-events" element={<NewsAndEvents />} />
         </Routes>
         </Suspense>
         <CookieBanner />
