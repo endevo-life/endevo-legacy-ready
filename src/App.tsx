@@ -31,6 +31,7 @@ const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const CookieSettings = lazy(() => import("./pages/CookieSettings"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const NewsAndEvents = lazy(() => import("./pages/NewsAndEvents"));
 
 const queryClient = new QueryClient();
 
@@ -117,6 +118,7 @@ const App = () => (
           <Route path="/legal/cookie-settings" element={<CookieSettings />} />
           <Route path="/cookie-settings" element={<CookieSettings />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/news-and-events" element={<NewsAndEvents />} />
         </Routes>
         </Suspense>
         <CookieBanner />
