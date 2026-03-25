@@ -22,11 +22,9 @@ const NewsAndEvents = () => {
         {/* News Feed */}
         <section className="py-20 px-4">
           <div className="container max-w-6xl mx-auto space-y-10">
-
             {/* Card - Genzio Media Feature */}
             <div className="border border-border rounded-xl p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 md:items-center">
-
                 {/* Thumbnail */}
                 <div className="flex-shrink-0 w-full md:w-96">
                   <img
@@ -51,8 +49,12 @@ const NewsAndEvents = () => {
                         className="w-10 h-10 rounded-lg object-cover"
                       />
                       <div>
-                        <p className="font-semibold text-foreground">Genzio Media</p>
-                        <p className="text-sm text-muted-foreground">@GenzioCo</p>
+                        <p className="font-semibold text-foreground">
+                          Genzio Media
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          @GenzioCo
+                        </p>
                       </div>
                     </a>
 
@@ -62,11 +64,12 @@ const NewsAndEvents = () => {
 
                     <p className="text-muted-foreground mb-4">
                       Niki Weiss, Founder &amp; CEO of ENDevo, sat down with{" "}
-                      <span className="font-medium text-foreground">@DavidThaDegen</span> to
-                      talk about digital legacy, planning ahead, and what "afterlife tech"
-                      really means.
+                      <span className="font-medium text-foreground">
+                        @DavidThaDegen
+                      </span>{" "}
+                      to talk about digital legacy, planning ahead, and what
+                      "afterlife tech" really means.
                     </p>
-
                   </div>
 
                   <a
@@ -78,10 +81,8 @@ const NewsAndEvents = () => {
                     Watch the full conversation on X
                   </a>
                 </div>
-
               </div>
             </div>
-
           </div>
         </section>
       </main>

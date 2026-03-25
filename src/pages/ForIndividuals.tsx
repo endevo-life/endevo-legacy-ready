@@ -239,7 +239,7 @@ const WWSIndividuals = () => {
               {/* Left side - Framework Graphic */}
               <div className="animate-fade-in">
                 <img
-                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757e820c035105a0b9a1b.png"
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757e82a2f159e92fe3045.png"
                   alt="Comprehensive Framework - Your Beliefs at the center surrounded by Legal, Financial, Physical, and Digital areas"
                   className="w-full h-auto max-w-xl mx-auto"
                 />
