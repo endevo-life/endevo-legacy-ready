@@ -32,6 +32,7 @@ const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const CookieSettings = lazy(() => import("./pages/CookieSettings"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const NewsAndEvents = lazy(() => import("./pages/NewsAndEvents"));
+const SanityStudio = lazy(() => import("./pages/SanityStudio"));
 
 const queryClient = new QueryClient();
 
@@ -119,6 +120,7 @@ const App = () => (
           <Route path="/cookie-settings" element={<CookieSettings />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
+          <Route path="/studio/*" element={<SanityStudio />} />
         </Routes>
         </Suspense>
         <CookieBanner />
