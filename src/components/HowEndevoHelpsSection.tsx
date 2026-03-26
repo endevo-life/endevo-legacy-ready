@@ -1,27 +1,21 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Brain, Network, Users } from "lucide-react";
+import { ArrowRight, Network, Users } from "lucide-react";
 
 const HowEndevoHelpsSection = () => {
   const cards = [
     {
-      icon: Brain,
-      title: "AI-Powered Guidance",
+      icon: Users,
+      title: "Human-Centered Support",
       description:
-        "We support employees in understanding what matters, what is missing, and what to do next through intuitive and empathetic AI guidance designed for real life.",
+        "ENDevo blends technology with compassionate guidance so employees feel supported through life's hardest moments without adding burden to managers or teams.",
     },
     {
       icon: Network,
       title: "Connected Marketplace",
       description:
         "When action is needed, employees are guided to trusted legal, financial, care, and digital professionals so the right support is available at the right time.",
-    },
-    {
-      icon: Users,
-      title: "Human-Centered Support",
-      description:
-        "ENDevo blends technology with compassionate guidance so employees feel supported through life's hardest moments without adding burden to managers or teams.",
     },
   ];
 
@@ -39,7 +33,7 @@ const HowEndevoHelpsSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {cards.map((card, index) => (
             <Card
               key={index}
