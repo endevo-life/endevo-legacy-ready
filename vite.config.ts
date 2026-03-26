@@ -36,13 +36,10 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('@tanstack')) {
               return 'query';
             }
-            if (id.includes('@sanity') || id.includes('sanity') || id.includes('@portabletext')) {
-              return 'sanity';
-            }
           }
         },
       },
     },
-    chunkSizeWarningLimit: 7000, // Sanity Studio is large but lazy-loaded (only loads at /studio)
+    chunkSizeWarningLimit: 1000,
   },
 }));
