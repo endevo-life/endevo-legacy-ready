@@ -22,6 +22,7 @@ import aboutUsFamily from "@/assets/about-us-family.jpg";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const Company = () => {
   const { elementRef: newHeroRef, isVisible: newHeroVisible } =
@@ -37,6 +38,11 @@ const Company = () => {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="About ENDevo — Our Mission & Team"
+        description="Learn about ENDevo's mission to help people achieve Legacy Readiness. Meet the team behind the digital preparedness platform."
+        canonical="/company"
+      />
       <ResponsiveNavbar />
 
       {/* New Hero Section */}

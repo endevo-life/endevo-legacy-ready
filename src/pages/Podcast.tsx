@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 interface Episode {
   title: string;
@@ -183,6 +184,19 @@ const Podcast = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Digital Legacy Podcast — End-of-Life Planning Conversations"
+        description="Listen to the Digital Legacy Podcast — expert conversations on end-of-life planning, grief, digital assets, and leaving a meaningful legacy."
+        canonical="/podcast"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "PodcastSeries",
+          "name": "Digital Legacy Podcast",
+          "url": "https://www.endevo.life/podcast",
+          "description": "Expert conversations on end-of-life planning, digital legacy, and grief.",
+          "publisher": { "@type": "Organization", "name": "ENDevo", "url": "https://www.endevo.life" }
+        }}
+      />
       <ResponsiveNavbar />
 
       {/* Hero */}

@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import AIChatBot from "@/components/AIChatBot";
 import CookieBanner from "@/components/CookieBanner";
 import { initializeConsentMode, trackPageView } from "@/lib/analytics";
@@ -14,7 +14,6 @@ const LearnAndListen = lazy(() => import("./pages/LearnAndListen"));
 const Solution = lazy(() => import("./pages/Solution"));
 const Podcast = lazy(() => import("./pages/Podcast"));
 const PodcastEpisode = lazy(() => import("./pages/PodcastEpisode"));
-const Video = lazy(() => import("./pages/Video"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Company = lazy(() => import("./pages/Company"));
@@ -32,6 +31,8 @@ const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const CookieSettings = lazy(() => import("./pages/CookieSettings"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const NewsAndEvents = lazy(() => import("./pages/NewsAndEvents"));
+const SanityStudio = lazy(() => import("./pages/SanityStudio"));
+const Videos = lazy(() => import("./pages/Videos"));
 
 const queryClient = new QueryClient();
 
@@ -106,7 +107,8 @@ const App = () => (
           <Route path="/alliance" element={<NotFound />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/podcast/episode" element={<PodcastEpisode />} />
-          <Route path="/video" element={<Video />} />
+          <Route path="/video" element={<Navigate to="/videos" replace />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
@@ -119,6 +121,7 @@ const App = () => (
           <Route path="/cookie-settings" element={<CookieSettings />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
+          <Route path="/studio/*" element={<SanityStudio />} />
         </Routes>
         </Suspense>
         <CookieBanner />
