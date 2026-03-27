@@ -165,9 +165,6 @@ const Solution = () => {
         <ServiceProvidersSection />
       </section>
 
-      {/* Organizational Resilience Section */}
-      <OrganizationalResilienceSection />
-
       {/* Our Edge: Where AI Meets Empathy Section */}
       <section
         ref={edgeRef as React.RefObject<HTMLElement>}
