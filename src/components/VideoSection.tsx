@@ -50,7 +50,7 @@ const VideoSection = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-white"
                 style={{ fontFamily: 'Times New Roman, serif' }}
               >
-                Meet Jesse Elbones
+                Meet Jesse L. Bones
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
                 Your friendly ENDevo guide

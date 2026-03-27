@@ -1,5 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import HiddenCostStatsSection from "@/components/HiddenCostStatsSection";
+import DigitalReadinessWellnessSection from "@/components/DigitalReadinessWellnessSection";
 import EmpowerEmployeesSection from "@/components/EmpowerEmployeesSection";
 import HowEndevoHelpsSection from "@/components/HowEndevoHelpsSection";
 import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
@@ -10,6 +11,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
+import LatestSection from "@/components/LatestSection";
 
 import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
@@ -29,13 +31,14 @@ const Index = () => {
       <main className="pt-16">
         <EmpowerEmployeesSection />
         <HiddenCostStatsSection />
+        <DigitalReadinessWellnessSection />
         <VideoSection />
         <HowEndevoHelpsSection />
 
         <ToolsForEmployersSection />
 
 
-        <WhoWeServeSection />
+        {/* <WhoWeServeSection /> */}
 
         {/* Partners Carousel Section - Hidden for now
         <section ref={partnersRef as React.RefObject<HTMLElement>} className="py-4 bg-gradient-to-b from-background to-muted/20">
@@ -69,6 +72,7 @@ const Index = () => {
         </section>
         */}
 
+        <LatestSection />
         {/* Stories From Across Our Community Section */}
         <FamilyTestimonialsSection />
 
