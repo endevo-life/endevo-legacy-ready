@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import SEO from "@/components/SEO";
 
 const Resources = () => {
   const navigate = useNavigate();
@@ -13,6 +14,11 @@ const Resources = () => {
   const { elementRef: appRef, isVisible: appVisible } = useScrollAnimation();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Resources — Legacy Readiness Tools & Guides"
+        description="Practical tools, expert insights, and digital guides to help you and your organization prepare for end-of-life with confidence."
+        canonical="/resources"
+      />
       <ResponsiveNavbar />
 
       {/* Hero Section */}

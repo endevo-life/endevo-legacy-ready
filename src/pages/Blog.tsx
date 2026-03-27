@@ -2,6 +2,7 @@ import { useState } from "react";
 import { format, parseISO } from "date-fns";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/react";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
@@ -63,8 +64,30 @@ const Blog = () => {
     }
   };
 
+  const blogListSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "ENDevo Blog — Digital Legacy & End-of-Life Planning",
+    "url": "https://www.endevo.life/blog",
+    "description": "Expert articles on digital legacy, end-of-life planning, grief, and protecting what matters most.",
+    "publisher": { "@type": "Organization", "name": "ENDevo", "url": "https://www.endevo.life" },
+    "blogPost": paginatedPosts.map((p) => ({
+      "@type": "BlogPosting",
+      "headline": p.title,
+      "datePublished": p.date,
+      "image": p.image,
+      "url": "https://www.endevo.life/blog",
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Blog — Digital Legacy & End-of-Life Planning"
+        description="Expert articles on digital legacy, estate planning, grief support, and end-of-life preparation. Read the ENDevo blog."
+        canonical="/blog"
+        jsonLd={blogListSchema}
+      />
       <ResponsiveNavbar />
 
       {/* Blog List Section */}

@@ -13,6 +13,7 @@ import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 
 import LegacyJourneyCTA from "@/components/LegacyJourneyCTA";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -25,6 +26,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="ENDevo — Legacy Readiness & Digital Preparedness"
+        description="ENDevo helps individuals, families, and employers achieve Legacy Readiness. Protect your digital footprint, estate, and life story with intention."
+        canonical="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "ENDevo",
+          "url": "https://www.endevo.life",
+          "logo": "https://www.endevo.life/favicon.png",
+          "description": "Legacy Readiness & Digital Preparedness platform for individuals, families, and employers.",
+          "sameAs": ["https://www.youtube.com/@DigitalLegacyPodcast"]
+        }}
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         <EmpowerEmployeesSection />

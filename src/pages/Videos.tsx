@@ -3,6 +3,7 @@ import { format, parseISO } from "date-fns";
 import { Loader2 } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { useYouTubePlaylist, shortsPlaylistId, type YouTubeVideo } from "@/hooks/useYouTubeVideos";
 
 // ---------------------------------------------------------------------------
@@ -173,6 +174,20 @@ const Videos = () => {
   return (
     <div className="min-h-screen bg-background">
       <ResponsiveNavbar />
+
+      <SEO
+        title="Videos — Digital Legacy Podcast & Interviews"
+        description="Watch long-form interviews and short clips on digital legacy, end-of-life planning, and grief from the Digital Legacy Podcast."
+        canonical="/videos"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "VideoGallery",
+          "name": "ENDevo Videos — Digital Legacy Podcast",
+          "url": "https://www.endevo.life/videos",
+          "description": "Watch podcast episodes, expert interviews, and short videos on digital legacy and end-of-life planning.",
+          "publisher": { "@type": "Organization", "name": "ENDevo", "url": "https://www.endevo.life" },
+        }}
+      />
 
       {/* Hero Banner */}
       <section
