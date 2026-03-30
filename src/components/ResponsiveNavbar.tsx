@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Workflow, BookOpen, Users, Sparkles, Briefcase, UserCheck, User, ShieldCheck, Smartphone, MessageSquare, Video, FileText, HelpCircle, Newspaper, Building2, Crown, UsersRound, Heart, Handshake } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,19 +23,27 @@ const ResponsiveNavbar = () => {
       submenu: [
         {
           name: "How It Works",
+          sub: "A simple 3-step process",
           href: "/solution#how-it-works",
+          icon: Workflow,
         },
         {
           name: "About the Program",
+          sub: "Legacy readiness for every employee",
           href: "/solution#about-program",
+          icon: BookOpen,
         },
         {
-          name: "Get Connected With Service Providers",
+          name: "Service Providers",
+          sub: "Connect with trusted experts",
           href: "/solution#service-providers",
+          icon: Users,
         },
         {
           name: "Our Edge",
+          sub: "What sets ENDevo apart",
           href: "/solution#our-edge",
+          icon: Sparkles,
         },
       ],
     },
@@ -45,15 +53,21 @@ const ResponsiveNavbar = () => {
       submenu: [
         {
           name: "For Employers",
+          sub: "Benefits that retain top talent",
           href: "/wws-employers",
+          icon: Briefcase,
         },
         {
           name: "For Service Providers",
+          sub: "Expand your reach with ENDevo",
           href: "/wws-service-providers",
+          icon: UserCheck,
         },
         {
           name: "For Individuals",
+          sub: "Plan your legacy on your terms",
           href: "/wws-individuals",
+          icon: User,
         },
       ],
     },
@@ -63,31 +77,45 @@ const ResponsiveNavbar = () => {
       submenu: [
         {
           name: "Peace of Mind",
+          sub: "Tools for life's transitions",
           href: "/resources#peace-of-mind",
+          icon: ShieldCheck,
         },
         {
           name: "Mobile App",
+          sub: "Legacy planning in your pocket",
           href: "/resources#mobile-app",
+          icon: Smartphone,
         },
         {
           name: "Client Testimonials",
+          sub: "Stories from real members",
           href: "/resources#client-stories",
+          icon: MessageSquare,
         },
         {
           name: "Videos",
+          sub: "Watch and learn",
           href: "/videos",
+          icon: Video,
         },
         {
           name: "Blogs",
+          sub: "Insights and guidance",
           href: "/blog",
+          icon: FileText,
         },
         {
           name: "FAQs",
+          sub: "Quick answers to common questions",
           href: "/faq",
+          icon: HelpCircle,
         },
         {
           name: "News and Events",
+          sub: "Stay in the loop",
           href: "/news-and-events",
+          icon: Newspaper,
         },
         // {
         //   name: "Podcast",
@@ -111,23 +139,33 @@ const ResponsiveNavbar = () => {
       submenu: [
         {
           name: "About ENDevo",
+          sub: "Our mission and story",
           href: "/company#about",
+          icon: Building2,
         },
         {
           name: "Niki Weiss/Founder",
+          sub: "Meet the visionary behind ENDevo",
           href: "/company#niki",
+          icon: Crown,
         },
         {
           name: "Meet Our Team",
+          sub: "The people who make it happen",
           href: "/company#team",
+          icon: UsersRound,
         },
         {
           name: "Our Core Values",
+          sub: "What we stand for",
           href: "/company#values",
+          icon: Heart,
         },
         {
           name: "Our Partners",
+          sub: "Trusted collaborators",
           href: "/company#partners",
+          icon: Handshake,
         },
       ],
     },
@@ -169,15 +207,30 @@ const ResponsiveNavbar = () => {
 
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
-                    <div className="py-2">
-                      {item.submenu.map((subItem) => (
+                  <div className="absolute top-full left-0 mt-1 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 w-[520px]">
+                    <div
+                      className="py-2 grid grid-flow-col"
+                      style={{ gridTemplateRows: `repeat(${Math.ceil(item.submenu.length / 2)}, auto)` }}
+                    >
+                      {item.submenu.map((subItem: { name: string; href: string; sub?: string; icon?: React.ElementType }) => (
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200"
+                          className="flex items-start gap-3 px-4 py-3 hover:bg-orange-50 transition-colors duration-200"
                         >
-                          {subItem.name}
+                          {subItem.icon && (
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center mt-0.5">
+                              <subItem.icon className="w-4 h-4 text-brand-orange" />
+                            </span>
+                          )}
+                          <span>
+                            <span className="block text-sm font-semibold text-foreground">
+                              {subItem.name}
+                            </span>
+                            {subItem.sub && (
+                              <span className="block text-xs text-muted-foreground mt-0.5">{subItem.sub}</span>
+                            )}
+                          </span>
                         </Link>
                       ))}
                     </div>
