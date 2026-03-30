@@ -200,7 +200,7 @@ const FAQ = () => {
                   {/* Bottom Line */}
                   <div className="bg-[#f4f6fb] border-l-4 border-brand-orange rounded-r-lg px-5 py-4">
                     <p className="text-xs font-bold uppercase tracking-widest text-brand-orange mb-1">
-                      The Bottom Line
+                      Bottom Line
                     </p>
                     <p className="text-sm sm:text-base text-[#08123A] font-medium leading-relaxed">
                       {faq.bottomLine}
@@ -213,7 +213,7 @@ const FAQ = () => {
                       onClick={() => toggleStory(i)}
                       className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-orange transition-colors border border-gray-300 hover:border-brand-orange rounded-full px-4 py-1.5"
                     >
-                      {storyIndex === i ? "Hide Full Story" : "Read Full Story"}
+                      {storyIndex === i ? "Hide Full Story" : "Full Story"}
                       <ChevronDown
                         className={`w-3.5 h-3.5 transition-transform duration-300 ${storyIndex === i ? "rotate-180" : ""}`}
                       />
