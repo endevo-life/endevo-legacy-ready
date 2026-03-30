@@ -2,6 +2,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { Clock, Calendar, BarChart2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const highlights = [
   {
@@ -24,6 +25,7 @@ const highlights = [
 
 const DigitalReadinessWellnessSection = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const navigate = useNavigate();
 
 
   return (
@@ -98,13 +100,21 @@ const DigitalReadinessWellnessSection = () => {
         </div>
 
         {/* CTA — centered across full width */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center gap-4 mt-10">
           <Button
-            onClick={() => window.location.href = "mailto:hello@endevo.life"}
+            onClick={() => window.open("https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH", "_blank")}
             className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-base font-semibold rounded-full"
             style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
           >
             Request Pilot Info
+          </Button>
+          <Button
+            onClick={() => navigate("/solution#about-program")}
+            variant="outline"
+            className="px-8 py-3 text-base font-semibold rounded-full border-brand-orange text-brand-orange hover:bg-brand-orange/10 hover:text-brand-orange"
+            style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+          >
+            Learn More
           </Button>
         </div>
 
