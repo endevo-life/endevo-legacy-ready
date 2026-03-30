@@ -9,7 +9,7 @@ const NewsAndEvents = () => {
         {/* Hero */}
         <section className="py-20 px-4" style={{ backgroundColor: "#08123A" }}>
           <div className="container max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               News &amp; Events
             </h1>
             <p className="text-lg text-white/80">
