@@ -61,14 +61,14 @@ const ToolsForEmployersSection = () => {
                 Built on compassionate guidance, AI-powered organization, and human-centered legacy readiness.
               </p>
               <Button
-                onClick={() => navigate("/contact")}
+                onClick={() => navigate("/wws-employers")}
                 variant="default"
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
                 style={{
                   fontFamily: "'Open Sans', 'Helvetica', sans-serif",
                 }}
               >
-                Empower Your Team
+                Learn More
               </Button>
             </div>
           </div>
