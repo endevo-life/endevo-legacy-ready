@@ -38,7 +38,7 @@ const FamilyTestimonialsSection = () => {
     author: "Beth",
     role: "Client"
   }];
-  return <section ref={elementRef} className="py-20 bg-muted/30">
+  return <section ref={elementRef} className="pt-20 pb-10 bg-muted/30">
       <div className="container max-w-7xl mx-auto px-4">
         <h2 className={`text-3xl md:text-4xl font-bold text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           Stories From Across <span className="text-brand-orange">Our Community</span>

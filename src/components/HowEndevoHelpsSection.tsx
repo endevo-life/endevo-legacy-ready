@@ -20,7 +20,7 @@ const HowEndevoHelpsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-20 pb-10 bg-white">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14">

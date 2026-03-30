@@ -7,7 +7,7 @@ const ToolsForEmployersSection = () => {
   const animation = useScrollAnimation();
 
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-20 pb-10 bg-background">
       <div className="container max-w-7xl mx-auto px-4">
         <div
           ref={animation.elementRef as any}

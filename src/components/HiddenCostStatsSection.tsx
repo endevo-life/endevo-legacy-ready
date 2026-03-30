@@ -20,7 +20,7 @@ const HiddenCostStatsSection = () => {
     subtitle: "Major Life Events",
     description: "25% of workers face a major life event each year that requires immediate documentation."
   }];
-  return <section ref={elementRef} className="py-20 bg-muted/30">
+  return <section ref={elementRef} className="pt-20 pb-10 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
         <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-2 text-foreground font-serif transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           When employees are unprepared, businesses <span className="text-brand-orange">feel the impact</span>.
