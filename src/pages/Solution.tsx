@@ -165,7 +165,7 @@ const Solution = () => {
         <ServiceProvidersSection />
       </section>
 
-      {/* Our Edge: Where AI Meets Empathy Section */}
+      {/* Our Edge: Human-Centered Guidance Section */}
       <section
         ref={edgeRef as React.RefObject<HTMLElement>}
         id="our-edge"
@@ -178,9 +178,9 @@ const Solution = () => {
               className={`space-y-6 transition-all duration-1000 ${edgeVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               <h2 className="text-3xl md:text-4xl text-foreground">
-                Our Edge: Where{" "}
+                Our Edge:{" "}
                 <span className="font-bold text-brand-orange">
-                  AI Meets Empathy
+                  Human-Centered Guidance
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -214,25 +214,6 @@ const Solution = () => {
                     Legacy readiness & digital preparedness are urgent and
                     costly gaps for families and businesses. ENDevo addresses
                     the crisis head-on with scalable, human-centered solutions.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem
-                  value="ai-guidance"
-                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
-                >
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">🤖</span>
-                      <span className="font-semibold text-foreground">
-                        Empathetic AI Guidance
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Our AI isn't just about automation. It's supportive,
-                    compassionate, and tailored to individuals, families, and
-                    employees.
                   </AccordionContent>
                 </AccordionItem>
 
