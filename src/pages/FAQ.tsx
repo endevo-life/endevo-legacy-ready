@@ -158,8 +158,9 @@ const FAQ = () => {
       <ResponsiveNavbar />
 
       {/* Hero */}
-      <section className="bg-[#08123A] text-white pt-32 pb-16 px-4">
-        <div className="container max-w-3xl mx-auto text-center">
+      <section className="relative text-white pt-32 pb-16 px-4 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69cc0fd518eaa31fe1db61a4.jpeg')" }}>
+        <div className="absolute inset-0 bg-[#08123A]/60" />
+        <div className="relative z-10 container max-w-3xl mx-auto text-center">
           <p className="text-brand-orange text-sm font-semibold uppercase tracking-widest mb-3">
             Got Questions?
           </p>

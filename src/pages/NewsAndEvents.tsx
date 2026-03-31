@@ -7,8 +7,9 @@ const NewsAndEvents = () => {
       <ResponsiveNavbar />
       <main className="flex-1 pt-16">
         {/* Hero */}
-        <section className="py-20 px-4" style={{ backgroundColor: "#08123A" }}>
-          <div className="container max-w-4xl mx-auto text-center">
+        <section className="relative py-20 px-4 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69cad5474a9b24a78d1d17cd.jpeg')" }}>
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 container max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               News &amp; Events
             </h1>
