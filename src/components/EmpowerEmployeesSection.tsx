@@ -18,14 +18,14 @@ const EmpowerEmployeesSection = () => {
       <div className="relative z-10 w-full lg:w-[45%] flex items-center px-4 md:px-8 lg:px-10 py-10">
         <div className="max-w-xl w-full">
         <h1
-          className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`text-[30px] md:text-[40px] lg:text-[50px] font-bold leading-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
         >
-          <span className="text-white whitespace-nowrap">
+          <span className="text-white md:whitespace-nowrap">
             Protect Your Business Continuity
           </span>
           <br />
-          <span className="whitespace-nowrap" style={{ color: "#D95D26" }}>
+          <span className="md:whitespace-nowrap" style={{ color: "#D95D26" }}>
             by Preparing Your People
           </span>
         </h1>
