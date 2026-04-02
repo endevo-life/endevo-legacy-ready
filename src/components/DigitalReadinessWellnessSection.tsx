@@ -31,19 +31,19 @@ const DigitalReadinessWellnessSection = () => {
   return (
     <section
       ref={elementRef as React.RefObject<HTMLElement>}
-      className="bg-muted/20 pt-20 pb-10"
+      className="bg-muted/20 py-20"
     >
       <div className="container max-w-6xl mx-auto px-4">
 
         {/* Header */}
         <div
-          className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-8 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
             Digital Readiness{" "}
             <span className="text-brand-orange">Wellness Program</span>
           </h2>
-          <p className="text-xl font-semibold text-brand-orange mb-6">
+          <p className="text-xl font-semibold text-brand-orange mb-3">
             Prepare today, protect tomorrow.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-5xl mx-auto">
