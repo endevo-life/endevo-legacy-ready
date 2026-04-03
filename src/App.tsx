@@ -33,6 +33,11 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const NewsAndEvents = lazy(() => import("./pages/NewsAndEvents"));
 const SanityStudio = lazy(() => import("./pages/SanityStudio"));
 const Videos = lazy(() => import("./pages/Videos"));
+const CaseStudyAwarenessToAction = lazy(() => import("./pages/CaseStudyAwarenessToAction"));
+const CaseStudyLifeInTransition = lazy(() => import("./pages/CaseStudyLifeInTransition"));
+const CaseStudyMedicalCoverage = lazy(() => import("./pages/CaseStudyMedicalCoverage"));
+const CaseStudyAlreadyCovered = lazy(() => import("./pages/CaseStudyAlreadyCovered"));
+const CaseStudyHospiceVolunteer = lazy(() => import("./pages/CaseStudyHospiceVolunteer"));
 
 const queryClient = new QueryClient();
 
@@ -112,6 +117,11 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/case-studies/from-awareness-to-action" element={<CaseStudyAwarenessToAction />} />
+          <Route path="/case-studies/life-in-transition" element={<CaseStudyLifeInTransition />} />
+          <Route path="/case-studies/medical-coverage" element={<CaseStudyMedicalCoverage />} />
+          <Route path="/case-studies/already-covered" element={<CaseStudyAlreadyCovered />} />
+          <Route path="/case-studies/hospice-volunteer" element={<CaseStudyHospiceVolunteer />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
           <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />

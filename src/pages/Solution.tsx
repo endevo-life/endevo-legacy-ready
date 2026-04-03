@@ -1,3 +1,6 @@
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, HeartPulse, ChevronLeft, ChevronRight } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -27,11 +30,26 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
 import ProcessSection from "@/components/ProcessSection";
 import OrganizationalResilienceSection from "@/components/OrganizationalResilienceSection";
-const solutionHeroConsultation = "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975848df9bdf1a7110b864.jpeg";
+const solutionHeroConsultation =
+  "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975848df9bdf1a7110b864.jpeg";
 
 const Solution = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   const { elementRef: edgeRef, isVisible: edgeVisible } = useScrollAnimation();
+  const { elementRef: lifecycleRef, isVisible: lifecycleVisible } = useScrollAnimation();
+  const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
+  const { elementRef: caseStudiesHeadingRef, isVisible: caseStudiesHeadingVisible } = useScrollAnimation();
+  const { elementRef: howItWorksRef, isVisible: howItWorksVisible } = useScrollAnimation();
+  const caseStudiesRef = useRef<HTMLDivElement>(null);
+  const scrollCaseStudies = (dir: "left" | "right") => {
+    if (caseStudiesRef.current) {
+      const isLarge = window.innerWidth >= 1024;
+      const cardWidth = isLarge
+        ? caseStudiesRef.current.offsetWidth / 3
+        : caseStudiesRef.current.offsetWidth;
+      caseStudiesRef.current.scrollBy({ left: dir === "left" ? -cardWidth : cardWidth, behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -82,24 +100,209 @@ const Solution = () => {
         </div>
       </section>
 
+      {/* Closing the Whole Lifecycle Gap Section */}
+      <section ref={lifecycleRef as any} className="py-20 px-4 bg-white">
+        <div className="container max-w-6xl mx-auto">
+          {/* Title */}
+          <h2
+            className={`text-3xl md:text-4xl font-bold text-[#08123A] text-center mb-16 transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            style={{ fontFamily: "'Playfair Display', Georgia, serif", transitionDelay: lifecycleVisible ? "0ms" : "0ms" }}
+          >
+            Closing the 'Whole Lifecycle Gap'
+          </h2>
+
+          {/* Roadmap */}
+          <div className="relative">
+            {/* Orange bracket annotation for End-of-Life */}
+            <div
+              className="absolute right-0 w-[34%] flex flex-col items-center"
+              style={{ top: "-8px" }}
+            >
+              <p
+                className="text-brand-orange font-bold text-sm mb-1 text-center"
+                style={{ fontFamily: "'Open Sans', sans-serif" }}
+              >
+                The Current Benefits Gap
+              </p>
+              <svg
+                viewBox="0 0 160 32"
+                className="w-full"
+                style={{ height: "32px" }}
+              >
+                <path
+                  d="M8 4 L8 28 L152 28 L152 4"
+                  fill="none"
+                  stroke="#D95D26"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+
+            {/* Icons row */}
+            <div className="flex justify-between items-end mb-0 mt-10">
+              <div
+                className={`w-1/3 flex justify-center transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: lifecycleVisible ? "0ms" : "0ms" }}
+              >
+                <svg
+                  viewBox="0 0 64 64"
+                  className="w-20 h-20 text-[#08123A]"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M10 20 C10 20 10 20 10 20 L10 20 Q10 12 18 12 L38 12 Q44 12 46 18 L50 32 L14 32 Z" />
+                  <path
+                    d="M14 32 L14 42 Q14 46 18 46 L44 46"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="22" cy="52" r="5" />
+                  <circle cx="42" cy="52" r="5" />
+                  <line x1="8" y1="20" x2="2" y2="20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                  <line x1="8" y1="20" x2="8" y2="12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                </svg>
+              </div>
+              <div
+                className={`w-1/3 flex justify-center transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: lifecycleVisible ? "300ms" : "0ms" }}
+              >
+                <HeartPulse className="w-20 h-20 text-[#08123A]" strokeWidth={1.8} />
+              </div>
+              <div
+                className={`w-1/3 flex justify-center transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: lifecycleVisible ? "600ms" : "0ms" }}
+              >
+                <div
+                  className="w-20 h-20 flex items-center justify-center rounded-full"
+                  style={{ border: "3px dashed #9ca3af" }}
+                >
+                  <span
+                    className="text-4xl font-bold text-[#6b7280]"
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                  >
+                    ?
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Horizontal line + dots */}
+            <div className="relative flex items-center justify-between mt-4 mb-6">
+              <div className="absolute left-[5%] right-[5%] h-[3px] bg-[#08123A]" />
+              <div className="w-1/3 flex justify-center">
+                <div className="w-5 h-5 rounded-full bg-[#08123A] z-10" />
+              </div>
+              <div className="w-1/3 flex justify-center">
+                <div className="w-5 h-5 rounded-full bg-[#08123A] z-10" />
+              </div>
+              <div className="w-1/3 flex justify-center">
+                <div className="w-5 h-5 rounded-full bg-[#08123A] z-10" />
+              </div>
+            </div>
+
+            {/* Labels row */}
+            <div className="flex justify-between">
+              <div
+                className={`w-1/3 text-center px-6 transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: lifecycleVisible ? "150ms" : "0ms" }}
+              >
+                <p
+                  className="font-extrabold text-[#08123A] text-base uppercase tracking-widest mb-2"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  Birth
+                </p>
+                <p
+                  className="text-muted-foreground text-sm leading-relaxed"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  Parental Leave,
+                  <br />
+                  Prenatal Support
+                </p>
+              </div>
+              <div
+                className={`w-1/3 text-center px-6 transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: lifecycleVisible ? "450ms" : "0ms" }}
+              >
+                <p
+                  className="font-extrabold text-[#08123A] text-base uppercase tracking-widest mb-2"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  Life
+                </p>
+                <p
+                  className="text-muted-foreground text-sm leading-relaxed"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  Health Insurance,
+                  <br />
+                  Wellness Programs
+                </p>
+              </div>
+              <div
+                className={`w-1/3 text-center px-6 transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: lifecycleVisible ? "750ms" : "0ms" }}
+              >
+                <p
+                  className="font-extrabold text-[#08123A] text-base uppercase tracking-widest mb-2"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  End-of-Life
+                </p>
+                <p
+                  className="text-muted-foreground text-sm leading-relaxed"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  No Structured
+                  <br />
+                  Support
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Quote */}
+          <p
+            className={`mt-12 text-center text-muted-foreground italic text-base max-w-3xl mx-auto leading-relaxed transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            style={{ fontFamily: "'Open Sans', sans-serif", transitionDelay: lifecycleVisible ? "900ms" : "0ms" }}
+          >
+            "Organizations support birth and life but traditionally have no
+            support for end-of-life planning. This program demonstrates care for
+            employees across their entire life journey."
+          </p>
+        </div>
+      </section>
+
       {/* How It Works Section */}
-      <section id="how-it-works" className="scroll-mt-20">
-        <ProcessSection />
+      <section
+        ref={howItWorksRef as any}
+        id="how-it-works"
+        className="scroll-mt-20"
+      >
+        <div className={`transition-all duration-1000 ease-out ${howItWorksVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <ProcessSection />
+        </div>
       </section>
 
       {/* About the Program and Why It Matters Section */}
       <section
+        ref={aboutRef as any}
         id="about-program"
         className="py-20 px-4 bg-muted/30 scroll-mt-20"
       >
         <div
-          className={`container max-w-7xl mx-auto transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
+          className={`container max-w-7xl mx-auto transition-all duration-1000 ease-out ${aboutVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <div className="grid md:grid-cols-2 gap-8">
             {/* About the Program Card */}
             <Card
-              className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ transitionDelay: "0.1s" }}
+              className={`shadow-lg transition-all duration-1000 ease-out ${aboutVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: aboutVisible ? "200ms" : "0ms" }}
             >
               <CardHeader>
                 <CardTitle
@@ -129,8 +332,8 @@ const Solution = () => {
 
             {/* Why It Matters Card */}
             <Card
-              className={`shadow-lg transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ transitionDelay: "0.3s" }}
+              className={`shadow-lg transition-all duration-1000 ease-out ${aboutVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: aboutVisible ? "400ms" : "0ms" }}
             >
               <CardHeader>
                 <CardTitle
@@ -160,8 +363,206 @@ const Solution = () => {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section
+        id="case-studies"
+        className="py-10 px-4 bg-background scroll-mt-20"
+      >
+        <div className="container max-w-[1400px] mx-auto">
+          <div ref={caseStudiesHeadingRef as any} className="text-center mb-12">
+            <h2
+              className={`text-3xl md:text-4xl font-bold text-foreground mb-4 transition-all duration-1000 ease-out ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", transitionDelay: caseStudiesHeadingVisible ? "0ms" : "0ms" }}
+            >
+              See How ENDevo{" "}
+              <span className="text-brand-orange">Makes a Difference</span>
+            </h2>
+            <p
+              className={`text-lg text-muted-foreground max-w-2xl mx-auto transition-all duration-1000 ease-out ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: caseStudiesHeadingVisible ? "200ms" : "0ms" }}
+            >
+              We partner with organizations to provide human-centered support
+              that transforms the way employees navigate life's toughest
+              moments. Here are a few stories of our impact:
+            </p>
+          </div>
+
+          {/* Carousel */}
+          <div
+            ref={caseStudiesRef}
+            className="flex gap-8 overflow-x-hidden mb-8 snap-x snap-mandatory"
+            style={{ scrollBehavior: "smooth" }}
+          >
+            {/* Case Study 1 */}
+            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "300ms" : "0ms" }}>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
+                Case Study
+              </p>
+              <h3
+                className="text-xl font-bold text-foreground leading-snug"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                When Knowing Is Not Enough:
+                <span className="block font-normal text-lg mt-1 text-muted-foreground">
+                  How a Project Manager Closed a 13-Year Planning Gap
+                </span>
+              </h3>
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">Project Manager</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">September 2025</span>
+                </div>
+                <Link
+                  to="/case-studies/from-awareness-to-action"
+                  className="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center hover:bg-brand-orange hover:text-white text-brand-orange transition-colors duration-200"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Case Study 2 */}
+            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "450ms" : "0ms" }}>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
+                Case Study
+              </p>
+              <h3
+                className="text-xl font-bold text-foreground leading-snug"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                The Realist With a List:
+                <span className="block font-normal text-lg mt-1 text-muted-foreground">
+                  How Life-Stage Complexity Stalls Even the Most Motivated Planners
+                </span>
+              </h3>
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">Administrative Professional</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">November 2025</span>
+                </div>
+                <Link
+                  to="/case-studies/life-in-transition"
+                  className="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center hover:bg-brand-orange hover:text-white text-brand-orange transition-colors duration-200"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Case Study 3 */}
+            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "600ms" : "0ms" }}>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
+                Case Study
+              </p>
+              <h3
+                className="text-xl font-bold text-foreground leading-snug"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                As Important as Medical Coverage:
+                <span className="block font-normal text-lg mt-1 text-muted-foreground">
+                  How One Employee's Health Crisis Revealed the Missing Benefit
+                </span>
+              </h3>
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">Healthcare Industry Professional</span>
+                </div>
+                <Link
+                  to="/case-studies/medical-coverage"
+                  className="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center hover:bg-brand-orange hover:text-white text-brand-orange transition-colors duration-200"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Case Study 4 */}
+            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "750ms" : "0ms" }}>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
+                Case Study
+              </p>
+              <h3
+                className="text-xl font-bold text-foreground leading-snug"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                The "Already Covered" Employee:
+                <span className="block font-normal text-lg mt-1 text-muted-foreground">
+                  Why Prior Planning Is Not the Same as Current Planning
+                </span>
+              </h3>
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">Insurance Industry Professional</span>
+                </div>
+                <Link
+                  to="/case-studies/already-covered"
+                  className="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center hover:bg-brand-orange hover:text-white text-brand-orange transition-colors duration-200"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Case Study 5 */}
+            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "900ms" : "0ms" }}>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
+                Case Study
+              </p>
+              <h3
+                className="text-xl font-bold text-foreground leading-snug"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                The Most Informed Person in the Room Still Had Gaps:
+                <span className="block font-normal text-lg mt-1 text-muted-foreground">
+                  A Hospice Volunteer's Case for Employer Action
+                </span>
+              </h3>
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">Senior Industry Professional</span>
+                </div>
+                <Link
+                  to="/case-studies/hospice-volunteer"
+                  className="flex-shrink-0 ml-4 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center hover:bg-brand-orange hover:text-white text-brand-orange transition-colors duration-200"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Scroll Buttons */}
+          <div className="flex justify-center gap-3">
+            <button
+              onClick={() => scrollCaseStudies("left")}
+              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-brand-orange hover:text-brand-orange transition-colors duration-200"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scrollCaseStudies("right")}
+              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-brand-orange hover:text-brand-orange transition-colors duration-200"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Connecting You With Trusted Service Providers Section */}
-      <section id="service-providers" className="scroll-mt-20">
+      <section id="service-providers" className="scroll-mt-20 -mt-10">
         <ServiceProvidersSection />
       </section>
 

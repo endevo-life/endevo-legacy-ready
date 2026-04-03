@@ -1,13 +1,19 @@
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useNavigate } from "react-router-dom";
-import financialPartners from "@/assets/financial-partners-new.jpeg";
-import digitalPartners from "@/assets/digital-partners-new.jpeg";
 
 const ServiceProvidersSection = () => {
   const navigate = useNavigate();
   const { elementRef, isVisible } = useScrollAnimation();
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const scrollCards = (dir: "left" | "right") => {
+    if (cardsRef.current) {
+      cardsRef.current.scrollBy({ left: dir === "left" ? -cardsRef.current.offsetWidth : cardsRef.current.offsetWidth, behavior: "smooth" });
+    }
+  };
   return (
     <section id="for-employees" className="py-20 bg-background scroll-mt-20">
       <div
@@ -33,9 +39,9 @@ const ServiceProvidersSection = () => {
         </p>
 
         {/* Three Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div ref={cardsRef} className="flex md:grid md:grid-cols-3 gap-8 mb-4 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
           {/* Card 1 - Physical Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden flex-shrink-0 w-full md:w-auto snap-center">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img
@@ -67,7 +73,7 @@ const ServiceProvidersSection = () => {
           </Card>
 
           {/* Card 2 - Financial Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden flex-shrink-0 w-full md:w-auto snap-center">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img
@@ -100,7 +106,7 @@ const ServiceProvidersSection = () => {
           </Card>
 
           {/* Card 3 - Digital Partners */}
-          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden">
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden flex-shrink-0 w-full md:w-auto snap-center">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img
@@ -131,6 +137,22 @@ const ServiceProvidersSection = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Scroll Buttons — mobile only */}
+        <div className="flex md:hidden justify-center gap-3 mb-8">
+          <button
+            onClick={() => scrollCards("left")}
+            className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-brand-orange hover:text-brand-orange transition-colors duration-200"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => scrollCards("right")}
+            className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-brand-orange hover:text-brand-orange transition-colors duration-200"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
 
         {/* Closing Tagline */}
