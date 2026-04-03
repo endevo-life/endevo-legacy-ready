@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight, Workflow, BookOpen, Users, Sparkles, Briefcase, UserCheck, User, ShieldCheck, Smartphone, MessageSquare, Video, FileText, HelpCircle, Newspaper, Building2, Crown, UsersRound, Heart, Handshake } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Workflow, BookOpen, Users, Sparkles, Briefcase, UserCheck, User, ShieldCheck, Smartphone, MessageSquare, Video, FileText, HelpCircle, Newspaper, Building2, Crown, UsersRound, Heart, Handshake, ClipboardList } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,6 +44,12 @@ const ResponsiveNavbar = () => {
           sub: "What sets ENDevo apart",
           href: "/solution#our-edge",
           icon: Sparkles,
+        },
+        {
+          name: "Case Studies",
+          sub: "Real stories of impact",
+          href: "/solution#case-studies",
+          icon: ClipboardList,
         },
       ],
     },
