@@ -84,6 +84,43 @@ const NewsAndEvents = () => {
                 </div>
               </div>
             </div>
+            {/* Card - WOW3 Award */}
+            <div className="border border-border rounded-xl p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 md:items-stretch">
+                {/* Thumbnail */}
+                <div className="flex-shrink-0 w-full md:w-64 h-48 md:h-auto">
+                  <img
+                    src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69d41034ee4b21c3f33199b5.jpg"
+                    alt="WOW3 Unstoppable 2025 Winner — Most Inspirational Women of Web3 and AI — Niki Weiss"
+                    className="w-full h-full object-cover object-top rounded-lg"
+                  />
+                </div>
+
+                {/* Info */}
+                <div className="flex flex-col justify-between flex-1">
+                  <div>
+                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-brand-orange mb-3">
+                      2025 Award
+                    </span>
+
+                    <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                      Most Inspirational Women of Web3 and AI
+                    </h2>
+
+                    <p className="text-muted-foreground mb-4">
+                      ENDevo Founder &amp; CEO{" "}
+                      <span className="font-medium text-foreground">Niki Weiss</span>{" "}
+                      was named a 2025 Winner of the WOW3 Unstoppable Award for Most Inspirational Women of Web3 and AI — recognising her work at the intersection of legacy planning and digital futures.
+                    </p>
+                  </div>
+
+                  <span className="inline-block text-sm font-semibold text-muted-foreground">
+                    WOW3 Unstoppable · 2025
+                  </span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
