@@ -315,16 +315,10 @@ const Solution = () => {
               <CardContent>
                 <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                   <p>
-                    The Legacy Readiness Employee Wellness Program is built
-                    around one simple truth: you cannot build a lasting legacy
-                    without caring for yourself first.
+                    ENDevo helps employers support their teams with a structured, guided program that educates, project-manages, and empowers employees so their life story, values, and digital footprint are protected, preserved, and passed on with intention.
                   </p>
                   <p>
-                    We provide a holistic approach to wellness that supports
-                    employees physically, emotionally, and financially. Whether
-                    it is improving daily habits, navigating career changes, or
-                    preparing for major life events, our goal is to empower you
-                    to show up as your best self, today and in the future.
+                    We provide a holistic approach to wellness that supports employees legally, financially, physically, and digitally. Whether it's preparing for major life events or managing important aspects of their personal and digital lives, our goal is to empower employees to show up as their best selves, today and in the future.
                   </p>
                 </div>
               </CardContent>
@@ -353,7 +347,7 @@ const Solution = () => {
                     and communities.
                   </p>
                   <p>
-                    Legacy readiness is more than preparing for what is next; it
+                    Legacy readiness & digital resilience is more than preparing for what is next; it
                     is about living well right now.
                   </p>
                 </div>
