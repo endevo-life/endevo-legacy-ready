@@ -606,7 +606,7 @@ const Solution = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Legacy readiness & digital preparedness are urgent and
+                    Legacy readiness & digital resilience are urgent and
                     costly gaps for families and businesses. ENDevo addresses
                     the crisis head-on with scalable, human-centered solutions.
                   </AccordionContent>
@@ -625,8 +625,7 @@ const Solution = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Plan across every domain, beliefs, legal, financial,
-                    physical, and digital, all in one unified platform.
+                    Plan across four identified domains of legal, financial, physical, and digital, all in one unified platform.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -638,13 +637,12 @@ const Solution = () => {
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">🛒</span>
                       <span className="font-semibold text-foreground">
-                        Marketplace Integration
+                        Readiness Hub
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Seamless connections to trusted providers like Trust&Will
-                    and Presidio for diverse planning needs.
+                    Explore trusted partners and resources that help you prepare, plan, and protect what matters most.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -666,23 +664,6 @@ const Solution = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem
-                  value="security"
-                  className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
-                >
-                  <AccordionTrigger className="text-left hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">🔒</span>
-                      <span className="font-semibold text-foreground">
-                        Secure & Reliable
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Enterprise-grade safeguards protect sensitive data and
-                    digital footprints.
-                  </AccordionContent>
-                </AccordionItem>
 
                 <AccordionItem
                   value="values"
@@ -697,9 +678,7 @@ const Solution = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Compassion, Legacy Readiness, Action & Empowerment,
-                    Resilience (Digital & Human), Innovation with Integrity,
-                    Teamwork & Collaboration, Yesterday-Today-Tomorrow
+                    Guided by compassion, resilience, integrity, and teamwork, we prepare today for a better tomorrow.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
