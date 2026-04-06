@@ -34,39 +34,33 @@ const ServiceProvidersSection = () => {
         <p className="text-center text-lg text-muted-foreground max-w-4xl mx-auto mb-16 leading-relaxed">
           ENDevo does not just give you tools. We connect you with the experts
           and services that help bring your plan to life. Our role is to
-          educate, guide, and empower you to know who to talk to, when to talk
+          educate, project manage, and empower you to know who to talk to, when to talk
           to them, and how to take action.
         </p>
 
         {/* Three Feature Cards */}
-        <div ref={cardsRef} className="flex md:grid md:grid-cols-3 gap-8 mb-4 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-          {/* Card 1 - Physical Partners */}
+        <div ref={cardsRef} className="flex md:grid md:grid-cols-4 gap-8 mb-4 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+          {/* Card 1 - Legal Partners */}
           <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden flex-shrink-0 w-full md:w-auto snap-center">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img
-                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997584820c0351d060bb450.jpeg"
-                  alt="Physical Partners - Funeral homes, hospice care, and long-term care providers"
-                  className="w-full h-64 object-cover"
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69d41c49a7dcb4cff0ee8bc1.jpeg"
+                  alt="Legal Partners - Estate planning attorneys, trusts and wills specialists, and legal advisors"
+                  className="w-full h-40 object-cover"
                   loading="lazy"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">Physical Partners</h3>
+                <h3 className="text-xl font-bold mb-3">Legal Partners</h3>
                 <p className="text-muted-foreground">
-                  Funeral homes, hospice care, and long-term care providers to
-                  support you and your loved ones through life's toughest
-                  transitions.
+                  Estate planning attorneys, trusts and wills specialists, and legal advisors to help protect your rights, manage important documents, and ensure your wishes are honored.
                 </p>
               </div>
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-center text-base leading-relaxed">
-                  Life's most challenging moments are easier to navigate when
-                  you have guidance and support. At ENDevo, we help you plan
-                  ahead so your loved ones are cared for with compassion and
-                  dignity, easing stress during difficult times and ensuring
-                  peace of mind for the future.
+                  Navigating legal matters can be overwhelming, especially when it comes to protecting your rights and ensuring your wishes are honored. ENDevo connects you with experienced estate planning attorneys, trusts and wills specialists, and legal advisors who guide you through managing important documents, making informed decisions, and safeguarding your legacy for yourself and your loved ones.
                 </p>
               </div>
             </CardContent>
@@ -79,7 +73,7 @@ const ServiceProvidersSection = () => {
                 <img
                   src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975848181715f0e9a48f5e.jpeg"
                   alt="Financial Partners - Wealth advisors, accountants, and insurance providers"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-40 object-cover"
                   loading="lazy"
                 />
               </div>
@@ -105,14 +99,46 @@ const ServiceProvidersSection = () => {
             </CardContent>
           </Card>
 
-          {/* Card 3 - Digital Partners */}
+          {/* Card 3 - Physical Partners */}
+          <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden flex-shrink-0 w-full md:w-auto snap-center">
+            <CardContent className="p-0">
+              <div className="overflow-hidden rounded-t-lg">
+                <img
+                  src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997584820c0351d060bb450.jpeg"
+                  alt="Physical Partners - Funeral homes, hospice care, and long-term care providers"
+                  className="w-full h-40 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">Physical Partners</h3>
+                <p className="text-muted-foreground">
+                  Funeral homes, hospice care, and long-term care providers to
+                  support you and your loved ones through life's toughest
+                  transitions.
+                </p>
+              </div>
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-center text-base leading-relaxed">
+                  Life's most challenging moments are easier to navigate when
+                  you have guidance and support. At ENDevo, we help you plan
+                  ahead so your loved ones are cared for with compassion and
+                  dignity, easing stress during difficult times and ensuring
+                  peace of mind for the future.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Card 4 - Digital Partners */}
           <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden flex-shrink-0 w-full md:w-auto snap-center">
             <CardContent className="p-0">
               <div className="overflow-hidden rounded-t-lg">
                 <img
                   src="https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699758488523c5f9c2ce5201.jpeg"
                   alt="Digital Partners - Digital asset managers and secure storage services"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-40 object-cover"
                   loading="lazy"
                 />
               </div>
