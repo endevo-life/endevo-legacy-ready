@@ -7,19 +7,18 @@ import { useNavigate } from "react-router-dom";
 const highlights = [
   {
     icon: Clock,
-    title: "Time-bound guidance",
-    description: "A structured program that keeps employees on track.",
+    title: "Meets employees where they are",
+    description: "Support that activates based on real life events, not a fixed schedule. Whether an employee is planning ahead or in crisis, the program responds.",
   },
   {
     icon: Calendar,
-    title: "Low operational risk",
-    description: "A 3-month pilot for measurable outcomes.",
+    title: "Contained. Measurable. Expandable.",
+    description: "Start with a defined employee group, prove outcomes, then scale. No long-term commitment required.",
   },
   {
     icon: BarChart2,
     title: "Data-backed ROI",
-    description:
-      "Capture key metrics like absenteeism and turnover for business validation.",
+    description: "Track absenteeism, productivity loss, and HR escalations before and after. Built for your business case.",
   },
 ];
 
