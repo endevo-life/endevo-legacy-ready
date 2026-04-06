@@ -44,7 +44,7 @@ const ProcessSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Organize & Secure</h3>
-              <p className="text-muted-foreground leading-relaxed">Guide staff with AI-powered tools that help them organize legal, financial, and digital assets in one secure place.</p>
+              <p className="text-muted-foreground leading-relaxed">Guide staff with AI-powered tools to organize legal, financial, and digital assets via a comprehensive project roadmap.</p>
             </div>
 
             {/* Arrow 2 */}
@@ -62,7 +62,7 @@ const ProcessSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground">Support Well-being</h3>
-              <p className="text-muted-foreground leading-relaxed">Offer confidence and support that reduces stress, protects well-being, and lowers the risk of extended absences.</p>
+              <p className="text-muted-foreground leading-relaxed">Offer human-centric support through live masterclasses, 1:1 accountability, and virtual office hours to boost confidence and reduce stress.</p>
             </div>
 
             {/* Arrow 3 */}
