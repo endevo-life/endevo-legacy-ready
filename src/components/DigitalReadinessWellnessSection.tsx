@@ -39,26 +39,22 @@ const DigitalReadinessWellnessSection = () => {
           className={`text-center mb-8 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-            Digital Readiness{" "}
-            <span className="text-brand-orange">Wellness Program</span>
+            Legacy Readiness &{" "}
+            <span className="text-brand-orange">Digital Resilience</span>
           </h2>
           <p className="text-xl font-semibold text-brand-orange mb-3">
             Prepare today, protect tomorrow.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-5xl mx-auto">
-            Our guided pilot program helps employees complete critical life and
-            digital planning before a crisis occurs. By combining structured
-            guidance, human accountability, and simple tools, we reduce overwhelm
-            while ensuring life stories and digital footprints are protected,
-            preserved, and passed on intentionally.
+            Our comprehensive employee wellness program helps employees complete critical life and digital planning decisions before a crisis occurs. By combining step-by-step roadmap, 1:1 accountability and productivity tools, we reduce the feelings of overwhelm while ensuring life stories and digital footprints are protected, preserved, and passed on intentionally.
           </p>
         </div>
 
-        {/* Pilot highlights + image */}
+        {/* Program highlights + image */}
         <div className="flex flex-col lg:flex-row gap-12 items-start">
         <div className="flex-1">
           <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-6">
-            Pilot highlights
+            Program highlights
           </p>
 
           <ul className="space-y-8 mb-10">
@@ -105,7 +101,7 @@ const DigitalReadinessWellnessSection = () => {
             className="bg-brand-orange hover:bg-brand-orange/90 text-white px-8 py-3 text-base font-semibold rounded-full"
             style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
           >
-            Request Pilot Info
+            Request Program Info
           </Button>
           <Button
             onClick={() => navigate("/solution#about-program")}
