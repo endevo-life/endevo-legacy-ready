@@ -15,10 +15,12 @@ const EmpowerEmployeesSection = () => {
         backgroundImage: `url(${empowerBg})`,
       }}
     >
+      {/* Left gradient overlay */}
+      <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.1) 55%, transparent 65%)" }} />
       <div className="relative z-10 w-full lg:w-[45%] flex items-center px-4 md:px-8 lg:px-10 py-10">
         <div className="max-w-xl w-full">
         <h1
-          className={`text-[30px] md:text-[40px] lg:text-[50px] font-bold leading-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`text-[24px] md:text-[32px] lg:text-[40px] font-bold leading-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
         >
           <span className="text-white md:whitespace-nowrap">
@@ -34,9 +36,8 @@ const EmpowerEmployeesSection = () => {
           className={`mt-6 text-lg md:text-xl mb-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif", transitionDelay: "200ms" }}
         >
-          <span className="font-bold" style={{ color: "#D95D26" }}>ENDevo</span>
           <span className="text-white">
-            : The Project Management Solution for Legacy & Digital Readiness
+            The Project Management Solution for Legacy Readiness & Digital Resilience
           </span>
         </p>
 
