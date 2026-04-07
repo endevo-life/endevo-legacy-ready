@@ -23,7 +23,7 @@ const HiddenCostStatsSection = () => {
   return <section ref={elementRef} className="pt-20 pb-10 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
         <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-2 text-foreground font-serif transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          When employees are unprepared, businesses <span className="text-brand-orange">feel the impact</span>.
+          When employees are unprepared,<br />businesses <span className="text-brand-orange">feel the impact</span>.
         </h2>
         <p className={`text-center text-muted-foreground text-base md:text-lg max-w-3xl mx-auto mb-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{
         transitionDelay: "100ms"
