@@ -47,10 +47,10 @@ const Index = () => {
                   Our <span className="text-brand-orange">Human-Centered</span> Support
                 </h2>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  ENDevo blends technology with compassionate guidance, ensuring employees feel supported through life's hardest moments without adding burden to managers or teams.
+                  ENDevo blends technology with compassionate guidance, ensuring employees feel supported through life's decisions while enabling them to plan ahead without added burden.
                 </p>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Our approach combines innovative solutions with personal care, empowering individuals to navigate challenges confidently.
+                  Our approach combines innovative solutions with education, structured project management, and empowerment to guide individuals through each step with clarity and confidence.
                 </p>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   Every step of the way, our CEO, <Link to="/company#niki" className="text-brand-orange font-semibold hover:underline">Niki Weiss</Link>, certified in multiple areas of employee wellbeing and organizational support, guides clients to implement strategies that are both effective and empathetic, making the experience truly human-centered.
