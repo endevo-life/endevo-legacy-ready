@@ -406,8 +406,6 @@ const Solution = () => {
                   <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
                   <span className="text-xs text-muted-foreground">·</span>
                   <span className="text-xs text-muted-foreground">Project Manager</span>
-                  <span className="text-xs text-muted-foreground">·</span>
-                  <span className="text-xs text-muted-foreground">September 2025</span>
                 </div>
                 <Link
                   to="/case-studies/from-awareness-to-action"
@@ -437,8 +435,6 @@ const Solution = () => {
                   <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
                   <span className="text-xs text-muted-foreground">·</span>
                   <span className="text-xs text-muted-foreground">Administrative Professional</span>
-                  <span className="text-xs text-muted-foreground">·</span>
-                  <span className="text-xs text-muted-foreground">November 2025</span>
                 </div>
                 <Link
                   to="/case-studies/life-in-transition"
