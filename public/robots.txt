@@ -1,8 +1,10 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /studio/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /studio/
 
 User-agent: Twitterbot
 Allow: /
@@ -12,5 +14,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /studio/
 
 Sitemap: https://www.endevo.life/sitemap.xml
