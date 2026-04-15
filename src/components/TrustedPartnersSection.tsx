@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Filter, X, ArrowRight } from "lucide-react";
+import { Filter, X, ArrowRight, ChevronDown } from "lucide-react";
 import beliefsIcon from "@/assets/beliefs-icon-new.png";
 import legalIcon from "@/assets/legal-icon-new.png";
 import financialIcon from "@/assets/financial-icon-new.png";
@@ -15,6 +15,26 @@ import categoryFinancialIcon from "@/assets/category-financial-icon.png";
 import categoryPhysicalIcon from "@/assets/category-physical-icon.png";
 import categoryDigitalIcon from "@/assets/category-digital-icon.png";
 const partners = [
+  {
+    name: "Nia Emberly",
+    logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975744f83453e670329c0b.png",
+    tagline: "Carry their love with you—for evermore",
+    description:
+      "A memorial bracelet handcrafted from solidified cremains. A permanent heirloom made through our patented ash-solidification process — so you can feel close again, every day.",
+    buttonText: "Learn More",
+    url: "https://niaemberly.ca/",
+    category: "physical" as const,
+  },
+  {
+    name: "Trust & Will",
+    logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757441817156cc8a451cb.png",
+    tagline: "Make your estate plan and make it count.",
+    description:
+      "Create your will or trust with the platform built to evolve, protecting your loved ones today, tomorrow, and beyond.",
+    buttonText: "Get Started",
+    url: "https://trustandwill.com/?g_acctid=740-480-2447&g_adgroupid=193488517368&g_adid=781597115499&g_adtype=search&g_campaign=Trust+%26+Will+%7C+Branded+%7C+BOFU_m&g_campaignid=23212020865&g_keyword=trust%20and%20will&g_keywordid=kwd-25464110&g_network=g&utm_adgroup={adgroup}&utm_medium=cpc&utm_source=google&utm_term=trust%20and%20will&utm_campaign=trustandwill_bofu_m",
+    category: "legal" as const,
+  },
   {
     name: "Prisidio",
     logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg",
@@ -65,6 +85,7 @@ const categoryInfo = [
 const TrustedPartnersSection = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const filteredPartners = partners.filter((partner) => {
     // Filter by category - only show if category is selected
     const matchesCategory =
@@ -78,7 +99,7 @@ const TrustedPartnersSection = () => {
       partner.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       partner.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  }).sort((a, b) => a.name.localeCompare(b.name));
   const toggleCategory = (category: string) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
@@ -93,12 +114,12 @@ const TrustedPartnersSection = () => {
           Connecting You to Trusted Experts
         </h2>
 
-        <p className="text-center text-lg text-foreground/80 mb-8">
+        {/* Desktop: Browse by category label + category cards */}
+        <p className="hidden md:block text-center text-lg text-foreground/80 mb-8">
           Browse by category
         </p>
 
-        {/* Category Information Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {categoryInfo.map((category, index) => (
             <button
               key={index}
@@ -117,9 +138,7 @@ const TrustedPartnersSection = () => {
                     className="w-12 h-12 mx-auto object-contain"
                   />
                   <h3 className="font-bold text-lg text-foreground">
-                    {category.name === "Beliefs"
-                      ? "Your Beliefs"
-                      : category.name}
+                    {category.name === "Beliefs" ? "Your Beliefs" : category.name}
                   </h3>
                   <p className="text-sm text-foreground/70">
                     {category.description}
@@ -130,8 +149,8 @@ const TrustedPartnersSection = () => {
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="flex justify-center mb-12">
+        {/* Desktop: View All button */}
+        <div className="hidden md:flex justify-center mb-12">
           <Link to="/trusted-experts">
             <Button
               className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base group rounded-full"
@@ -143,14 +162,64 @@ const TrustedPartnersSection = () => {
           </Link>
         </div>
 
-        <div className="space-y-6">
-          {filteredPartners.map((partner, index) => (
+        {/* Mobile: Filter by category button + dropdown */}
+        <div className="md:hidden mb-6">
+          <button
+            onClick={() => setMobileFilterOpen((v) => !v)}
+            className="w-full flex items-center justify-between px-5 py-3 rounded-full border border-border bg-white shadow-sm text-foreground font-medium"
+          >
+            <span className="flex items-center gap-2">
+              <Filter className="w-4 h-4 text-brand-orange" />
+              Filter by Category
+              {selectedCategories.length > 0 && (
+                <span className="ml-1 bg-brand-orange text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  {selectedCategories.length}
+                </span>
+              )}
+            </span>
+            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileFilterOpen ? "rotate-180" : ""}`} />
+          </button>
+
+          {mobileFilterOpen && (
+            <div className="mt-2 rounded-2xl border border-border bg-white shadow-md p-4 grid grid-cols-2 gap-2">
+              {categoryInfo.map((category, index) => (
+                <button
+                  key={index}
+                  onClick={() => toggleCategory(category.category)}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-full border text-sm font-medium transition-all ${
+                    selectedCategories.includes(category.category)
+                      ? "border-brand-orange bg-brand-orange/10 text-brand-orange"
+                      : "border-border text-foreground"
+                  }`}
+                >
+                  <img src={category.icon} alt="" className="w-5 h-5 object-contain" />
+                  {category.name === "Beliefs" ? "Your Beliefs" : category.name}
+                </button>
+              ))}
+              {selectedCategories.length > 0 && (
+                <button
+                  onClick={() => setSelectedCategories([])}
+                  className="col-span-2 text-xs text-muted-foreground underline mt-1 text-center"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Mobile: always shows first 3 (or filtered), hidden on desktop */}
+        <div className="md:hidden space-y-6">
+          {(selectedCategories.length > 0
+            ? filteredPartners
+            : partners.slice(0, 3).sort((a, b) => a.name.localeCompare(b.name))
+          ).map((partner, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-lg transition-shadow"
             >
               <CardContent className="p-6 md:p-8">
-                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
                   {/* Logo */}
                   <div
                     className="flex-shrink-0 cursor-pointer"
@@ -164,7 +233,7 @@ const TrustedPartnersSection = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 space-y-4">
+                  <div className="flex-1 space-y-4 text-center md:text-left">
                     <h3 className="text-xl md:text-2xl font-bold text-foreground">
                       {partner.name}
                     </h3>
@@ -176,7 +245,7 @@ const TrustedPartnersSection = () => {
                     </p>
 
                     {/* CTA Button */}
-                    <div className="pt-2">
+                    <div className="pt-2 flex justify-center md:justify-start">
                       <Button
                         onClick={() => window.open(partner.url, "_blank")}
                         className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base rounded-full"
@@ -192,6 +261,58 @@ const TrustedPartnersSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Desktop: only shows cards when a category is selected */}
+        <div className="hidden md:block space-y-6">
+          {filteredPartners.map((partner, index) => (
+            <Card
+              key={index}
+              className="overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
+                  <div
+                    className="flex-shrink-0 cursor-pointer"
+                    onClick={() => window.open(partner.url, "_blank")}
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]"
+                    />
+                  </div>
+                  <div className="flex-1 space-y-4 text-center md:text-left">
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground">{partner.name}</h3>
+                    <p className="text-base md:text-lg font-bold text-brand-orange">{partner.tagline}</p>
+                    <p className="text-sm md:text-base text-foreground/80 leading-relaxed">{partner.description}</p>
+                    <div className="pt-2 flex justify-center md:justify-start">
+                      <Button
+                        onClick={() => window.open(partner.url, "_blank")}
+                        className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base rounded-full"
+                        style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                      >
+                        {partner.buttonText}
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Mobile: View All button below cards */}
+        <div className="md:hidden flex justify-center mt-8">
+          <Link to="/trusted-experts">
+            <Button
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base group rounded-full"
+              style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+            >
+              View All Trusted Experts
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

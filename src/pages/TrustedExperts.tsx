@@ -16,6 +16,26 @@ import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 const experts = [
   {
+    name: "Trust & Will",
+    logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757441817156cc8a451cb.png",
+    tagline: "Make your estate plan and make it count.",
+    description:
+      "Create your will or trust with the platform built to evolve, protecting your loved ones today, tomorrow, and beyond.",
+    buttonText: "Get Started",
+    url: "https://trustandwill.com/?g_acctid=740-480-2447&g_adgroupid=193488517368&g_adid=781597115499&g_adtype=search&g_campaign=Trust+%26+Will+%7C+Branded+%7C+BOFU_m&g_campaignid=23212020865&g_keyword=trust%20and%20will&g_keywordid=kwd-25464110&g_network=g&utm_adgroup={adgroup}&utm_medium=cpc&utm_source=google&utm_term=trust%20and%20will&utm_campaign=trustandwill_bofu_m",
+    category: "Legal",
+  },
+  {
+    name: "Nia Emberly",
+    logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975744f83453e670329c0b.png",
+    tagline: "Carry their love with you—for evermore",
+    description:
+      "A memorial bracelet handcrafted from solidified cremains. A permanent heirloom made through our patented ash-solidification process — so you can feel close again, every day.",
+    buttonText: "Learn More",
+    url: "https://niaemberly.ca/",
+    category: "Physical",
+  },
+  {
     name: "Prisidio",
     logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg",
     tagline: "Your Digital Vault. For Life.®",
@@ -54,7 +74,7 @@ const TrustedExperts = () => {
       selectedCategories.includes(expert.category);
 
     return matchesSearch && matchesCategory;
-  });
+  }).sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div className="min-h-screen">
       <ResponsiveNavbar />
