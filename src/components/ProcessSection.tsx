@@ -10,7 +10,7 @@ const ProcessSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">How It Works</h2>
-          <p className="text-lg text-muted-foreground">Four simple steps to complete preparedness</p>
+          <p className="text-lg text-muted-foreground">Supporting You Through Preparedness</p>
         </div>
         
         <div className="relative max-w-7xl mx-auto">

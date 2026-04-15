@@ -23,7 +23,7 @@ const ResponsiveNavbar = () => {
       submenu: [
         {
           name: "How It Works",
-          sub: "A simple 3-step process",
+          sub: "Supporting You Through Preparedness",
           href: "/solution#how-it-works",
           icon: Workflow,
         },
