@@ -292,49 +292,11 @@ const WWSEmployers = () => {
               Practical Tools for HR Teams
             </h2>
 
-            {/* 3-column Grid */}
+            {/* Cards Grid */}
             <div
-              className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 delay-150 ${resourcesAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-700 delay-150 ${resourcesAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               {/* Card 1 */}
-              <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
-                <h3
-                  className="text-xl font-bold mb-4"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                    color: "#0F1738",
-                  }}
-                >
-                  Peace of Mind Assessment
-                </h3>
-                <p
-                  className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
-                  Provide employees with a quick way to identify their current
-                  level of preparedness.
-                </p>
-                <Button
-                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    backgroundColor: "#0F1738",
-                  }}
-                  onClick={() =>
-                    window.open(
-                      "https://jbigogmrgex.typeform.com/to/qBsak5CQ",
-                      "_blank",
-                    )
-                  }
-                >
-                  Take Assessment
-                </Button>
-              </div>
-
-              {/* Card 2 */}
               <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
                 <h3
                   className="text-xl font-bold mb-4"

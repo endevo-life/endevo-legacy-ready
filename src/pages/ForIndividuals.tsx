@@ -196,26 +196,6 @@ const WWSIndividuals = () => {
                   of mind.
                 </p>
 
-                <div className="mt-8">
-                  <p className="text-muted-foreground/70 italic mb-3">
-                    Find out how ready you are
-                  </p>
-                  <Button
-                    onClick={() =>
-                      window.open(
-                        "https://jbigogmrgex.typeform.com/to/qBsak5CQ",
-                        "_blank",
-                      )
-                    }
-                    variant="outline"
-                    className="border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-1.5 text-base font-semibold rounded-full"
-                    style={{
-                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    }}
-                  >
-                    Take A Free Peace Of Mind Assessment
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
