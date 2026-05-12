@@ -85,16 +85,6 @@ const ProcessSection = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className={`text-center mt-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-        transitionDelay: isVisible ? '0.8s' : '0s'
-      }}>
-          <button className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105" style={{
-          fontFamily: "'Open Sans', 'Helvetica', sans-serif"
-        }} onClick={() => window.open('https://jbigogmrgex.typeform.com/to/qBsak5CQ', '_blank')}>
-            Take A Free Peace Of Mind Assessment
-          </button>
-        </div>
       </div>
     </section>;
 };
