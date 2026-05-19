@@ -12,7 +12,7 @@ type FAQ = {
 
 const faqs: FAQ[] = [
   {
-    question: "What is ENDevo and how does it function as an employee benefit?",
+    question: "What is end-of-life planning as an employee benefit?",
     bottomLine:
       "A structured, project-managed wellness program that guides employees through building a complete end-of-life plan across Legal, Financial, Physical, and Digital before any crisis occurs. The deliverable is My Final Playbook.",
     fullStory: [
@@ -23,7 +23,7 @@ const faqs: FAQ[] = [
   },
   {
     question:
-      "How does ENDevo reduce business risk and protect operational continuity?",
+      "How does poor end-of-life planning affect businesses and HR teams?",
     bottomLine:
       "Unprepared employees create unplanned absences and HR chaos when life events hit. ENDevo eliminates that risk by getting employees planned in advance. Conservative modeling shows 5 to 7x ROI.",
     fullStory: [
@@ -33,7 +33,7 @@ const faqs: FAQ[] = [
     ],
   },
   {
-    question: "Why won't employees just do this planning on their own?",
+    question: "Why do most employees never finish their end-of-life planning?",
     bottomLine:
       "75% will not. The process is complex, emotional, and easy to defer indefinitely. ENDevo provides the structure, expert accountability, and milestone framework that converts intention into a finished plan.",
     fullStory: [
@@ -44,7 +44,7 @@ const faqs: FAQ[] = [
   },
   {
     question:
-      "What does ENDevo actually deliver for the employee and for HR?",
+      "What does a workplace end-of-life planning program actually include?",
     bottomLine:
       "Employees receive My Final Playbook, a completed plan across all four pillars. HR receives a post-program outcomes report with completion rates, confidence improvement data, and ROI documentation.",
     fullStory: [
@@ -58,8 +58,7 @@ const faqs: FAQ[] = [
     ],
   },
   {
-    question:
-      "How does this improve employee retention and talent competitiveness?",
+    question: "Does my employer offer end-of-life planning as a benefit?",
     bottomLine:
       "92% of participants called it a competitive advantage. Employees compared it to medical and disability coverage. It closes the whole lifecycle gap: birth and life are supported by benefits today. End-of-life planning is not.",
     fullStory: [
@@ -70,7 +69,7 @@ const faqs: FAQ[] = [
   },
   {
     question:
-      "We already have an EAP, bereavement policy, and legal benefit. Why do we need ENDevo?",
+      "What is the difference between an EAP and end-of-life planning support?",
     bottomLine:
       "Those benefits are reactive. ENDevo is proactive. It also activates the benefits you are already paying for but employees never use. It does not replace your stack. It makes your stack work.",
     fullStory: [
@@ -80,7 +79,7 @@ const faqs: FAQ[] = [
     ],
   },
   {
-    question: "Which employees benefit most from this program?",
+    question: "Which employees need end-of-life planning support the most?",
     bottomLine:
       "Highest immediate impact: caregivers, employees on medical leave, and employees in major life transitions. Meaningful impact across all ages and roles. The planning gap does not discriminate by age or seniority.",
     fullStory: [
@@ -90,7 +89,8 @@ const faqs: FAQ[] = [
     ],
   },
   {
-    question: "What does implementation require from our HR team?",
+    question:
+      "How hard is it for HR to implement an end-of-life planning benefit?",
     bottomLine:
       "Minimal. Your team identifies the cohort and communicates the benefit. ENDevo runs everything else over a 3-month timeline using your existing tools: Teams, Slack, WebEx, or email.",
     fullStory: [
@@ -101,7 +101,7 @@ const faqs: FAQ[] = [
   },
   {
     question:
-      "We already offer disability, life insurance, and legal benefits. How does ENDevo make those investments work harder?",
+      "Do life insurance and legal benefits cover what employees actually need?",
     bottomLine:
       "Your benefits stack is only as strong as your employees' ability to use it. ENDevo ensures they are prepared to do exactly that before a crisis forces the issue.",
     fullStory: [
@@ -112,7 +112,7 @@ const faqs: FAQ[] = [
     ],
   },
   {
-    question: "Ready to close the planning gap in your workforce?",
+    question: "How do I propose end-of-life planning benefits to my employer?",
     bottomLine:
       "Book a strategy call today. The planning gap in your workforce exists right now. Your organization can be fully up and running, with employees actively building their plans, within 30 days.",
     fullStory: [
@@ -158,7 +158,13 @@ const FAQ = () => {
       <ResponsiveNavbar />
 
       {/* Hero */}
-      <section className="relative text-white pt-32 pb-16 px-4 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69cc0fd518eaa31fe1db61a4.jpeg')" }}>
+      <section
+        className="relative text-white pt-32 pb-16 px-4 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69cc0fd518eaa31fe1db61a4.jpeg')",
+        }}
+      >
         <div className="absolute inset-0 bg-[#08123A]/60" />
         <div className="relative z-10 container max-w-3xl mx-auto text-center">
           <p className="text-brand-orange text-sm font-semibold uppercase tracking-widest mb-3">
@@ -239,7 +245,7 @@ const FAQ = () => {
                                 {block.text}
                               </p>
                             </div>
-                          )
+                          ),
                         )}
                       </div>
                     )}
