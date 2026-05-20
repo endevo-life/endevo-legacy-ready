@@ -1,6 +1,11 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, HeartPulse, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  HeartPulse,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -30,16 +35,23 @@ import empoweringControlGraphic from "@/assets/empowering-control-graphic.png";
 
 import ProcessSection from "@/components/ProcessSection";
 import OrganizationalResilienceSection from "@/components/OrganizationalResilienceSection";
+import SEO from "@/components/SEO";
 const solutionHeroConsultation =
   "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975848df9bdf1a7110b864.jpeg";
 
 const Solution = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   const { elementRef: edgeRef, isVisible: edgeVisible } = useScrollAnimation();
-  const { elementRef: lifecycleRef, isVisible: lifecycleVisible } = useScrollAnimation();
-  const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
-  const { elementRef: caseStudiesHeadingRef, isVisible: caseStudiesHeadingVisible } = useScrollAnimation();
-  const { elementRef: howItWorksRef, isVisible: howItWorksVisible } = useScrollAnimation();
+  const { elementRef: lifecycleRef, isVisible: lifecycleVisible } =
+    useScrollAnimation();
+  const { elementRef: aboutRef, isVisible: aboutVisible } =
+    useScrollAnimation();
+  const {
+    elementRef: caseStudiesHeadingRef,
+    isVisible: caseStudiesHeadingVisible,
+  } = useScrollAnimation();
+  const { elementRef: howItWorksRef, isVisible: howItWorksVisible } =
+    useScrollAnimation();
   const caseStudiesRef = useRef<HTMLDivElement>(null);
   const scrollCaseStudies = (dir: "left" | "right") => {
     if (caseStudiesRef.current) {
@@ -47,12 +59,20 @@ const Solution = () => {
       const cardWidth = isLarge
         ? caseStudiesRef.current.offsetWidth / 3
         : caseStudiesRef.current.offsetWidth;
-      caseStudiesRef.current.scrollBy({ left: dir === "left" ? -cardWidth : cardWidth, behavior: "smooth" });
+      caseStudiesRef.current.scrollBy({
+        left: dir === "left" ? -cardWidth : cardWidth,
+        behavior: "smooth",
+      });
     }
   };
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Employee Wellness Program for Legacy Readiness | ENDevo"
+        description="A structured employee wellness program covering end-of-life and digital legacy planning. Reduce HR burden, close the EAP gap, and support employees through life's hardest transitions."
+        canonical="/solution"
+      />
       <ResponsiveNavbar />
 
       {/* Employee Wellness Hero Section */}
@@ -70,7 +90,7 @@ const Solution = () => {
               transitionDelay: isVisible ? "0.2s" : "0s",
             }}
           >
-            A Legacy Readiness Employee Wellness Program
+            Legacy & End-of-Life Wellness for Employees
           </h1>
 
           <p
@@ -106,7 +126,10 @@ const Solution = () => {
           {/* Title */}
           <h2
             className={`text-3xl md:text-4xl font-bold text-[#08123A] text-center mb-16 transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-            style={{ fontFamily: "'Playfair Display', Georgia, serif", transitionDelay: lifecycleVisible ? "0ms" : "0ms" }}
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              transitionDelay: lifecycleVisible ? "0ms" : "0ms",
+            }}
           >
             Closing the 'Whole Lifecycle Gap'
           </h2>
@@ -162,15 +185,34 @@ const Solution = () => {
                   />
                   <circle cx="22" cy="52" r="5" />
                   <circle cx="42" cy="52" r="5" />
-                  <line x1="8" y1="20" x2="2" y2="20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="8" y1="20" x2="8" y2="12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                  <line
+                    x1="8"
+                    y1="20"
+                    x2="2"
+                    y2="20"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                  <line
+                    x1="8"
+                    y1="20"
+                    x2="8"
+                    y2="12"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </div>
               <div
                 className={`w-1/3 flex justify-center transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{ transitionDelay: lifecycleVisible ? "300ms" : "0ms" }}
               >
-                <HeartPulse className="w-20 h-20 text-[#08123A]" strokeWidth={1.8} />
+                <HeartPulse
+                  className="w-20 h-20 text-[#08123A]"
+                  strokeWidth={1.8}
+                />
               </div>
               <div
                 className={`w-1/3 flex justify-center transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -269,7 +311,10 @@ const Solution = () => {
           {/* Quote */}
           <p
             className={`mt-12 text-center text-muted-foreground italic text-base max-w-3xl mx-auto leading-relaxed transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-            style={{ fontFamily: "'Open Sans', sans-serif", transitionDelay: lifecycleVisible ? "900ms" : "0ms" }}
+            style={{
+              fontFamily: "'Open Sans', sans-serif",
+              transitionDelay: lifecycleVisible ? "900ms" : "0ms",
+            }}
           >
             "Organizations support birth and life but traditionally have no
             support for end-of-life planning. This program demonstrates care for
@@ -284,7 +329,9 @@ const Solution = () => {
         id="how-it-works"
         className="scroll-mt-20"
       >
-        <div className={`transition-all duration-1000 ease-out ${howItWorksVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div
+          className={`transition-all duration-1000 ease-out ${howItWorksVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
           <ProcessSection />
         </div>
       </section>
@@ -315,10 +362,19 @@ const Solution = () => {
               <CardContent>
                 <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                   <p>
-                    ENDevo helps employers support their teams with a structured, guided program that educates, project-manages, and empowers employees so their life story, values, and digital footprint are protected, preserved, and passed on with intention.
+                    ENDevo helps employers support their teams with a
+                    structured, guided program that educates, project-manages,
+                    and empowers employees so their life story, values, and
+                    digital footprint are protected, preserved, and passed on
+                    with intention.
                   </p>
                   <p>
-                    We provide a holistic approach to wellness that supports employees legally, financially, physically, and digitally. Whether it's preparing for major life events or managing important aspects of their personal and digital lives, our goal is to empower employees to show up as their best selves, today and in the future.
+                    We provide a holistic approach to wellness that supports
+                    employees legally, financially, physically, and digitally.
+                    Whether it's preparing for major life events or managing
+                    important aspects of their personal and digital lives, our
+                    goal is to empower employees to show up as their best
+                    selves, today and in the future.
                   </p>
                 </div>
               </CardContent>
@@ -347,8 +403,8 @@ const Solution = () => {
                     and communities.
                   </p>
                   <p>
-                    Legacy readiness & digital resilience is more than preparing for what is next; it
-                    is about living well right now.
+                    Legacy readiness & digital resilience is more than preparing
+                    for what is next; it is about living well right now.
                   </p>
                 </div>
               </CardContent>
@@ -366,14 +422,19 @@ const Solution = () => {
           <div ref={caseStudiesHeadingRef as any} className="text-center mb-12">
             <h2
               className={`text-3xl md:text-4xl font-bold text-foreground mb-4 transition-all duration-1000 ease-out ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ fontFamily: "'Playfair Display', Georgia, serif", transitionDelay: caseStudiesHeadingVisible ? "0ms" : "0ms" }}
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                transitionDelay: caseStudiesHeadingVisible ? "0ms" : "0ms",
+              }}
             >
               See How ENDevo{" "}
               <span className="text-brand-orange">Makes a Difference</span>
             </h2>
             <p
               className={`text-lg text-muted-foreground max-w-2xl mx-auto transition-all duration-1000 ease-out ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{ transitionDelay: caseStudiesHeadingVisible ? "200ms" : "0ms" }}
+              style={{
+                transitionDelay: caseStudiesHeadingVisible ? "200ms" : "0ms",
+              }}
             >
               We partner with organizations to provide human-centered support
               that transforms the way employees navigate life's toughest
@@ -388,7 +449,12 @@ const Solution = () => {
             style={{ scrollBehavior: "smooth" }}
           >
             {/* Case Study 1 */}
-            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "300ms" : "0ms" }}>
+            <div
+              className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{
+                transitionDelay: caseStudiesHeadingVisible ? "300ms" : "0ms",
+              }}
+            >
               <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
                 Case Study
               </p>
@@ -403,9 +469,13 @@ const Solution = () => {
               </h3>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">
+                    Employee Wellness Intervention Study
+                  </span>
                   <span className="text-xs text-muted-foreground">·</span>
-                  <span className="text-xs text-muted-foreground">Project Manager</span>
+                  <span className="text-xs text-muted-foreground">
+                    Project Manager
+                  </span>
                 </div>
                 <Link
                   to="/case-studies/from-awareness-to-action"
@@ -417,7 +487,12 @@ const Solution = () => {
             </div>
 
             {/* Case Study 2 */}
-            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "450ms" : "0ms" }}>
+            <div
+              className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{
+                transitionDelay: caseStudiesHeadingVisible ? "450ms" : "0ms",
+              }}
+            >
               <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
                 Case Study
               </p>
@@ -427,14 +502,19 @@ const Solution = () => {
               >
                 The Realist With a List:
                 <span className="block font-normal text-lg mt-1 text-muted-foreground">
-                  How Life-Stage Complexity Stalls Even the Most Motivated Planners
+                  How Life-Stage Complexity Stalls Even the Most Motivated
+                  Planners
                 </span>
               </h3>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">
+                    Employee Wellness Intervention Study
+                  </span>
                   <span className="text-xs text-muted-foreground">·</span>
-                  <span className="text-xs text-muted-foreground">Administrative Professional</span>
+                  <span className="text-xs text-muted-foreground">
+                    Administrative Professional
+                  </span>
                 </div>
                 <Link
                   to="/case-studies/life-in-transition"
@@ -446,7 +526,12 @@ const Solution = () => {
             </div>
 
             {/* Case Study 3 */}
-            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "600ms" : "0ms" }}>
+            <div
+              className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{
+                transitionDelay: caseStudiesHeadingVisible ? "600ms" : "0ms",
+              }}
+            >
               <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
                 Case Study
               </p>
@@ -461,9 +546,13 @@ const Solution = () => {
               </h3>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">
+                    Employee Wellness Intervention Study
+                  </span>
                   <span className="text-xs text-muted-foreground">·</span>
-                  <span className="text-xs text-muted-foreground">Healthcare Industry Professional</span>
+                  <span className="text-xs text-muted-foreground">
+                    Healthcare Industry Professional
+                  </span>
                 </div>
                 <Link
                   to="/case-studies/medical-coverage"
@@ -475,7 +564,12 @@ const Solution = () => {
             </div>
 
             {/* Case Study 4 */}
-            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "750ms" : "0ms" }}>
+            <div
+              className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{
+                transitionDelay: caseStudiesHeadingVisible ? "750ms" : "0ms",
+              }}
+            >
               <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
                 Case Study
               </p>
@@ -490,9 +584,13 @@ const Solution = () => {
               </h3>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">
+                    Employee Wellness Intervention Study
+                  </span>
                   <span className="text-xs text-muted-foreground">·</span>
-                  <span className="text-xs text-muted-foreground">Insurance Industry Professional</span>
+                  <span className="text-xs text-muted-foreground">
+                    Insurance Industry Professional
+                  </span>
                 </div>
                 <Link
                   to="/case-studies/already-covered"
@@ -504,7 +602,12 @@ const Solution = () => {
             </div>
 
             {/* Case Study 5 */}
-            <div className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: caseStudiesHeadingVisible ? "900ms" : "0ms" }}>
+            <div
+              className={`rounded-2xl border border-border shadow-md p-6 lg:p-8 flex flex-col gap-4 hover:shadow-xl hover:border-brand-orange/40 transition-all duration-700 ease-out flex-shrink-0 w-full lg:w-[calc(33.333%-1.4rem)] snap-center ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{
+                transitionDelay: caseStudiesHeadingVisible ? "900ms" : "0ms",
+              }}
+            >
               <p className="text-xs font-bold uppercase tracking-widest text-brand-orange">
                 Case Study
               </p>
@@ -519,9 +622,13 @@ const Solution = () => {
               </h3>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs text-muted-foreground">Employee Wellness Intervention Study</span>
+                  <span className="text-xs text-muted-foreground">
+                    Employee Wellness Intervention Study
+                  </span>
                   <span className="text-xs text-muted-foreground">·</span>
-                  <span className="text-xs text-muted-foreground">Senior Industry Professional</span>
+                  <span className="text-xs text-muted-foreground">
+                    Senior Industry Professional
+                  </span>
                 </div>
                 <Link
                   to="/case-studies/hospice-volunteer"
@@ -602,9 +709,9 @@ const Solution = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Legacy readiness & digital resilience are urgent and
-                    costly gaps for families and businesses. ENDevo addresses
-                    the crisis head-on with scalable, human-centered solutions.
+                    Legacy readiness & digital resilience are urgent and costly
+                    gaps for families and businesses. ENDevo addresses the
+                    crisis head-on with scalable, human-centered solutions.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -621,7 +728,8 @@ const Solution = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Plan across four identified domains of legal, financial, physical, and digital, all in one unified platform.
+                    Plan across four identified domains of legal, financial,
+                    physical, and digital, all in one unified platform.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -638,7 +746,8 @@ const Solution = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Explore trusted partners and resources that help you prepare, plan, and protect what matters most.
+                    Explore trusted partners and resources that help you
+                    prepare, plan, and protect what matters most.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -660,7 +769,6 @@ const Solution = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-
                 <AccordionItem
                   value="values"
                   className="bg-white rounded-lg shadow-sm px-6 py-2 border-none"
@@ -674,7 +782,8 @@ const Solution = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                    Guided by compassion, resilience, integrity, and teamwork, we prepare today for a better tomorrow.
+                    Guided by compassion, resilience, integrity, and teamwork,
+                    we prepare today for a better tomorrow.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

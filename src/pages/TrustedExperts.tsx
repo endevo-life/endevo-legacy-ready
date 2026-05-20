@@ -1,5 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -77,6 +78,11 @@ const TrustedExperts = () => {
   }).sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Trusted Legacy Planning Experts & Partners"
+        description="Browse our directory of trusted partners and experts across legal, financial, physical, and digital legacy planning — vetted to help you bring your plan to life."
+        canonical="/trusted-experts"
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Hero Section */}
@@ -90,6 +96,19 @@ const TrustedExperts = () => {
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="text-sm font-medium">Go Back</span>
             </button>
+
+            <div className="max-w-3xl mx-auto text-center mb-8">
+              <h1
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                Trusted Legacy Planning Experts
+                <span className="block text-lg md:text-xl lg:text-2xl font-normal text-muted-foreground mt-3">
+                  Vetted partners across legal, financial, physical, and digital
+                </span>
+              </h1>
+            </div>
+
             <div className="max-w-2xl mx-auto pb-8">
               <div className="flex gap-3 items-center">
                 <div className="relative flex-1">
