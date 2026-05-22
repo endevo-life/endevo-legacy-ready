@@ -1,5 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import IndividualsHeroSection from "@/components/IndividualsHeroSection";
 // framework image replaced with CDN URL below
 // wellnessPillars image replaced with CDN URL below
@@ -42,6 +43,11 @@ const WWSIndividuals = () => {
   }, []);
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Personal Legacy & End-of-Life Planning for Individuals"
+        description="Plan with clarity and care. ENDevo helps individuals organize legal, financial, physical, and digital affairs so families don't carry the burden alone."
+        canonical="/wws-individuals"
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         <IndividualsHeroSection />
@@ -178,9 +184,12 @@ const WWSIndividuals = () => {
               <div
                 className={`space-y-6 transition-all duration-1000 delay-200 ${individualsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                <h1
+                  className="text-3xl md:text-4xl font-bold text-foreground"
+                  style={{ fontFamily: "'Times New Roman', serif" }}
+                >
                   Legacy Planning for Individuals
-                </h2>
+                </h1>
 
                 <p className="text-xl text-brand-orange font-semibold">
                   Simplify your journey with AI-powered guidance and
@@ -195,7 +204,6 @@ const WWSIndividuals = () => {
                   on what matters most: your family, your values, and your peace
                   of mind.
                 </p>
-
               </div>
             </div>
           </div>

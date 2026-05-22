@@ -1,6 +1,7 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import TrustedPartnersSection from "@/components/TrustedPartnersSection";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -13,6 +14,11 @@ const Marketplace = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Readiness Hub: Legacy Planning Marketplace | ENDevo"
+        description="A complete legacy planning marketplace — find trusted partners and resources across legal, financial, physical, and digital to bring your plan to life."
+        canonical="/marketplace"
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Hero Section */}
@@ -29,13 +35,16 @@ const Marketplace = () => {
               className={`text-center max-w-3xl mx-auto text-white transition-all duration-1000 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
                 style={{
                   fontFamily:
                     "'Playfair Display', 'Merriweather', Georgia, serif",
                 }}
               >
-                The Readiness Hub
+                Readiness Hub
+                <span className="block text-xl md:text-2xl lg:text-3xl font-normal mt-2">
+                  Your Complete Legacy Planning Marketplace
+                </span>
               </h1>
               <p className="text-lg md:text-xl">
                 Explore trusted partners and resources that help you prepare,

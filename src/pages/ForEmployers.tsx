@@ -1,5 +1,6 @@
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useEffect } from "react";
@@ -24,6 +25,11 @@ const WWSEmployers = () => {
   }, []);
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Employer Wellness & Legacy Readiness for HR Teams"
+        description="Support employees through life's hardest moments with ENDevo's legacy readiness program for HR teams — reduce absenteeism and strengthen business continuity."
+        canonical="/wws-employers"
+      />
       <ResponsiveNavbar />
       <main className="pt-16">
         {/* Hero Section - Hidden for now
@@ -93,29 +99,77 @@ const WWSEmployers = () => {
 
         {/* Stats/Metrics Section - Hidden for now */}
         {false && (
-        <section
-          ref={statsAnimation.elementRef as React.RefObject<HTMLElement>}
-          className="py-16 md:py-20 bg-muted/30"
-        >
-          <div className="container mx-auto px-6 md:px-12">
-            <div
-              className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 ${statsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-            >
-              <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
-                <p className="text-4xl md:text-5xl font-bold mb-3" style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif", color: "#0F1738" }}>$77,888</p>
-                <p className="text-base md:text-lg text-muted-foreground" style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}>Total Benefits (Savings)</p>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
-                <p className="text-4xl md:text-5xl font-bold mb-3" style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif", color: "#0F1738" }}>$10,625</p>
-                <p className="text-base md:text-lg text-muted-foreground" style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}>Total Program Costs</p>
-              </div>
-              <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
-                <p className="text-4xl md:text-5xl font-bold mb-3" style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif", color: "#0F1738" }}>$67,263</p>
-                <p className="text-base md:text-lg text-muted-foreground" style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}>Net Organizational Benefit</p>
+          <section
+            ref={statsAnimation.elementRef as React.RefObject<HTMLElement>}
+            className="py-16 md:py-20 bg-muted/30"
+          >
+            <div className="container mx-auto px-6 md:px-12">
+              <div
+                className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 ${statsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              >
+                <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
+                  <p
+                    className="text-4xl md:text-5xl font-bold mb-3"
+                    style={{
+                      fontFamily:
+                        "'Playfair Display', 'Merriweather', Georgia, serif",
+                      color: "#0F1738",
+                    }}
+                  >
+                    $77,888
+                  </p>
+                  <p
+                    className="text-base md:text-lg text-muted-foreground"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    }}
+                  >
+                    Total Benefits (Savings)
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
+                  <p
+                    className="text-4xl md:text-5xl font-bold mb-3"
+                    style={{
+                      fontFamily:
+                        "'Playfair Display', 'Merriweather', Georgia, serif",
+                      color: "#0F1738",
+                    }}
+                  >
+                    $10,625
+                  </p>
+                  <p
+                    className="text-base md:text-lg text-muted-foreground"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    }}
+                  >
+                    Total Program Costs
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
+                  <p
+                    className="text-4xl md:text-5xl font-bold mb-3"
+                    style={{
+                      fontFamily:
+                        "'Playfair Display', 'Merriweather', Georgia, serif",
+                      color: "#0F1738",
+                    }}
+                  >
+                    $67,263
+                  </p>
+                  <p
+                    className="text-base md:text-lg text-muted-foreground"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    }}
+                  >
+                    Net Organizational Benefit
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
         )}
 
         {/* Benefits Section */}
@@ -125,7 +179,7 @@ const WWSEmployers = () => {
         >
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
-            <h2
+            <h1
               className={`text-3xl md:text-4xl font-bold text-center mb-4 transition-all duration-700 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{
                 fontFamily:
@@ -140,7 +194,7 @@ const WWSEmployers = () => {
               >
                 Business Priority
               </span>
-            </h2>
+            </h1>
 
             {/* Subheadline */}
             <p
