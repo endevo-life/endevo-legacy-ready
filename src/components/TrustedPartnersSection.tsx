@@ -138,7 +138,7 @@ const TrustedPartnersSection = () => {
                     className="w-12 h-12 mx-auto object-contain"
                   />
                   <h3 className="font-bold text-lg text-foreground">
-                    {category.name === "Beliefs" ? "Your Beliefs" : category.name}
+                    {category.name}
                   </h3>
                   <p className="text-sm text-foreground/70">
                     {category.description}
@@ -193,7 +193,7 @@ const TrustedPartnersSection = () => {
                   }`}
                 >
                   <img src={category.icon} alt="" className="w-5 h-5 object-contain" />
-                  {category.name === "Beliefs" ? "Your Beliefs" : category.name}
+                  {category.name}
                 </button>
               ))}
               {selectedCategories.length > 0 && (
