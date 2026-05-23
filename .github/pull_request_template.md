@@ -1,49 +1,66 @@
-## Description
-<!-- Provide a clear description of what this PR does -->
+## What does this PR do?
+<!-- One sentence. Be specific: "Adds SEO component to ForEmployers page" not "SEO improvements" -->
 
 
-## Type of Change
-<!-- Check the relevant option -->
+## Type of change
+- [ ] `feat` — New feature or page
+- [ ] `fix` — Bug fix
+- [ ] `seo` — SEO / meta tags / schema / sitemap
+- [ ] `style` — CSS/Tailwind only, no logic change
+- [ ] `refactor` — Code restructure, no behaviour change
+- [ ] `chore` — Config, dependencies, tooling
+- [ ] `docs` — Documentation only
 
-- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] 📝 Documentation update
-- [ ] 🎨 Style update (formatting, renaming)
-- [ ] ♻️ Code refactor (no functional changes)
-- [ ] ⚡ Performance improvement
-- [ ] ✅ Test update
-- [ ] 🔧 Configuration change
-- [ ] 🔒 Security fix
+## Related issue
+Closes #<!-- issue number -->
 
-## Related Issues
-<!-- Link to related issues -->
-Closes #(issue number)
+---
 
-## Screenshots/Videos (if applicable)
-<!-- Add screenshots or videos to help explain your changes -->
+## CI Gates (auto-checked — must all be green to merge)
+The following run automatically. You do not need to tick these manually.
+- [ ] TypeScript (`npm run typecheck`)
+- [ ] ESLint (`npm run lint`)
+- [ ] Build (`npm run build`)
+- [ ] Code quality (no console.log, no debugger, new pages have SEO component)
 
+---
 
-## Testing
-<!-- Describe how you tested your changes -->
+## Manual testing checklist
 
-- [ ] Tested locally on `http://localhost:8080`
-- [ ] Checked on mobile responsive view
-- [ ] No console errors
-- [ ] Build passes (`npm run build`)
+**Browsers tested:**
+- [ ] Chrome (latest)
+- [ ] Firefox (latest)
+- [ ] Safari / iOS Safari
+- [ ] Edge (latest)
 
-## Checklist
+**Breakpoints tested:**
+- [ ] Mobile 390px
+- [ ] Desktop 1280px
 
-- [ ] My code follows the project's style guidelines
-- [ ] I have performed a self-review of my code
-- [ ] I have commented my code where necessary
-- [ ] My changes generate no new warnings
-- [ ] I have tested my changes thoroughly
-- [ ] I have updated the documentation (if needed)
+**Functional checks:**
+- [ ] Page loads without console errors
+- [ ] All links on changed pages work correctly
+- [ ] No layout overflow or broken text on mobile
+- [ ] Images load and have alt text
 
-## Additional Notes
-<!-- Any additional information or context -->
+**If this PR touches SEO:**
+- [ ] View Page Source confirms unique `<title>` on each changed page
+- [ ] View Page Source confirms `<meta name="description">` present
+- [ ] `<link rel="canonical">` points to the correct URL
+- [ ] sitemap.xml updated with new/changed URLs and today's `<lastmod>` date
+
+**If this PR adds a new page:**
+- [ ] Route added to `src/App.tsx` with `lazy()` import
+- [ ] Page added to `public/sitemap.xml`
+- [ ] `<SEO>` component present with unique title, description, canonical
+- [ ] Exactly one `<h1>` on the page
+
+---
+
+## Screenshots
+<!-- Required for any visual/UI change. Before + After preferred. -->
 
 
 ---
+
 **Reviewers:** @endevo-life @nermeen

@@ -1,0 +1,142 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: pr-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────────
+  # GATE 1 — TypeScript (no type errors allowed)
+  # ─────────────────────────────────────────────
+  typecheck:
+    name: TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Run TypeScript check
+        run: npm run typecheck
+
+  # ─────────────────────────────────────────────
+  # GATE 2 — ESLint (no lint errors allowed)
+  # ─────────────────────────────────────────────
+  lint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Run ESLint
+        run: npm run lint
+
+  # ─────────────────────────────────────────────
+  # GATE 3 — Build (must compile without errors)
+  # ─────────────────────────────────────────────
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Build production bundle
+        run: npm run build
+      - name: Verify dist output exists
+        run: test -f dist/index.html
+
+  # ─────────────────────────────────────────────
+  # GATE 4 — Code quality guards
+  # ─────────────────────────────────────────────
+  code-quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: No console.log in source
+        run: |
+          MATCHES=$(grep -rn "console\.log(" src/ --include="*.ts" --include="*.tsx" || true)
+          if [ -n "$MATCHES" ]; then
+            echo "❌ console.log() found — remove debug logs before merging:"
+            echo "$MATCHES"
+            exit 1
+          fi
+          echo "✅ No console.log found"
+
+      - name: No debugger statements
+        run: |
+          MATCHES=$(grep -rn "^\s*debugger" src/ --include="*.ts" --include="*.tsx" || true)
+          if [ -n "$MATCHES" ]; then
+            echo "❌ debugger statement found — remove before merging:"
+            echo "$MATCHES"
+            exit 1
+          fi
+          echo "✅ No debugger statements found"
+
+      - name: No TODO/FIXME in new files
+        run: |
+          MATCHES=$(git diff --name-only origin/main...HEAD | xargs grep -ln "TODO\|FIXME\|HACK" 2>/dev/null || true)
+          if [ -n "$MATCHES" ]; then
+            echo "⚠️  TODO/FIXME found in changed files — resolve or move to GitHub Issues:"
+            echo "$MATCHES"
+            exit 1
+          fi
+          echo "✅ No unresolved TODOs in changed files"
+
+      - name: New pages must have SEO component
+        run: |
+          NEW_PAGES=$(git diff --name-only origin/main...HEAD | grep "src/pages/" | grep "\.tsx$" || true)
+          if [ -n "$NEW_PAGES" ]; then
+            for page in $NEW_PAGES; do
+              if ! grep -q "import SEO" "$page" 2>/dev/null; then
+                echo "❌ $page is missing the SEO component import. Every new page must include <SEO title=... description=... canonical=... />"
+                exit 1
+              fi
+            done
+            echo "✅ All new pages have SEO component"
+          fi
+
+      - name: No eslint-disable comments
+        run: |
+          MATCHES=$(grep -rn "eslint-disable" src/ --include="*.ts" --include="*.tsx" || true)
+          if [ -n "$MATCHES" ]; then
+            echo "❌ eslint-disable found — fix the underlying issue instead of suppressing it:"
+            echo "$MATCHES"
+            exit 1
+          fi
+          echo "✅ No eslint-disable comments found"
+
+  # ─────────────────────────────────────────────
+  # SUMMARY — all gates must pass to merge
+  # ─────────────────────────────────────────────
+  all-checks-pass:
+    name: All checks passed
+    needs: [typecheck, lint, build, code-quality]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Check all jobs succeeded
+        run: |
+          if [[ "${{ needs.typecheck.result }}" != "success" || \
+                "${{ needs.lint.result }}" != "success" || \
+                "${{ needs.build.result }}" != "success" || \
+                "${{ needs.code-quality.result }}" != "success" ]]; then
+            echo "❌ One or more checks failed. PR cannot be merged."
+            exit 1
+          fi
+          echo "✅ All checks passed. PR is ready for review."

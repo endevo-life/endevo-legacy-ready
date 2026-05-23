@@ -41,18 +41,27 @@ const CaseStudyHospiceVolunteer = lazy(() => import("./pages/CaseStudyHospiceVol
 
 const queryClient = new QueryClient();
 
-// Smoothly scroll to hash targets on route changes and track page views
+// Smoothly scroll to hash targets on route changes and track page views.
+// Retries up to 10 times (1 s total) because lazy-loaded pages may not have
+// mounted yet when the effect first fires.
 const ScrollToHash = () => {
   const location = useLocation();
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.substring(1);
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      let attempts = 0;
+      const tryScroll = () => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else if (attempts < 10) {
+          attempts++;
+          setTimeout(tryScroll, 100);
+        }
+      };
+      tryScroll();
     }
-    
+
     // Track page view with analytics
     trackPageView(location.pathname + location.search + location.hash);
   }, [location.pathname, location.hash]);
@@ -80,36 +89,17 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/learn-and-listen" element={<LearnAndListen />} />
           <Route path="/solution" element={<Solution />} />
-          <Route path="/loss-support" element={<NotFound />} />
-          <Route path="/legacy-planning" element={<NotFound />} />
-          <Route path="/eap-replacement" element={<NotFound />} />
-          <Route path="/approach" element={<NotFound />} />
           
           <Route path="/wws-individuals" element={<WWSIndividuals />} />
           <Route path="/wws-service-providers" element={<WWSServiceProviders />} />
           <Route path="/wws-employers" element={<WWSEmployers />} />
           
           <Route path="/for-investors" element={<ForInvestors />} />
-          <Route path="/employee-wellness" element={<NotFound />} />
+
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/trusted-experts" element={<TrustedExperts />} />
-          <Route path="/employers" element={<NotFound />} />
-          <Route path="/consultants" element={<NotFound />} />
-          <Route path="/members" element={<NotFound />} />
-          <Route path="/providers" element={<NotFound />} />
-          <Route path="/financial-institutions" element={<NotFound />} />
-          <Route path="/knowledge-base" element={<NotFound />} />
-          <Route path="/blogs-podcasts" element={<NotFound />} />
-          <Route path="/guides" element={<NotFound />} />
-          <Route path="/events" element={<NotFound />} />
-          <Route path="/customer-stories" element={<NotFound />} />
           {/* <Route path="/plan" element={<Plan />} /> */}
           <Route path="/company" element={<Company />} />
-          <Route path="/about-us" element={<NotFound />} />
-          <Route path="/team" element={<NotFound />} />
-          <Route path="/careers" element={<NotFound />} />
-          <Route path="/news" element={<NotFound />} />
-          <Route path="/alliance" element={<NotFound />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/podcast/episode" element={<PodcastEpisode />} />
           <Route path="/video" element={<Navigate to="/videos" replace />} />
