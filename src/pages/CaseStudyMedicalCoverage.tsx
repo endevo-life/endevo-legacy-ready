@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const CaseStudyMedicalCoverage = () => {
   useEffect(() => {
@@ -11,6 +12,11 @@ const CaseStudyMedicalCoverage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Estate Planning After a Cancer Diagnosis: Case Study"
+        description="Real case study: how a healthcare professional with a pacemaker, cancer history, and a newly diagnosed husband finally organized her estate plan."
+        canonical="/case-studies/medical-coverage"
+      />
       <ResponsiveNavbar />
 
       {/* Hero */}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const CaseStudyAwarenessToAction = () => {
   useEffect(() => {
@@ -11,6 +12,11 @@ const CaseStudyAwarenessToAction = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Sandwich Generation Estate Planning Case Study"
+        description="How a Project Manager in her late 50s — sandwich generation, sole executor — closed a 13-year estate planning gap after losing her mother unexpectedly."
+        canonical="/case-studies/from-awareness-to-action"
+      />
       <ResponsiveNavbar />
 
       {/* Hero */}
