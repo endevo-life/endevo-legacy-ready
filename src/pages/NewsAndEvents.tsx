@@ -1,12 +1,18 @@
 import { useState } from "react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const NewsAndEvents = () => {
   const [showConsensusReflection, setShowConsensusReflection] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="End-of-Life Planning News & Industry Events"
+        description="Stay current on end-of-life planning news, conference appearances, industry awards, and ENDevo announcements."
+        canonical="/news-and-events"
+      />
       <ResponsiveNavbar />
       <main className="flex-1 pt-16">
         {/* Hero */}
