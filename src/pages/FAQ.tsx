@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { ChevronDown } from "lucide-react";
 
 type FAQ = {
@@ -155,6 +156,11 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <SEO
+        title="End-of-Life Planning Questions & Answers"
+        description="Common questions about end-of-life planning — what it covers, who needs it, and how it works as an employee benefit."
+        canonical="/faq"
+      />
       <ResponsiveNavbar />
 
       {/* Hero */}
