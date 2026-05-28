@@ -95,6 +95,27 @@ const WWSEmployers = () => {
         </section>
         */}
 
+        {/* Hero Section */}
+        <section
+          ref={heroAnimation.elementRef as React.RefObject<HTMLElement>}
+          className="pt-16 md:pt-20 pb-2 md:pb-3 px-6 text-center bg-background"
+        >
+          <div
+            className={`container max-w-6xl mx-auto transition-all duration-1000 ${heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          >
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:whitespace-nowrap"
+              style={{
+                fontFamily:
+                  "'Playfair Display', 'Merriweather', Georgia, serif",
+              }}
+            >
+              <span className="text-foreground">Legacy Planning Benefits </span>
+              <span style={{ color: "#D95D26" }}>for Employees</span>
+            </h1>
+          </div>
+        </section>
+
         {/* Secondary Hero Section */}
 
         {/* Stats/Metrics Section - Hidden for now */}
@@ -175,27 +196,9 @@ const WWSEmployers = () => {
         {/* Benefits Section */}
         <section
           ref={benefitsAnimation.elementRef as React.RefObject<HTMLElement>}
-          className="py-16 md:py-20 bg-white"
+          className="pt-2 md:pt-3 pb-16 md:pb-20 bg-white"
         >
           <div className="container mx-auto px-6 md:px-12">
-            {/* Headline */}
-            <h1
-              className={`text-3xl md:text-4xl font-bold text-center mb-4 transition-all duration-700 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{
-                fontFamily:
-                  "'Playfair Display', 'Merriweather', Georgia, serif",
-              }}
-            >
-              Why Legacy Preparedness is a{" "}
-              <span
-                style={{
-                  color: "#D95D26",
-                }}
-              >
-                Business Priority
-              </span>
-            </h1>
-
             {/* Subheadline */}
             <p
               className={`text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12 transition-all duration-700 delay-100 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
