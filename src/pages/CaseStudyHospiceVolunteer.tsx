@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const CaseStudyHospiceVolunteer = () => {
   useEffect(() => {
@@ -11,6 +12,11 @@ const CaseStudyHospiceVolunteer = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="What Happens to Your Digital Accounts When You Die? A Case Study"
+        description="A hospice volunteer with completed estate documents discovered her digital access was never addressed — and what she did about it before retirement."
+        canonical="/case-studies/hospice-volunteer"
+      />
       <ResponsiveNavbar />
 
       {/* Hero */}
