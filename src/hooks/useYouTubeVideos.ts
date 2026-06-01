@@ -13,7 +13,7 @@ async function fetchPlaylistItems(
   playlistId: string,
   apiKey: string
 ): Promise<YouTubeVideo[]> {
-  let all: YouTubeVideo[] = [];
+  const all: YouTubeVideo[] = [];
   let pageToken: string | undefined = undefined;
 
   do {
