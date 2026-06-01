@@ -18,8 +18,6 @@ export default defineConfig(({ mode }) => ({
     dedupe: ['react', 'react-dom'],
   },
   build: {
-    // Emit CSS as a separate file loaded via <link> so @import rules inside
-    // third-party CSS are not rejected by the Constructable Stylesheets API.
     cssCodeSplit: false,
     rollupOptions: {
       output: {
