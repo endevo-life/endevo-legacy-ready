@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const CaseStudyLifeInTransition = () => {
   useEffect(() => {
@@ -11,6 +12,11 @@ const CaseStudyLifeInTransition = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Estate Planning After Divorce: Case Study With a Special Needs Child"
+        description="Real case study: how a recently divorced administrative professional with a special needs child navigated estate planning, name changes, and a complete plan rebuild."
+        canonical="/case-studies/life-in-transition"
+      />
       <ResponsiveNavbar />
 
       {/* Hero */}

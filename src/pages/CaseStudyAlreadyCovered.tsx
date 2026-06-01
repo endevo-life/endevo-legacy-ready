@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const CaseStudyAlreadyCovered = () => {
   useEffect(() => {
@@ -11,6 +12,11 @@ const CaseStudyAlreadyCovered = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="When to Update Your Estate Plan: A Case Study"
+        description="She thought she was covered — a 12-year-old irrevocable trust, an out-of-state move, and the planning gap she didn't realize she had."
+        canonical="/case-studies/already-covered"
+      />
       <ResponsiveNavbar />
 
       {/* Hero */}
