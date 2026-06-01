@@ -185,8 +185,8 @@ const Podcast = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Digital Legacy Podcast — End-of-Life Planning Conversations"
-        description="Listen to the Digital Legacy Podcast — expert conversations on end-of-life planning, grief, digital assets, and leaving a meaningful legacy."
+        title="Grief, Death & Legacy Podcast: The Digital Legacy Podcast"
+        description="Honest conversations about grief, death, and legacy — with experts on end-of-life planning, digital assets, and what it means to prepare well."
         canonical="/podcast"
         jsonLd={{
           "@context": "https://schema.org",
