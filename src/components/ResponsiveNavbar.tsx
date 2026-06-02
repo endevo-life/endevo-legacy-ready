@@ -142,6 +142,7 @@ const ResponsiveNavbar = () => {
     {
       name: "About Us",
       href: "/company",
+      alignRight: true,
       submenu: [
         {
           name: "About ENDevo",
@@ -213,7 +214,7 @@ const ResponsiveNavbar = () => {
 
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
-                  <div className="absolute top-full left-0 mt-1 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 w-[520px]">
+                  <div className={`absolute top-full ${item.alignRight ? "right-0" : "left-0"} mt-1 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 w-[520px]`}>
                     <div
                       className="py-2 grid grid-flow-col"
                       style={{ gridTemplateRows: `repeat(${Math.ceil(item.submenu.length / 2)}, auto)` }}
