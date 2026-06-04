@@ -1,6 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight, Workflow, BookOpen, Users, Sparkles, Briefcase, UserCheck, User, ShieldCheck, Smartphone, MessageSquare, Video, FileText, HelpCircle, Newspaper, Building2, Crown, UsersRound, Heart, Handshake, ClipboardList } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Workflow,
+  BookOpen,
+  Users,
+  Sparkles,
+  Briefcase,
+  UserCheck,
+  User,
+  ShieldCheck,
+  Smartphone,
+  MessageSquare,
+  Video,
+  FileText,
+  HelpCircle,
+  Newspaper,
+  Building2,
+  Crown,
+  UsersRound,
+  Heart,
+  Handshake,
+  ClipboardList,
+} from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,19 +85,19 @@ const ResponsiveNavbar = () => {
         {
           name: "For Employers",
           sub: "Benefits that retain top talent",
-          href: "/wws-employers",
+          href: "/for-employers",
           icon: Briefcase,
         },
         {
           name: "For Service Providers",
           sub: "Expand your reach with ENDevo",
-          href: "/wws-service-providers",
+          href: "/for-service-providers",
           icon: UserCheck,
         },
         {
           name: "For Individuals",
           sub: "Plan your legacy on your terms",
-          href: "/wws-individuals",
+          href: "/for-individuals",
           icon: User,
         },
       ],
@@ -214,32 +239,45 @@ const ResponsiveNavbar = () => {
 
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
-                  <div className={`absolute top-full ${item.alignRight ? "right-0" : "left-0"} mt-1 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 w-[520px]`}>
+                  <div
+                    className={`absolute top-full ${item.alignRight ? "right-0" : "left-0"} mt-1 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50 w-[520px]`}
+                  >
                     <div
                       className="py-2 grid grid-flow-col"
-                      style={{ gridTemplateRows: `repeat(${Math.ceil(item.submenu.length / 2)}, auto)` }}
+                      style={{
+                        gridTemplateRows: `repeat(${Math.ceil(item.submenu.length / 2)}, auto)`,
+                      }}
                     >
-                      {item.submenu.map((subItem: { name: string; href: string; sub?: string; icon?: React.ElementType }) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-start gap-3 px-4 py-3 hover:bg-orange-50 transition-colors duration-200"
-                        >
-                          {subItem.icon && (
-                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center mt-0.5">
-                              <subItem.icon className="w-4 h-4 text-brand-orange" />
-                            </span>
-                          )}
-                          <span>
-                            <span className="block text-sm font-semibold text-foreground">
-                              {subItem.name}
-                            </span>
-                            {subItem.sub && (
-                              <span className="block text-xs text-muted-foreground mt-0.5">{subItem.sub}</span>
+                      {item.submenu.map(
+                        (subItem: {
+                          name: string;
+                          href: string;
+                          sub?: string;
+                          icon?: React.ElementType;
+                        }) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className="flex items-start gap-3 px-4 py-3 hover:bg-orange-50 transition-colors duration-200"
+                          >
+                            {subItem.icon && (
+                              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center mt-0.5">
+                                <subItem.icon className="w-4 h-4 text-brand-orange" />
+                              </span>
                             )}
-                          </span>
-                        </Link>
-                      ))}
+                            <span>
+                              <span className="block text-sm font-semibold text-foreground">
+                                {subItem.name}
+                              </span>
+                              {subItem.sub && (
+                                <span className="block text-xs text-muted-foreground mt-0.5">
+                                  {subItem.sub}
+                                </span>
+                              )}
+                            </span>
+                          </Link>
+                        ),
+                      )}
                     </div>
                   </div>
                 )}

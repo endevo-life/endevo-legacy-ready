@@ -58,10 +58,11 @@ const ToolsForEmployersSection = () => {
 
             <div className="mt-8">
               <p className="text-sm text-muted-foreground mb-3">
-                Built on compassionate guidance, AI-powered organization, and human-centered legacy readiness.
+                Built on compassionate guidance, AI-powered organization, and
+                human-centered legacy readiness.
               </p>
               <Button
-                onClick={() => navigate("/wws-employers")}
+                onClick={() => navigate("/for-employers")}
                 variant="default"
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
                 style={{

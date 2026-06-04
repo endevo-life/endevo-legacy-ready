@@ -9,15 +9,19 @@ const WhoWeServeSection = () => {
   const audiences = [
     {
       title: "Service Providers",
-      description: "Unlock pre-qualified clients and boost revenue with organized operations and smart partnerships.",
-      link: "/wws-service-providers",
-      bgImage: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69c6f7be34bd3258cdeedeb7.jpeg",
+      description:
+        "Unlock pre-qualified clients and boost revenue with organized operations and smart partnerships.",
+      link: "/for-service-providers",
+      bgImage:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69c6f7be34bd3258cdeedeb7.jpeg",
     },
     {
       title: "Individuals",
-      description: "Simplifying legacy readiness with AI-powered guidance and compassionate resources.",
-      link: "/wws-individuals",
-      bgImage: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69c6f83a0c63d56d4541b355.jpeg",
+      description:
+        "Simplifying legacy readiness with AI-powered guidance and compassionate resources.",
+      link: "/for-individuals",
+      bgImage:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69c6f83a0c63d56d4541b355.jpeg",
     },
   ];
 
@@ -28,7 +32,9 @@ const WhoWeServeSection = () => {
     >
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Title */}
-        <div className={`text-center mb-14 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div
+          className={`text-center mb-14 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-brand-orange">
             Beyond Employers
           </h2>
@@ -47,11 +53,13 @@ const WhoWeServeSection = () => {
                 style={{
                   minHeight: "240px",
                   transitionDelay: `${index * 150}ms`,
-                  ...(audience.bgImage ? {
-                    backgroundImage: `url(${audience.bgImage})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  } : { backgroundColor: "var(--card)" }),
+                  ...(audience.bgImage
+                    ? {
+                        backgroundImage: `url(${audience.bgImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }
+                    : { backgroundColor: "var(--card)" }),
                 }}
               >
                 {/* Dark overlay for readability */}
@@ -59,28 +67,33 @@ const WhoWeServeSection = () => {
                   <div className="absolute inset-0 bg-black/50 rounded-2xl" />
                 )}
                 <div className="relative z-10 flex flex-col h-full">
+                  {/* Title */}
+                  <h3
+                    className={`text-xl font-bold mb-4 ${audience.bgImage ? "text-white" : "text-foreground"}`}
+                  >
+                    {audience.title}
+                  </h3>
 
-                {/* Title */}
-                <h3 className={`text-xl font-bold mb-4 ${audience.bgImage ? "text-white" : "text-foreground"}`}>
-                  {audience.title}
-                </h3>
+                  {/* Description */}
+                  <p
+                    className={`text-sm leading-relaxed mb-6 flex-grow ${audience.bgImage ? "text-white/80" : "text-muted-foreground"}`}
+                  >
+                    {audience.description}
+                  </p>
 
-                {/* Description */}
-                <p className={`text-sm leading-relaxed mb-6 flex-grow ${audience.bgImage ? "text-white/80" : "text-muted-foreground"}`}>
-                  {audience.description}
-                </p>
-
-                {/* CTA Button */}
-                <Button
-                  onClick={() => {
-                    navigate(audience.link);
-                    window.scrollTo(0, 0);
-                  }}
-                  className="bg-[#FF5D00] hover:bg-[#FF5D00]/90 text-white rounded-full px-6 py-1.5 text-base font-semibold mt-auto self-start"
-                  style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-                >
-                  Learn More
-                </Button>
+                  {/* CTA Button */}
+                  <Button
+                    onClick={() => {
+                      navigate(audience.link);
+                      window.scrollTo(0, 0);
+                    }}
+                    className="bg-[#FF5D00] hover:bg-[#FF5D00]/90 text-white rounded-full px-6 py-1.5 text-base font-semibold mt-auto self-start"
+                    style={{
+                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                    }}
+                  >
+                    Learn More
+                  </Button>
                 </div>
               </div>
             );

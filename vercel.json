@@ -1,8 +1,10 @@
 {
+  "redirects": [
+    { "source": "/wws-employers", "destination": "/for-employers", "permanent": true },
+    { "source": "/wws-individuals", "destination": "/for-individuals", "permanent": true },
+    { "source": "/wws-service-providers", "destination": "/for-service-providers", "permanent": true }
+  ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
