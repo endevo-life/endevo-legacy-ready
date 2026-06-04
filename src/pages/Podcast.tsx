@@ -84,7 +84,9 @@ const Podcast = () => {
           `https://corsproxy.io/?url=${encodeURIComponent(RSS_URL)}`,
         );
         if (res.ok) xmlText = await res.text();
-      } catch {}
+      } catch (err) {
+        console.error("Podcast RSS fetch failed (corsproxy.io):", err);
+      }
 
       // Fallback to allorigins (returns JSON wrapper)
       if (!xmlText) {
@@ -96,7 +98,9 @@ const Podcast = () => {
             const json = await res.json();
             xmlText = json.contents;
           }
-        } catch {}
+        } catch (err) {
+          console.error("Podcast RSS fetch failed (allorigins.win):", err);
+        }
       }
 
       if (!xmlText) {
