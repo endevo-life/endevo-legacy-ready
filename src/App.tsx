@@ -3,7 +3,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 import AIChatBot from "@/components/AIChatBot";
 import CookieBanner from "@/components/CookieBanner";
 import { initializeConsentMode, trackPageView } from "@/lib/analytics";
@@ -12,12 +18,9 @@ import { initializeConsentMode, trackPageView } from "@/lib/analytics";
 const Index = lazy(() => import("./pages/Index"));
 const LearnAndListen = lazy(() => import("./pages/LearnAndListen"));
 const Solution = lazy(() => import("./pages/Solution"));
-const Podcast = lazy(() => import("./pages/Podcast"));
-const PodcastEpisode = lazy(() => import("./pages/PodcastEpisode"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Company = lazy(() => import("./pages/Company"));
-const ForInvestors = lazy(() => import("./pages/ForInvestors"));
 const WWSIndividuals = lazy(() => import("./pages/ForIndividuals"));
 const WWSServiceProviders = lazy(() => import("./pages/ForServiceProviders"));
 const WWSEmployers = lazy(() => import("./pages/ForEmployers"));
@@ -33,11 +36,21 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const NewsAndEvents = lazy(() => import("./pages/NewsAndEvents"));
 const SanityStudio = lazy(() => import("./pages/SanityStudio"));
 const Videos = lazy(() => import("./pages/Videos"));
-const CaseStudyAwarenessToAction = lazy(() => import("./pages/CaseStudyAwarenessToAction"));
-const CaseStudyLifeInTransition = lazy(() => import("./pages/CaseStudyLifeInTransition"));
-const CaseStudyMedicalCoverage = lazy(() => import("./pages/CaseStudyMedicalCoverage"));
-const CaseStudyAlreadyCovered = lazy(() => import("./pages/CaseStudyAlreadyCovered"));
-const CaseStudyHospiceVolunteer = lazy(() => import("./pages/CaseStudyHospiceVolunteer"));
+const CaseStudyAwarenessToAction = lazy(
+  () => import("./pages/CaseStudyAwarenessToAction"),
+);
+const CaseStudyLifeInTransition = lazy(
+  () => import("./pages/CaseStudyLifeInTransition"),
+);
+const CaseStudyMedicalCoverage = lazy(
+  () => import("./pages/CaseStudyMedicalCoverage"),
+);
+const CaseStudyAlreadyCovered = lazy(
+  () => import("./pages/CaseStudyAlreadyCovered"),
+);
+const CaseStudyHospiceVolunteer = lazy(
+  () => import("./pages/CaseStudyHospiceVolunteer"),
+);
 
 const queryClient = new QueryClient();
 
@@ -53,7 +66,7 @@ const ScrollToHash = () => {
       const tryScroll = () => {
         const el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
         } else if (attempts < 10) {
           attempts++;
           setTimeout(tryScroll, 100);
@@ -84,45 +97,72 @@ const App = () => (
       <BrowserRouter>
         <AppInitializer />
         <ScrollToHash />
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-brand-orange border-t-transparent animate-spin" role="status" aria-label="Loading page" /></div>}>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/learn-and-listen" element={<LearnAndListen />} />
-          <Route path="/solution" element={<Solution />} />
-          
-          <Route path="/wws-individuals" element={<WWSIndividuals />} />
-          <Route path="/wws-service-providers" element={<WWSServiceProviders />} />
-          <Route path="/wws-employers" element={<WWSEmployers />} />
-          
-          <Route path="/for-investors" element={<ForInvestors />} />
+        <Suspense
+          fallback={
+            <div className="min-h-screen flex items-center justify-center">
+              <div
+                className="w-8 h-8 rounded-full border-4 border-brand-orange border-t-transparent animate-spin"
+                role="status"
+                aria-label="Loading page"
+              />
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/learn-and-listen" element={<LearnAndListen />} />
+            <Route path="/solution" element={<Solution />} />
 
-          <Route path="/marketplace" element={<Marketplace />} />
-          <Route path="/trusted-experts" element={<TrustedExperts />} />
-          {/* <Route path="/plan" element={<Plan />} /> */}
-          <Route path="/company" element={<Company />} />
-          <Route path="/podcast" element={<Podcast />} />
-          <Route path="/podcast/episode" element={<PodcastEpisode />} />
-          <Route path="/video" element={<Navigate to="/videos" replace />} />
-          <Route path="/videos" element={<Videos />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/case-studies/from-awareness-to-action" element={<CaseStudyAwarenessToAction />} />
-          <Route path="/case-studies/life-in-transition" element={<CaseStudyLifeInTransition />} />
-          <Route path="/case-studies/medical-coverage" element={<CaseStudyMedicalCoverage />} />
-          <Route path="/case-studies/already-covered" element={<CaseStudyAlreadyCovered />} />
-          <Route path="/case-studies/hospice-volunteer" element={<CaseStudyHospiceVolunteer />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-          <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/legal/terms-of-service" element={<TermsOfService />} />
-          <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/legal/cookie-settings" element={<CookieSettings />} />
-          <Route path="/cookie-settings" element={<CookieSettings />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/news-and-events" element={<NewsAndEvents />} />
-          <Route path="/studio/*" element={<SanityStudio />} />
-        </Routes>
+            <Route path="/for-individuals" element={<WWSIndividuals />} />
+            <Route
+              path="/for-service-providers"
+              element={<WWSServiceProviders />}
+            />
+            <Route path="/for-employers" element={<WWSEmployers />} />
+
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/trusted-experts" element={<TrustedExperts />} />
+            {/* <Route path="/plan" element={<Plan />} /> */}
+            <Route path="/company" element={<Company />} />
+            <Route path="/video" element={<Navigate to="/videos" replace />} />
+            <Route path="/videos" element={<Videos />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/case-studies/from-awareness-to-action"
+              element={<CaseStudyAwarenessToAction />}
+            />
+            <Route
+              path="/case-studies/life-in-transition"
+              element={<CaseStudyLifeInTransition />}
+            />
+            <Route
+              path="/case-studies/medical-coverage"
+              element={<CaseStudyMedicalCoverage />}
+            />
+            <Route
+              path="/case-studies/already-covered"
+              element={<CaseStudyAlreadyCovered />}
+            />
+            <Route
+              path="/case-studies/hospice-volunteer"
+              element={<CaseStudyHospiceVolunteer />}
+            />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+            <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
+            <Route
+              path="/legal/terms-of-service"
+              element={<TermsOfService />}
+            />
+            <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/legal/cookie-settings" element={<CookieSettings />} />
+            <Route path="/cookie-settings" element={<CookieSettings />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/news-and-events" element={<NewsAndEvents />} />
+            <Route path="/studio/*" element={<SanityStudio />} />
+          </Routes>
         </Suspense>
         <CookieBanner />
         <AIChatBot />

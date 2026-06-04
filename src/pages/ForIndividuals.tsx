@@ -46,7 +46,7 @@ const WWSIndividuals = () => {
       <SEO
         title="Personal Legacy & End-of-Life Planning for Individuals"
         description="Plan with clarity and care. ENDevo helps individuals organize legal, financial, physical, and digital affairs so families don't carry the burden alone."
-        canonical="/wws-individuals"
+        canonical="/for-individuals"
       />
       <ResponsiveNavbar />
       <main className="pt-16">

@@ -44,7 +44,7 @@ const WWSServiceProviders = () => {
       <SEO
         title="Legacy Planning Referral Network for Attorneys & Advisors"
         description="Join ENDevo's referral network for attorneys, financial advisors, and insurance pros — pre-qualified clients ready for estate, legacy, and digital planning."
-        canonical="/wws-service-providers"
+        canonical="/for-service-providers"
       />
       <ResponsiveNavbar />
       <main className="pt-16">
