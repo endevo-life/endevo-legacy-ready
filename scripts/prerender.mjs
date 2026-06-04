@@ -6,7 +6,6 @@
  * Runs automatically after `npm run build` via the postbuild script.
  */
 
-import puppeteer from 'puppeteer';
 import { createServer } from 'node:http';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
@@ -80,15 +79,40 @@ function startServer() {
   return new Promise((resolve) => server.listen(PORT, () => resolve(server)));
 }
 
-async function prerender() {
-  console.log('\n🔍 Starting prerender…');
+/**
+ * Launch a browser that works in both environments:
+ *  - Vercel/Lambda build containers lack Chrome's system libraries, so we use
+ *    @sparticuz/chromium (a self-contained Chromium) with puppeteer-core.
+ *  - Locally and in GitHub Actions, the full `puppeteer` package ships a Chrome
+ *    that runs against the host's libraries, so we use that.
+ */
+async function launchBrowser() {
+  if (process.env.VERCEL) {
+    const [{ default: chromium }, puppeteerCore] = await Promise.all([
+      import('@sparticuz/chromium'),
+      import('puppeteer-core'),
+    ]);
+    return puppeteerCore.default.launch({
+      args: [...chromium.args, '--disable-dev-shm-usage'],
+      executablePath: await chromium.executablePath(),
+      headless: true,
+    });
+  }
 
-  const server = await startServer();
-
-  const browser = await puppeteer.launch({
+  const { default: puppeteer } = await import('puppeteer');
+  return puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
     headless: true,
   });
+}
+
+async function prerender() {
+  console.log('\n🔍 Starting prerender…');
+  console.log(`  Environment: ${process.env.VERCEL ? 'Vercel (@sparticuz/chromium)' : 'local/CI (puppeteer)'}`);
+
+  const server = await startServer();
+
+  const browser = await launchBrowser();
 
   let passed = 0;
   let failed = 0;
