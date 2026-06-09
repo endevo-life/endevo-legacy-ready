@@ -144,6 +144,19 @@ const faqs: FAQ[] = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.bottomLine,
+    },
+  })),
+};
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [storyIndex, setStoryIndex] = useState<number | null>(null);
@@ -160,6 +173,7 @@ const FAQ = () => {
         title="End-of-Life Planning Questions & Answers"
         description="Common questions about end-of-life planning — what it covers, who needs it, and how it works as an employee benefit."
         canonical="/faq"
+        jsonLd={faqSchema}
       />
       <ResponsiveNavbar />
 
