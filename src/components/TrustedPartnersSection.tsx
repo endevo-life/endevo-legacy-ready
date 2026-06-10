@@ -202,6 +202,12 @@ const TrustedPartnersSection = () => {
 
         {/* Mobile: always shows first 3 (or filtered), hidden on desktop */}
         <div className="md:hidden space-y-6">
+          {selectedCategory !== null && filteredPartners.length === 0 && (
+            <div className="text-center py-12 px-6">
+              <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
+              <p className="text-foreground/60">We're adding trusted partners in this category. Check back soon!</p>
+            </div>
+          )}
           {filteredPartners.map((partner, index) => (
             <Card
               key={index}
@@ -254,6 +260,12 @@ const TrustedPartnersSection = () => {
 
         {/* Desktop: only shows cards when a category is selected */}
         <div className="hidden md:block space-y-6">
+          {selectedCategory !== null && filteredPartners.length === 0 && (
+            <div className="text-center py-12 px-6">
+              <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
+              <p className="text-foreground/60">We're adding trusted partners in this category. Check back soon!</p>
+            </div>
+          )}
           {filteredPartners.map((partner, index) => (
             <Card
               key={index}
