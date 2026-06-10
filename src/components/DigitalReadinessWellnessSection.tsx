@@ -23,13 +23,13 @@ const highlights = [
 ];
 
 const DigitalReadinessWellnessSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>({ threshold: 0.1 });
   const navigate = useNavigate();
 
 
   return (
     <section
-      ref={elementRef as React.RefObject<HTMLElement>}
+      ref={elementRef}
       className="bg-muted/20 py-20"
     >
       <div className="container max-w-6xl mx-auto px-4">

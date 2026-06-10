@@ -51,7 +51,7 @@ const CoreValuesSection = () => {
 
   return (
     <section id="values" className="py-20 bg-background">
-      <div ref={elementRef as any} className="container max-w-7xl mx-auto px-4">
+      <div ref={elementRef} className="container max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl font-bold text-foreground mb-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: isVisible ? '0.2s' : '0s' }}>

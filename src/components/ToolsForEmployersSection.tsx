@@ -10,7 +10,7 @@ const ToolsForEmployersSection = () => {
     <section className="pt-20 pb-10 bg-background">
       <div className="container max-w-7xl mx-auto px-4">
         <div
-          ref={animation.elementRef as any}
+          ref={animation.elementRef}
           id="employers"
           className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20"
         >

@@ -12,9 +12,9 @@ import { useNavigate } from "react-router-dom";
 const WWSIndividuals = () => {
   const navigate = useNavigate();
   const individualsAnimation = useScrollAnimation();
-  const statsAnimation = useScrollAnimation();
-  const pathAnimation = useScrollAnimation();
-  const barAnimation = useScrollAnimation();
+  const statsAnimation = useScrollAnimation<HTMLElement>();
+  const pathAnimation = useScrollAnimation<HTMLElement>();
+  const barAnimation = useScrollAnimation<HTMLElement>();
   const [lineWidth, setLineWidth] = useState(0);
   const lineRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -53,7 +53,7 @@ const WWSIndividuals = () => {
         <IndividualsHeroSection />
 
         {/* If you don't prepare Section */}
-        <section ref={statsAnimation.elementRef as any} className="py-20">
+        <section ref={statsAnimation.elementRef} className="py-20">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
               <h2
@@ -165,7 +165,7 @@ const WWSIndividuals = () => {
         <section className="py-20 bg-background">
           <div className="container max-w-7xl mx-auto px-4">
             <div
-              ref={individualsAnimation.elementRef as any}
+              ref={individualsAnimation.elementRef}
               id="individuals"
               className="grid lg:grid-cols-2 gap-12 items-center scroll-mt-20"
             >
@@ -376,7 +376,7 @@ const WWSIndividuals = () => {
 
         {/* Your Path to Peace of Mind Section */}
         <section
-          ref={pathAnimation.elementRef as any}
+          ref={pathAnimation.elementRef}
           className="py-20 bg-background"
         >
           <div className="container max-w-7xl mx-auto px-4">
@@ -480,7 +480,7 @@ const WWSIndividuals = () => {
 
         {/* White Bar Section with Navy Blue Background */}
         <section
-          ref={barAnimation.elementRef as any}
+          ref={barAnimation.elementRef}
           className="py-20 overflow-hidden"
         >
           <div

@@ -34,7 +34,7 @@ const ImplementationRoadmapSection = () => {
   return (
     <section className="py-16 md:py-20 bg-white">
       <div
-        ref={elementRef as React.RefObject<HTMLDivElement>}
+        ref={elementRef}
         className="container mx-auto px-6 md:px-12"
       >
         {/* Header */}

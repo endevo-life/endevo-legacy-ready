@@ -6,7 +6,7 @@ const ConsultationSection = () => {
     isVisible
   } = useScrollAnimation();
   return <section className="py-20 bg-muted/20">
-      <div ref={elementRef as any} className="container max-w-7xl mx-auto px-4">
+      <div ref={elementRef} className="container max-w-7xl mx-auto px-4">
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16 items-stretch">
           {/* Left Column - Consultation Form */}

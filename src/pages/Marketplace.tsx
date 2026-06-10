@@ -10,7 +10,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Marketplace = () => {
   const navigate = useNavigate();
-  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
+  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation<HTMLElement>();
 
   return (
     <div className="min-h-screen">
@@ -23,7 +23,7 @@ const Marketplace = () => {
       <main className="pt-16">
         {/* Hero Section */}
         <section
-          ref={heroRef as any}
+          ref={heroRef}
           className="relative py-16 md:py-20 bg-cover bg-center"
           style={{
             backgroundImage: `url("https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6997579a1817151d64a4656b.png")`,

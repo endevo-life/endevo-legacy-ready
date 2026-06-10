@@ -51,7 +51,7 @@ const latestItems = [...newsItems]
   .slice(0, 3);
 
 const LatestSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>({ threshold: 0.1 });
   const navigate = useNavigate();
   const cardsRef = useRef<HTMLDivElement>(null);
 
@@ -66,7 +66,7 @@ const LatestSection = () => {
 
   return (
     <section
-      ref={elementRef as React.RefObject<HTMLElement>}
+      ref={elementRef}
       className="pt-20 pb-10 bg-white"
     >
       <div className="container max-w-6xl mx-auto px-4">
