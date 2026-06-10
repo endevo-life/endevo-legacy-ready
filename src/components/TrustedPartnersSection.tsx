@@ -83,16 +83,12 @@ const categoryInfo = [
   },
 ];
 const TrustedPartnersSection = () => {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const filteredPartners = partners.filter((partner) => {
-    // Filter by category - only show if category is selected
     const matchesCategory =
-      selectedCategories.length > 0 &&
-      selectedCategories.includes(partner.category);
-
-    // Filter by search query
+      selectedCategory === null || partner.category === selectedCategory;
     const matchesSearch =
       searchQuery === "" ||
       partner.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -100,12 +96,8 @@ const TrustedPartnersSection = () => {
       partner.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   }).sort((a, b) => a.name.localeCompare(b.name));
-  const toggleCategory = (category: string) => {
-    setSelectedCategories((prev) =>
-      prev.includes(category)
-        ? prev.filter((c) => c !== category)
-        : [...prev, category],
-    );
+  const selectCategory = (category: string) => {
+    setSelectedCategory((prev) => (prev === category ? null : category));
   };
   return (
     <section className="py-16 md:py-20 bg-muted/30">
@@ -123,9 +115,9 @@ const TrustedPartnersSection = () => {
           {categoryInfo.map((category, index) => (
             <button
               key={index}
-              onClick={() => toggleCategory(category.category)}
+              onClick={() => selectCategory(category.category)}
               className={`text-left transition-all hover:shadow-lg ${
-                selectedCategories.includes(category.category)
+                selectedCategory === category.category
                   ? "ring-2 ring-brand-orange"
                   : ""
               }`}
@@ -171,9 +163,9 @@ const TrustedPartnersSection = () => {
             <span className="flex items-center gap-2">
               <Filter className="w-4 h-4 text-brand-orange" />
               Filter by Category
-              {selectedCategories.length > 0 && (
+              {selectedCategory !== null && (
                 <span className="ml-1 bg-brand-orange text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                  {selectedCategories.length}
+                  1
                 </span>
               )}
             </span>
@@ -185,9 +177,9 @@ const TrustedPartnersSection = () => {
               {categoryInfo.map((category, index) => (
                 <button
                   key={index}
-                  onClick={() => toggleCategory(category.category)}
+                  onClick={() => selectCategory(category.category)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-full border text-sm font-medium transition-all ${
-                    selectedCategories.includes(category.category)
+                    selectedCategory === category.category
                       ? "border-brand-orange bg-brand-orange/10 text-brand-orange"
                       : "border-border text-foreground"
                   }`}
@@ -196,12 +188,12 @@ const TrustedPartnersSection = () => {
                   {category.name}
                 </button>
               ))}
-              {selectedCategories.length > 0 && (
+              {selectedCategory !== null && (
                 <button
-                  onClick={() => setSelectedCategories([])}
+                  onClick={() => setSelectedCategory(null)}
                   className="col-span-2 text-xs text-muted-foreground underline mt-1 text-center"
                 >
-                  Clear filters
+                  Clear filter
                 </button>
               )}
             </div>
@@ -210,10 +202,7 @@ const TrustedPartnersSection = () => {
 
         {/* Mobile: always shows first 3 (or filtered), hidden on desktop */}
         <div className="md:hidden space-y-6">
-          {(selectedCategories.length > 0
-            ? filteredPartners
-            : partners.slice(0, 3).sort((a, b) => a.name.localeCompare(b.name))
-          ).map((partner, index) => (
+          {filteredPartners.map((partner, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-lg transition-shadow"
