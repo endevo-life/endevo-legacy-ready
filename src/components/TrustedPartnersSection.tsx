@@ -36,6 +36,17 @@ const partners = [
     category: "legal" as const,
   },
   {
+    name: "Childfree Trust",
+    logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6a29b9eb2719d8cb18adab39.png",
+    tagline:
+      "Childfree Trust is the first nationwide fiduciary representation and estate planning service for Childfree people.",
+    description:
+      "With Childfree Trust, members create their estate planning documents, nominate Childfree Trust as the medical and financial POA, executor and trustee, outline their care plans, and have a 24/7 emergency response team to ensure their wishes are followed when needed.",
+    buttonText: "Learn More",
+    url: "https://childfreetrust.com/",
+    category: "legal" as const,
+  },
+  {
     name: "Prisidio",
     logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg",
     tagline: "Your Digital Vault. For Life.®",
@@ -83,12 +94,13 @@ const categoryInfo = [
   },
 ];
 const TrustedPartnersSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const filteredPartners = partners.filter((partner) => {
     const matchesCategory =
-      selectedCategory === null || partner.category === selectedCategory;
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(partner.category);
     const matchesSearch =
       searchQuery === "" ||
       partner.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -97,7 +109,11 @@ const TrustedPartnersSection = () => {
     return matchesCategory && matchesSearch;
   }).sort((a, b) => a.name.localeCompare(b.name));
   const selectCategory = (category: string) => {
-    setSelectedCategory((prev) => (prev === category ? null : category));
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
+    );
   };
   return (
     <section className="py-16 md:py-20 bg-muted/30">
@@ -117,7 +133,7 @@ const TrustedPartnersSection = () => {
               key={index}
               onClick={() => selectCategory(category.category)}
               className={`text-left transition-all hover:shadow-lg ${
-                selectedCategory === category.category
+                selectedCategories.includes(category.category)
                   ? "ring-2 ring-brand-orange"
                   : ""
               }`}
@@ -163,9 +179,9 @@ const TrustedPartnersSection = () => {
             <span className="flex items-center gap-2">
               <Filter className="w-4 h-4 text-brand-orange" />
               Filter by Category
-              {selectedCategory !== null && (
+              {selectedCategories.length > 0 && (
                 <span className="ml-1 bg-brand-orange text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                  1
+                  {selectedCategories.length}
                 </span>
               )}
             </span>
@@ -179,7 +195,7 @@ const TrustedPartnersSection = () => {
                   key={index}
                   onClick={() => selectCategory(category.category)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-full border text-sm font-medium transition-all ${
-                    selectedCategory === category.category
+                    selectedCategories.includes(category.category)
                       ? "border-brand-orange bg-brand-orange/10 text-brand-orange"
                       : "border-border text-foreground"
                   }`}
@@ -188,12 +204,12 @@ const TrustedPartnersSection = () => {
                   {category.name}
                 </button>
               ))}
-              {selectedCategory !== null && (
+              {selectedCategories.length > 0 && (
                 <button
-                  onClick={() => setSelectedCategory(null)}
+                  onClick={() => setSelectedCategories([])}
                   className="col-span-2 text-xs text-muted-foreground underline mt-1 text-center"
                 >
-                  Clear filter
+                  Clear filters
                 </button>
               )}
             </div>
@@ -202,13 +218,14 @@ const TrustedPartnersSection = () => {
 
         {/* Mobile: always shows first 3 (or filtered), hidden on desktop */}
         <div className="md:hidden space-y-6">
-          {selectedCategory !== null && filteredPartners.length === 0 && (
+          {selectedCategories.length > 0 && filteredPartners.length === 0 && (
             <div className="text-center py-12 px-6">
               <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
               <p className="text-foreground/60">We're adding trusted partners in this category. Check back soon!</p>
             </div>
           )}
-          {filteredPartners.map((partner, index) => (
+          {selectedCategories.length > 0 &&
+            filteredPartners.map((partner, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-lg transition-shadow"
@@ -260,13 +277,14 @@ const TrustedPartnersSection = () => {
 
         {/* Desktop: only shows cards when a category is selected */}
         <div className="hidden md:block space-y-6">
-          {selectedCategory !== null && filteredPartners.length === 0 && (
+          {selectedCategories.length > 0 && filteredPartners.length === 0 && (
             <div className="text-center py-12 px-6">
               <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
               <p className="text-foreground/60">We're adding trusted partners in this category. Check back soon!</p>
             </div>
           )}
-          {filteredPartners.map((partner, index) => (
+          {selectedCategories.length > 0 &&
+            filteredPartners.map((partner, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-lg transition-shadow"
