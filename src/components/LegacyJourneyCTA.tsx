@@ -4,11 +4,11 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const LegacyJourneyCTA = () => {
   const navigate = useNavigate();
-  const { elementRef, isVisible } = useScrollAnimation();
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
 
   return (
     <section
-      ref={elementRef as React.RefObject<HTMLElement>}
+      ref={elementRef}
       className="py-20 bg-muted/20"
     >
       <div className="container max-w-4xl mx-auto px-4 text-center">

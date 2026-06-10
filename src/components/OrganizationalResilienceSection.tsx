@@ -20,11 +20,11 @@ const steps = [
 ];
 
 const OrganizationalResilienceSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
 
   return (
     <section
-      ref={elementRef as React.RefObject<HTMLElement>}
+      ref={elementRef}
       className="py-20 px-4 bg-background"
     >
       <div className="container max-w-7xl mx-auto">

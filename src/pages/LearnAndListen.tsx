@@ -5,11 +5,11 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const LearnAndListen = () => {
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
-  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation();
-  const { elementRef: whyTuneRef, isVisible: whyTuneVisible } = useScrollAnimation();
-  const { elementRef: episodesRef, isVisible: episodesVisible } = useScrollAnimation();
-  const { elementRef: subscribeRef, isVisible: subscribeVisible } = useScrollAnimation();
-  const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: whyTuneRef, isVisible: whyTuneVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: episodesRef, isVisible: episodesVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: subscribeRef, isVisible: subscribeVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation<HTMLElement>();
   
   return (
     <div className="min-h-screen bg-background">
@@ -26,7 +26,7 @@ const LearnAndListen = () => {
         <div className="absolute inset-0 hero-gradient"></div>
         
         {/* Content */}
-        <div ref={heroRef as any} className="relative z-10 container max-w-4xl mx-auto px-4 text-center text-white">
+        <div ref={heroRef} className="relative z-10 container max-w-4xl mx-auto px-4 text-center text-white">
           <h1 className={`heading-hero mb-6 transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: heroVisible ? '0.2s' : '0s' }}>
             NEW EPISODE AVAILABLE<br />
             LISTEN NOW
@@ -48,7 +48,7 @@ const LearnAndListen = () => {
       </section>
       
       {/* Content Section */}
-      <section ref={contentRef as any} className="py-8 bg-background">
+      <section ref={contentRef} className="py-8 bg-background">
         <div className={`container max-w-6xl mx-auto px-2 text-center transition-all duration-1000 ease-out ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Life's Final Playbook, Planned for Today's Digital Age
@@ -104,7 +104,7 @@ const LearnAndListen = () => {
       
       {/* Why Tune In Section */}
       <section 
-        ref={whyTuneRef as any}
+        ref={whyTuneRef}
         className="relative py-16 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/lovable-uploads/c4e16bc3-599c-45d7-b44e-39d8c6f5ef91.png')`
@@ -162,7 +162,7 @@ const LearnAndListen = () => {
       </section>
       
       {/* Latest Episodes Section */}
-      <section ref={episodesRef as any} className="py-16 bg-background">
+      <section ref={episodesRef} className="py-16 bg-background">
         <div className={`container max-w-6xl mx-auto px-4 transition-all duration-1000 ease-out ${episodesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
             Catch the Latest Episodes
@@ -236,7 +236,7 @@ const LearnAndListen = () => {
       </section>
       
       {/* Subscribe Section */}
-      <section ref={subscribeRef as any} className="relative py-16 bg-brand-navy overflow-hidden">
+      <section ref={subscribeRef} className="relative py-16 bg-brand-navy overflow-hidden">
         {/* Texture Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-navy-light to-brand-navy opacity-90"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:50px_50px] opacity-20"></div>
@@ -271,7 +271,7 @@ const LearnAndListen = () => {
       </section>
       
       {/* About the Digital Legacy Podcast Section */}
-      <section ref={aboutRef as any} className="py-16 bg-background">
+      <section ref={aboutRef} className="py-16 bg-background">
         <div className={`container max-w-6xl mx-auto px-4 transition-all duration-1000 ease-out ${aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
             About the Digital Legacy Podcast

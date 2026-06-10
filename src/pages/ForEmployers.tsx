@@ -12,14 +12,14 @@ import employersHeroSecondary from "@/assets/employers-hero-secondary.png";
 import ImplementationRoadmapSection from "@/components/ImplementationRoadmapSection";
 const WWSEmployers = () => {
   const navigate = useNavigate();
-  const heroAnimation = useScrollAnimation();
+  const heroAnimation = useScrollAnimation<HTMLElement>();
 
-  const benefitsAnimation = useScrollAnimation();
-  const resourcesAnimation = useScrollAnimation();
-  const insightsAnimation = useScrollAnimation();
-  const metricsAnimation = useScrollAnimation();
-  const processAnimation = useScrollAnimation();
-  const ctaAnimation = useScrollAnimation();
+  const benefitsAnimation = useScrollAnimation<HTMLElement>();
+  const resourcesAnimation = useScrollAnimation<HTMLElement>();
+  const insightsAnimation = useScrollAnimation<HTMLElement>();
+  const metricsAnimation = useScrollAnimation<HTMLElement>();
+  const processAnimation = useScrollAnimation<HTMLElement>();
+  const ctaAnimation = useScrollAnimation<HTMLElement>();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,7 +40,7 @@ const WWSEmployers = () => {
           }}
         >
           <div
-            ref={heroAnimation.elementRef as React.RefObject<HTMLDivElement>}
+            ref={heroAnimation.elementRef}
             className="relative z-10 w-full lg:w-[45%] flex items-center"
           >
             <div
@@ -97,7 +97,7 @@ const WWSEmployers = () => {
 
         {/* Hero Section */}
         <section
-          ref={heroAnimation.elementRef as React.RefObject<HTMLElement>}
+          ref={heroAnimation.elementRef}
           className="pt-16 md:pt-20 pb-2 md:pb-3 px-6 text-center bg-background"
         >
           <div
@@ -120,7 +120,7 @@ const WWSEmployers = () => {
 
         {/* Benefits Section */}
         <section
-          ref={benefitsAnimation.elementRef as React.RefObject<HTMLElement>}
+          ref={benefitsAnimation.elementRef}
           className="pt-2 md:pt-3 pb-16 md:pb-20 bg-white"
         >
           <div className="container mx-auto px-6 md:px-12">
@@ -255,7 +255,7 @@ const WWSEmployers = () => {
 
         {/* Resources/Tools Section */}
         <section
-          ref={resourcesAnimation.elementRef as React.RefObject<HTMLElement>}
+          ref={resourcesAnimation.elementRef}
           className="py-16 md:py-20"
           style={{
             backgroundColor: "#F5F5F5",
@@ -352,7 +352,7 @@ const WWSEmployers = () => {
 
         {/* Insights Section - Split Layout */}
         <section
-          ref={insightsAnimation.elementRef as React.RefObject<HTMLElement>}
+          ref={insightsAnimation.elementRef}
           className="py-16 md:py-20 bg-white"
         >
           <div className="container mx-auto px-6 md:px-12">
@@ -433,7 +433,7 @@ const WWSEmployers = () => {
 
         {/* Success Metrics Section */}
         <section
-          ref={metricsAnimation.elementRef as React.RefObject<HTMLElement>}
+          ref={metricsAnimation.elementRef}
           className="py-16 md:py-20 bg-muted/30"
         >
           <div className="container mx-auto px-6 md:px-12">
@@ -568,7 +568,7 @@ const WWSEmployers = () => {
 
         {/* Process Section - How It Works */}
         <section
-          ref={processAnimation.elementRef as React.RefObject<HTMLElement>}
+          ref={processAnimation.elementRef}
           className="py-16 md:py-20 bg-white"
         >
           <div className="container mx-auto px-6 md:px-12">
@@ -693,7 +693,7 @@ const WWSEmployers = () => {
 
         {/* CTA Section */}
         <section
-          ref={ctaAnimation.elementRef as React.RefObject<HTMLElement>}
+          ref={ctaAnimation.elementRef}
           className="py-10 md:py-12"
           style={{
             backgroundColor: "#F9F9F9",

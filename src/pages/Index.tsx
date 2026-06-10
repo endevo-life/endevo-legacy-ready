@@ -40,7 +40,7 @@ const Index = () => {
         {/* Our Human-Centered Support Section */}
         <section className="py-20 bg-background">
           <div className="container max-w-7xl mx-auto px-4">
-            <div ref={humanRef as any} className="grid lg:grid-cols-2 gap-16 items-center">
+            <div ref={humanRef} className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left — Text */}
               <div className={`space-y-6 transition-all duration-1000 ${humanVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} `}>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>

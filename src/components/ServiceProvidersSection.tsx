@@ -17,7 +17,7 @@ const ServiceProvidersSection = () => {
   return (
     <section id="for-employees" className="py-20 bg-background scroll-mt-20">
       <div
-        ref={elementRef as any}
+        ref={elementRef}
         className={`container max-w-7xl mx-auto px-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         {/* Headline */}

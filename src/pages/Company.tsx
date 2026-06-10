@@ -34,7 +34,7 @@ const Company = () => {
     useScrollAnimation();
   const { elementRef: oldValuesRef, isVisible: oldValuesVisible } =
     useScrollAnimation();
-  const ctaAnimation = useScrollAnimation();
+  const ctaAnimation = useScrollAnimation<HTMLElement>();
   const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
@@ -59,7 +59,7 @@ for Life's What-Ifs"
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div
-              ref={newHeroRef as any}
+              ref={newHeroRef}
               className={`space-y-6 transition-all duration-1000 ${newHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
               <h1
@@ -195,7 +195,7 @@ for Life's What-Ifs"
       {/* Let's Start Your Legacy Journey Section */}
       {/* CTA Section */}
       <section
-        ref={ctaAnimation.elementRef as React.RefObject<HTMLElement>}
+        ref={ctaAnimation.elementRef}
         className="py-10 md:py-12"
         style={{
           backgroundColor: "#F9F9F9",

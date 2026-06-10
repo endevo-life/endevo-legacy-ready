@@ -40,18 +40,18 @@ const solutionHeroConsultation =
   "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69975848df9bdf1a7110b864.jpeg";
 
 const Solution = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
-  const { elementRef: edgeRef, isVisible: edgeVisible } = useScrollAnimation();
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: edgeRef, isVisible: edgeVisible } = useScrollAnimation<HTMLElement>();
   const { elementRef: lifecycleRef, isVisible: lifecycleVisible } =
-    useScrollAnimation();
+    useScrollAnimation<HTMLElement>();
   const { elementRef: aboutRef, isVisible: aboutVisible } =
-    useScrollAnimation();
+    useScrollAnimation<HTMLElement>();
   const {
     elementRef: caseStudiesHeadingRef,
     isVisible: caseStudiesHeadingVisible,
   } = useScrollAnimation();
   const { elementRef: howItWorksRef, isVisible: howItWorksVisible } =
-    useScrollAnimation();
+    useScrollAnimation<HTMLElement>();
   const caseStudiesRef = useRef<HTMLDivElement>(null);
   const scrollCaseStudies = (dir: "left" | "right") => {
     if (caseStudiesRef.current) {
@@ -77,7 +77,7 @@ const Solution = () => {
 
       {/* Employee Wellness Hero Section */}
       <section
-        ref={elementRef as any}
+        ref={elementRef}
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('${solutionHeroConsultation}')` }}
       >
@@ -121,7 +121,7 @@ const Solution = () => {
       </section>
 
       {/* Closing the Whole Lifecycle Gap Section */}
-      <section ref={lifecycleRef as any} className="py-20 px-4 bg-white">
+      <section ref={lifecycleRef} className="py-20 px-4 bg-white">
         <div className="container max-w-6xl mx-auto">
           {/* Title */}
           <h2
@@ -325,7 +325,7 @@ const Solution = () => {
 
       {/* How It Works Section */}
       <section
-        ref={howItWorksRef as any}
+        ref={howItWorksRef}
         id="how-it-works"
         className="scroll-mt-20"
       >
@@ -338,7 +338,7 @@ const Solution = () => {
 
       {/* About the Program and Why It Matters Section */}
       <section
-        ref={aboutRef as any}
+        ref={aboutRef}
         id="about-program"
         className="py-20 px-4 bg-muted/30 scroll-mt-20"
       >
@@ -419,7 +419,7 @@ const Solution = () => {
         className="py-10 px-4 bg-background scroll-mt-20"
       >
         <div className="container max-w-[1400px] mx-auto">
-          <div ref={caseStudiesHeadingRef as any} className="text-center mb-12">
+          <div ref={caseStudiesHeadingRef} className="text-center mb-12">
             <h2
               className={`text-3xl md:text-4xl font-bold text-foreground mb-4 transition-all duration-1000 ease-out ${caseStudiesHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{
@@ -665,7 +665,7 @@ const Solution = () => {
 
       {/* Our Edge: Human-Centered Guidance Section */}
       <section
-        ref={edgeRef as React.RefObject<HTMLElement>}
+        ref={edgeRef}
         id="our-edge"
         className="py-20 bg-background scroll-mt-20"
       >
