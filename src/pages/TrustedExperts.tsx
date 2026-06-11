@@ -37,6 +37,17 @@ const experts = [
     category: "Physical",
   },
   {
+    name: "Childfree Trust",
+    logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/6a29b9eb2719d8cb18adab39.png",
+    tagline:
+      "Childfree Trust is the first nationwide fiduciary representation and estate planning service for Childfree people.",
+    description:
+      "With Childfree Trust, members create their estate planning documents, nominate Childfree Trust as the medical and financial POA, executor and trustee, outline their care plans, and have a 24/7 emergency response team to ensure their wishes are followed when needed.",
+    buttonText: "Learn More",
+    url: "https://childfreetrust.com/",
+    category: "Legal",
+  },
+  {
     name: "Prisidio",
     logo: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/699757448d5b5af29c80f299.jpg",
     tagline: "Your Digital Vault. For Life.®",
