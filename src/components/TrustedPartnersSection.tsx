@@ -2,18 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Filter, X, ArrowRight, ChevronDown } from "lucide-react";
+import { Filter, ArrowRight, ChevronDown } from "lucide-react";
 import beliefsIcon from "@/assets/beliefs-icon-new.png";
 import legalIcon from "@/assets/legal-icon-new.png";
 import financialIcon from "@/assets/financial-icon-new.png";
 import physicalIcon from "@/assets/physical-icon-new.png";
 import digitalIcon from "@/assets/digital-icon-new.png";
-import categoryBeliefsIcon from "@/assets/category-beliefs-icon.png";
-import categoryLegalIcon from "@/assets/category-legal-icon.png";
-import categoryFinancialIcon from "@/assets/category-financial-icon.png";
-import categoryPhysicalIcon from "@/assets/category-physical-icon.png";
-import categoryDigitalIcon from "@/assets/category-digital-icon.png";
+
 const partners = [
   {
     name: "Nia Emberly",
@@ -57,6 +52,7 @@ const partners = [
     category: "digital" as const,
   },
 ];
+
 const categoryInfo = [
   {
     name: "Legal",
@@ -93,28 +89,25 @@ const categoryInfo = [
     icon: beliefsIcon,
   },
 ];
-const TrustedPartnersSection = () => {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
+
+interface TrustedPartnersSectionProps {
+  onCategoryChange?: (category: string | null) => void;
+}
+
+const TrustedPartnersSection = ({ onCategoryChange }: TrustedPartnersSectionProps) => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
-  const filteredPartners = partners.filter((partner) => {
-    const matchesCategory =
-      selectedCategories.length === 0 ||
-      selectedCategories.includes(partner.category);
-    const matchesSearch =
-      searchQuery === "" ||
-      partner.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      partner.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      partner.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  }).sort((a, b) => a.name.localeCompare(b.name));
+
+  const filteredPartners = partners
+    .filter((partner) => selectedCategory === null || partner.category === selectedCategory)
+    .sort((a, b) => a.name.localeCompare(b.name));
+
   const selectCategory = (category: string) => {
-    setSelectedCategories((prev) =>
-      prev.includes(category)
-        ? prev.filter((c) => c !== category)
-        : [...prev, category]
-    );
+    const next = selectedCategory === category ? null : category;
+    setSelectedCategory(next);
+    onCategoryChange?.(next);
   };
+
   return (
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container max-w-6xl mx-auto px-4">
@@ -133,7 +126,7 @@ const TrustedPartnersSection = () => {
               key={index}
               onClick={() => selectCategory(category.category)}
               className={`text-left transition-all hover:shadow-lg ${
-                selectedCategories.includes(category.category)
+                selectedCategory === category.category
                   ? "ring-2 ring-brand-orange"
                   : ""
               }`}
@@ -179,13 +172,15 @@ const TrustedPartnersSection = () => {
             <span className="flex items-center gap-2">
               <Filter className="w-4 h-4 text-brand-orange" />
               Filter by Category
-              {selectedCategories.length > 0 && (
+              {selectedCategory !== null && (
                 <span className="ml-1 bg-brand-orange text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                  {selectedCategories.length}
+                  1
                 </span>
               )}
             </span>
-            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileFilterOpen ? "rotate-180" : ""}`} />
+            <ChevronDown
+              className={`w-4 h-4 transition-transform duration-200 ${mobileFilterOpen ? "rotate-180" : ""}`}
+            />
           </button>
 
           {mobileFilterOpen && (
@@ -195,44 +190,51 @@ const TrustedPartnersSection = () => {
                   key={index}
                   onClick={() => selectCategory(category.category)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-full border text-sm font-medium transition-all ${
-                    selectedCategories.includes(category.category)
+                    selectedCategory === category.category
                       ? "border-brand-orange bg-brand-orange/10 text-brand-orange"
                       : "border-border text-foreground"
                   }`}
                 >
-                  <img src={category.icon} alt="" className="w-5 h-5 object-contain" />
+                  <img
+                    src={category.icon}
+                    alt=""
+                    className="w-5 h-5 object-contain"
+                  />
                   {category.name}
                 </button>
               ))}
-              {selectedCategories.length > 0 && (
+              {selectedCategory !== null && (
                 <button
-                  onClick={() => setSelectedCategories([])}
+                  onClick={() => {
+                    setSelectedCategory(null);
+                    onCategoryChange?.(null);
+                  }}
                   className="col-span-2 text-xs text-muted-foreground underline mt-1 text-center"
                 >
-                  Clear filters
+                  Clear filter
                 </button>
               )}
             </div>
           )}
         </div>
 
-        {/* Mobile: always shows first 3 (or filtered), hidden on desktop */}
+        {/* Partner cards — mobile */}
         <div className="md:hidden space-y-6">
-          {selectedCategories.length > 0 && filteredPartners.length === 0 && (
+          {selectedCategory !== null && filteredPartners.length === 0 && (
             <div className="text-center py-12 px-6">
               <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
-              <p className="text-foreground/60">We're adding trusted partners in this category. Check back soon!</p>
+              <p className="text-foreground/60">
+                We're adding trusted partners in this category. Check back soon!
+              </p>
             </div>
           )}
-          {selectedCategories.length > 0 &&
-            filteredPartners.map((partner, index) => (
+          {filteredPartners.map((partner, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-lg transition-shadow"
             >
               <CardContent className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-                  {/* Logo */}
                   <div
                     className="flex-shrink-0 cursor-pointer"
                     onClick={() => window.open(partner.url, "_blank")}
@@ -243,8 +245,6 @@ const TrustedPartnersSection = () => {
                       className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-[15px]"
                     />
                   </div>
-
-                  {/* Content */}
                   <div className="flex-1 space-y-4 text-center md:text-left">
                     <h3 className="text-xl md:text-2xl font-bold text-foreground">
                       {partner.name}
@@ -255,8 +255,6 @@ const TrustedPartnersSection = () => {
                     <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                       {partner.description}
                     </p>
-
-                    {/* CTA Button */}
                     <div className="pt-2 flex justify-center md:justify-start">
                       <Button
                         onClick={() => window.open(partner.url, "_blank")}
@@ -275,16 +273,17 @@ const TrustedPartnersSection = () => {
           ))}
         </div>
 
-        {/* Desktop: only shows cards when a category is selected */}
+        {/* Partner cards — desktop */}
         <div className="hidden md:block space-y-6">
-          {selectedCategories.length > 0 && filteredPartners.length === 0 && (
+          {selectedCategory !== null && filteredPartners.length === 0 && (
             <div className="text-center py-12 px-6">
               <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
-              <p className="text-foreground/60">We're adding trusted partners in this category. Check back soon!</p>
+              <p className="text-foreground/60">
+                We're adding trusted partners in this category. Check back soon!
+              </p>
             </div>
           )}
-          {selectedCategories.length > 0 &&
-            filteredPartners.map((partner, index) => (
+          {filteredPartners.map((partner, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-lg transition-shadow"
@@ -302,14 +301,22 @@ const TrustedPartnersSection = () => {
                     />
                   </div>
                   <div className="flex-1 space-y-4 text-center md:text-left">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground">{partner.name}</h3>
-                    <p className="text-base md:text-lg font-bold text-brand-orange">{partner.tagline}</p>
-                    <p className="text-sm md:text-base text-foreground/80 leading-relaxed">{partner.description}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground">
+                      {partner.name}
+                    </h3>
+                    <p className="text-base md:text-lg font-bold text-brand-orange">
+                      {partner.tagline}
+                    </p>
+                    <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                      {partner.description}
+                    </p>
                     <div className="pt-2 flex justify-center md:justify-start">
                       <Button
                         onClick={() => window.open(partner.url, "_blank")}
                         className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-6 py-1.5 text-base rounded-full"
-                        style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                        style={{
+                          fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                        }}
                       >
                         {partner.buttonText}
                       </Button>

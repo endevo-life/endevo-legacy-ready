@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import TrustedPartnersSection from "@/components/TrustedPartnersSection";
@@ -8,9 +9,22 @@ import { useNavigate } from "react-router-dom";
 import legalFrameworkBg from "@/assets/legal-collaboration-bg.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
+const categoryLabels: Record<string, string> = {
+  legal: "Legal",
+  financial: "Financial",
+  physical: "Physical",
+  digital: "Digital",
+  beliefs: "Beliefs",
+};
+
 const Marketplace = () => {
   const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation<HTMLElement>();
+
+  const categoryLabel = selectedCategory ? categoryLabels[selectedCategory] : "Legal";
+  const ctaHeading = `${categoryLabel} Collaboration Opportunities`;
+  const ctaButton = `Become A ${categoryLabel} Partner`;
 
   return (
     <div className="min-h-screen">
@@ -55,9 +69,9 @@ const Marketplace = () => {
         </section>
 
         {/* Trusted Partners Section */}
-        <TrustedPartnersSection />
+        <TrustedPartnersSection onCategoryChange={setSelectedCategory} />
 
-        {/* Legal Collaboration Opportunities Section */}
+        {/* Collaboration Opportunities Section */}
         <section
           id="legal-collaboration"
           className="bg-muted/30 relative overflow-hidden py-6 scroll-mt-20"
@@ -69,7 +83,7 @@ const Marketplace = () => {
           <div className="container max-w-7xl mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-4 text-center relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Legal Collaboration Opportunities
+                {ctaHeading}
               </h2>
               <p className="text-xl text-brand-orange font-semibold mb-8">
                 Join us in creating lasting impact through trusted partnerships
@@ -100,7 +114,7 @@ const Marketplace = () => {
                   className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base rounded-full"
                   onClick={() => navigate("/contact")}
                 >
-                  Become A Legal Partner
+                  {ctaButton}
                 </Button>
               </div>
             </div>

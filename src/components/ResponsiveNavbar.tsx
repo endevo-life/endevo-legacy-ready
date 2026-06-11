@@ -160,7 +160,7 @@ const ResponsiveNavbar = () => {
     //   submenu: []
     // },
     {
-      name: "Marketplace",
+      name: "Readiness Hub",
       href: "/marketplace",
       submenu: [],
     },
