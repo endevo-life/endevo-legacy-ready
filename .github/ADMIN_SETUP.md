@@ -3,6 +3,7 @@
 ## Instructions for Admin (nermeen or endevo-life)
 
 ### 1. Go to Repository Settings
+
 - Visit: https://github.com/endevo-life/endevo-legacy-ready
 - Click **Settings** tab
 - Click **Branches** in left sidebar
@@ -12,6 +13,7 @@
 Click **"Add rule"** and configure:
 
 #### Branch name pattern
+
 ```
 main
 ```
@@ -19,29 +21,35 @@ main
 #### Protect matching branches - Check these:
 
 ✅ **Require a pull request before merging**
-   - ✅ Require approvals: **1**
-   - ✅ Dismiss stale pull request approvals when new commits are pushed
-   - ✅ Require review from Code Owners (optional)
+
+- ✅ Require approvals: **1**
+- ✅ Dismiss stale pull request approvals when new commits are pushed
+- ✅ Require review from Code Owners (optional)
 
 ✅ **Require status checks to pass before merging**
-   - ✅ Require branches to be up to date before merging
-   - Search for Vercel checks if available
+
+- ✅ Require branches to be up to date before merging
+- Search for Vercel checks if available
 
 ✅ **Require conversation resolution before merging**
 
 ✅ **Require linear history** (optional - keeps history clean)
 
 ✅ **Include administrators** (optional - even admins need PRs)
-   - ⚠️ Uncheck this if you want admins to bypass for emergencies
+
+- ⚠️ Uncheck this if you want admins to bypass for emergencies
 
 ✅ **Restrict who can push to matching branches**
-   - Add: **endevo-life** and **nermeen** as allowed
+
+- Add: **endevo-life** and **nermeen** as allowed
 
 ✅ **Allow force pushes**
-   - ❌ Keep UNCHECKED for safety
+
+- ❌ Keep UNCHECKED for safety
 
 ✅ **Allow deletions**
-   - ❌ Keep UNCHECKED to prevent accidental deletion
+
+- ❌ Keep UNCHECKED to prevent accidental deletion
 
 #### Click "Create" or "Save changes"
 
@@ -54,13 +62,16 @@ Go to: https://github.com/endevo-life/endevo-legacy-ready/settings/access
 ### Add Team Members:
 
 **Admin Access (can merge PRs):**
+
 - **nermeen** - Admin role
 
 **Write Access (can create PRs):**
+
 - **nermen** - Write role
 - **soyana** - Write role
 
 ### To Add:
+
 1. Click **"Add people"**
 2. Enter GitHub username
 3. Select role:
@@ -84,6 +95,7 @@ Go to: https://github.com/endevo-life/endevo-legacy-ready/settings/access
 ## 5. Enable GitHub Actions (Optional - for CI/CD checks)
 
 Create `.github/workflows/ci.yml` for automated checks:
+
 - Runs `npm run build` on every PR
 - Blocks merge if build fails
 - Adds status check to PRs
@@ -140,5 +152,6 @@ Questions? Reach out anytime!
 ## Support
 
 Need help with setup?
+
 - GitHub Docs: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches
 - Contact GitHub Support

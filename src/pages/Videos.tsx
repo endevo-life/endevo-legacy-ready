@@ -4,7 +4,11 @@ import { Loader2 } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { useYouTubePlaylist, shortsPlaylistId, type YouTubeVideo } from "@/hooks/useYouTubeVideos";
+import {
+  useYouTubePlaylist,
+  shortsPlaylistId,
+  type YouTubeVideo,
+} from "@/hooks/useYouTubeVideos";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -24,11 +28,15 @@ interface UnifiedVideo {
 // Helpers
 // ---------------------------------------------------------------------------
 function formatDate(iso: string) {
-  try { return format(parseISO(iso), "MMMM d, yyyy"); } catch { return iso; }
+  try {
+    return format(parseISO(iso), "MMMM d, yyyy");
+  } catch {
+    return iso;
+  }
 }
 
-const LONG_FORM_PLAYLIST_ID =
-  import.meta.env.VITE_YOUTUBE_LONG_FORM_PLAYLIST_ID as string;
+const LONG_FORM_PLAYLIST_ID = import.meta.env
+  .VITE_YOUTUBE_LONG_FORM_PLAYLIST_ID as string;
 
 const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID as string;
 const SHORT_FORM_PLAYLIST_ID = shortsPlaylistId(CHANNEL_ID);
@@ -38,7 +46,13 @@ const POSTS_PER_PAGE = 6;
 // ---------------------------------------------------------------------------
 // Modal for YouTube long-form
 // ---------------------------------------------------------------------------
-function YouTubeModal({ video, onClose }: { video: UnifiedVideo; onClose: () => void }) {
+function YouTubeModal({
+  video,
+  onClose,
+}: {
+  video: UnifiedVideo;
+  onClose: () => void;
+}) {
   return (
     <div
       className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4 py-10"
@@ -49,7 +63,12 @@ function YouTubeModal({ video, onClose }: { video: UnifiedVideo; onClose: () => 
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-4 sm:p-6">
-          <button onClick={onClose} className="mb-3 text-sm text-gray-400 hover:text-gray-600">← Back</button>
+          <button
+            onClick={onClose}
+            className="mb-3 text-sm text-gray-400 hover:text-gray-600"
+          >
+            ← Back
+          </button>
           <h2
             className="text-xl sm:text-2xl font-bold mb-4"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -73,7 +92,13 @@ function YouTubeModal({ video, onClose }: { video: UnifiedVideo; onClose: () => 
 // ---------------------------------------------------------------------------
 // Video Card
 // ---------------------------------------------------------------------------
-function VideoCard({ video, onClick }: { video: UnifiedVideo; onClick: () => void }) {
+function VideoCard({
+  video,
+  onClick,
+}: {
+  video: UnifiedVideo;
+  onClick: () => void;
+}) {
   return (
     <article
       className="shadow-md overflow-hidden flex flex-col bg-white w-full max-w-[368px] cursor-pointer"
@@ -81,7 +106,11 @@ function VideoCard({ video, onClick }: { video: UnifiedVideo; onClick: () => voi
     >
       <div className="w-full h-48 sm:h-56 md:h-[220px] lg:h-[294px] overflow-hidden bg-gray-100 relative">
         {video.thumbnail ? (
-          <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover" />
+          <img
+            src={video.thumbnail}
+            alt={video.title}
+            className="w-full h-full object-cover"
+          />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gray-200">
             <span className="text-gray-400 text-sm">No image</span>
@@ -90,7 +119,11 @@ function VideoCard({ video, onClick }: { video: UnifiedVideo; onClick: () => voi
         {/* Play overlay */}
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/35 transition-colors">
           <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
-            <svg className="w-6 h-6 text-orange-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 text-orange-500 ml-1"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
@@ -98,18 +131,25 @@ function VideoCard({ video, onClick }: { video: UnifiedVideo; onClick: () => voi
         {/* Type badge */}
         <span
           className="absolute top-2 left-2 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full"
-          style={{ backgroundColor: video.type === "long" ? "#FF5A00" : "#1a1a2e" }}
+          style={{
+            backgroundColor: video.type === "long" ? "#FF5A00" : "#1a1a2e",
+          }}
         >
           {video.type === "long" ? "Long Form" : "Short Form"}
         </span>
       </div>
       <div className="p-3 flex flex-col flex-1">
         <p className="text-sm text-muted-foreground mb-1">{video.date}</p>
-        <h3 className="text-lg font-semibold mb-3 flex-1 line-clamp-3">{video.title}</h3>
+        <h3 className="text-lg font-semibold mb-3 flex-1 line-clamp-3">
+          {video.title}
+        </h3>
         <div className="flex justify-center">
           <button
             className="w-fit text-white text-sm font-semibold px-8 py-1.5 transition-all duration-300 hover:brightness-110 hover:scale-105"
-            style={{ backgroundColor: "#FF5A00", boxShadow: "0 4px 12px rgba(255,90,0,0.4)" }}
+            style={{
+              backgroundColor: "#FF5A00",
+              boxShadow: "0 4px 12px rgba(255,90,0,0.4)",
+            }}
           >
             Watch Now
           </button>
@@ -123,8 +163,16 @@ function VideoCard({ video, onClick }: { video: UnifiedVideo; onClick: () => voi
 // Page
 // ---------------------------------------------------------------------------
 const Videos = () => {
-  const { videos: longVideos, loading: longLoading, error: longError } = useYouTubePlaylist(LONG_FORM_PLAYLIST_ID);
-  const { videos: shortVideos, loading: shortLoading, error: shortError } = useYouTubePlaylist(SHORT_FORM_PLAYLIST_ID);
+  const {
+    videos: longVideos,
+    loading: longLoading,
+    error: longError,
+  } = useYouTubePlaylist(LONG_FORM_PLAYLIST_ID);
+  const {
+    videos: shortVideos,
+    loading: shortLoading,
+    error: shortError,
+  } = useYouTubePlaylist(SHORT_FORM_PLAYLIST_ID);
 
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState<VideoTypeFilter>("long");
@@ -140,18 +188,21 @@ const Videos = () => {
     youtubeId: v.id,
   }));
 
-  const shortFormVideos: UnifiedVideo[] = shortVideos.map((v: YouTubeVideo) => ({
-    id: `short-${v.id}`,
-    title: v.title,
-    date: formatDate(v.publishedAt),
-    thumbnail: v.thumbnail,
-    type: "short",
-    youtubeId: v.id,
-  }));
-
-  const allVideos: UnifiedVideo[] = [...longFormVideos, ...shortFormVideos].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  const shortFormVideos: UnifiedVideo[] = shortVideos.map(
+    (v: YouTubeVideo) => ({
+      id: `short-${v.id}`,
+      title: v.title,
+      date: formatDate(v.publishedAt),
+      thumbnail: v.thumbnail,
+      type: "short",
+      youtubeId: v.id,
+    }),
   );
+
+  const allVideos: UnifiedVideo[] = [
+    ...longFormVideos,
+    ...shortFormVideos,
+  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const filtered = allVideos.filter((v) => {
     const matchesSearch = v.title.toLowerCase().includes(search.toLowerCase());
@@ -161,7 +212,7 @@ const Videos = () => {
   const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
   const paginated = filtered.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
+    currentPage * POSTS_PER_PAGE,
   );
 
   const isLoading = longLoading || shortLoading;
@@ -182,10 +233,15 @@ const Videos = () => {
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "VideoGallery",
-          "name": "ENDevo Videos — Digital Legacy Podcast",
-          "url": "https://www.endevo.life/videos",
-          "description": "Watch podcast episodes, expert interviews, and short videos on digital legacy and end-of-life planning.",
-          "publisher": { "@type": "Organization", "name": "ENDevo", "url": "https://www.endevo.life" },
+          name: "ENDevo Videos — Digital Legacy Podcast",
+          url: "https://www.endevo.life/videos",
+          description:
+            "Watch podcast episodes, expert interviews, and short videos on digital legacy and end-of-life planning.",
+          publisher: {
+            "@type": "Organization",
+            name: "ENDevo",
+            url: "https://www.endevo.life",
+          },
         }}
       />
 
@@ -213,13 +269,18 @@ const Videos = () => {
       {/* Tabs */}
       <div className="border-b border-gray-200 bg-white">
         <div className="container max-w-7xl mx-auto px-4 flex gap-0">
-          {([
-            { key: "long", label: "Videos" },
-            { key: "short", label: "Shorts" },
-          ] as { key: VideoTypeFilter; label: string }[]).map((tab) => (
+          {(
+            [
+              { key: "long", label: "Videos" },
+              { key: "short", label: "Shorts" },
+            ] as { key: VideoTypeFilter; label: string }[]
+          ).map((tab) => (
             <button
               key={tab.key}
-              onClick={() => { setTypeFilter(tab.key); setCurrentPage(1); }}
+              onClick={() => {
+                setTypeFilter(tab.key);
+                setCurrentPage(1);
+              }}
               className={`px-8 py-4 text-base font-semibold border-b-[3px] transition-colors ${
                 typeFilter === tab.key
                   ? "border-[#FF5A00] text-[#FF5A00]"
@@ -239,7 +300,10 @@ const Videos = () => {
             type="text"
             placeholder={`Search ${typeFilter === "long" ? "videos" : "shorts"}...`}
             value={search}
-            onChange={(e) => { setSearch(e.target.value); setCurrentPage(1); }}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setCurrentPage(1);
+            }}
             className="border border-gray-300 rounded-full px-4 py-2 text-sm w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
         </div>
@@ -266,7 +330,11 @@ const Videos = () => {
         {!isLoading && filtered.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8 lg:gap-[75px]">
             {paginated.map((v) => (
-              <VideoCard key={v.id} video={v} onClick={() => handleVideoClick(v)} />
+              <VideoCard
+                key={v.id}
+                video={v}
+                onClick={() => handleVideoClick(v)}
+              />
             ))}
           </div>
         )}
@@ -284,7 +352,7 @@ const Videos = () => {
             {(() => {
               const start = Math.min(
                 Math.max(currentPage - 1, 1),
-                Math.max(totalPages - 2, 1)
+                Math.max(totalPages - 2, 1),
               );
               return [start, start + 1, start + 2]
                 .filter((p) => p <= totalPages)
@@ -316,7 +384,9 @@ const Videos = () => {
 
       <Footer />
 
-      {selectedYT && <YouTubeModal video={selectedYT} onClose={() => setSelectedYT(null)} />}
+      {selectedYT && (
+        <YouTubeModal video={selectedYT} onClose={() => setSelectedYT(null)} />
+      )}
     </div>
   );
 };

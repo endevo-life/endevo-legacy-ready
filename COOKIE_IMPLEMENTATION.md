@@ -7,24 +7,28 @@ This implementation provides a comprehensive, GDPR/CCPA-compliant cookie consent
 ## 🎯 Features
 
 ✅ **Full GDPR/CCPA Compliance**
+
 - Explicit consent before non-essential cookies
 - Granular category controls
 - Easy opt-out mechanisms
 - Persistent preference storage
 
 ✅ **User-Friendly Interface**
+
 - Modal cookie banner on first visit
 - Dedicated cookie settings page
 - Simple or detailed view options
 - Mobile-responsive design
 
 ✅ **Privacy-Focused**
+
 - Analytics disabled by default
 - Google Analytics with IP anonymization
 - Consent Mode v2 integration
 - "Do Not Track" respect
 
 ✅ **Developer-Friendly**
+
 - Type-safe analytics wrapper
 - Automatic consent checking
 - Easy-to-use tracking functions
@@ -52,6 +56,7 @@ index.html                        # Updated with Consent Mode v2
 ### 1. Cookie Banner (`CookieBanner.tsx`)
 
 Shows automatically on first visit with options:
+
 - **Accept All**: Enable all cookie categories
 - **Reject Non-Essential**: Only strictly necessary cookies
 - **Customize Settings**: Choose specific categories
@@ -62,29 +67,30 @@ Shows automatically on first visit with options:
 
 ### 2. Cookie Categories
 
-| Category | Description | Required | Default |
-|----------|-------------|----------|---------|
-| **Strictly Necessary** | Security, authentication, session management | ✅ Yes | ✅ Always On |
-| **Functional** | Preferences, language, theme, accessibility | ❌ No | ❌ Off |
-| **Analytics** | Google Analytics, error tracking, performance | ❌ No | ❌ Off |
-| **Marketing** | Ads, retargeting, social media pixels | ❌ No | ❌ Off |
+| Category               | Description                                   | Required | Default      |
+| ---------------------- | --------------------------------------------- | -------- | ------------ |
+| **Strictly Necessary** | Security, authentication, session management  | ✅ Yes   | ✅ Always On |
+| **Functional**         | Preferences, language, theme, accessibility   | ❌ No    | ❌ Off       |
+| **Analytics**          | Google Analytics, error tracking, performance | ❌ No    | ❌ Off       |
+| **Marketing**          | Ads, retargeting, social media pixels         | ❌ No    | ❌ Off       |
 
 ### 3. Analytics Wrapper (`analytics.ts`)
 
 All tracking functions respect user consent:
 
 ```typescript
-import { trackPageView, trackEvent, trackButtonClick } from '@/lib/analytics';
+import { trackPageView, trackEvent, trackButtonClick } from "@/lib/analytics";
 
 // Automatically checks consent before tracking
-trackPageView('/solutions');
-trackEvent('Button', 'Click', 'Sign Up CTA');
-trackButtonClick('Get Started', 'Hero Section');
+trackPageView("/solutions");
+trackEvent("Button", "Click", "Sign Up CTA");
+trackButtonClick("Get Started", "Hero Section");
 ```
 
 ### 4. Cookie Settings Page
 
 Users can change preferences anytime at:
+
 - `/cookie-settings`
 - `/legal/cookie-settings`
 - Footer link: "Cookie Settings"
@@ -94,18 +100,19 @@ Users can change preferences anytime at:
 ### Google Analytics
 
 Already configured in `index.html` with:
+
 - Consent Mode v2
 - IP anonymization
 - Secure cookies
 - Default consent: DENIED (updated based on user choice)
 
 ```javascript
-gtag('consent', 'default', {
-  'analytics_storage': 'denied',  // Updated on user consent
-  'ad_storage': 'denied',
-  'functionality_storage': 'denied',
-  'personalization_storage': 'denied',
-  'security_storage': 'granted'  // Always granted
+gtag("consent", "default", {
+  analytics_storage: "denied", // Updated on user consent
+  ad_storage: "denied",
+  functionality_storage: "denied",
+  personalization_storage: "denied",
+  security_storage: "granted", // Always granted
 });
 ```
 
@@ -145,6 +152,7 @@ Preferences are stored in `localStorage`:
 ### Update Brand Colors
 
 The banner uses Tailwind classes. Update in `CookieBanner.tsx`:
+
 - `brand-orange` → Primary action color
 - `brand-teal` → Info/secondary color
 - `brand-navy` → Headers/text
@@ -152,6 +160,7 @@ The banner uses Tailwind classes. Update in `CookieBanner.tsx`:
 ### Update Cookie Policy Content
 
 Edit `src/pages/CookiePolicy.tsx` to match your:
+
 - Company name
 - Contact information
 - Specific tracking services
@@ -170,9 +179,9 @@ Edit `src/pages/CookiePolicy.tsx` to match your:
 
 ```javascript
 // Check if tracking works
-import { trackEvent } from '@/lib/analytics';
+import { trackEvent } from "@/lib/analytics";
 
-trackEvent('Test', 'Button Click', 'Test Label');
+trackEvent("Test", "Button Click", "Test Label");
 
 // Check console/network tab for gtag requests
 // Should only fire if analytics cookies are accepted
@@ -182,7 +191,7 @@ trackEvent('Test', 'Button Click', 'Test Label');
 
 ```javascript
 // Check consent state in browser console
-gtag('consent', 'get')
+gtag("consent", "get");
 ```
 
 ## 📱 Mobile Optimization
@@ -210,17 +219,20 @@ gtag('consent', 'get')
 ## 📚 Legal Compliance
 
 ### GDPR (EU/UK)
+
 ✅ Explicit consent required
 ✅ Granular controls
 ✅ Easy opt-out
 ✅ Data subject rights
 
 ### CCPA (California)
+
 ✅ Opt-out option
 ✅ Clear disclosure
 ✅ "Do Not Sell" support
 
 ### Other Jurisdictions
+
 ✅ Cookie policy available
 ✅ User controls provided
 ✅ Transparent practices
@@ -228,17 +240,20 @@ gtag('consent', 'get')
 ## 🆘 Troubleshooting
 
 ### Banner doesn't appear
+
 - Check localStorage for `endevo_cookie_consent`
 - Clear cache and cookies
 - Check browser console for errors
 
 ### Analytics not tracking
+
 - Verify user accepted analytics cookies
 - Check `localStorage.getItem('endevo_cookie_preferences')`
 - Verify Google Analytics ID is correct
 - Check browser network tab for gtag requests
 
 ### Styles look broken
+
 - Ensure Tailwind CSS is properly configured
 - Check for CSS conflicts
 - Verify Lucide React icons are installed
@@ -246,6 +261,7 @@ gtag('consent', 'get')
 ## 📞 Support
 
 For questions about implementation:
+
 - Email: hello@endevo.life
 - Phone: 484-545-4327
 

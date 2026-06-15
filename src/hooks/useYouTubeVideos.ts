@@ -11,7 +11,7 @@ export interface YouTubeVideo {
 /** Fetch all items from any YouTube playlist ID (paginated) */
 async function fetchPlaylistItems(
   playlistId: string,
-  apiKey: string
+  apiKey: string,
 ): Promise<YouTubeVideo[]> {
   const all: YouTubeVideo[] = [];
   let pageToken: string | undefined = undefined;
@@ -28,7 +28,7 @@ async function fetchPlaylistItems(
     if (!res.ok) throw new Error("Failed to fetch playlist items.");
     const data = await res.json();
 
-    const DELETED = new Set(["deleted video", "private video"])
+    const DELETED = new Set(["deleted video", "private video"]);
     for (const item of data.items ?? []) {
       const videoId = item.snippet?.resourceId?.videoId;
       const title: string = item.snippet?.title ?? "";
@@ -101,7 +101,7 @@ export function useYouTubeVideos() {
     async function fetchVideos() {
       try {
         const channelRes = await fetch(
-          `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${apiKey}`
+          `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${apiKey}`,
         );
         if (!channelRes.ok) throw new Error("Failed to fetch channel data.");
         const channelData = await channelRes.json();

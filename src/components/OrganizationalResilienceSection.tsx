@@ -23,10 +23,7 @@ const OrganizationalResilienceSection = () => {
   const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
 
   return (
-    <section
-      ref={elementRef}
-      className="py-20 px-4 bg-background"
-    >
+    <section ref={elementRef} className="py-20 px-4 bg-background">
       <div className="container max-w-7xl mx-auto">
         {/* Headline */}
         <h2

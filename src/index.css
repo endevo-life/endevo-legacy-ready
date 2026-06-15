@@ -9,17 +9,17 @@
     /* ENDevo Brand Colors - HSL Values */
     --background: 0 0% 100%;
     --foreground: 218 91% 13%;
-    
+
     /* Brand Primary - Navy Blue #08123a */
     --brand-navy: 218 91% 13%;
     --brand-navy-light: 218 91% 20%;
     --brand-navy-dark: 218 91% 8%;
-    
+
     /* Brand Secondary - Orange #ff5d00 */
     --brand-orange: 20 100% 50%;
     --brand-orange-light: 20 100% 60%;
     --brand-orange-dark: 20 100% 40%;
-    
+
     /* Brand Accent - Teal #58bbb6 */
     --brand-teal: 177 35% 54%;
     --brand-teal-light: 177 35% 64%;
@@ -117,7 +117,7 @@
     @apply bg-background text-foreground font-sans;
     overflow-x: hidden;
   }
-  
+
   #root {
     overflow-x: hidden;
     max-width: 100vw;
@@ -127,32 +127,41 @@
 @layer components {
   /* Hero Section Styles */
   .hero-gradient {
-    background: linear-gradient(135deg, rgba(8, 18, 58, 0.8) 0%, rgba(8, 18, 58, 0.6) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(8, 18, 58, 0.8) 0%,
+      rgba(8, 18, 58, 0.6) 100%
+    );
   }
-  
+
   /* Legacy Section Gradient */
   .legacy-gradient {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
   }
-  
+
   /* Professional Typography */
   .heading-hero {
     @apply text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight;
-    font-family: 'Times New Roman', serif;
+    font-family: "Times New Roman", serif;
     line-height: 1.1;
   }
-  
+
   .heading-section {
     @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight;
-    font-family: 'Times New Roman', serif;
+    font-family: "Times New Roman", serif;
   }
-  
+
   .text-lead {
     @apply text-lg md:text-xl leading-relaxed;
   }
-  
+
   /* Apply Times New Roman to all section headings */
-  h2, h3 {
-    font-family: 'Times New Roman', serif;
+  h2,
+  h3 {
+    font-family: "Times New Roman", serif;
   }
 }

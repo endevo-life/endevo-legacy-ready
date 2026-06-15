@@ -41,7 +41,8 @@ const solutionHeroConsultation =
 
 const Solution = () => {
   const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
-  const { elementRef: edgeRef, isVisible: edgeVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: edgeRef, isVisible: edgeVisible } =
+    useScrollAnimation<HTMLElement>();
   const { elementRef: lifecycleRef, isVisible: lifecycleVisible } =
     useScrollAnimation<HTMLElement>();
   const { elementRef: aboutRef, isVisible: aboutVisible } =
@@ -324,11 +325,7 @@ const Solution = () => {
       </section>
 
       {/* How It Works Section */}
-      <section
-        ref={howItWorksRef}
-        id="how-it-works"
-        className="scroll-mt-20"
-      >
+      <section ref={howItWorksRef} id="how-it-works" className="scroll-mt-20">
         <div
           className={`transition-all duration-1000 ease-out ${howItWorksVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >

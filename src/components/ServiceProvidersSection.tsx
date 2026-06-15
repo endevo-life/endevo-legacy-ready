@@ -11,7 +11,13 @@ const ServiceProvidersSection = () => {
   const cardsRef = useRef<HTMLDivElement>(null);
   const scrollCards = (dir: "left" | "right") => {
     if (cardsRef.current) {
-      cardsRef.current.scrollBy({ left: dir === "left" ? -cardsRef.current.offsetWidth : cardsRef.current.offsetWidth, behavior: "smooth" });
+      cardsRef.current.scrollBy({
+        left:
+          dir === "left"
+            ? -cardsRef.current.offsetWidth
+            : cardsRef.current.offsetWidth,
+        behavior: "smooth",
+      });
     }
   };
   return (
@@ -34,12 +40,16 @@ const ServiceProvidersSection = () => {
         <p className="text-center text-lg text-muted-foreground max-w-4xl mx-auto mb-16 leading-relaxed">
           ENDevo does not just give you tools. We connect you with the experts
           and services that help bring your plan to life. Our role is to
-          educate, project manage, and empower you to know who to talk to, when to talk
-          to them, and how to take action.
+          educate, project manage, and empower you to know who to talk to, when
+          to talk to them, and how to take action.
         </p>
 
         {/* Three Feature Cards */}
-        <div ref={cardsRef} className="flex md:grid md:grid-cols-4 gap-8 mb-4 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+        <div
+          ref={cardsRef}
+          className="flex md:grid md:grid-cols-4 gap-8 mb-4 overflow-x-auto snap-x snap-mandatory md:overflow-x-visible"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {/* Card 1 - Legal Partners */}
           <Card className="hover:shadow-xl transition-shadow duration-300 relative group overflow-hidden flex-shrink-0 w-full md:w-auto snap-center">
             <CardContent className="p-0">
@@ -54,13 +64,21 @@ const ServiceProvidersSection = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3">Legal Partners</h3>
                 <p className="text-muted-foreground">
-                  Estate planning attorneys, trusts and wills specialists, and legal advisors to help protect your rights, manage important documents, and ensure your wishes are honored.
+                  Estate planning attorneys, trusts and wills specialists, and
+                  legal advisors to help protect your rights, manage important
+                  documents, and ensure your wishes are honored.
                 </p>
               </div>
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-primary/95 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white text-center text-base leading-relaxed">
-                  Navigating legal matters can be overwhelming, especially when it comes to protecting your rights and ensuring your wishes are honored. ENDevo connects you with experienced estate planning attorneys, trusts and wills specialists, and legal advisors who guide you through managing important documents, making informed decisions, and safeguarding your legacy for yourself and your loved ones.
+                  Navigating legal matters can be overwhelming, especially when
+                  it comes to protecting your rights and ensuring your wishes
+                  are honored. ENDevo connects you with experienced estate
+                  planning attorneys, trusts and wills specialists, and legal
+                  advisors who guide you through managing important documents,
+                  making informed decisions, and safeguarding your legacy for
+                  yourself and your loved ones.
                 </p>
               </div>
             </CardContent>

@@ -23,7 +23,9 @@ export default function SEO({
   jsonLd,
   noIndex = false,
 }: SEOProps) {
-  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+  const fullTitle = title.includes(SITE_NAME)
+    ? title
+    : `${title} | ${SITE_NAME}`;
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : undefined;
   const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
@@ -31,7 +33,10 @@ export default function SEO({
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="robots" content={noIndex ? "noindex,nofollow" : "index,follow"} />
+      <meta
+        name="robots"
+        content={noIndex ? "noindex,nofollow" : "index,follow"}
+      />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
       {/* Open Graph */}

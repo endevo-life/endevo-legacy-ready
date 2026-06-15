@@ -11,7 +11,7 @@ interface CookiePreferences {
 }
 
 const getConsentPreferences = (): CookiePreferences | null => {
-  const saved = localStorage.getItem('endevo_cookie_preferences');
+  const saved = localStorage.getItem("endevo_cookie_preferences");
   return saved ? JSON.parse(saved) : null;
 };
 
@@ -20,14 +20,14 @@ const getConsentPreferences = (): CookiePreferences | null => {
  */
 export const trackPageView = (page: string, title?: string) => {
   const preferences = getConsentPreferences();
-  
+
   if (preferences?.analytics) {
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('event', 'page_view', {
+      window.gtag("event", "page_view", {
         page_path: page,
-        page_title: title || document.title
+        page_title: title || document.title,
       });
     }
   }
@@ -40,18 +40,18 @@ export const trackEvent = (
   category: string,
   action: string,
   label?: string,
-  value?: number
+  value?: number,
 ) => {
   const preferences = getConsentPreferences();
-  
+
   if (preferences?.analytics) {
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('event', action, {
+      window.gtag("event", action, {
         event_category: category,
         event_label: label,
-        value: value
+        value: value,
       });
     }
   }
@@ -61,14 +61,21 @@ export const trackEvent = (
  * Track button clicks
  */
 export const trackButtonClick = (buttonName: string, location?: string) => {
-  trackEvent('Button', 'Click', `${buttonName}${location ? ` - ${location}` : ''}`);
+  trackEvent(
+    "Button",
+    "Click",
+    `${buttonName}${location ? ` - ${location}` : ""}`,
+  );
 };
 
 /**
  * Track form submissions
  */
-export const trackFormSubmission = (formName: string, success: boolean = true) => {
-  trackEvent('Form', success ? 'Submit' : 'Error', formName);
+export const trackFormSubmission = (
+  formName: string,
+  success: boolean = true,
+) => {
+  trackEvent("Form", success ? "Submit" : "Error", formName);
 };
 
 /**
@@ -76,25 +83,25 @@ export const trackFormSubmission = (formName: string, success: boolean = true) =
  */
 export const trackConversion = (conversionName: string, value?: number) => {
   const preferences = getConsentPreferences();
-  
+
   if (preferences?.marketing) {
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('event', 'conversion', {
+      window.gtag("event", "conversion", {
         conversion_name: conversionName,
         value: value,
-        currency: 'USD'
+        currency: "USD",
       });
     }
 
     // Facebook Pixel conversion tracking
     // @ts-ignore
-    if (typeof window.fbq === 'function') {
+    if (typeof window.fbq === "function") {
       // @ts-ignore
-      window.fbq('track', conversionName, {
+      window.fbq("track", conversionName, {
         value: value,
-        currency: 'USD'
+        currency: "USD",
       });
     }
   }
@@ -105,16 +112,16 @@ export const trackConversion = (conversionName: string, value?: number) => {
  */
 export const identifyUser = (userId: string, traits?: Record<string, any>) => {
   const preferences = getConsentPreferences();
-  
+
   if (preferences?.analytics) {
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('set', 'user_id', userId);
-      
+      window.gtag("set", "user_id", userId);
+
       if (traits) {
         // @ts-ignore
-        window.gtag('set', 'user_properties', traits);
+        window.gtag("set", "user_properties", traits);
       }
     }
   }
@@ -125,15 +132,15 @@ export const identifyUser = (userId: string, traits?: Record<string, any>) => {
  */
 export const trackOutboundLink = (url: string, label?: string) => {
   const preferences = getConsentPreferences();
-  
+
   if (preferences?.analytics) {
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('event', 'click', {
-        event_category: 'Outbound Link',
+      window.gtag("event", "click", {
+        event_category: "Outbound Link",
         event_label: label || url,
-        transport_type: 'beacon'
+        transport_type: "beacon",
       });
     }
   }
@@ -143,10 +150,10 @@ export const trackOutboundLink = (url: string, label?: string) => {
  * Track video interactions
  */
 export const trackVideoInteraction = (
-  action: 'play' | 'pause' | 'complete',
-  videoTitle: string
+  action: "play" | "pause" | "complete",
+  videoTitle: string,
 ) => {
-  trackEvent('Video', action, videoTitle);
+  trackEvent("Video", action, videoTitle);
 };
 
 /**
@@ -154,14 +161,14 @@ export const trackVideoInteraction = (
  */
 export const trackSearch = (searchTerm: string, resultsCount?: number) => {
   const preferences = getConsentPreferences();
-  
+
   if (preferences?.analytics) {
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('event', 'search', {
+      window.gtag("event", "search", {
         search_term: searchTerm,
-        results_count: resultsCount
+        results_count: resultsCount,
       });
     }
   }
@@ -171,7 +178,11 @@ export const trackSearch = (searchTerm: string, resultsCount?: number) => {
  * Track downloads
  */
 export const trackDownload = (fileName: string, fileType?: string) => {
-  trackEvent('Download', 'File', `${fileName}${fileType ? ` (${fileType})` : ''}`);
+  trackEvent(
+    "Download",
+    "File",
+    `${fileName}${fileType ? ` (${fileType})` : ""}`,
+  );
 };
 
 /**
@@ -179,15 +190,15 @@ export const trackDownload = (fileName: string, fileType?: string) => {
  */
 export const trackError = (errorMessage: string, errorType?: string) => {
   const preferences = getConsentPreferences();
-  
+
   if (preferences?.analytics) {
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('event', 'exception', {
+      window.gtag("event", "exception", {
         description: errorMessage,
         error_type: errorType,
-        fatal: false
+        fatal: false,
       });
     }
   }
@@ -198,35 +209,35 @@ export const trackError = (errorMessage: string, errorType?: string) => {
  */
 export const initializeConsentMode = () => {
   const preferences = getConsentPreferences();
-  
+
   if (!preferences) {
     // Set default consent to denied (will be updated when user makes choice)
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'functionality_storage': 'denied',
-        'personalization_storage': 'denied',
-        'security_storage': 'granted'
+      window.gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
       });
     }
   } else {
     // Update consent based on saved preferences
     // @ts-ignore
-    if (typeof window.gtag === 'function') {
+    if (typeof window.gtag === "function") {
       // @ts-ignore
-      window.gtag('consent', 'update', {
-        'analytics_storage': preferences.analytics ? 'granted' : 'denied',
-        'ad_storage': preferences.marketing ? 'granted' : 'denied',
-        'ad_user_data': preferences.marketing ? 'granted' : 'denied',
-        'ad_personalization': preferences.marketing ? 'granted' : 'denied',
-        'functionality_storage': preferences.functional ? 'granted' : 'denied',
-        'personalization_storage': preferences.functional ? 'granted' : 'denied',
-        'security_storage': 'granted'
+      window.gtag("consent", "update", {
+        analytics_storage: preferences.analytics ? "granted" : "denied",
+        ad_storage: preferences.marketing ? "granted" : "denied",
+        ad_user_data: preferences.marketing ? "granted" : "denied",
+        ad_personalization: preferences.marketing ? "granted" : "denied",
+        functionality_storage: preferences.functional ? "granted" : "denied",
+        personalization_storage: preferences.functional ? "granted" : "denied",
+        security_storage: "granted",
       });
     }
   }

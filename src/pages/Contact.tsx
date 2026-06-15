@@ -39,8 +39,7 @@ const Contact = () => {
               className="text-lg text-muted-foreground max-w-2xl mx-auto"
               style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
             >
-              Connect with the ENDevo team to start your legacy planning
-              journey
+              Connect with the ENDevo team to start your legacy planning journey
             </p>
           </div>
         </section>

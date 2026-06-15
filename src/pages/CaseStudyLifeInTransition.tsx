@@ -61,7 +61,6 @@ const CaseStudyLifeInTransition = () => {
       <article className="py-16 px-4">
         <div className="container max-w-7xl mx-auto">
           <div className="space-y-12 text-lg leading-relaxed text-foreground">
-
             {/* Participant Profile Table */}
             <section>
               <h2
@@ -71,17 +70,35 @@ const CaseStudyLifeInTransition = () => {
                 Participant Profile
               </h2>
               <div className="w-full rounded-2xl border border-border overflow-hidden shadow-md">
-                <table className="w-full text-sm" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                <table
+                  className="w-full text-sm"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
                   <tbody>
                     {[
                       { label: "Role", value: "Administrative Professional" },
                       { label: "Age Range", value: "Mid 40s" },
-                      { label: "Life Stage", value: "Recently divorced; pending legal name change; one child with special needs" },
-                      { label: "Prior Status", value: "Will and trust in progress; blocked by name change documentation cascade" },
-                      { label: "Planning Style", value: "Task-driven; resistant to emotional framing; prefers structured checklists" },
+                      {
+                        label: "Life Stage",
+                        value:
+                          "Recently divorced; pending legal name change; one child with special needs",
+                      },
+                      {
+                        label: "Prior Status",
+                        value:
+                          "Will and trust in progress; blocked by name change documentation cascade",
+                      },
+                      {
+                        label: "Planning Style",
+                        value:
+                          "Task-driven; resistant to emotional framing; prefers structured checklists",
+                      },
                       { label: "Program Entry", value: "November 2025" },
                     ].map(({ label, value }, i) => (
-                      <tr key={label} className={i % 2 === 0 ? "bg-muted/40" : "bg-white"}>
+                      <tr
+                        key={label}
+                        className={i % 2 === 0 ? "bg-muted/40" : "bg-white"}
+                      >
                         <td className="px-5 py-4 text-xs font-bold uppercase tracking-widest text-brand-orange align-top whitespace-nowrap w-48 border-r border-border">
                           {label}
                         </td>
@@ -105,10 +122,21 @@ const CaseStudyLifeInTransition = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Employee #2 entered the program with no resistance to the subject of death. Her position was matter-of-fact: nobody gets out of here alive, so the planning needs to get done. What she needed was not emotional framing — she needed a task list, a clear sequence, and a system.
+                  Employee #2 entered the program with no resistance to the
+                  subject of death. Her position was matter-of-fact: nobody gets
+                  out of here alive, so the planning needs to get done. What she
+                  needed was not emotional framing — she needed a task list, a
+                  clear sequence, and a system.
                 </p>
                 <p>
-                  Her engagement with the program was shaped by a concrete logistical blocker the program helped her identify and name. A recently completed divorce had created a cascading documentation problem: she could not finalize her will and trust, have documents notarized, or update accounts until her legal name was consistent across all identification. The program did not solve that sequencing problem. It surfaced it, named it, and separated it from motivation.
+                  Her engagement with the program was shaped by a concrete
+                  logistical blocker the program helped her identify and name. A
+                  recently completed divorce had created a cascading
+                  documentation problem: she could not finalize her will and
+                  trust, have documents notarized, or update accounts until her
+                  legal name was consistent across all identification. The
+                  program did not solve that sequencing problem. It surfaced it,
+                  named it, and separated it from motivation.
                 </p>
               </div>
             </section>
@@ -122,70 +150,109 @@ const CaseStudyLifeInTransition = () => {
                 Key Findings
               </h2>
               <div className="space-y-8">
-
                 {/* Finding 01 */}
                 <div className="rounded-2xl border border-border p-6 space-y-3 shadow-md">
-                  <p className="text-xs font-bold uppercase tracking-widest text-brand-orange" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                  <p
+                    className="text-xs font-bold uppercase tracking-widest text-brand-orange"
+                    style={{ fontFamily: "'Open Sans', sans-serif" }}
+                  >
                     Finding 01
                   </p>
                   <h3
                     className="text-xl font-bold text-[#08123A]"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    Life-stage transitions create planning blockers that look like avoidance but are not.
+                    Life-stage transitions create planning blockers that look
+                    like avoidance but are not.
                   </h3>
                   <p className="text-muted-foreground">
-                    Divorce, name changes, remarriage, relocation, and new dependents all create cascading documentation requirements that can stall planning entirely. Employee #2 described her situation as "the chicken or the egg" — she had the will in progress, the intent, and the lawyer, but no framework for sequencing tasks when prior steps were blocked.
+                    Divorce, name changes, remarriage, relocation, and new
+                    dependents all create cascading documentation requirements
+                    that can stall planning entirely. Employee #2 described her
+                    situation as "the chicken or the egg" — she had the will in
+                    progress, the intent, and the lawyer, but no framework for
+                    sequencing tasks when prior steps were blocked.
                   </p>
                   <p className="text-muted-foreground">
-                    For employers, this identifies a high-value design requirement: a planning program that accommodates life-stage transitions will serve a significantly larger portion of the workforce than a generic checklist.
+                    For employers, this identifies a high-value design
+                    requirement: a planning program that accommodates life-stage
+                    transitions will serve a significantly larger portion of the
+                    workforce than a generic checklist.
                   </p>
                   <blockquote className="border-l-4 border-brand-orange pl-4 italic text-muted-foreground mt-4">
-                    "Give me a one or two pager: this is soup to nuts, everything you need to do. Otherwise it's overwhelming — and it's overwhelming enough already."
-                    <span className="block not-italic text-sm mt-1">— Employee #2</span>
+                    "Give me a one or two pager: this is soup to nuts,
+                    everything you need to do. Otherwise it's overwhelming — and
+                    it's overwhelming enough already."
+                    <span className="block not-italic text-sm mt-1">
+                      — Employee #2
+                    </span>
                   </blockquote>
                 </div>
 
                 {/* Finding 02 */}
                 <div className="rounded-2xl border border-border p-6 space-y-3 shadow-md">
-                  <p className="text-xs font-bold uppercase tracking-widest text-brand-orange" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                  <p
+                    className="text-xs font-bold uppercase tracking-widest text-brand-orange"
+                    style={{ fontFamily: "'Open Sans', sans-serif" }}
+                  >
                     Finding 02
                   </p>
                   <h3
                     className="text-xl font-bold text-[#08123A]"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    Digital access planning activates even the most task-oriented employees.
+                    Digital access planning activates even the most
+                    task-oriented employees.
                   </h3>
                   <p className="text-muted-foreground">
-                    Employee #2 was not emotionally avoidant — she was logistically blocked. Yet she had the same digital gap as every other participant in the cohort: she had not addressed how her family would access her phone, accounts, or digital records in an emergency. She completed the legacy contact setup immediately upon learning the feature existed.
+                    Employee #2 was not emotionally avoidant — she was
+                    logistically blocked. Yet she had the same digital gap as
+                    every other participant in the cohort: she had not addressed
+                    how her family would access her phone, accounts, or digital
+                    records in an emergency. She completed the legacy contact
+                    setup immediately upon learning the feature existed.
                   </p>
                   <blockquote className="border-l-4 border-brand-orange pl-4 italic text-muted-foreground mt-4">
-                    "I love the idea of having it all in a file folder, labeled, in the safe."
-                    <span className="block not-italic text-sm mt-1">— Employee #2</span>
+                    "I love the idea of having it all in a file folder, labeled,
+                    in the safe."
+                    <span className="block not-italic text-sm mt-1">
+                      — Employee #2
+                    </span>
                   </blockquote>
                 </div>
 
                 {/* Finding 03 */}
                 <div className="rounded-2xl border border-border p-6 space-y-3 shadow-md">
-                  <p className="text-xs font-bold uppercase tracking-widest text-brand-orange" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                  <p
+                    className="text-xs font-bold uppercase tracking-widest text-brand-orange"
+                    style={{ fontFamily: "'Open Sans', sans-serif" }}
+                  >
                     Finding 03
                   </p>
                   <h3
                     className="text-xl font-bold text-[#08123A]"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    ENDevo surfaces planning categories employees do not know they need.
+                    ENDevo surfaces planning categories employees do not know
+                    they need.
                   </h3>
                   <p className="text-muted-foreground">
-                    The most significant outcome for Employee #2 was not a completed task. It was new awareness. Through the program, she encountered the concept of a special needs trust for the first time — directly relevant to her child with special needs. Standard estate planning conversations, even with attorneys, rarely surface this category unprompted. ENDevo's structured framework did.
+                    The most significant outcome for Employee #2 was not a
+                    completed task. It was new awareness. Through the program,
+                    she encountered the concept of a special needs trust for the
+                    first time — directly relevant to her child with special
+                    needs. Standard estate planning conversations, even with
+                    attorneys, rarely surface this category unprompted. ENDevo's
+                    structured framework did.
                   </p>
                   <blockquote className="border-l-4 border-brand-orange pl-4 italic text-muted-foreground mt-4">
-                    "It's like, what came first, the chicken or the egg — I don't have a single document with my new name yet."
-                    <span className="block not-italic text-sm mt-1">— Employee #2, on name change as a sequencing blocker</span>
+                    "It's like, what came first, the chicken or the egg — I
+                    don't have a single document with my new name yet."
+                    <span className="block not-italic text-sm mt-1">
+                      — Employee #2, on name change as a sequencing blocker
+                    </span>
                   </blockquote>
                 </div>
-
               </div>
             </section>
 
@@ -206,7 +273,10 @@ const CaseStudyLifeInTransition = () => {
                   "Document organization system introduced and adopted",
                   "Program delivery feedback provided directly to ENDevo for format improvements",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-muted-foreground"
+                  >
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-brand-orange flex-shrink-0" />
                     {item}
                   </li>
@@ -223,13 +293,21 @@ const CaseStudyLifeInTransition = () => {
                 Employer Takeaway
               </h2>
               <p className="text-white/80">
-                Employee #2 is the employee most likely to fall through the gaps of a standard wellness program: task-oriented, genuinely motivated, but stalled by life complexity a generic checklist does not address. She is also the employee most likely to complete planning quickly once the right structure is in place.
+                Employee #2 is the employee most likely to fall through the gaps
+                of a standard wellness program: task-oriented, genuinely
+                motivated, but stalled by life complexity a generic checklist
+                does not address. She is also the employee most likely to
+                complete planning quickly once the right structure is in place.
               </p>
               <p className="text-white/80">
-                For HR and benefits leaders, her case makes the argument for a planning benefit that accommodates life-stage variability. Employees in transition are among the most planning-vulnerable. A structured program that meets them at their actual starting point converts intent into action faster than any awareness campaign.
+                For HR and benefits leaders, her case makes the argument for a
+                planning benefit that accommodates life-stage variability.
+                Employees in transition are among the most planning-vulnerable.
+                A structured program that meets them at their actual starting
+                point converts intent into action faster than any awareness
+                campaign.
               </p>
             </section>
-
           </div>
         </div>
       </article>

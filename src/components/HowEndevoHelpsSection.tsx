@@ -41,7 +41,10 @@ const HowEndevoHelpsSection = () => {
             >
               <CardContent className="p-8 text-center space-y-5">
                 <div className="w-16 h-16 mx-auto rounded-full bg-brand-orange/10 flex items-center justify-center">
-                  <card.icon className="w-8 h-8 text-brand-orange" strokeWidth={1.5} />
+                  <card.icon
+                    className="w-8 h-8 text-brand-orange"
+                    strokeWidth={1.5}
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
                   {card.title}

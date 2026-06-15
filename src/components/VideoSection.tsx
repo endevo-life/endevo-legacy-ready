@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import { Play } from 'lucide-react';
+import { useState, useRef } from "react";
+import { Play } from "lucide-react";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -18,7 +18,10 @@ const VideoSection = () => {
 
   return (
     <section className="relative w-full overflow-hidden py-8 px-4 bg-background">
-      <div className="relative w-full max-w-5xl mx-auto rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+      <div
+        className="relative w-full max-w-5xl mx-auto rounded-xl overflow-hidden"
+        style={{ aspectRatio: "16/9" }}
+      >
         <video
           ref={videoRef}
           src="https://storage.googleapis.com/msgsndr/f5ehsbHfdFg2UsHEIb49/media/691dfee088e1e604ea8cd838.mp4"
@@ -28,10 +31,15 @@ const VideoSection = () => {
           onEnded={handlePause}
           aria-label="ENDevo product overview video"
         >
-          <track kind="captions" srcLang="en" label="English captions" default />
+          <track
+            kind="captions"
+            srcLang="en"
+            label="English captions"
+            default
+          />
           Your browser does not support the video tag.
         </video>
-        
+
         {/* Tinted Overlay with Text - hidden when playing */}
         {!isPlaying && (
           <div className="absolute inset-0 bg-black/50">
@@ -48,7 +56,7 @@ const VideoSection = () => {
             <div className="absolute bottom-8 left-8 md:bottom-10 md:left-12">
               <h2
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-white"
-                style={{ fontFamily: 'Times New Roman, serif' }}
+                style={{ fontFamily: "Times New Roman, serif" }}
               >
                 Meet Jesse L. Bones
               </h2>
