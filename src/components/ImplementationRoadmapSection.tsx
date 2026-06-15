@@ -42,14 +42,12 @@ const ImplementationRoadmapSection = () => {
           className={`mb-12 transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#08123A] mb-4"
-            style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+            className="text-3xl md:text-4xl font-bold text-brand-navy mb-4 font-playfair"
           >
             The ENDevo Implementation Roadmap
           </h2>
           <p
-            className="text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed"
-            style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+            className="text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed font-opensans"
           >
             We treat legacy planning like any other high-stakes corporate project. We move employees from Intention to Action through a 3-month governed pilot.
           </p>
@@ -69,29 +67,22 @@ const ImplementationRoadmapSection = () => {
                 {/* Line + Dot */}
                 <div className="flex flex-col items-center flex-shrink-0">
                   <div
-                    className="w-3 h-3 rounded-full mt-1 flex-shrink-0"
-                    style={{ backgroundColor: "#D95D26" }}
+                    className="w-3 h-3 rounded-full mt-1 flex-shrink-0 bg-brand-orange"
                   />
                   {i < steps.length - 1 && (
-                    <div className="w-[2px] flex-1 min-h-[48px]" style={{ backgroundColor: "#D95D26", opacity: 0.3 }} />
+                    <div className="w-[2px] flex-1 min-h-[48px] bg-brand-orange/30" />
                   )}
                 </div>
 
                 {/* Content */}
                 <div className="pb-10">
                   <span
-                    className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-2"
-                    style={{
-                      backgroundColor: "#D95D26",
-                      color: "white",
-                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    }}
+                    className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-2 bg-brand-orange text-white font-opensans"
                   >
                     {step.title}
                   </span>
                   <p
-                    className="text-muted-foreground text-sm md:text-base leading-relaxed"
-                    style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                    className="text-muted-foreground text-sm md:text-base leading-relaxed font-opensans"
                   >
                     {step.description}
                   </p>
@@ -130,7 +121,7 @@ const ImplementationRoadmapSection = () => {
                 <path
                   d="M 10 440 C 50 400, 140 370, 120 300 C 100 230, 30 210, 60 150 C 90 90, 180 70, 215 5"
                   fill="none"
-                  stroke="#D95D26"
+                  className="stroke-brand-orange"
                   strokeWidth="2.5"
                   strokeDasharray="12 10"
                   strokeLinecap="round"
@@ -153,10 +144,9 @@ const ImplementationRoadmapSection = () => {
                   style={{ top: pos.top, left: pos.left, transform: "translate(-50%, -50%)" }}
                 >
                   <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg"
+                    className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg font-opensans"
                     style={{
-                      backgroundColor: i === 0 ? "#D95D26" : i % 2 === 0 ? "#D95D26" : "#6B3A2A",
-                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                      backgroundColor: i === 0 || i % 2 === 0 ? "hsl(var(--brand-orange))" : "#6B3A2A",
                     }}
                   >
                     {steps[i].number}
@@ -167,7 +157,7 @@ const ImplementationRoadmapSection = () => {
                     style={{
                       borderLeft: "8px solid transparent",
                       borderRight: "8px solid transparent",
-                      borderTop: `14px solid ${i === 0 ? "#D95D26" : i % 2 === 0 ? "#D95D26" : "#6B3A2A"}`,
+                      borderTop: `14px solid ${i === 0 || i % 2 === 0 ? "hsl(var(--brand-orange))" : "#6B3A2A"}`,
                     }}
                   />
                 </div>

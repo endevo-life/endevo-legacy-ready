@@ -165,7 +165,6 @@ const App = () => (
           </Routes>
         </Suspense>
         <CookieBanner />
-        <AIChatBot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

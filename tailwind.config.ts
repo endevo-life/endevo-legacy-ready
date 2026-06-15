@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'playfair': ['Playfair Display', 'Georgia', 'serif'],
+        'playfair': ['Playfair Display', 'Merriweather', 'Georgia', 'serif'],
+        'opensans': ['Open Sans', 'Helvetica', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
