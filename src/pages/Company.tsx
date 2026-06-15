@@ -62,13 +62,7 @@ for Life's What-Ifs"
               ref={newHeroRef}
               className={`space-y-6 transition-all duration-1000 ${newHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <h1
-                className="text-4xl lg:text-5xl font-bold text-foreground leading-tight"
-                style={{
-                  fontFamily:
-                    "'Playfair Display', 'Merriweather', Georgia, serif",
-                }}
-              >
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight font-playfair">
                 Simplifying Legacy Readiness & Digital Resilience
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -205,36 +199,17 @@ for Life's What-Ifs"
           className={`container mx-auto px-6 md:px-12 text-center transition-all duration-700 ${ctaAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           {/* Headline */}
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-4"
-            style={{
-              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-              color: "#000",
-            }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-opensans text-black">
             Partner With ENDevo
           </h2>
 
           {/* Subheadline */}
-          <p
-            className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6"
-            style={{
-              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-              color: "#D95D26",
-            }}
-          >
+          <p className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6 font-opensans text-brand-orange">
             PLAN. PROTECT. PEACE.
           </p>
 
           {/* Body Text */}
-          <p
-            className="text-base md:text-lg mx-auto mb-8"
-            style={{
-              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-              color: "#000",
-              maxWidth: "600px",
-            }}
-          >
+          <p className="text-base md:text-lg mx-auto mb-8 font-opensans text-black max-w-[600px]">
             Position your company as an employer of choice that supports its
             people across their entire life journey
           </p>
@@ -242,22 +217,7 @@ for Life's What-Ifs"
           {/* CTA Button */}
           <Button
             variant="outline"
-            className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white"
-            style={{
-              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-              borderColor: "#D95D26",
-              color: "#D95D26",
-              borderWidth: "2px",
-              backgroundColor: "white",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#D95D26";
-              e.currentTarget.style.color = "white";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "white";
-              e.currentTarget.style.color = "#D95D26";
-            }}
+            className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 border-2 border-brand-orange text-brand-orange bg-white hover:bg-brand-orange hover:text-white font-opensans"
             onClick={() => {
               navigate("/contact");
               window.scrollTo(0, 0);

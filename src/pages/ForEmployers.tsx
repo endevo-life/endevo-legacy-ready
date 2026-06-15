@@ -38,15 +38,9 @@ const WWSEmployers = () => {
           <div
             className={`container max-w-6xl mx-auto transition-all duration-1000 ${heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:whitespace-nowrap"
-              style={{
-                fontFamily:
-                  "'Playfair Display', 'Merriweather', Georgia, serif",
-              }}
-            >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight md:whitespace-nowrap font-playfair">
               <span className="text-foreground">Legacy Planning Benefits </span>
-              <span style={{ color: "#D95D26" }}>for Employees</span>
+              <span className="text-brand-orange">for Employees</span>
             </h1>
           </div>
         </section>
@@ -59,10 +53,7 @@ const WWSEmployers = () => {
           <div className="container mx-auto px-6 md:px-12">
             {/* Subheadline */}
             <p
-              className={`text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12 transition-all duration-700 delay-100 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-              }}
+              className={`text-base md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12 transition-all duration-700 delay-100 font-opensans ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Unpreparedness is a hidden operational risk. Data shows that 75%
               of employees will not complete essential end-of-life planning
@@ -74,81 +65,33 @@ const WWSEmployers = () => {
               className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 transition-all duration-700 delay-200 ${benefitsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               {/* Card 1 - Top Left */}
-              <div
-                className="bg-white rounded-lg p-6 md:p-8"
-                style={{
-                  border: "2px solid #D95D26",
-                }}
-              >
-                <h3
-                  className="text-xl md:text-2xl font-bold mb-3"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                  }}
-                >
+              <div className="bg-white rounded-lg p-6 md:p-8 border-2 border-brand-orange">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 font-playfair">
                   5-7x ROI:
                 </h3>
-                <p
-                  className="text-base text-muted-foreground"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-base text-muted-foreground font-opensans">
                   Our conservative financial modeling demonstrates significant
                   returns through crisis prevention.
                 </p>
               </div>
 
               {/* Card 2 - Top Right */}
-              <div
-                className="bg-white rounded-lg p-6 md:p-8"
-                style={{
-                  border: "2px solid #D95D26",
-                }}
-              >
-                <h3
-                  className="text-xl md:text-2xl font-bold mb-3"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                  }}
-                >
+              <div className="bg-white rounded-lg p-6 md:p-8 border-2 border-brand-orange">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 font-playfair">
                   Reduced Absenteeism:
                 </h3>
-                <p
-                  className="text-base text-muted-foreground"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-base text-muted-foreground font-opensans">
                   By providing a pre-managed roadmap, we prevent the unplanned
                   downtime that occurs when a family is in chaos.
                 </p>
               </div>
 
               {/* Card 3 - Bottom Left */}
-              <div
-                className="bg-white rounded-lg p-6 md:p-8"
-                style={{
-                  border: "2px solid #D95D26",
-                }}
-              >
-                <h3
-                  className="text-xl md:text-2xl font-bold mb-3"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                  }}
-                >
+              <div className="bg-white rounded-lg p-6 md:p-8 border-2 border-brand-orange">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 font-playfair">
                   Activating Dormant Benefits:
                 </h3>
-                <p
-                  className="text-base text-muted-foreground"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-base text-muted-foreground font-opensans">
                   We drive utilization of your existing benefits by providing
                   the project-based motivation for employees to finally use
                   them.
@@ -156,27 +99,11 @@ const WWSEmployers = () => {
               </div>
 
               {/* Card 4 - Bottom Right */}
-              <div
-                className="bg-white rounded-lg p-6 md:p-8"
-                style={{
-                  border: "2px solid #D95D26",
-                }}
-              >
-                <h3
-                  className="text-xl md:text-2xl font-bold mb-3"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                  }}
-                >
+              <div className="bg-white rounded-lg p-6 md:p-8 border-2 border-brand-orange">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 font-playfair">
                   Competitive Differentiation:
                 </h3>
-                <p
-                  className="text-base text-muted-foreground"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-base text-muted-foreground font-opensans">
                   92% of employees view this program as a competitive advantage
                   that shows you care for employers, demonstrating commitment to
                   whole-person wellness.
@@ -197,12 +124,7 @@ const WWSEmployers = () => {
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
             <h2
-              className={`text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${resourcesAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{
-                fontFamily:
-                  "'Playfair Display', 'Merriweather', Georgia, serif",
-                color: "#000",
-              }}
+              className={`text-3xl md:text-4xl font-bold text-center mb-12 text-black font-playfair transition-all duration-700 ${resourcesAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Practical Tools for HR Teams
             </h2>
@@ -213,31 +135,15 @@ const WWSEmployers = () => {
             >
               {/* Card 1 */}
               <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
-                <h3
-                  className="text-xl font-bold mb-4"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                    color: "#0F1738",
-                  }}
-                >
+                <h3 className="text-xl font-bold mb-4 text-brand-navy font-playfair">
                   Digital Continuity Planning
                 </h3>
-                <p
-                  className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow font-opensans">
                   Support staff with tools to organize legal, financial, and
                   digital assets in one secure place.
                 </p>
                 <Button
-                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    backgroundColor: "#0F1738",
-                  }}
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto font-opensans bg-brand-navy hover:bg-brand-navy-light"
                   onClick={() => navigate("/solution#about-program")}
                 >
                   Explore the Program
@@ -246,31 +152,15 @@ const WWSEmployers = () => {
 
               {/* Card 3 */}
               <div className="bg-white rounded-2xl shadow-lg p-10 text-center flex flex-col">
-                <h3
-                  className="text-xl font-bold mb-4"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                    color: "#0F1738",
-                  }}
-                >
+                <h3 className="text-xl font-bold mb-4 text-brand-navy font-playfair">
                   Digital Asset Playbook
                 </h3>
-                <p
-                  className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-base text-muted-foreground mb-6 leading-relaxed flex-grow font-opensans">
                   An app-based guide for navigating transitions with data access
                   planning and clear instructions for designated contacts.
                 </p>
                 <Button
-                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    backgroundColor: "#0F1738",
-                  }}
+                  className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto font-opensans bg-brand-navy hover:bg-brand-navy-light"
                   onClick={() => navigate("/resources#mobile-app")}
                 >
                   View Playbook
@@ -317,23 +207,13 @@ const WWSEmployers = () => {
               {/* Right Column - Text Content */}
               <div>
                 {/* Lead Paragraph */}
-                <p
-                  className="text-xl md:text-2xl font-bold mb-6 leading-snug"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-xl md:text-2xl font-bold mb-6 leading-snug font-opensans">
                   Support employee well-being, reduce absenteeism, and build a
                   more resilient workforce with ENDevo.
                 </p>
 
                 {/* Body Text */}
-                <p
-                  className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  }}
-                >
+                <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed font-opensans">
                   ENDevo reduces workplace absenteeism and stress by supporting
                   employees with clarity and confidence during life's most
                   challenging moments. By integrating legacy readiness into your
@@ -345,13 +225,7 @@ const WWSEmployers = () => {
                 {/* CTA Button - Ghost/Outline Style */}
                 <Button
                   variant="outline"
-                  className="px-6 py-1.5 text-base font-semibold rounded-full"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    borderColor: "#0F1738",
-                    color: "#0F1738",
-                    borderWidth: "2px",
-                  }}
+                  className="px-6 py-1.5 text-base font-semibold rounded-full font-opensans border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white transition-colors duration-300"
                   onClick={() => {
                     navigate("/company");
                     window.scrollTo(0, 0);
@@ -372,26 +246,10 @@ const WWSEmployers = () => {
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
             <h2
-              className={`text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${metricsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{
-                fontFamily:
-                  "'Playfair Display', 'Merriweather', Georgia, serif",
-              }}
+              className={`text-3xl md:text-4xl font-bold text-center mb-12 font-playfair transition-all duration-700 ${metricsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
-              <span
-                style={{
-                  color: "#D95D26",
-                }}
-              >
-                Proven Results
-              </span>{" "}
-              <span
-                style={{
-                  color: "#000",
-                }}
-              >
-                for Your Workforce
-              </span>
+              <span className="text-brand-orange">Proven Results</span>{" "}
+              <span className="text-black">for Your Workforce</span>
             </h2>
 
             {/* 3-column Grid */}
@@ -400,32 +258,13 @@ const WWSEmployers = () => {
             >
               {/* Card 1 */}
               <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
-                <p
-                  className="text-5xl md:text-6xl font-bold mb-4"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                    color: "#0F1738",
-                  }}
-                >
+                <p className="text-5xl md:text-6xl font-bold mb-4 text-brand-navy font-playfair">
                   92%
                 </p>
-                <p
-                  className="text-lg font-bold mb-2"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    color: "#000",
-                  }}
-                >
+                <p className="text-lg font-bold mb-2 text-black font-opensans">
                   Planning Clarity
                 </p>
-                <p
-                  className="text-sm md:text-base"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    color: "#555555",
-                  }}
-                >
+                <p className="text-sm md:text-base text-[#555555] font-opensans">
                   Moving employees from intending to plan to being fully
                   prepared.
                 </p>
@@ -433,32 +272,13 @@ const WWSEmployers = () => {
 
               {/* Card 2 */}
               <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
-                <p
-                  className="text-5xl md:text-6xl font-bold mb-4"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                    color: "#0F1738",
-                  }}
-                >
+                <p className="text-5xl md:text-6xl font-bold mb-4 text-brand-navy font-playfair">
                   100%
                 </p>
-                <p
-                  className="text-lg font-bold mb-2"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    color: "#000",
-                  }}
-                >
+                <p className="text-lg font-bold mb-2 text-black font-opensans">
                   Promoter Score
                 </p>
-                <p
-                  className="text-sm md:text-base"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    color: "#555555",
-                  }}
-                >
+                <p className="text-sm md:text-base text-[#555555] font-opensans">
                   Participants report a Net Promoter Score (NPS) of 100, citing
                   massive reductions in stress and increased peace of mind.
                 </p>
@@ -466,32 +286,13 @@ const WWSEmployers = () => {
 
               {/* Card 3 */}
               <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 text-center">
-                <p
-                  className="text-5xl md:text-6xl font-bold mb-4"
-                  style={{
-                    fontFamily:
-                      "'Playfair Display', 'Merriweather', Georgia, serif",
-                    color: "#0F1738",
-                  }}
-                >
+                <p className="text-5xl md:text-6xl font-bold mb-4 text-brand-navy font-playfair">
                   77%
                 </p>
-                <p
-                  className="text-lg font-bold mb-2"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    color: "#000",
-                  }}
-                >
+                <p className="text-lg font-bold mb-2 text-black font-opensans">
                   Statistically-significant outcomes
                 </p>
-                <p
-                  className="text-sm md:text-base"
-                  style={{
-                    fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                    color: "#555555",
-                  }}
-                >
+                <p className="text-sm md:text-base text-[#555555] font-opensans">
                   Employee confidence in legacy-readiness more than doubled.
                 </p>
               </div>
@@ -507,12 +308,7 @@ const WWSEmployers = () => {
           <div className="container mx-auto px-6 md:px-12">
             {/* Headline */}
             <h2
-              className={`text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${processAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-              style={{
-                fontFamily:
-                  "'Playfair Display', 'Merriweather', Georgia, serif",
-                color: "#000",
-              }}
+              className={`text-3xl md:text-4xl font-bold text-center mb-12 text-black font-playfair transition-all duration-700 ${processAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               Your Path to Organizational Resilience Starts Here
             </h2>
@@ -525,21 +321,10 @@ const WWSEmployers = () => {
               <div className="space-y-8">
                 {/* Step 1 */}
                 <div className="flex items-start gap-4">
-                  <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                    style={{
-                      backgroundColor: "#EF6836",
-                    }}
-                  >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg bg-[#EF6836]">
                     1
                   </div>
-                  <p
-                    className="text-base md:text-lg leading-relaxed"
-                    style={{
-                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                      color: "#333",
-                    }}
-                  >
+                  <p className="text-base md:text-lg leading-relaxed font-opensans text-[#333]">
                     Provide employees with access to our Peace of Mind
                     Assessment to quickly identify their level of preparedness.
                   </p>
@@ -547,21 +332,10 @@ const WWSEmployers = () => {
 
                 {/* Step 2 */}
                 <div className="flex items-start gap-4">
-                  <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                    style={{
-                      backgroundColor: "#EF6836",
-                    }}
-                  >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg bg-[#EF6836]">
                     2
                   </div>
-                  <p
-                    className="text-base md:text-lg leading-relaxed"
-                    style={{
-                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                      color: "#333",
-                    }}
-                  >
+                  <p className="text-base md:text-lg leading-relaxed font-opensans text-[#333]">
                     Guide staff with AI-powered tools that help them organize
                     legal, financial, and digital assets in one secure place.
                   </p>
@@ -569,21 +343,10 @@ const WWSEmployers = () => {
 
                 {/* Step 3 */}
                 <div className="flex items-start gap-4">
-                  <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                    style={{
-                      backgroundColor: "#EF6836",
-                    }}
-                  >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg bg-[#EF6836]">
                     3
                   </div>
-                  <p
-                    className="text-base md:text-lg leading-relaxed"
-                    style={{
-                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                      color: "#333",
-                    }}
-                  >
+                  <p className="text-base md:text-lg leading-relaxed font-opensans text-[#333]">
                     Offer confidence and support that reduces stress, protects
                     well-being, and lowers the risk of extended absences.
                   </p>
@@ -591,21 +354,10 @@ const WWSEmployers = () => {
 
                 {/* Step 4 */}
                 <div className="flex items-start gap-4">
-                  <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                    style={{
-                      backgroundColor: "#EF6836",
-                    }}
-                  >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg bg-[#EF6836]">
                     4
                   </div>
-                  <p
-                    className="text-base md:text-lg leading-relaxed"
-                    style={{
-                      fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                      color: "#333",
-                    }}
-                  >
+                  <p className="text-base md:text-lg leading-relaxed font-opensans text-[#333]">
                     Strengthen continuity by ensuring employees can focus on
                     their work, even while navigating personal challenges.
                   </p>
@@ -627,46 +379,23 @@ const WWSEmployers = () => {
         {/* CTA Section */}
         <section
           ref={ctaAnimation.elementRef}
-          className="py-10 md:py-12"
-          style={{
-            backgroundColor: "#F9F9F9",
-          }}
+          className="py-10 md:py-12 bg-[#F9F9F9]"
         >
           <div
             className={`container mx-auto px-6 md:px-12 text-center transition-all duration-700 ${ctaAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
             {/* Headline */}
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{
-                fontFamily:
-                  "'Playfair Display', 'Merriweather', Georgia, serif",
-                color: "#000",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair text-black">
               Partner With ENDevo
             </h2>
 
             {/* Subheadline */}
-            <p
-              className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6"
-              style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                color: "#D95D26",
-              }}
-            >
+            <p className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6 font-opensans text-brand-orange">
               PLAN. PROTECT. PEACE.
             </p>
 
             {/* Body Text */}
-            <p
-              className="text-base md:text-lg mx-auto mb-8"
-              style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                color: "#000",
-                maxWidth: "600px",
-              }}
-            >
+            <p className="text-base md:text-lg mx-auto mb-8 font-opensans text-black max-w-[600px]">
               Position your company as an employer of choice that supports its
               people across their entire life journey
             </p>
@@ -674,22 +403,7 @@ const WWSEmployers = () => {
             {/* CTA Button */}
             <Button
               variant="outline"
-              className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 hover:text-white"
-              style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                borderColor: "#D95D26",
-                color: "#D95D26",
-                borderWidth: "2px",
-                backgroundColor: "white",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#D95D26";
-                e.currentTarget.style.color = "white";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "white";
-                e.currentTarget.style.color = "#D95D26";
-              }}
+              className="px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 border-2 border-brand-orange text-brand-orange bg-white hover:bg-brand-orange hover:text-white font-opensans"
               onClick={() => {
                 navigate("/contact");
                 window.scrollTo(0, 0);
