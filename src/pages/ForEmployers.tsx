@@ -5,10 +5,8 @@ import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import employersHeroOffice from "@/assets/employers-hero-office.jpg";
 import insightsPortrait from "@/assets/insights-portrait.png";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
-import employersHeroSecondary from "@/assets/employers-hero-secondary.png";
 import ImplementationRoadmapSection from "@/components/ImplementationRoadmapSection";
 const WWSEmployers = () => {
   const navigate = useNavigate();
@@ -32,69 +30,6 @@ const WWSEmployers = () => {
       />
       <ResponsiveNavbar />
       <main className="pt-16">
-        {/* Hero Section - Hidden for now
-        <section
-          className="relative min-h-[calc(100vh-4rem)] flex bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('${employersHeroOffice}')`,
-          }}
-        >
-          <div
-            ref={heroAnimation.elementRef}
-            className="relative z-10 w-full lg:w-[45%] flex items-center"
-          >
-            <div
-              className={`px-6 md:px-8 lg:px-10 py-10 max-w-xl transition-all duration-1000 ${heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            >
-              <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-                style={{
-                  fontFamily:
-                    "'Playfair Display', 'Merriweather', Georgia, serif",
-                }}
-              >
-                <span className="text-foreground whitespace-nowrap">
-                  Protect Your Business Continuity
-                </span>
-                <br />
-                <span
-                  className="whitespace-nowrap"
-                  style={{ color: "#D95D26" }}
-                >
-                  by Preparing Your People
-                </span>
-              </h1>
-              <p
-                className="text-lg md:text-xl mb-6"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-              >
-                <span className="font-bold" style={{ color: "#D95D26" }}>ENDevo</span>
-                <span className="text-foreground">
-                  : The Project Management Solution for Legacy & Digital Readiness
-                </span>
-              </p>
-              <p
-                className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-              >
-                Support your team through life's unexpected challenges, reduce
-                absenteeism, maintain focus, and keep your business running smoothly.
-              </p>
-              <Button
-                onClick={() => navigate("/contact")}
-                className="text-white px-6 py-1.5 text-base font-semibold rounded-full"
-                style={{
-                  fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-                  backgroundColor: "#0F1738",
-                }}
-              >
-                Start a Conversation
-              </Button>
-            </div>
-          </div>
-        </section>
-        */}
-
         {/* Hero Section */}
         <section
           ref={heroAnimation.elementRef}
@@ -115,8 +50,6 @@ const WWSEmployers = () => {
             </h1>
           </div>
         </section>
-
-        {/* Secondary Hero Section */}
 
         {/* Benefits Section */}
         <section
