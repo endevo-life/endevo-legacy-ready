@@ -20,21 +20,20 @@ const EmpowerEmployeesSection = () => {
       <div className="relative z-10 w-full lg:w-[45%] flex items-center px-4 md:px-8 lg:px-10 py-10">
         <div className="max-w-xl w-full">
         <h1
-          className={`text-[24px] md:text-[32px] lg:text-[40px] font-bold leading-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          style={{ fontFamily: "'Playfair Display', 'Merriweather', Georgia, serif" }}
+          className={`text-[24px] md:text-[32px] lg:text-[40px] font-bold leading-tight font-playfair transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <span className="text-white md:whitespace-nowrap">
             Protect Your Business Continuity
           </span>
           <br />
-          <span className="md:whitespace-nowrap" style={{ color: "#D95D26" }}>
+          <span className="md:whitespace-nowrap text-brand-orange">
             by Preparing Your People
           </span>
         </h1>
 
         <p
-          className={`mt-6 text-lg md:text-xl mb-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif", transitionDelay: "200ms" }}
+          className={`mt-6 text-lg md:text-xl mb-6 font-opensans transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          style={{ transitionDelay: "200ms" }}
         >
           <span className="text-white">
             The Project Management Solution for Legacy Readiness & Digital Resilience
@@ -42,8 +41,8 @@ const EmpowerEmployeesSection = () => {
         </p>
 
         <p
-          className={`text-base md:text-lg text-white/80 mb-8 leading-relaxed transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif", transitionDelay: "300ms" }}
+          className={`text-base md:text-lg text-white/80 mb-8 leading-relaxed font-opensans transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          style={{ transitionDelay: "300ms" }}
         >
           Support your team through life's unexpected challenges, reduce
           absenteeism, maintain focus, and keep your business running smoothly.
@@ -55,11 +54,7 @@ const EmpowerEmployeesSection = () => {
         >
           <Button
             onClick={() => navigate("/contact")}
-            className="text-white px-6 py-1.5 text-base font-semibold rounded-full"
-            style={{
-              fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-              backgroundColor: "#0F1738",
-            }}
+            className="text-white px-6 py-1.5 text-base font-semibold rounded-full font-opensans bg-brand-navy hover:bg-brand-navy-light"
           >
             Start a Conversation
           </Button>

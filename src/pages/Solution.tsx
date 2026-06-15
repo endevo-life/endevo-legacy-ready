@@ -110,8 +110,7 @@ const Solution = () => {
           >
             <a href="/contact">
               <button
-                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300"
-                style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
+                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300 font-opensans"
               >
                 Start the Program
               </button>
@@ -125,9 +124,8 @@ const Solution = () => {
         <div className="container max-w-6xl mx-auto">
           {/* Title */}
           <h2
-            className={`text-3xl md:text-4xl font-bold text-[#08123A] text-center mb-16 transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            className={`text-3xl md:text-4xl font-bold text-[#08123A] text-center mb-16 font-playfair transition-all duration-1000 ease-out ${lifecycleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
               transitionDelay: lifecycleVisible ? "0ms" : "0ms",
             }}
           >
@@ -142,8 +140,7 @@ const Solution = () => {
               style={{ top: "-8px" }}
             >
               <p
-                className="text-brand-orange font-bold text-sm mb-1 text-center"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                className="text-brand-orange font-bold text-sm mb-1 text-center font-opensans"
               >
                 The Current Benefits Gap
               </p>
@@ -155,7 +152,7 @@ const Solution = () => {
                 <path
                   d="M8 4 L8 28 L152 28 L152 4"
                   fill="none"
-                  stroke="#D95D26"
+                  className="stroke-brand-orange"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
