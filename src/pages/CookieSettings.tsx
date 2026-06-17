@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Info, Save, RotateCcw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import ResponsiveNavbar from '@/components/ResponsiveNavbar';
-import Footer from '@/components/Footer';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Info, Save, RotateCcw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import Footer from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
 
 interface CookiePreferences {
   strictlyNecessary: boolean;
@@ -24,20 +24,26 @@ const CookieSettings: React.FC = () => {
 
   useEffect(() => {
     // Load current preferences
-    const saved = localStorage.getItem('endevo_cookie_preferences');
+    const saved = localStorage.getItem("endevo_cookie_preferences");
     if (saved) {
       setPreferences(JSON.parse(saved));
     }
   }, []);
 
   const handleSave = () => {
-    localStorage.setItem('endevo_cookie_preferences', JSON.stringify(preferences));
-    localStorage.setItem('endevo_cookie_consent', 'true');
-    localStorage.setItem('endevo_cookie_consent_date', new Date().toISOString());
-    
+    localStorage.setItem(
+      "endevo_cookie_preferences",
+      JSON.stringify(preferences),
+    );
+    localStorage.setItem("endevo_cookie_consent", "true");
+    localStorage.setItem(
+      "endevo_cookie_consent_date",
+      new Date().toISOString(),
+    );
+
     // Show saved message
     setSaved(true);
-    
+
     // Reload page to apply changes
     setTimeout(() => {
       window.location.reload();
@@ -56,33 +62,41 @@ const CookieSettings: React.FC = () => {
 
   const cookieCategories = [
     {
-      id: 'strictlyNecessary',
-      title: 'Strictly Necessary Cookies',
-      description: 'Essential for platform security, authentication, and core functionality. These cannot be disabled.',
+      id: "strictlyNecessary",
+      title: "Strictly Necessary Cookies",
+      description:
+        "Essential for platform security, authentication, and core functionality. These cannot be disabled.",
       required: true,
-      examples: 'Session tokens, CSRF protection, load balancing, cookie consent preferences'
+      examples:
+        "Session tokens, CSRF protection, load balancing, cookie consent preferences",
     },
     {
-      id: 'functional',
-      title: 'Functional Cookies',
-      description: 'Remember your preferences like language, theme, and accessibility settings for a personalized experience.',
+      id: "functional",
+      title: "Functional Cookies",
+      description:
+        "Remember your preferences like language, theme, and accessibility settings for a personalized experience.",
       required: false,
-      examples: 'Language preference, theme selection (dark/light mode), accessibility options, user interface customizations'
+      examples:
+        "Language preference, theme selection (dark/light mode), accessibility options, user interface customizations",
     },
     {
-      id: 'analytics',
-      title: 'Performance & Analytics Cookies',
-      description: 'Help us understand how you use endevo.life so we can improve performance, fix bugs, and enhance your experience.',
+      id: "analytics",
+      title: "Performance & Analytics Cookies",
+      description:
+        "Help us understand how you use endevo.life so we can improve performance, fix bugs, and enhance your experience.",
       required: false,
-      examples: 'Google Analytics (anonymized IP), error tracking, usage statistics, page performance monitoring, A/B testing'
+      examples:
+        "Google Analytics (anonymized IP), error tracking, usage statistics, page performance monitoring, A/B testing",
     },
     {
-      id: 'marketing',
-      title: 'Targeting & Marketing Cookies',
-      description: 'Show you relevant wellness content and advertisements based on your interests.',
+      id: "marketing",
+      title: "Targeting & Marketing Cookies",
+      description:
+        "Show you relevant wellness content and advertisements based on your interests.",
       required: false,
-      examples: 'Facebook Pixel, retargeting ads, social media integration (LinkedIn, Instagram), conversion tracking, email tracking'
-    }
+      examples:
+        "Facebook Pixel, retargeting ads, social media integration (LinkedIn, Instagram), conversion tracking, email tracking",
+    },
   ];
 
   return (
@@ -108,7 +122,7 @@ const CookieSettings: React.FC = () => {
               {/* Header */}
               <div className="p-6 border-b border-gray-200">
                 <p className="text-gray-600">
-                  Manage how endevo.life uses cookies and similar technologies. 
+                  Manage how endevo.life uses cookies and similar technologies.
                   Changes take effect after saving and reloading the page.
                 </p>
               </div>
@@ -118,7 +132,8 @@ const CookieSettings: React.FC = () => {
                 <div className="mx-6 mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                   <p className="text-green-800 flex items-center gap-2">
                     <Save className="w-5 h-5" />
-                    <strong>Preferences saved!</strong> Page will reload to apply changes...
+                    <strong>Preferences saved!</strong> Page will reload to
+                    apply changes...
                   </p>
                 </div>
               )}
@@ -140,7 +155,9 @@ const CookieSettings: React.FC = () => {
                         </p>
                         <div className="flex items-start gap-2 text-xs text-gray-500">
                           <Info className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                          <span><strong>Examples:</strong> {category.examples}</span>
+                          <span>
+                            <strong>Examples:</strong> {category.examples}
+                          </span>
                         </div>
                       </div>
 
@@ -153,11 +170,17 @@ const CookieSettings: React.FC = () => {
                           <label className="relative inline-flex items-center cursor-pointer">
                             <input
                               type="checkbox"
-                              checked={preferences[category.id as keyof CookiePreferences]}
-                              onChange={(e) => setPreferences({
-                                ...preferences,
-                                [category.id]: e.target.checked
-                              })}
+                              checked={
+                                preferences[
+                                  category.id as keyof CookiePreferences
+                                ]
+                              }
+                              onChange={(e) =>
+                                setPreferences({
+                                  ...preferences,
+                                  [category.id]: e.target.checked,
+                                })
+                              }
                               className="sr-only peer"
                             />
                             <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-orange/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-orange"></div>
@@ -176,9 +199,35 @@ const CookieSettings: React.FC = () => {
                   Additional Privacy Controls
                 </h4>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>• Browser settings can block or delete cookies independently</li>
-                  <li>• Review our <a href="/legal/cookie-policy" className="text-brand-orange hover:underline">Cookie Policy</a> and <a href="/legal/privacy-policy" className="text-brand-orange hover:underline">Privacy Policy</a></li>
-                  <li>• Email <a href="mailto:hello@endevo.life" className="text-brand-orange hover:underline">hello@endevo.life</a> for data requests or questions</li>
+                  <li>
+                    • Browser settings can block or delete cookies independently
+                  </li>
+                  <li>
+                    • Review our{" "}
+                    <a
+                      href="/legal/cookie-policy"
+                      className="text-brand-orange hover:underline"
+                    >
+                      Cookie Policy
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="/legal/privacy-policy"
+                      className="text-brand-orange hover:underline"
+                    >
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    • Email{" "}
+                    <a
+                      href="mailto:hello@endevo.life"
+                      className="text-brand-orange hover:underline"
+                    >
+                      hello@endevo.life
+                    </a>{" "}
+                    for data requests or questions
+                  </li>
                 </ul>
               </div>
 
@@ -192,7 +241,7 @@ const CookieSettings: React.FC = () => {
                   <RotateCcw className="w-4 h-4" />
                   Reset to Essential Only
                 </Button>
-                
+
                 <Button
                   onClick={handleSave}
                   className="sm:ml-auto flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orange/90"

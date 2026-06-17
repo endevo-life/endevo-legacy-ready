@@ -22,7 +22,10 @@ app.get("/api/post-blogs", async (req, res) => {
     const blogs = items
       .filter((item: any) => {
         const enclosureType = item.enclosure?.[0]?.$?.type ?? "";
-        return !enclosureType.startsWith("audio/") && !enclosureType.startsWith("video/");
+        return (
+          !enclosureType.startsWith("audio/") &&
+          !enclosureType.startsWith("video/")
+        );
       })
       .map((item: any) => {
         const rawDescription = item.description[0];
@@ -39,7 +42,6 @@ app.get("/api/post-blogs", async (req, res) => {
       });
 
     res.json(blogs);
-
   } catch (error) {
     res.status(500).send("Error fetching RSS");
   }

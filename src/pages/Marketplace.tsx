@@ -20,9 +20,12 @@ const categoryLabels: Record<string, string> = {
 const Marketplace = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: heroRef, isVisible: heroVisible } =
+    useScrollAnimation<HTMLElement>();
 
-  const categoryLabel = selectedCategory ? categoryLabels[selectedCategory] : "Legal";
+  const categoryLabel = selectedCategory
+    ? categoryLabels[selectedCategory]
+    : "Legal";
   const ctaHeading = `${categoryLabel} Collaboration Opportunities`;
   const ctaButton = `Become A ${categoryLabel} Partner`;
 

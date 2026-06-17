@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -14,8 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'playfair': ['Playfair Display', 'Merriweather', 'Georgia', 'serif'],
-        'opensans': ['Open Sans', 'Helvetica', 'sans-serif'],
+        playfair: ["Playfair Display", "Merriweather", "Georgia", "serif"],
+        opensans: ["Open Sans", "Helvetica", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -23,7 +28,7 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        
+
         // ENDevo Brand Colors
         brand: {
           navy: "hsl(var(--brand-navy))",
@@ -36,7 +41,7 @@ export default {
           "teal-light": "hsl(var(--brand-teal-light))",
           "teal-dark": "hsl(var(--brand-teal-dark))",
         },
-        
+
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -148,7 +153,7 @@ export default {
             transform: "scale(1)",
           },
         },
-        "scroll": {
+        scroll: {
           "0%": {
             transform: "translateX(0)",
           },
@@ -165,7 +170,7 @@ export default {
         "fade-in-left": "fade-in-left 0.6s ease-out",
         "fade-in-right": "fade-in-right 0.6s ease-out",
         "scale-in": "scale-in 0.6s ease-out",
-        "scroll": "scroll 20s linear infinite",
+        scroll: "scroll 20s linear infinite",
       },
     },
   },

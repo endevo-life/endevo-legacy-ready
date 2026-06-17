@@ -54,7 +54,10 @@ const Resources = () => {
                 style={{
                   fontFamily: "'Open Sans', 'Helvetica', sans-serif",
                 }}
-                onClick={() => { navigate("/blog"); window.scrollTo(0, 0); }}
+                onClick={() => {
+                  navigate("/blog");
+                  window.scrollTo(0, 0);
+                }}
               >
                 📖 Read our Blogs
               </button>
@@ -135,7 +138,6 @@ const Resources = () => {
           </div>
         </div>
       </section>
-
 
       {/* Access Care Anywhere Section */}
       <section id="mobile-app" ref={appRef} className="py-8">

@@ -94,12 +94,17 @@ interface TrustedPartnersSectionProps {
   onCategoryChange?: (category: string | null) => void;
 }
 
-const TrustedPartnersSection = ({ onCategoryChange }: TrustedPartnersSectionProps) => {
+const TrustedPartnersSection = ({
+  onCategoryChange,
+}: TrustedPartnersSectionProps) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   const filteredPartners = partners
-    .filter((partner) => selectedCategory === null || partner.category === selectedCategory)
+    .filter(
+      (partner) =>
+        selectedCategory === null || partner.category === selectedCategory,
+    )
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const selectCategory = (category: string) => {
@@ -222,7 +227,9 @@ const TrustedPartnersSection = ({ onCategoryChange }: TrustedPartnersSectionProp
         <div className="md:hidden space-y-6">
           {selectedCategory !== null && filteredPartners.length === 0 && (
             <div className="text-center py-12 px-6">
-              <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
+              <p className="text-xl font-semibold text-foreground mb-2">
+                Coming Soon
+              </p>
               <p className="text-foreground/60">
                 We're adding trusted partners in this category. Check back soon!
               </p>
@@ -277,7 +284,9 @@ const TrustedPartnersSection = ({ onCategoryChange }: TrustedPartnersSectionProp
         <div className="hidden md:block space-y-6">
           {selectedCategory !== null && filteredPartners.length === 0 && (
             <div className="text-center py-12 px-6">
-              <p className="text-xl font-semibold text-foreground mb-2">Coming Soon</p>
+              <p className="text-xl font-semibold text-foreground mb-2">
+                Coming Soon
+              </p>
               <p className="text-foreground/60">
                 We're adding trusted partners in this category. Check back soon!
               </p>

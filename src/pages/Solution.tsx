@@ -41,7 +41,8 @@ const solutionHeroConsultation =
 
 const Solution = () => {
   const { elementRef, isVisible } = useScrollAnimation<HTMLElement>();
-  const { elementRef: edgeRef, isVisible: edgeVisible } = useScrollAnimation<HTMLElement>();
+  const { elementRef: edgeRef, isVisible: edgeVisible } =
+    useScrollAnimation<HTMLElement>();
   const { elementRef: lifecycleRef, isVisible: lifecycleVisible } =
     useScrollAnimation<HTMLElement>();
   const { elementRef: aboutRef, isVisible: aboutVisible } =
@@ -109,9 +110,7 @@ const Solution = () => {
             style={{ transitionDelay: isVisible ? "0.6s" : "0s" }}
           >
             <a href="/contact">
-              <button
-                className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300 font-opensans"
-              >
+              <button className="bg-[#002147] hover:bg-[#003366] text-white font-semibold px-6 py-1.5 rounded-full text-base shadow-lg hover:shadow-2xl transition-all duration-300 font-opensans">
                 Start the Program
               </button>
             </a>
@@ -139,9 +138,7 @@ const Solution = () => {
               className="absolute right-0 w-[34%] flex flex-col items-center"
               style={{ top: "-8px" }}
             >
-              <p
-                className="text-brand-orange font-bold text-sm mb-1 text-center font-opensans"
-              >
+              <p className="text-brand-orange font-bold text-sm mb-1 text-center font-opensans">
                 The Current Benefits Gap
               </p>
               <svg
@@ -321,11 +318,7 @@ const Solution = () => {
       </section>
 
       {/* How It Works Section */}
-      <section
-        ref={howItWorksRef}
-        id="how-it-works"
-        className="scroll-mt-20"
-      >
+      <section ref={howItWorksRef} id="how-it-works" className="scroll-mt-20">
         <div
           className={`transition-all duration-1000 ease-out ${howItWorksVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >

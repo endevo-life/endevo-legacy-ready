@@ -38,8 +38,10 @@ const Footer = () => {
     },
     {
       icon: null,
-      imgSrc: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f13b842ff7baef2d1.svg",
-      imgSrcHover: "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f9a0c187c9d07fdff.svg",
+      imgSrc:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f13b842ff7baef2d1.svg",
+      imgSrcHover:
+        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f9a0c187c9d07fdff.svg",
       label: "Medium",
       href: "https://medium.com/@endevo_digitallegacy",
     },
@@ -88,9 +90,17 @@ const Footer = () => {
                 >
                   {social.imgSrc ? (
                     <>
-                      <img src={social.imgSrc} alt={social.label} className="w-6 h-6 group-hover:hidden" />
+                      <img
+                        src={social.imgSrc}
+                        alt={social.label}
+                        className="w-6 h-6 group-hover:hidden"
+                      />
                       {social.imgSrcHover && (
-                        <img src={social.imgSrcHover} alt={social.label} className="w-6 h-6 hidden group-hover:block" />
+                        <img
+                          src={social.imgSrcHover}
+                          alt={social.label}
+                          className="w-6 h-6 hidden group-hover:block"
+                        />
                       )}
                     </>
                   ) : (

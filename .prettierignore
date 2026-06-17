@@ -1,0 +1,38 @@
+# Build Folders
+dist/
+.output/
+.build/
+
+# Dependency directories
+node_modules/
+node_modules_mock/
+jspm_packages/
+.pnp/
+.pnp.js
+
+# Environments
+.env*
+
+# Lerna
+.lerna
+
+# Cache/Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.stylelintcache
+.prettiercache
+.parcel-cache
+.cache/
+
+# Lock files that don't need Prettier reformatting
+package-lock.json
+bun.lockb
+
+# Static XML and system files
+BingSiteAuth.xml
+robots.txt
+sitemap.xml
+lovable-uploads/
+docs/asana-import.csv

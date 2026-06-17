@@ -62,9 +62,7 @@ for Life's What-Ifs"
               ref={newHeroRef}
               className={`space-y-6 transition-all duration-1000 ${newHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <h1
-                className="text-4xl lg:text-5xl font-bold text-foreground leading-tight font-playfair"
-              >
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight font-playfair">
                 Simplifying Legacy Readiness & Digital Resilience
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -201,23 +199,17 @@ for Life's What-Ifs"
           className={`container mx-auto px-6 md:px-12 text-center transition-all duration-700 ${ctaAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           {/* Headline */}
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-4 font-opensans text-black"
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-opensans text-black">
             Partner With ENDevo
           </h2>
 
           {/* Subheadline */}
-          <p
-            className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6 font-opensans text-brand-orange"
-          >
+          <p className="text-lg md:text-xl font-bold uppercase tracking-wide mb-6 font-opensans text-brand-orange">
             PLAN. PROTECT. PEACE.
           </p>
 
           {/* Body Text */}
-          <p
-            className="text-base md:text-lg mx-auto mb-8 font-opensans text-black max-w-[600px]"
-          >
+          <p className="text-base md:text-lg mx-auto mb-8 font-opensans text-black max-w-[600px]">
             Position your company as an employer of choice that supports its
             people across their entire life journey
           </p>

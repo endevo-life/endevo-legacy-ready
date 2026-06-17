@@ -8,13 +8,13 @@ GitHub Actions workflow plus branch-protection rules on `main`.
 
 The workflow runs on every PR to `main` and defines five jobs:
 
-| Job id          | Check name          | What it enforces                                  |
-| --------------- | ------------------- | ------------------------------------------------- |
-| `typecheck`     | `TypeScript`        | `tsc --noEmit` — no type errors                    |
-| `lint`          | `ESLint`            | `eslint .` — no lint errors                        |
-| `build`         | `Build`             | `vite build` succeeds and emits `dist/index.html`  |
-| `code-quality`  | `Code Quality`      | No `console.log`, `debugger`, `eslint-disable`, unresolved TODO/FIXME; new pages import the SEO component |
-| `all-checks-pass` | `All checks passed` | Fails unless all four gates above succeeded        |
+| Job id            | Check name          | What it enforces                                                                                          |
+| ----------------- | ------------------- | --------------------------------------------------------------------------------------------------------- |
+| `typecheck`       | `TypeScript`        | `tsc --noEmit` — no type errors                                                                           |
+| `lint`            | `ESLint`            | `eslint .` — no lint errors                                                                               |
+| `build`           | `Build`             | `vite build` succeeds and emits `dist/index.html`                                                         |
+| `code-quality`    | `Code Quality`      | No `console.log`, `debugger`, `eslint-disable`, unresolved TODO/FIXME; new pages import the SEO component |
+| `all-checks-pass` | `All checks passed` | Fails unless all four gates above succeeded                                                               |
 
 `All checks passed` is the single roll-up status — requiring it in branch
 protection is sufficient, but we require all five for clear per-gate signal.

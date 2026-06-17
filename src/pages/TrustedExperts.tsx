@@ -74,19 +74,21 @@ const TrustedExperts = () => {
     );
   };
 
-  const filteredExperts = experts.filter((expert) => {
-    const matchesSearch =
-      expert.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      expert.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      expert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      expert.category.toLowerCase().includes(searchQuery.toLowerCase());
+  const filteredExperts = experts
+    .filter((expert) => {
+      const matchesSearch =
+        expert.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        expert.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        expert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        expert.category.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesCategory =
-      selectedCategories.length === 0 ||
-      selectedCategories.includes(expert.category);
+      const matchesCategory =
+        selectedCategories.length === 0 ||
+        selectedCategories.includes(expert.category);
 
-    return matchesSearch && matchesCategory;
-  }).sort((a, b) => a.name.localeCompare(b.name));
+      return matchesSearch && matchesCategory;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div className="min-h-screen">
       <SEO
