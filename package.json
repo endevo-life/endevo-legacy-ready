@@ -12,6 +12,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
+    "indexnow": "node scripts/indexnow.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
