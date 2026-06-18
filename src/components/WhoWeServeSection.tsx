@@ -3,7 +3,9 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 
 const WhoWeServeSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>({ threshold: 0.1 });
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>({
+    threshold: 0.1,
+  });
   const navigate = useNavigate();
 
   const audiences = [
@@ -26,10 +28,7 @@ const WhoWeServeSection = () => {
   ];
 
   return (
-    <section
-      ref={elementRef}
-      className="pt-20 pb-10 bg-background"
-    >
+    <section ref={elementRef} className="pt-20 pb-10 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Title */}
         <div

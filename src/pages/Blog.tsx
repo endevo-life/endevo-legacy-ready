@@ -15,30 +15,37 @@ type BlogPostWithSanity = BlogPost & { sanityContent?: PortableTextBlock[] };
 // re-export for migration script compatibility
 export { blogPosts };
 
-
 const POSTS_PER_PAGE = 6;
 
 const Blog = () => {
   const [search, setSearch] = useState("");
   const [sortAsc, setSortAsc] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedPost, setSelectedPost] = useState<BlogPostWithSanity | null>(null);
+  const [selectedPost, setSelectedPost] = useState<BlogPostWithSanity | null>(
+    null,
+  );
 
   const { data: sanityPosts = [] } = useBlogPosts();
   const sanityMapped: BlogPostWithSanity[] = sanityPosts.map((p) => ({
     image: urlFor(p.image).width(740).height(588).fit("crop").url(),
     title: p.title,
     date: (() => {
-      try { return format(parseISO(p.date), "MMMM d, yyyy"); } catch { return p.date; }
+      try {
+        return format(parseISO(p.date), "MMMM d, yyyy");
+      } catch {
+        return p.date;
+      }
     })(),
     link: p.externalLink ?? "",
     sanityContent: p.content,
   }));
 
   // Sanity posts take priority — exclude any static post with the same title
-  const sanityTitles = new Set(sanityMapped.map((p) => p.title.trim().toLowerCase()));
+  const sanityTitles = new Set(
+    sanityMapped.map((p) => p.title.trim().toLowerCase()),
+  );
   const staticFallback = blogPosts.filter(
-    (p) => !sanityTitles.has(p.title.trim().toLowerCase())
+    (p) => !sanityTitles.has(p.title.trim().toLowerCase()),
   );
   const allPosts = [...sanityMapped, ...staticFallback];
 
@@ -67,16 +74,21 @@ const Blog = () => {
   const blogListSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "ENDevo Blog — Digital Legacy & End-of-Life Planning",
-    "url": "https://www.endevo.life/blog",
-    "description": "Expert articles on digital legacy, end-of-life planning, grief, and protecting what matters most.",
-    "publisher": { "@type": "Organization", "name": "ENDevo", "url": "https://www.endevo.life" },
-    "blogPost": paginatedPosts.map((p) => ({
+    name: "ENDevo Blog — Digital Legacy & End-of-Life Planning",
+    url: "https://www.endevo.life/blog",
+    description:
+      "Expert articles on digital legacy, end-of-life planning, grief, and protecting what matters most.",
+    publisher: {
+      "@type": "Organization",
+      name: "ENDevo",
+      url: "https://www.endevo.life",
+    },
+    blogPost: paginatedPosts.map((p) => ({
       "@type": "BlogPosting",
-      "headline": p.title,
-      "datePublished": p.date,
-      "image": p.image,
-      "url": "https://www.endevo.life/blog",
+      headline: p.title,
+      datePublished: p.date,
+      image: p.image,
+      url: "https://www.endevo.life/blog",
     })),
   };
 
@@ -236,16 +248,37 @@ const Blog = () => {
                     value={selectedPost.sanityContent}
                     components={{
                       block: {
-                        normal: ({ children }) => <p className="leading-relaxed text-gray-700">{children}</p>,
-                        h3: ({ children }) => <h3 className="text-xl font-bold text-gray-900 mt-6">{children}</h3>,
-                        h4: ({ children }) => <h4 className="text-lg font-semibold text-gray-900 mt-4">{children}</h4>,
+                        normal: ({ children }) => (
+                          <p className="leading-relaxed text-gray-700">
+                            {children}
+                          </p>
+                        ),
+                        h3: ({ children }) => (
+                          <h3 className="text-xl font-bold text-gray-900 mt-6">
+                            {children}
+                          </h3>
+                        ),
+                        h4: ({ children }) => (
+                          <h4 className="text-lg font-semibold text-gray-900 mt-4">
+                            {children}
+                          </h4>
+                        ),
                       },
                       listItem: {
-                        bullet: ({ children }) => <li className="ml-5 list-disc">{children}</li>,
+                        bullet: ({ children }) => (
+                          <li className="ml-5 list-disc">{children}</li>
+                        ),
                       },
                       marks: {
                         link: ({ value, children }) => (
-                          <a href={value?.href} target="_blank" rel="noopener noreferrer" className="text-orange-500 underline hover:opacity-80">{children}</a>
+                          <a
+                            href={value?.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-orange-500 underline hover:opacity-80"
+                          >
+                            {children}
+                          </a>
                         ),
                       },
                     }}

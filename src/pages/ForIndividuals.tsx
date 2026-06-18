@@ -375,10 +375,7 @@ const WWSIndividuals = () => {
         </section>
 
         {/* Your Path to Peace of Mind Section */}
-        <section
-          ref={pathAnimation.elementRef}
-          className="py-20 bg-background"
-        >
+        <section ref={pathAnimation.elementRef} className="py-20 bg-background">
           <div className="container max-w-7xl mx-auto px-4">
             <div className="text-center space-y-12">
               <h2

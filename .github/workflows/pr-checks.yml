@@ -19,8 +19,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
       - run: npm ci
       - name: Run TypeScript check
         run: npm run typecheck
@@ -35,11 +35,27 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
       - run: npm ci
       - name: Run ESLint
         run: npm run lint
+
+  # ─────────────────────────────────────────────
+  # GATE 2.5 — Prettier (code formatted correctly)
+  # ─────────────────────────────────────────────
+  format:
+    name: Prettier Code Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run Prettier check
+        run: npm run format:check
 
   # ─────────────────────────────────────────────
   # GATE 3 — Build (must compile without errors)
@@ -51,8 +67,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
       - run: npm ci
       - name: Build production bundle
         run: npm run build

@@ -16,10 +16,19 @@ const NewsAndEvents = () => {
       <ResponsiveNavbar />
       <main className="flex-1 pt-16">
         {/* Hero */}
-        <section className="relative py-20 px-4 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69cad5474a9b24a78d1d17cd.jpeg')" }}>
+        <section
+          className="relative py-20 px-4 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69cad5474a9b24a78d1d17cd.jpeg')",
+          }}
+        >
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 container max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+            <h1
+              className="text-4xl md:text-5xl font-bold text-white mb-4"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            >
               News &amp; Events
             </h1>
             <p className="text-lg text-white/80">
@@ -54,8 +63,12 @@ const NewsAndEvents = () => {
                     </h2>
 
                     <p className="text-muted-foreground mb-4">
-                      Meet me in Miami for three days of panels, parties, and power moves at Crypto's Most Influential Event.{" "}
-                      <span className="font-medium text-foreground">#Consensus2026</span> · CoinDesk
+                      Meet me in Miami for three days of panels, parties, and
+                      power moves at Crypto's Most Influential Event.{" "}
+                      <span className="font-medium text-foreground">
+                        #Consensus2026
+                      </span>{" "}
+                      · CoinDesk
                     </p>
 
                     <p className="text-sm text-muted-foreground mb-4">
@@ -108,8 +121,13 @@ const NewsAndEvents = () => {
 
                     <p className="text-muted-foreground mb-4">
                       ENDevo Founder &amp; CEO{" "}
-                      <span className="font-medium text-foreground">Niki Weiss</span>{" "}
-                      was named a 2025 Winner of the WOW3 Unstoppable Award for Most Inspirational Women of Web3 and AI — recognising her work at the intersection of legacy planning and digital futures.
+                      <span className="font-medium text-foreground">
+                        Niki Weiss
+                      </span>{" "}
+                      was named a 2025 Winner of the WOW3 Unstoppable Award for
+                      Most Inspirational Women of Web3 and AI — recognising her
+                      work at the intersection of legacy planning and digital
+                      futures.
                     </p>
                   </div>
 
@@ -181,7 +199,6 @@ const NewsAndEvents = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
       </main>
@@ -213,49 +230,88 @@ const NewsAndEvents = () => {
               </h2>
               <div className="space-y-4 text-base leading-relaxed text-gray-700">
                 <p>
-                  That is a wrap! <span className="font-semibold">#ConsensusMiami 2026</span> one of Web3 biggest conference in the U.S.
+                  That is a wrap!{" "}
+                  <span className="font-semibold">#ConsensusMiami 2026</span>{" "}
+                  one of Web3 biggest conference in the U.S.
                 </p>
                 <p>
-                  Surrounded by 10,000+ people building the future of crypto, DeFi, and tokenization, I had more than three dozen meaningful conversations that had nothing to do with token prices and everything to do with what happens to a human being when the body stops but the digital life keeps going.
+                  Surrounded by 10,000+ people building the future of crypto,
+                  DeFi, and tokenization, I had more than three dozen meaningful
+                  conversations that had nothing to do with token prices and
+                  everything to do with what happens to a human being when the
+                  body stops but the digital life keeps going.
                 </p>
                 <p>One conversation has not left me.</p>
                 <p>
-                  A founder of a multimillion-dollar company with 100 employees who depend on him every day.
+                  A founder of a multimillion-dollar company with 100 employees
+                  who depend on him every day.
                 </p>
                 <p>
-                  I asked him a simple question: <em>"If you died tomorrow, who would have access to the data on your phone? Multifactor Authentication access?"</em>
+                  I asked him a simple question:{" "}
+                  <em>
+                    "If you died tomorrow, who would have access to the data on
+                    your phone? Multifactor Authentication access?"
+                  </em>
                 </p>
                 <p>
-                  He paused. Looked at the floor. Then said, <em>"Nobody. I don't even have a Legacy Contact set up."</em>
+                  He paused. Looked at the floor. Then said,{" "}
+                  <em>"Nobody. I don't even have a Legacy Contact set up."</em>
                 </p>
                 <p>
-                  I watched something shift behind his eyes in real time. The same shift I saw countless times.
+                  I watched something shift behind his eyes in real time. The
+                  same shift I saw countless times.
                 </p>
                 <p>
-                  Founders. Engineers. Investors. People building the most sophisticated digital infrastructure humanity has ever known. None of them had thought about what happens to their own digital life when they are no longer here to manage it.
+                  Founders. Engineers. Investors. People building the most
+                  sophisticated digital infrastructure humanity has ever known.
+                  None of them had thought about what happens to their own
+                  digital life when they are no longer here to manage it.
                 </p>
                 <p>
-                  Some of those conversations went 45 minutes. Some went 2 minutes. All of them ended the same way: <em>"I have never thought about any of this before."</em>
+                  Some of those conversations went 45 minutes. Some went 2
+                  minutes. All of them ended the same way:{" "}
+                  <em>"I have never thought about any of this before."</em>
                 </p>
                 <p>
-                  That is the gap I live in. That is the work. People don't think about what happens to the life they've built if they are not here tomorrow.
+                  That is the gap I live in. That is the work. People don't
+                  think about what happens to the life they've built if they are
+                  not here tomorrow.
                 </p>
                 <p>
-                  I am a <span className="font-semibold">Digital Thanatologist</span>. I was the only one in that building. And during the entire conference, I got to be the person who asks the questions nobody else is asking yet.
+                  I am a{" "}
+                  <span className="font-semibold">Digital Thanatologist</span>.
+                  I was the only one in that building. And during the entire
+                  conference, I got to be the person who asks the questions
+                  nobody else is asking yet.
                 </p>
                 <ul className="ml-5 list-disc space-y-2">
-                  <li>What happens to your digital life if you died tomorrow?</li>
-                  <li>How will AI shape your digital afterlife when you are no longer here to consent?</li>
-                  <li>What becomes possible when we treat legacy, continuity, and death itself as something we can prepare for, not just react to?</li>
+                  <li>
+                    What happens to your digital life if you died tomorrow?
+                  </li>
+                  <li>
+                    How will AI shape your digital afterlife when you are no
+                    longer here to consent?
+                  </li>
+                  <li>
+                    What becomes possible when we treat legacy, continuity, and
+                    death itself as something we can prepare for, not just react
+                    to?
+                  </li>
                 </ul>
                 <p>
-                  I did not change anyone's life at Consensus. I am not that arrogant.
+                  I did not change anyone's life at Consensus. I am not that
+                  arrogant.
                 </p>
                 <p>
-                  But I do believe I cracked open a door that three dozen people walked through this week. And every one of them left that conversation thinking about the people they love and what they would inherit, or fail to inherit, if the worst happened tomorrow.
+                  But I do believe I cracked open a door that three dozen people
+                  walked through this week. And every one of them left that
+                  conversation thinking about the people they love and what they
+                  would inherit, or fail to inherit, if the worst happened
+                  tomorrow.
                 </p>
                 <p>
-                  Looking forward to reconnecting and continuing the conversation about death & dying in the digital age.
+                  Looking forward to reconnecting and continuing the
+                  conversation about death & dying in the digital age.
                 </p>
                 <p className="font-semibold">
                   What's your plan? Let's find time to reconnect.

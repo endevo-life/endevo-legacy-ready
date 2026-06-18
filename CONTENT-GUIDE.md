@@ -6,16 +6,17 @@
 
 There are two roles for managing content on endevo.life:
 
-| Role | Who | How |
-|---|---|---|
-| **Developer** | Technical team (VSCode) | Edit schemas, add fields, change page layouts |
-| **Content Creator / Publisher** | Jann, Soyana, non-technical team | Go to endevo.life/studio — no code needed |
+| Role                            | Who                              | How                                           |
+| ------------------------------- | -------------------------------- | --------------------------------------------- |
+| **Developer**                   | Technical team (VSCode)          | Edit schemas, add fields, change page layouts |
+| **Content Creator / Publisher** | Jann, Soyana, non-technical team | Go to endevo.life/studio — no code needed     |
 
 ---
 
 ---
 
 # PART 1 — CONTENT CREATOR / PUBLISHER
+
 ### (Non-Technical — No coding required)
 
 ---
@@ -38,14 +39,14 @@ There are two roles for managing content on endevo.life:
 3. Click the **"+"** button (top right of the list)
 4. Fill in the fields:
 
-| Field | What to enter |
-|---|---|
-| **Title** | The blog post headline |
-| **Slug** | Click **"Generate"** — do not type manually |
-| **Publication Date** | Pick the date |
-| **Cover Image** | Click the image area → upload from your computer or drag & drop |
-| **External Share Link** | Optional — paste the original article URL (used for share buttons) |
-| **Content** | Type your article here — use the toolbar for headings, bullet points, bold, links |
+| Field                   | What to enter                                                                     |
+| ----------------------- | --------------------------------------------------------------------------------- |
+| **Title**               | The blog post headline                                                            |
+| **Slug**                | Click **"Generate"** — do not type manually                                       |
+| **Publication Date**    | Pick the date                                                                     |
+| **Cover Image**         | Click the image area → upload from your computer or drag & drop                   |
+| **External Share Link** | Optional — paste the original article URL (used for share buttons)                |
+| **Content**             | Type your article here — use the toolbar for headings, bullet points, bold, links |
 
 5. When ready, click **"Publish"** (bottom right)
 6. The post will appear on **endevo.life/blog** within 30 seconds — no deployment needed
@@ -62,14 +63,14 @@ There are two roles for managing content on endevo.life:
 3. Click the **"+"** button
 4. Fill in the fields:
 
-| Field | What to enter |
-|---|---|
-| **Episode Title** | The episode name |
-| **Guest Name** | Guest's full name |
-| **Publication Date** | Pick the date |
-| **Video URL** | Paste the YouTube link (e.g. https://youtu.be/abc123) |
-| **Cover Image** | Upload a thumbnail image |
-| **Description** | Write a summary of the episode |
+| Field                | What to enter                                         |
+| -------------------- | ----------------------------------------------------- |
+| **Episode Title**    | The episode name                                      |
+| **Guest Name**       | Guest's full name                                     |
+| **Publication Date** | Pick the date                                         |
+| **Video URL**        | Paste the YouTube link (e.g. https://youtu.be/abc123) |
+| **Cover Image**      | Upload a thumbnail image                              |
+| **Description**      | Write a summary of the episode                        |
 
 5. Click **"Publish"**
 6. The episode appears on **endevo.life/videos** immediately
@@ -80,10 +81,10 @@ There are two roles for managing content on endevo.life:
 
 ## What Pages Are Connected to Sanity
 
-| Content Type in Studio | Shows up on |
-|---|---|
-| Blog Post | endevo.life/blog |
-| Podcast Episode | endevo.life/videos |
+| Content Type in Studio | Shows up on        |
+| ---------------------- | ------------------ |
+| Blog Post              | endevo.life/blog   |
+| Podcast Episode        | endevo.life/videos |
 
 ---
 
@@ -100,6 +101,7 @@ There are two roles for managing content on endevo.life:
 ---
 
 # PART 2 — DEVELOPER
+
 ### (Technical — VSCode)
 
 ---
@@ -159,16 +161,21 @@ src/
 
 ```typescript
 export const teamMemberSchema = {
-  name: 'teamMember',
-  title: 'Team Member',
-  type: 'document' as const,
+  name: "teamMember",
+  title: "Team Member",
+  type: "document" as const,
   fields: [
-    { name: 'name', title: 'Full Name', type: 'string' },
-    { name: 'role', title: 'Role / Title', type: 'string' },
-    { name: 'photo', title: 'Photo', type: 'image', options: { hotspot: true } },
-    { name: 'bio', title: 'Bio', type: 'text' },
+    { name: "name", title: "Full Name", type: "string" },
+    { name: "role", title: "Role / Title", type: "string" },
+    {
+      name: "photo",
+      title: "Photo",
+      type: "image",
+      options: { hotspot: true },
+    },
+    { name: "bio", title: "Bio", type: "text" },
   ],
-}
+};
 ```
 
 2. Register it in `src/sanity/sanity.config.ts`:
@@ -197,10 +204,10 @@ schema: { types: [blogPostSchema, podcastEpisodeSchema, teamMemberSchema] },
 
 ## Environment Variables
 
-| Variable | Value | Where |
-|---|---|---|
-| `VITE_SANITY_PROJECT_ID` | `ebvyrev4` | `.env.local` (local) + Vercel dashboard (production) |
-| `VITE_SANITY_DATASET` | `production` | `.env.local` (local) + Vercel dashboard (production) |
+| Variable                 | Value        | Where                                                |
+| ------------------------ | ------------ | ---------------------------------------------------- |
+| `VITE_SANITY_PROJECT_ID` | `ebvyrev4`   | `.env.local` (local) + Vercel dashboard (production) |
+| `VITE_SANITY_DATASET`    | `production` | `.env.local` (local) + Vercel dashboard (production) |
 
 > **Important:** After adding env vars to Vercel, trigger a manual redeploy. Vite bakes env vars into the bundle at build time.
 
@@ -209,12 +216,14 @@ schema: { types: [blogPostSchema, podcastEpisodeSchema, teamMemberSchema] },
 ## Sanity Dashboard (sanity.io/manage)
 
 Use this for:
+
 - Inviting new editors (Members → Invite)
 - Managing CORS origins (API → CORS Origins)
 - Viewing API usage and limits
 - Generating API tokens if needed
 
 **CORS origins that must be added:**
+
 - `http://localhost:8080` — local development
 - `https://endevo.life` — production
 - `https://www.endevo.life` — production www
@@ -235,11 +244,11 @@ Use this for:
 
 ## Free Tier Limits (Sanity)
 
-| Limit | Free tier |
-|---|---|
-| Users (editors) | 3 |
-| Storage | 5 GB |
-| API requests | 250,000 / month |
-| Bandwidth | 10 GB / month |
+| Limit           | Free tier       |
+| --------------- | --------------- |
+| Users (editors) | 3               |
+| Storage         | 5 GB            |
+| API requests    | 250,000 / month |
+| Bandwidth       | 10 GB / month   |
 
 Sufficient for current usage. Upgrade only if limits are hit.

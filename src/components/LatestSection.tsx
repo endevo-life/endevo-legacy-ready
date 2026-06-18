@@ -51,24 +51,26 @@ const latestItems = [...newsItems]
   .slice(0, 3);
 
 const LatestSection = () => {
-  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>({ threshold: 0.1 });
+  const { elementRef, isVisible } = useScrollAnimation<HTMLElement>({
+    threshold: 0.1,
+  });
   const navigate = useNavigate();
   const cardsRef = useRef<HTMLDivElement>(null);
 
   const scrollCards = (dir: "left" | "right") => {
     if (cardsRef.current) {
       cardsRef.current.scrollBy({
-        left: dir === "left" ? -cardsRef.current.offsetWidth : cardsRef.current.offsetWidth,
+        left:
+          dir === "left"
+            ? -cardsRef.current.offsetWidth
+            : cardsRef.current.offsetWidth,
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <section
-      ref={elementRef}
-      className="pt-20 pb-10 bg-white"
-    >
+    <section ref={elementRef} className="pt-20 pb-10 bg-white">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Header */}
         <div
@@ -103,19 +105,25 @@ const LatestSection = () => {
                   />
                   {/* Type badge */}
                   <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-foreground">
-                    <IconComponent className="w-3.5 h-3.5 text-brand-orange" strokeWidth={2} />
+                    <IconComponent
+                      className="w-3.5 h-3.5 text-brand-orange"
+                      strokeWidth={2}
+                    />
                     {item.label}
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 flex flex-col flex-1">
-                  <p className="text-xs text-muted-foreground mb-2">{item.displayDate}</p>
+                  <p className="text-xs text-muted-foreground mb-2">
+                    {item.displayDate}
+                  </p>
                   <h3 className="font-semibold text-foreground text-base leading-snug mb-4 flex-1">
                     {item.title}
                   </h3>
                   <div className="flex items-center gap-1 text-brand-orange text-sm font-semibold">
-                    View <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    View{" "}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>

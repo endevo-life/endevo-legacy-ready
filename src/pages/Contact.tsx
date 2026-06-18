@@ -15,12 +15,8 @@ const Contact = () => {
       <main className="pt-16">
         <section className="pt-16 md:pt-20 pb-4 text-center px-6">
           <div className="container max-w-6xl mx-auto">
-            <h1
-              className="font-bold mb-4 leading-tight font-playfair"
-            >
-              <span
-                className="block text-base md:text-lg font-normal mb-2 font-opensans"
-              >
+            <h1 className="font-bold mb-4 leading-tight font-playfair">
+              <span className="block text-base md:text-lg font-normal mb-2 font-opensans">
                 Schedule Your
               </span>
               <span className="block text-4xl md:text-5xl lg:text-6xl md:whitespace-nowrap">
@@ -28,11 +24,8 @@ const Contact = () => {
                 Consultation
               </span>
             </h1>
-            <p
-              className="text-lg text-muted-foreground max-w-2xl mx-auto font-opensans"
-            >
-              Connect with the ENDevo team to start your legacy planning
-              journey
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-opensans">
+              Connect with the ENDevo team to start your legacy planning journey
             </p>
           </div>
         </section>

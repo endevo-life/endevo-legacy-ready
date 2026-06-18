@@ -2,67 +2,95 @@ import { Search, ClipboardCheck, Shield, ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 const ProcessSection = () => {
-  const {
-    elementRef,
-    isVisible
-  } = useScrollAnimation();
-  return <section ref={elementRef} className="py-20 bg-background">
+  const { elementRef, isVisible } = useScrollAnimation();
+  return (
+    <section ref={elementRef} className="py-20 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">How It Works</h2>
-          <p className="text-lg text-muted-foreground">Supporting You Through Preparedness</p>
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up opacity-100" : "opacity-0 translate-y-10"}`}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            How It Works
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Supporting You Through Preparedness
+          </p>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto">
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 items-start relative">
             {/* Step 1 */}
-            <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-            transitionDelay: isVisible ? '0.2s' : '0s'
-          }}>
+            <div
+              className={`text-center transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              style={{
+                transitionDelay: isVisible ? "0.2s" : "0s",
+              }}
+            >
               <div className="relative inline-block mb-6">
                 <div className="w-24 h-24 mx-auto bg-brand-navy rounded-full flex items-center justify-center shadow-lg relative z-10">
                   <span className="text-3xl font-bold text-white">1</span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Assess Readiness</h3>
-              <p className="text-muted-foreground leading-relaxed">Provide employees with access to our Peace of Mind Assessment to quickly identify their level of preparedness.</p>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">
+                Assess Readiness
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Provide employees with access to our Peace of Mind Assessment to
+                quickly identify their level of preparedness.
+              </p>
             </div>
 
             {/* Arrow 1 */}
             <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[21%] z-20">
               <ArrowRight className="w-10 h-10 text-brand-orange" />
             </div>
-            
+
             {/* Step 2 */}
-            <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-            transitionDelay: isVisible ? '0.4s' : '0s'
-          }}>
+            <div
+              className={`text-center transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              style={{
+                transitionDelay: isVisible ? "0.4s" : "0s",
+              }}
+            >
               <div className="relative inline-block mb-6">
                 <div className="w-24 h-24 mx-auto bg-brand-teal rounded-full flex items-center justify-center shadow-lg relative z-10">
                   <span className="text-3xl font-bold text-white">2</span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Organize & Secure</h3>
-              <p className="text-muted-foreground leading-relaxed">Guide staff with AI-powered tools to organize legal, financial, and digital assets via a comprehensive project roadmap.</p>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">
+                Organize & Secure
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Guide staff with AI-powered tools to organize legal, financial,
+                and digital assets via a comprehensive project roadmap.
+              </p>
             </div>
 
             {/* Arrow 2 */}
             <div className="hidden lg:flex items-center justify-center absolute top-[48px] left-[46%] z-20">
               <ArrowRight className="w-10 h-10 text-brand-orange" />
             </div>
-            
+
             {/* Step 3 */}
-            <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-            transitionDelay: isVisible ? '0.6s' : '0s'
-          }}>
+            <div
+              className={`text-center transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              style={{
+                transitionDelay: isVisible ? "0.6s" : "0s",
+              }}
+            >
               <div className="relative inline-block mb-6">
                 <div className="w-24 h-24 mx-auto bg-brand-navy rounded-full flex items-center justify-center shadow-lg relative z-10">
                   <span className="text-3xl font-bold text-white">3</span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Support Well-being</h3>
-              <p className="text-muted-foreground leading-relaxed">Offer human-centric support through live masterclasses, 1:1 accountability, and virtual office hours to boost confidence and reduce stress.</p>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">
+                Support Well-being
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Offer human-centric support through live masterclasses, 1:1
+                accountability, and virtual office hours to boost confidence and
+                reduce stress.
+              </p>
             </div>
 
             {/* Arrow 3 */}
@@ -71,21 +99,29 @@ const ProcessSection = () => {
             </div>
 
             {/* Step 4 */}
-            <div className={`text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
-            transitionDelay: isVisible ? '0.8s' : '0s'
-          }}>
+            <div
+              className={`text-center transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              style={{
+                transitionDelay: isVisible ? "0.8s" : "0s",
+              }}
+            >
               <div className="relative inline-block mb-6">
                 <div className="w-24 h-24 mx-auto bg-brand-teal rounded-full flex items-center justify-center shadow-lg relative z-10">
                   <span className="text-3xl font-bold text-white">4</span>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Strengthen Continuity</h3>
-              <p className="text-muted-foreground leading-relaxed">Strengthen continuity by ensuring employees can focus on their work, even while navigating personal challenges.</p>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">
+                Strengthen Continuity
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Strengthen continuity by ensuring employees can focus on their
+                work, even while navigating personal challenges.
+              </p>
             </div>
           </div>
         </div>
-
       </div>
-    </section>;
+    </section>
+  );
 };
 export default ProcessSection;
