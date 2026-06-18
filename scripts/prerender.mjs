@@ -27,6 +27,8 @@ const ROUTES = [
   '/faq',
   '/contact',
   '/resources',
+  '/blog',
+  '/videos',
   '/learn-and-listen',
   '/news-and-events',
   '/case-studies/from-awareness-to-action',

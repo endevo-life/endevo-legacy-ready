@@ -149,8 +149,6 @@ const App = () => (
               path="/case-studies/hospice-volunteer"
               element={<CaseStudyHospiceVolunteer />}
             />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
             <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
             <Route
               path="/legal/terms-of-service"
@@ -162,6 +160,8 @@ const App = () => (
             <Route path="/faq" element={<FAQ />} />
             <Route path="/news-and-events" element={<NewsAndEvents />} />
             <Route path="/studio/*" element={<SanityStudio />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
         <CookieBanner />
