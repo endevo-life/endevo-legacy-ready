@@ -104,12 +104,12 @@ const Blog = () => {
 
       {/* Blog List Section */}
       <main className="container max-w-7xl mx-auto px-4 py-10 mt-16">
-        <h2
+        <h1
           className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
-          Read Our Blogs
-        </h2>
+          ENDevo Blog — Digital Legacy & End-of-Life Planning
+        </h1>
 
         {/* Search + Sort */}
         <div className="flex items-center gap-3 mb-8">
