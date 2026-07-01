@@ -40,6 +40,7 @@ const ROUTES = [
   "/legal/terms-of-service",
   "/legal/cookie-policy",
   "/legal/cookie-settings",
+  "/myfinalplaybook/app/privacy",
 ];
 
 const MIME = {
