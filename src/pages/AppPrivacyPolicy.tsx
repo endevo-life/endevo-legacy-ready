@@ -7,20 +7,29 @@ import SEO from "@/components/SEO";
  *
  * Hosted at /myfinalplaybook/app/privacy so it can be pasted into the
  * Google Play Console / App Store privacy-policy field. The data facts below
- * match what the app actually does. [BRACKETED] placeholders must be filled in
- * and the jurisdiction-specific sections (GDPR / CCPA / CAN-SPAM) confirmed by
- * counsel before publishing.
+ * match what the app actually does.
  *
- * Store listing details (as of last edit):
- *   Provider:        ENDevo, Inc.
- *   App category:    Education
- *   Privacy contact: hello@endevo.life
- *   Support email:   niki@finalplaybook.com
- * Effective date defaults to the prep date (June 30, 2026); bump it to the
- * actual launch/submission date when the app goes live.
- * Analytics IS on at launch; the exact provider name is still being confirmed,
- * so the disclosure reads "a product-analytics provider [name TBD]".
- * Still TBD: full street address, and the analytics provider name.
+ * ---------------------------------------------------------------------------
+ * CONFIRMED (do not need changing):
+ *   Provider .......... ENDevo, Inc.
+ *   App category ...... Education
+ *   Privacy contact ... hello@endevo.life
+ *   Support email ..... niki@finalplaybook.com
+ *   Analytics ......... ON at launch
+ *   GoHighLevel CRM ... ON (app webhook active) — receives name/email/results
+ *
+ * ⚠️  TO BE UPDATED before final publish (search the code for the bracketed text):
+ *   [ ] Effective date — currently defaults to "June 30, 2026" (prep date).
+ *       Change to the actual launch/submission date when the app goes live.
+ *   [ ] Full street address — currently "Philadelphia, PA [FULL STREET ADDRESS TBD]".
+ *       Google/Apple prefer a complete mailing address. Appears in the meta
+ *       block AND in section 11 "Contact us".
+ *   [ ] Analytics provider name — disclosed generically as
+ *       "a product-analytics provider [name TBD]" (e.g. PostHog / Firebase).
+ *       Appears in section 2, section 4, and the appendix table.
+ *   [ ] Legal review — have counsel confirm the GDPR / CCPA / CAN-SPAM
+ *       sections and the children's age threshold ([13 / 16]).
+ * ---------------------------------------------------------------------------
  */
 const AppPrivacyPolicy = () => {
   const PRIVACY_EMAIL = "hello@endevo.life";
