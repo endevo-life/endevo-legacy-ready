@@ -104,10 +104,16 @@ const AppPrivacyPolicy = () => {
               <div className="bg-brand-orange/10 border-l-4 border-brand-orange p-6 rounded-r-lg mb-12">
                 <p className="text-gray-700 leading-relaxed">
                   This page describes the privacy practices of the{" "}
-                  <strong>MyFinalPlaybook mobile app</strong> specifically.
-                  Replace each [BRACKETED] placeholder with your details and
-                  have legal counsel review the jurisdiction-specific sections
-                  before publishing.
+                  <strong>MyFinalPlaybook mobile app</strong> specifically. For
+                  the privacy practices of the ENDevo website and other ENDevo
+                  services, please see the{" "}
+                  <a
+                    href="/legal/privacy-policy"
+                    className="text-brand-orange hover:underline"
+                  >
+                    main ENDevo Privacy Policy
+                  </a>
+                  .
                 </p>
               </div>
 
@@ -171,8 +177,8 @@ const AppPrivacyPolicy = () => {
                   </li>
                   <li>
                     <strong>Usage/analytics events</strong> — basic events such
-                    as starting or completing the assessment, collected through a
-                    product-analytics provider (specific provider name: TBD).
+                    as starting or completing the assessment, collected through
+                    a product-analytics provider (specific provider name: TBD).
                   </li>
                 </ul>
 
@@ -182,8 +188,9 @@ const AppPrivacyPolicy = () => {
                 <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6 ml-4">
                   <li>
                     Your <strong>quiz progress and plan completion</strong> are
-                    saved locally on your device so you can resume. This stays on
-                    your device and is not sent to us except as described above.
+                    saved locally on your device so you can resume. This stays
+                    on your device and is not sent to us except as described
+                    above.
                   </li>
                 </ul>
 
@@ -201,9 +208,10 @@ const AppPrivacyPolicy = () => {
 
                 <p className="text-gray-700 leading-relaxed">
                   We do <strong>not</strong> intentionally collect precise
-                  location, contacts, photos, payment-card details, or government
-                  identifiers. The App does <strong>not</strong> process payments
-                  — any paid products are handled on a separate website.
+                  location, contacts, photos, payment-card details, or
+                  government identifiers. The App does <strong>not</strong>{" "}
+                  process payments — any paid products are handled on a separate
+                  website.
                 </p>
               </div>
 
@@ -218,12 +226,12 @@ const AppPrivacyPolicy = () => {
                     plan.
                   </li>
                   <li>
-                    Email your results and, with your consent, send reminders and
-                    tips.
+                    Email your results and, with your consent, send reminders
+                    and tips.
                   </li>
                   <li>
-                    Operate, maintain, secure, and improve the App and understand
-                    how it is used.
+                    Operate, maintain, secure, and improve the App and
+                    understand how it is used.
                   </li>
                   <li>Communicate with you about the service.</li>
                   <li>Comply with legal obligations and enforce our terms.</li>
@@ -231,8 +239,8 @@ const AppPrivacyPolicy = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Where applicable (e.g. GDPR), we rely on your{" "}
                   <strong>consent</strong> (marketing emails), performance of a{" "}
-                  <strong>contract/service</strong> (delivering your results), and
-                  our <strong>legitimate interests</strong> (improving and
+                  <strong>contract/service</strong> (delivering your results),
+                  and our <strong>legitimate interests</strong> (improving and
                   securing the App).
                 </p>
               </div>
@@ -243,14 +251,16 @@ const AppPrivacyPolicy = () => {
                   4. How we share your information
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  We do not sell your personal information. We share it only with:
+                  We do not sell your personal information. We share it only
+                  with:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6 ml-4">
                   <li>
-                    <strong>GoHighLevel</strong> — our CRM / email provider. Your
-                    first name, email, assessment results, marketing-consent
-                    status, and platform are sent to GoHighLevel to deliver your
-                    results and manage communications.
+                    <strong>GoHighLevel</strong> — our CRM / email provider.
+                    Your first name, email, assessment results,
+                    marketing-consent status, and platform are sent to
+                    GoHighLevel to deliver your results and manage
+                    communications.
                   </li>
                   <li>
                     <strong>Analytics provider</strong> — a product-analytics
@@ -263,14 +273,14 @@ const AppPrivacyPolicy = () => {
                     (e.g. Expo/EAS).
                   </li>
                   <li>
-                    <strong>Legal and safety</strong> — when required by law or to
-                    protect rights, safety, and security.
+                    <strong>Legal and safety</strong> — when required by law or
+                    to protect rights, safety, and security.
                   </li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed">
-                  If we are involved in a merger, acquisition, or sale of assets,
-                  personal information may be transferred as part of that
-                  transaction.
+                  If we are involved in a merger, acquisition, or sale of
+                  assets, personal information may be transferred as part of
+                  that transaction.
                 </p>
               </div>
 
@@ -280,9 +290,9 @@ const AppPrivacyPolicy = () => {
                   5. International data transfers
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
-                  Your information may be processed in countries other than where
-                  you live, including the United States. Where required, we use
-                  appropriate safeguards for such transfers.
+                  Your information may be processed in countries other than
+                  where you live, including the United States. Where required,
+                  we use appropriate safeguards for such transfers.
                 </p>
               </div>
 
@@ -380,7 +390,9 @@ const AppPrivacyPolicy = () => {
                   11. Contact us
                 </h2>
                 <div className="bg-gray-50 border border-brand-navy/20 rounded-lg p-6">
-                  <p className="text-gray-800 font-semibold mb-4">ENDevo, Inc.</p>
+                  <p className="text-gray-800 font-semibold mb-4">
+                    ENDevo, Inc.
+                  </p>
                   <p className="text-gray-700 mb-2">
                     Privacy requests:{" "}
                     <a
@@ -431,7 +443,9 @@ const AppPrivacyPolicy = () => {
                     </thead>
                     <tbody className="text-gray-700">
                       <tr>
-                        <td className="border border-gray-200 p-3">First name</td>
+                        <td className="border border-gray-200 p-3">
+                          First name
+                        </td>
                         <td className="border border-gray-200 p-3">
                           You (email screen)
                         </td>
@@ -461,7 +475,8 @@ const AppPrivacyPolicy = () => {
                       </tr>
                       <tr>
                         <td className="border border-gray-200 p-3">
-                          Quiz answers → scores, band, weakest domains, 7-day plan
+                          Quiz answers → scores, band, weakest domains, 7-day
+                          plan
                         </td>
                         <td className="border border-gray-200 p-3">
                           Generated in-app
