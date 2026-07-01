@@ -10,9 +10,18 @@ import SEO from "@/components/SEO";
  * match what the app actually does. [BRACKETED] placeholders must be filled in
  * and the jurisdiction-specific sections (GDPR / CCPA / CAN-SPAM) confirmed by
  * counsel before publishing.
+ *
+ * Store listing details (as of last edit):
+ *   Provider:        ENDevo, Inc.
+ *   App category:    Education
+ *   Privacy contact: hello@endevo.life
+ *   Support email:   niki@finalplaybook.com
+ * Still TBD: effective date, full street address, and whether an analytics
+ * provider (e.g. PostHog) is enabled at launch — see the [CONFIRM] markers below.
  */
 const AppPrivacyPolicy = () => {
-  const PRIVACY_EMAIL = "privacy@endevo.life";
+  const PRIVACY_EMAIL = "hello@endevo.life";
+  const SUPPORT_EMAIL = "niki@finalplaybook.com";
 
   return (
     <div className="min-h-screen bg-white">
@@ -54,11 +63,11 @@ const AppPrivacyPolicy = () => {
                   MyFinalPlaybook (“the App”)
                 </p>
                 <p>
-                  <strong className="text-brand-navy">Provider:</strong> [LEGAL
-                  ENTITY NAME, e.g. ENDevo LLC] (“we”, “us”, “our”)
+                  <strong className="text-brand-navy">Provider:</strong> ENDevo,
+                  Inc. (“we”, “us”, “our”)
                 </p>
                 <p>
-                  <strong className="text-brand-navy">Contact:</strong>{" "}
+                  <strong className="text-brand-navy">Privacy contact:</strong>{" "}
                   <a
                     href={`mailto:${PRIVACY_EMAIL}`}
                     className="text-brand-orange hover:underline"
@@ -67,8 +76,17 @@ const AppPrivacyPolicy = () => {
                   </a>
                 </p>
                 <p>
+                  <strong className="text-brand-navy">Support:</strong>{" "}
+                  <a
+                    href={`mailto:${SUPPORT_EMAIL}`}
+                    className="text-brand-orange hover:underline"
+                  >
+                    {SUPPORT_EMAIL}
+                  </a>
+                </p>
+                <p>
                   <strong className="text-brand-navy">Mailing address:</strong>{" "}
-                  [COMPANY MAILING ADDRESS]
+                  ENDevo, Inc., Philadelphia, PA [FULL STREET ADDRESS TBD]
                 </p>
               </div>
 
@@ -357,8 +375,9 @@ const AppPrivacyPolicy = () => {
                   11. Contact us
                 </h2>
                 <div className="bg-gray-50 border border-brand-navy/20 rounded-lg p-6">
+                  <p className="text-gray-800 font-semibold mb-4">ENDevo, Inc.</p>
                   <p className="text-gray-700 mb-2">
-                    Questions or requests:{" "}
+                    Privacy requests:{" "}
                     <a
                       href={`mailto:${PRIVACY_EMAIL}`}
                       className="text-brand-orange hover:underline"
@@ -366,8 +385,17 @@ const AppPrivacyPolicy = () => {
                       {PRIVACY_EMAIL}
                     </a>
                   </p>
+                  <p className="text-gray-700 mb-2">
+                    App support:{" "}
+                    <a
+                      href={`mailto:${SUPPORT_EMAIL}`}
+                      className="text-brand-orange hover:underline"
+                    >
+                      {SUPPORT_EMAIL}
+                    </a>
+                  </p>
                   <p className="text-gray-700">
-                    [COMPANY LEGAL NAME], [MAILING ADDRESS]
+                    Philadelphia, PA [FULL STREET ADDRESS TBD]
                   </p>
                 </div>
               </div>
