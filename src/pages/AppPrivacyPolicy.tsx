@@ -10,25 +10,24 @@ import SEO from "@/components/SEO";
  * match what the app actually does.
  *
  * ---------------------------------------------------------------------------
- * CONFIRMED (do not need changing):
+ * CONFIRMED / final:
  *   Provider .......... ENDevo, Inc.
  *   App category ...... Education
  *   Privacy contact ... hello@endevo.life
  *   Support email ..... niki@finalplaybook.com
+ *   Effective date .... July 1, 2026
+ *   Children's age .... under 13 (COPPA default)
  *   Analytics ......... ON at launch
  *   GoHighLevel CRM ... ON (app webhook active) — receives name/email/results
  *
- * ⚠️  TO BE UPDATED before final publish (search the code for the bracketed text):
- *   [ ] Effective date — currently defaults to "June 30, 2026" (prep date).
- *       Change to the actual launch/submission date when the app goes live.
+ * ⚠️  STILL TBD — search this file for "TBD" to find each spot:
  *   [ ] Full street address — currently "Philadelphia, PA [FULL STREET ADDRESS TBD]".
- *       Google/Apple prefer a complete mailing address. Appears in the meta
- *       block AND in section 11 "Contact us".
- *   [ ] Analytics provider name — disclosed generically as
- *       "a product-analytics provider [name TBD]" (e.g. PostHog / Firebase).
- *       Appears in section 2, section 4, and the appendix table.
- *   [ ] Legal review — have counsel confirm the GDPR / CCPA / CAN-SPAM
- *       sections and the children's age threshold ([13 / 16]).
+ *       Google/Apple prefer a complete mailing address. In the meta block AND
+ *       section 11 "Contact us".
+ *   [ ] Analytics provider name — shown as "(name TBD)" in sections 2, 4, and
+ *       the appendix table (candidate: PostHog / Firebase).
+ *   [ ] Legal review (optional but recommended) — counsel to confirm the
+ *       GDPR / CCPA / CAN-SPAM wording.
  * ---------------------------------------------------------------------------
  */
 const AppPrivacyPolicy = () => {
@@ -67,10 +66,8 @@ const AppPrivacyPolicy = () => {
               {/* Meta */}
               <div className="mb-8 space-y-1 text-gray-600">
                 <p>
-                  {/* Default = prep date; bump to the actual launch/submission
-                      date when the app goes live in the store. */}
                   <strong className="text-brand-navy">Effective date:</strong>{" "}
-                  June 30, 2026
+                  July 1, 2026
                 </p>
                 <p>
                   <strong className="text-brand-navy">App:</strong>{" "}
@@ -129,9 +126,9 @@ const AppPrivacyPolicy = () => {
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   The App is intended for adults and is <strong>not</strong>{" "}
-                  directed to children under [13&nbsp;/&nbsp;16]. The App
-                  provides educational content only and is <strong>not</strong>{" "}
-                  legal, financial, tax, or medical advice.
+                  directed to children under 13. The App provides educational
+                  content only and is <strong>not</strong> legal, financial,
+                  tax, or medical advice.
                 </p>
               </div>
 
@@ -175,7 +172,7 @@ const AppPrivacyPolicy = () => {
                   <li>
                     <strong>Usage/analytics events</strong> — basic events such
                     as starting or completing the assessment, collected through a
-                    product-analytics provider [PROVIDER NAME TBD, e.g. PostHog].
+                    product-analytics provider (specific provider name: TBD).
                   </li>
                 </ul>
 
@@ -197,9 +194,8 @@ const AppPrivacyPolicy = () => {
                   <li>
                     If you enable notifications, the App schedules{" "}
                     <strong>daily action reminders</strong> using your device’s
-                    notification system. [CONFIRM whether any push token is sent
-                    to a server; in the current build, reminders are scheduled
-                    locally on the device.]
+                    notification system. Reminders are scheduled locally on your
+                    device.
                   </li>
                 </ul>
 
@@ -237,7 +233,7 @@ const AppPrivacyPolicy = () => {
                   <strong>consent</strong> (marketing emails), performance of a{" "}
                   <strong>contract/service</strong> (delivering your results), and
                   our <strong>legitimate interests</strong> (improving and
-                  securing the App). [CONFIRM with counsel.]
+                  securing the App).
                 </p>
               </div>
 
@@ -254,18 +250,17 @@ const AppPrivacyPolicy = () => {
                     <strong>GoHighLevel</strong> — our CRM / email provider. Your
                     first name, email, assessment results, marketing-consent
                     status, and platform are sent to GoHighLevel to deliver your
-                    results and manage communications. [CONFIRM + link to their
-                    privacy terms.]
+                    results and manage communications.
                   </li>
                   <li>
                     <strong>Analytics provider</strong> — a product-analytics
-                    provider [PROVIDER NAME TBD, e.g. PostHog] that we use to
+                    provider (specific provider name: TBD) that we use to
                     understand app usage.
                   </li>
                   <li>
                     <strong>Infrastructure / service providers</strong> —
-                    providers that help us build, host, and operate the App (e.g.
-                    Expo/EAS). [CONFIRM.]
+                    providers that help us build, host, and operate the App
+                    (e.g. Expo/EAS).
                   </li>
                   <li>
                     <strong>Legal and safety</strong> — when required by law or to
@@ -275,7 +270,7 @@ const AppPrivacyPolicy = () => {
                 <p className="text-gray-700 leading-relaxed">
                   If we are involved in a merger, acquisition, or sale of assets,
                   personal information may be transferred as part of that
-                  transaction. [CONFIRM.]
+                  transaction.
                 </p>
               </div>
 
@@ -286,10 +281,8 @@ const AppPrivacyPolicy = () => {
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   Your information may be processed in countries other than where
-                  you live, including [COUNTRIES / “the United States”]. Where
-                  required, we use appropriate safeguards for such transfers.
-                  [CONFIRM with counsel — e.g. Standard Contractual Clauses for
-                  EU/UK data.]
+                  you live, including the United States. Where required, we use
+                  appropriate safeguards for such transfers.
                 </p>
               </div>
 
@@ -301,9 +294,8 @@ const AppPrivacyPolicy = () => {
                 <p className="text-gray-700 leading-relaxed">
                   We keep your information for as long as needed to provide the
                   service and for legitimate business or legal purposes, after
-                  which we delete or anonymize it. [INSERT specific retention
-                  periods, e.g. “marketing contact data is retained until you
-                  unsubscribe or request deletion.”]
+                  which we delete or anonymize it. Marketing contact data is
+                  retained until you unsubscribe or request deletion.
                 </p>
               </div>
 
@@ -335,9 +327,8 @@ const AppPrivacyPolicy = () => {
                   <li>
                     <strong>EEA/UK (GDPR)</strong> and{" "}
                     <strong>California (CCPA/CPRA)</strong> residents have
-                    additional rights. We do not sell personal information.
-                    [Counsel to add required disclosures and any “Do Not
-                    Sell/Share” statement.]
+                    additional rights. We do not sell or share your personal
+                    information for cross-context behavioral advertising.
                   </li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed">
@@ -354,7 +345,7 @@ const AppPrivacyPolicy = () => {
                   We use reasonable technical and organizational measures to
                   protect your information, including encryption in transit
                   (HTTPS) when data is sent to our providers. No method of
-                  transmission or storage is 100% secure. [CONFIRM.]
+                  transmission or storage is 100% secure.
                 </p>
               </div>
 
@@ -365,9 +356,9 @@ const AppPrivacyPolicy = () => {
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   The App is intended for adults and is not directed to children
-                  under [13&nbsp;/&nbsp;16]. We do not knowingly collect their
-                  personal information. If you believe a child has provided us
-                  data, contact us and we will delete it.
+                  under 13. We do not knowingly collect their personal
+                  information. If you believe a child has provided us data,
+                  contact us and we will delete it.
                 </p>
               </div>
 
@@ -494,7 +485,7 @@ const AppPrivacyPolicy = () => {
                         </td>
                         <td className="border border-gray-200 p-3">In-app</td>
                         <td className="border border-gray-200 p-3">
-                          Product-analytics provider [name TBD]
+                          Product-analytics provider (name TBD)
                         </td>
                       </tr>
                       <tr>
