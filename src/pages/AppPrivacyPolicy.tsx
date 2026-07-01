@@ -16,8 +16,10 @@ import SEO from "@/components/SEO";
  *   App category:    Education
  *   Privacy contact: hello@endevo.life
  *   Support email:   niki@finalplaybook.com
- * Still TBD: effective date, full street address, and whether an analytics
- * provider (e.g. PostHog) is enabled at launch — see the [CONFIRM] markers below.
+ * Effective date defaults to the prep date (June 30, 2026); bump it to the
+ * actual launch/submission date when the app goes live.
+ * Still TBD: full street address, and whether an analytics provider (e.g.
+ * PostHog) is enabled at launch — see the [CONFIRM] markers below.
  */
 const AppPrivacyPolicy = () => {
   const PRIVACY_EMAIL = "hello@endevo.life";
@@ -55,8 +57,10 @@ const AppPrivacyPolicy = () => {
               {/* Meta */}
               <div className="mb-8 space-y-1 text-gray-600">
                 <p>
+                  {/* Default = prep date; bump to the actual launch/submission
+                      date when the app goes live in the store. */}
                   <strong className="text-brand-navy">Effective date:</strong>{" "}
-                  [DATE]
+                  June 30, 2026
                 </p>
                 <p>
                   <strong className="text-brand-navy">App:</strong>{" "}
