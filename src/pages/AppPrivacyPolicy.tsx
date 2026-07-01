@@ -18,8 +18,9 @@ import SEO from "@/components/SEO";
  *   Support email:   niki@finalplaybook.com
  * Effective date defaults to the prep date (June 30, 2026); bump it to the
  * actual launch/submission date when the app goes live.
- * Still TBD: full street address, and whether an analytics provider (e.g.
- * PostHog) is enabled at launch — see the [CONFIRM] markers below.
+ * Analytics IS on at launch; the exact provider name is still being confirmed,
+ * so the disclosure reads "a product-analytics provider [name TBD]".
+ * Still TBD: full street address, and the analytics provider name.
  */
 const AppPrivacyPolicy = () => {
   const PRIVACY_EMAIL = "hello@endevo.life";
@@ -164,9 +165,8 @@ const AppPrivacyPolicy = () => {
                   </li>
                   <li>
                     <strong>Usage/analytics events</strong> — basic events such
-                    as starting or completing the assessment. [CONFIRM analytics
-                    provider, e.g. PostHog, or remove this bullet if no analytics
-                    provider is enabled at launch.]
+                    as starting or completing the assessment, collected through a
+                    product-analytics provider [PROVIDER NAME TBD, e.g. PostHog].
                   </li>
                 </ul>
 
@@ -249,8 +249,9 @@ const AppPrivacyPolicy = () => {
                     privacy terms.]
                   </li>
                   <li>
-                    <strong>Analytics provider</strong> — [e.g. PostHog], if
-                    enabled, to understand app usage. [CONFIRM or remove.]
+                    <strong>Analytics provider</strong> — a product-analytics
+                    provider [PROVIDER NAME TBD, e.g. PostHog] that we use to
+                    understand app usage.
                   </li>
                   <li>
                     <strong>Infrastructure / service providers</strong> —
@@ -484,7 +485,7 @@ const AppPrivacyPolicy = () => {
                         </td>
                         <td className="border border-gray-200 p-3">In-app</td>
                         <td className="border border-gray-200 p-3">
-                          [Analytics provider — if enabled]
+                          Product-analytics provider [name TBD]
                         </td>
                       </tr>
                       <tr>
