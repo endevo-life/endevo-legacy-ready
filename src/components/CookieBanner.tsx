@@ -79,17 +79,13 @@ export const CookieBanner: React.FC = () => {
   const initializeTrackingServices = (prefs: CookiePreferences) => {
     // Google Analytics
     if (prefs.analytics) {
-      // @ts-ignore
       if (window.gtag) {
-        // @ts-ignore
         window.gtag("consent", "update", {
           analytics_storage: "granted",
         });
       }
     } else {
-      // @ts-ignore
       if (window.gtag) {
-        // @ts-ignore
         window.gtag("consent", "update", {
           analytics_storage: "denied",
         });
@@ -98,43 +94,32 @@ export const CookieBanner: React.FC = () => {
 
     // Marketing cookies (Facebook Pixel, etc.)
     if (prefs.marketing) {
-      // @ts-ignore
       if (window.gtag) {
-        // @ts-ignore
         window.gtag("consent", "update", {
           ad_storage: "granted",
           ad_user_data: "granted",
           ad_personalization: "granted",
         });
       }
-      // Initialize Facebook Pixel if needed
-      // @ts-ignore
       if (window.fbq) {
-        // @ts-ignore
         window.fbq("consent", "grant");
       }
     } else {
-      // @ts-ignore
       if (window.gtag) {
-        // @ts-ignore
         window.gtag("consent", "update", {
           ad_storage: "denied",
           ad_user_data: "denied",
           ad_personalization: "denied",
         });
       }
-      // @ts-ignore
       if (window.fbq) {
-        // @ts-ignore
         window.fbq("consent", "revoke");
       }
     }
 
     // Functional cookies
     if (prefs.functional) {
-      // @ts-ignore
       if (window.gtag) {
-        // @ts-ignore
         window.gtag("consent", "update", {
           functionality_storage: "granted",
           personalization_storage: "granted",

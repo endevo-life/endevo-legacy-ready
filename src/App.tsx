@@ -77,7 +77,7 @@ const ScrollToHash = () => {
 
     // Track page view with analytics
     trackPageView(location.pathname + location.search + location.hash);
-  }, [location.pathname, location.hash]);
+  }, [location.pathname, location.hash, location.search]);
   return null;
 };
 
