@@ -32,6 +32,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const CookieSettings = lazy(() => import("./pages/CookieSettings"));
+const AppPrivacyPolicy = lazy(() => import("./pages/AppPrivacyPolicy"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const NewsAndEvents = lazy(() => import("./pages/NewsAndEvents"));
 const SanityStudio = lazy(() => import("./pages/SanityStudio"));
@@ -157,6 +158,10 @@ const App = () => (
             <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
             <Route path="/legal/cookie-settings" element={<CookieSettings />} />
             <Route path="/cookie-settings" element={<CookieSettings />} />
+            <Route
+              path="/myfinalplaybook/app/privacy"
+              element={<AppPrivacyPolicy />}
+            />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/news-and-events" element={<NewsAndEvents />} />
             <Route path="/studio/*" element={<SanityStudio />} />
