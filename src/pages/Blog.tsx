@@ -329,7 +329,7 @@ const Blog = () => {
                   </a>{" "}
                   or{" "}
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US"
+                    href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-orange-400 underline hover:opacity-80"
@@ -338,12 +338,12 @@ const Blog = () => {
                   </a>{" "}
                   or visit us online at{" "}
                   <a
-                    href="https://final-playbook.passion.io/app/products"
+                    href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-orange-400 underline hover:opacity-80"
                   >
-                    Final-Playbook.Passion.io
+                    My Final Playbook on Google Play
                   </a>{" "}
                   to get started. With My Final Playbook, you'll be able to
                   start and learn how to organize your legal, financial,
