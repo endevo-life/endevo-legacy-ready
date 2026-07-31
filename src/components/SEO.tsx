@@ -12,7 +12,13 @@ interface SEOProps {
 
 const SITE_NAME = "ENDevo";
 const SITE_URL = "https://www.endevo.life";
-const DEFAULT_OG_IMAGE = "https://www.endevo.life/og-image.png";
+const DEFAULT_OG_IMAGE = "https://www.endevo.life/og-image.jpg";
+
+/**
+ * Alternate hero preview ("Simplifying Legacy Readiness & Digital Resilience").
+ * Pass as `ogImage` on any page that suits it better than the default.
+ */
+export const OG_IMAGE_ALT = "https://www.endevo.life/og-image-alt.jpg";
 
 export default function SEO({
   title,
@@ -49,6 +55,7 @@ export default function SEO({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={fullTitle} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
