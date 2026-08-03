@@ -69,7 +69,7 @@ const Blog = () => {
     currentPage * POSTS_PER_PAGE,
   );
 
-  const handleReadNow = (post: BlogPost) => {
+  const handleReadNow = (post: BlogPostWithSanity) => {
     if (post.content || post.sanityContent) {
       setSelectedPost(post);
     } else {
