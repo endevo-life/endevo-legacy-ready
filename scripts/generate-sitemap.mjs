@@ -17,6 +17,7 @@ import { execSync } from "node:child_process";
 import { writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { fetchBlogPosts } from "./fetch-blog-slugs.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -202,30 +203,58 @@ function lastmodFor(files) {
   return latest || buildDate();
 }
 
-function generate() {
-  const urls = ROUTES.map((r) => {
-    const lastmod = lastmodFor(r.files);
-    return [
-      "  <url>",
-      `    <loc>${SITE_URL}${r.path}</loc>`,
-      `    <lastmod>${lastmod}</lastmod>`,
-      `    <changefreq>${r.changefreq}</changefreq>`,
-      `    <priority>${r.priority}</priority>`,
-      "  </url>",
-    ].join("\n");
-  });
+function urlEntry({ path, lastmod, changefreq, priority }) {
+  return [
+    "  <url>",
+    `    <loc>${SITE_URL}${path}</loc>`,
+    `    <lastmod>${lastmod}</lastmod>`,
+    `    <changefreq>${changefreq}</changefreq>`,
+    `    <priority>${priority}</priority>`,
+    "  </url>",
+  ].join("\n");
+}
+
+async function generate() {
+  const staticUrls = ROUTES.map((r) =>
+    urlEntry({
+      path: r.path,
+      lastmod: lastmodFor(r.files),
+      changefreq: r.changefreq,
+      priority: r.priority,
+    }),
+  );
+
+  // Blog posts live in Sanity, not in git, so their lastmod comes from the
+  // CMS rather than commit history. This throws if Sanity is unreachable —
+  // shipping a sitemap missing every post would silently undo the work that
+  // made the articles indexable in the first place.
+  const posts = await fetchBlogPosts();
+  const postUrls = posts.map((p) =>
+    urlEntry({
+      path: `/blog/${p.slug}`,
+      lastmod: p.updatedAt || buildDate(),
+      changefreq: "monthly",
+      priority: "0.7",
+    }),
+  );
 
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    urls.join("\n"),
+    [...staticUrls, ...postUrls].join("\n"),
     "</urlset>",
     "",
   ].join("\n");
 
   const outPath = join(ROOT, "public", "sitemap.xml");
   writeFileSync(outPath, xml, "utf-8");
-  console.log(`✅ Wrote ${ROUTES.length} URLs to public/sitemap.xml`);
+  console.log(
+    `✅ Wrote ${ROUTES.length + posts.length} URLs to public/sitemap.xml ` +
+      `(${ROUTES.length} pages + ${posts.length} blog posts)`,
+  );
 }
 
-generate();
+generate().catch((err) => {
+  console.error("Sitemap generation failed:", err.message);
+  process.exit(1);
+});
