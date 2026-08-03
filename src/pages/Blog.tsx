@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
@@ -10,7 +11,11 @@ import { urlFor } from "@/lib/sanityImageUrl";
 import { blogPosts } from "@/data/blogPostsData";
 import type { BlogPost } from "@/data/blogPostsData";
 
-type BlogPostWithSanity = BlogPost & { sanityContent?: PortableTextBlock[] };
+type BlogPostWithSanity = BlogPost & {
+  sanityContent?: PortableTextBlock[];
+  /** Present only on Sanity posts, which have their own /blog/:slug page. */
+  slug?: string;
+};
 
 // re-export for migration script compatibility
 export { blogPosts };
@@ -37,6 +42,7 @@ const Blog = () => {
       }
     })(),
     link: p.externalLink ?? "",
+    slug: p.slug,
     sanityContent: p.content,
   }));
 
@@ -83,12 +89,16 @@ const Blog = () => {
       name: "ENDevo",
       url: "https://www.endevo.life",
     },
+    // Each article points at its own page. Previously every entry pointed at
+    // /blog, which told Google the posts had no distinct URLs of their own.
     blogPost: paginatedPosts.map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
       datePublished: p.date,
       image: p.image,
-      url: "https://www.endevo.life/blog",
+      url: p.slug
+        ? `https://www.endevo.life/blog/${p.slug}`
+        : "https://www.endevo.life/blog",
     })),
   };
 
@@ -166,19 +176,47 @@ const Blog = () => {
                     {post.date}
                   </p>
                   <h3 className="text-lg font-semibold mb-3 flex-1 line-clamp-3">
-                    {post.title}
+                    {post.slug ? (
+                      <Link
+                        to={`/blog/${post.slug}`}
+                        className="hover:text-orange-500 transition-colors"
+                      >
+                        {post.title}
+                      </Link>
+                    ) : (
+                      post.title
+                    )}
                   </h3>
                   <div className="flex justify-center">
-                    <button
-                      onClick={() => handleReadNow(post)}
-                      className="w-fit text-white text-sm font-semibold px-8 py-1.5 transition-all duration-300 hover:brightness-110 hover:scale-105"
-                      style={{
-                        backgroundColor: "#FF5A00",
-                        boxShadow: "0 4px 12px rgba(255,90,0,0.4)",
-                      }}
-                    >
-                      Read Now
-                    </button>
+                    {/*
+                      Posts from Sanity link to their own page so crawlers have
+                      a real href to follow — this is what makes articles
+                      indexable. Legacy static posts have no slug and no page,
+                      so they keep the modal.
+                    */}
+                    {post.slug ? (
+                      <Link
+                        to={`/blog/${post.slug}`}
+                        className="w-fit text-white text-sm font-semibold px-8 py-1.5 transition-all duration-300 hover:brightness-110 hover:scale-105"
+                        style={{
+                          backgroundColor: "#FF5A00",
+                          boxShadow: "0 4px 12px rgba(255,90,0,0.4)",
+                        }}
+                      >
+                        Read Now
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={() => handleReadNow(post)}
+                        className="w-fit text-white text-sm font-semibold px-8 py-1.5 transition-all duration-300 hover:brightness-110 hover:scale-105"
+                        style={{
+                          backgroundColor: "#FF5A00",
+                          boxShadow: "0 4px 12px rgba(255,90,0,0.4)",
+                        }}
+                      >
+                        Read Now
+                      </button>
+                    )}
                   </div>
                 </div>
               </article>

@@ -11,6 +11,7 @@ export interface SanityImageRef {
 export interface SanityBlogPost {
   _id: string;
   title: string;
+  slug?: string;
   date: string;
   externalLink?: string;
   image: SanityImageRef;
@@ -18,13 +19,38 @@ export interface SanityBlogPost {
 }
 
 const QUERY = `*[_type == "blogPost"] | order(date desc) {
-  _id, title, date, externalLink, image, content
+  _id, title, "slug": slug.current, date, externalLink, image, content
 }`;
 
 export function useBlogPosts() {
   return useQuery({
     queryKey: ["blogPosts"],
     queryFn: () => sanityClient.fetch<SanityBlogPost[]>(QUERY),
+    staleTime: 1000 * 60 * 5,
+  });
+}
+
+const POST_BY_SLUG_QUERY = `*[_type == "blogPost" && slug.current == $slug][0] {
+  _id, title, "slug": slug.current, date, externalLink, image, content
+}`;
+
+/**
+ * Fetches a single post by its URL slug for the /blog/:slug route.
+ *
+ * Returns `null` (not undefined) when no post matches, so the caller can tell
+ * "confirmed missing — render 404" apart from "still loading".
+ */
+export function useBlogPost(slug: string | undefined) {
+  return useQuery({
+    queryKey: ["blogPost", slug],
+    queryFn: async () => {
+      const post = await sanityClient.fetch<SanityBlogPost | null>(
+        POST_BY_SLUG_QUERY,
+        { slug },
+      );
+      return post ?? null;
+    },
+    enabled: Boolean(slug),
     staleTime: 1000 * 60 * 5,
   });
 }
