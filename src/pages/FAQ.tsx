@@ -170,7 +170,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="End-of-Life Planning Questions & Answers"
+        title="End-of-Life Planning FAQ — Questions Answered"
         description="Common questions about end-of-life planning — what it covers, who needs it, and how it works as an employee benefit."
         canonical="/faq"
         jsonLd={faqSchema}
