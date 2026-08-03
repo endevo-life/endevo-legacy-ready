@@ -4,6 +4,7 @@ import { format, parseISO } from "date-fns";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { APP_STORE_URL } from "@/lib/appLinks";
 import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/react";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
@@ -358,7 +359,7 @@ const Blog = () => {
                   Start developing your end-of-life and digital legacy plan.
                   Download the My Final Playbook App on the{" "}
                   <a
-                    href="https://apps.apple.com/us/app/my-final-playbook/id6502518647"
+                    href={APP_STORE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-orange-400 underline hover:opacity-80"

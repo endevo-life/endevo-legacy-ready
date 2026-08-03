@@ -5,6 +5,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import SEO from "@/components/SEO";
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/lib/appLinks";
 
 const Resources = () => {
   const navigate = useNavigate();
@@ -77,12 +78,10 @@ const Resources = () => {
                 style={{
                   fontFamily: "'Open Sans', 'Helvetica', sans-serif",
                 }}
-                onClick={() =>
-                  window.open(
-                    "https://play.google.com/store/apps/details?id=endevo.life.finalplaybook",
-                    "_blank",
-                  )
-                }
+                onClick={() => {
+                  const el = document.getElementById("mobile-app");
+                  el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
               >
                 📱 Plan With Our App
               </button>
@@ -180,20 +179,34 @@ const Resources = () => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <button
-              className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
-              style={{
-                fontFamily: "'Open Sans', 'Helvetica', sans-serif",
-              }}
-              onClick={() =>
-                window.open(
-                  "https://play.google.com/store/apps/details?id=endevo.life.finalplaybook",
-                  "_blank",
-                )
-              }
-            >
-              Get The App
-            </button>
+            {/*
+              Both stores are offered rather than one button, so iPhone
+              users are not sent to a Google Play listing they cannot use.
+            */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+                style={{
+                  fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                }}
+              >
+                Get it on the App Store
+              </a>
+              <a
+                href={GOOGLE_PLAY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#FF5A00] text-white font-semibold text-base px-6 py-1.5 rounded-full shadow-lg hover:shadow-xl hover:bg-[#FF6A10] transition-all duration-300 transform hover:scale-105"
+                style={{
+                  fontFamily: "'Open Sans', 'Helvetica', sans-serif",
+                }}
+              >
+                Get it on Google Play
+              </a>
+            </div>
           </div>
         </div>
       </section>
