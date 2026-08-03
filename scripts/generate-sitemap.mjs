@@ -168,6 +168,12 @@ const ROUTES = [
     changefreq: "yearly",
     priority: "0.2",
   },
+  {
+    path: "/myfinalplaybook/app/privacy",
+    files: ["src/pages/AppPrivacyPolicy.tsx"],
+    changefreq: "yearly",
+    priority: "0.3",
+  },
 ];
 
 /** Build-date fallback (YYYY-MM-DD) for files with no git history. */

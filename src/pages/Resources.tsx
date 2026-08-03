@@ -79,7 +79,7 @@ const Resources = () => {
                 }}
                 onClick={() =>
                   window.open(
-                    "https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US",
+                    "https://play.google.com/store/apps/details?id=endevo.life.finalplaybook",
                     "_blank",
                   )
                 }
@@ -187,7 +187,7 @@ const Resources = () => {
               }}
               onClick={() =>
                 window.open(
-                  "https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&pcampaignid=web_share",
+                  "https://play.google.com/store/apps/details?id=endevo.life.finalplaybook",
                   "_blank",
                 )
               }

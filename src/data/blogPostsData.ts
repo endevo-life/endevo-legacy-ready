@@ -3598,7 +3598,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "html",
-        text: `If something happened to you, would the people in your life know what to do? Don't leave your loved ones in the dark. Start developing your end-of-life and digital legacy plan. Download the My Final Playbook App on the <a href="https://apps.apple.com/us/app/my-final-playbook/id6502518647" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US&pli=1" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Google Play</a> or visit us online at <a href="https://final-playbook.passion.io/app/products" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Final-Playbook.Passion.io</a> to get started. With My Final Playbook, you'll be able to start and learn how to organize your legal, financial, physical, and digital assets today. Until then, keep your password safe and your playbook up to date.`,
+        text: `If something happened to you, would the people in your life know what to do? Don't leave your loved ones in the dark. Start developing your end-of-life and digital legacy plan. Download the My Final Playbook App on the <a href="https://apps.apple.com/us/app/my-final-playbook/id6502518647" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">App Store</a> or <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Google Play</a> or visit us online at <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Final-Playbook Online</a> to get started. With My Final Playbook, you'll be able to start and learn how to organize your legal, financial, physical, and digital assets today. Until then, keep your password safe and your playbook up to date.`,
       },
     ],
   },
@@ -3772,7 +3772,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "html",
-        text: `If something happened to you, would the people in your life know what to do? Don't leave your loved ones in the dark. Start developing your end-of-life and digital legacy plan. Download the My Final Playbook App on the <a href="https://apps.apple.com/us/app/my-final-playbook/id6502518647" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Google Play</a> or visit us online at <a href="https://final-playbook.passion.io/app/products" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Final-Playbook.Passion.io</a> to get started. With My Final Playbook, you'll be able to start and learn how to organize your legal, financial, physical, and digital assets today. Until then, keep your password safe and your playbook up to date.`,
+        text: `If something happened to you, would the people in your life know what to do? Don't leave your loved ones in the dark. Start developing your end-of-life and digital legacy plan. Download the My Final Playbook App on the <a href="https://apps.apple.com/us/app/my-final-playbook/id6502518647" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">App Store</a> or <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Google Play</a> or visit us online at <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Final-Playbook Online</a> to get started. With My Final Playbook, you'll be able to start and learn how to organize your legal, financial, physical, and digital assets today. Until then, keep your password safe and your playbook up to date.`,
       },
     ],
   },
@@ -3892,7 +3892,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "html",
-        text: `If something happened to you, would the people in your life know what to do? Don't leave your loved ones in the dark. Start developing your end-of-life and digital legacy plan. Download the My Final Playbook App on the <a href="https://apps.apple.com/us/app/my-final-playbook/id6502518647" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.p4tze2b0necm.pgwvu5pucapp&hl=en_US" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Google Play</a> or visit us online at <a href="https://final-playbook.passion.io/app/products" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Final-Playbook.Passion.io</a> to get started. With My Final Playbook, you'll be able to start and learn how to organize your legal, financial, physical, and digital assets today. Until then, keep your password safe and your playbook up to date.`,
+        text: `If something happened to you, would the people in your life know what to do? Don't leave your loved ones in the dark. Start developing your end-of-life and digital legacy plan. Download the My Final Playbook App on the <a href="https://apps.apple.com/us/app/my-final-playbook/id6502518647" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">App Store</a> or <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Google Play</a> or visit us online at <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Final-Playbook Online</a> to get started. With My Final Playbook, you'll be able to start and learn how to organize your legal, financial, physical, and digital assets today. Until then, keep your password safe and your playbook up to date.`,
       },
     ],
   },
@@ -4237,7 +4237,7 @@ export const blogPosts: BlogPost[] = [
       { type: "heading", text: "Ready to Begin?" },
       {
         type: "html",
-        text: `If you're ready to start planning—or help a loved one do the same—check out digital tools like <a href="https://www.thanacare.com/" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Thanacare</a> and <a href="https://final-playbook.passion.io/app/products" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">My Final Playbook</a>. Whether you're tech-savvy or hesitant, the process is simpler than you think. One or two virtual meetings could change everything about how your story ends.`,
+        text: `If you're ready to start planning—or help a loved one do the same—check out digital tools like <a href="https://www.thanacare.com/" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">Thanacare</a> and <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">My Final Playbook</a>. Whether you're tech-savvy or hesitant, the process is simpler than you think. One or two virtual meetings could change everything about how your story ends.`,
       },
       {
         type: "paragraph",
@@ -5109,7 +5109,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "html",
-        text: `Tools like <a href="https://final-playbook.passion.io/app/products" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">My Final Playbook</a> make this process more accessible. By documenting wishes and creating a roadmap for end-of-life planning, individuals can approach death with clarity and peace of mind. Starting these conversations early ensures that one's legacy reflects their values and intentions.`,
+        text: `Tools like <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">My Final Playbook</a> make this process more accessible. By documenting wishes and creating a roadmap for end-of-life planning, individuals can approach death with clarity and peace of mind. Starting these conversations early ensures that one's legacy reflects their values and intentions.`,
       },
       { type: "heading", text: "Living with Intention" },
       {
@@ -5140,7 +5140,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "html",
-        text: `Plan Ahead: Use tools like <a href="https://final-playbook.passion.io/app/products" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">My Final Playbook</a> to document your wishes and prepare for the inevitable.`,
+        text: `Plan Ahead: Use tools like <a href="https://play.google.com/store/apps/details?id=endevo.life.finalplaybook" target="_blank" rel="noopener noreferrer" class="text-orange-500 underline hover:opacity-80">My Final Playbook</a> to document your wishes and prepare for the inevitable.`,
       },
       {
         type: "bullet",

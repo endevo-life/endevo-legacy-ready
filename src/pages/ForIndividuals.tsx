@@ -102,10 +102,10 @@ const WWSIndividuals = () => {
                         color: "#394161",
                       }}
                     >
-                      420+
+                      200+
                     </p>
                     <p className="text-lg text-black">
-                      Families spend 420+ hours sorting affairs when information
+                      Families spend 200+ hours sorting affairs when information
                       isn't organized.
                     </p>
                   </CardContent>
