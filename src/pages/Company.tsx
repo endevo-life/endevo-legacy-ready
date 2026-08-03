@@ -39,7 +39,7 @@ const Company = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="About ENDevo — Our Mission & Team"
+        title="About Us — End-of-Life Planning Mission & Team"
         description="Learn about ENDevo's mission to help people achieve Legacy Readiness. Meet the team behind the digital preparedness platform."
         canonical="/company"
       />

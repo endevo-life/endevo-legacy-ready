@@ -20,7 +20,7 @@ const LearnAndListen = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Learn & Listen — End-of-Life Planning Conversations"
+        title="Learn & Listen — End-of-Life Conversations"
         description="Honest conversations about end-of-life planning, digital legacy, and grief. Listen to the Digital Legacy Podcast and learn how to prepare with clarity."
         canonical="/learn-and-listen"
       />
