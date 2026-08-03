@@ -28,7 +28,7 @@ function formatDate(date: string): string {
  */
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { data: post, isLoading, isError } = useBlogPost(slug);
+  const { data: post, isLoading, isError, refetch } = useBlogPost(slug);
 
   // Hold the frame while loading so the prerenderer and crawlers never
   // capture a 404 for a post that does exist.
@@ -49,9 +49,46 @@ const BlogPost = () => {
     );
   }
 
-  // A missing post must render the real 404 page so the route returns a
-  // genuine "not found" to crawlers rather than an empty article shell.
-  if (isError || !post) {
+  // A fetch failure is NOT a missing post. Sanity being briefly unreachable
+  // must not render a 404 for an article that exists — Google would see the
+  // 404 and could deindex a live post. Show a retryable error marked
+  // noIndex instead, so crawlers simply skip this visit.
+  if (isError) {
+    return (
+      <div className="min-h-screen bg-background">
+        <SEO
+          title="Article temporarily unavailable"
+          description="This article could not be loaded. Please try again."
+          noIndex
+        />
+        <ResponsiveNavbar />
+        <main className="container max-w-3xl mx-auto px-4 py-20 mt-16 text-center">
+          <h1 className="text-2xl font-bold mb-3">
+            This article could not be loaded
+          </h1>
+          <p className="text-muted-foreground mb-6">
+            Something went wrong fetching this article. It has not been removed.
+          </p>
+          <button
+            onClick={() => refetch()}
+            className="text-orange-500 underline hover:opacity-80"
+          >
+            Try again
+          </button>
+          <p className="mt-4">
+            <Link to="/blog" className="text-orange-500 underline">
+              Back to all articles
+            </Link>
+          </p>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Only a confirmed-absent post renders the real 404, so crawlers get a
+  // genuine "not found" rather than an empty article shell.
+  if (!post || !post.slug) {
     return <NotFound />;
   }
 
