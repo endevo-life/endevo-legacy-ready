@@ -71,9 +71,27 @@ jobs:
           cache: "npm"
       - run: npm ci
       - name: Build production bundle
+        # The sitemap generator and prerenderer resolve blog post URLs from
+        # Sanity at build time, so the build needs these. They are public
+        # identifiers, not secrets — both already ship in the client-side
+        # bundle served to every visitor — so they live here rather than in
+        # repo secrets, which keeps the build working on forked PRs.
+        env:
+          VITE_SANITY_PROJECT_ID: ebvyrev4
+          VITE_SANITY_DATASET: production
         run: npm run build
       - name: Verify dist output exists
         run: test -f dist/index.html
+      - name: Verify blog posts are in the sitemap and prerendered
+        # Guards the regression this build exists to prevent: a sitemap
+        # without post URLs, or article pages that never got prerendered,
+        # would silently un-index every article.
+        run: |
+          posts=$(grep -c '<loc>.*/blog/' public/sitemap.xml || echo 0)
+          pages=$(find dist/blog -mindepth 1 -maxdepth 1 -type d | wc -l)
+          echo "sitemap post URLs: $posts | prerendered post pages: $pages"
+          test "$posts" -gt 0 || { echo "::error::sitemap contains no blog post URLs"; exit 1; }
+          test "$pages" -eq "$posts" || { echo "::error::prerendered pages ($pages) != sitemap posts ($posts)"; exit 1; }
 
   # ─────────────────────────────────────────────
   # GATE 4 — Code quality guards
