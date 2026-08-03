@@ -7,8 +7,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contact ENDevo"
-        description="Get in touch with the ENDevo team. We're here to help with legacy readiness, digital preparedness, and enterprise solutions."
+        title="Contact Us — End-of-Life Planning Support"
+        description="Get in touch with the ENDevo team about end-of-life planning, digital legacy, and employer wellness programs. We're here to help you prepare with clarity."
         canonical="/contact"
       />
       <ResponsiveNavbar />
