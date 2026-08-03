@@ -226,16 +226,36 @@ const ResponsiveNavbar = () => {
           <div className="hidden xl:flex items-center space-x-4">
             {menuItems.map((item) => (
               <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  onClick={handleMainMenuClick}
-                  className="flex items-center text-foreground hover:text-primary transition-colors duration-300 py-2 px-3 rounded-md hover:bg-accent/50 text-sm whitespace-nowrap"
-                >
-                  {item.name}
-                  {item.submenu.length > 0 && (
+                {/*
+                  Items with href "#" have no page of their own — they only
+                  open a dropdown. Rendering them as a Link makes React Router
+                  resolve "#" against the current URL, so on an article page
+                  the nav emitted <a href="/blog/this-very-article">, a
+                  self-referential link on every page of the site. They are
+                  buttons instead, which is also the correct semantics for a
+                  control that opens a menu rather than navigating.
+                */}
+                {item.href === "#" ? (
+                  <button
+                    type="button"
+                    aria-haspopup="true"
+                    className="flex items-center text-foreground hover:text-primary transition-colors duration-300 py-2 px-3 rounded-md hover:bg-accent/50 text-sm whitespace-nowrap"
+                  >
+                    {item.name}
                     <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
-                  )}
-                </Link>
+                  </button>
+                ) : (
+                  <Link
+                    to={item.href}
+                    onClick={handleMainMenuClick}
+                    className="flex items-center text-foreground hover:text-primary transition-colors duration-300 py-2 px-3 rounded-md hover:bg-accent/50 text-sm whitespace-nowrap"
+                  >
+                    {item.name}
+                    {item.submenu.length > 0 && (
+                      <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                    )}
+                  </Link>
+                )}
 
                 {/* Dropdown Menu */}
                 {item.submenu.length > 0 && (
