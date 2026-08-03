@@ -1,0 +1,54 @@
+# Fails loudly when a merge to main does not produce a Vercel production
+# deployment.
+#
+# Why this exists: on 2026-08-03, three merges to main (#92, #95, #98)
+# produced no production deployment. GitHub showed the PRs merged and every
+# check green, so the changes looked shipped while production kept serving
+# the old build. Each was caught only by manually comparing the deployments
+# API against origin/main. This workflow turns that manual check into a red X
+# on the commit.
+#
+# How it works: after a merge, poll the GitHub deployments API for a
+# production deployment whose ref is this commit. Vercel normally creates one
+# within a couple of minutes; our build takes ~5-9 minutes on top. If none
+# EXISTS after the polling window, something swallowed the deploy - fail.
+# (Existence is checked rather than success: a deploy that fails its build
+# already reports its own failing status on the commit.)
+
+name: Verify Production Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  deployments: read
+
+jobs:
+  verify:
+    name: Production deployment exists
+    runs-on: ubuntu-latest
+    # Deploy creation is usually fast; the generous window covers Vercel
+    # queueing behind an in-flight preview build.
+    timeout-minutes: 30
+    steps:
+      - name: Poll for a production deployment of this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Looking for a production deployment of $SHA"
+          # 40 attempts x 30s = 20 minutes of polling
+          for i in $(seq 1 40); do
+            n=$(gh api "repos/$REPO/deployments?sha=$SHA&per_page=100" \
+                --jq '[.[] | select(.environment | test("Production"))] | length')
+            if [ "$n" -gt 0 ]; then
+              echo "Found $n production deployment(s) for $SHA after $((i * 30))s."
+              exit 0
+            fi
+            echo "  attempt $i/40: none yet"
+            sleep 30
+          done
+          echo "::error::No Vercel production deployment was created for $SHA after 20 minutes. The merge is on main but NOT shipped - production is still serving the previous build. Trigger a redeploy from the Vercel dashboard, or merge an empty commit. See the 'Vercel intermittently skips production deploy' ticket in Notion."
+          exit 1
