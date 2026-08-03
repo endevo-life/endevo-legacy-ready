@@ -1,3 +1,5 @@
+import type { Rule } from "sanity";
+
 export const podcastEpisodeSchema = {
   name: "podcastEpisode",
   title: "Podcast Episode",
@@ -7,7 +9,7 @@ export const podcastEpisodeSchema = {
       name: "title",
       title: "Episode Title",
       type: "string",
-      validation: (R: any) => R.required(),
+      validation: (R: Rule) => R.required(),
     },
     {
       name: "guestName",
@@ -18,7 +20,7 @@ export const podcastEpisodeSchema = {
       name: "date",
       title: "Publication Date",
       type: "date",
-      validation: (R: any) => R.required(),
+      validation: (R: Rule) => R.required(),
     },
     {
       name: "videoUrl",
