@@ -12,7 +12,19 @@ interface SEOProps {
 
 const SITE_NAME = "ENDevo";
 const SITE_URL = "https://www.endevo.life";
-const DEFAULT_OG_IMAGE = "https://www.endevo.life/og-image.png";
+/**
+ * Sitewide social preview: the ENDevo brand hero ("Simplifying Legacy
+ * Readiness & Digital Resilience"), cropped to the 1200x630 the og:image
+ * tags below declare. This is the ENDevo-wide message, so it is the right
+ * default for a link shared from any page.
+ */
+const DEFAULT_OG_IMAGE = "https://www.endevo.life/og-image-alt.jpg";
+
+/**
+ * Employer-facing hero ("Legacy & End-of-Life Wellness for Employees").
+ * Pass as `ogImage` on employer pages, where it beats the generic default.
+ */
+export const OG_IMAGE_EMPLOYERS = "https://www.endevo.life/og-image.jpg";
 
 export default function SEO({
   title,
@@ -49,6 +61,7 @@ export default function SEO({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={fullTitle} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
