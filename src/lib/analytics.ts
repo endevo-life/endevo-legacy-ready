@@ -78,7 +78,10 @@ export const trackConversion = (conversionName: string, value?: number) => {
   }
 };
 
-export const identifyUser = (userId: string, traits?: Record<string, unknown>) => {
+export const identifyUser = (
+  userId: string,
+  traits?: Record<string, unknown>,
+) => {
   const preferences = getConsentPreferences();
 
   if (preferences?.analytics) {

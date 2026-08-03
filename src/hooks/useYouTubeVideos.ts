@@ -66,7 +66,9 @@ export function useYouTubePlaylist(playlistId: string) {
     }
     fetchPlaylistItems(playlistId, apiKey)
       .then(setVideos)
-      .catch((err: unknown) => setError(err instanceof Error ? err.message : "Unknown error"))
+      .catch((err: unknown) =>
+        setError(err instanceof Error ? err.message : "Unknown error"),
+      )
       .finally(() => setLoading(false));
   }, [playlistId]);
 
@@ -111,7 +113,9 @@ export function useYouTubeVideos() {
         const items = await fetchPlaylistItems(uploadsPlaylistId, apiKey);
         setVideos(items);
       } catch (err: unknown) {
-        setError(err instanceof Error ? err.message : "Unknown error fetching videos.");
+        setError(
+          err instanceof Error ? err.message : "Unknown error fetching videos.",
+        );
       } finally {
         setLoading(false);
       }
