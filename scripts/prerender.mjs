@@ -158,7 +158,37 @@ async function prerender() {
 
   const server = await startServer();
 
-  const browser = await launchBrowser();
+  // The browser is deliberately short-lived — see the batch loop below.
+  // Vercel build logs showed Chromium crashing partway through the
+  // 101-route run ("Connection closed" cascades after ~9 routes on the
+  // parallel build and mid-run on the old sequential one), taking every
+  // remaining route with it. Memory accumulates across pages in the
+  // constrained build container until the process is killed; a browser
+  // that only ever renders one batch cannot get there.
+  let browser = await launchBrowser();
+
+  /** Errors that mean the whole browser died, not just this route. */
+  const BROWSER_DEATH =
+    /Connection closed|Target closed|Browser has disconnected|frame was detached|Protocol error/i;
+
+  // Single-flight relaunch: when several concurrent workers hit the dead
+  // browser at once, only one relaunch happens and the rest await it.
+  let relaunching = null;
+  function reviveBrowser() {
+    if (!relaunching) {
+      relaunching = (async () => {
+        try {
+          await browser.close();
+        } catch {
+          /* already gone */
+        }
+        browser = await launchBrowser();
+      })().finally(() => {
+        relaunching = null;
+      });
+    }
+    return relaunching;
+  }
 
   // The same Sanity queries repeat across all 101 pages (post list on
   // /blog, one post-by-slug per article), so proxied responses are cached
@@ -307,46 +337,89 @@ async function prerender() {
   );
   console.log(`  Concurrency: ${CONCURRENCY} pages`);
 
+  // Routes render in batches, and each batch gets a FRESH browser. This is
+  // the actual fix for the Vercel deploy failures: Chromium's memory grows
+  // across pages in the constrained build container until the process is
+  // killed, and a dead browser fails every remaining route with
+  // "Connection closed". A browser that renders at most one batch has a
+  // bounded lifetime, so it cannot accumulate its way to an OOM kill.
+  const BATCH_SIZE = Number(process.env.PRERENDER_BATCH || 25);
   let passed = 0;
   let failed = 0;
-  const queue = [...ROUTES];
   const needsRetry = [];
+  // Caps how often one route may take the browser down with it before it
+  // is sent to the final retry pass instead of being requeued — otherwise
+  // a single pathological page could crash-loop the whole run.
+  const deathsByRoute = new Map();
 
-  async function worker() {
-    for (;;) {
-      const route = queue.shift();
-      if (route === undefined) return;
-      try {
-        await renderRoute(route);
-        console.log(`  ✅  ${route}`);
-        passed++;
-      } catch {
-        // Defer the retry instead of retrying immediately: a route that
-        // lost a timeout race under full concurrency would just lose it
-        // again under the same load. It gets a second chance below, after
-        // the pool drains, on an otherwise idle machine.
-        needsRetry.push(route);
+  for (let start = 0; start < ROUTES.length; start += BATCH_SIZE) {
+    const batch = ROUTES.slice(start, start + BATCH_SIZE);
+    const queue = [...batch];
+
+    async function worker() {
+      for (;;) {
+        const route = queue.shift();
+        if (route === undefined) return;
+        try {
+          await renderRoute(route);
+          console.log(`  ✅  ${route}`);
+          passed++;
+        } catch (err) {
+          if (BROWSER_DEATH.test(err.message ?? "")) {
+            // The browser died under this route. Relaunch (single-flight
+            // across workers) so the rest of the batch is not doomed, and
+            // give the route another turn.
+            console.warn(`  ♻️  browser died at ${route} — relaunching`);
+            await reviveBrowser();
+            const deaths = (deathsByRoute.get(route) ?? 0) + 1;
+            deathsByRoute.set(route, deaths);
+            if (deaths <= 2) {
+              queue.push(route);
+            } else {
+              needsRetry.push(route);
+            }
+          } else {
+            // Defer the retry instead of retrying immediately: a route
+            // that lost a timeout race under full concurrency would just
+            // lose it again under the same load. It gets a second chance
+            // below, after all batches finish, on an otherwise idle
+            // machine.
+            needsRetry.push(route);
+          }
+        }
       }
     }
-  }
 
-  await Promise.all(
-    Array.from({ length: Math.min(CONCURRENCY, ROUTES.length) }, worker),
-  );
+    await Promise.all(
+      Array.from({ length: Math.min(CONCURRENCY, batch.length) }, worker),
+    );
 
-  // Sequential retry pass for anything that failed under concurrency.
-  for (const route of needsRetry) {
+    // Fresh browser for the next batch; the current one has served its
+    // bounded lifetime.
     try {
-      await renderRoute(route);
-      console.log(`  ✅  ${route} (retry)`);
-      passed++;
-    } catch (err) {
-      console.error(`  ❌  ${route} — ${err.message}`);
-      failed++;
+      await browser.close();
+    } catch {
+      /* already gone */
     }
+    if (start + BATCH_SIZE < ROUTES.length) browser = await launchBrowser();
   }
 
-  await browser.close();
+  // Sequential retry pass, on a fresh browser, for anything that failed
+  // under concurrency.
+  if (needsRetry.length > 0) {
+    browser = await launchBrowser();
+    for (const route of needsRetry) {
+      try {
+        await renderRoute(route);
+        console.log(`  ✅  ${route} (retry)`);
+        passed++;
+      } catch (err) {
+        console.error(`  ❌  ${route} — ${err.message}`);
+        failed++;
+      }
+    }
+    await browser.close();
+  }
   server.close();
 
   console.log(
