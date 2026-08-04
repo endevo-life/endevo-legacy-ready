@@ -296,7 +296,15 @@ async function prerender() {
   // 4 keeps headroom on 4-core CI/build machines. 6 tabs saturated a dev
   // laptop enough that long articles lost their 45s wait; anything that
   // still loses a race gets the sequential retry pass below.
-  const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY || 4);
+  // Vercel's build container is memory-constrained and runs the
+  // self-contained @sparticuz/chromium; four concurrent tabs of a heavy
+  // React app there is a real OOM risk, so it gets 2. Local machines and
+  // GitHub runners (full puppeteer Chrome) get 4. Even at 2, the shared
+  // Sanity cache and per-tab pipelining beat the old one-at-a-time loop.
+  const DEFAULT_CONCURRENCY = process.env.VERCEL ? 2 : 4;
+  const CONCURRENCY = Number(
+    process.env.PRERENDER_CONCURRENCY || DEFAULT_CONCURRENCY,
+  );
   console.log(`  Concurrency: ${CONCURRENCY} pages`);
 
   let passed = 0;
