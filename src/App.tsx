@@ -20,6 +20,7 @@ const LearnAndListen = lazy(() => import("./pages/LearnAndListen"));
 const Solution = lazy(() => import("./pages/Solution"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const VideoEpisode = lazy(() => import("./pages/VideoEpisode"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Company = lazy(() => import("./pages/Company"));
 const WWSIndividuals = lazy(() => import("./pages/ForIndividuals"));
@@ -128,6 +129,7 @@ const App = () => (
             <Route path="/company" element={<Company />} />
             <Route path="/video" element={<Navigate to="/videos" replace />} />
             <Route path="/videos" element={<Videos />} />
+            <Route path="/videos/:slug" element={<VideoEpisode />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/resources" element={<Resources />} />

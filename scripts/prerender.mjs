@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, extname, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchBlogPosts } from "./fetch-blog-slugs.mjs";
+import { fetchVideoEpisodes } from "./fetch-video-ids.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, "..", "dist");
@@ -54,6 +55,11 @@ const SANITY_ROUTES = new Set(["/blog"]);
 /** An individual article page, e.g. /blog/some-slug. */
 function isPostRoute(route) {
   return route.startsWith("/blog/");
+}
+
+/** An individual video episode page, e.g. /videos/some-episode-<id>. */
+function isVideoRoute(route) {
+  return route.startsWith("/videos/");
 }
 
 function isSanityRoute(route) {
@@ -151,9 +157,14 @@ async function prerender() {
   // failed build than silently shipping 76 unprerendered article pages that
   // serve the homepage's HTML to Googlebot.
   const posts = await fetchBlogPosts();
-  const ROUTES = [...STATIC_ROUTES, ...posts.map((p) => `/blog/${p.slug}`)];
+  const episodes = await fetchVideoEpisodes();
+  const ROUTES = [
+    ...STATIC_ROUTES,
+    ...posts.map((p) => `/blog/${p.slug}`),
+    ...episodes.map((e) => `/videos/${e.slug}`),
+  ];
   console.log(
-    `  Routes: ${STATIC_ROUTES.length} static + ${posts.length} blog posts = ${ROUTES.length}`,
+    `  Routes: ${STATIC_ROUTES.length} static + ${posts.length} blog posts + ${episodes.length} video episodes = ${ROUTES.length}`,
   );
 
   const server = await startServer();
@@ -194,7 +205,7 @@ async function prerender() {
   // /blog, one post-by-slug per article), so proxied responses are cached
   // for the run. Cuts ~100 redundant round trips to Sanity and removes it
   // as a rate-limiting risk under concurrency.
-  const sanityCache = new Map();
+  const apiCache = new Map();
 
   /** Renders one route in its own page and writes the HTML. Throws on any
    *  quality-gate failure so the caller can count it. */
@@ -217,15 +228,24 @@ async function prerender() {
       await page.setRequestInterception(true);
       page.on("request", async (req) => {
         const url = req.url();
-        if (!url.includes(".sanity.io")) {
+        // The YouTube Data API needs the same treatment as Sanity: its key
+        // is referrer-locked to the deployed site, so a request from the
+        // localhost prerender page is rejected and video routes would
+        // render empty. Proxy both through Node with the header each API
+        // trusts.
+        const isSanity = url.includes(".sanity.io");
+        const isYouTube = url.includes("googleapis.com/youtube");
+        if (!isSanity && !isYouTube) {
           req.continue().catch(() => {});
           return;
         }
         try {
-          let cached = sanityCache.get(url);
+          let cached = apiCache.get(url);
           if (!cached) {
             const upstream = await fetch(url, {
-              headers: { Origin: SANITY_ALLOWED_ORIGIN },
+              headers: isSanity
+                ? { Origin: SANITY_ALLOWED_ORIGIN }
+                : { Referer: `${SANITY_ALLOWED_ORIGIN}/` },
             });
             cached = {
               status: upstream.status,
@@ -234,7 +254,7 @@ async function prerender() {
               body: Buffer.from(await upstream.arrayBuffer()),
             };
             // Only successful responses are worth replaying.
-            if (cached.status === 200) sanityCache.set(url, cached);
+            if (cached.status === 200) apiCache.set(url, cached);
           }
           req.respond({
             status: cached.status,
@@ -288,6 +308,13 @@ async function prerender() {
           },
           { timeout: 45000, polling: 250 },
         );
+      } else if (route === "/videos") {
+        // The listing is ready once long-form episode cards link to their
+        // own pages.
+        await page.waitForFunction(
+          () => document.querySelectorAll('a[href^="/videos/"]').length > 0,
+          { timeout: 45000, polling: 250 },
+        );
       } else if (route === "/blog") {
         // The listing is ready once post cards link to their own pages.
         // Its cards are short titles, so an article-length check never
@@ -304,7 +331,10 @@ async function prerender() {
       // back to the site-wide default means the SEO component did not run,
       // and shipping it would tell Google the article is a duplicate of the
       // homepage.
-      if (isPostRoute(route) && html.includes(FALLBACK_TITLE)) {
+      if (
+        (isPostRoute(route) || isVideoRoute(route)) &&
+        html.includes(FALLBACK_TITLE)
+      ) {
         throw new Error(
           "rendered with the fallback site title — SEO tags did not apply",
         );
