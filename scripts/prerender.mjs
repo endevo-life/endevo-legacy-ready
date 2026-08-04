@@ -235,6 +235,20 @@ async function prerender() {
         // trusts.
         const isSanity = url.includes(".sanity.io");
         const isYouTube = url.includes("googleapis.com/youtube");
+        // The YouTube embed player must never load during prerender. Each
+        // episode page embeds the full player — an entire media stack per
+        // page — and 81 of them is what OOM-killed Chromium in Vercel's
+        // container (13 episode routes failed even with crash recovery).
+        // Aborting the iframe's requests leaves the <iframe src=...> tag in
+        // the captured HTML, which is all crawlers need; only the player's
+        // subresources are skipped.
+        if (
+          !isYouTube &&
+          /youtube\.com|ytimg\.com|googlevideo\.com/.test(url)
+        ) {
+          req.abort().catch(() => {});
+          return;
+        }
         if (!isSanity && !isYouTube) {
           req.continue().catch(() => {});
           return;
