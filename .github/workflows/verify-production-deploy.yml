@@ -41,8 +41,12 @@ jobs:
           echo "Looking for a production deployment of $SHA"
           # 40 attempts x 30s = 20 minutes of polling
           for i in $(seq 1 40); do
+            # The environment must be the FRONTEND project's production env.
+            # A bare test("Production") also matched the backend project's
+            # deploy, which let this guard pass while the frontend deploy
+            # was missing - the exact failure it exists to catch.
             n=$(gh api "repos/$REPO/deployments?sha=$SHA&per_page=100" \
-                --jq '[.[] | select(.environment | test("Production"))] | length')
+                --jq '[.[] | select(.environment | test("Production")) | select(.environment | test("backend") | not)] | length')
             if [ "$n" -gt 0 ]; then
               echo "Found $n production deployment(s) for $SHA after $((i * 30))s."
               exit 0
