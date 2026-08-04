@@ -18,6 +18,7 @@ import { writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchBlogPosts } from "./fetch-blog-slugs.mjs";
+import { fetchVideoEpisodes } from "./fetch-video-ids.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -238,10 +239,24 @@ async function generate() {
     }),
   );
 
+  // Video episode pages mirror the blog treatment: URLs resolved from the
+  // long-form YouTube playlist at build time, lastmod from the episode's
+  // publish date. Throws if YouTube is unreachable, for the same reason
+  // the blog fetch does.
+  const episodes = await fetchVideoEpisodes();
+  const videoUrls = episodes.map((e) =>
+    urlEntry({
+      path: `/videos/${e.slug}`,
+      lastmod: e.publishedAt || buildDate(),
+      changefreq: "monthly",
+      priority: "0.6",
+    }),
+  );
+
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    [...staticUrls, ...postUrls].join("\n"),
+    [...staticUrls, ...postUrls, ...videoUrls].join("\n"),
     "</urlset>",
     "",
   ].join("\n");
@@ -249,8 +264,8 @@ async function generate() {
   const outPath = join(ROOT, "public", "sitemap.xml");
   writeFileSync(outPath, xml, "utf-8");
   console.log(
-    `✅ Wrote ${ROUTES.length + posts.length} URLs to public/sitemap.xml ` +
-      `(${ROUTES.length} pages + ${posts.length} blog posts)`,
+    `✅ Wrote ${ROUTES.length + posts.length + episodes.length} URLs to public/sitemap.xml ` +
+      `(${ROUTES.length} pages + ${posts.length} blog posts + ${episodes.length} video episodes)`,
   );
 }
 

@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import { Loader2 } from "lucide-react";
+import { makeVideoSlug } from "@/lib/videoSlug";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -99,10 +101,19 @@ function VideoCard({
   video: UnifiedVideo;
   onClick: () => void;
 }) {
-  return (
+  // Long-form episodes have their own page at /videos/:slug, so their card
+  // is a real anchor crawlers can follow — the same change that made blog
+  // posts indexable. Shorts have no page (a page per seconds-long clip
+  // would be thin-content noise), so they keep the modal.
+  const episodeHref =
+    video.type === "long"
+      ? `/videos/${makeVideoSlug(video.title, video.youtubeId)}`
+      : null;
+
+  const card = (
     <article
       className="shadow-md overflow-hidden flex flex-col bg-white w-full max-w-[368px] cursor-pointer"
-      onClick={onClick}
+      onClick={episodeHref ? undefined : onClick}
     >
       <div className="w-full h-48 sm:h-56 md:h-[220px] lg:h-[294px] overflow-hidden bg-gray-100 relative">
         {video.thumbnail ? (
@@ -144,18 +155,40 @@ function VideoCard({
           {video.title}
         </h3>
         <div className="flex justify-center">
-          <button
-            className="w-fit text-white text-sm font-semibold px-8 py-1.5 transition-all duration-300 hover:brightness-110 hover:scale-105"
-            style={{
-              backgroundColor: "#FF5A00",
-              boxShadow: "0 4px 12px rgba(255,90,0,0.4)",
-            }}
-          >
-            Watch Now
-          </button>
+          {/* Rendered as a span when the whole card is a link — a button
+              nested inside an anchor is invalid interactive nesting. */}
+          {episodeHref ? (
+            <span
+              className="w-fit text-white text-sm font-semibold px-8 py-1.5 transition-all duration-300 hover:brightness-110 hover:scale-105"
+              style={{
+                backgroundColor: "#FF5A00",
+                boxShadow: "0 4px 12px rgba(255,90,0,0.4)",
+              }}
+            >
+              Watch Now
+            </span>
+          ) : (
+            <button
+              className="w-fit text-white text-sm font-semibold px-8 py-1.5 transition-all duration-300 hover:brightness-110 hover:scale-105"
+              style={{
+                backgroundColor: "#FF5A00",
+                boxShadow: "0 4px 12px rgba(255,90,0,0.4)",
+              }}
+            >
+              Watch Now
+            </button>
+          )}
         </div>
       </div>
     </article>
+  );
+
+  return episodeHref ? (
+    <Link to={episodeHref} className="block w-full max-w-[368px]">
+      {card}
+    </Link>
+  ) : (
+    card
   );
 }
 

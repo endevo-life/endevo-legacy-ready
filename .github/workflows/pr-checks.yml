@@ -72,26 +72,36 @@ jobs:
       - run: npm ci
       - name: Build production bundle
         # The sitemap generator and prerenderer resolve blog post URLs from
-        # Sanity at build time, so the build needs these. They are public
-        # identifiers, not secrets — both already ship in the client-side
-        # bundle served to every visitor — so they live here rather than in
-        # repo secrets, which keeps the build working on forked PRs.
+        # Sanity and video episode URLs from YouTube at build time, so the
+        # build needs these. They are public identifiers, not secrets — all
+        # of them already ship in the client-side bundle served to every
+        # visitor, and the YouTube key is referrer-locked — so they live
+        # here rather than in repo secrets, which keeps the build working
+        # on forked PRs.
         env:
           VITE_SANITY_PROJECT_ID: ebvyrev4
           VITE_SANITY_DATASET: production
+          VITE_YOUTUBE_API_KEY: AIzaSyDYs0JxHMR9G7I4k1i304_xskVVFe3q8ss
+          VITE_YOUTUBE_CHANNEL_ID: UCK2FUE-JxLOSkrcEo66HDug
+          VITE_YOUTUBE_LONG_FORM_PLAYLIST_ID: PLwmkfcjI0SvBmzMWOZ71J2pxPBAYJmKxg
         run: npm run build
       - name: Verify dist output exists
         run: test -f dist/index.html
-      - name: Verify blog posts are in the sitemap and prerendered
+      - name: Verify blog posts and video episodes are in the sitemap and prerendered
         # Guards the regression this build exists to prevent: a sitemap
-        # without post URLs, or article pages that never got prerendered,
-        # would silently un-index every article.
+        # without post/episode URLs, or pages that never got prerendered,
+        # would silently un-index that whole content type.
         run: |
           posts=$(grep -c '<loc>.*/blog/' public/sitemap.xml || echo 0)
           pages=$(find dist/blog -mindepth 1 -maxdepth 1 -type d | wc -l)
           echo "sitemap post URLs: $posts | prerendered post pages: $pages"
           test "$posts" -gt 0 || { echo "::error::sitemap contains no blog post URLs"; exit 1; }
           test "$pages" -eq "$posts" || { echo "::error::prerendered pages ($pages) != sitemap posts ($posts)"; exit 1; }
+          vids=$(grep -c '<loc>.*/videos/' public/sitemap.xml || echo 0)
+          vpages=$(find dist/videos -mindepth 1 -maxdepth 1 -type d | wc -l)
+          echo "sitemap episode URLs: $vids | prerendered episode pages: $vpages"
+          test "$vids" -gt 0 || { echo "::error::sitemap contains no video episode URLs"; exit 1; }
+          test "$vpages" -eq "$vids" || { echo "::error::prerendered episode pages ($vpages) != sitemap episodes ($vids)"; exit 1; }
 
   # ─────────────────────────────────────────────
   # GATE 4 — Code quality guards
