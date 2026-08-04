@@ -158,15 +158,49 @@ async function prerender() {
 
   const server = await startServer();
 
-  const browser = await launchBrowser();
+  // The browser is deliberately short-lived — see the batch loop below.
+  // Vercel build logs showed Chromium crashing partway through the
+  // 101-route run ("Connection closed" cascades after ~9 routes on the
+  // parallel build and mid-run on the old sequential one), taking every
+  // remaining route with it. Memory accumulates across pages in the
+  // constrained build container until the process is killed; a browser
+  // that only ever renders one batch cannot get there.
+  let browser = await launchBrowser();
 
-  let passed = 0;
-  let failed = 0;
+  /** Errors that mean the whole browser died, not just this route. */
+  const BROWSER_DEATH =
+    /Connection closed|Target closed|Browser has disconnected|frame was detached|Protocol error/i;
 
-  for (const route of ROUTES) {
+  // Single-flight relaunch: when several concurrent workers hit the dead
+  // browser at once, only one relaunch happens and the rest await it.
+  let relaunching = null;
+  function reviveBrowser() {
+    if (!relaunching) {
+      relaunching = (async () => {
+        try {
+          await browser.close();
+        } catch {
+          /* already gone */
+        }
+        browser = await launchBrowser();
+      })().finally(() => {
+        relaunching = null;
+      });
+    }
+    return relaunching;
+  }
+
+  // The same Sanity queries repeat across all 101 pages (post list on
+  // /blog, one post-by-slug per article), so proxied responses are cached
+  // for the run. Cuts ~100 redundant round trips to Sanity and removes it
+  // as a rate-limiting risk under concurrency.
+  const sanityCache = new Map();
+
+  /** Renders one route in its own page and writes the HTML. Throws on any
+   *  quality-gate failure so the caller can count it. */
+  async function renderRoute(route) {
+    const page = await browser.newPage();
     try {
-      const page = await browser.newPage();
-
       // Suppress console noise from the app
       page.on("console", () => {});
       page.on("pageerror", () => {});
@@ -188,16 +222,25 @@ async function prerender() {
           return;
         }
         try {
-          const upstream = await fetch(url, {
-            headers: { Origin: SANITY_ALLOWED_ORIGIN },
-          });
-          const body = Buffer.from(await upstream.arrayBuffer());
+          let cached = sanityCache.get(url);
+          if (!cached) {
+            const upstream = await fetch(url, {
+              headers: { Origin: SANITY_ALLOWED_ORIGIN },
+            });
+            cached = {
+              status: upstream.status,
+              contentType:
+                upstream.headers.get("content-type") ?? "application/json",
+              body: Buffer.from(await upstream.arrayBuffer()),
+            };
+            // Only successful responses are worth replaying.
+            if (cached.status === 200) sanityCache.set(url, cached);
+          }
           req.respond({
-            status: upstream.status,
-            contentType:
-              upstream.headers.get("content-type") ?? "application/json",
+            status: cached.status,
+            contentType: cached.contentType,
             headers: { "Access-Control-Allow-Origin": "*" },
-            body,
+            body: cached.body,
           });
         } catch {
           req.abort().catch(() => {});
@@ -206,8 +249,20 @@ async function prerender() {
 
       await page.goto(`http://localhost:${PORT}${route}`, {
         waitUntil: "networkidle0",
-        timeout: 30000,
+        timeout: 45000,
       });
+
+      // Every page must have committed its own SEO tags before capture.
+      // react-helmet-async injects them asynchronously after render and
+      // marks them data-rh; under concurrency, static pages captured
+      // before that commit shipped with the fallback title and no
+      // og:image (/contact and / both hit this in testing). The SEO
+      // component always sets a description, so its data-rh meta is a
+      // reliable readiness signal on every route.
+      await page.waitForFunction(
+        () => !!document.querySelector('meta[name="description"][data-rh]'),
+        { timeout: 45000, polling: 100 },
+      );
 
       // networkidle0 fires when the network settles, which for a
       // Sanity-backed route happens BEFORE React Query has resolved and
@@ -215,16 +270,23 @@ async function prerender() {
       // exactly the "posts are invisible to Google" bug this fixes. So for
       // CMS routes, wait for real rendered content to appear.
       if (isPostRoute(route)) {
-        // An article page is ready once its body text has rendered.
+        // An article page is ready once its body text has rendered AND its
+        // own <title> has applied. Helmet commits the title asynchronously
+        // after the body renders, and under concurrency that gap is wide
+        // enough to lose the race — the first parallel run captured 50
+        // pages whose body was ready but whose title was still the
+        // site-wide fallback. Waiting on both closes the race; the
+        // post-capture guard below stays as a backstop.
         await page.waitForFunction(
           () => {
             const article = document.querySelector("article");
             if (!article) return false;
             // Guard against capturing the loading skeleton.
             if (document.querySelector(".animate-pulse")) return false;
-            return (article.textContent ?? "").trim().length > 200;
+            if ((article.textContent ?? "").trim().length <= 200) return false;
+            return !document.title.startsWith("ENDevo — Legacy Readiness");
           },
-          { timeout: 30000, polling: 250 },
+          { timeout: 45000, polling: 250 },
         );
       } else if (route === "/blog") {
         // The listing is ready once post cards link to their own pages.
@@ -232,7 +294,7 @@ async function prerender() {
         // passes here.
         await page.waitForFunction(
           () => document.querySelectorAll('a[href^="/blog/"]').length > 0,
-          { timeout: 30000, polling: 250 },
+          { timeout: 45000, polling: 250 },
         );
       }
 
@@ -251,17 +313,113 @@ async function prerender() {
       const outDir = route === "/" ? distDir : join(distDir, route);
       mkdirSync(outDir, { recursive: true });
       writeFileSync(join(outDir, "index.html"), html, "utf-8");
-
-      console.log(`  ✅  ${route}`);
-      passed++;
-      await page.close();
-    } catch (err) {
-      console.error(`  ❌  ${route} — ${err.message}`);
-      failed++;
+    } finally {
+      await page.close().catch(() => {});
     }
   }
 
-  await browser.close();
+  // Routes render concurrently through a small worker pool. Sequential
+  // rendering took ~8-9 minutes for 101 routes; that long build window is
+  // what let production deploys collide with preview builds and get
+  // silently dropped (see the Vercel deploy reliability ticket). Each
+  // worker uses its own page (tab) inside the one shared browser.
+  // 4 keeps headroom on 4-core CI/build machines. 6 tabs saturated a dev
+  // laptop enough that long articles lost their 45s wait; anything that
+  // still loses a race gets the sequential retry pass below.
+  // Vercel's build container is memory-constrained and runs the
+  // self-contained @sparticuz/chromium; four concurrent tabs of a heavy
+  // React app there is a real OOM risk, so it gets 2. Local machines and
+  // GitHub runners (full puppeteer Chrome) get 4. Even at 2, the shared
+  // Sanity cache and per-tab pipelining beat the old one-at-a-time loop.
+  const DEFAULT_CONCURRENCY = process.env.VERCEL ? 2 : 4;
+  const CONCURRENCY = Number(
+    process.env.PRERENDER_CONCURRENCY || DEFAULT_CONCURRENCY,
+  );
+  console.log(`  Concurrency: ${CONCURRENCY} pages`);
+
+  // Routes render in batches, and each batch gets a FRESH browser. This is
+  // the actual fix for the Vercel deploy failures: Chromium's memory grows
+  // across pages in the constrained build container until the process is
+  // killed, and a dead browser fails every remaining route with
+  // "Connection closed". A browser that renders at most one batch has a
+  // bounded lifetime, so it cannot accumulate its way to an OOM kill.
+  const BATCH_SIZE = Number(process.env.PRERENDER_BATCH || 25);
+  let passed = 0;
+  let failed = 0;
+  const needsRetry = [];
+  // Caps how often one route may take the browser down with it before it
+  // is sent to the final retry pass instead of being requeued — otherwise
+  // a single pathological page could crash-loop the whole run.
+  const deathsByRoute = new Map();
+
+  for (let start = 0; start < ROUTES.length; start += BATCH_SIZE) {
+    const batch = ROUTES.slice(start, start + BATCH_SIZE);
+    const queue = [...batch];
+
+    async function worker() {
+      for (;;) {
+        const route = queue.shift();
+        if (route === undefined) return;
+        try {
+          await renderRoute(route);
+          console.log(`  ✅  ${route}`);
+          passed++;
+        } catch (err) {
+          if (BROWSER_DEATH.test(err.message ?? "")) {
+            // The browser died under this route. Relaunch (single-flight
+            // across workers) so the rest of the batch is not doomed, and
+            // give the route another turn.
+            console.warn(`  ♻️  browser died at ${route} — relaunching`);
+            await reviveBrowser();
+            const deaths = (deathsByRoute.get(route) ?? 0) + 1;
+            deathsByRoute.set(route, deaths);
+            if (deaths <= 2) {
+              queue.push(route);
+            } else {
+              needsRetry.push(route);
+            }
+          } else {
+            // Defer the retry instead of retrying immediately: a route
+            // that lost a timeout race under full concurrency would just
+            // lose it again under the same load. It gets a second chance
+            // below, after all batches finish, on an otherwise idle
+            // machine.
+            needsRetry.push(route);
+          }
+        }
+      }
+    }
+
+    await Promise.all(
+      Array.from({ length: Math.min(CONCURRENCY, batch.length) }, worker),
+    );
+
+    // Fresh browser for the next batch; the current one has served its
+    // bounded lifetime.
+    try {
+      await browser.close();
+    } catch {
+      /* already gone */
+    }
+    if (start + BATCH_SIZE < ROUTES.length) browser = await launchBrowser();
+  }
+
+  // Sequential retry pass, on a fresh browser, for anything that failed
+  // under concurrency.
+  if (needsRetry.length > 0) {
+    browser = await launchBrowser();
+    for (const route of needsRetry) {
+      try {
+        await renderRoute(route);
+        console.log(`  ✅  ${route} (retry)`);
+        passed++;
+      } catch (err) {
+        console.error(`  ❌  ${route} — ${err.message}`);
+        failed++;
+      }
+    }
+    await browser.close();
+  }
   server.close();
 
   console.log(
