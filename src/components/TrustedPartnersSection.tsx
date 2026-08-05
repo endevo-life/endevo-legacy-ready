@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Filter, ArrowRight, ChevronDown } from "lucide-react";
 import beliefsIcon from "@/assets/beliefs-icon-new.png";
+import ltCareNavLogo from "@/assets/LTCareNav_logo.png";
 import legalIcon from "@/assets/legal-icon-new.png";
 import financialIcon from "@/assets/financial-icon-new.png";
 import physicalIcon from "@/assets/physical-icon-new.png";
@@ -18,6 +19,16 @@ const partners = [
       "A memorial bracelet handcrafted from solidified cremains. A permanent heirloom made through our patented ash-solidification process — so you can feel close again, every day.",
     buttonText: "Learn More",
     url: "https://niaemberly.ca/",
+    category: "physical" as const,
+  },
+  {
+    name: "LTCareNav",
+    logo: ltCareNavLogo,
+    tagline: "Navigate long-term care with clarity and confidence.",
+    description:
+      "LTCareNav helps families understand long-term care options and costs before a crisis hits — so decisions about care are made with clarity, not under pressure.",
+    buttonText: "Learn More",
+    url: "https://ltcarenav.com/",
     category: "physical" as const,
   },
   {
