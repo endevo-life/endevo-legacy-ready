@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
@@ -6,6 +7,7 @@ import SEO from "@/components/SEO";
 import NotFound from "@/pages/NotFound";
 import { useYouTubeVideoDetails } from "@/hooks/useYouTubeVideos";
 import { extractVideoId, makeVideoSlug } from "@/lib/videoSlug";
+import VideoDescription from "@/components/VideoDescription";
 
 const SITE_URL = "https://www.endevo.life";
 
@@ -42,6 +44,10 @@ const VideoEpisode = () => {
   const { slug } = useParams<{ slug: string }>();
   const videoId = extractVideoId(slug);
   const { video, loading, error, notFound } = useYouTubeVideoDetails(videoId);
+  // Chapter timestamps in the description seek the player by reloading the
+  // embed with a start offset; the ref scrolls it back into view.
+  const [startAt, setStartAt] = useState<number | null>(null);
+  const playerRef = useRef<HTMLDivElement>(null);
 
   // Hold the frame while loading so the prerenderer and crawlers never
   // capture a 404 for an episode that does exist. No SEO component here:
@@ -159,9 +165,13 @@ const VideoEpisode = () => {
             </p>
           </header>
 
-          <div className="w-full aspect-video rounded-lg overflow-hidden mb-8 bg-black">
+          <div
+            ref={playerRef}
+            className="w-full aspect-video rounded-lg overflow-hidden mb-8 bg-black"
+          >
             <iframe
-              src={`https://www.youtube.com/embed/${videoId}`}
+              key={startAt ?? "initial"}
+              src={`https://www.youtube.com/embed/${videoId}${startAt !== null ? `?start=${startAt}&autoplay=1` : ""}`}
               title={video.title}
               className="w-full h-full"
               allowFullScreen
@@ -170,9 +180,16 @@ const VideoEpisode = () => {
           </div>
 
           {video.description && (
-            <div className="text-base leading-relaxed text-gray-700 whitespace-pre-line">
-              {video.description}
-            </div>
+            <VideoDescription
+              text={video.description}
+              onSeek={(seconds) => {
+                setStartAt(seconds);
+                playerRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                });
+              }}
+            />
           )}
         </article>
       </main>
