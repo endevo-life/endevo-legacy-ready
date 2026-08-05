@@ -125,8 +125,8 @@ const ResponsiveNavbar = () => {
           icon: MessageSquare,
         },
         {
-          name: "Videos",
-          sub: "Watch and learn",
+          name: "Podcasts",
+          sub: "Watch and listen",
           href: "/videos",
           icon: Video,
         },
