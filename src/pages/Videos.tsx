@@ -291,7 +291,7 @@ const Videos = () => {
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-white"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
-            Videos
+            Podcasts
           </h1>
           <p className="mt-4 text-white/80 text-lg max-w-xl mx-auto">
             Watch our podcast episodes, interviews, and digital legacy insights.
