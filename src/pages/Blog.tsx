@@ -107,7 +107,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Blog — Digital Legacy & End-of-Life Planning"
-        description="Expert articles on digital legacy, estate planning, grief support, and end-of-life preparation. Read the ENDevo blog."
+        description="Expert articles on digital legacy, estate planning, grief support, and end-of-life preparation — practical guidance for individuals, families, and employers."
         canonical="/blog"
         jsonLd={blogListSchema}
       />

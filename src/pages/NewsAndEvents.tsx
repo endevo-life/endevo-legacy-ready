@@ -10,7 +10,7 @@ const NewsAndEvents = () => {
     <div className="min-h-screen flex flex-col">
       <SEO
         title="End-of-Life Planning News & Industry Events"
-        description="Stay current on end-of-life planning news, conference appearances, industry awards, and ENDevo announcements."
+        description="Stay current on end-of-life and digital legacy planning news — conference appearances, speaking engagements, industry awards, and ENDevo announcements."
         canonical="/news-and-events"
       />
       <ResponsiveNavbar />

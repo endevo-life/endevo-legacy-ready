@@ -93,7 +93,7 @@ const TrustedExperts = () => {
     <div className="min-h-screen">
       <SEO
         title="Trusted Legacy Planning Experts & Partners"
-        description="Browse our directory of trusted partners and experts across legal, financial, physical, and digital legacy planning — vetted to help you bring your plan to life."
+        description="Browse vetted partners across legal, financial, physical, and digital legacy planning — experts who help you turn your plan into action."
         canonical="/trusted-experts"
       />
       <ResponsiveNavbar />

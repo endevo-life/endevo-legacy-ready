@@ -13,7 +13,7 @@ const CaseStudyMedicalCoverage = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Estate Planning After a Cancer Diagnosis: Case Study"
+        title="Estate Planning After a Cancer Diagnosis"
         description="Real case study: how a healthcare professional with a pacemaker, cancer history, and a newly diagnosed husband finally organized her estate plan."
         canonical="/case-studies/medical-coverage"
       />

@@ -171,7 +171,7 @@ const FAQ = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="End-of-Life Planning FAQ — Questions Answered"
-        description="Common questions about end-of-life planning — what it covers, who needs it, and how it works as an employee benefit."
+        description="Answers to common questions about end-of-life and digital legacy planning — what it covers, who needs it, when to start, and how it works at work."
         canonical="/faq"
         jsonLd={faqSchema}
       />
