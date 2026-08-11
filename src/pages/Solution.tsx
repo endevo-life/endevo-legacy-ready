@@ -71,7 +71,7 @@ const Solution = () => {
     <div className="min-h-screen">
       <SEO
         title="Employee Wellness Program for Legacy Readiness | ENDevo"
-        description="A structured employee wellness program covering end-of-life and digital legacy planning. Reduce HR burden, close the EAP gap, and support employees through life's hardest transitions."
+        description="A structured employee wellness program for end-of-life and digital legacy planning. Reduce HR burden, close the EAP gap, support staff in hard times."
         canonical="/solution"
       />
       <ResponsiveNavbar />

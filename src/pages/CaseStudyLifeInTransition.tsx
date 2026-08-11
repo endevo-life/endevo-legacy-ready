@@ -13,8 +13,8 @@ const CaseStudyLifeInTransition = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Estate Planning After Divorce: Case Study With a Special Needs Child"
-        description="Real case study: how a recently divorced administrative professional with a special needs child navigated estate planning, name changes, and a complete plan rebuild."
+        title="Estate Planning After Divorce: A Case Study"
+        description="Case study: how a recently divorced professional with a special needs child rebuilt her estate plan, from name changes to new beneficiaries."
         canonical="/case-studies/life-in-transition"
       />
       <ResponsiveNavbar />

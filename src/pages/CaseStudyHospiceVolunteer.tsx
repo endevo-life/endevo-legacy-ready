@@ -13,7 +13,7 @@ const CaseStudyHospiceVolunteer = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="What Happens to Your Digital Accounts When You Die? A Case Study"
+        title="What Happens to Your Digital Accounts When You Die?"
         description="A hospice volunteer with completed estate documents discovered her digital access was never addressed — and what she did about it before retirement."
         canonical="/case-studies/hospice-volunteer"
       />
