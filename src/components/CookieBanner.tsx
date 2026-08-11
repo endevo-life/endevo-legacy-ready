@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { X, Settings, Check, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { applyClarityConsent } from "@/lib/clarity";
 
 interface CookiePreferences {
   strictlyNecessary: boolean;
@@ -91,6 +92,12 @@ export const CookieBanner: React.FC = () => {
         });
       }
     }
+
+    // Microsoft Clarity (session recordings + heatmaps). Initialized here
+    // rather than at import so the tag is only injected once analytics
+    // cookies are accepted — Clarity sets its own cookie and would otherwise
+    // fire before the visitor has chosen.
+    applyClarityConsent(prefs.analytics, prefs.marketing);
 
     // Marketing cookies (Facebook Pixel, etc.)
     if (prefs.marketing) {
