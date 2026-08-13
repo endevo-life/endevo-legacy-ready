@@ -24,6 +24,47 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO";
 
+const SITE_URL = "https://www.endevo.life";
+
+/**
+ * Person entity for Niki Weiss.
+ *
+ * Answer engines and Google resolve expertise through an entity with
+ * credentials and corroborating links, not through prose on a page. Without
+ * this, "digital thanatologist" has nothing to attach to — the term appears in
+ * body copy but no structured claim connects it to a person.
+ *
+ * sameAs is what makes the claim checkable: each link is an independent
+ * profile that confirms the same identity.
+ */
+const nikiSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${SITE_URL}/company#niki`,
+  name: "Niki Weiss",
+  jobTitle: "Digital Thanatologist",
+  description:
+    "Digital thanatologist and founder of ENDevo, helping individuals, families and employers prepare for end-of-life through legal, financial, physical and digital readiness.",
+  url: `${SITE_URL}/company#niki`,
+  worksFor: {
+    "@type": "Organization",
+    name: "ENDevo",
+    url: SITE_URL,
+  },
+  knowsAbout: [
+    "Digital legacy planning",
+    "End-of-life planning",
+    "Digital estate planning",
+    "Legacy readiness",
+    "Thanatology",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/nikiweiss/",
+    "https://digitallegacypodcast.com/",
+    "https://www.youtube.com/@DigitalLegacyPodcast",
+  ],
+};
+
 const Company = () => {
   const { elementRef: newHeroRef, isVisible: newHeroVisible } =
     useScrollAnimation();
@@ -42,6 +83,7 @@ const Company = () => {
         title="About Us — End-of-Life Planning Mission & Team"
         description="Learn about ENDevo's mission to help people achieve Legacy Readiness. Meet the team behind the digital preparedness platform."
         canonical="/company"
+        jsonLd={nikiSchema}
       />
       <ResponsiveNavbar />
 
