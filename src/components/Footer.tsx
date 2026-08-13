@@ -211,7 +211,7 @@ const Footer = () => {
             <a
               href="https://digitallegacypodcast.com/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Digital Legacy Podcast — Death & Dying in the Digital Age"
               aria-label="Listen to the Digital Legacy Podcast — Death and Dying in the Digital Age"
               className="inline-block"
