@@ -42,5 +42,11 @@ export const blogPostSchema = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "author",
+      title: "Author Name",
+      type: "string",
+      description: "Author's full name for byline and schema.org markup",
+    },
   ],
 };

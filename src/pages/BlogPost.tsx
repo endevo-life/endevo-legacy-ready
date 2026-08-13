@@ -108,6 +108,14 @@ const BlogPost = () => {
     datePublished: post.date,
     description,
     ...(imageUrl ? { image: imageUrl } : {}),
+    ...(post.author
+      ? {
+          author: {
+            "@type": "Person",
+            name: post.author,
+          },
+        }
+      : {}),
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_URL}${canonical}`,

@@ -121,6 +121,12 @@ const VideoEpisode = () => {
     uploadDate: publishedDate,
     embedUrl: `https://www.youtube.com/embed/${videoId}`,
     contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    // Episodes are hosted by Niki Weiss. Naming her rather than the brand ties
+    // the video entity to the same Person that the site's other schema does.
+    author: {
+      "@type": "Person",
+      name: "Niki Weiss",
+    },
     publisher: {
       "@type": "Organization",
       name: "ENDevo",
