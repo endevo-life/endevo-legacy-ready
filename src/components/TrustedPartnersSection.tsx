@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Filter, ArrowRight, ChevronDown } from "lucide-react";
+import { usePartners } from "@/hooks/usePartners";
+import { urlFor } from "@/lib/sanityImageUrl";
 import beliefsIcon from "@/assets/beliefs-icon-new.png";
 import ltCareNavLogo from "@/assets/LTCareNav_logo.png";
 import legalIcon from "@/assets/legal-icon-new.png";
@@ -111,7 +113,33 @@ const TrustedPartnersSection = ({
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
-  const filteredPartners = partners
+  // Partners added in Sanity are merged with the ones defined above rather
+  // than replacing them, so the Hub keeps working when the CMS is slow or
+  // unreachable — the original listings are always in the bundle.
+  const { data: cmsPartners } = usePartners();
+
+  const allPartners = useMemo(() => {
+    const fromCms = (cmsPartners ?? []).map((p) => ({
+      name: p.name,
+      logo: urlFor(p.logo).width(256).height(256).fit("max").url(),
+      tagline: p.tagline,
+      description: p.description,
+      buttonText: p.buttonText,
+      url: p.url,
+      category: p.category,
+    }));
+
+    // A Sanity entry with the same name supersedes the hardcoded one, so a
+    // listing can be corrected in the Studio without waiting for a deploy.
+    const cmsNames = new Set(fromCms.map((p) => p.name.toLowerCase()));
+    const remaining = partners.filter(
+      (p) => !cmsNames.has(p.name.toLowerCase()),
+    );
+
+    return [...remaining, ...fromCms];
+  }, [cmsPartners]);
+
+  const filteredPartners = allPartners
     .filter(
       (partner) =>
         selectedCategory === null || partner.category === selectedCategory,

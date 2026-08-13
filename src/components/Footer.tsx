@@ -1,14 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Youtube,
-  Linkedin,
-  Instagram,
-  Music2,
-  Facebook,
-  Send,
-} from "lucide-react";
+import { Youtube, Linkedin, Instagram, Music2, Facebook } from "lucide-react";
 /**
  * Column heading for the footer.
  *
@@ -23,6 +14,51 @@ const FooterHeading = ({ children }: { children: React.ReactNode }) => (
   <h2 className="w-full font-sans text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white/55 text-center md:text-left mb-1">
     {children}
   </h2>
+);
+
+interface FooterLink {
+  name: string;
+  href: string;
+  title: string;
+}
+
+/**
+ * A labelled column of internal links.
+ *
+ * Stacks vertically from md up, and wraps into a pipe-separated row on mobile
+ * where a tall list of single words costs more height than it earns.
+ */
+const FooterLinkColumn = ({
+  heading,
+  links,
+}: {
+  heading: string;
+  links: FooterLink[];
+}) => (
+  <nav
+    aria-label={heading}
+    className="flex flex-col items-center md:items-start gap-2"
+  >
+    <FooterHeading>{heading}</FooterHeading>
+    <div className="flex flex-wrap justify-center md:flex-col md:justify-start gap-x-1 gap-y-0.5">
+      {links.map((link, index) => (
+        <span key={link.href} className="flex items-center">
+          <Link
+            to={link.href}
+            title={link.title}
+            className="hover:text-brand-orange transition-colors text-sm py-2 md:py-1 inline-block"
+          >
+            {link.name}
+          </Link>
+          {index < links.length - 1 && (
+            <span className="mx-2 text-white/40 md:hidden" aria-hidden="true">
+              |
+            </span>
+          )}
+        </span>
+      ))}
+    </div>
+  </nav>
 );
 
 const Footer = () => {
@@ -64,7 +100,9 @@ const Footer = () => {
   ];
   // title text gives each anchor a descriptive hover/assistive label beyond
   // the short visible word, without padding the visible link out.
-  const navLinks = [
+  // Split into two columns so each is a short, scannable list under its own
+  // heading rather than one undifferentiated stack of links.
+  const exploreLinks = [
     {
       name: "Solutions",
       href: "/solution",
@@ -81,18 +119,58 @@ const Footer = () => {
       title: "Readiness Hub — vetted legacy planning partners",
     },
     {
+      name: "Podcasts",
+      href: "/videos",
+      title: "Digital Legacy Podcast episodes",
+    },
+    {
+      name: "Blog",
+      href: "/blog",
+      title: "Articles on digital legacy and end-of-life planning",
+    },
+  ];
+
+  // Mirrors the "Who We Serve" menu — the three audience pages are among the
+  // most-visited destinations and were previously unreachable from the footer.
+  const audienceLinks = [
+    {
+      name: "For Individuals",
+      href: "/for-individuals",
+      title: "End-of-life planning for individuals and families",
+    },
+    {
+      name: "For Employers",
+      href: "/for-employers",
+      title: "Legacy readiness as an employee benefit",
+    },
+    {
+      name: "For Service Providers",
+      href: "/for-service-providers",
+      title: "Referral network for attorneys and financial advisors",
+    },
+  ];
+
+  const companyLinks = [
+    {
       name: "About Us",
       href: "/company",
       title: "About ENDevo and our end-of-life planning mission",
     },
-  ];
-
-  const legalLinks = [
+    {
+      name: "Contact Us",
+      href: "/contact",
+      title: "Contact the ENDevo team",
+    },
     {
       name: "FAQs",
       href: "/faq",
       title: "End-of-life and digital legacy planning FAQ",
     },
+  ];
+
+  // FAQs sits in the Company column, so it is deliberately absent here — one
+  // destination listed twice in the same footer just dilutes both.
+  const legalLinks = [
     {
       name: "Privacy",
       href: "/legal/privacy-policy",
@@ -118,7 +196,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#08123A] text-white py-6">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-x-8 gap-y-6 mb-6">
+        {/* Brand takes the wider first track; the four link columns need only
+            enough room for one short label each. */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1fr_1fr] gap-x-8 gap-y-6 mb-6 items-start">
           {/* Left Column - Logo & Social */}
           <div className="space-y-4 flex flex-col items-center md:items-start">
             {/* Home link carries a title + aria-label so the anchor has real
@@ -172,35 +252,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation Column */}
-          <nav
-            aria-label="Footer"
-            className="flex flex-col items-center md:items-start gap-2"
-          >
-            <FooterHeading>Explore</FooterHeading>
-            <div className="flex flex-wrap justify-center md:flex-col md:justify-start gap-x-1 gap-y-0.5">
-              {navLinks.map((link, index) => (
-                <span key={link.name} className="flex items-center">
-                  <Link
-                    to={link.href}
-                    title={link.title}
-                    className="hover:text-brand-orange transition-colors text-sm py-2 md:py-1 inline-block"
-                  >
-                    {link.name}
-                  </Link>
-                  {index < navLinks.length - 1 && (
-                    <span className="mx-2 text-white/40 md:hidden">|</span>
-                  )}
-                </span>
-              ))}
-              <Link
-                to="/contact"
-                className="text-white text-sm font-semibold hover:text-brand-orange transition-colors py-2 md:py-1 inline-block"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </nav>
+          <FooterLinkColumn heading="Explore" links={exploreLinks} />
+
+          <FooterLinkColumn heading="Company" links={companyLinks} />
 
           {/* Podcast Column */}
           <div className="space-y-2 flex flex-col items-center md:items-start text-center md:text-left">
@@ -252,38 +306,12 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter Column */}
-          {/* The GHL form is a cross-origin iframe carrying its own internal
-              padding, so the heading is inset by the same amount to sit above
-              the visible input rather than the iframe's outer edge. */}
-          <div className="flex flex-col items-center md:items-stretch md:pl-4">
-            <FooterHeading>Stay Connected</FooterHeading>
-            <iframe
-              className="flex-1"
-              src="https://link.endevo.life/widget/form/BgNNJ8PpyFu2svaaJGTp"
-              style={{
-                width: "100%",
-                border: "none",
-                borderRadius: "3px",
-                // Tall enough for both fields plus the button; any shorter and
-                // the widget renders its own scrollbar inside the footer.
-                minHeight: "210px",
-              }}
-              id="inline-BgNNJ8PpyFu2svaaJGTp"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Website - Stay Connected (Footer Form)"
-              data-height="412"
-              data-layout-iframe-id="inline-BgNNJ8PpyFu2svaaJGTp"
-              data-form-id="BgNNJ8PpyFu2svaaJGTp"
-              title="Website - Stay Connected (Footer Form)"
-            />
-          </div>
+          {/* The newsletter signup previously sat here. It is hidden until
+              there is an actual monthly newsletter to send — see the commented
+              block below the component for the markup to restore. The slot now
+              carries the audience links from the main nav instead, so the most
+              common destinations are reachable from the bottom of any page. */}
+          <FooterLinkColumn heading="For You" links={audienceLinks} />
         </div>
 
         {/* Bottom Bar */}
@@ -323,4 +351,51 @@ const Footer = () => {
     </footer>
   );
 };
+
+/*
+ * Newsletter signup — parked until there is a monthly newsletter to send.
+ *
+ * To restore: drop this column back into the grid above (changing the grid to
+ * six tracks or replacing the "For You" column), and re-add the Dialog imports
+ * from "@/components/ui/dialog".
+ *
+ * It is behind a dialog rather than inline because the GHL form is a
+ * cross-origin iframe needing ~292px for its two fields, submit button and bot
+ * check — more than twice the height of any link column, and not restyleable
+ * from here. The trigger button costs one line instead. Same form id, so
+ * submissions continue to land in the same GHL list.
+ *
+ * <div className="flex flex-col items-center md:items-start">
+ *   <FooterHeading>Stay Connected</FooterHeading>
+ *   <p className="text-sm text-white/90 text-center md:text-left mb-3">
+ *     Monthly legacy-readiness guidance from Niki Weiss.
+ *   </p>
+ *   <Dialog>
+ *     <DialogTrigger asChild>
+ *       <button
+ *         type="button"
+ *         className="bg-brand-orange text-white text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-brand-orange/90 transition-colors"
+ *       >
+ *         Subscribe
+ *       </button>
+ *     </DialogTrigger>
+ *     <DialogContent className="max-w-md p-0 overflow-hidden">
+ *       <DialogHeader className="sr-only">
+ *         <DialogTitle>Stay Connected</DialogTitle>
+ *       </DialogHeader>
+ *       <iframe
+ *         src="https://link.endevo.life/widget/form/BgNNJ8PpyFu2svaaJGTp"
+ *         className="w-full"
+ *         style={{ border: "none", height: "420px" }}
+ *         id="inline-BgNNJ8PpyFu2svaaJGTp"
+ *         data-layout="{'id':'INLINE'}"
+ *         data-form-name="Website - Stay Connected (Footer Form)"
+ *         data-form-id="BgNNJ8PpyFu2svaaJGTp"
+ *         title="Website - Stay Connected (Footer Form)"
+ *       />
+ *     </DialogContent>
+ *   </Dialog>
+ * </div>
+ */
+
 export default Footer;
