@@ -155,6 +155,7 @@ const App = () => (
               element={<CaseStudyHospiceVolunteer />}
             />
             <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route
               path="/legal/terms-of-service"
               element={<TermsOfService />}

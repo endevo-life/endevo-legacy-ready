@@ -106,8 +106,19 @@ const BlogPost = () => {
     "@type": "BlogPosting",
     headline: post.title,
     datePublished: post.date,
+    // Google treats a missing dateModified as "never updated". Falling back to
+    // the publish date is honest — it says the article has not changed since —
+    // and still gives the freshness signal a bare datePublished does not.
+    dateModified: post._updatedAt ?? post.date,
     description,
     ...(imageUrl ? { image: imageUrl } : {}),
+    // Articles with no named author default to Niki, the site's author entity,
+    // rather than emitting no author at all.
+    author: {
+      "@type": "Person",
+      name: post.author ?? "Niki Weiss",
+      url: `${SITE_URL}/company#niki`,
+    },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_URL}${canonical}`,
@@ -116,6 +127,12 @@ const BlogPost = () => {
       "@type": "Organization",
       name: "ENDevo",
       url: SITE_URL,
+      // publisher.logo is a hard requirement for Google article rich results —
+      // author and dateModified alone do not qualify the page.
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/favicon.png`,
+      },
     },
   };
 

@@ -1,5 +1,9 @@
 import { Quote, Star } from "lucide-react";
-import { testimonials, videoTestimonials } from "@/data/testimonialsData";
+import {
+  initialsFor,
+  testimonials,
+  videoTestimonials,
+} from "@/data/testimonialsData";
 
 /**
  * Every published client testimonial.
@@ -72,16 +76,15 @@ const TestimonialsSection = () => {
                 {t.quote}
               </blockquote>
               <div className="mt-5 pt-4 border-t border-border flex items-center gap-3">
-                {t.photo && (
-                  <img
-                    src={t.photo}
-                    alt={t.name}
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                    className="w-10 h-10 rounded-full object-cover flex-shrink-0"
-                  />
-                )}
+                {/* Initials rather than a headshot: the testimonials are the
+                    point, and a grid of stock-looking portraits pulls attention
+                    away from what people actually said. */}
+                <span
+                  aria-hidden="true"
+                  className="w-10 h-10 rounded-full bg-brand-orange/15 text-brand-orange font-semibold text-sm flex items-center justify-center flex-shrink-0"
+                >
+                  {initialsFor(t.name)}
+                </span>
                 <div className="min-w-0">
                   <p className="font-semibold text-sm text-primary truncate">
                     {t.name}

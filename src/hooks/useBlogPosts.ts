@@ -13,13 +13,18 @@ export interface SanityBlogPost {
   title: string;
   slug?: string;
   date: string;
+  /** Byline, also used as the author in the BlogPosting JSON-LD. */
+  author?: string;
+  /** Sanity's own last-edited timestamp, emitted as schema.org dateModified. */
+  _updatedAt?: string;
   externalLink?: string;
   image: SanityImageRef;
   content?: PortableTextBlock[];
 }
 
 const QUERY = `*[_type == "blogPost"] | order(date desc) {
-  _id, title, "slug": slug.current, date, externalLink, image, content
+  _id, _updatedAt, title, "slug": slug.current, date, author, externalLink,
+  image, content
 }`;
 
 export function useBlogPosts() {
@@ -31,7 +36,8 @@ export function useBlogPosts() {
 }
 
 const POST_BY_SLUG_QUERY = `*[_type == "blogPost" && slug.current == $slug][0] {
-  _id, title, "slug": slug.current, date, externalLink, image, content
+  _id, _updatedAt, title, "slug": slug.current, date, author, externalLink,
+  image, content
 }`;
 
 /**
