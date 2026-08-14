@@ -159,3 +159,15 @@ export const videoTestimonials = testimonials.filter((t) => t.videoUrl);
 
 /** The homepage subset. */
 export const featuredTestimonials = testimonials.filter((t) => t.featured);
+
+/**
+ * Initials for the avatar placeholder shown in place of a photo.
+ *
+ * First and last word only, so a middle name does not produce three letters.
+ */
+export function initialsFor(name: string): string {
+  const parts = name.trim().split(/\s+/);
+  const first = parts[0]?.[0] ?? "";
+  const last = parts.length > 1 ? (parts[parts.length - 1][0] ?? "") : "";
+  return (first + last).toUpperCase();
+}

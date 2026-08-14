@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
-import { featuredTestimonials } from "@/data/testimonialsData";
+import { featuredTestimonials, initialsFor } from "@/data/testimonialsData";
 
 /**
  * Homepage testimonial slideshow.
@@ -75,16 +75,13 @@ const FeaturedTestimonialsSection = () => {
                         : t.quote}
                     </blockquote>
                     <figcaption className="mt-5 pt-4 border-t border-border flex items-center gap-3">
-                      {t.photo && (
-                        <img
-                          src={t.photo}
-                          alt={t.name}
-                          width="40"
-                          height="40"
-                          loading="lazy"
-                          className="w-10 h-10 rounded-full object-cover flex-shrink-0"
-                        />
-                      )}
+                      {/* Initials rather than a headshot — see TestimonialsSection. */}
+                      <span
+                        aria-hidden="true"
+                        className="w-10 h-10 rounded-full bg-brand-orange/15 text-brand-orange font-semibold text-sm flex items-center justify-center flex-shrink-0"
+                      >
+                        {initialsFor(t.name)}
+                      </span>
                       <div className="min-w-0">
                         <p className="font-semibold text-sm text-primary truncate">
                           {t.name}
