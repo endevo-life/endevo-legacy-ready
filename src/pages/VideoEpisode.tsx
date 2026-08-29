@@ -20,6 +20,24 @@ function formatDate(iso: string): string {
 }
 
 /**
+ * Returns publishedAt as an RFC 3339 timestamp with an explicit timezone,
+ * which is what schema.org's uploadDate requires. The YouTube API already
+ * hands us a UTC timestamp ("2025-03-14T17:30:00Z"); this normalises the
+ * odd value that arrives date-only or offset-less, since Google Search
+ * Console flags a bare "2025-03-14" as an invalid datetime with no timezone.
+ * Returns undefined when there is no usable date, so the property is
+ * omitted rather than emitted empty.
+ */
+function schemaUploadDate(iso: string | undefined): string | undefined {
+  if (!iso) return undefined;
+  try {
+    return parseISO(iso).toISOString();
+  } catch {
+    return undefined;
+  }
+}
+
+/**
  * Trims a YouTube description to a search-result-sized meta description,
  * cutting at a word boundary like the blog pages do.
  */
@@ -111,6 +129,7 @@ const VideoEpisode = () => {
     `${video.title} — an episode of the Digital Legacy Podcast on end-of-life planning and digital legacy.`,
   );
   const publishedDate = (video.publishedAt ?? "").slice(0, 10);
+  const uploadDate = schemaUploadDate(video.publishedAt);
 
   const videoSchema = {
     "@context": "https://schema.org",
@@ -118,7 +137,7 @@ const VideoEpisode = () => {
     name: video.title,
     description,
     thumbnailUrl: video.thumbnail || undefined,
-    uploadDate: publishedDate,
+    uploadDate,
     embedUrl: `https://www.youtube.com/embed/${videoId}`,
     contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
     // Episodes are hosted by Niki Weiss. Naming her rather than the brand ties
