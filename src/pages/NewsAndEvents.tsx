@@ -2,6 +2,7 @@ import { useState } from "react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import createConferenceImage from "@/assets/create-2026/niki-weiss-four3.png";
 
 const NewsAndEvents = () => {
   const [showConsensusReflection, setShowConsensusReflection] = useState(false);
@@ -12,6 +13,38 @@ const NewsAndEvents = () => {
         title="End-of-Life Planning News & Industry Events"
         description="Stay current on end-of-life and digital legacy planning news — conference appearances, speaking engagements, industry awards, and ENDevo announcements."
         canonical="/news-and-events"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: "Digital Legacy Planning Made Easy — CREATE Conference 2026",
+          description:
+            "Niki Weiss leads a working session on digital legacy planning at CREATE Conference 2026, where attendees start their own Final Playbook one decision at a time.",
+          startDate: "2026-10-16",
+          endDate: "2026-10-18",
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          location: {
+            "@type": "Place",
+            name: "Salt Lake City, Utah",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Salt Lake City",
+              addressRegion: "UT",
+              addressCountry: "US",
+            },
+          },
+          organizer: {
+            "@type": "Organization",
+            name: "She Leads AI",
+            url: "https://sheleadsai.ai/create-2026",
+          },
+          performer: {
+            "@type": "Person",
+            name: "Niki Weiss",
+            url: "https://www.endevo.life/company#niki",
+          },
+          url: "https://sheleadsai.ai/create-niki-weiss/",
+        }}
       />
       <ResponsiveNavbar />
       <main className="flex-1 pt-16">
@@ -42,6 +75,78 @@ const NewsAndEvents = () => {
         <section className="py-20 px-4">
           <div className="container max-w-6xl mx-auto space-y-10">
             {/* Sorted by updatedAt — newest first */}
+
+            {/* Card - CREATE Conference 2026 — updatedAt: 2026-08-31 */}
+            <div className="border-2 border-brand-orange rounded-xl p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 md:items-center">
+                {/* Thumbnail */}
+                <div className="flex-shrink-0 w-full md:w-96">
+                  <img
+                    src={createConferenceImage}
+                    alt="Niki Weiss speaking at CREATE Conference 2026 — Digital Legacy Planning Made Easy, hosted by She Leads AI in Salt Lake City"
+                    width={1440}
+                    height={1080}
+                    loading="eager"
+                    className="w-full h-auto rounded-lg object-cover"
+                  />
+                </div>
+
+                {/* Info */}
+                <div className="flex flex-col justify-between flex-1">
+                  <div>
+                    <span className="inline-block text-xs font-bold uppercase tracking-widest text-brand-orange mb-3">
+                      Upcoming · Speaking
+                    </span>
+
+                    <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                      Digital Legacy Planning Made Easy at CREATE Conference
+                      2026
+                    </h2>
+
+                    <p className="text-muted-foreground mb-4">
+                      Niki Weiss is speaking at{" "}
+                      <span className="font-medium text-foreground">
+                        CREATE Conference 2026
+                      </span>
+                      , She Leads AI&rsquo;s in-person gathering in Salt Lake
+                      City. Her session walks the room through starting a Final
+                      Playbook together, one decision at a time &mdash; treating
+                      end-of-life planning as the project it is, with decisions,
+                      dependencies, and a deliverable.
+                    </p>
+
+                    <p className="text-muted-foreground mb-4">
+                      &ldquo;Someone you love will have to find your passwords
+                      one day. My work is making that day gentler.&rdquo;
+                    </p>
+
+                    <p className="text-sm text-muted-foreground mb-4">
+                      October 16&ndash;18, 2026 · Salt Lake City, Utah · Hosted
+                      by She Leads AI
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href="https://sheleadsai.ai/create-niki-weiss/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-brand-orange text-white px-5 py-2 rounded-md hover:bg-brand-orange/90 transition-colors duration-300 font-medium text-sm w-fit"
+                    >
+                      Niki&rsquo;s Session
+                    </a>
+                    <a
+                      href="https://sheleadsai.ai/create-2026"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-primary text-primary-foreground px-5 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-sm w-fit"
+                    >
+                      Full Program
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Card - Consensus 2026 Miami — updatedAt: 2026-04-29 */}
             <div className="border border-border rounded-xl p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow duration-300">
