@@ -86,6 +86,14 @@ const Solutions = () => {
         },
         {
           "@type": "Question",
+          name: "What is the difference between the checklist app and My Final Playbook?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The checklist app answers a few questions and tells you what you need to handle in each area, with an AI guide you can ask questions. My Final Playbook goes further: a detailed assessment, guidance that teaches you as you go, and a finished Playbook you build and keep. Start with the checklist if you want to know what is ahead of you; choose the Playbook when you want to work through it.",
+          },
+        },
+        {
+          "@type": "Question",
           name: "How is this different from estate planning with a lawyer?",
           acceptedAnswer: {
             "@type": "Answer",
@@ -178,6 +186,28 @@ const Solutions = () => {
                 <p className="text-xs text-muted-foreground text-center mt-3">
                   Start free · $100 when you are ready
                 </p>
+
+                {/*
+                  The lighter door. The agentic app is live today and answers a
+                  different question — "what do I need to handle?" rather than
+                  "walk me through doing it." Offering it here catches the
+                  visitor who is not ready to commit to the full plan, instead
+                  of losing them. Kept visually quiet so it reads as an easier
+                  alternative, not a competing choice.
+                */}
+                <div className="mt-5 pt-5 border-t border-border">
+                  <p className="text-sm text-muted-foreground">
+                    Not ready for the full plan?{" "}
+                    <a
+                      href="https://app.finalplaybook.com/?src=endevo-solutions"
+                      className="text-brand-orange font-medium underline underline-offset-2 hover:opacity-80"
+                    >
+                      Start with a checklist
+                    </a>{" "}
+                    — a few questions, then what to handle in each area, from
+                    $25/month.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -198,9 +228,11 @@ const Solutions = () => {
                 <ul className="space-y-2.5 mb-6 flex-1">
                   {[
                     "Your own private, isolated workspace",
-                    "Every person gets their own plan",
+                    "Every person gets their own guided plan",
+                    "Ongoing support as their circumstances change",
+                    "A video library for your whole team",
+                    "1:1 sessions with our team",
                     "You see participation and topics, never what anyone wrote",
-                    "Advisors: bring it to your clients under your own brand",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-sm">
                       <Check
