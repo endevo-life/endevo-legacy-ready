@@ -18,14 +18,22 @@
  */
 
 import { createClient } from "@sanity/client";
-import { createReadStream, createWriteStream, readFileSync, unlinkSync } from "fs";
+import {
+  createReadStream,
+  createWriteStream,
+  readFileSync,
+  unlinkSync,
+} from "fs";
 import { get as httpsGet } from "https";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
 
 function loadEnvLocal() {
   try {
-    const lines = readFileSync(resolve(process.cwd(), ".env.local"), "utf-8").split("\n");
+    const lines = readFileSync(
+      resolve(process.cwd(), ".env.local"),
+      "utf-8",
+    ).split("\n");
     for (const line of lines) {
       const t = line.trim();
       if (!t || t.startsWith("#")) continue;
@@ -89,7 +97,11 @@ function findVideoId(episodeTitle: string): string | null {
       readFileSync("transcripts/_video-ids.json", "utf8"),
     );
     const norm = (s: string) =>
-      s.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+      s
+        .toLowerCase()
+        .replace(/[^a-z0-9 ]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
     const target = norm(episodeTitle.split("|")[0]);
     const hit = map.find((m) => {
       const t = norm(m.title.split("|")[0]);
@@ -108,7 +120,10 @@ function downloadToTemp(url: string): Promise<string> {
     const go = (u: string, depth = 0) => {
       if (depth > 5) return rej(new Error("too many redirects"));
       httpsGet(u, (r) => {
-        if ((r.statusCode === 301 || r.statusCode === 302) && r.headers.location) {
+        if (
+          (r.statusCode === 301 || r.statusCode === 302) &&
+          r.headers.location
+        ) {
           file.close();
           try {
             unlinkSync(tmp);
@@ -146,8 +161,12 @@ function downloadToTemp(url: string): Promise<string> {
   console.log(`From     : ${draft.episodeTitle.slice(0, 58)}`);
   console.log(`Date     : ${draft.date}`);
   console.log(`Slug     : ${slugify(draft.title)}`);
-  console.log(`Body     : ${paragraphs} paragraphs, ${headings} headings, ${chars} chars`);
-  console.log(`Cover    : ${videoId ? `youtube ${videoId}` : "NONE — needs one manually"}`);
+  console.log(
+    `Body     : ${paragraphs} paragraphs, ${headings} headings, ${chars} chars`,
+  );
+  console.log(
+    `Cover    : ${videoId ? `youtube ${videoId}` : "NONE — needs one manually"}`,
+  );
 
   if (DRY) return;
 
@@ -164,11 +183,20 @@ function downloadToTemp(url: string): Promise<string> {
     // maxresdefault is not generated for every upload; hqdefault always exists.
     for (const q of ["maxresdefault", "hqdefault"]) {
       try {
-        const tmp = await downloadToTemp(`https://img.youtube.com/vi/${videoId}/${q}.jpg`);
-        const asset = await client.assets.upload("image", createReadStream(tmp), {
-          filename: `${videoId}-${q}.jpg`,
-        });
-        doc.image = { _type: "image", asset: { _type: "reference", _ref: asset._id } };
+        const tmp = await downloadToTemp(
+          `https://img.youtube.com/vi/${videoId}/${q}.jpg`,
+        );
+        const asset = await client.assets.upload(
+          "image",
+          createReadStream(tmp),
+          {
+            filename: `${videoId}-${q}.jpg`,
+          },
+        );
+        doc.image = {
+          _type: "image",
+          asset: { _type: "reference", _ref: asset._id },
+        };
         unlinkSync(tmp);
         console.log(`  cover uploaded (${q})`);
         break;
