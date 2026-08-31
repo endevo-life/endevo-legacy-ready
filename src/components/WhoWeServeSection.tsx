@@ -20,7 +20,7 @@ const WhoWeServeSection = () => {
     {
       title: "Individuals",
       description:
-        "Simplifying legacy readiness with AI-powered guidance and compassionate resources.",
+        "Simplifying legacy readiness with structured guidance and compassionate resources.",
       link: "/for-individuals",
       bgImage:
         "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69c6f83a0c63d56d4541b355.jpeg",

@@ -192,17 +192,16 @@ const WWSIndividuals = () => {
                 </h1>
 
                 <p className="text-xl text-brand-orange font-semibold">
-                  Simplify your journey with AI-powered guidance and
+                  Simplify your journey with structured guidance and
                   compassionate resources designed to give you peace of mind.
                 </p>
 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  ENDevo's AI-powered tools help you organize essential
-                  documents, set reminders for important milestones, and provide
-                  compassionate resources every step of the way. We remove the
-                  stress and complexity from legacy planning, so you can focus
-                  on what matters most: your family, your values, and your peace
-                  of mind.
+                  ENDevo helps you organize essential documents, set reminders
+                  for important milestones, and provides compassionate resources
+                  every step of the way. We remove the stress and complexity
+                  from legacy planning, so you can focus on what matters most:
+                  your family, your values, and your peace of mind.
                 </p>
               </div>
             </div>
