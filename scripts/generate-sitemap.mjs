@@ -39,6 +39,12 @@ const ROUTES = [
     priority: "0.9",
   },
   {
+    path: "/solutions",
+    files: ["src/pages/Solutions.tsx"],
+    changefreq: "monthly",
+    priority: "0.9",
+  },
+  {
     path: "/marketplace",
     files: ["src/pages/Marketplace.tsx"],
     changefreq: "weekly",

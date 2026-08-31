@@ -18,6 +18,7 @@ import { initializeConsentMode, trackPageView } from "@/lib/analytics";
 const Index = lazy(() => import("./pages/Index"));
 const LearnAndListen = lazy(() => import("./pages/LearnAndListen"));
 const Solution = lazy(() => import("./pages/Solution"));
+const Solutions = lazy(() => import("./pages/Solutions"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const VideoEpisode = lazy(() => import("./pages/VideoEpisode"));
@@ -115,6 +116,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/learn-and-listen" element={<LearnAndListen />} />
             <Route path="/solution" element={<Solution />} />
+            <Route path="/solutions" element={<Solutions />} />
 
             <Route path="/for-individuals" element={<WWSIndividuals />} />
             <Route
