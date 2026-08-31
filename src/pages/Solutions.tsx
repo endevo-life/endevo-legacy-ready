@@ -86,14 +86,6 @@ const Solutions = () => {
         },
         {
           "@type": "Question",
-          name: "What is the difference between the checklist app and My Final Playbook?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "The checklist app answers a few questions and tells you what you need to handle in each area, with an AI guide you can ask questions. My Final Playbook goes further: a detailed assessment, guidance that teaches you as you go, and a finished Playbook you build and keep. Start with the checklist if you want to know what is ahead of you; choose the Playbook when you want to work through it.",
-          },
-        },
-        {
-          "@type": "Question",
           name: "How is this different from estate planning with a lawyer?",
           acceptedAnswer: {
             "@type": "Answer",
@@ -188,26 +180,24 @@ const Solutions = () => {
                 </p>
 
                 {/*
-                  The lighter door. The agentic app is live today and answers a
-                  different question — "what do I need to handle?" rather than
-                  "walk me through doing it." Offering it here catches the
-                  visitor who is not ready to commit to the full plan, instead
-                  of losing them. Kept visually quiet so it reads as an easier
-                  alternative, not a competing choice.
+                  Deliberately no link to the agentic checklist app here. It is
+                  the mobile product, and it is unlaunched and untested — it was
+                  built in four days and has never been through real use. Two
+                  reasons to keep it off this page:
+
+                  1. Sending web traffic to an untested flow risks the thing our
+                     own beta notes warn about: a bad first run does not lose a
+                     tester, it loses the advisor who sent them and the referral
+                     network they sit inside.
+                  2. A checklist satisfies the appetite. Someone who gets a list
+                     feels handled and never buys the plan that would walk them
+                     through it — so offering it beside the Playbook spends our
+                     cheapest lead to kill our best sale.
+
+                  The app is discovered in the app stores, where someone looking
+                  for a mobile tool is already in a different mindset. The web
+                  page sells one thing.
                 */}
-                <div className="mt-5 pt-5 border-t border-border">
-                  <p className="text-sm text-muted-foreground">
-                    Not ready for the full plan?{" "}
-                    <a
-                      href="https://app.finalplaybook.com/?src=endevo-solutions"
-                      className="text-brand-orange font-medium underline underline-offset-2 hover:opacity-80"
-                    >
-                      Start with a checklist
-                    </a>{" "}
-                    — a few questions, then what to handle in each area, from
-                    $25/month.
-                  </p>
-                </div>
               </div>
             </div>
 
