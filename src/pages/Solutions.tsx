@@ -8,17 +8,47 @@ import { Button } from "@/components/ui/button";
 /**
  * The Solutions fork at /solutions.
  *
- * Two buyers, one product, and both offers priced off the number $100 — which
- * is exactly why they cannot share a page without a hard visual break. An
- * employer seeing a consumer price assumes we are not built for them; an
- * individual seeing an implementation fee leaves. So the fork is the whole
- * page: two cards above the fold, nothing else competing, each routing to the
- * one action that buyer can actually take.
+ * One platform, two buyers, and they cannot share a page without a hard visual
+ * break: an employer seeing a consumer price assumes we are not built for them,
+ * and an individual seeing an implementation fee leaves. So the fork is the
+ * whole page — two cards above the fold, nothing else competing, each routing
+ * to the one action that buyer can actually take.
  *
- * B2B price is deliberately absent (decided: keep room to negotiate per
- * employer). B2C price is present but understated — it is a strength against a
- * $2,000 attorney, but the headline sells the outcome, not the receipt.
+ * The B2B price is deliberately absent, to keep room to negotiate per employer,
+ * and that card carries what the tier actually adds over the individual one:
+ * ongoing support, the video library, and 1:1 sessions. The individual price is
+ * shown against its anchor — see FOUNDING_OFFER below.
  */
+
+/**
+ * Founding-member offer.
+ *
+ * $497 is the price; $100 is a reason to act now. Stated willingness-to-pay
+ * scattered from $50 to $500, which says people were pricing against whatever
+ * they last bought — an app at the low end, an attorney at the high end. The
+ * anchor is what resolves that: beside $497 this is clearly a plan, not a
+ * checklist app, and $100 reads as a decision rather than a discount.
+ *
+ * BOTH LIMITS MUST BE REAL. If someone finds $100 still here in March, the
+ * $497 was never true and neither is anything else we say — and this is a
+ * buyer already deciding who to trust with the hardest paperwork of their life.
+ * So: stop at 200, and honour the date. Whichever lands first ends it.
+ *
+ * No live remaining-count is shown. A hardcoded number goes stale and a stale
+ * count is worse than none; the real figure lives in the CRM.
+ *
+ * TO CLOSE THE OFFER: set FOUNDING_OFFER.active to false. The card falls back
+ * to the full price and the banner disappears — no other edits needed.
+ */
+const FOUNDING_OFFER = {
+  active: true,
+  fullPrice: "$497",
+  price: "$100",
+  seats: 200,
+  /** Machine-readable for schema.org; keep in step with endsLabel. */
+  endsISO: "2027-01-15",
+  endsLabel: "January 15",
+};
 
 /** The five steps, in the visitor's words rather than the product's. */
 const STEPS = [
@@ -61,6 +91,21 @@ const Solutions = () => {
         { "@type": "Audience", audienceType: "Employers and HR teams" },
         { "@type": "Audience", audienceType: "Individuals and families" },
       ],
+      // priceValidUntil carries the same date the page shows, so the offer we
+      // publish to search engines expires exactly when the real one does.
+      ...(FOUNDING_OFFER.active
+        ? {
+            offers: {
+              "@type": "Offer",
+              name: "Founding member pricing",
+              price: FOUNDING_OFFER.price.replace("$", ""),
+              priceCurrency: "USD",
+              priceValidUntil: FOUNDING_OFFER.endsISO,
+              availability: "https://schema.org/LimitedAvailability",
+              url: "https://www.endevo.life/solutions",
+            },
+          }
+        : {}),
     },
     // Answer-engine targets: these are the questions people actually type, and
     // the answers are what an AI assistant will quote back when asked.
@@ -81,7 +126,7 @@ const Solutions = () => {
           name: "How much does ENDevo cost for an individual?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "My Final Playbook is $100 once, which includes a year of access. There is no subscription. You can start the assessment and see your plan before you pay.",
+            text: `My Final Playbook is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. Founding member pricing of ${FOUNDING_OFFER.price} is open to the first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}. You can start the assessment and see your plan before you pay.`,
           },
         },
         {
@@ -134,6 +179,15 @@ const Solutions = () => {
 
         {/* ---------- The fork ---------- */}
         <section className="px-4 -mt-8 pb-20">
+          {FOUNDING_OFFER.active && (
+            <div className="container max-w-5xl mx-auto mb-6">
+              <p className="bg-brand-orange text-white text-center text-sm font-semibold rounded-lg px-5 py-3 shadow-lg">
+                Founding member pricing — {FOUNDING_OFFER.price} instead of{" "}
+                {FOUNDING_OFFER.fullPrice} for the first {FOUNDING_OFFER.seats}{" "}
+                people, through {FOUNDING_OFFER.endsLabel}.
+              </p>
+            </div>
+          )}
           <div className="container max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             {/* B2C */}
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
@@ -165,6 +219,32 @@ const Solutions = () => {
                     </li>
                   ))}
                 </ul>
+                {/*
+                  The anchor does the work here: $497 struck through tells the
+                  visitor what they are getting before the $100 tells them what
+                  they pay. Without it, $100 sets the category — and the
+                  category it sets is "checklist app", which we lose on
+                  features. The strikethrough is marked up with <s> so it is
+                  announced as superseded rather than read as the live price.
+                */}
+                {FOUNDING_OFFER.active && (
+                  <div className="mb-4 text-center">
+                    <div className="flex items-baseline justify-center gap-2.5">
+                      <s className="text-lg text-muted-foreground/70 tabular-nums">
+                        {FOUNDING_OFFER.fullPrice}
+                      </s>
+                      <span className="text-3xl font-bold text-brand-orange tabular-nums">
+                        {FOUNDING_OFFER.price}
+                      </span>
+                      <span className="text-sm text-muted-foreground">
+                        for a year
+                      </span>
+                    </div>
+                    <p className="text-xs font-semibold text-brand-orange-dark mt-1.5 uppercase tracking-wide">
+                      Founding member price
+                    </p>
+                  </div>
+                )}
                 <Button
                   asChild
                   size="lg"
@@ -176,7 +256,9 @@ const Solutions = () => {
                   </a>
                 </Button>
                 <p className="text-xs text-muted-foreground text-center mt-3">
-                  Start free · $100 when you are ready
+                  {FOUNDING_OFFER.active
+                    ? `Start free · first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}`
+                    : `Start free · ${FOUNDING_OFFER.fullPrice} when you are ready`}
                 </p>
 
                 {/*
@@ -321,8 +403,10 @@ const Solutions = () => {
             </h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">
               Leave your name and email and we will send you an invitation to
-              start your Playbook. We are opening access to a small number of
-              people at a time.
+              start your Playbook.{" "}
+              {FOUNDING_OFFER.active
+                ? `The first ${FOUNDING_OFFER.seats} people pay ${FOUNDING_OFFER.price} for the year instead of ${FOUNDING_OFFER.fullPrice}, through ${FOUNDING_OFFER.endsLabel}.`
+                : "We are opening access to a small number of people at a time."}
             </p>
             <div className="bg-card rounded-xl overflow-hidden shadow-2xl text-left">
               <iframe
