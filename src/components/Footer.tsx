@@ -107,7 +107,7 @@ const Footer = () => {
       name: "Start Here",
       href: "/solutions",
       title:
-        "My Final Playbook and Legacy Readiness OS — how it works and pricing",
+        "Legacy Readiness OS for individuals and enterprise — how it works and pricing",
     },
     {
       name: "Pricing",
@@ -152,7 +152,7 @@ const Footer = () => {
     {
       name: "Advisors & Providers",
       href: "/for-service-providers",
-      title: "Bring legacy readiness to your clients",
+      title: "Advisors and planners — request access for your clients",
     },
   ];
 

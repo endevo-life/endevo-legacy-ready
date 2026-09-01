@@ -58,7 +58,7 @@ const ResponsiveNavbar = () => {
         },
         {
           name: "Watch the video",
-          sub: "What is My Final Playbook?",
+          sub: "What is Legacy Readiness OS?",
           href: "/solutions#video",
           icon: Play,
         },
@@ -82,7 +82,7 @@ const ResponsiveNavbar = () => {
         },
         {
           name: "Advisors & Providers",
-          sub: "Bring it to your clients",
+          sub: "Request access for your clients",
           href: "/for-service-providers",
           icon: Handshake,
         },

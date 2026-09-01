@@ -131,7 +131,7 @@ const Solutions = () => {
           name: "How much does ENDevo cost for an individual?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `My Final Playbook is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. Founding member pricing of ${FOUNDING_OFFER.price} is open to the first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}. You can start the assessment and see your plan before you pay.`,
+            text: `Legacy Readiness OS for individuals is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. Founding member pricing of ${FOUNDING_OFFER.price} is open to the first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}. You can start the assessment and see your plan before you pay.`,
           },
         },
         {
@@ -198,9 +198,9 @@ const Solutions = () => {
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
               <div className="bg-brand-orange/10 border-b-2 border-brand-orange px-6 py-4">
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-orange-dark">
-                  For you and your family
+                  Legacy Readiness OS
                 </span>
-                <h2 className="text-2xl font-bold mt-1">My Final Playbook</h2>
+                <h2 className="text-2xl font-bold mt-1">For Individuals</h2>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-muted-foreground mb-5">
@@ -292,9 +292,9 @@ const Solutions = () => {
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
               <div className="bg-brand-navy/5 border-b-2 border-brand-navy px-6 py-4">
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-navy">
-                  For organisations &amp; advisors
+                  Legacy Readiness OS
                 </span>
-                <h2 className="text-2xl font-bold mt-1">Legacy Readiness OS</h2>
+                <h2 className="text-2xl font-bold mt-1">For Enterprise</h2>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-muted-foreground mb-5">
@@ -333,6 +333,18 @@ const Solutions = () => {
                 <p className="text-xs text-muted-foreground text-center mt-3">
                   We onboard a small number of teams at a time
                 </p>
+                {/* Advisors are a third buyer with their own ask: they bring
+                    the platform to clients they already serve. A quiet line
+                    rather than a third card keeps the fork at two doors. */}
+                <p className="text-sm text-muted-foreground text-center mt-4 pt-4 border-t border-border">
+                  Advisor or planner?{" "}
+                  <Link
+                    to="/for-service-providers"
+                    className="text-brand-navy font-medium underline underline-offset-2 hover:opacity-80"
+                  >
+                    Request access for your clients
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
@@ -342,7 +354,7 @@ const Solutions = () => {
         <section id="video" className="bg-muted/30 py-20 px-4 scroll-mt-20">
           <div className="container max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-3 text-balance">
-              What is My Final Playbook?
+              What is Legacy Readiness OS?
             </h2>
             <p className="text-muted-foreground mb-8">
               Two minutes on what you get and how it works.
@@ -360,7 +372,7 @@ const Solutions = () => {
                 preload="metadata"
                 playsInline
                 className="w-full rounded-xl shadow-xl bg-brand-navy aspect-video"
-                aria-label="What is My Final Playbook? A short introduction"
+                aria-label="What is Legacy Readiness OS? A short introduction"
               >
                 <source src={PROMO_VIDEO_URL} type="video/mp4" />
                 Your browser does not support embedded video.
@@ -447,7 +459,7 @@ const Solutions = () => {
                 data-height="679"
                 data-layout-iframe-id="inline-solutions-waitlist"
                 data-form-id="klbP5ZsVH8lpWmnctFP6"
-                title="Get your invite to My Final Playbook"
+                title="Get your invite to Legacy Readiness OS"
               />
             </div>
             <p className="text-sm text-white/60 mt-6 flex items-center justify-center gap-2">
