@@ -144,7 +144,7 @@ const WWSEmployers = () => {
                 </p>
                 <Button
                   className="text-white px-6 py-1.5 text-base font-semibold rounded-full mx-auto font-opensans bg-brand-navy hover:bg-brand-navy-light"
-                  onClick={() => navigate("/solution#about-program")}
+                  onClick={() => navigate("/program#about-program")}
                 >
                   Explore the Program
                 </Button>

@@ -33,13 +33,13 @@ const ROUTES = [
     priority: "1.0",
   },
   {
-    path: "/solution",
+    path: "/program",
     files: ["src/pages/Solution.tsx"],
     changefreq: "monthly",
     priority: "0.9",
   },
   {
-    path: "/solutions",
+    path: "/start-here",
     files: ["src/pages/Solutions.tsx"],
     changefreq: "monthly",
     priority: "0.9",

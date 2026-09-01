@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Youtube, Linkedin, Instagram, Music2, Facebook } from "lucide-react";
+import { socialLinks } from "@/data/socialLinks";
 /**
  * Column heading for the footer.
  *
@@ -23,7 +23,7 @@ interface FooterLink {
 }
 
 /**
- * A labelled column of internal links.
+ * A labeled column of internal links.
  *
  * Stacks vertically from md up, and wraps into a pipe-separated row on mobile
  * where a tall list of single words costs more height than it earns.
@@ -62,71 +62,41 @@ const FooterLinkColumn = ({
 );
 
 const Footer = () => {
-  const socialLinks = [
-    {
-      icon: Youtube,
-      label: "YouTube",
-      href: "https://www.youtube.com/@DigitalLegacyPodcast",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/company/endevo-digitallegacy/posts/?feedView=all",
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      href: "https://www.instagram.com/endevo_digitallegacy/",
-    },
-    {
-      icon: Music2,
-      label: "TikTok",
-      href: "https://www.tiktok.com/@endevo_digitallegacy?_t=ZS-90FW0Oec9NB&_r=1",
-    },
-    {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://www.facebook.com/endevo.digitallegacy/",
-    },
-    {
-      icon: null,
-      imgSrc:
-        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f13b842ff7baef2d1.svg",
-      imgSrcHover:
-        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f9a0c187c9d07fdff.svg",
-      label: "Medium",
-      href: "https://medium.com/@endevo_digitallegacy",
-    },
-  ];
   // title text gives each anchor a descriptive hover/assistive label beyond
   // the short visible word, without padding the visible link out.
   // Split into two columns so each is a short, scannable list under its own
   // heading rather than one undifferentiated stack of links.
   const exploreLinks = [
     {
-      name: "Solutions",
-      href: "/solutions",
-      title: "Employee wellness program for legacy readiness",
+      name: "Start Here",
+      href: "/start-here",
+      title:
+        "Legacy Readiness OS for individuals and enterprise — how it works and pricing",
     },
     {
-      name: "Resources",
+      name: "Pricing",
+      href: "/start-here#pricing",
+      title: "Pricing for individuals and organizations",
+    },
+    {
+      name: "Podcast",
+      href: "/videos",
+      title: "Death and Dying in the Digital Age — episodes",
+    },
+    {
+      name: "Articles",
+      href: "/blog",
+      title: "Articles on digital legacy and end-of-life planning",
+    },
+    {
+      name: "Guides & Tools",
       href: "/resources",
-      title: "Legacy readiness tools, guides and worksheets",
+      title: "Legacy readiness worksheets, guides and the mobile app",
     },
     {
       name: "Readiness Hub",
       href: "/marketplace",
       title: "Readiness Hub — vetted legacy planning partners",
-    },
-    {
-      name: "Podcasts",
-      href: "/videos",
-      title: "Digital Legacy Podcast episodes",
-    },
-    {
-      name: "Blog",
-      href: "/blog",
-      title: "Articles on digital legacy and end-of-life planning",
     },
   ];
 
@@ -134,37 +104,47 @@ const Footer = () => {
   // most-visited destinations and were previously unreachable from the footer.
   const audienceLinks = [
     {
-      name: "For Individuals",
+      name: "Individuals & Families",
       href: "/for-individuals",
       title: "End-of-life planning for individuals and families",
     },
     {
-      name: "For Employers",
+      name: "Employers",
       href: "/for-employers",
       title: "Legacy readiness as an employee benefit",
     },
     {
-      name: "For Service Providers",
+      name: "Advisors & Providers",
       href: "/for-service-providers",
-      title: "Referral network for attorneys and financial advisors",
+      title: "Advisors and planners — request access for your clients",
+    },
+    {
+      name: "Case Studies",
+      href: "/program#case-studies",
+      title: "Real stories of impact from the program",
     },
   ];
 
   const companyLinks = [
     {
-      name: "About Us",
+      name: "About",
       href: "/company",
-      title: "About ENDevo and our end-of-life planning mission",
+      title: "About ENDevo, Niki Weiss and the team",
     },
     {
-      name: "Contact Us",
-      href: "/contact",
-      title: "Contact the ENDevo team",
+      name: "News & Speaking",
+      href: "/news-and-events",
+      title: "Where to find Niki next — events and announcements",
     },
     {
-      name: "FAQs",
+      name: "FAQ",
       href: "/faq",
       title: "End-of-life and digital legacy planning FAQ",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      title: "Contact the ENDevo team",
     },
   ];
 
@@ -252,15 +232,15 @@ const Footer = () => {
             </div>
           </div>
 
-          <FooterLinkColumn heading="Explore" links={exploreLinks} />
+          <FooterLinkColumn heading="Learn" links={exploreLinks} />
 
-          <FooterLinkColumn heading="Company" links={companyLinks} />
+          <FooterLinkColumn heading="About" links={companyLinks} />
 
           {/* Podcast Column */}
           <div className="space-y-2 flex flex-col items-center md:items-start text-center md:text-left">
             <FooterHeading>Podcast</FooterHeading>
             {/* The logo was a bare <img> and passed no link equity. Wrapping it
-                in the same anchor as "Listen Now" makes it a real, labelled
+                in the same anchor as "Listen Now" makes it a real, labeled
                 link to the podcast rather than decoration. */}
             <a
               href="https://digitallegacypodcast.com/"
@@ -311,7 +291,7 @@ const Footer = () => {
               block below the component for the markup to restore. The slot now
               carries the audience links from the main nav instead, so the most
               common destinations are reachable from the bottom of any page. */}
-          <FooterLinkColumn heading="For You" links={audienceLinks} />
+          <FooterLinkColumn heading="Who It's For" links={audienceLinks} />
         </div>
 
         {/* Bottom Bar */}

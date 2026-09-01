@@ -72,7 +72,7 @@ const Solution = () => {
       <SEO
         title="Employee Wellness Program for Legacy Readiness | ENDevo"
         description="A structured employee wellness program for end-of-life and digital legacy planning. Reduce HR burden, close the EAP gap, support staff in hard times."
-        canonical="/solution"
+        canonical="/program"
       />
       <ResponsiveNavbar />
 
@@ -399,6 +399,25 @@ const Solution = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {/*
+              The section explained the program at length and then simply
+              ended — no next step for a reader who was persuaded. Two, in
+              the order an enterprise reader decides: talk to a person, or
+              check the number first.
+            */}
+            <div className="flex flex-wrap justify-center gap-4 mt-12">
+              <a href="/contact">
+                <button className="bg-brand-navy hover:bg-brand-navy-light text-white font-semibold px-8 py-3 rounded-md transition-colors duration-300">
+                  Book a call with our team
+                </button>
+              </a>
+              <a href="/start-here#pricing">
+                <button className="border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-semibold px-8 py-3 rounded-md transition-colors duration-300">
+                  See pricing &amp; start
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

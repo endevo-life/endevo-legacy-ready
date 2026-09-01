@@ -1,6 +1,41 @@
 {
   "redirects": [
     {
+      "source": "/solution",
+      "destination": "/program",
+      "permanent": true
+    },
+    {
+      "source": "/solutions",
+      "destination": "/start-here",
+      "permanent": true
+    },
+    {
+      "source": "/playbook",
+      "destination": "/start-here",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/start-here#pricing",
+      "permanent": true
+    },
+    {
+      "source": "/podcast",
+      "destination": "/videos",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/company",
+      "permanent": true
+    },
+    {
+      "source": "/readiness-hub",
+      "destination": "/marketplace",
+      "permanent": true
+    },
+    {
       "source": "/wws-employers",
       "destination": "/for-employers",
       "permanent": true
