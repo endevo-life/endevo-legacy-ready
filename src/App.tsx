@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import AIChatBot from "@/components/AIChatBot";
 import CookieBanner from "@/components/CookieBanner";
+import GhlFormTracker from "@/components/GhlFormTracker";
 import { initializeConsentMode, trackPageView } from "@/lib/analytics";
 
 // Route-level code splitting — each page loads only when visited
@@ -108,6 +109,7 @@ const App = () => (
       <BrowserRouter>
         <AppInitializer />
         <ScrollToHash />
+        <GhlFormTracker />
         <Suspense
           fallback={
             <div className="min-h-screen flex items-center justify-center">
