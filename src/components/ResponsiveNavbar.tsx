@@ -20,6 +20,11 @@ import {
   Play,
   Mic,
   Store,
+  Smartphone,
+  MessageSquare,
+  Info,
+  Heart,
+  Sparkles,
 } from "lucide-react";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,8 +42,9 @@ const ResponsiveNavbar = () => {
   };
   // Five menus, built around the questions a first-time visitor actually
   // asks — what is this, is it for me, how much, can I trust you, how do I
-  // start — rather than the org chart. Labels are the words people search
-  // ("Pricing", "Podcast", "FAQ"), and nothing sits deeper than two clicks.
+  // start — rather than the org chart. Every section the old six-menu nav
+  // reached is still reachable here; it has moved under the question it
+  // answers. Nothing sits deeper than two clicks.
   const menuItems = [
     {
       name: "Start Here",
@@ -52,9 +58,21 @@ const ResponsiveNavbar = () => {
         },
         {
           name: "Pricing",
-          sub: "For you, or for your team",
+          sub: "For individuals, or for your team",
           href: "/solutions#pricing",
           icon: BadgeDollarSign,
+        },
+        {
+          name: "The full program",
+          sub: "Legacy readiness for every employee, in depth",
+          href: "/solution#about-program",
+          icon: BookOpen,
+        },
+        {
+          name: "Mobile app",
+          sub: "My Final Playbook on your phone",
+          href: "/resources#mobile-app",
+          icon: Smartphone,
         },
         {
           name: "Watch the video",
@@ -86,6 +104,12 @@ const ResponsiveNavbar = () => {
           href: "/for-service-providers",
           icon: Handshake,
         },
+        {
+          name: "Case Studies",
+          sub: "Real stories of impact",
+          href: "/solution#case-studies",
+          icon: ClipboardList,
+        },
       ],
     },
     {
@@ -112,9 +136,15 @@ const ResponsiveNavbar = () => {
         },
         {
           name: "Guides & Tools",
-          sub: "Worksheets and the mobile app",
+          sub: "Worksheets, peace-of-mind resources",
           href: "/resources",
-          icon: BookOpen,
+          icon: FileText,
+        },
+        {
+          name: "Client Stories",
+          sub: "In their own words",
+          href: "/resources#client-stories",
+          icon: MessageSquare,
         },
         {
           name: "Readiness Hub",
@@ -129,6 +159,12 @@ const ResponsiveNavbar = () => {
       href: "/company",
       submenu: [
         {
+          name: "About ENDevo",
+          sub: "Our mission and story",
+          href: "/company#about",
+          icon: Info,
+        },
+        {
           name: "Niki Weiss",
           sub: "Founder and thanatologist",
           href: "/company#niki",
@@ -141,10 +177,16 @@ const ResponsiveNavbar = () => {
           icon: UsersRound,
         },
         {
-          name: "Client Stories",
-          sub: "Case studies and testimonials",
-          href: "/solution#case-studies",
-          icon: ClipboardList,
+          name: "Our Values",
+          sub: "What we stand for",
+          href: "/company#values",
+          icon: Heart,
+        },
+        {
+          name: "Our Edge",
+          sub: "What sets ENDevo apart",
+          href: "/solution#our-edge",
+          icon: Sparkles,
         },
         {
           name: "News & Speaking",

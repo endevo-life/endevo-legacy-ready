@@ -154,6 +154,11 @@ const Footer = () => {
       href: "/for-service-providers",
       title: "Advisors and planners — request access for your clients",
     },
+    {
+      name: "Case Studies",
+      href: "/solution#case-studies",
+      title: "Real stories of impact from the program",
+    },
   ];
 
   const companyLinks = [
