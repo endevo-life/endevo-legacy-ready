@@ -23,14 +23,14 @@ import { Button } from "@/components/ui/button";
 /**
  * Founding-member offer.
  *
- * $497 is the price; $100 is a reason to act now. Stated willingness-to-pay
+ * $500 is the price; $100 is a reason to act now. Stated willingness-to-pay
  * scattered from $50 to $500, which says people were pricing against whatever
  * they last bought — an app at the low end, an attorney at the high end. The
- * anchor is what resolves that: beside $497 this is clearly a plan, not a
+ * anchor is what resolves that: beside $500 this is clearly a plan, not a
  * checklist app, and $100 reads as a decision rather than a discount.
  *
  * BOTH LIMITS MUST BE REAL. If someone finds $100 still here in March, the
- * $497 was never true and neither is anything else we say — and this is a
+ * $500 was never true and neither is anything else we say — and this is a
  * buyer already deciding who to trust with the hardest paperwork of their life.
  * So: stop at 200, and honour the date. Whichever lands first ends it.
  *
@@ -42,7 +42,7 @@ import { Button } from "@/components/ui/button";
  */
 const FOUNDING_OFFER = {
   active: true,
-  fullPrice: "$497",
+  fullPrice: "$500",
   price: "$100",
   seats: 200,
   /** Machine-readable for schema.org; keep in step with endsLabel. */
@@ -225,7 +225,7 @@ const Solutions = () => {
                   ))}
                 </ul>
                 {/*
-                  The anchor does the work here: $497 struck through tells the
+                  The anchor does the work here: $500 struck through tells the
                   visitor what they are getting before the $100 tells them what
                   they pay. Without it, $100 sets the category — and the
                   category it sets is "checklist app", which we lose on
