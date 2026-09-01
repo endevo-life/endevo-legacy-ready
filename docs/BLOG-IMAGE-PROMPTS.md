@@ -20,8 +20,8 @@ against a digital keypad lock. Editorial illustration, not photography.
 
 The negative list matters more than usual here. Image models reach for funeral
 clichés the moment "death" or "estate" appears in a prompt, and this audience
-is emotionally sensitive by definition. Every cover should read as *life
-admin*, not bereavement.
+is emotionally sensitive by definition. Every cover should read as _life
+admin_, not bereavement.
 
 **Consistency:** run all covers in one session with the same style suffix, and
 reuse the seed if the tool exposes one. Target 1376×768 or 1920×1080.
@@ -38,8 +38,8 @@ reuse the seed if the tool exposes one. Target 1376×768 or 1920×1080.
 > points, calm and still, as if the figure has outlived the page. The paper is
 > dim and matte; the figure is the only light source.
 
-*The article's thesis in one frame: the inert paper document versus the living
-entity that knows what you meant.*
+_The article's thesis in one frame: the inert paper document versus the living
+entity that knows what you meant._
 
 ### 2. It Was Never Procrastination. It Was Protection. — identity grief episode
 
@@ -49,9 +49,9 @@ entity that knows what you meant.*
 > Warm domestic light, a sense of quiet, the person's posture calm and
 > thoughtful rather than afraid.
 
-*The core question of the episode: "who am I when I stop being a wife, a
+_The core question of the episode: "who am I when I stop being a wife, a
 mother, a caregiver." Keep the mood tender — if it reads as a ghost story,
-regenerate.*
+regenerate._
 
 ### 3. The Laughing Heir Problem — childfree estate episode
 
@@ -61,8 +61,8 @@ regenerate.*
 > frames, past all of them, ending at one small distant frame in the far
 > corner containing the silhouette of a stranger. Museum-like lighting.
 
-*The intestacy chart made visible: the court's decision tree walking past
-everyone you knew to reach someone you didn't.*
+_The intestacy chart made visible: the court's decision tree walking past
+everyone you knew to reach someone you didn't._
 
 ---
 

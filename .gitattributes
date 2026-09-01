@@ -1,0 +1,4 @@
+# Normalize line endings so git stores LF and checkouts get LF everywhere.
+# Without this, Windows checkouts arrive CRLF and a local `prettier --check .`
+# drowns real formatting problems in ~150 false positives.
+* text=auto eol=lf

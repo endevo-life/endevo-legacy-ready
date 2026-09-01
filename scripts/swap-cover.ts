@@ -7,7 +7,10 @@ import { createReadStream, readFileSync } from "fs";
 import { resolve } from "path";
 
 function loadEnvLocal() {
-  const lines = readFileSync(resolve(process.cwd(), ".env.local"), "utf-8").split("\n");
+  const lines = readFileSync(
+    resolve(process.cwd(), ".env.local"),
+    "utf-8",
+  ).split("\n");
   for (const line of lines) {
     const t = line.trim();
     if (!t || t.startsWith("#")) continue;
@@ -44,14 +47,22 @@ const client = createClient({
   }
   console.log(`Post : ${post.title}`);
 
-  const asset = await client.assets.upload("image", createReadStream(imagePath), {
-    filename: `${slug}-cover.jpeg`,
-  });
-  console.log(`Asset: ${asset._id} (${asset.metadata?.dimensions?.width}x${asset.metadata?.dimensions?.height})`);
+  const asset = await client.assets.upload(
+    "image",
+    createReadStream(imagePath),
+    {
+      filename: `${slug}-cover.jpeg`,
+    },
+  );
+  console.log(
+    `Asset: ${asset._id} (${asset.metadata?.dimensions?.width}x${asset.metadata?.dimensions?.height})`,
+  );
 
   await client
     .patch(post._id)
-    .set({ image: { _type: "image", asset: { _type: "reference", _ref: asset._id } } })
+    .set({
+      image: { _type: "image", asset: { _type: "reference", _ref: asset._id } },
+    })
     .commit();
   console.log("Cover replaced.");
 })();
