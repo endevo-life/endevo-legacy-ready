@@ -156,7 +156,7 @@ const Footer = () => {
     },
     {
       name: "Case Studies",
-      href: "/solution#case-studies",
+      href: "/program#case-studies",
       title: "Real stories of impact from the program",
     },
   ];

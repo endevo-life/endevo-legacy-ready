@@ -65,7 +65,7 @@ const ResponsiveNavbar = () => {
         {
           name: "The full program",
           sub: "Legacy readiness for every employee, in depth",
-          href: "/solution#about-program",
+          href: "/program#about-program",
           icon: BookOpen,
         },
         {
@@ -107,7 +107,7 @@ const ResponsiveNavbar = () => {
         {
           name: "Case Studies",
           sub: "Real stories of impact",
-          href: "/solution#case-studies",
+          href: "/program#case-studies",
           icon: ClipboardList,
         },
       ],
@@ -185,7 +185,7 @@ const ResponsiveNavbar = () => {
         {
           name: "Our Edge",
           sub: "What sets ENDevo apart",
-          href: "/solution#our-edge",
+          href: "/program#our-edge",
           icon: Sparkles,
         },
         {

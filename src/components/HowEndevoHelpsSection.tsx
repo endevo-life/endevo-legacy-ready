@@ -59,7 +59,7 @@ const HowEndevoHelpsSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Link to="/solution">
+          <Link to="/program">
             <Button
               className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold px-8 py-3 text-base rounded-full group"
               style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}

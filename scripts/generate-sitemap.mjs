@@ -33,7 +33,7 @@ const ROUTES = [
     priority: "1.0",
   },
   {
-    path: "/solution",
+    path: "/program",
     files: ["src/pages/Solution.tsx"],
     changefreq: "monthly",
     priority: "0.9",

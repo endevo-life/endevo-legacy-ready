@@ -72,7 +72,7 @@ const Solution = () => {
       <SEO
         title="Employee Wellness Program for Legacy Readiness | ENDevo"
         description="A structured employee wellness program for end-of-life and digital legacy planning. Reduce HR burden, close the EAP gap, support staff in hard times."
-        canonical="/solution"
+        canonical="/program"
       />
       <ResponsiveNavbar />
 

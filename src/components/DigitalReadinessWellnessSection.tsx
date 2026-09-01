@@ -111,7 +111,7 @@ const DigitalReadinessWellnessSection = () => {
             Request Program Info
           </Button>
           <Button
-            onClick={() => navigate("/solution#about-program")}
+            onClick={() => navigate("/program#about-program")}
             variant="outline"
             className="px-8 py-3 text-base font-semibold rounded-full border-brand-orange text-brand-orange hover:bg-brand-orange/10 hover:text-brand-orange"
             style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}

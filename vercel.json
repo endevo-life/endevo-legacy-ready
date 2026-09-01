@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/solution",
+      "destination": "/program",
+      "permanent": true
+    },
+    {
       "source": "/playbook",
       "destination": "/solutions",
       "permanent": true
