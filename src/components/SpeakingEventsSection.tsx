@@ -9,7 +9,7 @@ import {
   ChevronRight,
   MapPin,
 } from "lucide-react";
-import createSquare from "@/assets/create-2026/niki-weiss-square.png";
+import createSquare from "@/assets/create-2026/niki-weiss-square.jpg";
 
 /**
  * Homepage carousel of Niki's speaking appearances.

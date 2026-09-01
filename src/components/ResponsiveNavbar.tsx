@@ -44,7 +44,7 @@ const ResponsiveNavbar = () => {
   const menuItems = [
     {
       name: "Solutions",
-      href: "/solution",
+      href: "/solutions",
       submenu: [
         {
           name: "How It Works",

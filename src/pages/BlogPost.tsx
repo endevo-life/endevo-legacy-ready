@@ -186,6 +186,24 @@ const BlogPost = () => {
           </div>
         </article>
 
+        {/*
+          One quiet line, not a capture widget. Readers of these articles are
+          often anxious or grieving; a popup would be the wrong instrument.
+          A single sentence offering a next step, and nothing more.
+        */}
+        <aside className="mt-12 pt-8 border-t border-gray-200 text-center">
+          <p className="text-gray-700 mb-3">
+            If this raised questions about your own plan, here is where to
+            start.
+          </p>
+          <Link
+            to="/solutions"
+            className="inline-block text-orange-500 font-medium underline underline-offset-4 hover:opacity-80"
+          >
+            Know exactly what you need to do, and in what order →
+          </Link>
+        </aside>
+
         {post.externalLink && (
           <p className="mt-10 pt-6 border-t border-gray-200 text-sm text-muted-foreground">
             This article was also published{" "}

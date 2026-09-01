@@ -105,7 +105,7 @@ const Footer = () => {
   const exploreLinks = [
     {
       name: "Solutions",
-      href: "/solution",
+      href: "/solutions",
       title: "Employee wellness program for legacy readiness",
     },
     {
