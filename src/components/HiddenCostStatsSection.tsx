@@ -84,7 +84,7 @@ const HiddenCostStatsSection = () => {
           }}
         >
           <Button
-            onClick={() => navigate("/solution")}
+            onClick={() => navigate("/program")}
             variant="outline"
             className="border-2 border-brand-navy text-brand-navy bg-transparent hover:bg-brand-navy/10 px-6 py-1.5 rounded-full text-base font-semibold"
             style={{

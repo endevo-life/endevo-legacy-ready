@@ -23,7 +23,7 @@ const CaseStudyMedicalCoverage = () => {
       <section className="bg-[#08123A] pt-32 pb-16 px-4">
         <div className="container max-w-3xl mx-auto">
           <Link
-            to="/solution#case-studies"
+            to="/program#case-studies"
             className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-8 transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -333,7 +333,7 @@ const CaseStudyMedicalCoverage = () => {
       <div className="pb-16 px-4">
         <div className="container max-w-7xl mx-auto">
           <Link
-            to="/solution#case-studies"
+            to="/program#case-studies"
             className="inline-flex items-center gap-2 text-brand-orange hover:underline font-semibold text-sm"
             style={{ fontFamily: "'Open Sans', sans-serif" }}
           >

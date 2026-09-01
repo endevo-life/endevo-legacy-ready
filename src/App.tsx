@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import AIChatBot from "@/components/AIChatBot";
 import CookieBanner from "@/components/CookieBanner";
+import GhlFormTracker from "@/components/GhlFormTracker";
 import { initializeConsentMode, trackPageView } from "@/lib/analytics";
 
 // Route-level code splitting — each page loads only when visited
@@ -85,6 +86,20 @@ const ScrollToHash = () => {
   return null;
 };
 
+// /solution → /program, keeping the fragment so old #case-studies links land
+// on the right section.
+const ProgramRedirect = () => {
+  const { search, hash } = useLocation();
+  return <Navigate to={`/program${search}${hash}`} replace />;
+};
+
+// /playbook → /solutions, keeping ?src= and any #anchor intact. A bare
+// <Navigate> would drop the query string and lose channel attribution.
+const PlaybookRedirect = () => {
+  const { search, hash } = useLocation();
+  return <Navigate to={`/solutions${search}${hash}`} replace />;
+};
+
 // Initialize consent mode on app load
 const AppInitializer = () => {
   useEffect(() => {
@@ -101,6 +116,7 @@ const App = () => (
       <BrowserRouter>
         <AppInitializer />
         <ScrollToHash />
+        <GhlFormTracker />
         <Suspense
           fallback={
             <div className="min-h-screen flex items-center justify-center">
@@ -115,8 +131,32 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/learn-and-listen" element={<LearnAndListen />} />
-            <Route path="/solution" element={<Solution />} />
+            <Route path="/program" element={<Solution />} />
+            {/* The program deep-dive lived at /solution, one letter from the
+                /solutions fork — a near-duplicate URL that read as a mistake.
+                Old links keep working, fragments (#case-studies) included. */}
+            <Route path="/solution" element={<ProgramRedirect />} />
             <Route path="/solutions" element={<Solutions />} />
+            {/* Sayable alias for the offer page — "endevo dot life slash
+                playbook" on the podcast. Vercel 301s it in production; this
+                route makes it work on localhost and as an in-app link. */}
+            <Route path="/playbook" element={<PlaybookRedirect />} />
+            {/* Readable aliases: the URL a person would guess or type reads
+                as what the page is, then 301s (Vercel) / redirects (in-app)
+                to the canonical path that already holds the ranking equity. */}
+            <Route
+              path="/pricing"
+              element={<Navigate to="/solutions#pricing" replace />}
+            />
+            <Route
+              path="/podcast"
+              element={<Navigate to="/videos" replace />}
+            />
+            <Route path="/about" element={<Navigate to="/company" replace />} />
+            <Route
+              path="/readiness-hub"
+              element={<Navigate to="/marketplace" replace />}
+            />
 
             <Route path="/for-individuals" element={<WWSIndividuals />} />
             <Route

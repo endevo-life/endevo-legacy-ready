@@ -19,7 +19,7 @@ const PORT = 3033;
 
 const STATIC_ROUTES = [
   "/",
-  "/solution",
+  "/program",
   "/solutions",
   "/marketplace",
   "/trusted-experts",

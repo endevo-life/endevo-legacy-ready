@@ -104,29 +104,35 @@ const Footer = () => {
   // heading rather than one undifferentiated stack of links.
   const exploreLinks = [
     {
-      name: "Solutions",
+      name: "Start Here",
       href: "/solutions",
-      title: "Employee wellness program for legacy readiness",
+      title:
+        "Legacy Readiness OS for individuals and enterprise — how it works and pricing",
     },
     {
-      name: "Resources",
+      name: "Pricing",
+      href: "/solutions#pricing",
+      title: "Pricing for individuals and organisations",
+    },
+    {
+      name: "Podcast",
+      href: "/videos",
+      title: "Death and Dying in the Digital Age — episodes",
+    },
+    {
+      name: "Articles",
+      href: "/blog",
+      title: "Articles on digital legacy and end-of-life planning",
+    },
+    {
+      name: "Guides & Tools",
       href: "/resources",
-      title: "Legacy readiness tools, guides and worksheets",
+      title: "Legacy readiness worksheets, guides and the mobile app",
     },
     {
       name: "Readiness Hub",
       href: "/marketplace",
       title: "Readiness Hub — vetted legacy planning partners",
-    },
-    {
-      name: "Podcasts",
-      href: "/videos",
-      title: "Digital Legacy Podcast episodes",
-    },
-    {
-      name: "Blog",
-      href: "/blog",
-      title: "Articles on digital legacy and end-of-life planning",
     },
   ];
 
@@ -134,37 +140,47 @@ const Footer = () => {
   // most-visited destinations and were previously unreachable from the footer.
   const audienceLinks = [
     {
-      name: "For Individuals",
+      name: "Individuals & Families",
       href: "/for-individuals",
       title: "End-of-life planning for individuals and families",
     },
     {
-      name: "For Employers",
+      name: "Employers",
       href: "/for-employers",
       title: "Legacy readiness as an employee benefit",
     },
     {
-      name: "For Service Providers",
+      name: "Advisors & Providers",
       href: "/for-service-providers",
-      title: "Referral network for attorneys and financial advisors",
+      title: "Advisors and planners — request access for your clients",
+    },
+    {
+      name: "Case Studies",
+      href: "/program#case-studies",
+      title: "Real stories of impact from the program",
     },
   ];
 
   const companyLinks = [
     {
-      name: "About Us",
+      name: "About",
       href: "/company",
-      title: "About ENDevo and our end-of-life planning mission",
+      title: "About ENDevo, Niki Weiss and the team",
     },
     {
-      name: "Contact Us",
-      href: "/contact",
-      title: "Contact the ENDevo team",
+      name: "News & Speaking",
+      href: "/news-and-events",
+      title: "Where to find Niki next — events and announcements",
     },
     {
-      name: "FAQs",
+      name: "FAQ",
       href: "/faq",
       title: "End-of-life and digital legacy planning FAQ",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      title: "Contact the ENDevo team",
     },
   ];
 
@@ -252,9 +268,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <FooterLinkColumn heading="Explore" links={exploreLinks} />
+          <FooterLinkColumn heading="Learn" links={exploreLinks} />
 
-          <FooterLinkColumn heading="Company" links={companyLinks} />
+          <FooterLinkColumn heading="About" links={companyLinks} />
 
           {/* Podcast Column */}
           <div className="space-y-2 flex flex-col items-center md:items-start text-center md:text-left">
@@ -311,7 +327,7 @@ const Footer = () => {
               block below the component for the markup to restore. The slot now
               carries the audience links from the main nav instead, so the most
               common destinations are reachable from the bottom of any page. */}
-          <FooterLinkColumn heading="For You" links={audienceLinks} />
+          <FooterLinkColumn heading="Who It's For" links={audienceLinks} />
         </div>
 
         {/* Bottom Bar */}

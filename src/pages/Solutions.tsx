@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Lock, Play } from "lucide-react";
+import { ArrowRight, Check, Lock } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -23,14 +23,14 @@ import { Button } from "@/components/ui/button";
 /**
  * Founding-member offer.
  *
- * $497 is the price; $100 is a reason to act now. Stated willingness-to-pay
+ * $500 is the price; $100 is a reason to act now. Stated willingness-to-pay
  * scattered from $50 to $500, which says people were pricing against whatever
  * they last bought — an app at the low end, an attorney at the high end. The
- * anchor is what resolves that: beside $497 this is clearly a plan, not a
+ * anchor is what resolves that: beside $500 this is clearly a plan, not a
  * checklist app, and $100 reads as a decision rather than a discount.
  *
  * BOTH LIMITS MUST BE REAL. If someone finds $100 still here in March, the
- * $497 was never true and neither is anything else we say — and this is a
+ * $500 was never true and neither is anything else we say — and this is a
  * buyer already deciding who to trust with the hardest paperwork of their life.
  * So: stop at 200, and honour the date. Whichever lands first ends it.
  *
@@ -42,13 +42,18 @@ import { Button } from "@/components/ui/button";
  */
 const FOUNDING_OFFER = {
   active: true,
-  fullPrice: "$497",
+  fullPrice: "$500",
   price: "$100",
   seats: 200,
   /** Machine-readable for schema.org; keep in step with endsLabel. */
   endsISO: "2027-01-15",
   endsLabel: "January 15",
 };
+
+/** Hosted promo video; unset until the file has a home outside the repo. */
+const PROMO_VIDEO_URL = import.meta.env.VITE_PROMO_VIDEO_URL as
+  | string
+  | undefined;
 
 /** The five steps, in the visitor's words rather than the product's. */
 const STEPS = [
@@ -126,7 +131,7 @@ const Solutions = () => {
           name: "How much does ENDevo cost for an individual?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `My Final Playbook is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. Founding member pricing of ${FOUNDING_OFFER.price} is open to the first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}. You can start the assessment and see your plan before you pay.`,
+            text: `Legacy Readiness OS for individuals is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. Founding member pricing of ${FOUNDING_OFFER.price} is open to the first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}. You can start the assessment and see your plan before you pay.`,
           },
         },
         {
@@ -178,7 +183,7 @@ const Solutions = () => {
         </section>
 
         {/* ---------- The fork ---------- */}
-        <section className="px-4 -mt-8 pb-20">
+        <section id="pricing" className="px-4 -mt-8 pb-20 scroll-mt-24">
           {FOUNDING_OFFER.active && (
             <div className="container max-w-5xl mx-auto mb-6">
               <p className="bg-brand-orange text-white text-center text-sm font-semibold rounded-lg px-5 py-3 shadow-lg">
@@ -193,9 +198,9 @@ const Solutions = () => {
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
               <div className="bg-brand-orange/10 border-b-2 border-brand-orange px-6 py-4">
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-orange-dark">
-                  For you and your family
+                  Legacy Readiness OS
                 </span>
-                <h2 className="text-2xl font-bold mt-1">My Final Playbook</h2>
+                <h2 className="text-2xl font-bold mt-1">For Individuals</h2>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-muted-foreground mb-5">
@@ -220,7 +225,7 @@ const Solutions = () => {
                   ))}
                 </ul>
                 {/*
-                  The anchor does the work here: $497 struck through tells the
+                  The anchor does the work here: $500 struck through tells the
                   visitor what they are getting before the $100 tells them what
                   they pay. Without it, $100 sets the category — and the
                   category it sets is "checklist app", which we lose on
@@ -287,9 +292,9 @@ const Solutions = () => {
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
               <div className="bg-brand-navy/5 border-b-2 border-brand-navy px-6 py-4">
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-navy">
-                  For organisations &amp; advisors
+                  Legacy Readiness OS
                 </span>
-                <h2 className="text-2xl font-bold mt-1">Legacy Readiness OS</h2>
+                <h2 className="text-2xl font-bold mt-1">For Enterprise</h2>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-muted-foreground mb-5">
@@ -328,32 +333,60 @@ const Solutions = () => {
                 <p className="text-xs text-muted-foreground text-center mt-3">
                   We onboard a small number of teams at a time
                 </p>
+                {/* Advisors are a third buyer with their own ask: they bring
+                    the platform to clients they already serve. A quiet line
+                    rather than a third card keeps the fork at two doors. */}
+                <p className="text-sm text-muted-foreground text-center mt-4 pt-4 border-t border-border">
+                  Advisor or planner?{" "}
+                  <Link
+                    to="/for-service-providers"
+                    className="text-brand-navy font-medium underline underline-offset-2 hover:opacity-80"
+                  >
+                    Request access for your clients
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* ---------- Promotional video ---------- */}
-        <section className="bg-muted/30 py-20 px-4">
+        <section id="video" className="bg-muted/30 py-20 px-4 scroll-mt-20">
           <div className="container max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-3 text-balance">
-              What is My Final Playbook?
+              What is Legacy Readiness OS?
             </h2>
             <p className="text-muted-foreground mb-8">
               Two minutes on what you get and how it works.
             </p>
-            <div className="relative rounded-xl overflow-hidden shadow-xl bg-brand-navy aspect-video flex items-center justify-center">
-              {/* Replace with the finished promo embed. */}
-              <div className="text-center text-white/70 px-6">
-                <Play className="h-12 w-12 mx-auto mb-3" aria-hidden="true" />
-                <p className="text-sm">Promotional video — coming soon</p>
+            {/*
+              The video URL comes from VITE_PROMO_VIDEO_URL so the file never
+              enters the repo. Locally it points at a gitignored copy for
+              demos; in production it stays unset — and the slot shows a calm
+              placeholder — until the file is hosted (GHL media library or
+              YouTube) and the variable is set in Vercel.
+            */}
+            {PROMO_VIDEO_URL ? (
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full rounded-xl shadow-xl bg-brand-navy aspect-video"
+                aria-label="What is Legacy Readiness OS? A short introduction"
+              >
+                <source src={PROMO_VIDEO_URL} type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+            ) : (
+              <div className="relative rounded-xl overflow-hidden shadow-xl bg-brand-navy aspect-video flex items-center justify-center">
+                <p className="text-sm text-white/70 px-6">Video coming soon</p>
               </div>
-            </div>
+            )}
           </div>
         </section>
 
         {/* ---------- How it works ---------- */}
-        <section className="py-20 px-4">
+        <section id="how-it-works" className="py-20 px-4 scroll-mt-20">
           <div className="container max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-3 text-balance">
@@ -426,7 +459,7 @@ const Solutions = () => {
                 data-height="679"
                 data-layout-iframe-id="inline-solutions-waitlist"
                 data-form-id="klbP5ZsVH8lpWmnctFP6"
-                title="Get your invite to My Final Playbook"
+                title="Get your invite to Legacy Readiness OS"
               />
             </div>
             <p className="text-sm text-white/60 mt-6 flex items-center justify-center gap-2">
