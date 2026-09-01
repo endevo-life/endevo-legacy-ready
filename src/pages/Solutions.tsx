@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Lock, Play } from "lucide-react";
+import { ArrowRight, Check, Lock } from "lucide-react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -49,6 +49,11 @@ const FOUNDING_OFFER = {
   endsISO: "2027-01-15",
   endsLabel: "January 15",
 };
+
+/** Hosted promo video; unset until the file has a home outside the repo. */
+const PROMO_VIDEO_URL = import.meta.env.VITE_PROMO_VIDEO_URL as
+  | string
+  | undefined;
 
 /** The five steps, in the visitor's words rather than the product's. */
 const STEPS = [
@@ -178,7 +183,7 @@ const Solutions = () => {
         </section>
 
         {/* ---------- The fork ---------- */}
-        <section className="px-4 -mt-8 pb-20">
+        <section id="pricing" className="px-4 -mt-8 pb-20 scroll-mt-24">
           {FOUNDING_OFFER.active && (
             <div className="container max-w-5xl mx-auto mb-6">
               <p className="bg-brand-orange text-white text-center text-sm font-semibold rounded-lg px-5 py-3 shadow-lg">
@@ -334,7 +339,7 @@ const Solutions = () => {
         </section>
 
         {/* ---------- Promotional video ---------- */}
-        <section className="bg-muted/30 py-20 px-4">
+        <section id="video" className="bg-muted/30 py-20 px-4 scroll-mt-20">
           <div className="container max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-3 text-balance">
               What is My Final Playbook?
@@ -342,18 +347,34 @@ const Solutions = () => {
             <p className="text-muted-foreground mb-8">
               Two minutes on what you get and how it works.
             </p>
-            <div className="relative rounded-xl overflow-hidden shadow-xl bg-brand-navy aspect-video flex items-center justify-center">
-              {/* Replace with the finished promo embed. */}
-              <div className="text-center text-white/70 px-6">
-                <Play className="h-12 w-12 mx-auto mb-3" aria-hidden="true" />
-                <p className="text-sm">Promotional video — coming soon</p>
+            {/*
+              The video URL comes from VITE_PROMO_VIDEO_URL so the file never
+              enters the repo. Locally it points at a gitignored copy for
+              demos; in production it stays unset — and the slot shows a calm
+              placeholder — until the file is hosted (GHL media library or
+              YouTube) and the variable is set in Vercel.
+            */}
+            {PROMO_VIDEO_URL ? (
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full rounded-xl shadow-xl bg-brand-navy aspect-video"
+                aria-label="What is My Final Playbook? A short introduction"
+              >
+                <source src={PROMO_VIDEO_URL} type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+            ) : (
+              <div className="relative rounded-xl overflow-hidden shadow-xl bg-brand-navy aspect-video flex items-center justify-center">
+                <p className="text-sm text-white/70 px-6">Video coming soon</p>
               </div>
-            </div>
+            )}
           </div>
         </section>
 
         {/* ---------- How it works ---------- */}
-        <section className="py-20 px-4">
+        <section id="how-it-works" className="py-20 px-4 scroll-mt-20">
           <div className="container max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-3 text-balance">

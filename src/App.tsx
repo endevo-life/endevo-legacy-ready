@@ -85,6 +85,13 @@ const ScrollToHash = () => {
   return null;
 };
 
+// /playbook → /solutions, keeping ?src= and any #anchor intact. A bare
+// <Navigate> would drop the query string and lose channel attribution.
+const PlaybookRedirect = () => {
+  const { search, hash } = useLocation();
+  return <Navigate to={`/solutions${search}${hash}`} replace />;
+};
+
 // Initialize consent mode on app load
 const AppInitializer = () => {
   useEffect(() => {
@@ -117,6 +124,10 @@ const App = () => (
             <Route path="/learn-and-listen" element={<LearnAndListen />} />
             <Route path="/solution" element={<Solution />} />
             <Route path="/solutions" element={<Solutions />} />
+            {/* Sayable alias for the offer page — "endevo dot life slash
+                playbook" on the podcast. Vercel 301s it in production; this
+                route makes it work on localhost and as an in-app link. */}
+            <Route path="/playbook" element={<PlaybookRedirect />} />
 
             <Route path="/for-individuals" element={<WWSIndividuals />} />
             <Route

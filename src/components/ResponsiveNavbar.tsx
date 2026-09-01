@@ -7,26 +7,20 @@ import {
   ChevronRight,
   Workflow,
   BookOpen,
-  Users,
-  Sparkles,
-  Briefcase,
-  UserCheck,
   User,
-  ShieldCheck,
-  Smartphone,
-  MessageSquare,
-  Video,
   FileText,
   HelpCircle,
   Newspaper,
   Building2,
   Crown,
   UsersRound,
-  Heart,
   Handshake,
   ClipboardList,
+  BadgeDollarSign,
+  Play,
+  Mic,
+  Store,
 } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(
@@ -41,163 +35,122 @@ const ResponsiveNavbar = () => {
   const toggleMobileSubmenu = (menuName: string) => {
     setExpandedMobileMenu(expandedMobileMenu === menuName ? null : menuName);
   };
+  // Five menus, built around the questions a first-time visitor actually
+  // asks — what is this, is it for me, how much, can I trust you, how do I
+  // start — rather than the org chart. Labels are the words people search
+  // ("Pricing", "Podcast", "FAQ"), and nothing sits deeper than two clicks.
   const menuItems = [
     {
-      name: "Solutions",
+      name: "Start Here",
       href: "/solutions",
       submenu: [
         {
-          name: "How It Works",
-          sub: "Supporting You Through Preparedness",
-          href: "/solution#how-it-works",
+          name: "How it works",
+          sub: "Five steps, one plan",
+          href: "/solutions#how-it-works",
           icon: Workflow,
         },
         {
-          name: "About the Program",
-          sub: "Legacy readiness for every employee",
-          href: "/solution#about-program",
-          icon: BookOpen,
+          name: "Pricing",
+          sub: "For you, or for your team",
+          href: "/solutions#pricing",
+          icon: BadgeDollarSign,
         },
         {
-          name: "Service Providers",
-          sub: "Connect with trusted experts",
-          href: "/solution#service-providers",
-          icon: Users,
-        },
-        {
-          name: "Our Edge",
-          sub: "What sets ENDevo apart",
-          href: "/solution#our-edge",
-          icon: Sparkles,
-        },
-        {
-          name: "Case Studies",
-          sub: "Real stories of impact",
-          href: "/solution#case-studies",
-          icon: ClipboardList,
+          name: "Watch the video",
+          sub: "What is My Final Playbook?",
+          href: "/solutions#video",
+          icon: Play,
         },
       ],
     },
     {
-      name: "Who We Serve",
+      name: "Who It's For",
       href: "#",
       submenu: [
         {
-          name: "For Employers",
-          sub: "Benefits that retain top talent",
-          href: "/for-employers",
-          icon: Briefcase,
-        },
-        {
-          name: "For Service Providers",
-          sub: "Expand your reach with ENDevo",
-          href: "/for-service-providers",
-          icon: UserCheck,
-        },
-        {
-          name: "For Individuals",
-          sub: "Plan your legacy on your terms",
+          name: "Individuals & Families",
+          sub: "Your plan, yours to keep",
           href: "/for-individuals",
           icon: User,
+        },
+        {
+          name: "Employers",
+          sub: "A benefit for the thing nobody plans for",
+          href: "/for-employers",
+          icon: Building2,
+        },
+        {
+          name: "Advisors & Providers",
+          sub: "Bring it to your clients",
+          href: "/for-service-providers",
+          icon: Handshake,
         },
       ],
     },
     {
-      name: "Resources",
-      href: "/resources",
+      name: "Learn",
+      href: "#",
       submenu: [
         {
-          name: "Peace of Mind",
-          sub: "Tools for life's transitions",
-          href: "/resources#peace-of-mind",
-          icon: ShieldCheck,
-        },
-        {
-          name: "Mobile App",
-          sub: "Legacy planning in your pocket",
-          href: "/resources#mobile-app",
-          icon: Smartphone,
-        },
-        {
-          name: "Client Testimonials",
-          sub: "Stories from real members",
-          href: "/resources#client-stories",
-          icon: MessageSquare,
-        },
-        {
-          name: "Podcasts",
-          sub: "Watch and listen",
+          name: "Podcast",
+          sub: "Death and Dying in the Digital Age",
           href: "/videos",
-          icon: Video,
+          icon: Mic,
         },
         {
-          name: "Blogs",
-          sub: "Insights and guidance",
+          name: "Articles",
+          sub: "Legacy and end-of-life planning, explained",
           href: "/blog",
           icon: FileText,
         },
         {
-          name: "FAQs",
-          sub: "Quick answers to common questions",
+          name: "FAQ",
+          sub: "Straight answers to common questions",
           href: "/faq",
           icon: HelpCircle,
         },
         {
-          name: "News and Events",
-          sub: "Stay in the loop",
-          href: "/news-and-events",
-          icon: Newspaper,
+          name: "Guides & Tools",
+          sub: "Worksheets and the mobile app",
+          href: "/resources",
+          icon: BookOpen,
         },
-        // {
-        //   name: "Podcast",
-        //   href: "/podcast",
-        // },
+        {
+          name: "Readiness Hub",
+          sub: "Vetted partners and experts",
+          href: "/marketplace",
+          icon: Store,
+        },
       ],
     },
-    // {
-    //   name: "Plan",
-    //   href: "/plan",
-    //   submenu: []
-    // },
     {
-      name: "Readiness Hub",
-      href: "/marketplace",
-      submenu: [],
-    },
-    {
-      name: "About Us",
+      name: "About",
       href: "/company",
-      alignRight: true,
       submenu: [
         {
-          name: "About ENDevo",
-          sub: "Our mission and story",
-          href: "/company#about",
-          icon: Building2,
-        },
-        {
-          name: "Niki Weiss/Founder",
-          sub: "Meet the visionary behind ENDevo",
+          name: "Niki Weiss",
+          sub: "Founder and thanatologist",
           href: "/company#niki",
           icon: Crown,
         },
         {
-          name: "Meet Our Team",
-          sub: "The people who make it happen",
+          name: "Team & Partners",
+          sub: "The people behind ENDevo",
           href: "/company#team",
           icon: UsersRound,
         },
         {
-          name: "Our Core Values",
-          sub: "What we stand for",
-          href: "/company#values",
-          icon: Heart,
+          name: "Client Stories",
+          sub: "Case studies and testimonials",
+          href: "/solution#case-studies",
+          icon: ClipboardList,
         },
         {
-          name: "Our Partners",
-          sub: "Trusted collaborators",
-          href: "/company#partners",
-          icon: Handshake,
+          name: "News & Speaking",
+          sub: "Where to find Niki next",
+          href: "/news-and-events",
+          icon: Newspaper,
         },
       ],
     },
@@ -307,21 +260,12 @@ const ResponsiveNavbar = () => {
 
           {/* Desktop CTA Button */}
           <div className="hidden xl:block flex-shrink-0">
-            <Dialog>
-              <DialogTrigger asChild>
-                <button className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-sm whitespace-nowrap">
-                  Book a Demo
-                </button>
-              </DialogTrigger>
-              <DialogContent className="max-w-3xl h-[80vh] p-0">
-                <iframe
-                  src="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
-                  className="w-full h-full rounded-lg"
-                  style={{ border: "none" }}
-                  title="Book a Demo"
-                />
-              </DialogContent>
-            </Dialog>
+            <Link
+              to="/solutions#get-invite"
+              className="bg-brand-orange text-white px-4 py-2 rounded-md hover:bg-brand-orange-dark transition-colors duration-300 font-medium text-sm whitespace-nowrap inline-block"
+            >
+              Start your plan
+            </Link>
           </div>
 
           {/* Mobile hamburger menu button */}
@@ -403,24 +347,13 @@ const ResponsiveNavbar = () => {
               );
             })}
             <div className="pt-4 border-t border-border">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button
-                    className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-md hover:bg-primary/90 transition-colors duration-300 font-medium text-center"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Book a Demo
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[95vw] sm:max-w-3xl h-[80vh] p-0">
-                  <iframe
-                    src="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
-                    className="w-full h-full rounded-lg"
-                    style={{ border: "none" }}
-                    title="Book a Demo"
-                  />
-                </DialogContent>
-              </Dialog>
+              <Link
+                to="/solutions#get-invite"
+                className="w-full bg-brand-orange text-white px-6 py-3 rounded-md hover:bg-brand-orange-dark transition-colors duration-300 font-medium text-center inline-block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Start your plan
+              </Link>
             </div>
           </div>
         </div>

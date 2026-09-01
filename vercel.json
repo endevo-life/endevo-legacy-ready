@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/playbook",
+      "destination": "/solutions",
+      "permanent": true
+    },
+    {
       "source": "/wws-employers",
       "destination": "/for-employers",
       "permanent": true
