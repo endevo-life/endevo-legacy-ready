@@ -29,3 +29,8 @@ nul
 transcripts/*
 !transcripts/_episodes.json
 !transcripts/_video-ids.json
+
+# Cover/inline image staging for blog posts. Images are uploaded to Sanity
+# by scripts/swap-cover.ts and insert-inline-image.ts; the repo does not
+# need the source files once they are in the CDN.
+src/assets/blog-cover/

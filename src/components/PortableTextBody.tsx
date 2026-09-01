@@ -3,6 +3,7 @@ import type {
   PortableTextBlock,
   PortableTextComponents,
 } from "@portabletext/react";
+import { urlFor } from "@/lib/sanityImageUrl";
 
 /**
  * Allowlists link protocols before an href reaches the DOM.
@@ -47,12 +48,34 @@ function sanitizeHref(raw: unknown): string | null {
  * Used by both the /blog/:slug article page and the quick-read modal on
  * /blog, so an article reads identically wherever it is rendered.
  *
- * The block types handled here match what an audit of the live dataset
- * found in use across all published posts: normal/h2/h3/h4 blocks, bullet
- * and number lists, and link marks. There are no image or custom object
- * blocks in the content.
+ * The block types handled here match what the live dataset uses:
+ * normal/h2/h3/h4 blocks, bullet and number lists, link marks, and inline
+ * images (added Aug 2026 so long articles can carry per-section
+ * illustrations).
  */
 const components: PortableTextComponents = {
+  types: {
+    image: ({ value }) => {
+      // A block whose asset reference is missing renders nothing rather
+      // than a broken img.
+      if (!value?.asset) return null;
+      return (
+        <figure className="my-8">
+          <img
+            src={urlFor(value).width(1200).fit("max").url()}
+            alt={value.alt || ""}
+            loading="lazy"
+            className="w-full h-auto rounded-lg"
+          />
+          {value.caption && (
+            <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+              {value.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    },
+  },
   block: {
     normal: ({ children }) => (
       <p className="leading-relaxed text-gray-700">{children}</p>
