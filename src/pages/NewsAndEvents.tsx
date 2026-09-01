@@ -2,7 +2,7 @@ import { useState } from "react";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import createConferenceImage from "@/assets/create-2026/niki-weiss-four3.png";
+import createConferenceImage from "@/assets/create-2026/niki-weiss-four3.jpg";
 
 const NewsAndEvents = () => {
   const [showConsensusReflection, setShowConsensusReflection] = useState(false);

@@ -34,3 +34,7 @@ transcripts/*
 # by scripts/swap-cover.ts and insert-inline-image.ts; the repo does not
 # need the source files once they are in the CDN.
 src/assets/blog-cover/
+
+# Local video staging for the /solutions embed. Host the file (GHL media
+# library or YouTube) before shipping; a 9MB asset does not belong in git.
+public/videos/
