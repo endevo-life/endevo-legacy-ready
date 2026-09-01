@@ -130,6 +130,22 @@ const App = () => (
                 playbook" on the podcast. Vercel 301s it in production; this
                 route makes it work on localhost and as an in-app link. */}
             <Route path="/playbook" element={<PlaybookRedirect />} />
+            {/* Readable aliases: the URL a person would guess or type reads
+                as what the page is, then 301s (Vercel) / redirects (in-app)
+                to the canonical path that already holds the ranking equity. */}
+            <Route
+              path="/pricing"
+              element={<Navigate to="/solutions#pricing" replace />}
+            />
+            <Route
+              path="/podcast"
+              element={<Navigate to="/videos" replace />}
+            />
+            <Route path="/about" element={<Navigate to="/company" replace />} />
+            <Route
+              path="/readiness-hub"
+              element={<Navigate to="/marketplace" replace />}
+            />
 
             <Route path="/for-individuals" element={<WWSIndividuals />} />
             <Route
