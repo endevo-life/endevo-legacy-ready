@@ -51,10 +51,22 @@ const FOUNDING_OFFER = {
   endsLabel: "January 15",
 };
 
-/** Hosted promo video; unset until the file has a home outside the repo. */
-const PROMO_VIDEO_URL = import.meta.env.VITE_PROMO_VIDEO_URL as
-  | string
-  | undefined;
+/**
+ * The promo video ships with the site so it is live everywhere from day one;
+ * VITE_PROMO_VIDEO_URL overrides it once the file gets a CDN/YouTube home.
+ */
+const PROMO_VIDEO_URL =
+  (import.meta.env.VITE_PROMO_VIDEO_URL as string | undefined) ||
+  "/videos/promo-v11.mp4";
+
+/**
+ * The product checkout. Unset while payment is still being integrated on the
+ * app side — the card's button stays "Get your invite" and feeds the
+ * waitlist. The moment checkout is live, set VITE_CHECKOUT_URL in Vercel and
+ * the button becomes "Start now" pointing at it. Going live is an env var,
+ * not a deploy.
+ */
+const CHECKOUT_URL = import.meta.env.VITE_CHECKOUT_URL as string | undefined;
 
 /** The five steps, in the visitor's words rather than the product's. */
 const STEPS = [
@@ -256,10 +268,20 @@ const Solutions = () => {
                   size="lg"
                   className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold"
                 >
-                  <a href="#get-invite">
-                    Get your invite
-                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                  </a>
+                  {CHECKOUT_URL ? (
+                    <a href={CHECKOUT_URL}>
+                      Start now —{" "}
+                      {FOUNDING_OFFER.active
+                        ? FOUNDING_OFFER.price
+                        : FOUNDING_OFFER.fullPrice}
+                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <a href="#get-invite">
+                      Get your invite
+                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                    </a>
+                  )}
                 </Button>
                 <p className="text-xs text-muted-foreground text-center mt-3">
                   {FOUNDING_OFFER.active

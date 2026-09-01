@@ -37,4 +37,5 @@ src/assets/blog-cover/
 
 # Local video staging for the /solutions embed. Host the file (GHL media
 # library or YouTube) before shipping; a 9MB asset does not belong in git.
-public/videos/
+public/videos/*
+!public/videos/promo-v11.mp4
