@@ -23,3 +23,9 @@ nul
 *.njsproj
 *.sln
 *.sw?
+
+# Podcast transcripts: working input for article drafting, not site source.
+# The episode list is tracked; the transcript text is not.
+transcripts/*
+!transcripts/_episodes.json
+!transcripts/_video-ids.json

@@ -139,7 +139,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={post.title}
+        title={post.seoTitle || post.title}
         description={description}
         canonical={canonical}
         ogType="article"

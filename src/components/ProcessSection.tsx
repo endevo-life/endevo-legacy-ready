@@ -61,8 +61,8 @@ const ProcessSection = () => {
                 Organize & Secure
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Guide staff with AI-powered tools to organize legal, financial,
-                and digital assets via a comprehensive project roadmap.
+                Guide staff through organizing legal, financial, and digital
+                assets via a comprehensive project roadmap.
               </p>
             </div>
 

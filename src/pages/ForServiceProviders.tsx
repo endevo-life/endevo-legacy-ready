@@ -259,8 +259,9 @@ const WWSServiceProviders = () => {
                       2
                     </div>
                     <p className="text-lg text-foreground leading-relaxed text-left">
-                      Our technology is built to scale, offering AI-powered
-                      tools alongside personalized human guidance.
+                      Our technology is built to scale, offering a
+                      practitioner's method encoded alongside personalized human
+                      guidance.
                     </p>
                   </div>
 

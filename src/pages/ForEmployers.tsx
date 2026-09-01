@@ -336,8 +336,9 @@ const WWSEmployers = () => {
                     2
                   </div>
                   <p className="text-base md:text-lg leading-relaxed font-opensans text-[#333]">
-                    Guide staff with AI-powered tools that help them organize
-                    legal, financial, and digital assets in one secure place.
+                    Guide staff through a structured plan that helps them
+                    organize legal, financial, and digital assets in one secure
+                    place.
                   </p>
                 </div>
 

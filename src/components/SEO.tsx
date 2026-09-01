@@ -11,6 +11,87 @@ interface SEOProps {
 }
 
 const SITE_NAME = "ENDevo";
+
+/**
+ * Max <title> length search engines will display. Bing's Site Scan warns above
+ * 70 characters ("Title too long"); Google truncates around the same width.
+ * The count includes the " | ENDevo" suffix, since that is what ships in the tag.
+ */
+const TITLE_MAX = 70;
+const TITLE_SUFFIX = ` | ${SITE_NAME}`;
+
+/**
+ * Fits a page title into TITLE_MAX including the site-name suffix.
+ *
+ * Blog posts and podcast episodes take their title straight from Sanity and the
+ * YouTube API, where editorial titles routinely run past 70 characters. Rather
+ * than ask editors to keep every title short, shorten here — the one place every
+ * title already flows through — so the rule cannot be forgotten on new content.
+ *
+ * Four steps, in order of how much meaning they cost:
+ *
+ * 1. Drop trailing pipe-delimited segments. Episode titles are written as
+ *    "Topic | Guest Name", so the guest suffix is the cheapest thing to lose:
+ *    the topic is what carries the search intent. Only trailing segments go,
+ *    and never the first, so the headline itself always survives.
+ * 2. Drop the " | ENDevo" suffix. Many editorial titles fit within 70 on their
+ *    own and only overflow once branding is appended; losing boilerplate the
+ *    domain already conveys beats cutting the author's own words.
+ * 3. Drop a trailing colon subtitle. Editorial titles are written as
+ *    "Hook: Explanation"; keeping the hook leaves a complete phrase, which
+ *    reads better in a result list than the same words cut mid-sentence.
+ * 4. Only if the hook alone still overflows, truncate at a word boundary.
+ */
+function fitTitle(rawTitle: string): string {
+  const title = rawTitle.trim().replace(/\s+/g, " ");
+
+  // Already-branded titles are passed through untouched — the caller opted out.
+  if (title.includes(SITE_NAME)) return title;
+
+  if (title.length + TITLE_SUFFIX.length <= TITLE_MAX) {
+    return `${title}${TITLE_SUFFIX}`;
+  }
+
+  // Step 1: shed trailing "| Guest Name" segments, keeping at least the first.
+  const segments = title.split("|").map((seg) => seg.trim());
+  for (let end = segments.length - 1; end >= 1; end--) {
+    const candidate = segments.slice(0, end).join(" | ");
+    if (candidate.length + TITLE_SUFFIX.length <= TITLE_MAX) {
+      return `${candidate}${TITLE_SUFFIX}`;
+    }
+  }
+
+  // Step 2: keep the full title and drop the branding instead. A complete
+  // headline is worth more in a result list than a truncated one plus "| ENDevo".
+  const headline = segments[0];
+  if (headline.length + TITLE_SUFFIX.length <= TITLE_MAX) {
+    return `${headline}${TITLE_SUFFIX}`;
+  }
+  if (title.length <= TITLE_MAX) return title;
+  if (headline.length <= TITLE_MAX) return headline;
+
+  // Step 3: keep the hook before the colon, if that alone fits and still
+  // carries enough of the subject to be a useful result (guard against a
+  // terse hook like "Beyond Taboo" that says nothing on its own).
+  const colon = headline.indexOf(":");
+  if (colon > 0) {
+    const hook = headline.slice(0, colon).trim();
+    if (hook.length >= 30 && hook.length + TITLE_SUFFIX.length <= TITLE_MAX) {
+      return `${hook}${TITLE_SUFFIX}`;
+    }
+    if (hook.length >= 30 && hook.length <= TITLE_MAX) return hook;
+  }
+
+  // Step 4: nothing structural left to shed, so cut at a word boundary.
+  const cut = headline.slice(0, TITLE_MAX - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  const trimmed = (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).replace(
+    /[\s.,;:!?\-–—]+$/,
+    "",
+  );
+  return `${trimmed}…`;
+}
+
 const SITE_URL = "https://www.endevo.life";
 /**
  * Sitewide social preview: the ENDevo brand hero ("Simplifying Legacy
@@ -35,9 +116,7 @@ export default function SEO({
   jsonLd,
   noIndex = false,
 }: SEOProps) {
-  const fullTitle = title.includes(SITE_NAME)
-    ? title
-    : `${title} | ${SITE_NAME}`;
+  const fullTitle = fitTitle(title);
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : undefined;
   const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 

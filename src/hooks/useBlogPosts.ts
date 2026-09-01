@@ -11,6 +11,12 @@ export interface SanityImageRef {
 export interface SanityBlogPost {
   _id: string;
   title: string;
+  /**
+   * Optional editor-supplied <title>. Long titles are shortened automatically
+   * (see fitTitle in SEO.tsx); this field lets an editor choose the wording
+   * instead of accepting the automatic cut.
+   */
+  seoTitle?: string;
   slug?: string;
   date: string;
   /** Byline, also used as the author in the BlogPosting JSON-LD. */
@@ -23,7 +29,7 @@ export interface SanityBlogPost {
 }
 
 const QUERY = `*[_type == "blogPost"] | order(date desc) {
-  _id, _updatedAt, title, "slug": slug.current, date, author, externalLink,
+  _id, _updatedAt, title, seoTitle, "slug": slug.current, date, author, externalLink,
   image, content
 }`;
 
@@ -36,7 +42,7 @@ export function useBlogPosts() {
 }
 
 const POST_BY_SLUG_QUERY = `*[_type == "blogPost" && slug.current == $slug][0] {
-  _id, _updatedAt, title, "slug": slug.current, date, author, externalLink,
+  _id, _updatedAt, title, seoTitle, "slug": slug.current, date, author, externalLink,
   image, content
 }`;
 

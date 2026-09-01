@@ -12,6 +12,17 @@ export const blogPostSchema = {
       validation: (R: Rule) => R.required(),
     },
     {
+      name: "seoTitle",
+      title: "SEO Title (optional)",
+      type: "string",
+      description:
+        "Overrides the browser/search-result title. Leave blank to use the Title above, which is shortened automatically if it exceeds 70 characters. Set this when you want to control exactly how a long title is shortened.",
+      validation: (R: Rule) =>
+        R.max(70).warning(
+          "Search engines truncate titles beyond 70 characters.",
+        ),
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",

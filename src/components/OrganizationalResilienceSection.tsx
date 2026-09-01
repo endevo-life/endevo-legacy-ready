@@ -7,7 +7,7 @@ const steps = [
   },
   {
     number: 2,
-    text: "Guide staff with AI-powered tools that help them organize legal, financial, and digital assets in one secure place.",
+    text: "Guide staff through a structured plan that helps them organize legal, financial, and digital assets in one secure place.",
   },
   {
     number: 3,
