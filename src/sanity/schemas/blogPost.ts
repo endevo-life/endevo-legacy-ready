@@ -51,7 +51,26 @@ export const blogPostSchema = {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            {
+              name: "alt",
+              title: "Alt text",
+              type: "string",
+              description: "Describes the image for screen readers and SEO.",
+            },
+            {
+              name: "caption",
+              title: "Caption (optional)",
+              type: "string",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "author",
