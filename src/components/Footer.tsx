@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Youtube, Linkedin, Instagram, Music2, Facebook } from "lucide-react";
+import { socialLinks } from "@/data/socialLinks";
 /**
  * Column heading for the footer.
  *
@@ -62,42 +62,6 @@ const FooterLinkColumn = ({
 );
 
 const Footer = () => {
-  const socialLinks = [
-    {
-      icon: Youtube,
-      label: "YouTube",
-      href: "https://www.youtube.com/@DigitalLegacyPodcast",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/company/endevo-digitallegacy/posts/?feedView=all",
-    },
-    {
-      icon: Instagram,
-      label: "Instagram",
-      href: "https://www.instagram.com/endevo_digitallegacy/",
-    },
-    {
-      icon: Music2,
-      label: "TikTok",
-      href: "https://www.tiktok.com/@endevo_digitallegacy?_t=ZS-90FW0Oec9NB&_r=1",
-    },
-    {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://www.facebook.com/endevo.digitallegacy/",
-    },
-    {
-      icon: null,
-      imgSrc:
-        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f13b842ff7baef2d1.svg",
-      imgSrcHover:
-        "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69a0833f9a0c187c9d07fdff.svg",
-      label: "Medium",
-      href: "https://medium.com/@endevo_digitallegacy",
-    },
-  ];
   // title text gives each anchor a descriptive hover/assistive label beyond
   // the short visible word, without padding the visible link out.
   // Split into two columns so each is a short, scannable list under its own

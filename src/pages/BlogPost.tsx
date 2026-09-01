@@ -6,6 +6,7 @@ import SEO from "@/components/SEO";
 import PortableTextBody from "@/components/PortableTextBody";
 import NotFound from "@/pages/NotFound";
 import { useBlogPost } from "@/hooks/useBlogPosts";
+import { socialLinks } from "@/data/socialLinks";
 import { urlFor } from "@/lib/sanityImageUrl";
 import { buildMetaDescription } from "@/lib/portableTextUtils";
 
@@ -202,6 +203,38 @@ const BlogPost = () => {
           >
             Know exactly what you need to do, and in what order →
           </Link>
+          {/* The follow row: for the reader who is not ready to start a plan,
+              following is the smaller yes. Same list the footer renders. */}
+          <div className="mt-8">
+            <p className="text-sm text-muted-foreground mb-3">
+              Follow along — new episodes and articles every week
+            </p>
+            <div className="flex justify-center gap-4">
+              {socialLinks.map(({ icon: Icon, label, href, imgSrc }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`ENDevo on ${label}`}
+                  title={label}
+                  className="text-gray-500 hover:text-orange-500 transition-colors duration-200"
+                >
+                  {Icon ? (
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  ) : (
+                    imgSrc && (
+                      <img
+                        src={imgSrc}
+                        alt=""
+                        className="h-5 w-5 opacity-60 hover:opacity-100"
+                      />
+                    )
+                  )}
+                </a>
+              ))}
+            </div>
+          </div>
         </aside>
 
         {post.externalLink && (

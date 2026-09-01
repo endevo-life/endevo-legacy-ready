@@ -4,6 +4,7 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 /**
  * The Solutions fork at /start-here.
@@ -320,16 +321,31 @@ const Solutions = () => {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full bg-brand-navy hover:bg-brand-navy-light text-white font-semibold"
-                >
-                  <Link to="/contact">
-                    Book a call with our team
-                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                  </Link>
-                </Button>
+                {/*
+                  Opens the booking calendar directly rather than routing
+                  through the contact form. A booked meeting is its own
+                  notification — invite, confirmation, reminders — and the
+                  Appointment Booked automation applies the product-demo tag.
+                */}
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      size="lg"
+                      className="w-full bg-brand-navy hover:bg-brand-navy-light text-white font-semibold"
+                    >
+                      Book a call with our team
+                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-3xl h-[80vh] p-2">
+                    <iframe
+                      src="https://link.endevo.life/widget/booking/HUYkq6QZs0fI7AMtt6qH"
+                      className="w-full h-full rounded-lg"
+                      style={{ border: "none" }}
+                      title="Book a call with the ENDevo team"
+                    />
+                  </DialogContent>
+                </Dialog>
                 <p className="text-xs text-muted-foreground text-center mt-3">
                   We onboard a small number of teams at a time
                 </p>
