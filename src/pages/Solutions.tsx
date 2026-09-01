@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 
 /**
- * The Solutions fork at /solutions.
+ * The Solutions fork at /start-here.
  *
  * One platform, two buyers, and they cannot share a page without a hard visual
  * break: an employer seeing a consumer price assumes we are not built for them,
@@ -107,7 +107,7 @@ const Solutions = () => {
               priceCurrency: "USD",
               priceValidUntil: FOUNDING_OFFER.endsISO,
               availability: "https://schema.org/LimitedAvailability",
-              url: "https://www.endevo.life/solutions",
+              url: "https://www.endevo.life/start-here",
             },
           }
         : {}),
@@ -159,7 +159,7 @@ const Solutions = () => {
       <SEO
         title="Legacy Readiness for Teams and Individuals"
         description="Know exactly what you need to put in order, and in what order to do it. A guided legacy readiness plan for employers and for individuals — start free."
-        canonical="/solutions"
+        canonical="/start-here"
         jsonLd={jsonLd}
       />
       <ResponsiveNavbar />
@@ -205,7 +205,7 @@ const Solutions = () => {
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-muted-foreground mb-5">
                   Answer questions about your actual situation. Get a
-                  personalised plan, and walk away with a finished Playbook that
+                  personalized plan, and walk away with a finished Playbook that
                   is yours to keep.
                 </p>
                 <ul className="space-y-2.5 mb-6 flex-1">

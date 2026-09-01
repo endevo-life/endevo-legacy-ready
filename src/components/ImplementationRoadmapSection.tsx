@@ -114,7 +114,7 @@ const ImplementationRoadmapSection = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-                {/* Centre dashed line */}
+                {/* Center dashed line */}
                 <path
                   d="M 10 440 C 50 400, 140 370, 120 300 C 100 230, 30 210, 60 150 C 90 90, 180 70, 215 5"
                   fill="none"

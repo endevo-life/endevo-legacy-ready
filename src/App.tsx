@@ -86,6 +86,12 @@ const ScrollToHash = () => {
   return null;
 };
 
+// /solutions → /start-here, keeping ?src= and fragments.
+const StartHereRedirect = () => {
+  const { search, hash } = useLocation();
+  return <Navigate to={`/start-here${search}${hash}`} replace />;
+};
+
 // /solution → /program, keeping the fragment so old #case-studies links land
 // on the right section.
 const ProgramRedirect = () => {
@@ -93,11 +99,11 @@ const ProgramRedirect = () => {
   return <Navigate to={`/program${search}${hash}`} replace />;
 };
 
-// /playbook → /solutions, keeping ?src= and any #anchor intact. A bare
+// /playbook → /start-here, keeping ?src= and any #anchor intact. A bare
 // <Navigate> would drop the query string and lose channel attribution.
 const PlaybookRedirect = () => {
   const { search, hash } = useLocation();
-  return <Navigate to={`/solutions${search}${hash}`} replace />;
+  return <Navigate to={`/start-here${search}${hash}`} replace />;
 };
 
 // Initialize consent mode on app load
@@ -133,10 +139,13 @@ const App = () => (
             <Route path="/learn-and-listen" element={<LearnAndListen />} />
             <Route path="/program" element={<Solution />} />
             {/* The program deep-dive lived at /solution, one letter from the
-                /solutions fork — a near-duplicate URL that read as a mistake.
+                /start-here fork — a near-duplicate URL that read as a mistake.
                 Old links keep working, fragments (#case-studies) included. */}
             <Route path="/solution" element={<ProgramRedirect />} />
-            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/start-here" element={<Solutions />} />
+            {/* /solutions was this page's address for its first days; links
+                are in the wild, so it forwards with query and fragment. */}
+            <Route path="/solutions" element={<StartHereRedirect />} />
             {/* Sayable alias for the offer page — "endevo dot life slash
                 playbook" on the podcast. Vercel 301s it in production; this
                 route makes it work on localhost and as an in-app link. */}
@@ -146,7 +155,7 @@ const App = () => (
                 to the canonical path that already holds the ranking equity. */}
             <Route
               path="/pricing"
-              element={<Navigate to="/solutions#pricing" replace />}
+              element={<Navigate to="/start-here#pricing" replace />}
             />
             <Route
               path="/podcast"

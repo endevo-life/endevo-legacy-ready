@@ -48,18 +48,18 @@ const ResponsiveNavbar = () => {
   const menuItems = [
     {
       name: "Start Here",
-      href: "/solutions",
+      href: "/start-here",
       submenu: [
         {
           name: "How it works",
           sub: "Five steps, one plan",
-          href: "/solutions#how-it-works",
+          href: "/start-here#how-it-works",
           icon: Workflow,
         },
         {
           name: "Pricing",
           sub: "For individuals, or for your team",
-          href: "/solutions#pricing",
+          href: "/start-here#pricing",
           icon: BadgeDollarSign,
         },
         {
@@ -77,7 +77,7 @@ const ResponsiveNavbar = () => {
         {
           name: "Watch the video",
           sub: "What is Legacy Readiness OS?",
-          href: "/solutions#video",
+          href: "/start-here#video",
           icon: Play,
         },
       ],
@@ -303,7 +303,7 @@ const ResponsiveNavbar = () => {
           {/* Desktop CTA Button */}
           <div className="hidden xl:block flex-shrink-0">
             <Link
-              to="/solutions#get-invite"
+              to="/start-here#get-invite"
               className="bg-brand-orange text-white px-4 py-2 rounded-md hover:bg-brand-orange-dark transition-colors duration-300 font-medium text-sm whitespace-nowrap inline-block"
             >
               Start your plan
@@ -390,7 +390,7 @@ const ResponsiveNavbar = () => {
             })}
             <div className="pt-4 border-t border-border">
               <Link
-                to="/solutions#get-invite"
+                to="/start-here#get-invite"
                 className="w-full bg-brand-orange text-white px-6 py-3 rounded-md hover:bg-brand-orange-dark transition-colors duration-300 font-medium text-center inline-block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

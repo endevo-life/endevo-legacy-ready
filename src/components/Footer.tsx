@@ -23,7 +23,7 @@ interface FooterLink {
 }
 
 /**
- * A labelled column of internal links.
+ * A labeled column of internal links.
  *
  * Stacks vertically from md up, and wraps into a pipe-separated row on mobile
  * where a tall list of single words costs more height than it earns.
@@ -105,14 +105,14 @@ const Footer = () => {
   const exploreLinks = [
     {
       name: "Start Here",
-      href: "/solutions",
+      href: "/start-here",
       title:
         "Legacy Readiness OS for individuals and enterprise — how it works and pricing",
     },
     {
       name: "Pricing",
-      href: "/solutions#pricing",
-      title: "Pricing for individuals and organisations",
+      href: "/start-here#pricing",
+      title: "Pricing for individuals and organizations",
     },
     {
       name: "Podcast",
@@ -276,7 +276,7 @@ const Footer = () => {
           <div className="space-y-2 flex flex-col items-center md:items-start text-center md:text-left">
             <FooterHeading>Podcast</FooterHeading>
             {/* The logo was a bare <img> and passed no link equity. Wrapping it
-                in the same anchor as "Listen Now" makes it a real, labelled
+                in the same anchor as "Listen Now" makes it a real, labeled
                 link to the podcast rather than decoration. */}
             <a
               href="https://digitallegacypodcast.com/"

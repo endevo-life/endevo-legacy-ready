@@ -230,7 +230,7 @@ const NewsAndEvents = () => {
                         Niki Weiss
                       </span>{" "}
                       was named a 2025 Winner of the WOW3 Unstoppable Award for
-                      Most Inspirational Women of Web3 and AI — recognising her
+                      Most Inspirational Women of Web3 and AI — recognizing her
                       work at the intersection of legacy planning and digital
                       futures.
                     </p>

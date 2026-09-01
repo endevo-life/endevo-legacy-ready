@@ -6,13 +6,18 @@
       "permanent": true
     },
     {
+      "source": "/solutions",
+      "destination": "/start-here",
+      "permanent": true
+    },
+    {
       "source": "/playbook",
-      "destination": "/solutions",
+      "destination": "/start-here",
       "permanent": true
     },
     {
       "source": "/pricing",
-      "destination": "/solutions#pricing",
+      "destination": "/start-here#pricing",
       "permanent": true
     },
     {

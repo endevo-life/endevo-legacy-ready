@@ -197,7 +197,7 @@ const BlogPost = () => {
             start.
           </p>
           <Link
-            to="/solutions"
+            to="/start-here"
             className="inline-block text-orange-500 font-medium underline underline-offset-4 hover:opacity-80"
           >
             Know exactly what you need to do, and in what order →

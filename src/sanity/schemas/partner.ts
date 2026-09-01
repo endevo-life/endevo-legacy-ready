@@ -7,7 +7,7 @@ import type { Rule } from "sanity";
  * Studio task, not a code change: previously each one was a hardcoded object in
  * TrustedPartnersSection, so every new listing needed a PR and a deploy.
  *
- * Categories match the four readiness pillars the Hub is organised by, plus
+ * Categories match the four readiness pillars the Hub is organized by, plus
  * Beliefs. The value strings are the same ones the page already filters on, so
  * CMS entries and any remaining hardcoded ones sort into the same buckets.
  */
