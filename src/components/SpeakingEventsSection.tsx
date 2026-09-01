@@ -17,7 +17,7 @@ import createSquare from "@/assets/create-2026/niki-weiss-square.jpg";
  * Upcoming events come first, then past ones most-recent-first. Past
  * appearances are not clutter to be swept away once the date passes — a track
  * record of stages is the credibility that makes the next invitation likely, so
- * they stay and simply stop being labelled "upcoming".
+ * they stay and simply stop being labeled "upcoming".
  *
  * Adding an event means adding an entry to EVENTS. The upcoming/past split is
  * computed from `endDate`, so nothing needs editing when a date passes.
@@ -80,7 +80,7 @@ const EVENTS: SpeakingEvent[] = [
     location: "Award",
     endDate: "2025-12-01",
     blurb:
-      "Recognised among the most inspirational women in Web3 and AI for work on digital legacy and end-of-life readiness.",
+      "Recognized among the most inspirational women in Web3 and AI for work on digital legacy and end-of-life readiness.",
     url: "/news-and-events",
     image:
       "https://assets.cdn.filesafe.space/f5ehsbHfdFg2UsHEIb49/media/69d41034ee4b21c3f33199b5.jpg",

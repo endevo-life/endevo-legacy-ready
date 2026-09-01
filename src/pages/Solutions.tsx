@@ -200,7 +200,7 @@ const Solutions = () => {
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-muted-foreground mb-5">
                   Answer questions about your actual situation. Get a
-                  personalised plan, and walk away with a finished Playbook that
+                  personalized plan, and walk away with a finished Playbook that
                   is yours to keep.
                 </p>
                 <ul className="space-y-2.5 mb-6 flex-1">
@@ -287,7 +287,7 @@ const Solutions = () => {
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
               <div className="bg-brand-navy/5 border-b-2 border-brand-navy px-6 py-4">
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-navy">
-                  For organisations &amp; advisors
+                  For organizations &amp; advisors
                 </span>
                 <h2 className="text-2xl font-bold mt-1">Legacy Readiness OS</h2>
               </div>
