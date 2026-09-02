@@ -62,11 +62,15 @@ export async function fetchVideoEpisodes() {
   loadEnv();
 
   const apiKey = process.env.VITE_YOUTUBE_API_KEY;
-  const playlistId = process.env.VITE_YOUTUBE_LONG_FORM_PLAYLIST_ID;
-
-  if (!apiKey || !playlistId) {
+  const playlistIds = [
+    process.env.VITE_YOUTUBE_LONG_FORM_PLAYLIST_ID,
+    // Season 2 is a separate playlist; both are fetched so every episode gets
+    // a prerendered page and a sitemap entry.
+    process.env.VITE_YOUTUBE_SEASON_TWO_PLAYLIST_ID,
+  ].filter(Boolean);
+  if (!apiKey || playlistIds.length === 0) {
     throw new Error(
-      "VITE_YOUTUBE_API_KEY / VITE_YOUTUBE_LONG_FORM_PLAYLIST_ID are not " +
+      "VITE_YOUTUBE_API_KEY / playlist ids are not " +
         "set — cannot resolve video episode URLs. Set them in the build " +
         "environment.",
     );
@@ -74,52 +78,61 @@ export async function fetchVideoEpisodes() {
 
   const DELETED = new Set(["deleted video", "private video"]);
   const episodes = [];
-  let pageToken;
+  // A video listed in two playlists must not produce two pages.
+  const seen = new Set();
 
-  do {
-    const url = new URL("https://www.googleapis.com/youtube/v3/playlistItems");
-    url.searchParams.set("part", "snippet");
-    url.searchParams.set("playlistId", playlistId);
-    url.searchParams.set("maxResults", "50");
-    url.searchParams.set("key", apiKey);
-    if (pageToken) url.searchParams.set("pageToken", pageToken);
+  for (const playlistId of playlistIds) {
+    let pageToken;
 
-    const res = await fetch(url, {
-      // The key's referrer allowlist includes the deployed site.
-      headers: { Referer: "https://www.endevo.life/" },
-    });
-    if (!res.ok) {
-      throw new Error(
-        `YouTube playlist query failed: HTTP ${res.status} ${res.statusText}. ` +
-          "Video episode URLs could not be resolved.",
+    do {
+      const url = new URL(
+        "https://www.googleapis.com/youtube/v3/playlistItems",
       );
-    }
-    const data = await res.json();
+      url.searchParams.set("part", "snippet");
+      url.searchParams.set("playlistId", playlistId);
+      url.searchParams.set("maxResults", "50");
+      url.searchParams.set("key", apiKey);
+      if (pageToken) url.searchParams.set("pageToken", pageToken);
 
-    for (const item of data.items ?? []) {
-      const videoId = item.snippet?.resourceId?.videoId;
-      const title = item.snippet?.title ?? "";
-      if (!videoId || DELETED.has(title.toLowerCase())) continue;
-      // Only videos OWNED by our channel get pages. A third-party video
-      // saved into the playlist by mistake (it has happened) must not
-      // receive an indexable page on our domain.
-      const ownChannel = process.env.VITE_YOUTUBE_CHANNEL_ID;
-      const owner = item.snippet?.videoOwnerChannelId;
-      if (ownChannel && owner && owner !== ownChannel) {
-        console.warn(
-          `  ⚠️  skipping third-party video in playlist: "${title.slice(0, 50)}"`,
-        );
-        continue;
-      }
-      episodes.push({
-        slug: makeVideoSlug(title, videoId),
-        videoId,
-        title,
-        publishedAt: (item.snippet?.publishedAt ?? "").slice(0, 10),
+      const res = await fetch(url, {
+        // The key's referrer allowlist includes the deployed site.
+        headers: { Referer: "https://www.endevo.life/" },
       });
-    }
-    pageToken = data.nextPageToken;
-  } while (pageToken);
+      if (!res.ok) {
+        throw new Error(
+          `YouTube playlist query failed: HTTP ${res.status} ${res.statusText}. ` +
+            "Video episode URLs could not be resolved.",
+        );
+      }
+      const data = await res.json();
+
+      for (const item of data.items ?? []) {
+        const videoId = item.snippet?.resourceId?.videoId;
+        const title = item.snippet?.title ?? "";
+        if (!videoId || DELETED.has(title.toLowerCase())) continue;
+        if (seen.has(videoId)) continue;
+        // Only videos OWNED by our channel get pages. A third-party video
+        // saved into the playlist by mistake (it has happened) must not
+        // receive an indexable page on our domain.
+        const ownChannel = process.env.VITE_YOUTUBE_CHANNEL_ID;
+        const owner = item.snippet?.videoOwnerChannelId;
+        if (ownChannel && owner && owner !== ownChannel) {
+          console.warn(
+            `  ⚠️  skipping third-party video in playlist: "${title.slice(0, 50)}"`,
+          );
+          continue;
+        }
+        seen.add(videoId);
+        episodes.push({
+          slug: makeVideoSlug(title, videoId),
+          videoId,
+          title,
+          publishedAt: (item.snippet?.publishedAt ?? "").slice(0, 10),
+        });
+      }
+      pageToken = data.nextPageToken;
+    } while (pageToken);
+  }
 
   if (episodes.length === 0) {
     throw new Error(
