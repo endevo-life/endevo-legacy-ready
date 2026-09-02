@@ -40,6 +40,14 @@ function formatDate(iso: string) {
 const LONG_FORM_PLAYLIST_ID = import.meta.env
   .VITE_YOUTUBE_LONG_FORM_PLAYLIST_ID as string;
 
+/**
+ * Season 2 lives in its own YouTube playlist. Both are fetched and merged, and
+ * the combined list is sorted by publish date, so seasons interleave correctly
+ * and a third season only needs another id here.
+ */
+const SEASON_TWO_PLAYLIST_ID = import.meta.env
+  .VITE_YOUTUBE_SEASON_TWO_PLAYLIST_ID as string | undefined;
+
 const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID as string;
 const SHORT_FORM_PLAYLIST_ID = shortsPlaylistId(CHANNEL_ID);
 
@@ -206,20 +214,34 @@ const Videos = () => {
     loading: shortLoading,
     error: shortError,
   } = useYouTubePlaylist(SHORT_FORM_PLAYLIST_ID);
+  // An unset id yields an empty list rather than a failed request, so the page
+  // still works if the variable is missing in an environment.
+  const { videos: seasonTwoVideos } = useYouTubePlaylist(
+    SEASON_TWO_PLAYLIST_ID ?? "",
+  );
 
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState<VideoTypeFilter>("long");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedYT, setSelectedYT] = useState<UnifiedVideo | null>(null);
 
-  const longFormVideos: UnifiedVideo[] = longVideos.map((v: YouTubeVideo) => ({
-    id: `long-${v.id}`,
-    title: v.title,
-    date: formatDate(v.publishedAt),
-    thumbnail: v.thumbnail,
-    type: "long",
-    youtubeId: v.id,
-  }));
+  // Season 2 episodes are long-form too; dedupe by YouTube id in case a video
+  // is listed in both playlists.
+  const seenLongIds = new Set<string>();
+  const longFormVideos: UnifiedVideo[] = [...seasonTwoVideos, ...longVideos]
+    .filter((v: YouTubeVideo) => {
+      if (seenLongIds.has(v.id)) return false;
+      seenLongIds.add(v.id);
+      return true;
+    })
+    .map((v: YouTubeVideo) => ({
+      id: `long-${v.id}`,
+      title: v.title,
+      date: formatDate(v.publishedAt),
+      thumbnail: v.thumbnail,
+      type: "long",
+      youtubeId: v.id,
+    }));
 
   const shortFormVideos: UnifiedVideo[] = shortVideos.map(
     (v: YouTubeVideo) => ({
