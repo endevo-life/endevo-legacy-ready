@@ -42,7 +42,12 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
  * to the full price and the banner disappears — no other edits needed.
  */
 const FOUNDING_OFFER = {
-  active: true,
+  // OFF: the founding-member terms are an internal decision, not public copy.
+  // The seat count and deadline are commitments we would then have to honour
+  // in public, and the offer is not being announced that way. With this false
+  // the page simply shows the full price and no countdown, and every string
+  // below falls back automatically.
+  active: false,
   fullPrice: "$500",
   price: "$100",
   seats: 200,
@@ -144,7 +149,7 @@ const Solutions = () => {
           name: "How much does ENDevo cost for an individual?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `Legacy Readiness OS for individuals is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. Founding member pricing of ${FOUNDING_OFFER.price} is open to the first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}. You can start the assessment and see your plan before you pay.`,
+            text: `Legacy Readiness OS for individuals is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. You can start the assessment and see your plan before you pay.`,
           },
         },
         {
@@ -285,9 +290,7 @@ const Solutions = () => {
                   )}
                 </Button>
                 <p className="text-xs text-muted-foreground text-center mt-3">
-                  {FOUNDING_OFFER.active
-                    ? `Start free · first ${FOUNDING_OFFER.seats} people, through ${FOUNDING_OFFER.endsLabel}`
-                    : `Start free · ${FOUNDING_OFFER.fullPrice} when you are ready`}
+                  Start free · {FOUNDING_OFFER.fullPrice} when you are ready
                 </p>
 
                 {/*
@@ -475,10 +478,8 @@ const Solutions = () => {
             </h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">
               Leave your name and email and we will send you an invitation to
-              start your Playbook.{" "}
-              {FOUNDING_OFFER.active
-                ? `The first ${FOUNDING_OFFER.seats} people pay ${FOUNDING_OFFER.price} for the year instead of ${FOUNDING_OFFER.fullPrice}, through ${FOUNDING_OFFER.endsLabel}.`
-                : "We are opening access to a small number of people at a time."}
+              start your Playbook. We are opening access to a small number of
+              people at a time.
             </p>
             <div className="bg-card rounded-xl overflow-hidden shadow-2xl text-left">
               <iframe
