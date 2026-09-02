@@ -263,6 +263,7 @@ const Videos = () => {
         title="Videos — Digital Legacy Podcast & Interviews"
         description="Watch long-form interviews and short clips on digital legacy, end-of-life planning, and grief from the Digital Legacy Podcast."
         canonical="/videos"
+        breadcrumbs={[{ name: "Podcast", path: "/videos" }]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "VideoGallery",

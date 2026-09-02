@@ -143,6 +143,10 @@ const BlogPost = () => {
         title={post.seoTitle || post.title}
         description={description}
         canonical={canonical}
+        breadcrumbs={[
+          { name: "Articles", path: "/blog" },
+          { name: post.title, path: canonical },
+        ]}
         ogType="article"
         {...(imageUrl ? { ogImage: imageUrl } : {})}
         jsonLd={articleSchema}

@@ -47,6 +47,9 @@ const WWSIndividuals = () => {
         title="End-of-Life Planning for Individuals & Families"
         description="Plan with clarity and care. ENDevo helps individuals organize legal, financial, physical, and digital affairs so families don't carry the burden alone."
         canonical="/for-individuals"
+        breadcrumbs={[
+          { name: "Individuals & Families", path: "/for-individuals" },
+        ]}
       />
       <ResponsiveNavbar />
       <main className="pt-16">

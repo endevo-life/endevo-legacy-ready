@@ -13,6 +13,7 @@ const NewsAndEvents = () => {
         title="End-of-Life Planning News & Industry Events"
         description="Stay current on end-of-life and digital legacy planning news — conference appearances, speaking engagements, industry awards, and ENDevo announcements."
         canonical="/news-and-events"
+        breadcrumbs={[{ name: "News & Speaking", path: "/news-and-events" }]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Event",

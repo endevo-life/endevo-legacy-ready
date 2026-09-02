@@ -173,6 +173,7 @@ const Solutions = () => {
         title="Legacy Readiness for Teams and Individuals"
         description="Know exactly what you need to put in order, and in what order to do it. A guided legacy readiness plan for employers and for individuals — start free."
         canonical="/start-here"
+        breadcrumbs={[{ name: "Start Here", path: "/start-here" }]}
         jsonLd={jsonLd}
       />
       <ResponsiveNavbar />

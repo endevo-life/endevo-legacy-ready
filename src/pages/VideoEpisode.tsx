@@ -159,6 +159,10 @@ const VideoEpisode = () => {
         title={video.title}
         description={description}
         canonical={canonical}
+        breadcrumbs={[
+          { name: "Podcast", path: "/videos" },
+          { name: video.title, path: canonical },
+        ]}
         ogType="article"
         {...(video.thumbnail ? { ogImage: video.thumbnail } : {})}
         jsonLd={videoSchema}

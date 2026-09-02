@@ -173,6 +173,7 @@ const FAQ = () => {
         title="End-of-Life Planning FAQ — Questions Answered"
         description="Answers to common questions about end-of-life and digital legacy planning — what it covers, who needs it, when to start, and how it works at work."
         canonical="/faq"
+        breadcrumbs={[{ name: "FAQ", path: "/faq" }]}
         jsonLd={faqSchema}
       />
       <ResponsiveNavbar />
