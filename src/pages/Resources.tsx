@@ -19,6 +19,7 @@ const Resources = () => {
         title="Resources — Legacy Readiness Tools & Guides"
         description="Practical tools, expert insights, and digital guides to help you and your organization prepare for end-of-life with confidence."
         canonical="/resources"
+        breadcrumbs={[{ name: "Guides & Tools", path: "/resources" }]}
       />
       <ResponsiveNavbar />
 

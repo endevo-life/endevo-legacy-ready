@@ -10,6 +10,7 @@ const Contact = () => {
         title="Contact Us — End-of-Life Planning Support"
         description="Get in touch with the ENDevo team about end-of-life planning, digital legacy, and employer wellness programs. We're here to help you prepare with clarity."
         canonical="/contact"
+        breadcrumbs={[{ name: "Contact", path: "/contact" }]}
       />
       <ResponsiveNavbar />
       <main className="pt-16">

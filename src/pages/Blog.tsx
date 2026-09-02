@@ -109,6 +109,7 @@ const Blog = () => {
         title="Blog — Digital Legacy & End-of-Life Planning"
         description="Expert articles on digital legacy, estate planning, grief support, and end-of-life preparation — practical guidance for individuals, families, and employers."
         canonical="/blog"
+        breadcrumbs={[{ name: "Articles", path: "/blog" }]}
         jsonLd={blogListSchema}
       />
       <ResponsiveNavbar />

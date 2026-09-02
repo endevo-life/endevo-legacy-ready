@@ -45,6 +45,9 @@ const WWSServiceProviders = () => {
         title="Referral Network for Attorneys & Financial Advisors"
         description="Join ENDevo's referral network for attorneys, financial advisors, and insurance pros — pre-qualified clients ready for estate, legacy, and digital planning."
         canonical="/for-service-providers"
+        breadcrumbs={[
+          { name: "Advisors & Providers", path: "/for-service-providers" },
+        ]}
       />
       <ResponsiveNavbar />
       <main className="pt-16">

@@ -8,6 +8,12 @@ interface SEOProps {
   ogType?: "website" | "article";
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noIndex?: boolean;
+  /**
+   * Trail from Home to this page, excluding Home itself. Emitted as
+   * BreadcrumbList so search results show the path rather than a bare URL,
+   * and answer engines can see where a page sits in the site.
+   */
+  breadcrumbs?: { name: string; path: string }[];
 }
 
 const SITE_NAME = "ENDevo";
@@ -115,10 +121,27 @@ export default function SEO({
   ogType = "website",
   jsonLd,
   noIndex = false,
+  breadcrumbs,
 }: SEOProps) {
   const fullTitle = fitTitle(title);
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : undefined;
   const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+
+  // Home is always the first crumb, so callers pass only what follows it.
+  if (breadcrumbs?.length) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [{ name: "Home", path: "/" }, ...breadcrumbs].map(
+        (crumb, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: crumb.name,
+          item: `${SITE_URL}${crumb.path}`,
+        }),
+      ),
+    });
+  }
 
   return (
     <Helmet>

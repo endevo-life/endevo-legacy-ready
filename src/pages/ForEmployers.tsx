@@ -27,6 +27,7 @@ const WWSEmployers = () => {
         title="Employer Wellness & Legacy Readiness for HR Teams"
         description="Support employees through life's hardest moments with ENDevo's legacy readiness program for HR teams — reduce absenteeism and strengthen business continuity."
         canonical="/for-employers"
+        breadcrumbs={[{ name: "Employers", path: "/for-employers" }]}
       />
       <ResponsiveNavbar />
       <main className="pt-16">

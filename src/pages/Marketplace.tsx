@@ -35,6 +35,7 @@ const Marketplace = () => {
         title="Readiness Hub: Legacy Planning Marketplace | ENDevo"
         description="A complete legacy planning marketplace — find trusted partners and resources across legal, financial, physical, and digital to bring your plan to life."
         canonical="/marketplace"
+        breadcrumbs={[{ name: "Readiness Hub", path: "/marketplace" }]}
       />
       <ResponsiveNavbar />
       <main className="pt-16">

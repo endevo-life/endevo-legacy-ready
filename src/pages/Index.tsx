@@ -22,16 +22,46 @@ const Index = () => {
         title="ENDevo — Legacy Readiness & Digital Preparedness"
         description="ENDevo helps individuals, families, and employers achieve Legacy Readiness. Protect your digital footprint, estate, and life story with intention."
         canonical="/"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "ENDevo",
-          url: "https://www.endevo.life",
-          logo: "https://www.endevo.life/favicon.png",
-          description:
-            "Legacy Readiness & Digital Preparedness platform for individuals, families, and employers.",
-          sameAs: ["https://www.youtube.com/@DigitalLegacyPodcast"],
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "ENDevo",
+            url: "https://www.endevo.life",
+            logo: "https://www.endevo.life/favicon.png",
+            description:
+              "Legacy Readiness & Digital Preparedness platform for individuals, families, and employers.",
+            // Every profile we actually run. sameAs is how a search or answer
+            // engine confirms these accounts are the same entity as the site.
+            sameAs: [
+              "https://www.youtube.com/@DigitalLegacyPodcast",
+              "https://www.linkedin.com/company/endevo-digitallegacy/",
+              "https://www.instagram.com/endevo_digitallegacy/",
+              "https://www.facebook.com/endevo.digitallegacy/",
+              "https://www.tiktok.com/@endevo_digitallegacy",
+              "https://medium.com/@endevo_digitallegacy",
+            ],
+            founder: {
+              "@type": "Person",
+              name: "Niki Weiss",
+              jobTitle: "Founder and Thanatologist",
+              url: "https://www.endevo.life/company#niki",
+            },
+          },
+          {
+            // Names the site as an entity distinct from the organization, which
+            // is what lets a search engine show a sitelinks search box.
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "ENDevo",
+            url: "https://www.endevo.life",
+            publisher: {
+              "@type": "Organization",
+              name: "ENDevo",
+              url: "https://www.endevo.life",
+            },
+          },
+        ]}
       />
       <ResponsiveNavbar />
       <main className="pt-16">

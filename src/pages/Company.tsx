@@ -83,6 +83,7 @@ const Company = () => {
         title="About Us — End-of-Life Planning Mission & Team"
         description="Learn about ENDevo's mission to help people achieve Legacy Readiness. Meet the team behind the digital preparedness platform."
         canonical="/company"
+        breadcrumbs={[{ name: "About", path: "/company" }]}
         jsonLd={nikiSchema}
       />
       <ResponsiveNavbar />
