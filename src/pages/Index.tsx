@@ -7,7 +7,6 @@ import ToolsForEmployersSection from "@/components/ToolsForEmployersSection";
 import VideoSection from "@/components/VideoSection";
 import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 import FeaturedTestimonialsSection from "@/components/FeaturedTestimonialsSection";
-import LatestSection from "@/components/LatestSection";
 import SpeakingEventsSection from "@/components/SpeakingEventsSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -163,7 +162,6 @@ const Index = () => {
             full list on /resources#client-stories cannot drift apart. */}
         <FeaturedTestimonialsSection />
 
-        <LatestSection />
         {/* Stories From Across Our Community Section */}
         <FamilyTestimonialsSection />
       </main>
