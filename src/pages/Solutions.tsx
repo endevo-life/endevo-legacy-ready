@@ -324,19 +324,33 @@ const Solutions = () => {
                 <h2 className="text-2xl font-bold mt-1">For Enterprise</h2>
               </div>
               <div className="p-6 flex flex-col flex-1">
+                {/*
+                  Named the moment instead of describing it. "Absence and
+                  distraction" is how a benefits deck talks about people; a
+                  parent dying and the decisions that follow is what actually
+                  happens, and it is the thing Niki says constantly.
+                */}
                 <p className="text-muted-foreground mb-5">
-                  Your people carry this alone, and it shows up as absence and
-                  distraction long before anyone talks about it. Give them a
-                  structured plan and a private place to work through it.
+                  When someone on your team loses a parent, the hardest part
+                  often is not the grief — it is the hundreds of decisions
+                  nobody prepared them for. Give them a plan before they need
+                  it, and a private place to build it.
                 </p>
                 <ul className="space-y-2.5 mb-6 flex-1">
                   {[
                     "Your own private, isolated workspace",
                     "Every person gets their own guided plan",
-                    "Ongoing support as their circumstances change",
+                    // "Ongoing support as their circumstances change" said
+                    // nothing. The real property is that the plan is revisable,
+                    // which is step 5 of the five-step story — so name the life
+                    // events that trigger a revision.
+                    "A plan they can revisit when life changes — a move, a diagnosis, a new grandchild",
                     "A video library for your whole team",
                     "1:1 sessions with our team",
-                    "You see participation and topics, never what anyone wrote",
+                    // "Participation and topics" is reporting jargon and made
+                    // the reader work out the privacy promise. Two plain
+                    // sentences: what HR gets, and what it never gets.
+                    "You see how many people are taking part. You never see anyone's answers.",
                   ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-sm">
                       <Check
