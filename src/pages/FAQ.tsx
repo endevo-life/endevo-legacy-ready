@@ -13,6 +13,60 @@ type FAQ = {
 
 const faqs: FAQ[] = [
   {
+    question: "What is Legacy Readiness OS?",
+    bottomLine:
+      "The product ENDevo sells, in two editions: for individuals, and for enterprise. Both run the same guided plan across Legal, Financial, Physical, and Digital. The finished plan you keep is called My Final Playbook.",
+    fullStory: [
+      "Legacy Readiness OS is a structured plan for the things most people know they should sort out and never do — the will, the accounts, the passwords, the healthcare directive, the instructions nobody has written down.",
+      "It answers a question a checklist cannot: not just what you need, but what order to do it in, and what to gather before you sit down with a lawyer. You answer questions about your actual situation, and it builds a plan around that rather than handing you a template.",
+      "Two editions, one product. For Individuals is bought directly and worked through at your own pace. For Enterprise gives an organization a private workspace where every employee builds their own plan, with participation reporting and no visibility into what anyone wrote.",
+      "The deliverable in both cases is My Final Playbook: a finished, organized plan your family can actually use.",
+    ],
+  },
+  {
+    question: "How much does Legacy Readiness OS cost?",
+    bottomLine:
+      "$500 for a year of access for an individual, with no subscription. Enterprise pricing is quoted per organization. You can take the assessment and see your plan before you pay anything.",
+    fullStory: [
+      "For an individual it is $500 for a year of access. There is no subscription and no per-document fee — the price covers the assessment, the guidance, and the finished Playbook.",
+      "You can start free. Answer the questions, see the plan built for your situation, and decide afterwards whether to pay for the full Playbook. Nobody is asked for a card to find out what they need to do.",
+      "Enterprise pricing depends on the size of the organization and what is included, so it is quoted rather than listed. It covers a private workspace, ongoing access for every employee, a video library, and 1:1 sessions with the ENDevo team.",
+      "For comparison: an attorney-drafted estate plan typically runs several thousand dollars. Legacy Readiness OS does not replace that lawyer. It makes the conversation shorter, because you arrive knowing what you need and carrying the documents.",
+    ],
+  },
+  {
+    question: "How is this different from making a will with a lawyer?",
+    bottomLine:
+      "ENDevo drafts nothing. It tells you which documents you need, in what order, and what to gather beforehand — so the attorney conversation is shorter and costs less. It also covers the digital and practical parts a will never touches.",
+    fullStory: [
+      "A will is one document among many, and it only governs what happens to your assets after you die. It says nothing about who can access your accounts, what your medical wishes are while you are alive but unable to speak, or where anything is kept.",
+      "Legacy Readiness OS covers all four pillars: Legal (will, power of attorney, executor), Financial (accounts, insurance, beneficiaries), Physical (healthcare directive, final wishes), and Digital (account access, legacy contacts, subscriptions).",
+      "Two failures we see constantly happen after the paperwork is done. A trust is created but never funded, so the assets it was meant to shelter still go through probate. And a beneficiary designation on a retirement account or life insurance policy — which overrides the will entirely — is never updated after a divorce or remarriage.",
+      "Neither is a drafting problem. Both are execution problems, and execution is what this is built for.",
+    ],
+  },
+  {
+    question: "How long does it take, and what do I actually end up with?",
+    bottomLine:
+      "Most people work through it in a few sittings rather than one. You end up with My Final Playbook — a finished plan across all four pillars that your family can actually follow.",
+    fullStory: [
+      "This is not a form you fill in once. You answer questions about your real situation, get a plan built around it, and work through the milestones at whatever pace fits your life. Most people take a few sittings.",
+      "You set your own deadline, and you can move it. Life happens; the plan accommodates that rather than expiring.",
+      "The finished Playbook is organized, accessible, and written for the people who will need it — not a folder of documents nobody can interpret. It is yours to keep.",
+      "And it is revisable. A move, a diagnosis, a new grandchild, a divorce: come back and update it. A plan is not a document you finish once.",
+    ],
+  },
+  {
+    question: "Who can see what I write?",
+    bottomLine:
+      "Only you. If your employer brought you here, they see that you are taking part and nothing else — never your answers, never your documents.",
+    fullStory: [
+      "Your plan is yours. ENDevo does not store your documents. If you ask for a copy by email, it is held encrypted for up to three days so it can be delivered, then deleted automatically.",
+      "For employees on an organization's plan, the reporting an employer receives is participation and completion rates — how many people are taking part, and how far they have got. Never the contents of anyone's plan, and never anyone's answers.",
+      "That separation is deliberate and structural, not a policy promise. An employer cannot see individual content because the reporting is not built to expose it.",
+    ],
+  },
+  {
     question: "What is end-of-life planning as an employee benefit?",
     bottomLine:
       "A structured, project-managed wellness program that guides employees through building a complete end-of-life plan across Legal, Financial, Physical, and Digital before any crisis occurs. The deliverable is My Final Playbook.",
@@ -171,7 +225,7 @@ const FAQ = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="End-of-Life Planning FAQ — Questions Answered"
-        description="Answers to common questions about end-of-life and digital legacy planning — what it covers, who needs it, when to start, and how it works at work."
+        description="Answers on Legacy Readiness OS — what it is, what it costs, how it differs from making a will, who sees your plan, and how it works as a benefit."
         canonical="/faq"
         breadcrumbs={[{ name: "FAQ", path: "/faq" }]}
         jsonLd={faqSchema}
