@@ -421,10 +421,19 @@ const Solutions = () => {
               demos; in production it stays unset — and the slot shows a calm
               placeholder — until the file is hosted (GHL media library or
               YouTube) and the variable is set in Vercel.
+
+              Saving is discouraged: controlsList hides the download and
+              playback-rate items, picture-in-picture is off, and the context
+              menu is suppressed. These are browser hints, not protection —
+              the file still travels over the network, so anything that must
+              truly stay private needs a signed or DRM-backed host.
             */}
             {PROMO_VIDEO_URL ? (
               <video
                 controls
+                controlsList="nodownload noplaybackrate"
+                disablePictureInPicture
+                onContextMenu={(e) => e.preventDefault()}
                 preload="metadata"
                 playsInline
                 className="w-full rounded-xl shadow-xl bg-brand-navy aspect-video"
