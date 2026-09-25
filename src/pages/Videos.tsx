@@ -6,6 +6,7 @@ import { makeVideoSlug } from "@/lib/videoSlug";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import PodcastGuestSection from "@/components/PodcastGuestSection";
 import {
   useYouTubePlaylist,
   shortsPlaylistId,
@@ -319,6 +320,12 @@ const Videos = () => {
           <p className="mt-4 text-white/80 text-lg max-w-xl mx-auto">
             Watch our podcast episodes, interviews, and digital legacy insights.
           </p>
+          <a
+            href="#be-a-guest"
+            className="mt-6 inline-block rounded-full border-2 border-white px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gray-900"
+          >
+            Be a guest on the podcast
+          </a>
         </div>
       </section>
 
@@ -437,6 +444,8 @@ const Videos = () => {
           </div>
         )}
       </main>
+
+      <PodcastGuestSection />
 
       <Footer />
 

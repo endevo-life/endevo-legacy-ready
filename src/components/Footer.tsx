@@ -284,6 +284,13 @@ const Footer = () => {
                 Read our Blogs
               </Link>
             </div>
+            <Link
+              to="/videos#be-a-guest"
+              title="Sign up to be a guest on the Digital Legacy Podcast"
+              className="text-brand-orange text-sm font-semibold hover:underline py-2 md:py-1 inline-block"
+            >
+              Be a guest on the podcast →
+            </Link>
           </div>
 
           {/* The newsletter signup previously sat here. It is hidden until
