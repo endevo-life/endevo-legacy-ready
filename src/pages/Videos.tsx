@@ -6,6 +6,7 @@ import { makeVideoSlug } from "@/lib/videoSlug";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import PodcastGuestSection from "@/components/PodcastGuestSection";
 import {
   useYouTubePlaylist,
   shortsPlaylistId,
@@ -319,6 +320,12 @@ const Videos = () => {
           <p className="mt-4 text-white/80 text-lg max-w-xl mx-auto">
             Watch our podcast episodes, interviews, and digital legacy insights.
           </p>
+          <a
+            href="#be-a-guest"
+            className="mt-6 inline-block rounded-full border-2 border-white px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gray-900"
+          >
+            Be a guest on the podcast
+          </a>
         </div>
       </section>
 
@@ -349,93 +356,99 @@ const Videos = () => {
         </div>
       </div>
 
-      <main className="container max-w-7xl mx-auto px-4 py-10">
-        {/* Search */}
-        <div className="mb-8">
-          <input
-            type="text"
-            placeholder={`Search ${typeFilter === "long" ? "videos" : "shorts"}...`}
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-              setCurrentPage(1);
-            }}
-            className="border border-gray-300 rounded-full px-4 py-2 text-sm w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-orange-400"
-          />
+      <main>
+        <div className="container max-w-7xl mx-auto px-4 py-10">
+          {/* Search */}
+          <div className="mb-8">
+            <input
+              type="text"
+              placeholder={`Search ${typeFilter === "long" ? "videos" : "shorts"}...`}
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="border border-gray-300 rounded-full px-4 py-2 text-sm w-full max-w-xs focus:outline-none focus:ring-2 focus:ring-orange-400"
+            />
+          </div>
+
+          {isLoading && (
+            <div className="flex items-center justify-center py-24 gap-3 text-muted-foreground">
+              <Loader2 className="w-6 h-6 animate-spin" />
+              <span>Loading videos…</span>
+            </div>
+          )}
+
+          {isError && !isLoading && (
+            <div className="rounded-lg border border-destructive/50 bg-destructive/10 text-destructive px-6 py-5 text-sm max-w-lg">
+              Could not load some videos. Please try again later.
+            </div>
+          )}
+
+          {!isLoading && filtered.length === 0 && (
+            <div className="text-center py-20 text-muted-foreground">
+              <p>No videos found.</p>
+            </div>
+          )}
+
+          {!isLoading && filtered.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8 lg:gap-[75px]">
+              {paginated.map((v) => (
+                <VideoCard
+                  key={v.id}
+                  video={v}
+                  onClick={() => handleVideoClick(v)}
+                />
+              ))}
+            </div>
+          )}
+
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-2 mt-10">
+              <button
+                onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 text-sm font-semibold rounded-full border transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-white text-gray-600 border-gray-300 hover:border-[#FF5A00]"
+              >
+                ← Prev
+              </button>
+
+              {(() => {
+                const start = Math.min(
+                  Math.max(currentPage - 1, 1),
+                  Math.max(totalPages - 2, 1),
+                );
+                return [start, start + 1, start + 2]
+                  .filter((p) => p <= totalPages)
+                  .map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`w-9 h-9 text-sm font-semibold rounded-full border transition-colors ${
+                        currentPage === page
+                          ? "bg-[#FF5A00] text-white border-[#FF5A00]"
+                          : "bg-white text-gray-600 border-gray-300 hover:border-[#FF5A00]"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ));
+              })()}
+
+              <button
+                onClick={() =>
+                  setCurrentPage((p) => Math.min(p + 1, totalPages))
+                }
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 text-sm font-semibold rounded-full border transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-white text-gray-600 border-gray-300 hover:border-[#FF5A00]"
+              >
+                Next →
+              </button>
+            </div>
+          )}
         </div>
 
-        {isLoading && (
-          <div className="flex items-center justify-center py-24 gap-3 text-muted-foreground">
-            <Loader2 className="w-6 h-6 animate-spin" />
-            <span>Loading videos…</span>
-          </div>
-        )}
-
-        {isError && !isLoading && (
-          <div className="rounded-lg border border-destructive/50 bg-destructive/10 text-destructive px-6 py-5 text-sm max-w-lg">
-            Could not load some videos. Please try again later.
-          </div>
-        )}
-
-        {!isLoading && filtered.length === 0 && (
-          <div className="text-center py-20 text-muted-foreground">
-            <p>No videos found.</p>
-          </div>
-        )}
-
-        {!isLoading && filtered.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8 lg:gap-[75px]">
-            {paginated.map((v) => (
-              <VideoCard
-                key={v.id}
-                video={v}
-                onClick={() => handleVideoClick(v)}
-              />
-            ))}
-          </div>
-        )}
-
-        {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2 mt-10">
-            <button
-              onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-              disabled={currentPage === 1}
-              className="px-4 py-2 text-sm font-semibold rounded-full border transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-white text-gray-600 border-gray-300 hover:border-[#FF5A00]"
-            >
-              ← Prev
-            </button>
-
-            {(() => {
-              const start = Math.min(
-                Math.max(currentPage - 1, 1),
-                Math.max(totalPages - 2, 1),
-              );
-              return [start, start + 1, start + 2]
-                .filter((p) => p <= totalPages)
-                .map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => setCurrentPage(page)}
-                    className={`w-9 h-9 text-sm font-semibold rounded-full border transition-colors ${
-                      currentPage === page
-                        ? "bg-[#FF5A00] text-white border-[#FF5A00]"
-                        : "bg-white text-gray-600 border-gray-300 hover:border-[#FF5A00]"
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ));
-            })()}
-
-            <button
-              onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-              disabled={currentPage === totalPages}
-              className="px-4 py-2 text-sm font-semibold rounded-full border transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-white text-gray-600 border-gray-300 hover:border-[#FF5A00]"
-            >
-              Next →
-            </button>
-          </div>
-        )}
+        <PodcastGuestSection />
       </main>
 
       <Footer />
