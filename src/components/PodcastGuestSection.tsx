@@ -9,8 +9,11 @@ const EMBED_SCRIPT = "https://link.endevo.life/js/form_embed.js";
  * The form is long (contact details, socials, talking points, headshot and
  * file uploads, interview date), so a fixed iframe height would either clip it
  * or leave a large gap. GHL's form_embed.js resizes the iframe to the form's
- * real height — a <script> tag in JSX never runs, so it is loaded here. The
- * inline height is only the fallback if the script is blocked.
+ * real height. A <script> element that React creates on the client is not
+ * executed, so on client-side navigation to this page a JSX script tag would
+ * never load; appending it from an effect loads it however the page is
+ * reached, and only once. The inline height is only the fallback if the
+ * script is blocked.
  *
  * The footer links here via /videos#be-a-guest.
  */
