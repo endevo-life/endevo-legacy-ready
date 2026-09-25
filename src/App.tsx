@@ -10,7 +10,6 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-import AIChatBot from "@/components/AIChatBot";
 import CookieBanner from "@/components/CookieBanner";
 import GhlFormTracker from "@/components/GhlFormTracker";
 import { initializeConsentMode, trackPageView } from "@/lib/analytics";
