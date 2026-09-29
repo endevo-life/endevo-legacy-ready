@@ -7,6 +7,8 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import PodcastGuestSection from "@/components/PodcastGuestSection";
+import PodcastAudioSection from "@/components/PodcastAudioSection";
+import PodcastResourcesSection from "@/components/PodcastResourcesSection";
 import {
   useYouTubePlaylist,
   shortsPlaylistId,
@@ -448,6 +450,8 @@ const Videos = () => {
           )}
         </div>
 
+        <PodcastAudioSection />
+        <PodcastResourcesSection />
         <PodcastGuestSection />
       </main>
 
