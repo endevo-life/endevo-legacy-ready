@@ -82,7 +82,12 @@ const ROUTES = [
   },
   {
     path: "/videos",
-    files: ["src/pages/Videos.tsx"],
+    files: [
+      "src/pages/Videos.tsx",
+      "src/components/PodcastAudioSection.tsx",
+      "src/components/PodcastResourcesSection.tsx",
+      "src/components/PodcastGuestSection.tsx",
+    ],
     changefreq: "weekly",
     priority: "0.8",
   },
