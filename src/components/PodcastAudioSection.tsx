@@ -17,7 +17,10 @@ const PLATFORMS: Platform[] = [
     name: "Apple Podcasts",
     href: "https://podcasts.apple.com/us/podcast/death-and-dying-in-the-digital-age/id1775499012",
   },
-  { name: "Spotify", href: "https://open.spotify.com/show/2MQkOgvyPQnLEz1fO9BHkY" },
+  {
+    name: "Spotify",
+    href: "https://open.spotify.com/show/2MQkOgvyPQnLEz1fO9BHkY",
+  },
   {
     name: "Amazon Music",
     href: "https://music.amazon.com/podcasts/7fde1e5a-a51c-4f03-aee8-b29a856e2a6b/death-and-dying-in-the-digital-age",
@@ -52,8 +55,8 @@ const PodcastAudioSection = () => {
           Listen to the Podcast
         </h2>
         <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-          Prefer audio? Catch every episode of the Digital Legacy Podcast
-          right here, or subscribe on your favorite platform.
+          Prefer audio? Catch every episode of the Digital Legacy Podcast right
+          here, or subscribe on your favorite platform.
         </p>
 
         <div className="rounded-xl overflow-hidden shadow-lg mb-8">
