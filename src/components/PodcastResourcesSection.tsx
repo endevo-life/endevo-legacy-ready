@@ -64,8 +64,8 @@ const PodcastResourcesSection = () => {
             Tools to Plan, Protect and Find Peace of Mind
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            More from the Digital Legacy Podcast: a quick preparedness check,
-            a worksheet to get organized, and partners who can help.
+            More from the Digital Legacy Podcast: a quick preparedness check, a
+            worksheet to get organized, and partners who can help.
           </p>
         </div>
 
