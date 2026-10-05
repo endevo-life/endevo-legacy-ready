@@ -12,58 +12,14 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
  * One platform, two buyers, and they cannot share a page without a hard visual
  * break: an employer seeing a consumer price assumes we are not built for them,
  * and an individual seeing an implementation fee leaves. So the fork is the
- * whole page — the cards above the fold, nothing else competing, each routing
+ * whole page — two cards above the fold, nothing else competing, each routing
  * to the one action that buyer can actually take.
  *
- * The B2B price is deliberately absent, to keep room to negotiate per employer,
- * and that card carries what the tier actually adds over the individual ones:
- * ongoing support, the video library, and 1:1 sessions. The individual prices
- * are the two permanent B2C tiers — see B2C_TIERS below.
+ * Neither card shows a price. Pricing was briefly published (#130) and pulled
+ * at the founder's direction — packaging is still being decided, so this page
+ * must not publish a number again until that is settled. If pricing is
+ * reintroduced, treat it as a deliberate, reviewed decision, not a flag flip.
  */
-
-/**
- * The two permanent B2C tiers, mirroring the Stripe catalog
- * (scripts/op/create-stripe-catalog.ts in legacy-readiness-os): Classic and
- * Concierge, priced and scoped for real, not a discount off one price.
- *
- * KEEP THESE NUMBERS IN SYNC WITH THE STRIPE CATALOG. The webhook reads plan,
- * sessions and aiMonthlyCap off the Stripe Price metadata — nothing here
- * creates or enforces them. This page only describes what Stripe already
- * charges; if the catalog changes, update here to match, not the other way
- * around.
- */
-const B2C_TIERS = {
-  classic: {
-    key: "classic",
-    name: "Classic",
-    price: "$100",
-    priceNote: "a year",
-    checkoutUrl: import.meta.env.VITE_CHECKOUT_URL_CLASSIC as
-      | string
-      | undefined,
-    features: [
-      "A plan built around your life, not a template",
-      "Work through it at your own pace",
-      "Your finished Playbook, yours to keep",
-      "No employer needed, no sales call",
-    ],
-  },
-  concierge: {
-    key: "concierge",
-    name: "Concierge",
-    price: "$500",
-    priceNote: "a year",
-    checkoutUrl: import.meta.env.VITE_CHECKOUT_URL_CONCIERGE as
-      | string
-      | undefined,
-    features: [
-      "Everything in Classic",
-      "2 planning sessions with our team included",
-      "More AI-assisted guidance each month while you build your plan",
-      "Additional sessions available at $295 each",
-    ],
-  },
-};
 
 /**
  * The promo video ships with the site so it is live everywhere from day one;
@@ -72,6 +28,15 @@ const B2C_TIERS = {
 const PROMO_VIDEO_URL =
   (import.meta.env.VITE_PROMO_VIDEO_URL as string | undefined) ||
   "/videos/promo-v11.mp4";
+
+/**
+ * The product checkout. Unset while payment is still being integrated on the
+ * app side — the card's button stays "Get your invite" and feeds the
+ * waitlist. The moment checkout is live, set VITE_CHECKOUT_URL in Vercel and
+ * the button becomes "Start now" pointing at it. Going live is an env var,
+ * not a deploy.
+ */
+const CHECKOUT_URL = import.meta.env.VITE_CHECKOUT_URL as string | undefined;
 
 /** The five steps, in the visitor's words rather than the product's. */
 const STEPS = [
@@ -114,16 +79,9 @@ const Solutions = () => {
         { "@type": "Audience", audienceType: "Employers and HR teams" },
         { "@type": "Audience", audienceType: "Individuals and families" },
       ],
-      // Both B2C tiers, so search results and answer engines can quote either
-      // price rather than only the one that happened to render first.
-      offers: [B2C_TIERS.classic, B2C_TIERS.concierge].map((tier) => ({
-        "@type": "Offer",
-        name: `Legacy Readiness OS — ${tier.name}`,
-        price: tier.price.replace("$", ""),
-        priceCurrency: "USD",
-        availability: "https://schema.org/InStock",
-        url: "https://www.endevo.life/start-here",
-      })),
+      // No `offers` entry: packaging and pricing are undecided (see the
+      // comment above the fork), so nothing here should assert a price to
+      // search engines or AI answer tools either.
     },
     // Answer-engine targets: these are the questions people actually type, and
     // the answers are what an AI assistant will quote back when asked.
@@ -137,14 +95,6 @@ const Solutions = () => {
           acceptedAnswer: {
             "@type": "Answer",
             text: "Legacy readiness is knowing what you need to put in order — legally, financially, digitally, and medically — and in what order to do it. ENDevo turns that into a structured plan with milestones and a date, rather than a checklist you never finish.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How much does ENDevo cost for an individual?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `Legacy Readiness OS for individuals is ${B2C_TIERS.classic.price} a year for Classic, or ${B2C_TIERS.concierge.price} a year for Concierge, which adds two planning sessions with our team. Both are a year of access, with no subscription. You can start the assessment and see your plan before you pay.`,
           },
         },
         {
@@ -198,16 +148,14 @@ const Solutions = () => {
 
         {/* ---------- The fork ---------- */}
         <section id="pricing" className="px-4 -mt-8 pb-20 scroll-mt-24">
-          <div className="container max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-            {/* B2C — Classic */}
+          <div className="container max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+            {/* B2C */}
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
               <div className="bg-brand-orange/10 border-b-2 border-brand-orange px-6 py-4">
                 <span className="text-xs font-bold tracking-widest uppercase text-brand-orange-dark">
                   Legacy Readiness OS
                 </span>
-                <h2 className="text-2xl font-bold mt-1">
-                  For Individuals — {B2C_TIERS.classic.name}
-                </h2>
+                <h2 className="text-2xl font-bold mt-1">For Individuals</h2>
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-muted-foreground mb-5">
@@ -216,7 +164,12 @@ const Solutions = () => {
                   is yours to keep.
                 </p>
                 <ul className="space-y-2.5 mb-6 flex-1">
-                  {B2C_TIERS.classic.features.map((item) => (
+                  {[
+                    "A plan built around your life, not a template",
+                    "Work through it at your own pace",
+                    "Your finished Playbook, yours to keep",
+                    "No employer needed, no sales call",
+                  ].map((item) => (
                     <li key={item} className="flex gap-2.5 text-sm">
                       <Check
                         className="h-4 w-4 text-brand-orange shrink-0 mt-0.5"
@@ -226,24 +179,14 @@ const Solutions = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mb-4 text-center">
-                  <div className="flex items-baseline justify-center gap-2.5">
-                    <span className="text-3xl font-bold text-brand-orange tabular-nums">
-                      {B2C_TIERS.classic.price}
-                    </span>
-                    <span className="text-sm text-muted-foreground">
-                      {B2C_TIERS.classic.priceNote}
-                    </span>
-                  </div>
-                </div>
                 <Button
                   asChild
                   size="lg"
                   className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold"
                 >
-                  {B2C_TIERS.classic.checkoutUrl ? (
-                    <a href={B2C_TIERS.classic.checkoutUrl}>
-                      Start now — {B2C_TIERS.classic.price}
+                  {CHECKOUT_URL ? (
+                    <a href={CHECKOUT_URL}>
+                      Start now
                       <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                     </a>
                   ) : (
@@ -254,7 +197,7 @@ const Solutions = () => {
                   )}
                 </Button>
                 <p className="text-xs text-muted-foreground text-center mt-3">
-                  Start free · {B2C_TIERS.classic.price} when you are ready
+                  Start free · pricing shared when you request your invite
                 </p>
 
                 {/*
@@ -276,70 +219,6 @@ const Solutions = () => {
                   for a mobile tool is already in a different mindset. The web
                   page sells one thing.
                 */}
-              </div>
-            </div>
-
-            {/* B2C — Concierge */}
-            <div className="bg-card rounded-xl border-2 border-brand-orange shadow-lg overflow-hidden flex flex-col relative">
-              {/* Concierge is the higher-touch, higher-price tier — a small
-                  badge earns it a second look without a discount gimmick. */}
-              <span className="absolute top-3 right-3 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full">
-                More support
-              </span>
-              <div className="bg-brand-orange/10 border-b-2 border-brand-orange px-6 py-4">
-                <span className="text-xs font-bold tracking-widest uppercase text-brand-orange-dark">
-                  Legacy Readiness OS
-                </span>
-                <h2 className="text-2xl font-bold mt-1">
-                  For Individuals — {B2C_TIERS.concierge.name}
-                </h2>
-              </div>
-              <div className="p-6 flex flex-col flex-1">
-                <p className="text-muted-foreground mb-5">
-                  Everything in Classic, plus real time with our team when you
-                  want a second set of eyes on the harder decisions.
-                </p>
-                <ul className="space-y-2.5 mb-6 flex-1">
-                  {B2C_TIERS.concierge.features.map((item) => (
-                    <li key={item} className="flex gap-2.5 text-sm">
-                      <Check
-                        className="h-4 w-4 text-brand-orange shrink-0 mt-0.5"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mb-4 text-center">
-                  <div className="flex items-baseline justify-center gap-2.5">
-                    <span className="text-3xl font-bold text-brand-orange tabular-nums">
-                      {B2C_TIERS.concierge.price}
-                    </span>
-                    <span className="text-sm text-muted-foreground">
-                      {B2C_TIERS.concierge.priceNote}
-                    </span>
-                  </div>
-                </div>
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold"
-                >
-                  {B2C_TIERS.concierge.checkoutUrl ? (
-                    <a href={B2C_TIERS.concierge.checkoutUrl}>
-                      Start now — {B2C_TIERS.concierge.price}
-                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                    </a>
-                  ) : (
-                    <a href="#get-invite">
-                      Get your invite
-                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                    </a>
-                  )}
-                </Button>
-                <p className="text-xs text-muted-foreground text-center mt-3">
-                  Start free · {B2C_TIERS.concierge.price} when you are ready
-                </p>
               </div>
             </div>
 
