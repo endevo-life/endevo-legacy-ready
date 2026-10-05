@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://www.endevo.life/blog</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -155,6 +155,30 @@
     <lastmod>2026-06-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.endevo.life/blog/grief-that-arrives-before-the-actual-death-anticipating-the-loss</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.endevo.life/blog/who-will-know-what-to-do-when-you-cannot</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.endevo.life/blog/why-pet-loss-deserves-more-compassion-and-better-planning</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.endevo.life/blog/when-life-insurance-does-not-pay</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.endevo.life/blog/your-will-is-a-rudimentary-document</loc>
