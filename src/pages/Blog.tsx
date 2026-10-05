@@ -33,7 +33,13 @@ const Blog = () => {
 
   const { data: sanityPosts = [] } = useBlogPosts();
   const sanityMapped: BlogPostWithSanity[] = sanityPosts.map((p) => ({
-    image: urlFor(p.image).width(740).height(588).fit("crop").url(),
+    // A post can be published with no cover image yet (editors add it later
+    // in Studio) — urlFor() throws on a null source, which crashed this
+    // whole page for every visitor the moment one such post existed.
+    // BlogPost.tsx already guards the same call; this mirrors that guard.
+    image: p.image
+      ? urlFor(p.image).width(740).height(588).fit("crop").url()
+      : "",
     title: p.title,
     date: (() => {
       try {
@@ -167,11 +173,17 @@ const Blog = () => {
                 className="shadow-md overflow-hidden flex flex-col bg-white w-full max-w-[368px]"
               >
                 <div className="w-full h-48 sm:h-56 md:h-[220px] lg:h-[294px] overflow-hidden bg-gray-100">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                      <span className="text-gray-400 text-sm">No image</span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-3 flex flex-col flex-1">
                   <p className="text-sm text-muted-foreground mb-1">
@@ -267,11 +279,13 @@ const Blog = () => {
             className="bg-white w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl mx-2"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={selectedPost.image}
-              alt={selectedPost.title}
-              className="w-full h-48 sm:h-64 md:h-72 object-cover object-top"
-            />
+            {selectedPost.image && (
+              <img
+                src={selectedPost.image}
+                alt={selectedPost.title}
+                className="w-full h-48 sm:h-64 md:h-72 object-cover object-top"
+              />
+            )}
             <div className="p-4 sm:p-8">
               <p className="text-sm text-muted-foreground mb-2">
                 {selectedPost.date}
