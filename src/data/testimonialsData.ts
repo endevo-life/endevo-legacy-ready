@@ -40,7 +40,7 @@ export const testimonials: Testimonial[] = [
   // --- Video testimonials (featured on the homepage) -----------------------
   {
     id: "jeff-monger",
-    name: "Jeff Monger",
+    name: "Jeff M.",
     role: "Realtor",
     quote:
       "As I've gotten older, I've realized how uncomfortable most people are talking about death and dying. That's why I'm so grateful for Niki's openness and her willingness to share her knowledge in such an accessible way. She brings attention to so many aspects of end-of-life planning, including the emotional, financial, and physical components, that most of us haven't even considered. Her mission to educate and support others in this space is truly invaluable. I'm confident that My Final Playbook will be a tremendous success because it's something we all need. Thank you, Niki.",
@@ -53,8 +53,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "mary-cioffi",
-    name: "Mary Cioffi",
-    role: "Business Coach",
+    name: "Mary C.",
+    role: "Executive Coach",
     quote:
       "When I first started working with Niki and My Final Playbook, I didn't know what to expect. But it turned out to be a very positive experience. I was faced with an enormous list of things I hadn't even thought about — tasks that would need to be handled in the event of an accident or my passing. Thanks to Niki, those things are no longer a source of stress for my family. It's hard enough when a loved one is in an accident or passes away. Niki makes it simple to get everything in order so you can feel more at peace with whatever happens, knowing your loved ones have the support they need to figure things out.",
     photo: `${GHL_MEDIA}/6866bbe8a379105ee5b13e6f.jpeg`,
@@ -68,7 +68,7 @@ export const testimonials: Testimonial[] = [
   // --- Text testimonials ---------------------------------------------------
   {
     id: "todd-pollock",
-    name: "Todd Pollock",
+    name: "Todd P.",
     role: "Ops Technology Consultant",
     relationship: "I am/was a client",
     quote:
@@ -81,7 +81,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "jan-watson",
-    name: "Jan Watson",
+    name: "Jan W.",
+    role: "Retired",
     quote:
       "Working with Niki and building My Final Playbook has been transformative. I'm a true procrastinator, and had been thinking about making needed changes to my will for quite a while. Despite thinking I was well-prepared, the process revealed gaps I hadn't even considered, from my digital and social media legacy to practical green burial options. The platform's intuitive tools and personalized approach helped me organize my documents, clarify my wishes, and gain peace of mind. Niki and her end-of-life planning system provided solutions and a framework to align my end-of-life planning with my values and vision for the future.",
     photo: `${GHL_MEDIA}/6866b8379ca6fb127b1767ec.jpeg`,
@@ -91,7 +92,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "sherah-cooney",
-    name: "Sherah Cooney",
+    name: "Sherah C.",
+    role: "Customer Success Manager",
     quote:
       "After working with Niki in creating a Crucial Doc Box, I feel more prepared and at peace than I ever have. Niki was amazing during the entire process and guided me at a pace that worked for me. This sounds strange, but I actually got excited to put this Crucial Doc Box together. Because now, if anything happens to me or my husband or both of us, we have everything in one place so our executor can access all of our essential documents easily. I highly recommend Niki to anyone who wants to prepare for the inevitable for peace of mind today.",
     photo: `${GHL_MEDIA}/6866b8b0006fa75ceb32edd4.jpeg`,
@@ -101,7 +103,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "kristen-mcmahon",
-    name: "Kristen McMahon",
+    name: "Kristen M.",
+    role: "Client Care Manager",
     quote:
       "Niki Weiss is a true professional who brings both compassion and expertise to a difficult process. She helped me start the process of organizing all the necessary documents for end-of-life planning, and her guidance made everything much less overwhelming. Niki is incredibly knowledgeable, patient, and kind, answering every question and offering helpful information with care and understanding. Her dedication to making this process as smooth as possible was deeply appreciated, and I feel so much more at ease knowing that everything will be in order. I highly recommend Niki to anyone needing support during this important stage of life planning.",
     photo: `${GHL_MEDIA}/6866b949ec92f431bd02b71f.jpeg`,
@@ -111,7 +114,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "jayne-lammers",
-    name: "Jayne Lammers",
+    name: "Jayne L.",
+    role: "Dissertation Coach",
     quote:
       "Having someone like Niki walk you through end-of-life planning and creating a final playbook is invaluable! I'm embarrassed to say I study digital learning and work for an educational technology company, but I had never given any thought to the digital aspect of end-of-life planning until I worked with Niki. If you know you need a plan that protects your digital and physical assets, but you don't know where to start — I highly recommend you reach out to Niki Weiss to guide you in creating your final playbook!",
     photo: `${GHL_MEDIA}/6866b9c15143a2a67701d00b.jpeg`,
@@ -120,7 +124,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "lory-pilchik",
-    name: "Lory Pilchik",
+    name: "Lory P.",
+    role: "Marketing Executive",
     quote:
       "After years of procrastination as a single person and, even more urgently and importantly, after I married late in life to a father of two adult children, Niki's support and end-of-life planning system were incredibly valuable and just what I needed. The My Final Playbook framework not only addresses the technical aspects of end-of-life planning but also provides the strategic guidance necessary for making informed decisions about our future. What sets Niki apart is her ability to guide us through the legal, financial, and digital steps in end-of-life planning, transforming them into a clear, actionable roadmap. Critically, her framework and system of accountability prompted the necessary self-reflection, pushed me to stay on track, and is now ensuring that our wishes are properly documented and our loved ones are protected.",
     photo: `${GHL_MEDIA}/6866b7f55143a20cd401cdaf.jpeg`,
@@ -129,7 +134,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "ellen-fineberg",
-    name: "Ellen Fineberg",
+    name: "Ellen F.",
+    role: "Retired",
     quote:
       "Working with Niki has been invaluable in helping me get my Final Playbook in order. I've been procrastinating on these important tasks for a while, but Niki's guidance has given me the push I needed. She's helped me realize this isn't just a 'final' playbook, but a \"Living Playbook\" evolving document that needs regular attention. From reviewing my legal documents to setting up accounts for my family, Niki has helped provide the structure and accountability I was missing. I'm slowly gaining the peace of mind that comes from getting my affairs in order, and I'm grateful for Niki's expertise and support throughout this process.",
     rating: 5,
@@ -137,7 +143,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "patty-welsh",
-    name: "Patty Welsh",
+    name: "Patty W.",
+    role: "Retired",
     quote:
       "The final playbook has helped guide me through a difficult and challenging subject that is unfortunately avoided by most. The tools that the playbook offers help you delve deeper into personal beliefs and desires in a clear and easy to use layout. The process gives peace of mind in a respectful, comfortable, and easy-to-use format. This is a crucial subject that brings peace of mind to you and those you leave behind.",
     photo: `${GHL_MEDIA}/6866be0fc5b220524d7123da.jpeg`,
@@ -146,7 +153,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "julie-esposito",
-    name: "Julie Esposito",
+    name: "Julie E.",
+    role: "Project Manager",
     quote:
       "Before working with Niki, end-of-life planning felt overwhelming and scary. I was paralyzed by my fear of death, shaped by losing my parents unexpectedly. Niki didn't just help me create a document — she helped me transform my perspective. Her approach broke down complex concepts into digestible pieces, making me understand the importance of planning. What truly set Niki apart was her compassionate guidance, helping me see that this isn't about dying — it's about living fully and ensuring my family is taken care of.",
     rating: 5,
