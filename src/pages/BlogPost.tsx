@@ -209,7 +209,7 @@ const BlogPost = () => {
           </Link>
           {/* The follow row: for the reader who is not ready to start a plan,
               following is the smaller yes. Same list the footer renders. */}
-          <div className="mt-8">
+          <div className="mt-8" id="article-follow-row">
             <p className="text-sm text-muted-foreground mb-3">
               Follow along — new episodes and articles every week
             </p>
@@ -238,6 +238,60 @@ const BlogPost = () => {
                 </a>
               ))}
             </div>
+          </div>
+        </aside>
+
+        {/*
+          A second, more direct block below the quiet one above. That block
+          is deliberately soft (see its own comment); this one names the
+          specific channels and what following each one gets the reader —
+          more articles, more episodes, ongoing updates — rather than
+          leaving it to generic icons alone.
+        */}
+        <aside className="mt-8 pt-8 border-t border-gray-200 text-center">
+          <div className="grid gap-3 max-w-xl mx-auto sm:grid-cols-3">
+            {[
+              {
+                label: "Subscribe on Medium",
+                sublabel: "for new articles",
+                href: socialLinks.find((s) => s.label === "Medium")?.href,
+              },
+              {
+                label: "Subscribe on YouTube",
+                sublabel: "for upcoming videos",
+                href: socialLinks.find((s) => s.label === "YouTube")?.href,
+              },
+            ].map(({ label, sublabel, href }) =>
+              href ? (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg border border-gray-200 px-4 py-3 hover:border-orange-500 hover:bg-orange-50/50 transition-colors"
+                >
+                  <span className="block font-medium text-gray-900">
+                    {label}
+                  </span>
+                  <span className="block text-sm text-muted-foreground">
+                    {sublabel}
+                  </span>
+                </a>
+              ) : null,
+            )}
+            {/* "Stay connected" has no single platform — it scrolls up to
+                the follow row's full set of icons rather than picking one. */}
+            <a
+              href="#article-follow-row"
+              className="rounded-lg border border-gray-200 px-4 py-3 hover:border-orange-500 hover:bg-orange-50/50 transition-colors"
+            >
+              <span className="block font-medium text-gray-900">
+                Stay connected
+              </span>
+              <span className="block text-sm text-muted-foreground">
+                on social media
+              </span>
+            </a>
           </div>
         </aside>
 
