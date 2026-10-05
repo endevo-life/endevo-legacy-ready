@@ -15,46 +15,11 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
  * whole page — two cards above the fold, nothing else competing, each routing
  * to the one action that buyer can actually take.
  *
- * The B2B price is deliberately absent, to keep room to negotiate per employer,
- * and that card carries what the tier actually adds over the individual one:
- * ongoing support, the video library, and 1:1 sessions. The individual price is
- * shown against its anchor — see FOUNDING_OFFER below.
+ * Neither card shows a price. Pricing was briefly published (#130) and pulled
+ * at the founder's direction — packaging is still being decided, so this page
+ * must not publish a number again until that is settled. If pricing is
+ * reintroduced, treat it as a deliberate, reviewed decision, not a flag flip.
  */
-
-/**
- * Founding-member offer.
- *
- * $500 is the price; $100 is a reason to act now. Stated willingness-to-pay
- * scattered from $50 to $500, which says people were pricing against whatever
- * they last bought — an app at the low end, an attorney at the high end. The
- * anchor is what resolves that: beside $500 this is clearly a plan, not a
- * checklist app, and $100 reads as a decision rather than a discount.
- *
- * BOTH LIMITS MUST BE REAL. If someone finds $100 still here in March, the
- * $500 was never true and neither is anything else we say — and this is a
- * buyer already deciding who to trust with the hardest paperwork of their life.
- * So: stop at 200, and honour the date. Whichever lands first ends it.
- *
- * No live remaining-count is shown. A hardcoded number goes stale and a stale
- * count is worse than none; the real figure lives in the CRM.
- *
- * TO CLOSE THE OFFER: set FOUNDING_OFFER.active to false. The card falls back
- * to the full price and the banner disappears — no other edits needed.
- */
-const FOUNDING_OFFER = {
-  // OFF: the founding-member terms are an internal decision, not public copy.
-  // The seat count and deadline are commitments we would then have to honour
-  // in public, and the offer is not being announced that way. With this false
-  // the page simply shows the full price and no countdown, and every string
-  // below falls back automatically.
-  active: false,
-  fullPrice: "$500",
-  price: "$100",
-  seats: 200,
-  /** Machine-readable for schema.org; keep in step with endsLabel. */
-  endsISO: "2027-01-15",
-  endsLabel: "January 15",
-};
 
 /**
  * The promo video ships with the site so it is live everywhere from day one;
@@ -114,21 +79,9 @@ const Solutions = () => {
         { "@type": "Audience", audienceType: "Employers and HR teams" },
         { "@type": "Audience", audienceType: "Individuals and families" },
       ],
-      // priceValidUntil carries the same date the page shows, so the offer we
-      // publish to search engines expires exactly when the real one does.
-      ...(FOUNDING_OFFER.active
-        ? {
-            offers: {
-              "@type": "Offer",
-              name: "Founding member pricing",
-              price: FOUNDING_OFFER.price.replace("$", ""),
-              priceCurrency: "USD",
-              priceValidUntil: FOUNDING_OFFER.endsISO,
-              availability: "https://schema.org/LimitedAvailability",
-              url: "https://www.endevo.life/start-here",
-            },
-          }
-        : {}),
+      // No `offers` entry: packaging and pricing are undecided (see the
+      // comment above the fork), so nothing here should assert a price to
+      // search engines or AI answer tools either.
     },
     // Answer-engine targets: these are the questions people actually type, and
     // the answers are what an AI assistant will quote back when asked.
@@ -142,14 +95,6 @@ const Solutions = () => {
           acceptedAnswer: {
             "@type": "Answer",
             text: "Legacy readiness is knowing what you need to put in order — legally, financially, digitally, and medically — and in what order to do it. ENDevo turns that into a structured plan with milestones and a date, rather than a checklist you never finish.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How much does ENDevo cost for an individual?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `Legacy Readiness OS for individuals is ${FOUNDING_OFFER.fullPrice} for a year of access, with no subscription. You can start the assessment and see your plan before you pay.`,
           },
         },
         {
@@ -203,15 +148,6 @@ const Solutions = () => {
 
         {/* ---------- The fork ---------- */}
         <section id="pricing" className="px-4 -mt-8 pb-20 scroll-mt-24">
-          {FOUNDING_OFFER.active && (
-            <div className="container max-w-5xl mx-auto mb-6">
-              <p className="bg-brand-orange text-white text-center text-sm font-semibold rounded-lg px-5 py-3 shadow-lg">
-                Founding member pricing — {FOUNDING_OFFER.price} instead of{" "}
-                {FOUNDING_OFFER.fullPrice} for the first {FOUNDING_OFFER.seats}{" "}
-                people, through {FOUNDING_OFFER.endsLabel}.
-              </p>
-            </div>
-          )}
           <div className="container max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             {/* B2C */}
             <div className="bg-card rounded-xl border border-border shadow-lg overflow-hidden flex flex-col">
@@ -243,32 +179,6 @@ const Solutions = () => {
                     </li>
                   ))}
                 </ul>
-                {/*
-                  The anchor does the work here: $500 struck through tells the
-                  visitor what they are getting before the $100 tells them what
-                  they pay. Without it, $100 sets the category — and the
-                  category it sets is "checklist app", which we lose on
-                  features. The strikethrough is marked up with <s> so it is
-                  announced as superseded rather than read as the live price.
-                */}
-                {FOUNDING_OFFER.active && (
-                  <div className="mb-4 text-center">
-                    <div className="flex items-baseline justify-center gap-2.5">
-                      <s className="text-lg text-muted-foreground/70 tabular-nums">
-                        {FOUNDING_OFFER.fullPrice}
-                      </s>
-                      <span className="text-3xl font-bold text-brand-orange tabular-nums">
-                        {FOUNDING_OFFER.price}
-                      </span>
-                      <span className="text-sm text-muted-foreground">
-                        for a year
-                      </span>
-                    </div>
-                    <p className="text-xs font-semibold text-brand-orange-dark mt-1.5 uppercase tracking-wide">
-                      Founding member price
-                    </p>
-                  </div>
-                )}
                 <Button
                   asChild
                   size="lg"
@@ -276,10 +186,7 @@ const Solutions = () => {
                 >
                   {CHECKOUT_URL ? (
                     <a href={CHECKOUT_URL}>
-                      Start now —{" "}
-                      {FOUNDING_OFFER.active
-                        ? FOUNDING_OFFER.price
-                        : FOUNDING_OFFER.fullPrice}
+                      Start now
                       <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                     </a>
                   ) : (
@@ -290,7 +197,7 @@ const Solutions = () => {
                   )}
                 </Button>
                 <p className="text-xs text-muted-foreground text-center mt-3">
-                  Start free · {FOUNDING_OFFER.fullPrice} when you are ready
+                  Start free · pricing shared when you request your invite
                 </p>
 
                 {/*
