@@ -70,6 +70,45 @@ export const blogPostSchema = {
             },
           ],
         },
+        {
+          // A real playable embed, not a plain-text link — these articles
+          // are written from a podcast conversation, and the point is to let
+          // the reader watch it without leaving the page.
+          type: "object",
+          name: "youtubeEmbed",
+          title: "YouTube Video",
+          fields: [
+            {
+              name: "videoId",
+              title: "YouTube Video ID",
+              type: "string",
+              description:
+                "Just the id, e.g. for youtube.com/watch?v=BHaU508My7M enter BHaU508My7M.",
+              validation: (R: Rule) => R.required(),
+            },
+            {
+              name: "caption",
+              title: "Caption (optional)",
+              type: "string",
+              description: 'e.g. "Watch the full conversation"',
+            },
+          ],
+          preview: {
+            select: { videoId: "videoId", caption: "caption" },
+            prepare({
+              videoId,
+              caption,
+            }: {
+              videoId?: string;
+              caption?: string;
+            }) {
+              return {
+                title: caption || "YouTube video",
+                subtitle: videoId,
+              };
+            },
+          },
+        },
       ],
     },
     {

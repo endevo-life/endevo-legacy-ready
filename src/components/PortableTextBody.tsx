@@ -75,6 +75,29 @@ const components: PortableTextComponents = {
         </figure>
       );
     },
+    youtubeEmbed: ({ value }) => {
+      // A block with no video id renders nothing rather than a broken
+      // embed — same guard the image type above uses for a missing asset.
+      if (!value?.videoId) return null;
+      return (
+        <figure className="my-8">
+          <div className="aspect-video rounded-lg overflow-hidden bg-black">
+            <iframe
+              src={`https://www.youtube.com/embed/${value.videoId}`}
+              title={value.caption || "YouTube video"}
+              className="w-full h-full"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            />
+          </div>
+          {value.caption && (
+            <figcaption className="mt-2 text-sm text-muted-foreground text-center">
+              {value.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    },
   },
   block: {
     normal: ({ children }) => (
