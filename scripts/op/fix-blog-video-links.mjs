@@ -79,7 +79,9 @@ async function fixDoc(id) {
   });
 
   if (idx === -1) {
-    console.log(`✓ ${id}: no plain-text link found (already fixed, or never had one)`);
+    console.log(
+      `✓ ${id}: no plain-text link found (already fixed, or never had one)`,
+    );
     return;
   }
 
@@ -87,7 +89,9 @@ async function fixDoc(id) {
   const match = text.match(LINK_PATTERN);
   const videoId = match[1];
 
-  console.log(`→ ${id}: replacing plain-text link with youtubeEmbed (${videoId})`);
+  console.log(
+    `→ ${id}: replacing plain-text link with youtubeEmbed (${videoId})`,
+  );
 
   const newContent = [...content];
   newContent[idx] = {
@@ -107,7 +111,11 @@ async function fixDoc(id) {
 }
 
 async function main() {
-  console.log(DRY_RUN ? "DRY RUN — no documents will be changed.\n" : "LIVE RUN — patching documents.\n");
+  console.log(
+    DRY_RUN
+      ? "DRY RUN — no documents will be changed.\n"
+      : "LIVE RUN — patching documents.\n",
+  );
   for (const id of DOC_IDS) {
     await fixDoc(id);
   }

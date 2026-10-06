@@ -103,7 +103,9 @@ const article1 = {
     para(
       "You bought the policy. You paid the premiums. You named a beneficiary. You placed the paperwork somewhere safe. You assume that when you die, the insurance company will send the money to the person you chose.",
     ),
-    para("That is how life insurance is supposed to work. But supposed to is not the same as guaranteed."),
+    para(
+      "That is how life insurance is supposed to work. But supposed to is not the same as guaranteed.",
+    ),
     para(
       "In a recent episode of the Digital Legacy Podcast, I spoke with Stephie Prestridge, an estate attorney whose practice shifted toward helping families with life insurance claims. She kept seeing policies that should have been straightforward become denied, delayed, or disputed.",
     ),
@@ -145,7 +147,9 @@ const article1 = {
       "This is a digital legacy issue. Every beneficiary choice, percentage, checkbox, and confirmation stored in an online system can shape what happens to real people after your death. Technology can speed up the process, but it cannot confirm that the final result matches your intent unless someone reviews it carefully.",
     ),
     heading("The Damage Is Bigger Than the Missing Money"),
-    para("When a claim stalls, the financial impact is obvious. What families often underestimate is the emotional cost."),
+    para(
+      "When a claim stalls, the financial impact is obvious. What families often underestimate is the emotional cost.",
+    ),
     para(
       "Death, grief, caregiving, and money can expose every fracture in a family. One sibling may have provided years of unpaid care. Another may believe a last-minute beneficiary change was unfair. Someone else may question whether an aging parent understood what they signed. By the time attorneys become involved, they may be able to resolve the claim, but they may not be able to repair the relationship.",
     ),
@@ -178,8 +182,12 @@ const article1 = {
     para(
       "That is why My Final Playbook uses a practical process: reflect, decide, document, execute, communicate, and iterate. Each step closes a different gap. Reflection clarifies what matters. Decisions establish your wishes. Documentation records them. Execution makes them valid. Communication tells the right people where to look. Iteration keeps the plan current as life changes.",
     ),
-    para("A life insurance policy should deliver protection, not confusion. The best time to test that protection is while you are alive, capable, and available to correct a mistake."),
-    para("Do not leave your family a locked box with no key. Leave them a clear path to the help you intended to provide."),
+    para(
+      "A life insurance policy should deliver protection, not confusion. The best time to test that protection is while you are alive, capable, and available to correct a mistake.",
+    ),
+    para(
+      "Do not leave your family a locked box with no key. Leave them a clear path to the help you intended to provide.",
+    ),
   ],
 };
 
@@ -199,12 +207,18 @@ const article2 = {
   externalLink:
     "https://medium.com/@endevo_digitallegacy/grief-that-arrives-before-the-actual-death-anticipating-the-loss-473f91f911b4",
   content: [
-    para("A conversation with Terri Chaplin, Certified Grief Companion and Educator"),
+    para(
+      "A conversation with Terri Chaplin, Certified Grief Companion and Educator",
+    ),
     para(
       "Think about what actually happens when someone dies. The condolences arrive. Someone organizes meals. Colleagues send messages. An employer approves three days of leave. A funeral gets scheduled and people travel to it. For roughly a week, a machinery of support switches on.",
     ),
-    para('Now notice what all of it has in common. Every piece is triggered by the same event: "Death."'),
-    para("That works if grief begins at death. For a great many people, it does not."),
+    para(
+      'Now notice what all of it has in common. Every piece is triggered by the same event: "Death."',
+    ),
+    para(
+      "That works if grief begins at death. For a great many people, it does not.",
+    ),
     para(
       "On this episode of Death & Dying in the Digital Age, I spoke with Terri Chaplin, a Certified Grief Companion, HeartMath Certified Mentor, and Accredited Course Provider who works with grieving people through a companioning model. She came to the work through her own losses, and she is direct about the one almost nobody names.",
     ),
@@ -219,7 +233,9 @@ const article2 = {
     para(
       "She is emphatic about a misconception that causes real harm. People assume anticipatory grief front-loads the work, that you arrive at the death already partly through it. Her clients tell her the opposite, over and over. They thought they were ready. Nothing prepared them for the moment they could no longer hold the person's hand.",
     ),
-    para("Anticipatory grief does not subtract from what comes later. It adds to it."),
+    para(
+      "Anticipatory grief does not subtract from what comes later. It adds to it.",
+    ),
     heading("What it looks like when it is not sadness"),
     para(
       "Most people expect grief to look like crying. Terri's list of how anticipatory grief actually presents is worth sitting with, because almost none of it looks like mourning.",
@@ -244,7 +260,9 @@ const article2 = {
     para(
       "According to Caregiving in the US 2025, the AARP and National Alliance for Caregiving report, 63 million Americans are family caregivers. That is roughly one in four adults, a 45% increase since 2015. Nearly a quarter provide 40 or more hours of care per week. A third have been doing it for five years or more. Sixty-four percent report high emotional stress.",
     ),
-    para("Seventy percent of caregivers under 65 are working, and half report the caregiving affecting their work."),
+    para(
+      "Seventy percent of caregivers under 65 are working, and half report the caregiving affecting their work.",
+    ),
     para(
       "Every one of those people is standing in the window before the trigger. Bereavement leave does not reach them, because nobody has died. Employee assistance bereavement services do not reach them, for the same reason. The meal train does not arrive. The condolence messages do not send.",
     ),
@@ -252,7 +270,9 @@ const article2 = {
       "The support architecture we have built activates at the exact moment the caregiver has already spent years being depleted by something no policy recognized as loss. Then it offers three days.",
     ),
     heading("What technology can and cannot do here"),
-    para("I asked her about grief bots and AI companions, because it is the question my field cannot avoid."),
+    para(
+      "I asked her about grief bots and AI companions, because it is the question my field cannot avoid.",
+    ),
     para(
       "Her answer was measured. She has seen apps that send a grieving person a daily message, and she can see the value, because grief is isolating and the people around you return to their lives, as they should. She tried a bot on her own website and removed it, because showing up as herself mattered more to her than scaling.",
     ),
@@ -313,7 +333,9 @@ const article3 = {
       "A conversation with Jorge C. Jorge, MBA, a financial professional with 1847 Financial whose work includes retirement, insurance, and legacy planning.",
     ),
     para("By Niki Weiss, Digital Thanatologist and Founder of ENDevo"),
-    para("Most plans answer a private question: what do I want to happen? Your family will face a more immediate one: what do we do first?"),
+    para(
+      "Most plans answer a private question: what do I want to happen? Your family will face a more immediate one: what do we do first?",
+    ),
     para(
       "If the people you trust do not know where your information lives, whom to call, or what role they have, even a thoughtful plan can leave them unprepared at the exact moment they need direction.",
     ),
@@ -354,7 +376,9 @@ const article3 = {
     para(
       "Jorge compared this to a car repair. If a mechanic says the transmission needs to be replaced, you can go home and try to repeat the explanation to your spouse. You may forget a detail, misunderstand the warranty, or answer a question the mechanic should answer.",
     ),
-    para("The simpler choice is to bring your spouse into the conversation with the mechanic."),
+    para(
+      "The simpler choice is to bring your spouse into the conversation with the mechanic.",
+    ),
     para(
       "The same principle applies here. Invite the people who may need to act into a meeting with the financial professional, insurance professional, attorney, or tax adviser. Let them hear the explanation directly, ask questions, and meet the people they may need later.",
     ),
@@ -376,7 +400,9 @@ const article3 = {
     para(
       "Show the appropriate person how your system is organized without casually sharing passwords or weakening security. Explain where access instructions are kept, which records matter most, and whom to contact if the technology fails.",
     ),
-    para("Think of it as a tour, not a data dump. Your family needs a map and a first point of contact."),
+    para(
+      "Think of it as a tour, not a data dump. Your family needs a map and a first point of contact.",
+    ),
     heading("Three things to do now"),
     para(
       "1. Name the people who may need to act. Review the legal, financial, healthcare, caregiving, and digital roles in your plan. Confirm that each person knows they have been named and is willing to serve.",
@@ -391,13 +417,19 @@ const article3 = {
     para(
       "Preparation is not only about preserving money or recording preferences. It is about reducing the number of unfamiliar decisions your family must make while grieving, caregiving, or responding to a crisis.",
     ),
-    para("The goal is not to give your family every answer. It is to make sure they are not starting from zero."),
-    para("Your family should hear the plan from you before they have to piece it together without you."),
+    para(
+      "The goal is not to give your family every answer. It is to make sure they are not starting from zero.",
+    ),
+    para(
+      "Your family should hear the plan from you before they have to piece it together without you.",
+    ),
     heading("Listen and take the next step"),
     para(
       "Listen to the full conversation with Jorge C. Jorge on the Death and Dying in the Digital Age podcast. You can also connect with Jorge through his LinkedIn profile.",
     ),
-    para("To identify gaps in your own legacy readiness, take ENDevo's free Peace of Mind Assessment."),
+    para(
+      "To identify gaps in your own legacy readiness, take ENDevo's free Peace of Mind Assessment.",
+    ),
     para("Live fully, die ready."),
   ],
 };
@@ -425,11 +457,15 @@ const article4 = {
       "A conversation with Koryn Greenspan, founder of The Parted Paw, a certified pet loss and grief specialist, end-of-life pet doula, and ACC-ICF coach.",
     ),
     para("By Niki Weiss, Digital Thanatologist and Founder of ENDevo"),
-    para("Most end-of-life planning asks what you want to happen. Pet loss asks something harder. It asks you to decide when."),
+    para(
+      "Most end-of-life planning asks what you want to happen. Pet loss asks something harder. It asks you to decide when.",
+    ),
     para(
       "That is the part nobody warns you about. You are not only losing your animal. You are the one who picks the room, signs the form, and chooses the morning. You hold an authority most people never hold over a human life, and you usually hold it with no preparation at all.",
     ),
-    para("That combination is why so many pet parents end up carrying something heavier than grief. They carry regret."),
+    para(
+      "That combination is why so many pet parents end up carrying something heavier than grief. They carry regret.",
+    ),
     para(
       "On this episode of Death and Dying in the Digital Age, I spoke with Koryn Greenspan, founder of The Parted Paw in Toronto. She has spent fifteen years working with pets and the people who love them, and she supports grieving pet parents before, during, and after a loss. She also works with veterinary teams on compassion fatigue.",
     ),
@@ -453,19 +489,29 @@ const article4 = {
     para(
       "She drew one distinction that stayed with me. The people in our lives have lives of their own outside us. A pet's whole existence depends on choices we make for them.",
     ),
-    para("That dependence is what makes the bond so strong, and what makes the ending so complicated."),
+    para(
+      "That dependence is what makes the bond so strong, and what makes the ending so complicated.",
+    ),
     heading("The decision nobody names out loud"),
-    para("We decide what our pets eat, when they go out, where they sleep. Most of the time, we also decide when the last day is."),
+    para(
+      "We decide what our pets eat, when they go out, where they sleep. Most of the time, we also decide when the last day is.",
+    ),
     para(
       "Koryn connected something I had not put together. Pet parents routinely make a decision about ending suffering that people are only beginning to have access to for themselves. We hand that authority to ordinary families and offer almost no guidance on how to carry it.",
     ),
-    para("You are not only watching a decline. You are the person being asked to decide."),
+    para(
+      "You are not only watching a decline. You are the person being asked to decide.",
+    ),
     heading("Why her sessions fill up with regret"),
     para(
       "Koryn does a lot of anticipatory grief work, and she explained why. When she sits with someone after a pet has died, much of the time goes to what they believe they got wrong.",
     ),
-    para("Did they wait too long. Did they act too soon. Should it have happened at home instead of a clinic."),
-    para("Most of those questions trace back to choices made in a hurry by people who were never told what the options were."),
+    para(
+      "Did they wait too long. Did they act too soon. Should it have happened at home instead of a clinic.",
+    ),
+    para(
+      "Most of those questions trace back to choices made in a hurry by people who were never told what the options were.",
+    ),
     para(
       "Many pet parents do not know that in-home euthanasia exists. They learn it afterward, from someone who mentions it kindly, and it becomes one more thing to replay at two in the morning.",
     ),
@@ -486,8 +532,12 @@ const article4 = {
     para(
       "We lost a dog this past Memorial Day. Before that day came, we had the conversations. We chose in-home hospice instead of a final car ride to the clinic. At $630 it was not cheap, but we had budgeted for it. We chose a backyard burial, and we dug the hole early.",
     ),
-    para("When the day arrived, it was quiet. She did not have to be moved. Nobody was making decisions in a parking lot."),
-    para("The grief still came, and it came fully. What planning removed was everything else we would have spent months second-guessing."),
+    para(
+      "When the day arrived, it was quiet. She did not have to be moved. Nobody was making decisions in a parking lot.",
+    ),
+    para(
+      "The grief still came, and it came fully. What planning removed was everything else we would have spent months second-guessing.",
+    ),
     heading("Three things to do now"),
     para(
       "1. Decide the logistics while your pet is well. Where do you want it to happen, who should be in the room, and what happens afterward: cremation, burial, a pet cemetery, aquamation. Ask your veterinarian now whether in-home euthanasia is available where you live, because most people learn it exists too late to choose it.",
@@ -499,7 +549,9 @@ const article4 = {
       "3. Say the plan out loud to one person. Tell your partner, a friend, or your vet. If you live alone, Koryn suggests saying it out loud to yourself and then finding someone to repeat it to. A plan nobody else knows about is one you carry alone at the worst moment.",
     ),
     heading("What we are actually preparing for"),
-    para("I spend most of my time on readiness for human loss. This conversation reframed something."),
+    para(
+      "I spend most of my time on readiness for human loss. This conversation reframed something.",
+    ),
     para(
       "For a lot of adults, a pet is where end-of-life authority first lands in your hands. You decide about care, comfort, timing, and what happens to a body. Whatever you learn doing that becomes practice for the decisions waiting for you later, about a parent, a partner, or yourself.",
     ),
@@ -510,12 +562,16 @@ const article4 = {
       "Koryn's closing advice was the simplest thing she said all episode. Your pet is still here. If they are still here, celebrate them every single minute.",
     ),
     para("Preparing does not steal time from that. It protects it."),
-    para("The day will come when someone has to decide. Make sure that someone is not deciding for the first time."),
+    para(
+      "The day will come when someone has to decide. Make sure that someone is not deciding for the first time.",
+    ),
     heading("Listen and take the next step"),
     para(
       "Listen to the full conversation with Koryn Greenspan on the Death and Dying in the Digital Age podcast. You can learn more about her work, including her 21-day Elevate Your Grief workbook, at The Parted Paw.",
     ),
-    para("To identify gaps in your own legacy readiness, take ENDevo's free Peace of Mind Assessment."),
+    para(
+      "To identify gaps in your own legacy readiness, take ENDevo's free Peace of Mind Assessment.",
+    ),
     para("Live fully, die ready."),
     para(
       "This article is educational and does not provide legal, medical, veterinary, or mental health advice. Consult qualified professionals about your situation.",
@@ -526,7 +582,11 @@ const article4 = {
 const POSTS = [article1, article2, article3, article4];
 
 async function main() {
-  console.log(DRY_RUN ? "DRY RUN — no documents will be created.\n" : "LIVE RUN — creating documents.\n");
+  console.log(
+    DRY_RUN
+      ? "DRY RUN — no documents will be created.\n"
+      : "LIVE RUN — creating documents.\n",
+  );
 
   for (const post of POSTS) {
     console.log(`→ ${post.title}`);
@@ -543,9 +603,15 @@ async function main() {
 
   console.log("\nDone.");
   console.log("\n⚠ Reminders:");
-  console.log("  - No cover image set on any post yet (Studio will flag this; upload once generated).");
-  console.log("  - Article 4's date (2026-09-26) is a PLACEHOLDER — confirm the real publish date and update in Studio.");
-  console.log("  - Video links are plain text in the body for now (Sanity has no video block type yet).");
+  console.log(
+    "  - No cover image set on any post yet (Studio will flag this; upload once generated).",
+  );
+  console.log(
+    "  - Article 4's date (2026-09-26) is a PLACEHOLDER — confirm the real publish date and update in Studio.",
+  );
+  console.log(
+    "  - Video links are plain text in the body for now (Sanity has no video block type yet).",
+  );
 }
 
 main().catch((err) => {

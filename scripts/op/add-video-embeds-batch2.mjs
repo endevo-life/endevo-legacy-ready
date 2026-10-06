@@ -118,7 +118,11 @@ async function addEmbed({ id, title, videoId, guest }) {
 }
 
 async function main() {
-  console.log(DRY_RUN ? "DRY RUN — no documents will be changed.\n" : "LIVE RUN — patching documents.\n");
+  console.log(
+    DRY_RUN
+      ? "DRY RUN — no documents will be changed.\n"
+      : "LIVE RUN — patching documents.\n",
+  );
   for (const t of TARGETS) await addEmbed(t);
   console.log("\nDone.");
 }
