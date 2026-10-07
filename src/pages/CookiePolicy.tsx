@@ -1,10 +1,17 @@
 import Footer from "@/components/Footer";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 import { Info } from "lucide-react";
 
 const CookiePolicy = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Cookie Policy"
+        description="Which cookies ENDevo uses, why we use them, and how you can control them."
+        canonical="/legal/cookie-policy"
+        breadcrumbs={[{ name: "Cookie Policy", path: "/legal/cookie-policy" }]}
+      />
       <ResponsiveNavbar />
       <main className="pt-20">
         {/* Header */}
@@ -631,7 +638,7 @@ const CookiePolicy = () => {
                   <p className="text-gray-700">
                     <span className="font-semibold">🌐 Website:</span>{" "}
                     <a
-                      href="https://endevo.life/contact"
+                      href="/contact"
                       className="text-brand-orange hover:underline"
                     >
                       endevo.life/contact
@@ -667,7 +674,7 @@ const CookiePolicy = () => {
                   </li>
                   <li>
                     <a
-                      href="/cookie-settings"
+                      href="/legal/cookie-settings"
                       className="text-brand-orange hover:underline font-medium"
                     >
                       → Manage Cookie Settings
@@ -697,7 +704,7 @@ const CookiePolicy = () => {
                   </a>
                   <span>|</span>
                   <a
-                    href="https://endevo.life/contact"
+                    href="/contact"
                     className="text-brand-orange font-semibold hover:underline"
                   >
                     endevo.life/contact
