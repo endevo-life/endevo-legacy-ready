@@ -1,8 +1,17 @@
 import Footer from "@/components/Footer";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Terms of Service"
+        description="The terms that govern your use of the ENDevo website, Legacy Readiness OS, and related services."
+        canonical="/legal/terms-of-service"
+        breadcrumbs={[
+          { name: "Terms of Service", path: "/legal/terms-of-service" },
+        ]}
+      />
       <ResponsiveNavbar />
       <main className="pt-20">
         {/* Header */}
@@ -531,7 +540,7 @@ const TermsOfService = () => {
                   <p className="text-gray-700">
                     <span className="font-semibold">🌐 Website:</span>{" "}
                     <a
-                      href="https://endevo.life/contact"
+                      href="/contact"
                       className="text-brand-orange hover:underline"
                     >
                       endevo.life/contact
@@ -573,7 +582,7 @@ const TermsOfService = () => {
                   </a>
                   <span>|</span>
                   <a
-                    href="https://endevo.life/contact"
+                    href="/contact"
                     className="text-brand-orange font-semibold hover:underline"
                   >
                     endevo.life/contact
