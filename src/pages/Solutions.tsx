@@ -27,7 +27,10 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
  */
 const PROMO_VIDEO_URL =
   (import.meta.env.VITE_PROMO_VIDEO_URL as string | undefined) ||
-  "/videos/promo-v11.mp4";
+  "/videos/promo-website-v2.mp4";
+
+/** Still shown before play, so the slot is never a blank navy box. */
+const PROMO_POSTER_URL = "/videos/promo-website-v2-thumb.jpg";
 
 /**
  * The product checkout. Unset while payment is still being integrated on the
@@ -342,6 +345,7 @@ const Solutions = () => {
                 disablePictureInPicture
                 onContextMenu={(e) => e.preventDefault()}
                 preload="metadata"
+                poster={PROMO_POSTER_URL}
                 playsInline
                 className="w-full rounded-xl shadow-xl bg-brand-navy aspect-video"
                 aria-label="What is Legacy Readiness OS? A short introduction"

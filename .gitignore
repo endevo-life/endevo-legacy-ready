@@ -39,3 +39,5 @@ src/assets/blog-cover/
 # library or YouTube) before shipping; a 9MB asset does not belong in git.
 public/videos/*
 !public/videos/promo-v11.mp4
+!public/videos/promo-website-v2.mp4
+!public/videos/promo-website-v2-thumb.jpg
