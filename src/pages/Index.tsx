@@ -8,6 +8,7 @@ import VideoSection from "@/components/VideoSection";
 import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 import FeaturedTestimonialsSection from "@/components/FeaturedTestimonialsSection";
 import SpeakingEventsSection from "@/components/SpeakingEventsSection";
+import MissionVisionSection from "@/components/MissionVisionSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -70,6 +71,8 @@ const Index = () => {
         <DigitalReadinessWellnessSection />
         <VideoSection />
         <SpeakingEventsSection />
+
+        <MissionVisionSection />
 
         {/* Our Human-Centered Support Section */}
         <section className="py-20 bg-background">
