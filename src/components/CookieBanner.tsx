@@ -24,32 +24,46 @@ export const CookieBanner: React.FC = () => {
   });
 
   useEffect(() => {
-    // Check if user has already made a choice
-    const hasConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (!hasConsent) {
-      // Delay showing banner slightly for better UX
-      setTimeout(() => setShowBanner(true), 1000);
-    } else {
-      // Load saved preferences
-      const saved = localStorage.getItem(COOKIE_PREFERENCES_KEY);
-      if (saved) {
-        const prefs = JSON.parse(saved);
-        setPreferences(prefs);
-        initializeTrackingServices(prefs);
+    // Check if user has already made a choice. Blocked storage or a corrupt
+    // saved value is treated as "no choice yet" rather than crashing.
+    let saved: CookiePreferences | null = null;
+    try {
+      if (localStorage.getItem(COOKIE_CONSENT_KEY)) {
+        const raw = localStorage.getItem(COOKIE_PREFERENCES_KEY);
+        saved = raw ? JSON.parse(raw) : null;
       }
+    } catch {
+      saved = null;
     }
+
+    if (!saved) {
+      // Delay showing banner slightly for better UX
+      const timer = setTimeout(() => setShowBanner(true), 1000);
+      return () => clearTimeout(timer);
+    }
+
+    // Load saved preferences
+    setPreferences(saved);
+    initializeTrackingServices(saved);
   }, []);
 
   const savePreferences = (prefs: CookiePreferences) => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, "true");
-    localStorage.setItem(COOKIE_PREFERENCES_KEY, JSON.stringify(prefs));
-    localStorage.setItem(
-      "endevo_cookie_consent_date",
-      new Date().toISOString(),
-    );
-
-    // Close first so a failing tracking script can never leave the banner up
+    // Close first so blocked storage or a failing tracking script can never
+    // leave the banner up
     setShowBanner(false);
+
+    // Storage throws when the browser blocks it (Safari private mode, strict
+    // privacy settings). The choice still applies for this visit.
+    try {
+      localStorage.setItem(COOKIE_CONSENT_KEY, "true");
+      localStorage.setItem(COOKIE_PREFERENCES_KEY, JSON.stringify(prefs));
+      localStorage.setItem(
+        "endevo_cookie_consent_date",
+        new Date().toISOString(),
+      );
+    } catch {
+      // Ignore — the banner will simply ask again next visit
+    }
 
     // Initialize services based on preferences
     initializeTrackingServices(prefs);
