@@ -48,9 +48,11 @@ export const CookieBanner: React.FC = () => {
       new Date().toISOString(),
     );
 
+    // Close first so a failing tracking script can never leave the banner up
+    setShowBanner(false);
+
     // Initialize services based on preferences
     initializeTrackingServices(prefs);
-    setShowBanner(false);
   };
 
   const handleAcceptAll = () => {

@@ -217,6 +217,26 @@ async function prerender() {
       page.on("console", () => {});
       page.on("pageerror", () => {});
 
+      // CookieBanner opens on a 1s timer when no consent is stored, and most
+      // routes take longer than that to settle — so the snapshot captured the
+      // open banner into every page's static HTML. Visitors then saw a banner
+      // whose buttons did nothing until React hydrated (and the mismatch
+      // threw hydration errors #418/#423). Pre-seeding an essential-only
+      // choice keeps the banner out of the capture without granting any
+      // tracking consent in the headless browser.
+      await page.evaluateOnNewDocument(() => {
+        localStorage.setItem("endevo_cookie_consent", "true");
+        localStorage.setItem(
+          "endevo_cookie_preferences",
+          JSON.stringify({
+            strictlyNecessary: true,
+            functional: false,
+            analytics: false,
+            marketing: false,
+          }),
+        );
+      });
+
       // The page is served from localhost, which is not in Sanity's CORS
       // allowlist, so the browser's own fetch would be blocked (403) and
       // every CMS route would render empty. Proxy those requests through
@@ -353,6 +373,14 @@ async function prerender() {
         throw new Error(
           "rendered with the fallback site title — SEO tags did not apply",
         );
+      }
+
+      // Backstop for the consent pre-seed above: a banner in static HTML is
+      // dead until hydration, so never ship one. Matched on the banner's
+      // close-button label, since the privacy policy itself mentions "Your
+      // Privacy Choices".
+      if (html.includes("Close and reject non-essential cookies")) {
+        throw new Error("captured the cookie banner into the static HTML");
       }
 
       const outDir = route === "/" ? distDir : join(distDir, route);
