@@ -49,6 +49,59 @@
       "source": "/wws-service-providers",
       "destination": "/for-service-providers",
       "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/legal/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-settings",
+      "destination": "/legal/cookie-settings",
+      "permanent": true
+    },
+    {
+      "source": "/video",
+      "destination": "/videos",
+      "permanent": true
+    },
+    {
+      "source": "/plan",
+      "destination": "/start-here",
+      "permanent": true
+    },
+    {
+      "source": "/videos/leaving-more-than-passwords-behind-building-a-private-family-legacy-omar-alvarez-mu0KJ58RM7E",
+      "destination": "/videos/leaving-more-than-passwords-behind-building-a-private-family-legacy-omar-alvarez-fePaWfUT-0M",
+      "permanent": true
+    },
+    {
+      "source": "/videos/end-of-life-planning-through-a-project-manager-s-lens-mark-rozner-title-was-wron-gSGRd5cBX4o",
+      "destination": "/videos/end-of-life-planning-through-a-project-manager-s-lens-mark-rozner-SonHlJQdIMc",
+      "permanent": true
+    },
+    {
+      "source": "/videos/medical-aid-in-dying-my-best-friend-s-journey-bradley-berman-F9WU0RmFWUs",
+      "destination": "/videos/medical-aid-in-dying-my-best-friend-s-journey-bradley-berman-T8bDMPgohvM",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
     }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const WWSIndividuals = () => {
   const navigate = useNavigate();
   const individualsAnimation = useScrollAnimation();
@@ -467,11 +467,13 @@ const WWSIndividuals = () => {
               }}
             >
               <Button
-                onClick={() => navigate("/contact")}
+                asChild
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 py-1.5 text-base font-semibold rounded-full"
                 style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
               >
-                Start Your Journey Today
+                <Link to="/start-here#get-invite">
+                  Start Your Journey Today
+                </Link>
               </Button>
             </div>
           </div>
