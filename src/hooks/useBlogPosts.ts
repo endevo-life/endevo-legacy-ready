@@ -66,3 +66,27 @@ export function useBlogPost(slug: string | undefined) {
     staleTime: 1000 * 60 * 5,
   });
 }
+
+export interface BlogPostSummary {
+  slug: string;
+  title: string;
+  date: string;
+}
+
+// Only posts with a slug have a page, the same rule the sitemap uses.
+const POST_INDEX_QUERY = `*[_type == "blogPost" && defined(slug.current)] | order(date asc, _id asc) {
+  "slug": slug.current, title, date
+}`;
+
+/**
+ * Lightweight list of every addressable post, oldest first, for the
+ * previous / next links on article pages. Titles and slugs only: the full
+ * list query above also pulls every post's body.
+ */
+export function useBlogPostIndex() {
+  return useQuery({
+    queryKey: ["blogPostIndex"],
+    queryFn: () => sanityClient.fetch<BlogPostSummary[]>(POST_INDEX_QUERY),
+    staleTime: 1000 * 60 * 5,
+  });
+}

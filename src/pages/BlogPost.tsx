@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import PortableTextBody from "@/components/PortableTextBody";
 import NotFound from "@/pages/NotFound";
-import { useBlogPost } from "@/hooks/useBlogPosts";
+import { useBlogPost, useBlogPostIndex } from "@/hooks/useBlogPosts";
+import NeighbourLinks from "@/components/NeighbourLinks";
 import { socialLinks } from "@/data/socialLinks";
 import { urlFor } from "@/lib/sanityImageUrl";
 import { buildMetaDescription } from "@/lib/portableTextUtils";
@@ -30,6 +31,9 @@ function formatDate(date: string): string {
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { data: post, isLoading, isError, refetch } = useBlogPost(slug);
+  // Failures here are silent: without the list the page simply shows no
+  // previous / next links.
+  const { data: postIndex } = useBlogPostIndex();
 
   // Hold the frame while loading so the prerenderer and crawlers never
   // capture a 404 for a post that does exist.
@@ -308,6 +312,22 @@ const BlogPost = () => {
             </a>
             .
           </p>
+        )}
+
+        {postIndex && (
+          <NeighbourLinks
+            label="More articles"
+            previousLabel="Previous article"
+            nextLabel="Next article"
+            currentKey={post.slug}
+            items={postIndex
+              .filter((p) => p.slug && p.title)
+              .map((p) => ({
+                key: p.slug,
+                href: `/blog/${p.slug}`,
+                title: p.title,
+              }))}
+          />
         )}
       </main>
 
