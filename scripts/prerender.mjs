@@ -350,11 +350,27 @@ async function prerender() {
           },
           { timeout: 45000, polling: 250 },
         );
+        // The previous / next links come from a separate list query that
+        // can resolve after the body. They are the only crawlable path to
+        // most articles (/blog paginates with buttons), so a capture
+        // without them is not ready.
+        await page.waitForFunction(
+          () => !!document.querySelector('nav[aria-label="More articles"] a'),
+          { timeout: 45000, polling: 250 },
+        );
       } else if (route === "/videos") {
         // The listing is ready once long-form episode cards link to their
         // own pages.
         await page.waitForFunction(
           () => document.querySelectorAll('a[href^="/videos/"]').length > 0,
+          { timeout: 45000, polling: 250 },
+        );
+      } else if (isVideoRoute(route)) {
+        // Same reason as articles: an episode's previous / next links load
+        // from /data/videos/index.json separately from its details, and
+        // they are the only crawlable path to most episodes.
+        await page.waitForFunction(
+          () => !!document.querySelector('nav[aria-label="More episodes"] a'),
           { timeout: 45000, polling: 250 },
         );
       } else if (route === "/blog") {

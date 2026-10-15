@@ -221,3 +221,54 @@ export function useYouTubeVideoDetails(videoId: string | null) {
 
   return { video, loading, error, notFound };
 }
+
+/** One entry of /data/videos/index.json (see scripts/fetch-video-ids.mjs). */
+export interface VideoIndexEntry {
+  id: string;
+  slug: string;
+  title: string;
+  publishedAt: string;
+}
+
+/**
+ * Loads the build-time list of every episode, oldest first, for the
+ * previous / next links on episode pages.
+ *
+ * Returns null while loading and whenever the list is unavailable. Those
+ * links are a nice-to-have: a missing list must never put the page into an
+ * error or noindex state, so failures are silent.
+ */
+export function useVideoIndex() {
+  const [episodes, setEpisodes] = useState<VideoIndexEntry[] | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/data/videos/index.json");
+        // A missing file falls through the SPA rewrite as 200 text/html.
+        const type = res.headers.get("content-type") ?? "";
+        if (!res.ok || !type.includes("json")) return;
+        const data: unknown = await res.json();
+        if (!Array.isArray(data)) return;
+        const valid = (data as VideoIndexEntry[]).filter(
+          (e) => e && typeof e.id === "string" && typeof e.slug === "string",
+        );
+        // The file is in playlist order, which mixes seasons. Order by the
+        // real publish date so "previous" always means the episode before.
+        // Array.prototype.sort is stable, so ties keep playlist order.
+        const sorted = [...valid].sort((a, b) =>
+          (a.publishedAt ?? "").localeCompare(b.publishedAt ?? ""),
+        );
+        if (!cancelled) setEpisodes(sorted);
+      } catch {
+        /* no links rather than a broken page */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return episodes;
+}

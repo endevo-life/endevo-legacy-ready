@@ -222,6 +222,12 @@ export async function fetchVideoEpisodes() {
  * the build copies into dist. Episode pages read their metadata from these
  * same-origin files instead of calling the YouTube API in the browser.
  *
+ * Also writes public/data/videos/index.json: every episode's id, slug,
+ * title and publish date, in playlist order. Each episode page reads it to
+ * link to its neighbours. /videos paginates with buttons, so its HTML links
+ * to only the first few episodes; without these links most episodes were
+ * reachable by crawlers through the sitemap alone.
+ *
  * The API key is referrer-locked, and Google's renderer does not reliably
  * send our referer, so its client-side call failed. The page then rendered
  * its noindex error state and Search Console excluded episodes that were
@@ -239,5 +245,15 @@ export function writeVideoDataFiles(episodes) {
       "utf-8",
     );
   }
+  // Same slug the sitemap and prerenderer use, so every link points at the
+  // canonical URL. The video's real publish date (not the date it was added
+  // to the playlist) lets pages order episodes chronologically.
+  const index = episodes.map((episode) => ({
+    id: episode.videoId,
+    slug: episode.slug,
+    title: episode.details?.title || episode.title,
+    publishedAt: episode.details?.publishedAt || episode.publishedAt,
+  }));
+  writeFileSync(join(dir, "index.json"), JSON.stringify(index), "utf-8");
   return episodes.length;
 }

@@ -5,9 +5,13 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import NotFound from "@/pages/NotFound";
-import { useYouTubeVideoDetails } from "@/hooks/useYouTubeVideos";
+import {
+  useVideoIndex,
+  useYouTubeVideoDetails,
+} from "@/hooks/useYouTubeVideos";
 import { extractVideoId, makeVideoSlug } from "@/lib/videoSlug";
 import VideoDescription from "@/components/VideoDescription";
+import NeighbourLinks from "@/components/NeighbourLinks";
 
 const SITE_URL = "https://www.endevo.life";
 
@@ -62,6 +66,7 @@ const VideoEpisode = () => {
   const { slug } = useParams<{ slug: string }>();
   const videoId = extractVideoId(slug);
   const { video, loading, error, notFound } = useYouTubeVideoDetails(videoId);
+  const episodeIndex = useVideoIndex();
   // Chapter timestamps in the description seek the player by reloading the
   // embed with a start offset; the ref scrolls it back into view.
   const [startAt, setStartAt] = useState<number | null>(null);
@@ -221,6 +226,20 @@ const VideoEpisode = () => {
             />
           )}
         </article>
+
+        {episodeIndex && (
+          <NeighbourLinks
+            label="More episodes"
+            previousLabel="Previous episode"
+            nextLabel="Next episode"
+            currentKey={videoId}
+            items={episodeIndex.map((episode) => ({
+              key: episode.id,
+              href: `/videos/${episode.slug}`,
+              title: episode.title,
+            }))}
+          />
+        )}
       </main>
 
       <Footer />
