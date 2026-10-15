@@ -137,6 +137,14 @@ export function useYouTubeVideos() {
  * `notFound` is distinct from `error`: an unknown ID renders the real 404
  * page, while a transient fetch failure renders a retryable, noindex error
  * state — a crawler must never see a 404 for an episode that exists.
+ *
+ * The build writes each episode's metadata to /data/videos/<id>.json (see
+ * scripts/fetch-video-ids.mjs), and that same-origin file is read first.
+ * The YouTube API key is referrer-locked, and Google's renderer does not
+ * reliably send our referer: the API call failed for Googlebot, the page
+ * fell into its noindex error state, and Search Console excluded live
+ * episodes. The API is now only a fallback for an episode published after
+ * the last build.
  */
 export function useYouTubeVideoDetails(videoId: string | null) {
   const [video, setVideo] = useState<YouTubeVideo | null>(null);
@@ -145,50 +153,70 @@ export function useYouTubeVideoDetails(videoId: string | null) {
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
-    const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY as string;
     if (!videoId) {
       setNotFound(true);
       setLoading(false);
       return;
     }
-    if (!apiKey) {
-      setError("YouTube API key is not configured.");
-      setLoading(false);
-      return;
-    }
+    let cancelled = false;
     setLoading(true);
     setError(null);
     setNotFound(false);
 
-    fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`,
-    )
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch video details.");
-        return res.json();
-      })
-      .then((data) => {
-        const item = data.items?.[0];
-        if (!item) {
-          setNotFound(true);
-          return;
-        }
-        setVideo({
-          id: videoId,
-          title: item.snippet?.title ?? "",
-          description: item.snippet?.description ?? "",
-          thumbnail:
-            item.snippet?.thumbnails?.maxres?.url ??
-            item.snippet?.thumbnails?.high?.url ??
-            item.snippet?.thumbnails?.medium?.url ??
-            "",
-          publishedAt: item.snippet?.publishedAt ?? "",
-        });
-      })
-      .catch((err: unknown) =>
-        setError(err instanceof Error ? err.message : "Unknown error"),
-      )
-      .finally(() => setLoading(false));
+    async function fromBuildData(id: string): Promise<YouTubeVideo | null> {
+      try {
+        const res = await fetch(`/data/videos/${id}.json`);
+        // A missing file falls through Vercel's SPA rewrite and comes back
+        // as 200 text/html, so the content type is the real signal.
+        const type = res.headers.get("content-type") ?? "";
+        if (!res.ok || !type.includes("json")) return null;
+        return (await res.json()) as YouTubeVideo;
+      } catch {
+        return null;
+      }
+    }
+
+    async function fromApi(id: string): Promise<YouTubeVideo | "missing"> {
+      const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY as string;
+      if (!apiKey) throw new Error("YouTube API key is not configured.");
+      const res = await fetch(
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${apiKey}`,
+      );
+      if (!res.ok) throw new Error("Failed to fetch video details.");
+      const data = await res.json();
+      const item = data.items?.[0];
+      if (!item) return "missing";
+      return {
+        id,
+        title: item.snippet?.title ?? "",
+        description: item.snippet?.description ?? "",
+        thumbnail:
+          item.snippet?.thumbnails?.maxres?.url ??
+          item.snippet?.thumbnails?.high?.url ??
+          item.snippet?.thumbnails?.medium?.url ??
+          "",
+        publishedAt: item.snippet?.publishedAt ?? "",
+      };
+    }
+
+    (async () => {
+      try {
+        const result =
+          (await fromBuildData(videoId)) ?? (await fromApi(videoId));
+        if (cancelled) return;
+        if (result === "missing") setNotFound(true);
+        else setVideo(result);
+      } catch (err: unknown) {
+        if (!cancelled)
+          setError(err instanceof Error ? err.message : "Unknown error");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
   }, [videoId]);
 
   return { video, loading, error, notFound };

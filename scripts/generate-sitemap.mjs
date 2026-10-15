@@ -18,7 +18,7 @@ import { writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchBlogPosts } from "./fetch-blog-slugs.mjs";
-import { fetchVideoEpisodes } from "./fetch-video-ids.mjs";
+import { fetchVideoEpisodes, writeVideoDataFiles } from "./fetch-video-ids.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -250,6 +250,10 @@ async function generate() {
   // publish date. Throws if YouTube is unreachable, for the same reason
   // the blog fetch does.
   const episodes = await fetchVideoEpisodes();
+  const dataFiles = writeVideoDataFiles(episodes);
+  console.log(
+    `✅ Wrote ${dataFiles} episode data files to public/data/videos/`,
+  );
   const videoUrls = episodes.map((e) =>
     urlEntry({
       path: `/videos/${e.slug}`,
