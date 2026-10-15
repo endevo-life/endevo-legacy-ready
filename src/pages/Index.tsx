@@ -9,6 +9,7 @@ import FamilyTestimonialsSection from "@/components/FamilyTestimonialsSection";
 import FeaturedTestimonialsSection from "@/components/FeaturedTestimonialsSection";
 import SpeakingEventsSection from "@/components/SpeakingEventsSection";
 import MissionVisionSection from "@/components/MissionVisionSection";
+import UseCasesSection from "@/components/UseCasesSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -20,8 +21,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="ENDevo — Legacy Readiness & Digital Preparedness"
-        description="ENDevo helps individuals, families, and employers achieve Legacy Readiness. Protect your digital footprint, estate, and life story with intention."
+        title="Legacy Readiness Benefit for Employees"
+        description="A private legacy-readiness benefit for HR and EAP teams. Employees get a short assessment and a step-by-step plan. You see participation, never answers."
         canonical="/"
         jsonLd={[
           {
@@ -67,6 +68,7 @@ const Index = () => {
       <ResponsiveNavbar />
       <main className="pt-16">
         <EmpowerEmployeesSection />
+        <UseCasesSection />
         <HiddenCostStatsSection />
         <DigitalReadinessWellnessSection />
         <VideoSection />
