@@ -26,9 +26,9 @@ const faqs: FAQ[] = [
   {
     question: "How much does Legacy Readiness OS cost?",
     bottomLine:
-      "$500 for a year of access for an individual, with no subscription. Enterprise pricing is quoted per organization. You can take the assessment and see your plan before you pay anything.",
+      "Individual pricing is shared when you request your invite, and you can start free. Enterprise pricing is quoted per organization.",
     fullStory: [
-      "For an individual it is $500 for a year of access. There is no subscription and no per-document fee — the price covers the assessment, the guidance, and the finished Playbook.",
+      "For an individual, pricing is shared when you request your invite at endevo.life/start-here. The price covers the assessment, the guidance, and the finished Playbook.",
       "You can start free. Answer the questions, see the plan built for your situation, and decide afterwards whether to pay for the full Playbook. Nobody is asked for a card to find out what they need to do.",
       "Enterprise pricing depends on the size of the organization and what is included, so it is quoted rather than listed. It covers a private workspace, ongoing access for every employee, a video library, and 1:1 sessions with the ENDevo team.",
       "For comparison: an attorney-drafted estate plan typically runs several thousand dollars. Legacy Readiness OS does not replace that lawyer. It makes the conversation shorter, because you arrive knowing what you need and carrying the documents.",
@@ -265,6 +265,8 @@ const FAQ = () => {
             <div key={i} className="py-6">
               <button
                 onClick={() => toggle(i)}
+                aria-expanded={openIndex === i}
+                aria-controls={`faq-answer-${i}`}
                 className="w-full flex items-center justify-between text-left gap-4 group"
               >
                 <span className="text-base sm:text-lg font-semibold text-[#08123A] group-hover:text-brand-orange transition-colors">
@@ -277,75 +279,80 @@ const FAQ = () => {
                 />
               </button>
 
-              {openIndex === i && (
-                <div className="mt-4 space-y-5">
-                  {/* Bottom Line */}
-                  <div className="bg-[#f4f6fb] border-l-4 border-brand-orange rounded-r-lg px-5 py-4">
-                    <p className="text-xs font-bold uppercase tracking-widest text-brand-orange mb-1">
-                      Bottom Line
-                    </p>
-                    <p className="text-sm sm:text-base text-[#08123A] font-medium leading-relaxed">
-                      {faq.bottomLine}
-                    </p>
-                  </div>
+              {/* Always rendered, only hidden when collapsed: the answers
+                  must be in the prerendered HTML so crawlers and answer
+                  engines read the same text the FAQPage schema claims. */}
+              <div
+                id={`faq-answer-${i}`}
+                hidden={openIndex !== i}
+                className="mt-4 space-y-5"
+              >
+                {/* Bottom Line */}
+                <div className="bg-[#f4f6fb] border-l-4 border-brand-orange rounded-r-lg px-5 py-4">
+                  <p className="text-xs font-bold uppercase tracking-widest text-brand-orange mb-1">
+                    Bottom Line
+                  </p>
+                  <p className="text-sm sm:text-base text-[#08123A] font-medium leading-relaxed">
+                    {faq.bottomLine}
+                  </p>
+                </div>
 
-                  {/* Full Story toggle */}
-                  <div>
-                    <button
-                      onClick={() => toggleStory(i)}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-orange transition-colors border border-gray-300 hover:border-brand-orange rounded-full px-4 py-1.5"
-                    >
-                      {storyIndex === i ? "Hide Full Story" : "Full Story"}
-                      <ChevronDown
-                        className={`w-3.5 h-3.5 transition-transform duration-300 ${storyIndex === i ? "rotate-180" : ""}`}
-                      />
-                    </button>
+                {/* Full Story toggle */}
+                <div>
+                  <button
+                    onClick={() => toggleStory(i)}
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-brand-orange transition-colors border border-gray-300 hover:border-brand-orange rounded-full px-4 py-1.5"
+                  >
+                    {storyIndex === i ? "Hide Full Story" : "Full Story"}
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-300 ${storyIndex === i ? "rotate-180" : ""}`}
+                    />
+                  </button>
 
-                    {storyIndex === i && (
-                      <div className="mt-4 space-y-3">
-                        {faq.fullStory.map((block, j) =>
-                          typeof block === "string" ? (
-                            <p
-                              key={j}
-                              className="text-sm sm:text-base text-gray-600 leading-relaxed"
-                            >
-                              {block}
+                  {storyIndex === i && (
+                    <div className="mt-4 space-y-3">
+                      {faq.fullStory.map((block, j) =>
+                        typeof block === "string" ? (
+                          <p
+                            key={j}
+                            className="text-sm sm:text-base text-gray-600 leading-relaxed"
+                          >
+                            {block}
+                          </p>
+                        ) : (
+                          <div key={j} className="flex gap-3">
+                            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-orange text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                              {block.number}
+                            </span>
+                            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                              {block.text}
                             </p>
-                          ) : (
-                            <div key={j} className="flex gap-3">
-                              <span className="flex-shrink-0 w-7 h-7 rounded-full bg-brand-orange text-white text-xs font-bold flex items-center justify-center mt-0.5">
-                                {block.number}
-                              </span>
-                              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                                {block.text}
-                              </p>
-                            </div>
-                          ),
-                        )}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Stats (if any) */}
-                  {faq.stats && (
-                    <div className="grid grid-cols-3 gap-4 pt-2">
-                      {faq.stats.map((s, j) => (
-                        <div
-                          key={j}
-                          className="text-center border-2 border-[#08123A] rounded-xl py-4 px-2"
-                        >
-                          <p className="text-xl sm:text-2xl font-bold text-brand-orange">
-                            {s.value}
-                          </p>
-                          <p className="text-xs mt-1 text-[#08123A] leading-snug">
-                            {s.label}
-                          </p>
-                        </div>
-                      ))}
+                          </div>
+                        ),
+                      )}
                     </div>
                   )}
                 </div>
-              )}
+
+                {/* Stats (if any) */}
+                {faq.stats && (
+                  <div className="grid grid-cols-3 gap-4 pt-2">
+                    {faq.stats.map((s, j) => (
+                      <div
+                        key={j}
+                        className="text-center border-2 border-[#08123A] rounded-xl py-4 px-2"
+                      >
+                        <p className="text-xl sm:text-2xl font-bold text-brand-orange">
+                          {s.value}
+                        </p>
+                        <p className="text-xs mt-1 text-[#08123A] leading-snug">
+                          {s.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>

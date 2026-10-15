@@ -39,3 +39,6 @@ src/assets/blog-cover/
 # library or YouTube) before shipping; a 9MB asset does not belong in git.
 public/videos/*
 !public/videos/promo-v11.mp4
+
+# Episode metadata written at build time by scripts/fetch-video-ids.mjs.
+public/data/videos/
