@@ -110,7 +110,7 @@ const Solutions = () => {
           name: "Can employers offer legacy readiness as a benefit?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Legacy Readiness OS gives an employer a private tenant where every employee builds their own plan. The employer sees participation rates and topics, never what any individual wrote.",
+            text: "Yes. Legacy Readiness OS gives an employer a private tenant where every employee builds their own plan. The employer sees how many people are taking part, never what any individual wrote.",
           },
         },
       ],
