@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Info, Save, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
 
@@ -101,6 +102,14 @@ const CookieSettings: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Cookie Settings"
+        description="Choose which optional cookies ENDevo may use on this browser. Essential cookies stay on so the site works."
+        canonical="/legal/cookie-settings"
+        breadcrumbs={[
+          { name: "Cookie Settings", path: "/legal/cookie-settings" },
+        ]}
+      />
       <ResponsiveNavbar />
       <main className="pt-20">
         <section className="py-20 bg-white">

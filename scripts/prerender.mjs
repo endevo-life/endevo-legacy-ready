@@ -95,6 +95,13 @@ const MIME = {
 };
 
 function startServer() {
+  // Read the SPA shell once, before any route is written. Prerendering "/"
+  // overwrites dist/index.html with the homepage, and serving that file as
+  // the fallback made later routes boot with the homepage's helmet tags
+  // already in <head>: the data-rh readiness check passed at once and
+  // /myfinalplaybook/app/privacy shipped with the homepage's title and
+  // canonical.
+  const shell = readFileSync(join(distDir, "index.html"));
   const server = createServer((req, res) => {
     const urlPath = req.url.split("?")[0];
     let filePath = join(distDir, urlPath);
@@ -107,9 +114,9 @@ function startServer() {
       });
       res.end(content);
     } catch {
-      // Fall back to index.html for SPA routes
+      // Fall back to the pristine shell for SPA routes
       res.writeHead(200, { "Content-Type": "text/html" });
-      res.end(readFileSync(join(distDir, "index.html")));
+      res.end(shell);
     }
   });
 
@@ -373,6 +380,17 @@ async function prerender() {
         throw new Error(
           "rendered with the fallback site title — SEO tags did not apply",
         );
+      }
+
+      // Every page other than "/" must carry its own canonical. A homepage
+      // canonical on any other route tells Google the page is a duplicate
+      // of the homepage — the legal and app-privacy pages both shipped
+      // that way.
+      if (
+        route !== "/" &&
+        html.includes(`rel="canonical" href="https://www.endevo.life/"`)
+      ) {
+        throw new Error("captured with the homepage canonical");
       }
 
       // Backstop for the consent pre-seed above: a banner in static HTML is

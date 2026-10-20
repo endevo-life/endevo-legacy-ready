@@ -106,7 +106,7 @@ const WWSEmployers = () => {
                 </h3>
                 <p className="text-base text-muted-foreground font-opensans">
                   92% of employees view this program as a competitive advantage
-                  that shows you care for employers, demonstrating commitment to
+                  that shows you care for employees, demonstrating commitment to
                   whole-person wellness.
                 </p>
               </div>
