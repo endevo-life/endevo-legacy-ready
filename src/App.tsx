@@ -10,6 +10,7 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import CookieBanner from "@/components/CookieBanner";
 import GhlFormTracker from "@/components/GhlFormTracker";
 import { initializeConsentMode, trackPageView } from "@/lib/analytics";
@@ -225,6 +226,7 @@ const App = () => (
           </Routes>
         </Suspense>
         <CookieBanner />
+        <Analytics />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
