@@ -12,12 +12,29 @@
  * YouTube calls.
  */
 
-import { readFileSync, existsSync } from "node:fs";
+import {
+  readFileSync,
+  existsSync,
+  writeFileSync,
+  mkdirSync,
+  rmSync,
+} from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
+
+/**
+ * Unlisted re-uploads of episodes that also exist as a public video. Each
+ * gave the same conversation a second indexable URL; vercel.json 301s the
+ * old URLs to the public copy.
+ */
+const DUPLICATE_IDS = new Set([
+  "mu0KJ58RM7E", // Omar Alvarez → fePaWfUT-0M
+  "gSGRd5cBX4o", // Mark Rozner → SonHlJQdIMc
+  "F9WU0RmFWUs", // Bradley Berman → T8bDMPgohvM
+]);
 
 function loadEnv() {
   const envPath = join(ROOT, ".env.local");
@@ -134,12 +151,93 @@ export async function fetchVideoEpisodes() {
     } while (pageToken);
   }
 
-  if (episodes.length === 0) {
+  // Playlist items carry neither the video's privacy status nor its real
+  // publish date, so look every episode up on the videos endpoint (50 IDs
+  // per call). Private or removed videos get no page. Unlisted ones keep
+  // theirs — many older episodes are unlisted on YouTube and are still the
+  // only copy — except the known re-uploads in DUPLICATE_IDS.
+  const details = new Map();
+  for (let i = 0; i < episodes.length; i += 50) {
+    const ids = episodes.slice(i, i + 50).map((e) => e.videoId);
+    const url = new URL("https://www.googleapis.com/youtube/v3/videos");
+    url.searchParams.set("part", "snippet,status");
+    url.searchParams.set("id", ids.join(","));
+    url.searchParams.set("key", apiKey);
+    const res = await fetch(url, {
+      headers: { Referer: "https://www.endevo.life/" },
+    });
+    if (!res.ok) {
+      throw new Error(
+        `YouTube videos query failed: HTTP ${res.status} ${res.statusText}. ` +
+          "Video episode details could not be resolved.",
+      );
+    }
+    const data = await res.json();
+    for (const item of data.items ?? []) details.set(item.id, item);
+  }
+
+  const keptEpisodes = [];
+  for (const episode of episodes) {
+    const item = details.get(episode.videoId);
+    const status = item?.status?.privacyStatus;
+    if (!item || status === "private") {
+      console.warn(
+        `  ⚠️  skipping ${status ?? "unavailable"} video: "${episode.title.slice(0, 50)}" (${episode.videoId})`,
+      );
+      continue;
+    }
+    if (DUPLICATE_IDS.has(episode.videoId)) {
+      console.warn(
+        `  ⚠️  skipping duplicate upload: "${episode.title.slice(0, 50)}" (${episode.videoId})`,
+      );
+      continue;
+    }
+    const thumbs = item.snippet?.thumbnails ?? {};
+    keptEpisodes.push({
+      ...episode,
+      // Same shape as YouTubeVideo in src/hooks/useYouTubeVideos.ts.
+      details: {
+        id: episode.videoId,
+        title: item.snippet?.title ?? episode.title,
+        description: item.snippet?.description ?? "",
+        thumbnail:
+          thumbs.maxres?.url ?? thumbs.high?.url ?? thumbs.medium?.url ?? "",
+        publishedAt: item.snippet?.publishedAt ?? "",
+      },
+    });
+  }
+
+  if (keptEpisodes.length === 0) {
     throw new Error(
       "YouTube returned no episodes. Refusing to emit a sitemap with zero " +
         "video URLs, which would deindex every episode page.",
     );
   }
 
-  return episodes;
+  return keptEpisodes;
+}
+
+/**
+ * Writes one JSON file per episode to public/data/videos/<id>.json, which
+ * the build copies into dist. Episode pages read their metadata from these
+ * same-origin files instead of calling the YouTube API in the browser.
+ *
+ * The API key is referrer-locked, and Google's renderer does not reliably
+ * send our referer, so its client-side call failed. The page then rendered
+ * its noindex error state and Search Console excluded episodes that were
+ * live. A static file on our own domain has no such dependency.
+ */
+export function writeVideoDataFiles(episodes) {
+  const dir = join(ROOT, "public", "data", "videos");
+  // Start clean so a removed or unlisted video does not leave a stale file.
+  rmSync(dir, { recursive: true, force: true });
+  mkdirSync(dir, { recursive: true });
+  for (const episode of episodes) {
+    writeFileSync(
+      join(dir, `${episode.videoId}.json`),
+      JSON.stringify(episode.details),
+      "utf-8",
+    );
+  }
+  return episodes.length;
 }
