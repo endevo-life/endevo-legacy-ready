@@ -1,8 +1,17 @@
 import Footer from "@/components/Footer";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import SEO from "@/components/SEO";
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Privacy Policy"
+        description="How ENDevo collects, uses, and protects your personal information, and the choices you have about your data."
+        canonical="/legal/privacy-policy"
+        breadcrumbs={[
+          { name: "Privacy Policy", path: "/legal/privacy-policy" },
+        ]}
+      />
       <ResponsiveNavbar />
       <main className="pt-20">
         {/* Header */}
@@ -1346,7 +1355,7 @@ const PrivacyPolicy = () => {
                   </a>
                   <span>|</span>
                   <a
-                    href="https://endevo.life/contact"
+                    href="/contact"
                     className="text-brand-orange font-semibold hover:underline"
                   >
                     endevo.life/contact

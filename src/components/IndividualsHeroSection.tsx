@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import individualsBg from "@/assets/individuals-hero-bg.png";
 
@@ -40,12 +41,14 @@ const IndividualsHeroSection = () => {
           className={`mt-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           style={{ transitionDelay: "400ms" }}
         >
+          {/* Individuals request an invite; /contact is the employer
+              consultation form and asks for company size. */}
           <Button
+            asChild
             className="bg-brand-navy hover:bg-brand-navy/90 text-white px-6 py-1.5 text-base rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             style={{ fontFamily: "'Open Sans', 'Helvetica', sans-serif" }}
-            onClick={() => (window.location.href = "/contact")}
           >
-            Get Started
+            <Link to="/start-here#get-invite">Get Started</Link>
           </Button>
         </div>
       </div>
