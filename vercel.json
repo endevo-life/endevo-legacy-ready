@@ -84,6 +84,11 @@
       "source": "/videos/medical-aid-in-dying-my-best-friend-s-journey-bradley-berman-F9WU0RmFWUs",
       "destination": "/videos/medical-aid-in-dying-my-best-friend-s-journey-bradley-berman-T8bDMPgohvM",
       "permanent": true
+    },
+    {
+      "source": "/free-masterclass",
+      "destination": "/start-here",
+      "permanent": true
     }
   ],
   "headers": [
