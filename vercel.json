@@ -49,6 +49,11 @@
       "source": "/wws-service-providers",
       "destination": "/for-service-providers",
       "permanent": true
+    },
+    {
+      "source": "/free-masterclass",
+      "destination": "/start-here",
+      "permanent": true
     }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
