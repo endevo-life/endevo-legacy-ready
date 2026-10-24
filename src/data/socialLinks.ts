@@ -1,5 +1,6 @@
+import type { ComponentType } from "react";
 import { Youtube, Linkedin, Instagram, Music2, Facebook } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { FaGoogle } from "react-icons/fa";
 
 /**
  * The one list of ENDevo's social profiles.
@@ -7,15 +8,28 @@ import type { LucideIcon } from "lucide-react";
  * Rendered by the footer and by the end-of-article follow row; a single
  * source means a new profile (or a dead one) is changed in one place and
  * both surfaces agree. Medium has no lucide glyph, so it ships its own
- * SVGs and renderers handle icon-or-image.
+ * SVGs and renderers handle icon-or-image. Google has no lucide glyph
+ * either; react-icons' mark is monochrome and takes currentColor like the
+ * lucide ones, so it hovers the same way.
  */
 export type SocialLink = {
-  icon: LucideIcon | null;
+  icon: ComponentType<{ className?: string }> | null;
   label: string;
   href: string;
   imgSrc?: string;
   imgSrcHover?: string;
 };
+
+/**
+ * ENDevo's Google Business Profile. The g.page short link is the permanent
+ * one Google issues for the profile; the share.google links from the
+ * profile's Share button are session-scoped search URLs and should not be
+ * used here.
+ */
+export const GOOGLE_PROFILE_URL = "https://g.page/r/CcFDFJ3B886qEAI";
+
+/** Opens the "write a review" dialog on the Google Business Profile. */
+export const GOOGLE_REVIEW_URL = "https://g.page/r/CcFDFJ3B886qEAI/review";
 
 export const socialLinks: SocialLink[] = [
   {
@@ -42,6 +56,11 @@ export const socialLinks: SocialLink[] = [
     icon: Facebook,
     label: "Facebook",
     href: "https://www.facebook.com/endevo.digitallegacy/",
+  },
+  {
+    icon: FaGoogle,
+    label: "Google",
+    href: GOOGLE_PROFILE_URL,
   },
   {
     icon: null,
