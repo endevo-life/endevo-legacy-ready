@@ -27,8 +27,11 @@ export interface Testimonial {
   videoThumbnail?: string;
   /** 1-5; every published response so far is a 5. */
   rating: number;
-  /** ISO date the response was submitted. */
-  submittedAt: string;
+  /**
+   * ISO date the response was submitted. Unknown for the two testimonials
+   * carried over from the retired homepage "Stories" section.
+   */
+  submittedAt?: string;
   /** Shown on the homepage. */
   featured?: boolean;
 }
@@ -39,7 +42,7 @@ const GHL_MEDIA =
 export const testimonials: Testimonial[] = [
   // --- Video testimonials (featured on the homepage) -----------------------
   {
-    id: "jeff-monger",
+    id: "jeff-m",
     name: "Jeff M.",
     role: "Realtor",
     quote:
@@ -52,7 +55,7 @@ export const testimonials: Testimonial[] = [
     featured: true,
   },
   {
-    id: "mary-cioffi",
+    id: "mary-c",
     name: "Mary C.",
     role: "Executive Coach",
     quote:
@@ -67,20 +70,18 @@ export const testimonials: Testimonial[] = [
 
   // --- Text testimonials ---------------------------------------------------
   {
-    id: "todd-pollock",
+    id: "todd-p",
     name: "Todd P.",
     role: "Ops Technology Consultant",
     relationship: "I am/was a client",
     quote:
       "I always thought I just needed a will — but working with Niki completely changed my perspective. She made legacy planning feel approachable, and her education opened my eyes to everything I hadn't considered. Now, I'm not just preparing for myself, but also for my kids, my parents, and even my in-laws. This experience has been life-changing.",
-    photo:
-      "https://api.typeform.com/responses/files/7dde2463604053d1dc3ef5275cee3a605bdd3f7801ef8d8c9a5b5f6d0672b5ba/Todd_Pollock.jpeg",
     rating: 5,
     submittedAt: "2025-09-05",
     featured: true,
   },
   {
-    id: "jan-watson",
+    id: "jan-w",
     name: "Jan W.",
     role: "Retired",
     quote:
@@ -91,7 +92,7 @@ export const testimonials: Testimonial[] = [
     featured: true,
   },
   {
-    id: "sherah-cooney",
+    id: "sherah-c",
     name: "Sherah C.",
     role: "Customer Success Manager",
     quote:
@@ -102,7 +103,7 @@ export const testimonials: Testimonial[] = [
     featured: true,
   },
   {
-    id: "kristen-mcmahon",
+    id: "kristen-m",
     name: "Kristen M.",
     role: "Client Care Manager",
     quote:
@@ -113,7 +114,7 @@ export const testimonials: Testimonial[] = [
     featured: true,
   },
   {
-    id: "jayne-lammers",
+    id: "jayne-l",
     name: "Jayne L.",
     role: "Dissertation Coach",
     quote:
@@ -121,9 +122,10 @@ export const testimonials: Testimonial[] = [
     photo: `${GHL_MEDIA}/6866b9c15143a2a67701d00b.jpeg`,
     rating: 5,
     submittedAt: "2025-07-02",
+    featured: true,
   },
   {
-    id: "lory-pilchik",
+    id: "lory-p",
     name: "Lory P.",
     role: "Marketing Executive",
     quote:
@@ -131,18 +133,20 @@ export const testimonials: Testimonial[] = [
     photo: `${GHL_MEDIA}/6866b7f55143a20cd401cdaf.jpeg`,
     rating: 5,
     submittedAt: "2025-07-02",
+    featured: true,
   },
   {
-    id: "ellen-fineberg",
+    id: "ellen-f",
     name: "Ellen F.",
     role: "Retired",
     quote:
       "Working with Niki has been invaluable in helping me get my Final Playbook in order. I've been procrastinating on these important tasks for a while, but Niki's guidance has given me the push I needed. She's helped me realize this isn't just a 'final' playbook, but a \"Living Playbook\" evolving document that needs regular attention. From reviewing my legal documents to setting up accounts for my family, Niki has helped provide the structure and accountability I was missing. I'm slowly gaining the peace of mind that comes from getting my affairs in order, and I'm grateful for Niki's expertise and support throughout this process.",
     rating: 5,
     submittedAt: "2025-07-02",
+    featured: true,
   },
   {
-    id: "patty-welsh",
+    id: "patty-w",
     name: "Patty W.",
     role: "Retired",
     quote:
@@ -150,15 +154,35 @@ export const testimonials: Testimonial[] = [
     photo: `${GHL_MEDIA}/6866be0fc5b220524d7123da.jpeg`,
     rating: 5,
     submittedAt: "2025-07-02",
+    featured: true,
   },
   {
-    id: "julie-esposito",
+    id: "julie-e",
     name: "Julie E.",
     role: "Project Manager",
     quote:
       "Before working with Niki, end-of-life planning felt overwhelming and scary. I was paralyzed by my fear of death, shaped by losing my parents unexpectedly. Niki didn't just help me create a document — she helped me transform my perspective. Her approach broke down complex concepts into digestible pieces, making me understand the importance of planning. What truly set Niki apart was her compassionate guidance, helping me see that this isn't about dying — it's about living fully and ensuring my family is taken care of.",
     rating: 5,
     submittedAt: "2025-07-07",
+    featured: true,
+  },
+  {
+    id: "stacy",
+    name: "Stacy",
+    role: "Client",
+    quote:
+      "Niki coached my husband and me by asking questions about how we want two very important future events handled - our estate and our own care when we are unable to care for ourselves fully. This helped us develop a comprehensive plan partly with our attorney and partly on our own. Now, with the proper documentation in place, our adult children will have an easier time when having to take actions during the emotional times of our disability or loss. Thanks, Niki!",
+    rating: 5,
+    featured: true,
+  },
+  {
+    id: "beth",
+    name: "Beth",
+    role: "Client",
+    quote:
+      "During my stage four cancer journey, I journaled extensively, which was helpful for me. However, I did not want my family to read the words I wrote after I was gone. I needed to spare them the pain of reading my raw emotions. I am forever grateful to Niki for supporting me in making this final decision and helping me plan for this meaningful exercise of letting go.",
+    rating: 5,
+    featured: true,
   },
 ];
 
