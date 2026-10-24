@@ -2,6 +2,8 @@ import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import Footer from "@/components/Footer";
 import ConsultationSection from "@/components/ConsultationSection";
 import SEO from "@/components/SEO";
+import { FaGoogle } from "react-icons/fa";
+import { GOOGLE_REVIEW_URL } from "@/data/socialLinks";
 
 const Contact = () => {
   return (
@@ -31,6 +33,20 @@ const Contact = () => {
           </div>
         </section>
         <ConsultationSection />
+        <section className="py-12 text-center px-6">
+          <p className="text-lg text-muted-foreground font-opensans mb-3">
+            Already worked with us? Your review helps other families find us.
+          </p>
+          <a
+            href={GOOGLE_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-semibold text-brand-orange underline hover:no-underline font-opensans"
+          >
+            <FaGoogle className="w-5 h-5" aria-hidden="true" />
+            Leave a review on Google
+          </a>
+        </section>
       </main>
       <Footer />
     </div>

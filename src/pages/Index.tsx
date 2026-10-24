@@ -32,6 +32,7 @@ const Index = () => {
               "https://www.facebook.com/endevo.digitallegacy/",
               "https://www.tiktok.com/@endevo_digitallegacy",
               "https://medium.com/@endevo_digitallegacy",
+              "https://g.page/r/CcFDFJ3B886qEAI",
             ],
             founder: {
               "@type": "Person",
