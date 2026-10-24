@@ -37,20 +37,21 @@ const EmpowerEmployeesSection = () => {
             className={`text-[26px] md:text-[34px] lg:text-[42px] font-bold leading-tight font-playfair transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <span className="text-white">
-              When an employee&apos;s family faces a crisis,
+              Help your employees get their affairs in order,
             </span>{" "}
-            <span className="text-brand-orange">
-              work doesn&apos;t have to fall apart.
-            </span>
+            <span className="text-brand-orange">before a crisis.</span>
           </h1>
 
+          {/* Says what ENDevo is in plain words first; "legacy readiness" is
+              our term, and a first-time visitor has to learn it elsewhere. */}
           <p
             className={`mt-6 text-base md:text-lg text-white/85 mb-8 leading-relaxed font-opensans transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             style={{ transitionDelay: "200ms" }}
           >
-            ENDevo is a legacy-readiness benefit. Employees complete a short
-            assessment and get a step-by-step plan for their legal, financial,
-            digital and physical affairs, before they need it.
+            ENDevo is an employee benefit for end-of-life planning. Each
+            employee gets a private, step-by-step plan for their will, finances,
+            passwords and medical wishes. You see participation, never personal
+            answers.
           </p>
 
           <div
@@ -63,7 +64,7 @@ const EmpowerEmployeesSection = () => {
               asChild
               className="text-white px-6 py-1.5 text-base font-semibold rounded-full font-opensans bg-brand-orange-dark hover:bg-brand-orange-dark/90"
             >
-              <Link to="/contact">Start a Conversation</Link>
+              <Link to="/contact">Book a 30-minute call</Link>
             </Button>
             <p className="mt-6 text-sm text-white/70 font-opensans">
               Planning for yourself?{" "}
