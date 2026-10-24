@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Menu,
   X,
@@ -28,6 +28,12 @@ import {
 } from "lucide-react";
 const ResponsiveNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // The homepage speaks to HR and EAP buyers, so its header button books the
+  // call its hero offers; every other page keeps the individual sign-up.
+  const isHome = useLocation().pathname === "/";
+  const cta = isHome
+    ? { to: "/contact", label: "Book a call" }
+    : { to: "/start-here#get-invite", label: "Start your plan" };
   const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(
     null,
   );
@@ -303,10 +309,10 @@ const ResponsiveNavbar = () => {
           {/* Desktop CTA Button */}
           <div className="hidden xl:block flex-shrink-0">
             <Link
-              to="/start-here#get-invite"
+              to={cta.to}
               className="bg-brand-orange text-white px-4 py-2 rounded-md hover:bg-brand-orange-dark transition-colors duration-300 font-medium text-sm whitespace-nowrap inline-block"
             >
-              Start your plan
+              {cta.label}
             </Link>
           </div>
 
@@ -390,11 +396,11 @@ const ResponsiveNavbar = () => {
             })}
             <div className="pt-4 border-t border-border">
               <Link
-                to="/start-here#get-invite"
+                to={cta.to}
                 className="w-full bg-brand-orange text-white px-6 py-3 rounded-md hover:bg-brand-orange-dark transition-colors duration-300 font-medium text-center inline-block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Start your plan
+                {cta.label}
               </Link>
             </div>
           </div>

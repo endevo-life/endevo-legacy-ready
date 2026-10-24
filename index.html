@@ -67,12 +67,39 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- GoHighLevel chat widget ("Jesse") — the site's only chatbot. Avatar, greeting and revisit message are configured in GHL, not here. -->
-    <script
-      async
-      src="https://widgets.leadconnectorhq.com/loader.js"
-      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="696728e12fb2fb1f6d6ae215"
-    ></script>
+    <!-- GoHighLevel chat widget ("Jesse") — the site's only chatbot. Avatar, greeting and revisit message are configured in GHL, not here.
+         Loaded on the visitor's first scroll, tap or key press, or after 20s,
+         whichever comes first. Loaded eagerly, its greeting bubble covered the
+         hero on phones before anyone had read the headline. -->
+    <script>
+      (function () {
+        // The prerender's headless Chrome can idle past 20s on slow routes;
+        // a widget injected then would be baked into the static HTML and
+        // load twice for visitors.
+        if (navigator.webdriver) return;
+        var loaded = false;
+        var events = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function loadChat() {
+          if (loaded) return;
+          loaded = true;
+          events.forEach(function (e) {
+            window.removeEventListener(e, loadChat);
+          });
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://widgets.leadconnectorhq.com/loader.js";
+          s.setAttribute(
+            "data-resources-url",
+            "https://widgets.leadconnectorhq.com/chat-widget/loader.js",
+          );
+          s.setAttribute("data-widget-id", "696728e12fb2fb1f6d6ae215");
+          document.body.appendChild(s);
+        }
+        events.forEach(function (e) {
+          window.addEventListener(e, loadChat, { passive: true, once: true });
+        });
+        setTimeout(loadChat, 20000);
+      })();
+    </script>
   </body>
 </html>

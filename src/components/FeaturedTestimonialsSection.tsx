@@ -140,12 +140,18 @@ const FeaturedTestimonialsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 mt-8">
           <Link
             to="/resources#client-stories"
             className="text-brand-orange font-semibold hover:underline"
           >
             Read all client stories
+          </Link>
+          <Link
+            to="/program#case-studies"
+            className="text-brand-orange font-semibold hover:underline"
+          >
+            See employer case studies
           </Link>
         </div>
       </div>

@@ -2,11 +2,29 @@ import { HeartHandshake, ClipboardList, BarChart3 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 /**
- * The three situations an HR or EAP buyer already recognizes, framed as their
- * problem first and ENDevo's answer second. Kept to three on purpose: the
- * homepage names the use cases that win first customers, not everything the
- * platform can do.
+ * The homepage's "why should my company care?" answer: the cost of doing
+ * nothing (STATS, formerly HiddenCostStatsSection), then the three situations
+ * an HR or EAP buyer already recognizes, framed as their problem first and
+ * ENDevo's answer second. Kept to three on purpose: the homepage names the use
+ * cases that win first customers, not everything the platform can do.
  */
+const STATS = [
+  {
+    value: "30%",
+    label:
+      "productivity drop for months among employees dealing with personal loss",
+  },
+  {
+    value: "$1,900",
+    label:
+      "lost per employee each year to disorganization and crisis-driven leave",
+  },
+  {
+    value: "25%",
+    label: "of workers face a major life event each year",
+  },
+];
+
 const USE_CASES = [
   {
     icon: HeartHandshake,
@@ -42,12 +60,25 @@ const UseCasesSection = () => {
         <h2
           className={`text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-center mb-3 text-foreground transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          Three ways employers use{" "}
-          <span className="text-brand-orange">ENDevo</span>
+          Why employers add <span className="text-brand-orange">ENDevo</span>
         </h2>
-        <p className="text-center text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-12">
-          Start with one team, measure the change, then expand.
+        <p className="text-center text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-10">
+          Major life events don&apos;t pause work. Start with one team, measure
+          the change, then expand.
         </p>
+
+        <dl className="grid sm:grid-cols-3 gap-6 mb-12 text-center">
+          {STATS.map(({ value, label }) => (
+            <div key={value}>
+              <dt className="text-4xl md:text-5xl font-bold font-playfair text-foreground">
+                {value}
+              </dt>
+              <dd className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-[16rem] mx-auto">
+                {label}
+              </dd>
+            </div>
+          ))}
+        </dl>
 
         <div className="grid md:grid-cols-3 gap-6">
           {USE_CASES.map(({ icon: Icon, title, problem, answer }, i) => (
